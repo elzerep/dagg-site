@@ -1015,10 +1015,15 @@ if (tabLinks.length) {
 }
 
 // Dagg logo / brand → smooth scroll back to the very top
+// (temporarily relax scroll-snap so Safari/iPad doesn't snap back mid-scroll)
 document.querySelectorAll('a[href="#top"]').forEach(a => a.addEventListener('click', (e) => {
   e.preventDefault();
   if (document.body.classList.contains('menu-open')) setMenu(false);
+  const root = document.documentElement;
+  const prev = root.style.scrollSnapType;
+  root.style.scrollSnapType = 'none';
   window.scrollTo({ top: 0, behavior: 'smooth' });
+  setTimeout(() => { root.style.scrollSnapType = prev; }, 800);
 }));
 </script>
 </body>
