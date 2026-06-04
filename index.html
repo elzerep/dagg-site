@@ -487,21 +487,32 @@ body.menu-open .menu-list a:nth-child(8) { transition-delay: .41s; }
    ========================================================================== */
 html { scroll-padding-top: 76px; } /* anchored jumps clear the fixed nav */
 
-/* iPad & down — tighter rhythm + gentle one-section snap */
+/* iPad & down — every section is its own full screen (no bleed) */
 @media (max-width: 1024px) {
-  html { scroll-snap-type: y proximity; }
-  .hero, .premise, .wg, .factory, .tech, .comp, .value, .close { scroll-snap-align: start; }
-  .section { padding: clamp(54px, 8vh, 92px) 0; }
-  .shead { margin-bottom: 40px; }
+  html { scroll-padding-top: 0; }
+  .hero, .premise, .wg, .factory, .tech, .comp, .value, .close {
+    min-height: 100svh; scroll-snap-align: start;
+  }
+  /* vertically center content; 'safe' keeps it from clipping under the nav if it overflows */
+  .premise, .wg, .factory, .tech, .comp, .value, .close {
+    display: grid; align-content: safe center; padding: 88px 0 48px;
+  }
+  .section { padding: 88px 0 48px; }
+  .shead { margin-bottom: 36px; }
   .shead h2 { font-size: clamp(26px, 4.4vw, 40px); }
-  .hero { min-height: auto; padding: 124px 0 72px; }
-  .factory .shead, .comp .shead, .value .shead { margin-bottom: 40px; }
 }
 
-/* phones — compact each section so its end is visible without mid-section scroll */
+/* iPad range — hard one-section-at-a-time snap (content fits a screen) */
+@media (min-width: 641px) and (max-width: 1024px) {
+  html { scroll-snap-type: y mandatory; }
+  .hero, .premise, .wg, .factory, .tech, .comp, .value, .close { scroll-snap-stop: always; }
+}
+
+/* phones — gentler snap (some sections are taller than one screen) + compact type */
 @media (max-width: 640px) {
   :root { --gutter: 22px; }
-  .section { padding: 50px 0; }
+  html { scroll-snap-type: y proximity; }
+  .premise, .wg, .factory, .tech, .comp, .value, .close, .section { padding: 76px 0 40px; }
   .shead { margin-bottom: 28px; }
   .shead h2 { font-size: clamp(24px, 7vw, 31px); line-height: 1.12; }
   .shead p { font-size: 15.5px; margin-top: 16px; }
