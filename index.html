@@ -430,12 +430,13 @@ body.menu-open .menu-list a:nth-child(8) { transition-delay: .41s; }
 .comp .loop-list .li:last-child { border-bottom: 1px solid var(--rule); }
 .comp .loop-list .li .n { font-family: var(--font-mono); font-size: 11px; color: var(--violet); transition: color .35s ease, text-shadow .35s ease; }
 .comp .loop-list .li .t { font-size: 15.5px; color: var(--fg); line-height: 1.45; transition: color .35s ease; }
-.comp .loop-list .li .t b { color: var(--fg-strong); font-weight: 500; }
+.comp .loop-list .li .t b { color: inherit; font-weight: inherit; transition: color .35s ease; }
 .comp .loop-list.playing .li:not(.active) .n { color: var(--fg-subtle); }
 .comp .loop-list.playing .li:not(.active) .t { color: var(--fg-muted); }
 .comp .loop-list .li.active { transform: translateX(7px); }
 .comp .loop-list .li.active .n { color: var(--violet); text-shadow: 0 0 10px var(--violet-glow); }
 .comp .loop-list .li.active .t { color: var(--fg-strong); }
+.comp .loop-list .li.active .t b { color: var(--fg-strong); font-weight: 600; }
 @media (max-width: 860px) { .comp .curve-wrap { grid-template-columns: 1fr; gap: 44px; } }
 
 /* ---------- value ---------- */
@@ -794,15 +795,14 @@ html { scroll-padding-top: 76px; } /* anchored jumps clear the fixed nav */
           <line class="axis" x1="40" y1="20" x2="40" y2="290"/>
           <path class="curve-area" d="M40,278 C150,272 210,250 290,190 C360,138 420,78 500,34 L500,290 L40,290 Z"/>
           <path class="curve-line" id="cline" d="M40,278 C150,272 210,250 290,190 C360,138 420,78 500,34"/>
-          <g class="curve-dot d1"><circle cx="150" cy="270" r="5"/></g>
-          <g class="curve-dot d2"><circle cx="290" cy="190" r="5"/></g>
-          <g class="curve-dot d3"><circle cx="420" cy="78" r="5"/></g>
-          <g class="curve-dot d4"><circle cx="500" cy="34" r="6"/></g>
+          <circle class="curve-dot" r="5"/>
+          <circle class="curve-dot" r="5"/>
+          <circle class="curve-dot" r="5"/>
+          <circle class="curve-dot" r="5"/>
+          <circle class="curve-dot" r="5"/>
+          <circle class="curve-dot" r="5"/>
           <circle class="curve-head" id="curveHead" r="5" cx="40" cy="278"/>
-          <text x="150" y="312" text-anchor="middle">Assessment</text>
-          <text x="290" y="312" text-anchor="middle">Pilot</text>
-          <text x="420" y="312" text-anchor="middle">Program</text>
-          <text x="500" y="312" text-anchor="end">Platform</text>
+          <text x="40" y="312" text-anchor="start">Engagements over time →</text>
           <text x="14" y="28" transform="rotate(-90 14 28)" text-anchor="end">Value</text>
         </svg>
       </div>
@@ -887,17 +887,12 @@ window.addEventListener('resize', onScroll, { passive: true });
   line.style.strokeDasharray = L;
   line.style.strokeDashoffset = L;
 
-  // map each milestone dot to a fraction along the path
-  const dotFrac = dots.map(d => {
-    const c = d.querySelector('circle');
-    const cx = +c.getAttribute('cx'), cy = +c.getAttribute('cy');
-    let best = 0, bestD = Infinity;
-    for (let t = 0; t <= 1.0001; t += 0.005) {
-      const p = line.getPointAtLength(L * t);
-      const dist = (p.x - cx) ** 2 + (p.y - cy) ** 2;
-      if (dist < bestD) { bestD = dist; best = t; }
-    }
-    return best;
+  // one dot per step (01–06), placed exactly on the curve
+  const dotFrac = dots.map((d, i) => {
+    const f = (i + 1) / dots.length;
+    const p = line.getPointAtLength(L * f);
+    d.setAttribute('cx', p.x); d.setAttribute('cy', p.y);
+    return f;
   });
 
   const setFrac = (frac) => {
