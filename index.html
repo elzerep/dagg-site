@@ -337,9 +337,55 @@ body.menu-open .menu-list a:nth-child(8) { transition-delay: .41s; }
 .wg-visual svg { width: 100%; height: 100%; overflow: visible; }
 @media (max-width: 880px) { .wg .wrap { grid-template-columns: 1fr; gap: 48px; } .wg-visual { max-width: 440px; margin: 0 auto; } }
 
+/* workgraph spotlight — self-assembles on scroll into view */
+.wg-build .graph { animation: hgFloat 11s ease-in-out infinite; }
+.wg-build .edge { fill: none; stroke: var(--rule-strong); stroke-width: 1.1; stroke-dasharray: 600; stroke-dashoffset: 600; }
+.wg-build .edge.acc { stroke: var(--violet); opacity: .6; }
+.wg-build .edge.grn { stroke: var(--green); opacity: .6; }
+.wg-build .node { opacity: 0; transform: scale(.5); transform-box: fill-box; transform-origin: center; }
+.wg-build .node circle { fill: var(--bg-elev); stroke: var(--rule-strong); }
+.wg-build .node.acc circle { stroke: var(--violet); fill: rgba(139,92,240,.12); }
+.wg-build .node.grn circle { stroke: var(--green); fill: rgba(111,169,130,.12); }
+.wg-build .node.center circle { stroke: var(--violet); fill: rgba(139,92,240,.16); }
+.wg-build .node text { font-family: var(--font-mono); font-size: 9px; letter-spacing: .06em; fill: var(--fg-muted); text-transform: uppercase; }
+.wg-build .node.center text { fill: var(--fg-strong); font-size: 10px; }
+.wg-build .flux { opacity: 0; fill: var(--violet); }
+.wg-build .flux.grn { fill: var(--green); }
+.wg-visual.in .wg-build .edge { animation: hgDraw 1s cubic-bezier(.6,0,.2,1) forwards; }
+.wg-visual.in .wg-build .edge.d2 { animation-delay: .15s; }
+.wg-visual.in .wg-build .edge.d3 { animation-delay: .3s; }
+.wg-visual.in .wg-build .node { animation: hgPop .55s cubic-bezier(.2,1.3,.3,1) forwards; }
+.wg-visual.in .wg-build .node.center { animation-delay: .2s; }
+.wg-visual.in .wg-build .node.n1 { animation-delay: .5s; }
+.wg-visual.in .wg-build .node.n2 { animation-delay: .6s; }
+.wg-visual.in .wg-build .node.n3 { animation-delay: .7s; }
+.wg-visual.in .wg-build .node.n4 { animation-delay: .8s; }
+.wg-visual.in .wg-build .node.n5 { animation-delay: .9s; }
+.wg-visual.in .wg-build .node.n6 { animation-delay: 1s; }
+.wg-visual.in .wg-build .flux { animation: hgFlux .5s ease forwards 1.2s; }
+@media (prefers-reduced-motion: reduce) {
+  .wg-build .edge { stroke-dashoffset: 0; }
+  .wg-build .node { opacity: 1; transform: none; }
+  .wg-build .flux { display: none; }
+  .wg-build .graph { animation: none; }
+  .steps .flow::after { animation: none; }
+  .step::before { transition: none; width: 40px; }
+}
+
+/* scroll progress bar */
+.scroll-progress {
+  position: fixed; top: 0; left: 0; height: 2px; width: 100%; z-index: 95;
+  transform: scaleX(0); transform-origin: 0 50%;
+  background: linear-gradient(90deg, var(--violet), var(--green)); opacity: .9;
+}
+
 /* ---------- factory process ---------- */
 .factory .shead { margin-bottom: 64px; }
-.steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; border-top: 1px solid var(--rule); }
+.steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; border-top: 1px solid var(--rule); position: relative; }
+.steps .flow { position: absolute; top: -1px; left: 0; right: 0; height: 1px; overflow: hidden; pointer-events: none; }
+.steps .flow::after { content: ''; position: absolute; top: 0; left: -150px; width: 130px; height: 100%; background: linear-gradient(90deg, transparent, var(--violet), transparent); }
+.steps.in .flow::after { animation: stepFlow 3.6s cubic-bezier(.45,0,.25,1) infinite .4s; }
+@keyframes stepFlow { 0% { left: -150px; } 100% { left: 100%; } }
 .step { padding: 32px 26px 36px 0; border-right: 1px solid var(--rule); position: relative; }
 .step:last-child { border-right: none; padding-right: 0; }
 .step .n { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.16em; color: var(--violet); }
@@ -347,7 +393,8 @@ body.menu-open .menu-list a:nth-child(8) { transition-delay: .41s; }
 .step .ico svg { width: 100%; height: 100%; }
 .step h3 { font-weight: 500; font-size: 19px; letter-spacing: -0.02em; margin-bottom: 12px; }
 .step p { font-size: 14px; line-height: 1.58; color: var(--fg-muted); }
-.step::before { content: ''; position: absolute; top: -1px; left: 0; width: 40px; height: 1px; background: var(--violet); }
+.step::before { content: ''; position: absolute; top: -1px; left: 0; width: 0; height: 1px; background: var(--violet); transition: width .55s cubic-bezier(.16,1,.3,1) .15s; }
+.step.in::before { width: 40px; }
 @media (max-width: 920px) { .steps { grid-template-columns: 1fr 1fr; } .step { border-right: none; border-bottom: 1px solid var(--rule); padding: 28px 0 28px; } }
 @media (max-width: 560px) { .steps { grid-template-columns: 1fr; } }
 
@@ -451,6 +498,8 @@ body.menu-open .menu-list a:nth-child(8) { transition-delay: .41s; }
 </defs></svg>
 
 <!-- NAV -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
 <nav class="nav" id="nav">
   <a href="#top" aria-label="Dagg home"><img class="logo" src="assets/dagg-logotype.png" alt="Dagg" /></a>
   <div class="nav-right">
@@ -572,27 +621,32 @@ body.menu-open .menu-list a:nth-child(8) { transition-delay: .41s; }
       </div>
     </div>
     <div class="wg-visual reveal" data-d="1" aria-hidden="true">
-      <svg viewBox="0 0 440 440">
-        <g class="gedge-group">
-          <line class="gedge" x1="220" y1="220" x2="90" y2="90"/>
-          <line class="gedge" x1="220" y1="220" x2="350" y2="80"/>
-          <line class="gedge" x1="220" y1="220" x2="60" y2="230"/>
-          <line class="gedge" x1="220" y1="220" x2="390" y2="220"/>
-          <line class="gedge" x1="220" y1="220" x2="110" y2="360"/>
-          <line class="gedge" x1="220" y1="220" x2="330" y2="360"/>
-          <line class="gedge acc dash" x1="350" y1="80" x2="390" y2="220"/>
-          <line class="gedge acc dash" x1="390" y1="220" x2="330" y2="360"/>
-          <line class="gedge" x1="90" y1="90" x2="60" y2="230"/>
-          <line class="gedge" x1="60" y1="230" x2="110" y2="360"/>
-          <line class="gedge" x1="90" y1="90" x2="350" y2="80"/>
+      <svg viewBox="0 0 440 440" class="wg-build">
+        <g class="graph">
+          <path class="edge d1"     d="M220,220 L90,90"/>
+          <path class="edge acc d1" d="M220,220 L350,80"/>
+          <path class="edge grn d2" d="M220,220 L60,230"/>
+          <path class="edge acc d2" d="M220,220 L390,220"/>
+          <path class="edge d3"     d="M220,220 L110,360"/>
+          <path class="edge grn d3" d="M220,220 L330,360"/>
+          <path class="edge acc d3" d="M350,80 L390,220"/>
+          <path class="edge acc d3" d="M390,220 L330,360"/>
+          <path class="edge d2"     d="M90,90 L60,230"/>
+          <path class="edge d3"     d="M60,230 L110,360"/>
+          <path class="edge d2"     d="M90,90 L350,80"/>
+
+          <g class="node center"><circle cx="220" cy="220" r="40"/><text x="220" y="223" text-anchor="middle">WORKGRAPH</text></g>
+          <g class="node n1"><circle cx="90" cy="90" r="24"/><text x="90" y="93" text-anchor="middle">FLOWS</text></g>
+          <g class="node acc n2"><circle cx="350" cy="80" r="24"/><text x="350" y="83" text-anchor="middle">AGENTS</text></g>
+          <g class="node grn n3"><circle cx="60" cy="230" r="24"/><text x="60" y="233" text-anchor="middle">DATA</text></g>
+          <g class="node acc n4"><circle cx="390" cy="220" r="24"/><text x="390" y="223" text-anchor="middle">SYSTEMS</text></g>
+          <g class="node n5"><circle cx="110" cy="360" r="24"/><text x="110" y="363" text-anchor="middle">PEOPLE</text></g>
+          <g class="node grn n6"><circle cx="330" cy="360" r="24"/><text x="330" y="363" text-anchor="middle">RULES</text></g>
+
+          <circle class="flux" r="3.2"><animateMotion dur="2.6s" begin="1.2s" repeatCount="indefinite" path="M350,80 L220,220"/></circle>
+          <circle class="flux" r="3.2"><animateMotion dur="2.9s" begin="1.6s" repeatCount="indefinite" path="M390,220 L220,220"/></circle>
+          <circle class="flux grn" r="3.2"><animateMotion dur="3.1s" begin="1.4s" repeatCount="indefinite" path="M60,230 L220,220"/></circle>
         </g>
-        <g class="gnode acc"><circle cx="220" cy="220" r="40"/><text x="220" y="223" text-anchor="middle">WORKGRAPH</text></g>
-        <g class="gnode pulse"><circle cx="90" cy="90" r="24"/><text x="90" y="93" text-anchor="middle">FLOWS</text></g>
-        <g class="gnode acc pulse b"><circle cx="350" cy="80" r="24"/><text x="350" y="83" text-anchor="middle">AGENTS</text></g>
-        <g class="gnode grn pulse c"><circle cx="60" cy="230" r="24"/><text x="60" y="233" text-anchor="middle">DATA</text></g>
-        <g class="gnode acc pulse"><circle cx="390" cy="220" r="24"/><text x="390" y="223" text-anchor="middle">SYSTEMS</text></g>
-        <g class="gnode pulse b"><circle cx="110" cy="360" r="24"/><text x="110" y="363" text-anchor="middle">PEOPLE</text></g>
-        <g class="gnode grn pulse c"><circle cx="330" cy="360" r="24"/><text x="330" y="363" text-anchor="middle">RULES</text></g>
       </svg>
     </div>
   </div>
@@ -607,6 +661,7 @@ body.menu-open .menu-list a:nth-child(8) { transition-delay: .41s; }
       <p>Not a workshop. Not a slide deck. A repeatable production line that takes one high-value workflow from understanding to a working agent — grounded in your company's own context.</p>
     </div>
     <div class="steps">
+      <div class="flow"></div>
       <div class="step reveal"><div class="n">01</div><div class="ico"><svg><use href="#i-map"/></svg></div><h3>Map</h3><p>Capture how the work happens today — steps, systems, data, handoffs and the hidden manual effort around it.</p></div>
       <div class="step reveal" data-d="1"><div class="n">02</div><div class="ico"><svg><use href="#i-graph"/></svg></div><h3>Structure</h3><p>Model it in the WorkGraph and stand up the DIS/KRAG context layer so machines can act on it.</p></div>
       <div class="step reveal" data-d="2"><div class="n">03</div><div class="ico"><svg><use href="#i-factory"/></svg></div><h3>Build</h3><p>Produce the agent or custom software — with human-in-the-loop checkpoints and governance built in.</p></div>
@@ -731,8 +786,15 @@ body.menu-open .menu-list a:nth-child(8) { transition-delay: .41s; }
 
 <script>
 const nav = document.getElementById('nav');
-const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 20);
+const prog = document.getElementById('scrollProgress');
+const onScroll = () => {
+  nav.classList.toggle('scrolled', window.scrollY > 20);
+  const doc = document.documentElement;
+  const max = doc.scrollHeight - doc.clientHeight;
+  prog.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, doc.scrollTop / max) : 0) + ')';
+};
 onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+window.addEventListener('resize', onScroll, { passive: true });
 
 // prepare the compounding curve for draw-on-scroll
 const cline = document.getElementById('cline');
@@ -741,7 +803,7 @@ if (cline) { const L = cline.getTotalLength(); cline.style.strokeDasharray = L; 
 const io = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
 }, { threshold: 0.16, rootMargin: '0px 0px -7% 0px' });
-document.querySelectorAll('.reveal, .comp').forEach(el => io.observe(el));
+document.querySelectorAll('.reveal, .comp, .steps').forEach(el => io.observe(el));
 
 // full-screen menu
 const menuToggle = document.getElementById('menuToggle');
