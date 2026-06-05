@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1116" height="1116" viewBox="0 0 1116 1116">
+  <g fill="#FFFFFF">
+    <g id="bl"><rect x="619" y="158" width="118" height="300" rx="12" transform="rotate(36 678 308)"/></g>
+    <use href="#bl" transform="rotate(45 558 558)"/>
+    <use href="#bl" transform="rotate(90 558 558)"/>
+    <use href="#bl" transform="rotate(135 558 558)"/>
+    <use href="#bl" transform="rotate(180 558 558)"/>
+    <use href="#bl" transform="rotate(225 558 558)"/>
+    <use href="#bl" transform="rotate(270 558 558)"/>
+    <use href="#bl" transform="rotate(315 558 558)"/>
+  </g>
+</svg>
