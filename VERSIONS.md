@@ -4,10 +4,11 @@ Two versions live side by side. **Version 1 is preserved and untouched.**
 
 | Version | URL | Notes |
 |---------|-----|-------|
-| **V1** (approved baseline) | https://elzerep.github.io/dagg-site/ | The current approved design + content. Unchanged. |
-| **V2** (content/structure iteration) | https://elzerep.github.io/dagg-site/v2/ | Same design system, expanded strategic content. |
+| **V2** (current — now the root) | https://elzerep.github.io/dagg-site/ | Same design system, expanded strategic content. **This is the live version.** |
+| **V1** (approved baseline, archived) | https://elzerep.github.io/dagg-site/v1/ | The previous approved design + content. Preserved, unchanged. |
 
-To roll back: V2 lives only in `/v2/`. Deleting that folder leaves V1 exactly as-is.
+To roll back to V1: copy `/v1/index.html` (and `/v1/assets/`) back over the root.
+V1 is fully intact in `/v1/`.
 
 ---
 
