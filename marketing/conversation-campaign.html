@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dagg — Conversation Campaign (draft)</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Hedvig+Letters+Serif:opsz@12..24&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+/* ==========================================================================
+   DAGG — CONVERSATION CAMPAIGN (social carousels, draft)
+   Brand-native: deep forest-black · cream · violet + green accent.
+   Mirrors the Aloi C3 campaign FORMAT (problem → reframe → product → CTA),
+   rendered entirely in Dagg's own identity.
+   ========================================================================== */
+
+@font-face {
+  font-family: 'BDO Grotesk';
+  src: url('https://cdn.prod.website-files.com/66f6bac09ca2d1b39c6e7566/66f6bac19ca2d1b39c6e7605_BDOGrotesk-VF.ttf') format('truetype-variations'),
+       url('https://cdn.prod.website-files.com/66f6bac09ca2d1b39c6e7566/66f6bac19ca2d1b39c6e7605_BDOGrotesk-VF.ttf') format('truetype');
+  font-weight: 100 900; font-style: normal; font-display: swap;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg:           #0B100D;
+  --bg-deep:      #070C09;
+  --cream:        #F3F0E9;
+  --cream-soft:   #ECEAE2;
+  --ink:          #0B100D;
+  --fg-muted:     #9B9C90;
+  --violet:       #8B5CF0;
+  --violet-deep:  #6B27E0;
+  --green:        #6FA982;
+  --green-deep:   #4A7C5A;
+  --rule:         rgba(243,240,233,0.14);
+  --font-display: 'BDO Grotesk','Geist',system-ui,sans-serif;
+  --font-serif:   'Hedvig Letters Serif',Georgia,serif;
+  --font-mono:    'JetBrains Mono','SF Mono',Menlo,monospace;
+}
+html, body { background: #050806; color: var(--cream); font-family: var(--font-display); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+/* page chrome */
+.page { max-width: 1280px; margin: 0 auto; padding: clamp(40px,6vw,88px) clamp(20px,4vw,56px) 120px; }
+.masthead { margin-bottom: 56px; border-bottom: 1px solid var(--rule); padding-bottom: 40px; }
+.masthead .mk { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+.masthead .mk svg { width: 26px; height: 26px; color: var(--cream); }
+.masthead .mk .wm { font-family: var(--font-display); font-weight: 700; font-size: 19px; letter-spacing: 0.02em; }
+.masthead h1 { font-weight: 400; font-size: clamp(28px,4vw,46px); line-height: 1.06; letter-spacing: -0.03em; max-width: 820px; }
+.masthead h1 em { font-family: var(--font-serif); font-style: italic; }
+.masthead p { margin-top: 20px; max-width: 640px; color: var(--fg-muted); font-family: var(--font-sans,'Geist'); font-size: 15.5px; line-height: 1.6; }
+.masthead .meta { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 10px 22px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(243,240,233,0.4); }
+
+/* sequence */
+.seq { margin-top: 64px; }
+.seq-head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 22px; }
+.seq-head .no { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.16em; color: var(--violet); }
+.seq-head .ti { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(243,240,233,0.5); }
+.cards { display: flex; gap: 16px; overflow-x: auto; padding-bottom: 14px; scrollbar-width: thin; }
+.cards::-webkit-scrollbar { height: 8px; }
+.cards::-webkit-scrollbar-thumb { background: rgba(243,240,233,0.14); border-radius: 8px; }
+
+/* card */
+.card {
+  position: relative; flex: 0 0 auto; width: 340px; aspect-ratio: 4/5;
+  border-radius: 14px; overflow: hidden; padding: 30px 30px 34px;
+  display: flex; flex-direction: column; isolation: isolate;
+  box-shadow: 0 30px 60px -30px rgba(0,0,0,0.7);
+}
+.card .mk { position: absolute; top: 26px; left: 30px; z-index: 3; }
+.card .mk svg { width: 19px; height: 19px; display: block; }
+.card .body { margin-top: auto; z-index: 3; position: relative; }
+.card .stmt {
+  font-family: var(--font-display); font-weight: 400; letter-spacing: -0.03em;
+  font-size: 31px; line-height: 1.1;
+}
+.card .stmt em { font-family: var(--font-serif); font-style: italic; letter-spacing: 0; }
+.card .stmt.sm { font-size: 25px; line-height: 1.16; }
+.card .stmt.xs { font-size: 21px; line-height: 1.22; }
+.card .kicker { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.55; margin-bottom: 14px; }
+.card .second { margin-top: 20px; font-family: var(--font-display); font-weight: 400; font-size: 21px; line-height: 1.2; letter-spacing: -0.02em; opacity: 0.9; }
+
+/* card variants */
+.card.dark { background: var(--bg); color: var(--cream); }
+.card.deep { background: var(--bg-deep); color: var(--cream); }
+.card.cream { background: var(--cream); color: var(--ink); }
+.card.cream .mk svg { color: var(--ink); opacity: 0.7; }
+.card.dark .mk svg, .card.deep .mk svg { color: var(--cream); opacity: 0.75; }
+.card .stmt .v { color: var(--violet); }
+.card .stmt .g { color: var(--green); }
+.card.cream .stmt .v { color: var(--violet-deep); }
+.card.cream .stmt .g { color: var(--green-deep); }
+
+/* mesh / "image" cards — gradient meshes stand in for photography */
+.card.mesh { background: var(--bg-deep); color: var(--cream); }
+.card.mesh::before {
+  content: ''; position: absolute; inset: 0; z-index: 0;
+  background:
+    radial-gradient(60% 55% at 78% 18%, var(--green-deep), transparent 60%),
+    radial-gradient(70% 60% at 18% 88%, rgba(107,39,224,0.5), transparent 62%),
+    linear-gradient(160deg, #16221b, #0a0f0c 70%);
+  opacity: 0.9;
+}
+.card.mesh.v2::before {
+  background:
+    radial-gradient(55% 50% at 22% 22%, rgba(139,92,240,0.55), transparent 60%),
+    radial-gradient(65% 60% at 85% 85%, var(--green-deep), transparent 62%),
+    linear-gradient(150deg, #101713, #070c09 72%);
+}
+.card.mesh.v3::before {
+  background:
+    radial-gradient(80% 60% at 50% 0%, rgba(111,169,130,0.4), transparent 58%),
+    radial-gradient(60% 50% at 50% 100%, rgba(139,92,240,0.45), transparent 60%),
+    linear-gradient(180deg, #0d1411, #060a07 70%);
+}
+.card.mesh::after {
+  content: ''; position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(180deg, rgba(5,8,6,0.35), rgba(5,8,6,0.78));
+}
+
+/* film grain on every card */
+.card .grain {
+  position: absolute; inset: 0; z-index: 2; pointer-events: none; opacity: 0.5; mix-blend-mode: screen;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.022 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+.card.cream .grain { mix-blend-mode: multiply; opacity: 0.25; }
+
+/* CTA card */
+.card.cta { background: var(--bg); color: var(--cream); align-items: center; justify-content: center; text-align: center; }
+.card.cta .body { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 26px; }
+.card.cta .line { font-family: var(--font-display); font-weight: 400; font-size: 22px; letter-spacing: -0.02em; line-height: 1.25; max-width: 230px; }
+.card.cta .burst { width: 52px; height: 52px; color: var(--cream); }
+.card.cta .url { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.06em; color: rgba(243,240,233,0.7); }
+
+@media print {
+  html, body { background: #fff; }
+  .masthead .meta, .seq-head { color: #000 !important; }
+  .cards { overflow: visible; flex-wrap: wrap; }
+  .card { box-shadow: none; break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+
+<!-- Dagg starburst mark -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="burst" viewBox="0 0 32 32"><g fill="currentColor">
+    <path d="M16 2 L17.5 13 L16 16 L14.5 13 Z"/><path d="M16 30 L14.5 19 L16 16 L17.5 19 Z"/>
+    <path d="M2 16 L13 14.5 L16 16 L13 17.5 Z"/><path d="M30 16 L19 17.5 L16 16 L19 14.5 Z"/>
+    <path d="M6.1 6.1 L13.6 12.4 L16 16 L12.4 13.6 Z"/><path d="M25.9 25.9 L18.4 19.6 L16 16 L19.6 18.4 Z"/>
+    <path d="M6.1 25.9 L12.4 18.4 L16 16 L13.6 19.6 Z"/><path d="M25.9 6.1 L19.6 13.6 L16 16 L18.4 12.4 Z"/>
+  </g></symbol>
+</defs></svg>
+
+<div class="page">
+
+  <div class="masthead">
+    <span class="mk"><svg><use href="#burst"/></svg><span class="wm">DAGG</span></span>
+    <h1>Conversation campaign — <em>draft.</em></h1>
+    <p>Social carousels in Dagg's voice: a short tension, a reframe, the product as the answer, a clear CTA. Same format as the Aloi set — rendered in Dagg's own identity. Each tile is a card; screenshot/export card-by-card, or print this page.</p>
+    <div class="meta"><span>Format · 4:5 carousels</span><span>CTA · Book a WorkGraph Assessment</span><span>dagg.ai</span></div>
+  </div>
+
+  <!-- SEQ 01 — Hidden work walks out -->
+  <section class="seq">
+    <div class="seq-head"><span class="no">01</span><span class="ti">Hidden work walks out</span></div>
+    <div class="cards">
+      <div class="card dark"><span class="mk"><svg><use href="#burst"/></svg></span><div class="grain"></div><div class="body"><div class="stmt">Your best operator leaves.</div></div></div>
+      <div class="card cream"><span class="mk"><svg><use href="#burst"/></svg></span><div class="grain"></div><div class="body"><div class="stmt sm">So does how the work actually gets done.</div></div></div>
+      <div class="card mesh"><span class="mk"><svg><use href="#burst"/></svg></span><div class="grain"></div><div class="body"><div class="stmt sm">Most companies accept this as inevitable.</div></div></div>
+      <div class="card dark"><span class="mk"><svg><use href="#burst"/></svg></span><div class="grain"></div><div class="body"><div class="stmt sm">Dagg maps it into your <span class="v">WorkGraph</span> — <em>before it walks out the door.</em></div></div></div>
+      <div class="card cta"><div class="grain"></div><div class="body"><div class="line">Book a WorkGraph Assessment.</div><svg class="burst"><use href="#burst"/></svg><div class="url">dagg.ai</div></div></div>
+    </div>
+  </section>
+
+  <!-- SEQ 02 — Generic AI sameness -->
+  <section class="seq">
+    <div class="seq-head"><span class="no">02</span><span class="ti">Generic AI makes everyone the same</span></div>
+    <div class="cards">
+      <div class="card dark"><span class="mk"><svg><use href="#burst"/></svg></span><div class="grain"></div><div class="body"><div class="stmt">Generic AI makes every company the same.</div></div></div>
+      <div class="card mesh v2"><span class="mk"><svg><use href="#burst"/></svg></span><div class="grain"></div><div class="body"><div class="stmt">Dagg makes yours <em>more itself.</em></div></div></div>
+      <div class="card cta"><div class="grain"></div><div class="body"><div class="line">Book a WorkGraph Assessment.</div><svg class="burst"><use href="#burst"/></svg><div class="url">dagg.ai</div></div></div>
+    </div>
+  </section>
+
+  <!-- SEQ 03 — Month-end close (grounded, economy vertical) -->
+  <section class="seq">
+    <div class="seq-head"><span class="no">03</span><span class="ti">The work hiding in spreadsheets</span></div>
+    <div class="cards">
+      <div class="card mesh v3"><span class="mk"><svg><use href="#burst"/></svg></span><div class="grain"></div><div class="body"><div class="stmt">It's day three of month-end close.</div></div></div>
+      <div class="card dark"><span class="mk"><svg><use href="#burst"/></svg></span><div class="grain"></div><div class="body"><div class="stmt sm">Someone is re-keying the same numbers across 35 spreadsheets.</div></div></div>
+      <div class="card deep"><span class="mk"><svg><use href="#burst"/></svg></span><div class="grain"></div><div class="body"><div class="kicker">And the process</div><div class="stmt sm">lives in one person's head.</div></div></div>
+      <div class="card cream"><span class="mk"><svg><use href="#burst"/></svg></span><div class="grain"></div><div class="body"><div class="stmt sm">Dagg rebuilds it into an <em>AI-native workflow.</em></div></div></div>
+      <div class="card cta"><div class="grain"></div><div class="body"><div class="line">Book a WorkGraph Assessment.</div><svg class="burst"><use href="#burst"/></svg><div class="url">dagg.ai</div></div></div>
+    </div>
+  </section>
+
+  <!-- SEQ 04 — Automate vs rebuild -->
+  <section class="seq">
+    <div class="seq-head"><span class="no">04</span><span class="ti">Automate what should stay. Rebuild what should change.</span></div>
+    <div class="cards">
+      <div class="card dark"><span class="mk"><svg><use href="#burst"/></svg></span><div class="grain"></div><div class="body"><div class="stmt">Some workflows should stay in Excel.</div></div></div>
+      <div class="card mesh"><span class="mk"><svg><use href="#burst"/></svg></span><div class="grain"></div><div class="body"><div class="stmt">Some should be <em>rebuilt entirely.</em></div></div></div>
+      <div class="card dark"><span class="mk"><svg><use href="#burst"/></svg></span><div class="grain"></div><div class="body"><div class="stmt sm">Dagg knows the difference — <span class="v">and ships both.</span></div></div></div>
+      <div class="card cta"><div class="grain"></div><div class="body"><div class="line">Book a WorkGraph Assessment.</div><svg class="burst"><use href="#burst"/></svg><div class="url">dagg.ai</div></div></div>
+    </div>
+  </section>
+
+  <!-- SEQ 05 — Tools vs work -->
+  <section class="seq">
+    <div class="seq-head"><span class="no">05</span><span class="ti">Tools don't change how work happens</span></div>
+    <div class="cards">
+      <div class="card dark"><span class="mk"><svg><use href="#burst"/></svg></span><div class="grain"></div><div class="body"><div class="stmt">Most companies buy AI tools.</div></div></div>
+      <div class="card cream"><span class="mk"><svg><use href="#burst"/></svg></span><div class="grain"></div><div class="body"><div class="stmt">Then wonder why nothing changed.</div></div></div>
+      <div class="card mesh v2"><span class="mk"><svg><use href="#burst"/></svg></span><div class="grain"></div><div class="body"><div class="stmt sm">Dagg starts with <em>the work</em> — not the tool.</div></div></div>
+      <div class="card cta"><div class="grain"></div><div class="body"><div class="line">Book a WorkGraph Assessment.</div><svg class="burst"><use href="#burst"/></svg><div class="url">dagg.ai</div></div></div>
+    </div>
+  </section>
+
+  <!-- SEQ 06 — Compounding -->
+  <section class="seq">
+    <div class="seq-head"><span class="no">06</span><span class="ti">It compounds</span></div>
+    <div class="cards">
+      <div class="card dark"><span class="mk"><svg><use href="#burst"/></svg></span><div class="grain"></div><div class="body"><div class="stmt sm">Most AI projects start from zero. <em>Every time.</em></div></div></div>
+      <div class="card mesh v3"><span class="mk"><svg><use href="#burst"/></svg></span><div class="grain"></div><div class="body"><div class="stmt"><span class="g">Dagg compounds.</span></div></div></div>
+      <div class="card deep"><span class="mk"><svg><use href="#burst"/></svg></span><div class="grain"></div><div class="body"><div class="stmt xs">Every workflow you ship makes the next one cheaper, faster, smarter.</div></div></div>
+      <div class="card cta"><div class="grain"></div><div class="body"><div class="line">Book a WorkGraph Assessment.</div><svg class="burst"><use href="#burst"/></svg><div class="url">dagg.ai</div></div></div>
+    </div>
+  </section>
+
+  <!-- SEQ 07 — Org chart vs real work -->
+  <section class="seq">
+    <div class="seq-head"><span class="no">07</span><span class="ti">Your org chart isn't your work</span></div>
+    <div class="cards">
+      <div class="card dark"><span class="mk"><svg><use href="#burst"/></svg></span><div class="grain"></div><div class="body"><div class="stmt sm">Your org chart shows who reports to whom.</div></div></div>
+      <div class="card cream"><span class="mk"><svg><use href="#burst"/></svg></span><div class="grain"></div><div class="body"><div class="stmt sm">Not how work <em>actually happens.</em></div></div></div>
+      <div class="card mesh"><span class="mk"><svg><use href="#burst"/></svg></span><div class="grain"></div><div class="body"><div class="stmt sm">That gap is your biggest AI opportunity.</div></div></div>
+      <div class="card dark"><span class="mk"><svg><use href="#burst"/></svg></span><div class="grain"></div><div class="body"><div class="stmt">Dagg <span class="v">maps it.</span> Then ships it.</div></div></div>
+      <div class="card cta"><div class="grain"></div><div class="body"><div class="line">Book a WorkGraph Assessment.</div><svg class="burst"><use href="#burst"/></svg><div class="url">dagg.ai</div></div></div>
+    </div>
+  </section>
+
+  <!-- SEQ 08 — Closing manifesto -->
+  <section class="seq">
+    <div class="seq-head"><span class="no">08</span><span class="ti">Hidden work</span></div>
+    <div class="cards">
+      <div class="card deep"><span class="mk"><svg><use href="#burst"/></svg></span><div class="grain"></div><div class="body"><div class="stmt">Hidden work.</div></div></div>
+      <div class="card mesh v2"><span class="mk"><svg><use href="#burst"/></svg></span><div class="grain"></div><div class="body"><div class="stmt">The last <em>untapped advantage.</em></div></div></div>
+      <div class="card cta"><div class="grain"></div><div class="body"><div class="line">Book a WorkGraph Assessment.</div><svg class="burst"><use href="#burst"/></svg><div class="url">dagg.ai</div></div></div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
