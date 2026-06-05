@@ -572,7 +572,7 @@ html { scroll-padding-top: 76px; } /* anchored jumps clear the fixed nav */
 
 /* iPad & down — every section is its own full screen (no bleed) */
 @media (max-width: 1024px) {
-  html { scroll-padding-top: 0; }
+  html { scroll-padding-top: 0; scroll-snap-type: y proximity; }
   .hero, .premise, .wg, .factory, .tech, .comp, .proof, .about, .faq, .close {
     min-height: 100svh; scroll-snap-align: start;
   }
@@ -585,13 +585,10 @@ html { scroll-padding-top: 76px; } /* anchored jumps clear the fixed nav */
   .shead h2 { font-size: clamp(26px, 4.4vw, 40px); }
 }
 
-/* iPad range — hard one-section-at-a-time snap (content fits a screen) */
-@media (min-width: 641px) and (max-width: 1024px) {
-  html { scroll-snap-type: y mandatory; }
-  .hero, .premise, .wg, .factory, .tech, .comp, .proof, .about, .faq, .close { scroll-snap-stop: always; }
-}
+/* gentle proximity snap on all touch (iPad + phone). Mandatory was unreliable on
+   Safari/iPad with the dynamic URL-bar (svh) and broke section navigation. */
 
-/* phones — gentler snap (some sections are taller than one screen) + compact type */
+/* phones — compact type */
 @media (max-width: 640px) {
   :root { --gutter: 22px; }
   html { scroll-snap-type: y proximity; }
@@ -1125,7 +1122,6 @@ const setMenu = (open) => {
   menuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
 };
 menuToggle.addEventListener('click', () => setMenu(!document.body.classList.contains('menu-open')));
-menuOverlay.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', () => setMenu(false)));
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && document.body.classList.contains('menu-open')) setMenu(false); });
 
 // desktop scrollspy — highlight the active section tab while scrolling
@@ -1153,17 +1149,28 @@ if (tabLinks.length) {
   window.addEventListener('resize', updateSpy, { passive: true });
 }
 
-// Dagg logo / brand → smooth scroll back to the very top
-// (temporarily relax scroll-snap so Safari/iPad doesn't snap back mid-scroll)
-document.querySelectorAll('a[href="#top"]').forEach(a => a.addEventListener('click', (e) => {
-  e.preventDefault();
-  if (document.body.classList.contains('menu-open')) setMenu(false);
-  const root = document.documentElement;
-  const prev = root.style.scrollSnapType;
-  root.style.scrollSnapType = 'none';
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-  setTimeout(() => { root.style.scrollSnapType = prev; }, 800);
-}));
+// Universal in-page anchor navigation (tabs, menu, CTAs, logo).
+// Snap is temporarily disabled during the scroll so Safari/iPad can't re-snap to
+// the wrong section mid-jump — the root cause of "lands on the wrong section".
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', (e) => {
+    const id = a.getAttribute('href').slice(1);
+    if (!id) return;
+    const target = id === 'top' ? document.body : document.getElementById(id);
+    if (!target) return;
+    e.preventDefault();
+    if (document.body.classList.contains('menu-open')) setMenu(false);
+    const root = document.documentElement;
+    const prevSnap = root.style.scrollSnapType;
+    root.style.scrollSnapType = 'none';
+    const navOffset = window.innerWidth > 1024 ? 76 : 0;
+    const y = id === 'top'
+      ? 0
+      : Math.max(0, document.getElementById(id).getBoundingClientRect().top + window.scrollY - navOffset);
+    window.scrollTo({ top: y, behavior: 'smooth' });
+    setTimeout(() => { root.style.scrollSnapType = prevSnap; }, 850);
+  });
+});
 </script>
 </body>
 </html>
