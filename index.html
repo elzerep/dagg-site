@@ -194,6 +194,7 @@ body.menu-open .menu-list a:nth-child(6) { transition-delay: .31s; }
 body.menu-open .menu-list a:nth-child(7) { transition-delay: .36s; }
 body.menu-open .menu-list a:nth-child(8) { transition-delay: .41s; }
 body.menu-open .menu-list a:nth-child(9) { transition-delay: .46s; }
+body.menu-open .menu-list a:nth-child(10) { transition-delay: .51s; }
 .menu-foot { max-width: var(--maxw); margin: clamp(24px,5vh,52px) auto 0; width: 100%; display: flex; flex-wrap: wrap; gap: 24px; font-family: var(--font-mono); font-size: 12px; letter-spacing: .06em; color: var(--fg-subtle); }
 .menu-foot a:hover { color: var(--violet); }
 
@@ -543,6 +544,25 @@ body.menu-open .menu-list a:nth-child(9) { transition-delay: .46s; }
 .about-line { margin-top: 20px; font-size: clamp(17px,1.9vw,21px); line-height: 1.5; color: var(--fg); }
 @media (max-width: 820px) { .about-grid { grid-template-columns: 1fr; gap: 28px; } }
 
+/* faq accordion */
+.faq-list { border-top: 1px solid var(--rule); max-width: 880px; }
+.faq-item { border-bottom: 1px solid var(--rule); }
+.faq-item summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 22px 0; font-family: var(--font-display); font-weight: 500; font-size: clamp(17px,1.9vw,21px); letter-spacing: -.02em; color: var(--fg); transition: color .2s ease; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::marker { content: ''; }
+.faq-item summary:hover { color: var(--fg-strong); }
+.faq-item[open] summary { color: var(--fg-strong); }
+.faq-item .pm { position: relative; width: 16px; height: 16px; flex: 0 0 auto; }
+.faq-item .pm::before, .faq-item .pm::after { content: ''; position: absolute; background: var(--violet); border-radius: 2px; transition: transform .3s cubic-bezier(.16,1,.3,1), opacity .3s ease; }
+.faq-item .pm::before { left: 0; top: 7.25px; width: 16px; height: 1.5px; }
+.faq-item .pm::after { left: 7.25px; top: 0; width: 1.5px; height: 16px; }
+.faq-item[open] .pm::after { transform: scaleY(0); opacity: 0; }
+.faq-a { padding: 0 0 24px; max-width: 760px; font-size: 15.5px; line-height: 1.66; color: var(--fg-muted); }
+.faq-a b { color: var(--fg); font-weight: 500; }
+.faq-item[open] .faq-a { animation: faqIn .35s cubic-bezier(.16,1,.3,1); }
+@keyframes faqIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .faq-item .pm::before, .faq-item .pm::after { transition: none; } .faq-item[open] .faq-a { animation: none; } }
+
 /* ==========================================================================
    CONTAINED, WELL-DELINEATED SECTIONS ON TABLET / MOBILE
    ========================================================================== */
@@ -551,11 +571,11 @@ html { scroll-padding-top: 76px; } /* anchored jumps clear the fixed nav */
 /* iPad & down — every section is its own full screen (no bleed) */
 @media (max-width: 1024px) {
   html { scroll-padding-top: 0; }
-  .hero, .premise, .wg, .factory, .tech, .comp, .proof, .about, .close {
+  .hero, .premise, .wg, .factory, .tech, .comp, .proof, .about, .faq, .close {
     min-height: 100svh; scroll-snap-align: start;
   }
   /* vertically center content; 'safe' keeps it from clipping under the nav if it overflows */
-  .premise, .wg, .factory, .tech, .comp, .proof, .about, .close {
+  .premise, .wg, .factory, .tech, .comp, .proof, .about, .faq, .close {
     display: grid; align-content: safe center; padding: 88px 0 48px;
   }
   .section { padding: 88px 0 48px; }
@@ -566,14 +586,14 @@ html { scroll-padding-top: 76px; } /* anchored jumps clear the fixed nav */
 /* iPad range — hard one-section-at-a-time snap (content fits a screen) */
 @media (min-width: 641px) and (max-width: 1024px) {
   html { scroll-snap-type: y mandatory; }
-  .hero, .premise, .wg, .factory, .tech, .comp, .proof, .about, .close { scroll-snap-stop: always; }
+  .hero, .premise, .wg, .factory, .tech, .comp, .proof, .about, .faq, .close { scroll-snap-stop: always; }
 }
 
 /* phones — gentler snap (some sections are taller than one screen) + compact type */
 @media (max-width: 640px) {
   :root { --gutter: 22px; }
   html { scroll-snap-type: y proximity; }
-  .premise, .wg, .factory, .tech, .comp, .proof, .about, .close, .section { padding: 76px 0 40px; }
+  .premise, .wg, .factory, .tech, .comp, .proof, .about, .faq, .close, .section { padding: 76px 0 40px; }
   .shead { margin-bottom: 28px; }
   .shead h2 { font-size: clamp(24px, 7vw, 31px); line-height: 1.12; }
   .shead p { font-size: 15.5px; margin-top: 16px; }
@@ -678,6 +698,7 @@ html { scroll-padding-top: 76px; } /* anchored jumps clear the fixed nav */
     <a href="#compounding"><span class="mi">05</span>Why it compounds</a>
     <a href="#proof"><span class="mi">06</span>Proof</a>
     <a href="#about"><span class="mi">07</span>About</a>
+    <a href="#faq"><span class="mi">08</span>FAQ</a>
     <a class="cta" href="#contact"><span class="mi">→</span>Book a WorkGraph Strategy Assessment</a>
   </nav>
   <div class="menu-foot">
@@ -946,9 +967,30 @@ html { scroll-padding-top: 76px; } /* anchored jumps clear the fixed nav */
         <h2 class="about-h">Built by founders, engineers and operators.</h2>
       </div>
       <div class="reveal" data-d="1">
-        <p class="about-body">Dagg is built by people who have spent years turning AI ideas into real companies, workflows and products. We combine strategic judgment with hands-on production capacity: mapping how work happens, building the WorkGraph, and shipping the agents and custom software that make companies AI-native.</p>
+        <p class="about-body">Dagg is built by people who have spent years turning AI ideas into real companies, workflows and production systems. We combine strategic judgment with hands-on engineering capacity — mapping how work happens, building the WorkGraph, and shipping the agents and custom software that make companies AI-native.</p>
         <p class="about-line"><em>We are not here to run workshops. We are here to help companies rebuild how work gets done.</em></p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq section divider" id="faq">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="kicker">FAQ</span>
+      <h2>Frequently asked questions</h2>
+    </div>
+    <div class="faq-list reveal" data-d="1">
+      <details class="faq-item"><summary>What is Dagg?<span class="pm"></span></summary><div class="faq-a">Dagg is an AI-native transformation platform. We map how work actually happens inside a company, build the <b>WorkGraph</b>, and use Dagg Factory to ship agents, workflows and custom software that transform how work gets done.</div></details>
+      <details class="faq-item"><summary>What does Dagg actually build?<span class="pm"></span></summary><div class="faq-a">We build production-ready AI-native workflows. Sometimes that means agent automation on top of existing tools like Excel, ERP, CRM, Teams or SharePoint. Sometimes it means custom software that replaces a broken manual or legacy workflow layer.</div></details>
+      <details class="faq-item"><summary>How is Dagg different from an AI consultancy?<span class="pm"></span></summary><div class="faq-a">Consultancies usually deliver strategy, workshops or recommendations. <b>Dagg connects strategy with production.</b> We map the work, structure it in the WorkGraph, and then use Dagg Factory to build and ship the workflow.</div></details>
+      <details class="faq-item"><summary>Do you replace our existing systems?<span class="pm"></span></summary><div class="faq-a">Not by default. Many workflows should stay inside the tools people already use — there, Dagg builds agentic automation around the existing stack. When the existing workflow layer is too broken, Dagg can build custom AI-native software instead.</div></details>
+      <details class="faq-item"><summary>When do you automate, and when do you rebuild?<span class="pm"></span></summary><div class="faq-a">We start by mapping the work. If the current system is useful but the manual work around it is painful, we automate around it. If the workflow itself is fragmented, legacy-heavy or strategically important enough, we rebuild it as custom software.</div></details>
+      <details class="faq-item"><summary>What is the WorkGraph?<span class="pm"></span></summary><div class="faq-a">The WorkGraph is a living map of how work happens inside your company: workflows, systems, roles, decisions, documents, handoffs, bottlenecks, governance requirements and AI opportunities. It is the foundation for every workflow Dagg builds.</div></details>
+      <details class="faq-item"><summary>What is Dagg Factory?<span class="pm"></span></summary><div class="faq-a">Dagg Factory is our AI-native production line for turning mapped work into shipped workflows, agents and custom software — how we move from strategy to production without starting from zero every time.</div></details>
+      <details class="faq-item"><summary>How do you handle security and governance?<span class="pm"></span></summary><div class="faq-a">Governance is built into the workflow from the beginning: permissions, source quality, audit trails, human-in-the-loop checkpoints, monitoring and clear accountability. Dagg should feel safe enough for real enterprise work — not just demos.</div></details>
+      <details class="faq-item"><summary>How do we start?<span class="pm"></span></summary><div class="faq-a">Start with a <b>WorkGraph Strategy Assessment</b>. We map where work actually happens, identify the highest-value AI-native opportunities, and recommend the first workflow worth automating or rebuilding.</div></details>
     </div>
   </div>
 </section>
