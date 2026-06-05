@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dagg — "Hidden Work" stories (9:16)</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Hedvig+Letters+Serif:opsz@12..24&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+/* ==========================================================================
+   DAGG — "HIDDEN WORK" — IG STORIES (9:16, 1080×1920)
+   Portrait variant of the bold fear-billboard campaign. Safe-zoned for Stories.
+   View as a gallery; ?#p=N renders one story full-viewport for PNG export.
+   ========================================================================== */
+@font-face {
+  font-family:'BDO Grotesk';
+  src:url('https://cdn.prod.website-files.com/66f6bac09ca2d1b39c6e7566/66f6bac19ca2d1b39c6e7605_BDOGrotesk-VF.ttf') format('truetype-variations'),
+      url('https://cdn.prod.website-files.com/66f6bac09ca2d1b39c6e7566/66f6bac19ca2d1b39c6e7605_BDOGrotesk-VF.ttf') format('truetype');
+  font-weight:100 900;font-style:normal;font-display:swap;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0B100D;--bg-deep:#070C09;--cream:#F3F0E9;--ink:#0B100D;
+  --muted:#9B9C90;--violet:#8B5CF0;--violet-deep:#6B27E0;--green:#6FA982;--green-deep:#4A7C5A;
+  --rule:rgba(243,240,233,0.14);
+  --display:'BDO Grotesk','Geist',system-ui,sans-serif;--serif:'Hedvig Letters Serif',Georgia,serif;--mono:'JetBrains Mono','SF Mono',Menlo,monospace;
+}
+html,body{background:#050806;color:var(--cream);font-family:var(--display);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.page{max-width:1280px;margin:0 auto;padding:clamp(40px,6vw,80px) clamp(20px,4vw,56px) 120px}
+
+.masthead{margin-bottom:44px;border-bottom:1px solid var(--rule);padding-bottom:34px}
+.masthead .mk{display:inline-flex;align-items:center;gap:12px;margin-bottom:20px}
+.masthead .mk img{width:24px;height:24px;object-fit:contain;display:block}
+.masthead .mk .wm{font-weight:700;font-size:19px;letter-spacing:.02em}
+.masthead h1{font-weight:400;font-size:clamp(26px,3.6vw,42px);line-height:1.06;letter-spacing:-.03em;max-width:860px}
+.masthead h1 em{font-family:var(--serif);font-style:italic}
+.masthead p{margin-top:16px;max-width:660px;color:var(--muted);font-family:'Geist',sans-serif;font-size:15px;line-height:1.6}
+.masthead .meta{margin-top:18px;display:flex;flex-wrap:wrap;gap:10px 22px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(243,240,233,.4)}
+
+/* gallery: portrait stories in a scrolling row */
+.rail{display:flex;gap:18px;overflow-x:auto;padding-bottom:16px;scrollbar-width:thin}
+.rail::-webkit-scrollbar{height:8px}.rail::-webkit-scrollbar-thumb{background:rgba(243,240,233,.14);border-radius:8px}
+.lab{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(243,240,233,.45);margin:8px 0 16px}
+
+.poster{
+  position:relative;flex:0 0 auto;width:288px;aspect-ratio:9/16;border-radius:18px;overflow:hidden;
+  container-type:size;isolation:isolate;box-shadow:0 36px 70px -36px rgba(0,0,0,.75);
+  display:flex;flex-direction:column;justify-content:center;
+  padding:18cqh 9cqw;  /* generous safe zones top/bottom for Stories UI */
+}
+.poster.dark{background:var(--bg)}.poster.deep{background:var(--bg-deep)}
+.poster.cream{background:var(--cream);color:var(--ink)}
+.poster.mesh{background:var(--bg-deep)}
+.poster.mesh::before{content:'';position:absolute;inset:0;z-index:0;
+  background:radial-gradient(46% 36% at 80% 14%,var(--green-deep),transparent 60%),
+            radial-gradient(60% 44% at 14% 90%,rgba(107,39,224,.5),transparent 62%),
+            linear-gradient(160deg,#101713,#070c09 74%)}
+.poster.mesh::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(5,8,6,.25),rgba(5,8,6,.7))}
+.poster .grain{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:.5;mix-blend-mode:screen;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.022 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}
+.poster.cream .grain{mix-blend-mode:multiply;opacity:.22}
+
+.poster .top{position:absolute;top:7cqh;left:9cqw;right:9cqw;z-index:4;display:flex;align-items:center;justify-content:space-between}
+.poster .top img{height:2.4cqh;min-height:16px;width:auto;object-fit:contain;opacity:.85;display:block}
+.poster.cream .top img{filter:brightness(0);opacity:.7}
+.poster .top .tag{font-family:var(--mono);font-size:.95cqh;letter-spacing:.2em;text-transform:uppercase;color:rgba(243,240,233,.5)}
+.poster.cream .top .tag{color:rgba(11,16,13,.5)}
+.poster .url{position:absolute;bottom:7cqh;left:9cqw;z-index:4;font-family:var(--mono);font-size:1cqh;letter-spacing:.06em;color:rgba(243,240,233,.6)}
+.poster.cream .url{color:rgba(11,16,13,.55)}
+
+.hl{position:relative;z-index:4;font-family:var(--display);font-weight:400;letter-spacing:-.035em;line-height:1.02;font-size:10cqw}
+.hl.sm{font-size:8.2cqw}
+.hl em{font-family:var(--serif);font-style:italic;letter-spacing:0}
+.hl .v{color:var(--violet)}
+.poster.cream .hl .v{color:var(--violet-deep)}
+
+.poster.cta{justify-content:center;align-items:center;text-align:center}
+.poster.cta .hl{text-align:center}
+.poster.cta .burst{width:8cqh;height:8cqh;object-fit:contain;margin:4cqh 0 0;z-index:4}
+.poster.cta .cta-url{margin-top:2.4cqh;z-index:4;font-family:var(--mono);font-size:1cqh;letter-spacing:.08em;color:rgba(243,240,233,.7);max-width:80%;line-height:1.5}
+
+/* EXPORT MODE — #p=N renders one story full-viewport (for 1080×1920 PNG) */
+body.export{background:#000}
+body.export .page{max-width:none;padding:0;margin:0}
+body.export .masthead,body.export .lab,body.export .rail-title{display:none}
+body.export .rail{display:block;overflow:visible;gap:0;padding:0}
+body.export .poster{position:fixed;inset:0;width:100vw;height:100vh;aspect-ratio:auto;border-radius:0;margin:0;box-shadow:none}
+
+@media print{
+  @page{size:1080px 1920px;margin:0}
+  html,body{background:#050806}
+  *,*::before,*::after{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+  .page{max-width:none;padding:0}
+  .masthead,.lab{display:none}
+  .rail{display:block;overflow:visible;gap:0}
+  .poster{width:1080px;height:1920px;aspect-ratio:auto;border-radius:0;margin:0!important;break-after:page;box-shadow:none}
+  .poster:last-child{break-after:auto}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="masthead">
+    <span class="mk"><img src="../assets/dagg-symbol.png" alt="Dagg"/><span class="wm">DAGG</span></span>
+    <h1>Hidden Work — <em>Stories.</em></h1>
+    <p>The fear billboards, sized for Instagram/LinkedIn stories (9:16, 1080×1920), with safe margins top & bottom for the platform UI. Each frame is exported as its own PNG.</p>
+    <div class="meta"><span>Format · 9:16 stories</span><span>1080 × 1920</span><span>dagg.ai</span></div>
+  </div>
+  <div class="lab">Swipe → · 9 stories + CTA</div>
+  <div class="rail">
+
+    <div class="poster dark"><div class="grain"></div>
+      <div class="top"><img src="../assets/dagg-symbol.png" alt="Dagg"/><span class="tag">Operating risk</span></div>
+      <div class="hl">You can't automate what you <span class="v">can't see.</span></div>
+      <div class="url">dagg.ai</div></div>
+
+    <div class="poster mesh"><div class="grain"></div>
+      <div class="top"><img src="../assets/dagg-symbol.png" alt="Dagg"/><span class="tag">No. 02</span></div>
+      <div class="hl sm">Your company runs on work <span class="v">no one can see.</span></div>
+      <div class="url">dagg.ai</div></div>
+
+    <div class="poster cream"><div class="grain"></div>
+      <div class="top"><img src="../assets/dagg-symbol.png" alt="Dagg"/><span class="tag">No. 03</span></div>
+      <div class="hl">Your best operator is your only <em>backup.</em></div>
+      <div class="url">dagg.ai</div></div>
+
+    <div class="poster dark"><div class="grain"></div>
+      <div class="top"><img src="../assets/dagg-symbol.png" alt="Dagg"/><span class="tag">No. 04</span></div>
+      <div class="hl sm">Someone just rebuilt your industry's workflow. <span class="v">It wasn't you.</span></div>
+      <div class="url">dagg.ai</div></div>
+
+    <div class="poster deep"><div class="grain"></div>
+      <div class="top"><img src="../assets/dagg-symbol.png" alt="Dagg"/><span class="tag">No. 05</span></div>
+      <div class="hl">Every quarter you wait, the gap <span class="v">compounds.</span></div>
+      <div class="url">dagg.ai</div></div>
+
+    <div class="poster dark"><div class="grain"></div>
+      <div class="top"><img src="../assets/dagg-symbol.png" alt="Dagg"/><span class="tag">No. 06</span></div>
+      <div class="hl">Your org chart is <em>fiction.</em></div>
+      <div class="url">dagg.ai</div></div>
+
+    <div class="poster mesh"><div class="grain"></div>
+      <div class="top"><img src="../assets/dagg-symbol.png" alt="Dagg"/><span class="tag">No. 07</span></div>
+      <div class="hl sm">The work that closes your books lives in <span class="v">one person's head.</span></div>
+      <div class="url">dagg.ai</div></div>
+
+    <div class="poster cream"><div class="grain"></div>
+      <div class="top"><img src="../assets/dagg-symbol.png" alt="Dagg"/><span class="tag">No. 08</span></div>
+      <div class="hl sm">By the time you've mapped it, they've <em>shipped it.</em></div>
+      <div class="url">dagg.ai</div></div>
+
+    <div class="poster deep"><div class="grain"></div>
+      <div class="top"><img src="../assets/dagg-symbol.png" alt="Dagg"/><span class="tag">No. 09</span></div>
+      <div class="hl sm">Dagg makes the hidden work <span class="v">visible</span> — then ships it.</div>
+      <div class="url">dagg.ai</div></div>
+
+    <div class="poster cta dark"><div class="grain"></div>
+      <div class="top"><img src="../assets/dagg-symbol.png" alt="Dagg"/><span class="tag">Close</span></div>
+      <div class="hl">See what your company is <em>hiding.</em></div>
+      <img class="burst" src="../assets/dagg-symbol.png" alt="Dagg"/>
+      <div class="cta-url">Book a WorkGraph Strategy Assessment · dagg.ai</div></div>
+
+  </div>
+</div>
+<script>
+  // export mode: #p=N shows only the Nth story full-viewport
+  var m = location.hash.match(/p=(\d+)/);
+  if (m) {
+    document.body.classList.add('export');
+    var idx = parseInt(m[1],10) - 1;
+    var posters = document.querySelectorAll('.poster');
+    posters.forEach(function(p,i){ p.style.display = (i===idx ? 'flex' : 'none'); });
+  }
+</script>
+</body>
+</html>
