@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dagg — "Hidden Work" campaign (draft)</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Hedvig+Letters+Serif:opsz@12..24&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+/* ==========================================================================
+   DAGG — "HIDDEN WORK" CAMPAIGN (draft)
+   Own device: the work is redacted (you can't see it → you can't automate it).
+   Format: bold standalone billboards (one knockout line each) — not carousels.
+   Fear-led. Dagg identity (forest-black · cream · violet · pinwheel).
+   ========================================================================== */
+@font-face {
+  font-family: 'BDO Grotesk';
+  src: url('https://cdn.prod.website-files.com/66f6bac09ca2d1b39c6e7566/66f6bac19ca2d1b39c6e7605_BDOGrotesk-VF.ttf') format('truetype-variations'),
+       url('https://cdn.prod.website-files.com/66f6bac09ca2d1b39c6e7566/66f6bac19ca2d1b39c6e7605_BDOGrotesk-VF.ttf') format('truetype');
+  font-weight: 100 900; font-style: normal; font-display: swap;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg:#0B100D; --bg-deep:#070C09; --cream:#F3F0E9; --ink:#0B100D;
+  --muted:#9B9C90; --violet:#8B5CF0; --violet-deep:#6B27E0; --green:#6FA982; --green-deep:#4A7C5A;
+  --rule:rgba(243,240,233,0.14);
+  --display:'BDO Grotesk','Geist',system-ui,sans-serif;
+  --serif:'Hedvig Letters Serif',Georgia,serif;
+  --mono:'JetBrains Mono','SF Mono',Menlo,monospace;
+}
+html,body{background:#050806;color:var(--cream);font-family:var(--display);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.page{max-width:1200px;margin:0 auto;padding:clamp(40px,6vw,88px) clamp(20px,4vw,56px) 120px}
+
+/* masthead */
+.masthead{margin-bottom:52px;border-bottom:1px solid var(--rule);padding-bottom:38px}
+.masthead .mk{display:inline-flex;align-items:center;gap:12px;margin-bottom:22px}
+.masthead .mk img{width:24px;height:24px;object-fit:contain;display:block}
+.masthead .mk .wm{font-weight:700;font-size:19px;letter-spacing:.02em}
+.masthead h1{font-weight:400;font-size:clamp(28px,4vw,46px);line-height:1.05;letter-spacing:-.03em;max-width:900px}
+.masthead h1 em{font-family:var(--serif);font-style:italic}
+.masthead h1 .rd{font-family:inherit}
+.masthead p{margin-top:18px;max-width:680px;color:var(--muted);font-family:'Geist',sans-serif;font-size:15.5px;line-height:1.6}
+.masthead .meta{margin-top:20px;display:flex;flex-wrap:wrap;gap:10px 22px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(243,240,233,.4)}
+
+/* poster grid */
+.lab{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(243,240,233,.45);margin:46px 0 16px}
+.poster{
+  position:relative;width:100%;aspect-ratio:16/9;border-radius:16px;overflow:hidden;
+  container-type:size; isolation:isolate;
+  box-shadow:0 40px 80px -40px rgba(0,0,0,.75);
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:7cqh 7cqw;
+}
+.poster + .poster{margin-top:20px}
+
+/* surfaces */
+.poster.dark{background:var(--bg)}
+.poster.deep{background:var(--bg-deep)}
+.poster.cream{background:var(--cream);color:var(--ink)}
+.poster.mesh{background:var(--bg-deep)}
+.poster.mesh::before{content:'';position:absolute;inset:0;z-index:0;
+  background:radial-gradient(50% 70% at 82% 16%,var(--green-deep),transparent 60%),
+            radial-gradient(60% 80% at 14% 92%,rgba(107,39,224,.45),transparent 62%),
+            linear-gradient(150deg,#101713,#070c09 72%)}
+.poster.mesh::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(5,8,6,.25),rgba(5,8,6,.72))}
+
+/* grain */
+.poster .grain{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:.5;mix-blend-mode:screen;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.022 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}
+.poster.cream .grain{mix-blend-mode:multiply;opacity:.22}
+
+/* chrome on each poster */
+.poster .top{position:absolute;top:6cqh;left:7cqw;right:7cqw;z-index:4;display:flex;align-items:center;justify-content:space-between}
+.poster .top img{height:2.6cqh;min-height:18px;width:auto;object-fit:contain;opacity:.85;display:block}
+.poster.cream .top img{filter:brightness(0);opacity:.7}
+.poster .top .tag{font-family:var(--mono);font-size:1.5cqh;letter-spacing:.2em;text-transform:uppercase;color:rgba(243,240,233,.5)}
+.poster.cream .top .tag{color:rgba(11,16,13,.5)}
+.poster .url{position:absolute;bottom:6cqh;right:7cqw;z-index:4;font-family:var(--mono);font-size:1.6cqh;letter-spacing:.06em;color:rgba(243,240,233,.6)}
+.poster.cream .url{color:rgba(11,16,13,.55)}
+
+/* headline */
+.hl{position:relative;z-index:4;font-family:var(--display);font-weight:400;letter-spacing:-.035em;line-height:1.0;font-size:8.4cqw;max-width:80%}
+.hl.sm{font-size:6.6cqw}
+.hl em{font-family:var(--serif);font-style:italic;letter-spacing:0}
+.hl .v{color:var(--violet)}
+.poster.cream .hl .v{color:var(--violet-deep)}
+.hl.center{margin:auto 0;max-width:74%}
+.poster.centerwrap{justify-content:center}
+
+/* redaction device — the work you can't see (clean fixed bars, no text wrapping) */
+.rd{display:inline-block;height:.74em;border-radius:.07em;background:var(--cream);vertical-align:baseline;transform:translateY(.02em)}
+.poster.cream .rd{background:var(--ink)}
+.rd.v{background:var(--violet)}
+.rd.w1{width:4.5em}.rd.w2{width:7em}.rd.w3{width:9.5em}
+.masthead .rd{height:.72em}
+
+/* CTA poster */
+.poster.cta{justify-content:center;align-items:center;text-align:center}
+.poster.cta .hl{max-width:88%;text-align:center}
+.poster.cta .burst{width:9cqh;height:9cqh;object-fit:contain;margin:4cqh 0 0;z-index:4}
+.poster.cta .cta-url{margin-top:2.4cqh;z-index:4;font-family:var(--mono);font-size:1.7cqh;letter-spacing:.08em;color:rgba(243,240,233,.7)}
+
+@media print{
+  @page{size:1920px 1080px;margin:0}
+  html,body{background:#050806}
+  *,*::before,*::after{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+  .page{max-width:none;padding:0}
+  .masthead{min-height:1080px;display:flex;flex-direction:column;justify-content:center;padding:0 120px;border:0;break-after:page}
+  .lab{display:none}
+  .poster{width:1920px;height:1080px;aspect-ratio:auto;border-radius:0;margin:0!important;break-after:page;box-shadow:none}
+  .poster:last-child{break-after:auto}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"></svg>
+
+<div class="page">
+  <div class="masthead">
+    <span class="mk"><img src="../assets/dagg-symbol.png" alt="Dagg"/><span class="wm">DAGG</span></span>
+    <h1>The work that runs your company is invisible. <em>That should scare you.</em></h1>
+    <p>Campaign variant — a different idea, not a different coat of paint. The fear, said plainly: you can't automate what you can't see — and most companies can't. Standalone billboards, one line each. Each poster is 16:9 — print this page (one poster per slide) or screenshot.</p>
+    <div class="meta"><span>Concept · You can’t see your own work</span><span>Format · 16:9 billboards</span><span>dagg.ai</span></div>
+  </div>
+
+  <!-- 01 — thesis -->
+  <div class="lab">01 · The thesis</div>
+  <div class="poster dark centerwrap"><div class="grain"></div>
+    <div class="top"><img src="../assets/dagg-symbol.png" alt="Dagg"/><span class="tag">Operating risk</span></div>
+    <div class="hl center">You can't automate<br/>what you <span class="v">can't see.</span></div>
+    <div class="url">dagg.ai</div>
+  </div>
+
+  <!-- 02 — hidden work redacted -->
+  <div class="lab">02 · What's running your company</div>
+  <div class="poster mesh"><div class="grain"></div>
+    <div class="top"><img src="../assets/dagg-symbol.png" alt="Dagg"/><span class="tag">No. 02</span></div>
+    <div class="hl">Your company runs on work <span class="v">no one can see.</span></div>
+    <div class="url">dagg.ai</div>
+  </div>
+
+  <!-- 03 — key-person fear -->
+  <div class="lab">03 · Key-person risk</div>
+  <div class="poster cream"><div class="grain"></div>
+    <div class="top"><img src="../assets/dagg-symbol.png" alt="Dagg"/><span class="tag">No. 03</span></div>
+    <div class="hl sm">Your best operator is your only <em>backup.</em></div>
+    <div class="url">dagg.ai</div>
+  </div>
+
+  <!-- 04 — competitor fear -->
+  <div class="lab">04 · The competitor</div>
+  <div class="poster dark"><div class="grain"></div>
+    <div class="top"><img src="../assets/dagg-symbol.png" alt="Dagg"/><span class="tag">No. 04</span></div>
+    <div class="hl">Someone just rebuilt your industry's workflow.<br/><span class="v">It wasn't you.</span></div>
+    <div class="url">dagg.ai</div>
+  </div>
+
+  <!-- 05 — compounding fear, reveal device -->
+  <div class="lab">05 · It compounds against you</div>
+  <div class="poster deep"><div class="grain"></div>
+    <div class="top"><img src="../assets/dagg-symbol.png" alt="Dagg"/><span class="tag">No. 05</span></div>
+    <div class="hl">Every quarter you wait, the gap <span class="v">compounds.</span></div>
+    <div class="url">dagg.ai</div>
+  </div>
+
+  <!-- 06 — provocation -->
+  <div class="lab">06 · Provocation</div>
+  <div class="poster dark centerwrap"><div class="grain"></div>
+    <div class="top"><img src="../assets/dagg-symbol.png" alt="Dagg"/><span class="tag">No. 06</span></div>
+    <div class="hl center">Your org chart<br/>is <em>fiction.</em></div>
+    <div class="url">dagg.ai</div>
+  </div>
+
+  <!-- 07 — concrete (economy vertical) -->
+  <div class="lab">07 · The one who knows</div>
+  <div class="poster mesh"><div class="grain"></div>
+    <div class="top"><img src="../assets/dagg-symbol.png" alt="Dagg"/><span class="tag">No. 07</span></div>
+    <div class="hl sm">The work that closes your books lives in <span class="v">one person’s head.</span></div>
+    <div class="url">dagg.ai</div>
+  </div>
+
+  <!-- 08 — speed fear -->
+  <div class="lab">08 · Too slow</div>
+  <div class="poster cream"><div class="grain"></div>
+    <div class="top"><img src="../assets/dagg-symbol.png" alt="Dagg"/><span class="tag">No. 08</span></div>
+    <div class="hl sm">By the time you've mapped it,<br/>they've <em>shipped it.</em></div>
+    <div class="url">dagg.ai</div>
+  </div>
+
+  <!-- 09 — turn (Dagg reveals) -->
+  <div class="lab">09 · The turn</div>
+  <div class="poster deep"><div class="grain"></div>
+    <div class="top"><img src="../assets/dagg-symbol.png" alt="Dagg"/><span class="tag">No. 09</span></div>
+    <div class="hl">Dagg makes the hidden work <span class="v">visible</span> — then ships it.</div>
+    <div class="url">dagg.ai</div>
+  </div>
+
+  <!-- 10 — CTA -->
+  <div class="lab">10 · Close</div>
+  <div class="poster cta dark"><div class="grain"></div>
+    <div class="top"><img src="../assets/dagg-symbol.png" alt="Dagg"/><span class="tag">From strategy to shipped operations</span></div>
+    <div class="hl center">See what your company<br/>is <em>hiding.</em></div>
+    <img class="burst" src="../assets/dagg-symbol.png" alt="Dagg"/>
+    <div class="cta-url">Book a WorkGraph Strategy Assessment · dagg.ai</div>
+  </div>
+
+</div>
+</body>
+</html>
