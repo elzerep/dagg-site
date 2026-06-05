@@ -123,7 +123,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 500; letter-spac
 /* desktop scrollspy tabs (hidden ≤1024, hamburger takes over) */
 .tabs { display: none; }
 @media (min-width: 1025px) {
-  .tabs { display: flex; align-items: center; gap: 28px; }
+  .tabs { display: flex; align-items: center; gap: 24px; }
   .tabs a { position: relative; font-size: 13px; color: var(--fg-muted); letter-spacing: -0.004em; padding: 8px 0; transition: color .2s ease; }
   .tabs a::after { content: ''; position: absolute; left: 0; right: 100%; bottom: 2px; height: 1.5px; background: var(--violet); transition: right .35s cubic-bezier(.16,1,.3,1); }
   .tabs a:hover { color: var(--fg-strong); }
@@ -678,6 +678,7 @@ html { scroll-padding-top: 76px; } /* anchored jumps clear the fixed nav */
     <a href="#tech">Technology</a>
     <a href="#proof">Proof</a>
     <a href="#about">About</a>
+    <a href="#faq">FAQ</a>
   </nav>
   <div class="nav-right">
     <a class="nav-cta desktop" href="#contact">Book an assessment <svg><use href="#i-arrow"/></svg></a>
@@ -1137,7 +1138,7 @@ if (tabLinks.length) {
       }
     });
   }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
-  ['premise', 'workgraph', 'factory', 'tech', 'proof', 'about'].forEach(id => {
+  ['premise', 'workgraph', 'factory', 'tech', 'proof', 'about', 'faq'].forEach(id => {
     const el = document.getElementById(id); if (el) spy.observe(el);
   });
 }
