@@ -1130,17 +1130,25 @@ document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && document
 const tabLinks = [...document.querySelectorAll('.tabs a')];
 if (tabLinks.length) {
   const tabFor = (id) => tabLinks.find(a => a.getAttribute('href') === '#' + id);
-  const spy = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        const t = tabFor(e.target.id);
-        if (t) { tabLinks.forEach(a => a.classList.remove('active')); t.classList.add('active'); }
-      }
-    });
-  }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
-  ['premise', 'workgraph', 'factory', 'tech', 'proof', 'about', 'faq'].forEach(id => {
-    const el = document.getElementById(id); if (el) spy.observe(el);
-  });
+  const spySections = ['premise', 'workgraph', 'factory', 'tech', 'proof', 'about', 'faq']
+    .map(id => document.getElementById(id)).filter(Boolean);
+  const updateSpy = () => {
+    const line = window.innerHeight * 0.4;          // section whose top has passed ~40% down
+    let current = null;
+    for (const s of spySections) {
+      if (s.getBoundingClientRect().top <= line) current = s;
+    }
+    // at the very bottom, keep the last section active
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+      current = spySections[spySections.length - 1];
+    }
+    tabLinks.forEach(a => a.classList.remove('active'));
+    const t = current && tabFor(current.id);
+    if (t) t.classList.add('active');
+  };
+  updateSpy();
+  window.addEventListener('scroll', updateSpy, { passive: true });
+  window.addEventListener('resize', updateSpy, { passive: true });
 }
 
 // Dagg logo / brand → smooth scroll back to the very top
