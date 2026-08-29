@@ -22,6 +22,18 @@ because we would be the ones building it.
 Any sentence that claims the combination out loud destroys it. The reader has
 to arrive at it themselves; that is what makes it stick.
 
+### The feeling to hit
+
+Exclusive, and inviting. The balance is the whole thing: it has to carry
+intelligence and a sense of the future without becoming another hard technology
+company, and it has to feel elegant and human without becoming soft.
+
+Confident enough not to boast. Warm enough that a reader leans in rather than
+braces. Unusual enough to be remembered, calm enough to be trusted.
+
+If a page reads as a technology corporation, it is wrong. If it reads as a
+consultancy, it is wrong. It should read as neither, which is what Dagg is.
+
 ---
 
 ## 2 · How it speaks
