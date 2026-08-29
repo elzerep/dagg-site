@@ -33,6 +33,16 @@
     });
   }
 
+  /* the bar only becomes a bar once it leaves the hero */
+  var nav=d.querySelector('.nav'), hero=d.querySelector('.s-hero');
+  if(nav && hero){
+    d.body.setAttribute('data-hero','dark');
+    var nio=new IntersectionObserver(function(es){
+      es.forEach(function(e){ nav.classList.toggle('stuck', !e.isIntersecting); });
+    },{rootMargin:'-70px 0px 0px 0px',threshold:0});
+    nio.observe(hero);
+  }
+
   /* ── progress ───────────────────────────────────────────────────── */
   var bar = d.querySelector('.progress');
   if(bar){
