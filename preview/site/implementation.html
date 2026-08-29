@@ -7,14 +7,15 @@
 <meta name="description" content="How a decision becomes something running in production.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Newsreader:opsz,wght@6..72,300..600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&amp;family=Newsreader:opsz,wght@6..72,300..600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="progress" aria-hidden="true"></div>
 <header class="nav"><div class="nav__in">
   <a href="index.html" aria-label="Dagg"><img class="nav__mark" src="../../assets/dagg-logotype-dark.png" alt="Dagg"></a>
-  <nav class="nav__links">
+  <button class="nav__toggle" aria-expanded="false" aria-controls="navlinks">Menu</button>
+  <nav class="nav__links" id="navlinks">
     <a href="strategy.html">Strategy</a>
     <a href="implementation.html" aria-current="page">Implementation</a>
     <a href="company.html">Company</a>
@@ -107,7 +108,7 @@
           <g fill="none" stroke="#141413" stroke-opacity=".2" stroke-width="1" stroke-dasharray="4 4">
             <rect x="8" y="26" width="330" height="150" rx="2"/>
           </g>
-          <text x="16" y="18" font-family="'JetBrains Mono',monospace" font-size="10" letter-spacing=".14em" fill="#5F5E58">BOUNDS · WHAT IT MAY TOUCH</text>
+          <text x="16" y="18" fill="#5F5E58">BOUNDS · WHAT IT MAY TOUCH</text>
           <g fill="#F5F3EC" stroke="#141413" stroke-opacity=".42" stroke-width="1">
             <rect x="34" y="60" width="112" height="34" rx="1"/>
             <rect x="34" y="112" width="112" height="34" rx="1"/>
@@ -124,14 +125,14 @@
           <g fill="none" stroke="#141413" stroke-opacity=".3" stroke-width="1">
             <path d="M257 124 L257 205 L386 205"/>
           </g>
-          <g font-family="'JetBrains Mono',monospace" font-size="9.5" letter-spacing=".1em" fill="#5F5E58">
+          <g fill="#5F5E58">
             <text x="90" y="81" text-anchor="middle">A SYSTEM</text>
             <text x="90" y="133" text-anchor="middle">A SYSTEM</text>
             <text x="257" y="107" text-anchor="middle" fill="#F0EEE6">AGENT</text>
             <text x="449" y="45" text-anchor="middle">A PERSON</text>
             <text x="449" y="209" text-anchor="middle">THE RECORD</text>
           </g>
-          <g font-family="'JetBrains Mono',monospace" font-size="9" letter-spacing=".09em" fill="#9E4A2E">
+          <g fill="#9E4A2E">
             <text x="330" y="72">escalation</text>
           </g>
         </svg>

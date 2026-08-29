@@ -7,14 +7,15 @@
 <meta name="description" content="We do not post roles.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Newsreader:opsz,wght@6..72,300..600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&amp;family=Newsreader:opsz,wght@6..72,300..600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="progress" aria-hidden="true"></div>
 <header class="nav"><div class="nav__in">
   <a href="index.html" aria-label="Dagg"><img class="nav__mark" src="../../assets/dagg-logotype-dark.png" alt="Dagg"></a>
-  <nav class="nav__links">
+  <button class="nav__toggle" aria-expanded="false" aria-controls="navlinks">Menu</button>
+  <nav class="nav__links" id="navlinks">
     <a href="strategy.html">Strategy</a>
     <a href="implementation.html">Implementation</a>
     <a href="company.html">Company</a>
@@ -39,6 +40,9 @@
         <p class="tx">That combination does not sort well into a job description, which is
           part of why there is no listing to answer. The people we want to meet are usually
           not looking, and a posting is a poor way to reach them.</p>
+        <p class="tx"><!-- STAGING: address, employment or contract, base and remote policy,
+          and how candidate material is handled. Needs Christian before this ships. -->
+          Write to <a href="mailto:hello@dagg.ai">hello@dagg.ai</a>.</p>
       </div>
       <div class="c-side side rv">
         <span class="mi">What the work is</span>
@@ -52,15 +56,7 @@
         <p class="q">If this is recognisably your work, write and tell us what you have
           built — <b>the thing itself, not the role you held while it happened.</b></p>
       </div>
-      <div class="c-full rv" style="outline:1px dashed var(--hair-firm);outline-offset:14px;padding:4px 0">
-        <span class="mi" style="color:var(--accent-text)">Before publishing — needs Christian</span>
-        <div class="rows" style="margin-top:12px">
-          <div class="row"><span class="row__n">—</span><span class="row__t">The address to write to</span></div>
-          <div class="row"><span class="row__n">—</span><span class="row__t">Employment or contract, and whether remote is possible</span></div>
-          <div class="row"><span class="row__n">—</span><span class="row__t">Where the work is based</span></div>
-          <div class="row"><span class="row__n">—</span><span class="row__t">How what a candidate sends is handled and how long it is kept — candidates applying to a company that works under NDA will ask, and the absence of an answer is itself an answer</span></div>
-        </div>
-      </div>
+</div>
     </div>
   </div>
 </section>

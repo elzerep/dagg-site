@@ -7,14 +7,15 @@
 <meta name="description" content="Which workflows are worth rebuilding, which are not yet, and what decides.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Newsreader:opsz,wght@6..72,300..600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&amp;family=Newsreader:opsz,wght@6..72,300..600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="progress" aria-hidden="true"></div>
 <header class="nav"><div class="nav__in">
   <a href="index.html" aria-label="Dagg"><img class="nav__mark" src="../../assets/dagg-logotype-dark.png" alt="Dagg"></a>
-  <nav class="nav__links">
+  <button class="nav__toggle" aria-expanded="false" aria-controls="navlinks">Menu</button>
+  <nav class="nav__links" id="navlinks">
     <a href="strategy.html" aria-current="page">Strategy</a>
     <a href="implementation.html">Implementation</a>
     <a href="company.html">Company</a>
@@ -183,14 +184,14 @@
             <rect x="556" y="106" width="156" height="48" rx="1"/><rect x="600" y="196" width="168" height="34" rx="1"/>
           </g>
           <g fill="#1E1E1C" stroke="#D97757" stroke-width="1.4"><rect x="368" y="108" width="72" height="44" rx="1"/></g>
-          <g font-family="'JetBrains Mono',monospace" font-size="10" letter-spacing=".1em" fill="#B0AEA5">
+          <g fill="#B0AEA5">
             <text x="59" y="52" text-anchor="middle">REQUEST</text><text x="59" y="134" text-anchor="middle">DOCUMENT</text><text x="59" y="216" text-anchor="middle">APPROVAL</text>
             <text x="228" y="52" text-anchor="middle">A PERSON</text><text x="228" y="134" text-anchor="middle">A SYSTEM</text><text x="228" y="216" text-anchor="middle">A HANDOFF</text>
             <text x="634" y="126" text-anchor="middle" fill="#F0EEE6">DECISION</text><text x="634" y="142" text-anchor="middle">RE-MADE</text>
             <text x="684" y="217" text-anchor="middle">DOWNSTREAM</text>
             <text x="404" y="134" text-anchor="middle" fill="#F0EEE6">WAIT</text>
           </g>
-          <g font-family="'JetBrains Mono',monospace" font-size="9.5" letter-spacing=".09em" fill="#D97757">
+          <g fill="#D97757">
             <text x="372" y="96">queue time</text><text x="300" y="18">rework loop</text>
           </g>
         </svg>

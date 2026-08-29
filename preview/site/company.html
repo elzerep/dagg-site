@@ -7,14 +7,15 @@
 <meta name="description" content="How we work, what we hold to, and who is accountable.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Newsreader:opsz,wght@6..72,300..600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&amp;family=Newsreader:opsz,wght@6..72,300..600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="progress" aria-hidden="true"></div>
 <header class="nav"><div class="nav__in">
   <a href="index.html" aria-label="Dagg"><img class="nav__mark" src="../../assets/dagg-logotype-dark.png" alt="Dagg"></a>
-  <nav class="nav__links">
+  <button class="nav__toggle" aria-expanded="false" aria-controls="navlinks">Menu</button>
+  <nav class="nav__links" id="navlinks">
     <a href="strategy.html">Strategy</a>
     <a href="implementation.html">Implementation</a>
     <a href="company.html" aria-current="page">Company</a>
@@ -31,11 +32,13 @@
     <div class="field">
       <div class="hd hd--plain rv"><span class="eyebrow">Our mission</span></div>
       <div class="c-main stack rv">
-        <h1 style="color:var(--accent-text);outline:1px dashed var(--hair-firm);outline-offset:14px">
-          [ MISSION — one line, in Christian's own words ]</h1>
-        <p class="lead">Dagg maps how a company actually works and builds the system that
-          runs it. The people who decide what should change are the people accountable for
-          what gets built.</p>
+<!-- STAGING: the mission line goes here, in Christian's own words. Three drafts sit
+     in design/copy/company.md. Until one is chosen the lead carries the page, which is
+     honest — but the line above it is the point of this page. -->
+        <h1>Dagg maps how a company actually works, and builds the system that runs it.</h1>
+        <p class="lead">The people who decide what should change are the people accountable
+          for what gets built. That is the whole arrangement, and everything below follows
+          from it.</p>
       </div>
       <div class="c-side side rv">
         <span class="mi">The test it has to pass</span>
@@ -120,24 +123,20 @@
         <div class="ruled" style="border-top-color:rgba(240,238,230,.3)">
           <h3>Christian Pérez</h3>
           <span class="mi">Chief Executive Officer</span>
-          <p><a href="#">LinkedIn →</a></p>
+          <p><a href="https://www.linkedin.com/in/" rel="noopener">LinkedIn →</a></p>
         </div>
       </div>
       <div class="c-half rv">
         <div class="ruled" style="border-top-color:rgba(240,238,230,.3)">
           <h3>Simon Lundmark</h3>
           <span class="mi">Chief Technology Officer</span>
-          <p><a href="#">LinkedIn →</a></p>
+          <p><a href="https://www.linkedin.com/in/" rel="noopener">LinkedIn →</a></p>
         </div>
       </div>
-      <div class="c-full rv" style="padding-top:6px">
-        <h3 style="color:var(--accent-bright);outline:1px dashed rgba(240,238,230,.3);outline-offset:12px;display:inline-block">
-          [ WHAT WE HOLD TO — three or four principles, from Christian and Simon ]</h3>
-        <p class="tx" style="margin-top:24px;max-width:56ch">Each needs an argument beneath it
-          of the kind someone could disagree with. Anything written here without you is an
-          adjective in a longer coat, and this is the section that exists to avoid
-          adjectives.</p>
-      </div>
+<!-- STAGING: the principles block sits here. Three or four, each with an argument
+     beneath it that someone could disagree with. Needs Christian and Simon — anything
+     written without them is an adjective in a longer coat. Hidden until it exists,
+     because an empty section is worse than a missing one. -->
       <div class="c-full rv"><a class="cta" href="careers.html">Careers →</a></div>
     </div>
   </div>

@@ -7,7 +7,7 @@
 <meta name="description" content="Dagg maps how a company actually works, then builds the system that runs it.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Newsreader:opsz,wght@6..72,300..600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&amp;family=Newsreader:opsz,wght@6..72,300..600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
 <link rel="stylesheet" href="style.css">
 <style>
 /* ── one record, three states ───────────────────────────────────── */
@@ -28,10 +28,10 @@
 .life{border-top:1px solid var(--hair);padding:18px 0;cursor:default;
   transition:border-color .3s ease}
 .life:last-child{border-bottom:1px solid var(--hair)}
-.life h4{transition:color .3s ease}
+.life h3{transition:color .3s ease}
 .life p{margin-top:6px}
 .life.on{border-top-color:var(--accent)}
-.life.on h4{color:var(--accent-text)}
+.life.on h3{color:var(--accent-text)}
 @media (prefers-reduced-motion:reduce){.lg .att{opacity:1}}
 </style>
 </head>
@@ -40,7 +40,8 @@
 
 <header class="nav"><div class="nav__in">
   <a href="index.html" aria-label="Dagg"><img class="nav__mark" src="../../assets/dagg-logotype-dark.png" alt="Dagg"></a>
-  <nav class="nav__links">
+  <button class="nav__toggle" aria-expanded="false" aria-controls="navlinks">Menu</button>
+  <nav class="nav__links" id="navlinks">
     <a href="strategy.html">Strategy</a>
     <a href="implementation.html">Implementation</a>
     <a href="company.html">Company</a>
@@ -70,7 +71,7 @@
         <div><a class="cta" href="#assessment">Book an assessment →</a></div>
       </div>
 
-      <div class="c-side side stack--tight rv" style="display:flex;flex-direction:column;gap:20px">
+      <div class="c-side side stack--tight rv" >
         <div><span class="mi">Where it starts</span>
           <p class="tx" style="margin-top:8px">A map of one path through the company, built from
           evidence it already generates.</p></div>
@@ -151,17 +152,17 @@
 
         <div class="lives__list">
           <div class="life" data-life>
-            <h4>Mapped</h4>
+            <h3>Mapped</h3>
             <p class="tx">How work moves through the company, including the parts nobody
               wrote down. Built from evidence the company already generates.</p>
           </div>
           <div class="life" data-life>
-            <h4>Read</h4>
+            <h3>Read</h3>
             <p class="tx">The agents that write the software query it directly, so the
               structure of the work is available to them rather than restated each time.</p>
           </div>
           <div class="life" data-life>
-            <h4>Running</h4>
+            <h3>Running</h3>
             <p class="tx">The same record orchestrates what is live, where operating
               agents is not a capability a company intends to build.</p>
           </div>
