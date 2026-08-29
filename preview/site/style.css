@@ -57,7 +57,13 @@
 }
 
 *,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+html{-webkit-text-size-adjust:100%}
+/* smooth scrolling is for in-page jumps only: applied globally it fires before
+   layout settles on a cross-page anchor and drops the reader at the top */
+@media (prefers-reduced-motion:no-preference){
+  html:focus-within{scroll-behavior:smooth}
+}
+[id]{scroll-margin-top:calc(var(--nav-h) + 20px)}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
 body{
