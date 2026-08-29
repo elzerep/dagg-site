@@ -230,6 +230,36 @@ Body weight is **400 on light grounds, never 300.** Thin light type on a light
 ground is what tires the eye, and it is the most common reason a page that
 looks elegant in a screenshot is unreadable in a room.
 
+### The navigation is not the argument
+
+Three separate attempts to make the site's structure carry the proof of the
+hybrid all failed the same way, and the pattern is worth naming because it is
+seductive every time.
+
+The attempts were: two adjacent doors, both substantial, so the reader
+concludes. Then a build cost at the end of one page and a refusal at the start
+of the next, so the pair is unwritable by half a firm. Then three verbs
+spanning the whole arc, so the span itself is the claim.
+
+Each is the same fallacy wearing a new coat. **A navigation row is the cheapest
+artifact on the web.** Anyone copies it in an afternoon, so it can prove
+nothing — and each attempt moved the proof somewhere cheaper than the last.
+
+Worse, the third attempt cost the reader something real. Labels were chosen to
+avoid sounding like a category rather than to tell a buyer what is behind the
+link. That is design consciousness leaking out over usefulness, and it is a
+failure even when the labels are good.
+
+**The navigation's job is legibility. Nothing else.** Use the plain words a
+buyer already understands, and let common labels be common. The proof lives
+inside the pages: a materials list rather than an estimate, a refusal that cost
+something, a named rejection that contradicts what the buyer would have done.
+Judgement is only visible where someone can be wrong, and a map cannot be wrong.
+
+A corollary: never put a door on something that cannot be bought. A reader who
+clicks a nav label expects to be sold the thing behind it. Answering the
+question instead of offering the service reads as evasion, not as direction.
+
 ### Diagrams
 
 A document that claims to map how work happens must show a map. A diagram earns
