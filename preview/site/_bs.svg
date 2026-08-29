@@ -1,0 +1,69 @@
+<svg class="bs" viewBox="0 0 1440 720" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+<defs><radialGradient id="bsglow"><stop offset="0" stop-color="#D97757" stop-opacity=".5"/><stop offset="1" stop-color="#D97757" stop-opacity="0"/></radialGradient></defs>
+<g class="bs-x">
+<path d="M 380,128 C 406,168 406,212 380,252"/>
+<path d="M 640,252 C 666,292 666,336 640,376"/>
+<path d="M 900,376 C 926,416 926,460 900,500"/>
+<path d="M 1160,500 C 1186,540 1186,584 1160,624"/>
+</g>
+<g class="bs-lane" style="--dur:9.2s;--n:0">
+<path class="bs-rail" d="M -80,128 C 300,110 620,144 780,128 S 1180,114 1520,128"/>
+<g class="bs-st" style="--f:0.06" transform="translate(120,128)"><rect x="-5" y="-5" width="10" height="10" rx="2" transform="rotate(45)"/><circle class="bs-flash" r="3"/></g>
+<g class="bs-st" style="--f:0.24" transform="translate(380,128)"><rect x="-5" y="-5" width="10" height="10" rx="2" transform="rotate(45)"/><circle class="bs-flash" r="3"/></g>
+<g class="bs-st" style="--f:0.42" transform="translate(640,128)"><rect x="-5" y="-5" width="10" height="10" rx="2" transform="rotate(45)"/><circle class="bs-flash" r="3"/></g>
+<g class="bs-st" style="--f:0.58" transform="translate(900,128)"><rect x="-5" y="-5" width="10" height="10" rx="2" transform="rotate(45)"/><circle class="bs-flash" r="3"/></g>
+<g class="bs-st" style="--f:0.76" transform="translate(1160,128)"><rect x="-5" y="-5" width="10" height="10" rx="2" transform="rotate(45)"/><circle class="bs-flash" r="3"/></g>
+<g class="bs-st" style="--f:0.94" transform="translate(1400,128)"><rect x="-5" y="-5" width="10" height="10" rx="2" transform="rotate(45)"/><circle class="bs-flash" r="3"/></g>
+<g class="bs-t" style="--t:0;--path:path('M -80,128 C 300,110 620,144 780,128 S 1180,114 1520,128')"><circle class="bs-halo" r="7" fill="url(#bsglow)"/><circle class="bs-dot" r="2.5"/></g>
+<g class="bs-t" style="--t:1;--path:path('M -80,128 C 300,110 620,144 780,128 S 1180,114 1520,128')"><circle class="bs-halo" r="7" fill="url(#bsglow)"/><circle class="bs-dot" r="2.5"/></g>
+<g class="bs-t" style="--t:2;--path:path('M -80,128 C 300,110 620,144 780,128 S 1180,114 1520,128')"><circle class="bs-halo" r="7" fill="url(#bsglow)"/><circle class="bs-dot" r="2.5"/></g>
+</g>
+<g class="bs-lane" style="--dur:11.6s;--n:1">
+<path class="bs-rail" d="M -80,252 C 300,270 620,236 780,252 S 1180,268 1520,252"/>
+<g class="bs-st" style="--f:0.06" transform="translate(120,252)"><rect x="-5" y="-5" width="10" height="10" rx="2" transform="rotate(45)"/><circle class="bs-flash" r="3"/></g>
+<g class="bs-st" style="--f:0.24" transform="translate(380,252)"><rect x="-5" y="-5" width="10" height="10" rx="2" transform="rotate(45)"/><circle class="bs-flash" r="3"/></g>
+<g class="bs-st" style="--f:0.42" transform="translate(640,252)"><rect x="-5" y="-5" width="10" height="10" rx="2" transform="rotate(45)"/><circle class="bs-flash" r="3"/></g>
+<g class="bs-st" style="--f:0.58" transform="translate(900,252)"><rect x="-5" y="-5" width="10" height="10" rx="2" transform="rotate(45)"/><circle class="bs-flash" r="3"/></g>
+<g class="bs-st" style="--f:0.76" transform="translate(1160,252)"><rect x="-5" y="-5" width="10" height="10" rx="2" transform="rotate(45)"/><circle class="bs-flash" r="3"/></g>
+<g class="bs-st" style="--f:0.94" transform="translate(1400,252)"><rect x="-5" y="-5" width="10" height="10" rx="2" transform="rotate(45)"/><circle class="bs-flash" r="3"/></g>
+<g class="bs-t" style="--t:0;--path:path('M -80,252 C 300,270 620,236 780,252 S 1180,268 1520,252')"><circle class="bs-halo" r="7" fill="url(#bsglow)"/><circle class="bs-dot" r="2.5"/></g>
+<g class="bs-t" style="--t:1;--path:path('M -80,252 C 300,270 620,236 780,252 S 1180,268 1520,252')"><circle class="bs-halo" r="7" fill="url(#bsglow)"/><circle class="bs-dot" r="2.5"/></g>
+<g class="bs-t" style="--t:2;--path:path('M -80,252 C 300,270 620,236 780,252 S 1180,268 1520,252')"><circle class="bs-halo" r="7" fill="url(#bsglow)"/><circle class="bs-dot" r="2.5"/></g>
+</g>
+<g class="bs-lane" style="--dur:8.4s;--n:2">
+<path class="bs-rail" d="M -80,376 C 300,358 620,392 780,376 S 1180,362 1520,376"/>
+<g class="bs-st" style="--f:0.06" transform="translate(120,376)"><rect x="-5" y="-5" width="10" height="10" rx="2" transform="rotate(45)"/><circle class="bs-flash" r="3"/></g>
+<g class="bs-st" style="--f:0.24" transform="translate(380,376)"><rect x="-5" y="-5" width="10" height="10" rx="2" transform="rotate(45)"/><circle class="bs-flash" r="3"/></g>
+<g class="bs-st" style="--f:0.42" transform="translate(640,376)"><rect x="-5" y="-5" width="10" height="10" rx="2" transform="rotate(45)"/><circle class="bs-flash" r="3"/></g>
+<g class="bs-st" style="--f:0.58" transform="translate(900,376)"><rect x="-5" y="-5" width="10" height="10" rx="2" transform="rotate(45)"/><circle class="bs-flash" r="3"/></g>
+<g class="bs-st" style="--f:0.76" transform="translate(1160,376)"><rect x="-5" y="-5" width="10" height="10" rx="2" transform="rotate(45)"/><circle class="bs-flash" r="3"/></g>
+<g class="bs-st" style="--f:0.94" transform="translate(1400,376)"><rect x="-5" y="-5" width="10" height="10" rx="2" transform="rotate(45)"/><circle class="bs-flash" r="3"/></g>
+<g class="bs-t" style="--t:0;--path:path('M -80,376 C 300,358 620,392 780,376 S 1180,362 1520,376')"><circle class="bs-halo" r="7" fill="url(#bsglow)"/><circle class="bs-dot" r="2.5"/></g>
+<g class="bs-t" style="--t:1;--path:path('M -80,376 C 300,358 620,392 780,376 S 1180,362 1520,376')"><circle class="bs-halo" r="7" fill="url(#bsglow)"/><circle class="bs-dot" r="2.5"/></g>
+<g class="bs-t" style="--t:2;--path:path('M -80,376 C 300,358 620,392 780,376 S 1180,362 1520,376')"><circle class="bs-halo" r="7" fill="url(#bsglow)"/><circle class="bs-dot" r="2.5"/></g>
+</g>
+<g class="bs-lane" style="--dur:13.1s;--n:3">
+<path class="bs-rail" d="M -80,500 C 300,518 620,484 780,500 S 1180,514 1520,500"/>
+<g class="bs-st" style="--f:0.06" transform="translate(120,500)"><rect x="-5" y="-5" width="10" height="10" rx="2" transform="rotate(45)"/><circle class="bs-flash" r="3"/></g>
+<g class="bs-st" style="--f:0.24" transform="translate(380,500)"><rect x="-5" y="-5" width="10" height="10" rx="2" transform="rotate(45)"/><circle class="bs-flash" r="3"/></g>
+<g class="bs-st" style="--f:0.42" transform="translate(640,500)"><rect x="-5" y="-5" width="10" height="10" rx="2" transform="rotate(45)"/><circle class="bs-flash" r="3"/></g>
+<g class="bs-st" style="--f:0.58" transform="translate(900,500)"><rect x="-5" y="-5" width="10" height="10" rx="2" transform="rotate(45)"/><circle class="bs-flash" r="3"/></g>
+<g class="bs-st" style="--f:0.76" transform="translate(1160,500)"><rect x="-5" y="-5" width="10" height="10" rx="2" transform="rotate(45)"/><circle class="bs-flash" r="3"/></g>
+<g class="bs-st" style="--f:0.94" transform="translate(1400,500)"><rect x="-5" y="-5" width="10" height="10" rx="2" transform="rotate(45)"/><circle class="bs-flash" r="3"/></g>
+<g class="bs-t" style="--t:0;--path:path('M -80,500 C 300,518 620,484 780,500 S 1180,514 1520,500')"><circle class="bs-halo" r="7" fill="url(#bsglow)"/><circle class="bs-dot" r="2.5"/></g>
+<g class="bs-t" style="--t:1;--path:path('M -80,500 C 300,518 620,484 780,500 S 1180,514 1520,500')"><circle class="bs-halo" r="7" fill="url(#bsglow)"/><circle class="bs-dot" r="2.5"/></g>
+<g class="bs-t" style="--t:2;--path:path('M -80,500 C 300,518 620,484 780,500 S 1180,514 1520,500')"><circle class="bs-halo" r="7" fill="url(#bsglow)"/><circle class="bs-dot" r="2.5"/></g>
+</g>
+<g class="bs-lane" style="--dur:10.3s;--n:4">
+<path class="bs-rail" d="M -80,624 C 300,606 620,640 780,624 S 1180,610 1520,624"/>
+<g class="bs-st" style="--f:0.06" transform="translate(120,624)"><rect x="-5" y="-5" width="10" height="10" rx="2" transform="rotate(45)"/><circle class="bs-flash" r="3"/></g>
+<g class="bs-st" style="--f:0.24" transform="translate(380,624)"><rect x="-5" y="-5" width="10" height="10" rx="2" transform="rotate(45)"/><circle class="bs-flash" r="3"/></g>
+<g class="bs-st" style="--f:0.42" transform="translate(640,624)"><rect x="-5" y="-5" width="10" height="10" rx="2" transform="rotate(45)"/><circle class="bs-flash" r="3"/></g>
+<g class="bs-st" style="--f:0.58" transform="translate(900,624)"><rect x="-5" y="-5" width="10" height="10" rx="2" transform="rotate(45)"/><circle class="bs-flash" r="3"/></g>
+<g class="bs-st" style="--f:0.76" transform="translate(1160,624)"><rect x="-5" y="-5" width="10" height="10" rx="2" transform="rotate(45)"/><circle class="bs-flash" r="3"/></g>
+<g class="bs-st" style="--f:0.94" transform="translate(1400,624)"><rect x="-5" y="-5" width="10" height="10" rx="2" transform="rotate(45)"/><circle class="bs-flash" r="3"/></g>
+<g class="bs-t" style="--t:0;--path:path('M -80,624 C 300,606 620,640 780,624 S 1180,610 1520,624')"><circle class="bs-halo" r="7" fill="url(#bsglow)"/><circle class="bs-dot" r="2.5"/></g>
+<g class="bs-t" style="--t:1;--path:path('M -80,624 C 300,606 620,640 780,624 S 1180,610 1520,624')"><circle class="bs-halo" r="7" fill="url(#bsglow)"/><circle class="bs-dot" r="2.5"/></g>
+<g class="bs-t" style="--t:2;--path:path('M -80,624 C 300,606 620,640 780,624 S 1180,610 1520,624')"><circle class="bs-halo" r="7" fill="url(#bsglow)"/><circle class="bs-dot" r="2.5"/></g>
+</g>
+</svg>
