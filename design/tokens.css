@@ -1,0 +1,114 @@
+/* ═══════════════════════════════════════════════════════════════════
+   DAGG — DESIGN TOKENS
+   One source of truth for colour, type and space.
+
+   Two accent variants exist while the identity is being decided.
+   Switch by changing the value of --accent-set on <html>:
+
+       <html data-accent="violet">   ← Dagg's own (default)
+       <html data-accent="coral">    ← the warmer variant
+
+   Measured contrast against --paper #FAF9F5:
+       violet #5B3BC4 → 6.95:1   text and graphic
+       green  #2F6141 → 6.86:1   text and graphic
+       coral  #D97757 → 2.96:1   GRAPHIC ONLY, never text on light
+   ═══════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── grounds ───────────────────────────────────────────────────
+     Two only. Light carries the argument; night marks a beat.      */
+  --paper:        #FAF9F5;   /* the working ground                  */
+  --paper-2:      #F0EEE6;   /* alternating pages, panels           */
+  --panel:        #E8E6DC;   /* a raised surface                    */
+  --night:        #141413;   /* the dark beat                       */
+  --night-2:      #1E1E1C;
+
+  /* ── ink ───────────────────────────────────────────────────────
+     Every value below carries text at its stated size.             */
+  --ink:          #141413;   /* 15.9:1                              */
+  --ink-2:        #3D3D3A;   /* 10.3:1  body                        */
+  --ink-3:        #6F6E68;   /*  4.9:1  captions, metadata          */
+  --ink-faint:    #A9A79E;   /*         hairline labels only        */
+
+  --n-fg:         #F0EEE6;   /* 15.9:1 on night                     */
+  --n-fg-2:       #B0AEA5;   /*  8.0:1 on night                     */
+
+  /* ── structure ─────────────────────────────────────────────────
+     Hairlines, never borders. Structure is felt, not drawn.        */
+  --hair:         rgba(20,20,19,.13);
+  --hair-firm:    rgba(20,20,19,.26);
+  --hair-soft:    rgba(20,20,19,.06);
+  --n-hair:       rgba(240,238,230,.15);
+  --n-hair-firm:  rgba(240,238,230,.30);
+
+  /* ── accent · variant B, Dagg's own (default) ──────────────────
+     Derived from the brand violet #8B5CF0 and green #6FA982,
+     darkened to hold contrast on a light ground.                   */
+  --accent:       #5B3BC4;
+  --accent-lift:  #A78BFF;   /* the same accent on night            */
+  --accent-wash:  rgba(91,59,196,.055);
+  --accent-glow:  rgba(139,92,240,.16);
+  --second:       #2F6141;   /* used once per page, at most         */
+  --second-lift:  #8FC7A0;
+
+  /* ── type ──────────────────────────────────────────────────────
+     Three roles. The serif carries a spoken voice — a question, a
+     statement someone would say aloud — and never dense text.      */
+  --font-display: 'BDO Grotesk', 'Geist', system-ui, sans-serif;
+  --font-sans:    'Geist', system-ui, -apple-system, sans-serif;
+  --font-serif:   'Hedvig Letters Serif', Georgia, serif;
+  --font-mono:    'JetBrains Mono', 'SF Mono', Menlo, monospace;
+
+  /* Document scale, not poster scale. A headline states a
+     conclusion at reading size; it does not shout.                 */
+  --t-display:    clamp(38px, 4.4vw, 62px);
+  --t-h1:         clamp(27px, 2.6vw, 38px);
+  --t-h2:         clamp(21px, 1.9vw, 27px);
+  --t-lead:       clamp(16px, 1.25vw, 19px);
+  --t-body:       clamp(14.5px, 1.05vw, 16px);
+  --t-cap:        clamp(12.5px, .92vw, 13.5px);
+  --t-micro:      clamp(10px, .74vw, 11px);
+
+  --lh-tight:     1.12;
+  --lh-head:      1.24;
+  --lh-body:      1.72;   /* generous: the deck's legibility fix    */
+
+  --w-body:       400;    /* never 300 on a light ground            */
+  --w-strong:     500;
+  --w-head:       500;
+
+  --track-head:  -.02em;
+  --track-micro:  .22em;
+
+  /* ── space ─────────────────────────────────────────────────────  */
+  --gutter:       clamp(24px, 5vw, 88px);
+  --maxw:         1180px;
+  --rail:         7.6%;   /* the spine on every page                */
+}
+
+/* ── accent · variant A, the warmer one ─────────────────────────
+   Coral cannot carry text on the light ground (2.96:1), so the
+   ink tokens do not change — only the graphic accent does.        */
+:root[data-accent="coral"] {
+  --accent:       #B85C3E;   /* 4.30:1 — large text and graphics    */
+  --accent-lift:  #D97757;   /* 5.90:1 on night                     */
+  --accent-wash:  rgba(217,119,87,.075);
+  --accent-glow:  rgba(217,119,87,.18);
+  --second:       #2F6141;
+  --second-lift:  #8FC7A0;
+}
+
+/* The aurora: three slow radials. Depth without ornament.
+   Lifted from the existing site and kept, because it is Dagg's.    */
+.aurora {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background:
+    radial-gradient(60% 50% at 78% 12%, var(--accent-glow), transparent 60%),
+    radial-gradient(55% 55% at 12% 96%, rgba(111,169,130,.07), transparent 60%),
+    radial-gradient(80% 60% at 50% 50%, var(--accent-wash), transparent 65%);
+  filter: saturate(118%);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .aurora { animation: auroraBreathe 13s ease-in-out infinite; }
+}
+@keyframes auroraBreathe { 0%,100% { opacity:.82 } 50% { opacity:1 } }
