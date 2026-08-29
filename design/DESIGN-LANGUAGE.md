@@ -362,11 +362,16 @@ The team is small. A grid of faces makes the number the message, the reader
 counts, and then the only thing they know about the firm is how many people
 it has. That undersells work that a much larger firm could not do.
 
-There is a stronger reading of the same fact. **A small team is the evidence
-for the thesis, not a weakness in it.** The whole claim is that a company
-running AI-native does more with fewer. A site that shows the headcount and
-stops there contradicts its own product; a site that shows the working method
-lets the size follow from it.
+It is true that the firm does more with fewer people, and that this follows
+from how it works. **That is not an argument to make on the site.** Stated
+out loud it reads as a claim about margins rather than about outcomes, and
+the buyer hears *understaffed for my project* rather than *efficient*. The
+firm is also hiring, so any position built on smallness would have to be
+unwound later.
+
+So the fact stays true and stays unsaid. If the work is good the reader draws
+the conclusion, and a conclusion the reader drew is the only one that holds —
+which is the same rule as everywhere else here: prove, never assert.
 
 So: **real photographs of the actual team, framed on the work.** Hands at a
 board, a workflow being drawn and crossed out, a room mid-argument. Real
