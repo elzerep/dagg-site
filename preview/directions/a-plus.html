@@ -246,19 +246,33 @@
 <section class="sec sec--panel"><div class="w">
   <div class="hd">
     <span class="eyebrow">The decision</span>
-    <h2>Building is one of five things an engagement can conclude.</h2>
+    <h2>Five outcomes. Three of them mean nothing gets built.</h2>
   </div>
-  <div class="five">
-    <div><span class="n">01</span><h3>Leave it</h3><p>Done rarely, by people who are good at it, in a process that is stable. Automating moves the cost to maintaining the automation.</p></div>
-    <div><span class="n">02</span><h3>Simplify it</h3><p>The step exists because a system once could not do something. Asking whether it still has to exist removes it without software.</p></div>
-    <div><span class="n">03</span><h3 class="built">Automate it</h3><p>The work is right and the rules hold. What is missing is that a person is carrying it between systems that do not speak.</p></div>
-    <div><span class="n">04</span><h3 class="built">Rebuild it</h3><p>It is not slow because people are slow. The software underneath models something the company stopped doing.</p></div>
-    <div><span class="n">05</span><h3>Retire it</h3><p>The output has no reader. Nobody finds this without following the work to where it ends.</p></div>
+
+  <div class="scale">
+    <div class="scale__track"><span class="scale__fill" id="fill"></span></div>
+    <div class="scale__stops" role="tablist" aria-label="Decision outcomes">
+      <button class="stop" role="tab" aria-selected="true"  data-o="0"><span class="dot"></span>Leave</button>
+      <button class="stop" role="tab" aria-selected="false" data-o="1"><span class="dot"></span>Simplify</button>
+      <button class="stop" role="tab" aria-selected="false" data-o="2"><span class="dot"></span>Automate</button>
+      <button class="stop" role="tab" aria-selected="false" data-o="3"><span class="dot"></span>Rebuild</button>
+      <button class="stop" role="tab" aria-selected="false" data-o="4"><span class="dot"></span>Retire</button>
+    </div>
+    <div class="scale__ends"><span>nothing is built</span><span>new software ships</span></div>
   </div>
-  <div class="claim">
-    <span class="k">Where the judgment sits</span>
-    <p>Three of the five mean <b>nothing gets built.</b> Saying so before the work starts costs
-      us engagements. It is cheaper than saying it after.</p>
+
+  <div class="case" id="case">
+    <div class="case__l">
+      <span class="eyebrow" id="c-k">Outcome 01 &middot; nothing is built</span>
+      <h3 id="c-t">Leave it</h3>
+      <p class="tx" id="c-b">Work done rarely, by people who are good at it, inside a process that is stable. Automating it moves the cost from doing the work to maintaining the automation &mdash; and the maintenance does not stop.</p>
+    </div>
+    <div class="case__r">
+      <span class="mi">You would choose this when</span>
+      <p class="tx" id="c-w">The volume is low, the people are experienced, and the process has not changed in two years.</p>
+      <span class="mi" style="margin-top:1.3rem">And not when</span>
+      <p class="tx" id="c-n">The work is only stable because one person has been absorbing every exception without telling anyone.</p>
+    </div>
   </div>
 </div></section>
 
@@ -402,6 +416,7 @@
     'It is quietly feeding something else that nobody has mapped yet.']];
   var stops=[].slice.call(document.querySelectorAll('.stop')),
       fill=document.getElementById('fill'), box=document.getElementById('case');
+  if(stops.length && fill && box){
   function setCase(i){
     var c=CASE[i];
     box.classList.add('swap');
@@ -418,6 +433,7 @@
   }
   stops.forEach(function(b){ b.addEventListener('click',function(){ setCase(+b.dataset.o); }); });
   fill.style.width='20%';
+  }
 
   /* the operating record writes itself out, once */
   var lrows=[].slice.call(document.querySelectorAll('.lrow'));
