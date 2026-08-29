@@ -1,0 +1,433 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A · The Instrument — Dagg</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&amp;family=Newsreader:opsz,wght@6..72,300..600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="tokens.css">
+<style>
+/* A — THE INSTRUMENT. The map is the hero. It runs, and you can step it. */
+.hero{min-height:min(100svh,1000px);display:grid;align-items:center;
+  padding:var(--space-8) 0 var(--space-7)}
+.hero .w{display:grid;grid-template-columns:minmax(0,45fr) minmax(0,55fr);
+  gap:clamp(2rem,4vw,4.5rem);align-items:center}
+.hero h1{font-size:clamp(2.25rem,3.6vw,3.4rem);line-height:1.02;letter-spacing:-.036em;
+  font-weight:400;max-width:19ch;margin:.7rem 0 1.2rem}
+.hero .lead{max-width:38ch}
+.cta{display:flex;gap:.75rem;margin-top:2rem;flex-wrap:wrap}
+
+/* the instrument */
+.inst{background:var(--surface-instrument);border-radius:14px;overflow:hidden;
+  box-shadow:0 1px 0 color-mix(in srgb,var(--color-ink) 12%,transparent),
+             0 30px 60px -30px color-mix(in srgb,var(--color-ink) 40%,transparent)}
+.inst__bar{display:flex;align-items:center;gap:.6rem;padding:.75rem 1rem;
+  border-bottom:1px solid rgba(240,238,230,.1)}
+.inst__dot{width:7px;height:7px;border-radius:50%;background:rgba(240,238,230,.22)}
+.inst__name{font-family:var(--font-instrument);font-size:11px;letter-spacing:.16em;
+  text-transform:uppercase;color:rgba(240,238,230,.5);margin-left:.4rem}
+.inst__state{margin-left:auto;font-family:var(--font-instrument);font-size:11px;
+  letter-spacing:.14em;color:var(--color-clay)}
+.inst__body{padding:1.1rem 1.1rem 1.3rem}
+.steps{display:flex;gap:.35rem;padding:0 1.1rem 1rem}
+.step{flex:1;border:0;color:rgba(240,238,230,.55);background:none;padding:.65rem .3rem;cursor:pointer;
+  font-family:var(--font-instrument);font-size:11px;letter-spacing:.13em;text-transform:uppercase;
+  border-top:2px solid rgba(240,238,230,.2);
+  transition:color .3s ease,border-color .3s ease}
+.step[aria-selected="true"]{color:var(--color-paper);border-top-color:var(--color-clay);border-top-width:2px}
+.step:hover{color:rgba(240,238,230,.8)}
+.inst svg{width:100%;height:auto;display:block}
+.g-node rect{fill:#221F1D;stroke:rgba(240,238,230,.4);stroke-width:1}
+.g-node text{font-family:var(--font-instrument);font-size:11px;letter-spacing:.09em;fill:rgba(240,238,230,.82)}
+.g-edge{fill:none;stroke:rgba(240,238,230,.34);stroke-width:1.2}
+.g-lit rect{stroke:var(--color-clay);stroke-width:1.5}
+.g-lit text{fill:var(--color-paper)}
+.g-lit-edge{stroke:var(--color-clay);stroke-width:1.6;stroke-opacity:.95}
+.g-human rect{stroke:var(--color-clay);stroke-dasharray:4 3}
+.g-fade{opacity:.34;transition:opacity .45s ease}
+.g-on{opacity:1}
+.inst__cap{font-family:var(--font-human);font-size:16px;line-height:1.55;
+  color:rgba(240,238,230,.78);padding:0 1.1rem 1.2rem;max-width:52ch}
+
+.sec--thesis{background:var(--color-paper-lift);padding:var(--section-block) 0 calc(var(--section-block) * .6)}
+.thesis{font-size:var(--type-h2);line-height:1.04;letter-spacing:-.036em;font-weight:400;
+  max-width:20ch;margin:.9rem 0 var(--space-6)}
+.thesis em{font-style:normal;color:var(--color-clay-deep)}
+.tsplit{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,3vw,3.5rem);max-width:1000px}
+@media(max-width:900px){.tsplit{grid-template-columns:1fr}}
+
+/* section 2 — the decision, as the instrument's own output */
+.sec{padding:var(--section-block) 0}
+.sec--panel{background:var(--color-panel)}
+.hd{max-width:26ch;margin-bottom:var(--space-7)}
+.hd h2{font-size:var(--type-h2);line-height:var(--leading-heading);letter-spacing:-.032em;font-weight:400}
+.five{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--rule-subtle);
+  border:1px solid var(--rule-subtle);border-radius:12px;overflow:hidden}
+.five>div{background:var(--surface-page);padding:1.4rem 1.2rem 1.6rem;min-height:220px;
+  transition:background .3s ease}
+.five>div:hover{background:var(--surface-raised)}
+.five h3{font-size:1.0625rem;font-weight:500;letter-spacing:-.02em;margin-bottom:.6rem}
+.five p{font-family:var(--font-human);font-size:.9375rem;line-height:1.6;color:var(--text-secondary)}
+.five .n{font-family:var(--font-instrument);font-size:10px;letter-spacing:.14em;
+  color:var(--text-muted);display:block;margin-bottom:1rem}
+.five .built{color:var(--color-clay-deep)}
+@media(max-width:1000px){.five{grid-template-columns:repeat(2,1fr)}}
+
+.ld{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(2rem,4vw,4rem);
+  align-items:start}
+.led{border:1px solid var(--rule-subtle);border-radius:12px;overflow:hidden;background:var(--color-night)}
+.led__h{display:flex;align-items:center;gap:.7rem;padding:.85rem 1.1rem;
+  border-bottom:1px solid rgba(240,238,230,.1);font-family:var(--font-instrument);
+  font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:rgba(240,238,230,.5)}
+.led__live{margin-left:auto;color:var(--color-clay);display:flex;align-items:center;gap:.45rem}
+.pulse{width:6px;height:6px;border-radius:50%;background:var(--color-clay)}
+.lrow{display:grid;grid-template-columns:66px 1fr auto;gap:1rem;align-items:baseline;
+  padding:.9rem 1.1rem;border-bottom:1px solid rgba(240,238,230,.07);opacity:0;transform:translateY(6px)}
+.lrow.in{opacity:1;transform:none;transition:opacity .5s ease-out,transform .5s ease-out}
+.lrow.hum{background:rgba(217,119,87,.1)}
+.lrow .t{font-family:var(--font-instrument);font-size:10.5px;color:rgba(240,238,230,.4)}
+.lrow .d{font-family:var(--font-human);font-size:15.5px;line-height:1.45;color:rgba(240,238,230,.88)}
+.lrow .d b{color:var(--color-paper);font-weight:600}
+.lrow .k{font-family:var(--font-instrument);font-size:10px;letter-spacing:.13em;
+  text-transform:uppercase;padding:.42em .8em;border-radius:5px;white-space:nowrap}
+.k--sys{background:rgba(124,132,113,.34);color:#C3CCB8}
+.k--hum{background:var(--color-clay);color:#241009;font-weight:500}
+.led__f{padding:.95rem 1.1rem;font-family:var(--font-human);font-size:14px;
+  color:rgba(240,238,230,.55);border-top:1px solid rgba(240,238,230,.1)}
+@media(max-width:1000px){.ld{grid-template-columns:1fr}}
+@media(max-width:640px){.lrow{grid-template-columns:1fr;gap:.35rem}.lrow .k{justify-self:start}}
+
+/* the human beat runs on ink; coral carries a surface, not a hairline */
+.sec--ink{background:var(--color-night);color:var(--color-paper)}
+.sec--ink .eyebrow{color:rgba(240,238,230,.45)}
+.sec--ink h2{color:var(--color-paper)}
+.sec--ink .tx{color:rgba(240,238,230,.7)}
+.sec--ink .tx b{color:var(--color-paper)}
+.sec--ink .gate{border-color:rgba(240,238,230,.12)}
+.sec--ink .gate__t{color:var(--color-paper)}
+.sec--ink .gate p{color:rgba(240,238,230,.62)}
+.sec--ink .btn--ghost{border-color:rgba(240,238,230,.28);color:var(--color-paper)}
+.sec--human{background:var(--color-paper-lift)}
+.hb{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(2rem,4vw,4.5rem);
+  align-items:center}
+.hb h2{font-size:var(--type-h3);line-height:1.1;letter-spacing:-.03em;font-weight:400;
+  max-width:18ch;margin-top:.8rem}
+.hb img{border-radius:14px;width:100%;height:auto}
+.hb figcaption{font-family:var(--font-human);font-size:13.5px;line-height:1.5;
+  color:var(--text-muted);margin-top:.9rem;max-width:52ch}
+@media(max-width:1000px){.hb{grid-template-columns:1fr}}
+.claim{background:var(--color-clay);color:#241009;border-radius:14px;
+  padding:clamp(1.6rem,3vw,2.4rem);margin-top:var(--space-7)}
+.claim p{font-family:var(--font-human);font-size:clamp(1.25rem,2.2vw,1.75rem);
+  line-height:1.32;max-width:30ch;margin:0}
+.claim p b{font-weight:600}
+.claim .k{font-family:var(--font-instrument);font-size:10.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:rgba(36,16,9,.62);display:block;margin-bottom:.9rem}
+
+.scale{margin-bottom:var(--space-7)}
+.scale__track{height:2px;background:var(--rule-subtle);position:relative;border-radius:2px}
+.scale__fill{position:absolute;left:0;top:0;height:2px;background:var(--color-clay);
+  border-radius:2px;width:10%;transition:width .45s cubic-bezier(.16,1,.3,1)}
+.scale__stops{display:grid;grid-template-columns:repeat(5,1fr);margin-top:-6px}
+.stop{background:none;border:0;padding:0 0 0 0;cursor:pointer;text-align:left;
+  font-family:var(--font-instrument);font-size:11px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--text-muted);display:flex;flex-direction:column;gap:.7rem;
+  transition:color .3s ease}
+.stop .dot{width:10px;height:10px;border-radius:50%;background:var(--color-panel-strong);
+  border:2px solid var(--surface-page);transition:background .3s ease,transform .3s ease}
+.stop[aria-selected="true"]{color:var(--text-primary)}
+.stop[aria-selected="true"] .dot{background:var(--color-clay);transform:scale(1.25)}
+.stop:hover{color:var(--text-primary)}
+.scale__ends{display:flex;justify-content:space-between;margin-top:1.1rem;
+  font-family:var(--font-human);font-size:14px;color:var(--text-muted)}
+.case{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(2rem,4vw,4rem);
+  background:var(--surface-page);border-radius:14px;padding:clamp(1.6rem,3vw,2.4rem);
+  min-height:230px}
+.case h3{font-size:clamp(1.5rem,2.6vw,2rem);font-weight:400;letter-spacing:-.03em;margin:.7rem 0 .9rem}
+.case .mi{font-family:var(--font-instrument);font-size:10.5px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--text-muted);display:block;margin-bottom:.5rem}
+.case p{font-size:1rem}
+.case__l,.case__r{transition:opacity .3s ease}
+.case.swap .case__l,.case.swap .case__r{opacity:0}
+@media(max-width:900px){.case{grid-template-columns:1fr}
+  .scale__stops{grid-template-columns:repeat(3,1fr);gap:1rem}}
+
+/* section 3 — human control points */
+.ctrl{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(2rem,4vw,4rem)}
+.gate{display:grid;grid-template-columns:auto 1fr;gap:1.1rem;padding:1.3rem 0;
+  border-bottom:1px solid var(--rule-subtle);align-items:start}
+.gate:first-of-type{border-top:1px solid var(--rule-subtle)}
+.gate__t{font-size:1.0625rem;font-weight:500;letter-spacing:-.018em}
+.gate p{font-family:var(--font-human);font-size:.9375rem;line-height:1.62;color:var(--text-secondary);margin-top:.35rem}
+@media(max-width:1000px){.ctrl,.hero .w{grid-template-columns:1fr}}
+@media(max-width:700px){
+  .hero{min-height:auto;padding:var(--space-7) 0}
+  .steps{flex-wrap:wrap}.step{flex:0 0 calc(33.333% - .24rem)}
+}
+</style></head><body>
+
+<header class="nav"><div class="w">
+  <img src="../../assets/dagg-logotype-dark.png" alt="Dagg">
+  <nav><a href="#">Strategy</a><a href="#">Implementation</a><a href="#">WorkGraph</a><a href="#">Company</a>
+  <a class="btn btn--solid" href="#">Book an assessment</a></nav>
+</div></header>
+
+<section class="hero"><div class="w">
+  <div>
+    <span class="eyebrow">AI transformation</span>
+    <h1>We redesign how work moves — and build the systems that make it move at machine speed.</h1>
+    <p class="lead">Dagg brings strategic judgment, company-specific context and production
+      engineering to one question: what should change — and then makes the change real.</p>
+    <div class="cta">
+      <a class="btn btn--solid" href="#">Book an assessment</a>
+      <a class="btn btn--ghost" href="#">See how a decision is made</a>
+    </div>
+  </div>
+
+  <figure class="inst" id="inst">
+    <div class="inst__bar">
+      <span class="inst__dot"></span><span class="inst__dot"></span><span class="inst__dot"></span>
+      <span class="inst__name">WorkGraph · claims intake</span>
+      <span class="inst__state" id="st">MAP</span>
+    </div>
+    <div class="inst__body">
+      <svg viewBox="0 0 620 268" role="img" aria-label="A record of one workflow, shown at five stages: mapped, decided, built, governed and operating.">
+        <g class="g-edge" id="edges">
+          <path d="M104 60 L146 60"/><path d="M104 125 L146 125"/><path d="M104 190 L146 190"/>
+          <path d="M262 60 L292 60 Q316 60 316 100 L316 112"/>
+          <path d="M262 190 L292 190 Q316 190 316 150 L316 138"/>
+          <path d="M262 125 L316 125"/><path d="M392 125 L440 125"/>
+        </g>
+        <g class="g-node" id="nodes">
+          <g><rect x="0" y="46" width="104" height="28" rx="5"/><text x="52" y="64" text-anchor="middle">REQUEST</text></g>
+          <g><rect x="0" y="111" width="104" height="28" rx="5"/><text x="52" y="129" text-anchor="middle">DOCUMENT</text></g>
+          <g><rect x="0" y="176" width="104" height="28" rx="5"/><text x="52" y="194" text-anchor="middle">APPROVAL</text></g>
+          <g><rect x="146" y="42" width="116" height="36" rx="6"/><text x="204" y="64" text-anchor="middle">A PERSON</text></g>
+          <g><rect x="146" y="107" width="116" height="36" rx="6"/><text x="204" y="129" text-anchor="middle">A SYSTEM</text></g>
+          <g><rect x="146" y="172" width="116" height="36" rx="6"/><text x="204" y="194" text-anchor="middle">A HANDOFF</text></g>
+          <g id="n-wait"><rect x="316" y="103" width="76" height="44" rx="6"/><text x="354" y="129" text-anchor="middle">WAIT</text></g>
+          <g id="n-out"><rect x="440" y="99" width="160" height="52" rx="6"/><text x="520" y="120" text-anchor="middle">DECISION</text><text x="520" y="136" text-anchor="middle">MADE AGAIN</text></g>
+        </g>
+        <g id="layer-agent" class="g-fade">
+          <g class="g-node g-lit"><rect x="316" y="103" width="76" height="44" rx="6"/><text x="354" y="129" text-anchor="middle">AGENT</text></g>
+          <path class="g-lit-edge" d="M392 125 L440 125" fill="none"/>
+        </g>
+        <g id="layer-human" class="g-fade">
+          <g class="g-node g-human"><rect x="440" y="180" width="160" height="38" rx="6"/><text x="520" y="203" text-anchor="middle">A PERSON APPROVES</text></g>
+          <path class="g-lit-edge" d="M354 147 L354 199 L440 199" fill="none" stroke-dasharray="4 4"/>
+        </g>
+        <g id="layer-run" class="g-fade">
+          <text x="316" y="238" font-family="JetBrains Mono" font-size="9.5" letter-spacing=".1em" fill="#D97757">LIVE · ESCALATION PENDING</text>
+        </g>
+      </svg>
+    </div>
+    <div class="steps" role="tablist">
+      <button class="step" role="tab" aria-selected="true"  data-s="0">Map</button>
+      <button class="step" role="tab" aria-selected="false" data-s="1">Decide</button>
+      <button class="step" role="tab" aria-selected="false" data-s="2">Build</button>
+      <button class="step" role="tab" aria-selected="false" data-s="3">Govern</button>
+      <button class="step" role="tab" aria-selected="false" data-s="4">Operate</button>
+    </div>
+    <figcaption class="inst__cap" id="cap">The record of one path, drawn from evidence the company already
+      generates. Entity names removed — the shape is publishable, the contents never are.</figcaption>
+  </figure>
+</div></section>
+
+<section class="sec sec--thesis"><div class="w">
+  <span class="eyebrow">The strategic question</span>
+  <h2 class="thesis">The first AI decision is what should <em>not</em> be automated.</h2>
+  <div class="tsplit">
+    <p class="tx">Most companies start from a list of what could be automated. That list is
+      always long, and working through it in order is how a transformation spends two years
+      arriving somewhere nobody wanted to be.</p>
+    <p class="tx">The order that matters is the other one: what must stay human, what should
+      simply stop, and what is left. Everything after that is execution.</p>
+  </div>
+</div></section>
+
+<section class="sec sec--panel"><div class="w">
+  <div class="hd">
+    <span class="eyebrow">The decision</span>
+    <h2>Building is one of five things an engagement can conclude.</h2>
+  </div>
+  <div class="five">
+    <div><span class="n">01</span><h3>Leave it</h3><p>Done rarely, by people who are good at it, in a process that is stable. Automating moves the cost to maintaining the automation.</p></div>
+    <div><span class="n">02</span><h3>Simplify it</h3><p>The step exists because a system once could not do something. Asking whether it still has to exist removes it without software.</p></div>
+    <div><span class="n">03</span><h3 class="built">Automate it</h3><p>The work is right and the rules hold. What is missing is that a person is carrying it between systems that do not speak.</p></div>
+    <div><span class="n">04</span><h3 class="built">Rebuild it</h3><p>It is not slow because people are slow. The software underneath models something the company stopped doing.</p></div>
+    <div><span class="n">05</span><h3>Retire it</h3><p>The output has no reader. Nobody finds this without following the work to where it ends.</p></div>
+  </div>
+  <div class="claim">
+    <span class="k">Where the judgment sits</span>
+    <p>Three of the five mean <b>nothing gets built.</b> Saying so before the work starts costs
+      us engagements. It is cheaper than saying it after.</p>
+  </div>
+</div></section>
+
+<section class="sec sec--human"><div class="w">
+  <div class="hb">
+    <div>
+      <span class="eyebrow">How the work is done</span>
+      <h2>The map is argued over before it is drawn.</h2>
+      <p class="tx" style="margin-top:1.3rem">What a company knows about itself sits in a form
+        nobody can query: in the judgement of the person who has done the job for nine years, in
+        the exception nobody documented, in the meeting where a decision gets made again because
+        the reason was never written down.</p>
+      <p class="tx" style="margin-top:1rem">Getting that out is not a survey and it is not a
+        workshop. It is sitting with the people who do the work until the difference between
+        the process and the practice becomes visible — and then crossing things out.</p>
+      <p class="tx" style="margin-top:1rem"><b>That is the part that cannot be bought as
+        software</b>, and it is where an engagement actually spends its time.</p>
+    </div>
+    <figure>
+      <img src="../../assets/img/work-01.webp" alt="Two people at a whiteboard, mapping a workflow and crossing parts of it out" width="1600" height="1121" loading="lazy">
+      <figcaption>Placeholder. This should be a photograph of Christian and Simon at work —
+        no stock, no invented people. Generated documentary imagery is standing in until real
+        photographs exist.</figcaption>
+    </figure>
+  </div>
+</div></section>
+
+<section class="sec sec--ink"><div class="w">
+  <div class="ctrl">
+    <div>
+      <div class="hd" style="max-width:22ch">
+        <span class="eyebrow">Human control</span>
+        <h2>Where a person stays in the loop, and why.</h2>
+      </div>
+      <div class="gate"><span class="tag tag--human">Decides</span><div>
+        <div class="gate__t">What is worth rebuilding</div>
+        <p>An agent can rank a backlog. It cannot tell you that the workflow everyone hates is not the one costing you money.</p></div></div>
+      <div class="gate"><span class="tag tag--human">Approves</span><div>
+        <div class="gate__t">Anything irreversible</div>
+        <p>Money leaving, a document going to a third party, a customer being told something. Decided in advance, not discovered in production.</p></div></div>
+      <div class="gate"><span class="tag tag--system">Escalates</span><div>
+        <div class="gate__t">The cases nobody encoded</div>
+        <p>The exception the process never described. The agent hands it back rather than guessing, and the answer is written into the record.</p></div></div>
+      <div class="gate"><span class="tag tag--system">Records</span><div>
+        <div class="gate__t">Every action, including the ones that worked</div>
+        <p>Readable months later, when the question is why. This is usually treated as compliance overhead. It is what makes the other three enforceable.</p></div></div>
+    </div>
+    <div>
+      <p class="tx"><b>People move to specifying and verifying.</b> That is the actual change, and
+        it is the part that has to be designed rather than assumed.</p>
+      <p class="tx" style="margin-top:1rem">A system that runs without anyone accountable degrades
+        quietly, and the first person to notice is a customer.</p>
+      <p style="margin-top:1.6rem"><a class="btn btn--ghost" href="#">How the factory works</a></p>
+    </div>
+  </div>
+</div></section>
+
+
+
+<section class="sec sec--panel"><div class="w">
+  <div class="hd" style="max-width:28ch">
+    <span class="eyebrow">In production</span>
+    <h2>What the system did, and where a person stepped in.</h2>
+  </div>
+  <div class="ld">
+    <figure class="led" id="led">
+      <div class="led__h"><span>Operating record</span><span>· masked</span>
+        <span class="led__live"><span class="pulse"></span>LIVE</span></div>
+      <div class="lrow"><span class="t">08:14:22</span><span class="d">Intake received. Routed on the path mapped in week one.</span><span class="k k--sys">System</span></div>
+      <div class="lrow"><span class="t">08:14:26</span><span class="d">Two systems reconciled. No new interface; the work stayed where it lives.</span><span class="k k--sys">Agent</span></div>
+      <div class="lrow"><span class="t">08:16:03</span><span class="d">Exception met. <b>Not encoded — handed back.</b></span><span class="k k--hum">Escalated</span></div>
+      <div class="lrow hum"><span class="t">08:31:47</span><span class="d"><b>A person decided.</b> The reason was written into the record, so it will not be decided again.</span><span class="k k--hum">Human</span></div>
+      <div class="lrow"><span class="t">08:31:52</span><span class="d">Resumed. Downstream notified.</span><span class="k k--sys">Agent</span></div>
+      <div class="led__f">Every action is written down, including the ones that worked. That is what
+        makes the boundaries enforceable rather than requested.</div>
+    </figure>
+    <div>
+      <p class="tx">An agent that acts inside a company needs bounds it cannot argue with, an
+        escalation path decided in advance, and a record somebody can read months later when the
+        question is why.</p>
+      <p class="tx" style="margin-top:1rem">The record is usually treated as compliance
+        overhead. It is the thing that makes the first two enforceable — and it is what turns a
+        decision made once into a decision that stays made.</p>
+      <p style="margin-top:1.8rem"><a class="btn btn--ghost" href="#">How the factory works</a></p>
+    </div>
+  </div>
+</div></section>
+
+<script>
+(function(){
+  var CAPS=[
+   'The record of one path, drawn from evidence the company already generates. Entity names removed — the shape is publishable, the contents never are.',
+   'Five outcomes are available. Here the waiting is the cost, so the decision is to rebuild the step that creates it — not the step people complain about.',
+   'An agent takes the carrying between systems that do not speak. The systems stay; nobody learns a new tool.',
+   'A person approves anything irreversible. The boundary is enforced, not requested, and every action is written down.',
+   'Live. The same record that was drawn in week one is now orchestrating what runs.'];
+  var STATE=['MAP','DECIDE','BUILD','GOVERN','OPERATE'];
+  var steps=[].slice.call(document.querySelectorAll('.step'));
+  var A=document.getElementById('layer-agent'),H=document.getElementById('layer-human'),
+      R=document.getElementById('layer-run'),cap=document.getElementById('cap'),st=document.getElementById('st');
+  function go(i){
+    steps.forEach(function(b,k){ b.setAttribute('aria-selected', k===i?'true':'false'); });
+    A.classList.toggle('g-on', i>=2); H.classList.toggle('g-on', i>=3); R.classList.toggle('g-on', i>=4);
+    cap.textContent=CAPS[i]; st.textContent=STATE[i];
+  }
+  steps.forEach(function(b){ b.addEventListener('click',function(){ go(+b.dataset.s); stop(); }); });
+  var i=0,t=null;
+  function stop(){ if(t){clearInterval(t);t=null;} }
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting && !t && !reduce){ t=setInterval(function(){ i=(i+1)%5; go(i); },2600); }
+    else if(!e.isIntersecting){ stop(); }
+  });},{threshold:.4});
+  io.observe(document.getElementById('inst'));
+  go(0);
+
+  /* the decision model: one outcome at a time, and the scale shows where it sits */
+  var CASE=[
+   ['Outcome 01 · nothing is built','Leave it',
+    'Work done rarely, by people who are good at it, inside a process that is stable. Automating it moves the cost from doing the work to maintaining the automation — and the maintenance does not stop.',
+    'The volume is low, the people are experienced, and the process has not changed in two years.',
+    'The work is only stable because one person has been absorbing every exception without telling anyone.'],
+   ['Outcome 02 · nothing is built','Simplify it',
+    'The step exists because a system once could not do something. Asking whether it still has to exist removes it without any software at all — and removes the maintenance with it.',
+    'Nobody can say who the output is for, or the answer is a report that gets filed.',
+    'The step is the only place a control is applied, even if nobody documented it as one.'],
+   ['Outcome 03 · something is built','Automate it',
+    'The work is right and the rules hold. What is missing is that a person is carrying it between systems that do not speak to each other, and that carrying is the whole cost.',
+    'The rules are stable, the inputs are reliable, and the exceptions are known and few.',
+    'The judgement has never actually been made — then there is nothing to encode yet.'],
+   ['Outcome 04 · something is built','Rebuild it',
+    'It is not slow because people are slow. The software underneath models a company that stopped existing, and an agent placed on top of it makes the wrong thing faster.',
+    'The cost of the waiting it creates exceeds the cost of the building, inside one budget cycle.',
+    'The process is still being redesigned. Then it would be built twice.'],
+   ['Outcome 05 · nothing is built','Retire it',
+    'The output has no reader. Nobody finds this without following the work all the way to where it ends, which is why it survives audit after audit.',
+    'You follow the output downstream and it stops at an inbox nobody opens.',
+    'It is quietly feeding something else that nobody has mapped yet.']];
+  var stops=[].slice.call(document.querySelectorAll('.stop')),
+      fill=document.getElementById('fill'), box=document.getElementById('case');
+  function setCase(i){
+    var c=CASE[i];
+    box.classList.add('swap');
+    setTimeout(function(){
+      document.getElementById('c-k').textContent=c[0];
+      document.getElementById('c-t').textContent=c[1];
+      document.getElementById('c-b').textContent=c[2];
+      document.getElementById('c-w').textContent=c[3];
+      document.getElementById('c-n').textContent=c[4];
+      box.classList.remove('swap');
+    },300);
+    stops.forEach(function(b,k){ b.setAttribute('aria-selected',k===i?'true':'false'); });
+    fill.style.width=((i+1)/5*100)+'%';
+  }
+  stops.forEach(function(b){ b.addEventListener('click',function(){ setCase(+b.dataset.o); }); });
+  fill.style.width='20%';
+
+  /* the operating record writes itself out, once */
+  var lrows=[].slice.call(document.querySelectorAll('.lrow'));
+  if(reduce){ lrows.forEach(function(r){r.classList.add('in');}); }
+  else{
+    var lio=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(!e.isIntersecting) return; lio.disconnect();
+      lrows.forEach(function(r,i){ setTimeout(function(){ r.classList.add('in'); }, 200+i*400); });
+    });},{threshold:.3});
+    lio.observe(document.getElementById('led'));
+    var p=document.querySelector('.pulse');
+    if(p) p.animate([{opacity:1},{opacity:.25},{opacity:1}],{duration:2200,iterations:Infinity});
+  }
+})();
+</script>
+</body></html>
