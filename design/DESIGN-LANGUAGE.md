@@ -270,17 +270,21 @@ Tokens live in `tokens.css`. Nothing defines a colour outside it.
 **Two accent variants** exist while the identity is being decided:
 `data-accent="violet"` (Dagg's own, default) and `data-accent="coral"`.
 
-Measured against the light ground `#FAF9F5`:
+Measured against the ground `#F0EEE6`:
 
 | | contrast | verdict |
 |---|---|---|
-| violet `#5B3BC4` | 6.95:1 | text and graphic |
-| green `#2F6141` | 6.86:1 | text and graphic |
-| coral `#D97757` | **2.96:1** | **graphic only — never text** |
+| violet `#5B3BC4` | 6.30:1 | text at any size, and graphic |
+| green `#2F6141` | 6.22:1 | text at any size, and graphic |
+| coral `#B85C3E` | 3.90:1 | graphic, and text at 24px and up |
+| coral `#9E4A2E` | 5.21:1 | small text and links on light |
+| coral `#D97757` | **2.69:1** | **graphic only on light** — 5.90:1 on night |
 
-That is a constraint, not a preference. Coral is a beautiful field colour and
-an unusable text colour on ivory. The variant exists so the choice can be made
-by looking rather than by argument.
+That is a constraint, not a preference. The bright coral is a beautiful field
+colour and an unusable text colour on ivory, so the hue carries two values: the
+bright end fills and strokes, the deep end sets type. The page still reads
+coral, because what the eye registers as the accent is the field, not the
+footnote.
 
 Every text-on-background pair ships at 4.5:1 or better. Captions carry content
 and are held to the same bar as body — they are not decoration.

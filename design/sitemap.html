@@ -1,0 +1,317 @@
+<title>Dagg Sitemap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Newsreader:opsz,wght@6..72,300..600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#F0EEE6; --paper-2:#E8E6DC; --panel:#E3DACC; --lift:#F5F3EC; --night:#141413;
+  --ink:#141413; --ink-2:#3A3A36; --ink-3:#5F5E58; --ink-faint:#A9A79E;
+  --hair:rgba(20,20,19,.13); --hair-soft:rgba(20,20,19,.07); --hair-firm:rgba(20,20,19,.26);
+  --accent:#B85C3E; --accent-text:#9E4A2E; --accent-bright:#D97757;
+  --accent-wash:rgba(217,119,87,.075); --accent-glow:rgba(217,119,87,.16);
+  --second:#2F6141; --second-wash:rgba(47,97,65,.07);
+  --n-fg:#F0EEE6; --n-fg-2:#B0AEA5; --n-hair:rgba(240,238,230,.16);
+  --sans:'Geist',system-ui,-apple-system,sans-serif;
+  --serif:'Newsreader',Georgia,serif;
+  --mono:'JetBrains Mono','SF Mono',Menlo,monospace;
+  --gutter:clamp(20px,4.2vw,64px); --maxw:1080px;
+}
+:root:not([data-theme="light"]){}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
+  font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,p,ul,ol,figure,table{margin:0}
+.sheet{max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter)}
+
+/* zones */
+.z{position:relative;padding:clamp(52px,6.4vw,92px) 0;border-top:1px solid var(--hair)}
+.z:first-of-type{border-top:0}
+.z.w{background:var(--paper-2);border-top:0;clip-path:inset(0 -100vmax);box-shadow:0 0 0 100vmax var(--paper-2)}
+.z.d{background:var(--night);color:var(--n-fg);border-top:0;clip-path:inset(0 -100vmax);box-shadow:0 0 0 100vmax var(--night)}
+.z.d h2,.z.d h3,.z.d .k,.z.d b,.z.d strong{color:var(--n-fg)}
+.z.d p,.z.d li,.z.d td{color:var(--n-fg-2)}
+.z.d .eyebrow{color:var(--n-fg-2)}
+.z.d table,.z.d th,.z.d td,.z.d .rule{border-color:var(--n-hair)}
+.z.d th{color:var(--n-fg)}
+
+/* type */
+.eyebrow{font-family:var(--mono);font-size:10.5px;letter-spacing:.17em;text-transform:uppercase;
+  color:var(--ink-3);display:block;margin-bottom:18px}
+h1{font-weight:500;font-size:clamp(31px,4vw,50px);line-height:1.14;letter-spacing:-.023em;
+  max-width:19ch;text-wrap:balance}
+h2{font-weight:500;font-size:clamp(24px,2.7vw,35px);line-height:1.2;letter-spacing:-.02em;
+  max-width:24ch;text-wrap:balance}
+h3{font-weight:500;font-size:clamp(17px,1.6vw,20px);line-height:1.32;letter-spacing:-.012em;margin-bottom:8px}
+h4{font-weight:500;font-size:14.5px;letter-spacing:0;margin-bottom:6px}
+p,li{font-family:var(--serif);font-optical-sizing:auto;font-size:17px;line-height:1.66;color:var(--ink-2)}
+p{max-width:64ch}
+p+p,p+ul,ul+p,h2+p,h3+p,p+.rule{margin-top:14px}
+h2+p{margin-top:18px}
+b,strong{font-weight:600;color:var(--ink)}
+.lead{font-size:19.5px;line-height:1.58;max-width:56ch;margin-top:20px}
+.ac{color:var(--accent-text)}
+ul,ol{padding-left:20px;display:flex;flex-direction:column;gap:7px}
+li::marker{color:var(--ink-faint)}
+a{color:var(--accent-text)}
+.stack{display:flex;flex-direction:column;gap:clamp(28px,3.4vw,46px)}
+
+/* nav sketch */
+.navsketch{font-family:var(--mono);font-size:13px;line-height:2.1;color:var(--ink-2);
+  background:var(--lift);border:1px solid var(--hair);padding:22px 24px;margin-top:24px;
+  overflow-x:auto;white-space:pre}
+.navsketch b{color:var(--accent-text);font-weight:500}
+.navsketch i{color:var(--ink-faint);font-style:normal}
+
+/* tables */
+.tw{overflow-x:auto;margin-top:20px}
+table{border-collapse:collapse;width:100%;min-width:520px}
+th{font-family:var(--sans);font-size:11.5px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ink-3);text-align:left;padding:0 16px 9px 0;border-bottom:1px solid var(--hair-firm);vertical-align:bottom}
+td{font-family:var(--serif);font-size:15.5px;line-height:1.52;color:var(--ink-2);
+  padding:11px 16px 11px 0;border-bottom:1px solid var(--hair);vertical-align:top}
+td:last-child,th:last-child{padding-right:0}
+td b{font-weight:600}
+
+/* page cards -> hairline rows, per the language: no card grids */
+.pg{display:grid;grid-template-columns:clamp(88px,13%,140px) 1fr;gap:clamp(16px,2.4vw,34px);
+  padding:24px 0;border-top:1px solid var(--hair)}
+.pg:first-of-type{border-top:1px solid var(--hair-firm)}
+.pg .k{font-family:var(--sans);font-size:14.5px;font-weight:500;color:var(--ink);letter-spacing:-.006em}
+.pg .k span{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.13em;
+  color:var(--ink-faint);text-transform:uppercase;margin-top:5px}
+.pg p{margin-top:0}
+.pg p+p{margin-top:10px}
+
+/* the band */
+.band{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.4vw,38px) clamp(20px,2.6vw,42px);
+  border-top:1px solid var(--hair);padding-top:22px;margin-top:34px}
+.band h4{color:var(--ink)}
+.band p{font-size:15.5px;line-height:1.58;margin-top:0}
+@media(max-width:760px){.band{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.band{grid-template-columns:1fr}.pg{grid-template-columns:1fr;gap:10px}}
+
+/* quotes — the one serif display beat */
+.q{border-left:2px solid var(--accent);padding:4px 0 4px 22px;margin-top:22px}
+.q p{font-size:19px;line-height:1.5;color:var(--ink);max-width:52ch}
+.q cite{display:block;font-family:var(--sans);font-style:normal;font-size:12.5px;
+  color:var(--ink-3);margin-top:10px;letter-spacing:0}
+.z.d .q{border-color:var(--accent-bright)}
+.z.d .q p{color:var(--n-fg)}
+.z.d cite{color:var(--n-fg-2)}
+
+.flag{border-left:2px solid var(--second);padding:2px 0 2px 20px;margin-top:20px}
+.flag p{font-size:15.5px;color:var(--ink-2);margin-top:0}
+.flag p+p{margin-top:8px}
+
+.rule{border-top:1px solid var(--hair);margin-top:26px;padding-top:22px}
+.note{font-family:var(--sans);font-size:13px;color:var(--ink-3);line-height:1.6;max-width:70ch}
+
+/* decision list */
+.dec{counter-reset:d;display:flex;flex-direction:column;margin-top:22px}
+.dec>div{display:grid;grid-template-columns:30px 1fr;gap:14px;padding:15px 0;border-top:1px solid var(--hair)}
+.dec>div::before{counter-increment:d;content:counter(d,decimal-leading-zero);
+  font-family:var(--mono);font-size:13px;color:var(--accent-text)}
+.dec p{margin-top:5px;font-size:16px}
+</style>
+
+<main>
+
+<section class="z">
+<div class="sheet">
+  <span class="eyebrow">dagg.ai · struktur · reviderad</span>
+  <h1>Hybriden bevisas inuti en artefakt, inte av grannskap i en meny.</h1>
+  <p class="lead">Första versionen lät navigationen bära argumentet: en metodsida
+  bredvid en byggsida, båda tunga, och läsaren drar slutsatsen. Två granskare tog
+  isär det oberoende av varandra, och de har rätt.</p>
+  <p>En navigationsrad är det billigaste som finns på webben. Vem som helst kopierar
+  den på en eftermiddag, och därför bevisar den ingenting. Att dessutom lägga de två
+  halvorna i varsitt rum <b>motsäger</b> påståendet — ett bolag med en strategiavdelning
+  och ett separat utvecklingsteam ser ut precis så.</p>
+  <p>Designspråket sade redan var beviset ligger: i en rekommendation som kommer med
+  vad den skulle kosta att bygga, för att vi är de som skulle bygga den. Det är båda
+  halvorna i ett enda objekt. Strukturen nedan tvingar dem att mötas där i stället.</p>
+</div>
+</section>
+
+<section class="z w">
+<div class="sheet">
+  <span class="eyebrow">Navigation</span>
+  <h2>Fyra dörrar och en ingång</h2>
+
+  <div class="navsketch"><b>Det dolda arbetet</b>   <i>tesen · argumentet · det som ersätter case studies</i>
+<b>WorkGraph</b>           <i>kartan · artefakten någon kan inspektera</i>
+<b>Dagg Factory</b>        <i>bygget · de två lägena · produktionen</i>
+<b>Company</b>             <i>en sida · mission · principer · vilka som står bakom</i>
+                    <i>—</i>
+<b>Assessment</b>          <i>hur ett samarbete börjar</i></div>
+
+  <p style="margin-top:22px">Första dörren är tänkandet, inte presentationen. Det är
+  det enda strukturella draget som gör det möjligt att lägga Company längst bak utan
+  att sajten känns tom — och det är den halva av "McKinsey möter Anthropic" som saknades
+  helt i förra versionen.</p>
+
+  <div class="q">
+    <p>Ett argument kräver ingens tillstånd att publiceras.</p>
+    <cite>Därför är tesen den enda tillgång som skalar under sekretess</cite>
+  </div>
+
+  <p style="margin-top:24px">Ni får inte publicera kunder. Ni får publicera resonemang.
+  Det är hela lösningen på sekretessproblemet, och förra versionen hade den inte.</p>
+
+  <div class="rule">
+    <h3>Var halvorna möts</h3>
+    <p><b>Tessidan slutar i vad kartan kostar att agera på.</b> Ett resonemang som
+    landar i en byggkostnad kan bara skrivas av någon som skulle bygga det.</p>
+    <p><b>Factory öppnar med vad vi valde att inte bygga.</b> Ett bygge som börjar i
+    ett avstående kan bara beskrivas av någon som har omdömet att avstå.</p>
+    <p>Ingen av meningarna påstår hybriden. Båda är omöjliga att skriva utan den.</p>
+  </div>
+</div>
+</section>
+
+<section class="z">
+<div class="sheet">
+  <span class="eyebrow">Sida för sida</span>
+  <h2>Vad varje dörr leder till</h2>
+
+  <div style="margin-top:26px">
+    <div class="pg">
+      <div class="k">Det dolda arbetet<span>dörr ett</span></div>
+      <div>
+        <p>Rubriken är slutsatsledd, aldrig en kategorietikett. Inte "Vår tes" utan
+        något i stil med <b>Var tiden faktiskt går.</b></p>
+        <p>Argumentet: ett bolag känner sitt organisationsschema, sina system och sin
+        ekonomi. Det har ingen karta över hur arbetet rör sig — genom huvuden, chattar,
+        kalkylark, möten och odokumenterat omdöme. Diagram: schemat mot det verkliga
+        flödet, där gapet är hela poängen.</p>
+        <p>Sidan slutar i vad kartan kostar att agera på.</p>
+      </div>
+    </div>
+
+    <div class="pg">
+      <div class="k">WorkGraph<span>dörr två</span></div>
+      <div>
+        <p>Kartan som byggs innan något annat, ur bevis bolaget redan genererar.</p>
+        <p>Här ligger den lösning på sekretessen som förra versionen saknade:
+        <b>anonymiserade artefakter.</b> Sekretessen förbjuder er att namnge kunden.
+        Den förbjuder er inte att visa artefaktens form. Ett WorkGraph-utdrag med
+        entiteterna maskade är något en teknisk läsare kan syna — och det är skillnaden
+        mellan en påstådd metod och en visad.</p>
+      </div>
+    </div>
+
+    <div class="pg">
+      <div class="k">Dagg Factory<span>dörr tre</span></div>
+      <div>
+        <p>Öppnar med vad ni valde att inte bygga. Sedan: automatisera det som ska vara
+        kvar, bygg om det som ska ändras.</p>
+        <p>De två lägena, Intelligence Layer, den styrda agenten med gränser, eskalering
+        och spår. I produktion med övervakning, ägarskap och en väg tillbaka.
+        <b>Aloi som en mening i slutet</b> — en av dem blev ett eget bolag — inte som
+        en egen dörr.</p>
+      </div>
+    </div>
+
+    <div class="pg">
+      <div class="k">Company<span>dörr fyra</span></div>
+      <div>
+        <p>En sida, inte tre bakom en meny. En dropdown får läsaren att vänta sig djup
+        och sedan mäta hur lite som fanns.</p>
+        <p>Mission på en rad. Principerna med riktiga argument under sig. Sekretessen
+        som <b>policy</b>, sagd här och ingen annanstans: kunder förekommer inte på den
+        här sajten. Uttalad bland bevis låter den som en ursäkt; uttalad som policy är
+        den en standard ni håller.</p>
+        <p>Och vilka som står bakom — som roller och vad de faktiskt gjort, utan
+        porträttgalleri. Lärdomen från McKinsey är inte "inga personer" utan "inga
+        ansikten": de visar fyra ledningsorgan med länk vidare.</p>
+      </div>
+    </div>
+
+    <div class="pg">
+      <div class="k">Assessment<span>ingången</span></div>
+      <div>
+        <p>Inte priser, inte en tjänstelista — bara vad som händer först. En övertygad
+        läsare hade i förra versionen ingenstans att ta reda på det.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="z d">
+<div class="sheet">
+  <span class="eyebrow">Det som ströks</span>
+  <h2>Tre beslut som gick åt andra hållet efter granskningen</h2>
+
+  <div style="margin-top:8px">
+    <h3 style="color:var(--n-fg)">Ventures-dörren är borta</h3>
+    <p>Att döpa om Proof till Ventures var ordmagi. Läsaren kan fortfarande räkna till
+    ett, och pluralen gör frånvaron tydligare. Allvarligare: Ventures plus "vad som
+    lossnat" plus att Dagg äger IP:t kan få en köpare att undra om deras arbetsflöden
+    är råmaterial för era bolag. Det är förödande för någon som samtidigt ber om
+    tillgång till känsliga processer.</p>
+    <p>Aloi nämns som på sajten i dag, som en konsekvens. Aldrig som en kategori.</p>
+  </div>
+
+  <div class="rule" style="border-color:var(--n-hair)">
+    <h3 style="color:var(--n-fg)">News är borta ur navet</h3>
+    <p>Utfallen är asymmetriska. Bästa tänkbara: läsaren noterar att sajten lever.
+    Sämsta: läsaren känner igen maskinskriven text — och det gör den publik ni vill ha,
+    inom två meningar — och omvärderar retroaktivt varje omdömespåstående på de andra
+    sidorna. Det är en enkelriktad dörr. Man kan inte av-lära någon att ert publicerade
+    tänkande är automatiserat.</p>
+    <p>Läsaren kalibrerar dessutom er tankekvalitet mot det billigaste ni publicerar,
+    inte det dyraste. Ett veckoinlägg om någon annans modellsläpp blir taket för hur
+    skarpt resten av sajten får läsas.</p>
+    <p><b>Boten behåller ni</b> — som internt spaningsverktyg i founder-os. Om det ska
+    finnas en publik yta: i foten, utan kadens, och bara sådant ni lärt er av att bygga.
+    Utan kadens finns inget löfte att bryta.</p>
+  </div>
+
+  <div class="rule" style="border-color:var(--n-hair)">
+    <h3 style="color:var(--n-fg)">Kurvan får inte följa med</h3>
+    <p>Den stigande kurvan på sajten i dag har inga datapunkter. En stigande kurva är
+    ett påhittat tal även utan siffror på axeln, och er egen checklista förbjuder
+    påhittade tal också i illustrationer. Är den i stället någons verkliga tillväxt
+    faller den på regeln om intäkter. Båda vägarna är stängda.</p>
+  </div>
+</div>
+</section>
+
+<section class="z">
+<div class="sheet">
+  <span class="eyebrow">Beslut</span>
+  <h2>Fem frågor som är dina</h2>
+
+  <div class="dec">
+    <div><div>
+      <h3>Språket</h3>
+      <p>Sajten är engelsk i dag, designspråket är skrivet på engelska, det här
+      dokumentet är svenskt. Marknaden avgör, och det beslutet påverkar varje sida.</p>
+    </div></div>
+    <div><div>
+      <h3>Vilka står bakom?</h3>
+      <p>Ni säljer omdöme, och köparens fråga är vems. Båda granskarna menar att noll
+      personer på ett okänt bolag läses som svaghet, inte återhållsamhet. Roller utan
+      ansikten, eller en signerad text — men inte tomt.</p>
+    </div></div>
+    <div><div>
+      <h3>Hur mycket av en artefakt får maskas fram?</h3>
+      <p>Ett WorkGraph-utdrag med entiteterna borttagna är det starkaste ni kan visa
+      under sekretess. Var går din gräns för vad formen får avslöja?</p>
+    </div></div>
+    <div><div>
+      <h3>Ska sajten indexeras?</h3>
+      <p>Den är i dag stängd för sökmotorer i både robots.txt och sidhuvudet.</p>
+    </div></div>
+    <div><div>
+      <h3>Mörka logotyper</h3>
+      <p>Båda märkena är vit grafik och därmed osynliga på ljus grund — de hålls uppe
+      av ett CSS-filter i dag. Riktiga mörka original behövs, helst som SVG. Samma sak
+      med teckensnittet BDO Grotesk, som hämtas från en server ni inte kontrollerar.</p>
+    </div></div>
+  </div>
+</div>
+</section>
+
+</main>
