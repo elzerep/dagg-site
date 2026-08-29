@@ -142,6 +142,22 @@ in one place per page and keep everything around it quiet. The second colour
 
 ### Type
 
+**A deck and a website are different reading situations, and the type has to
+change between them.** A deck is glanced at while someone talks; a website is
+read alone, for minutes. Porting deck typography to a site unchanged produces
+something that looks right in a screenshot and is tiring to read.
+
+Two rules came out of getting this wrong:
+
+**Use a text serif, not a display serif.** A display serif has high stroke
+contrast and thin hairlines — designed to be looked at in one glance. In running
+text those same letterforms read as sharp and effortful.
+
+**Headlines are grotesk. The serif is reserved for the phrase inside a headline
+that should sound spoken** — set in italic, two or three words, never the whole
+line. Setting every headline in a serif reads as formal and traditional, which
+is right for a printed proposal and stiff on a screen.
+
 Three roles, no more. A grotesk for structure and body. **A serif for a spoken
 voice** — a question, a line someone would say aloud — and never for dense text;
 that assignment is what gives the serif meaning. A mono for metadata, page
