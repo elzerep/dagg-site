@@ -151,29 +151,29 @@ IMPL = '''
     </div>
     <div class="g">
       <figure class="m7 scroll-x">
-        <svg viewBox="0 0 560 250" role="img"
+        <svg class="dg" viewBox="0 0 560 250" role="img"
              aria-label="An agent enclosed by bounds, with an escalation path back to a person and a record written on every action.">
           <g fill="none" stroke="#141413" stroke-opacity=".2" stroke-width="1" stroke-dasharray="4 4">
-            <rect x="8" y="30" width="346" height="156" rx="2"/></g>
+            <rect class="node" x="8" y="30" width="346" height="156" rx="2"/></g>
           <text x="16" y="20" fill="#5F5E58" font-size="10" letter-spacing=".14em">BOUNDS &middot; WHAT IT MAY TOUCH</text>
           <g fill="#E8E6DC" stroke="#141413" stroke-opacity=".38" stroke-width="1">
-            <rect x="36" y="64" width="118" height="34" rx="1"/>
-            <rect x="36" y="118" width="118" height="34" rx="1"/>
-            <rect x="416" y="26" width="132" height="34" rx="1"/>
-            <rect x="416" y="198" width="132" height="34" rx="1"/></g>
-          <g fill="#141413" stroke="#B85C3E" stroke-width="1.4"><rect x="214" y="86" width="112" height="44" rx="1"/></g>
+            <rect class="node" x="36" y="64" width="118" height="34" rx="1"/>
+            <rect class="node" x="36" y="118" width="118" height="34" rx="1"/>
+            <rect class="node" x="416" y="26" width="132" height="34" rx="1"/>
+            <rect class="node" x="416" y="198" width="132" height="34" rx="1"/></g>
+          <g fill="#141413" stroke="#B85C3E" stroke-width="1.4"><rect class="node" x="214" y="86" width="112" height="44" rx="1"/></g>
           <g fill="none" stroke="#141413" stroke-opacity=".26" stroke-width="1">
-            <path d="M154 81 L214 96"/><path d="M154 135 L214 120"/></g>
+            <path class="edge" d="M154 81 L214 96"/><path class="edge" d="M154 135 L214 120"/></g>
           <g fill="none" stroke="#B85C3E" stroke-width="1.4" stroke-dasharray="5 4">
-            <path d="M326 100 Q380 100 380 43 L416 43"/></g>
+            <path class="edge" d="M326 100 Q380 100 380 43 L416 43"/></g>
           <g fill="none" stroke="#141413" stroke-opacity=".3" stroke-width="1">
-            <path d="M270 130 L270 215 L416 215"/></g>
+            <path class="edge" d="M270 130 L270 215 L416 215"/></g>
           <g fill="#5F5E58">
-            <text x="95" y="85" text-anchor="middle">A SYSTEM</text>
-            <text x="95" y="139" text-anchor="middle">A SYSTEM</text>
-            <text x="270" y="112" text-anchor="middle" fill="#F0EEE6">AGENT</text>
-            <text x="482" y="47" text-anchor="middle">A PERSON</text>
-            <text x="482" y="219" text-anchor="middle">THE RECORD</text></g>
+            <text class="lab" x="95" y="85" text-anchor="middle">A SYSTEM</text>
+            <text class="lab" x="95" y="139" text-anchor="middle">A SYSTEM</text>
+            <text class="lab" x="270" y="112" text-anchor="middle" fill="#F0EEE6">AGENT</text>
+            <text class="lab" x="482" y="47" text-anchor="middle">A PERSON</text>
+            <text class="lab" x="482" y="219" text-anchor="middle">THE RECORD</text></g>
           <text x="344" y="76" fill="#9E4A2E" font-size="9.5">escalation</text>
         </svg>
         <figcaption>Bounds are enforced, not requested. Escalation is decided in advance. The
@@ -267,29 +267,29 @@ WG = '''
       <h2>What a record holds, with the contents removed.</h2></div>
     <div class="g">
       <figure class="full scroll-x">
-        <svg viewBox="0 0 920 280" role="img"
+        <svg class="dg" viewBox="0 0 920 280" role="img"
              aria-label="A generic workflow record: three inputs move through people and systems to a wait, a decision that gets re-made, and a rework loop back to the start.">
           <defs><marker id="g1" viewBox="0 0 8 8" refX="7.4" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 1 L7.4 4 L0 7z" fill="#5F5E58"/></marker>
           <marker id="g2" viewBox="0 0 8 8" refX="7.4" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 1 L7.4 4 L0 7z" fill="#B85C3E"/></marker></defs>
-          <g fill="none" stroke="#141413" stroke-opacity=".22" stroke-width="1" marker-end="url(#g1)">
-            <path d="M122 64 L162 64"/><path d="M122 146 L162 146"/><path d="M122 228 L162 228"/>
-            <path d="M310 64 L350 64 Q378 64 378 112 L378 126"/>
-            <path d="M310 228 L350 228 Q378 228 378 180 L378 166"/>
-            <path d="M310 146 L378 146"/><path d="M512 146 L570 146"/><path d="M726 172 L726 212"/></g>
-          <g fill="none" stroke="#B85C3E" stroke-width="1.6" marker-end="url(#g2)"><path d="M452 146 L480 146"/></g>
-          <g fill="none" stroke="#B85C3E" stroke-opacity=".5" stroke-width="1" stroke-dasharray="3 4"><path d="M690 124 Q560 30 210 46 L164 54"/></g>
-          <g fill="#F0EEE6" stroke="#141413" stroke-opacity=".34" stroke-width="1">
-            <rect x="0" y="50" width="122" height="28" rx="1"/><rect x="0" y="132" width="122" height="28" rx="1"/><rect x="0" y="214" width="122" height="28" rx="1"/>
-            <rect x="162" y="46" width="148" height="36" rx="1"/><rect x="162" y="128" width="148" height="36" rx="1"/><rect x="162" y="210" width="148" height="36" rx="1"/>
-            <rect x="570" y="122" width="156" height="48" rx="1"/><rect x="614" y="212" width="172" height="34" rx="1"/></g>
-          <g fill="#141413" stroke="#B85C3E" stroke-width="1.4"><rect x="378" y="124" width="74" height="44" rx="1"/></g>
-          <g fill="#5F5E58">
-            <text x="61" y="68" text-anchor="middle">REQUEST</text><text x="61" y="150" text-anchor="middle">DOCUMENT</text><text x="61" y="232" text-anchor="middle">APPROVAL</text>
-            <text x="236" y="68" text-anchor="middle">A PERSON</text><text x="236" y="150" text-anchor="middle">A SYSTEM</text><text x="236" y="232" text-anchor="middle">A HANDOFF</text>
-            <text x="648" y="142" text-anchor="middle" fill="#141413">DECISION</text><text x="648" y="158" text-anchor="middle">RE-MADE</text>
-            <text x="700" y="233" text-anchor="middle">DOWNSTREAM</text>
-            <text x="415" y="150" text-anchor="middle" fill="#F0EEE6">WAIT</text></g>
-          <g fill="#9E4A2E" font-size="9.5"><text x="382" y="112">queue time</text><text x="300" y="30">rework loop</text></g>
+          <g class="edges" fill="none" stroke="#141413" stroke-opacity=".22" stroke-width="1" marker-end="url(#g1)">
+            <path class="edge" d="M122 64 L162 64"/><path class="edge" d="M122 146 L162 146"/><path class="edge" d="M122 228 L162 228"/>
+            <path class="edge" d="M310 64 L350 64 Q378 64 378 112 L378 126"/>
+            <path class="edge" d="M310 228 L350 228 Q378 228 378 180 L378 166"/>
+            <path class="edge" d="M310 146 L378 146"/><path class="edge" d="M512 146 L570 146"/><path class="edge" d="M726 172 L726 212"/></g>
+          <g fill="none" stroke="#B85C3E" stroke-width="1.6" marker-end="url(#g2)"><path class="edge" d="M452 146 L480 146"/></g>
+          <g fill="none" stroke="#B85C3E" stroke-opacity=".5" stroke-width="1"><path class="edge" d="M690 124 Q560 30 210 46 L164 54"/></g>
+          <g fill="#F0EEE6" stroke="#141413" stroke-opacity=".34" stroke-width="1" class="nodes">
+            <rect class="node" x="0" y="50" width="122" height="28" rx="1"/><rect class="node" x="0" y="132" width="122" height="28" rx="1"/><rect class="node" x="0" y="214" width="122" height="28" rx="1"/>
+            <rect class="node" x="162" y="46" width="148" height="36" rx="1"/><rect class="node" x="162" y="128" width="148" height="36" rx="1"/><rect class="node" x="162" y="210" width="148" height="36" rx="1"/>
+            <rect class="node" x="570" y="122" width="156" height="48" rx="1"/><rect class="node" x="614" y="212" width="172" height="34" rx="1"/></g>
+          <g fill="#141413" stroke="#B85C3E" stroke-width="1.4"><rect class="node" x="378" y="124" width="74" height="44" rx="1"/></g>
+          <g fill="#5F5E58" class="labs">
+            <text class="lab" x="61" y="68" text-anchor="middle">REQUEST</text><text class="lab" x="61" y="150" text-anchor="middle">DOCUMENT</text><text class="lab" x="61" y="232" text-anchor="middle">APPROVAL</text>
+            <text class="lab" x="236" y="68" text-anchor="middle">A PERSON</text><text class="lab" x="236" y="150" text-anchor="middle">A SYSTEM</text><text class="lab" x="236" y="232" text-anchor="middle">A HANDOFF</text>
+            <text class="lab" x="648" y="142" text-anchor="middle" fill="#141413">DECISION</text><text class="lab" x="648" y="158" text-anchor="middle">RE-MADE</text>
+            <text class="lab" x="700" y="233" text-anchor="middle">DOWNSTREAM</text>
+            <text class="lab" x="415" y="150" text-anchor="middle" fill="#F0EEE6">WAIT</text></g>
+          <g fill="#9E4A2E" font-size="9.5"><text class="lab" x="382" y="112">queue time</text><text class="lab" x="300" y="30">rework loop</text></g>
         </svg>
         <figcaption>A generic structure, drawn to show the form of the record rather than any
           company&rsquo;s contents. The two labelled edges carry metric names, never values —

@@ -80,6 +80,20 @@
     }
   }
 
+  /* every edge measures itself so the draw is proportional to its length */
+  d.querySelectorAll('.dg').forEach(function(g){
+    g.querySelectorAll('.edge').forEach(function(p,i){
+      try{ p.style.setProperty('--len', Math.ceil(p.getTotalLength())); }catch(e){}
+      p.style.setProperty('--w', i % 4);
+    });
+    g.querySelectorAll('.node').forEach(function(n,i){ n.style.setProperty('--o', i); });
+    g.querySelectorAll('.lab').forEach(function(n,i){ n.style.setProperty('--o', i); });
+    var gio=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ g.classList.add('in'); gio.unobserve(g); } });
+    },{threshold:.3});
+    gio.observe(g);
+  });
+
   /* ── one record, three states. Reader-driven; it does not cycle. ── */
   var lives = d.querySelector('[data-lives]');
   if(lives){
