@@ -207,6 +207,25 @@ Serif set at a grotesk's size looks smaller than it is. Step the size up
 roughly a point and pull the line-height in — around 1.65 rather than 1.78 —
 or the page reads loose.
 
+**The serif has a floor at about 15px.** Below it the hairlines thin out on
+screen and the face turns hard — which undoes the entire reason it is there.
+Anything that has to be set smaller than that is a label, not reading, and
+labels are grotesk.
+
+### Why this pairing, and not the other one
+
+The two faces carry registers, and the assignment is the argument.
+
+Grotesk is the machine: interfaces, systems, instruments. Serif is judgement:
+letters, books, an argument made to a person. Putting grotesk in the headline
+and serif in the body makes the page *a system speaking in a human voice* —
+which is the claim. The reverse makes it an institution announcing itself and
+then delivering in interface type, which is a consultancy's letterhead.
+
+A reader judges the page by the face they sit inside for minutes, not the one
+they see for three seconds. That is why a page can have a harder headline than
+the alternative and still read as the softer of the two.
+
 Body weight is **400 on light grounds, never 300.** Thin light type on a light
 ground is what tires the eye, and it is the most common reason a page that
 looks elegant in a screenshot is unreadable in a room.
