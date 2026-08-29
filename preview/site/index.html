@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dagg — AI transformation</title>
+<meta name="description" content="Dagg maps how a company actually works, then builds the system that runs it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Newsreader:opsz,wght@6..72,300..600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+<style>
+/* ── one record, three states ───────────────────────────────────── */
+.lives{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);
+  gap:clamp(28px,4vw,64px);align-items:center}
+@media(max-width:1080px){.lives{grid-template-columns:1fr}}
+.lives svg{width:100%;height:auto;overflow:visible}
+.lg .node rect{fill:var(--lift);stroke:var(--ink);stroke-opacity:.42;stroke-width:1}
+.lg .node text{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;fill:var(--ink-3)}
+.lg .edge{fill:none;stroke:var(--ink);stroke-opacity:.24;stroke-width:1}
+.lg .att{opacity:0;transition:opacity .55s cubic-bezier(.16,1,.3,1)}
+.lg .att.on{opacity:1}
+.lg .att rect{fill:var(--night);stroke:var(--accent);stroke-width:1.3}
+.lg .att text{fill:var(--n-fg);font-family:var(--mono);font-size:9px;letter-spacing:.1em}
+.lg .att path{stroke:var(--accent);stroke-width:1.5;stroke-opacity:.95;fill:none}
+.lg .core rect{fill:var(--paper-2);stroke:var(--ink);stroke-opacity:.55}
+.lives__list{display:flex;flex-direction:column}
+.life{border-top:1px solid var(--hair);padding:18px 0;cursor:default;
+  transition:border-color .3s ease}
+.life:last-child{border-bottom:1px solid var(--hair)}
+.life h4{transition:color .3s ease}
+.life p{margin-top:6px}
+.life.on{border-top-color:var(--accent)}
+.life.on h4{color:var(--accent-text)}
+@media (prefers-reduced-motion:reduce){.lg .att{opacity:1}}
+</style>
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="nav"><div class="nav__in">
+  <a href="index.html" aria-label="Dagg"><img class="nav__mark" src="../../assets/dagg-logotype-dark.png" alt="Dagg"></a>
+  <nav class="nav__links">
+    <a href="strategy.html">Strategy</a>
+    <a href="implementation.html">Implementation</a>
+    <a href="company.html">Company</a>
+    <a class="cta" href="#assessment">Book an assessment</a>
+  </nav>
+</div></header>
+
+<main>
+
+<!-- ══ 01 · the claim ══════════════════════════════════════════════ -->
+<section class="sec">
+  <div class="sec__in">
+    <div class="rail"><div class="rail__in">
+      <img class="rail__mark" src="../../assets/dagg-symbol-dark.png" alt="">
+      <span class="rail__sec">What we do</span>
+      <span class="rail__no"></span>
+    </div></div>
+    <div class="field">
+      <div class="hd hd--plain rv"><span class="eyebrow">AI transformation</span></div>
+
+      <div class="c-main stack rv">
+        <h1>We map how your company actually works — then build the system that runs it.</h1>
+        <p class="lead">Most companies buy AI tools before they understand their own work.
+          Dagg starts with the work: how it moves, where it waits, and which parts of it
+          are worth changing. Then builds what follows — and runs it, where you would
+          rather not.</p>
+        <div><a class="cta" href="#assessment">Book an assessment →</a></div>
+      </div>
+
+      <div class="c-side side stack--tight rv" style="display:flex;flex-direction:column;gap:20px">
+        <div><span class="mi">Where it starts</span>
+          <p class="tx" style="margin-top:8px">A map of one path through the company, built from
+          evidence it already generates.</p></div>
+        <div><span class="mi">What follows</span>
+          <p class="tx" style="margin-top:8px">Simplification, agents, integrations — or new
+          software, where the workflow layer is what is broken.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 02 · one record, three states ═══════════════════════════════ -->
+<section class="sec sec--warm">
+  <div class="sec__in">
+    <div class="rail"><div class="rail__in">
+      <span class="rail__sec">The record</span>
+      <span class="rail__no"></span>
+    </div></div>
+    <div class="field">
+      <div class="hd rv">
+        <span class="eyebrow">WorkGraph</span>
+        <h2>The same record is read three times.</h2>
+      </div>
+
+      <div class="lives rv" data-lives>
+        <figure style="margin:0">
+        <svg class="lg" viewBox="0 0 560 300" role="img"
+             aria-label="A workflow record with three attachments shown in turn: it is built during mapping, queried by the agents that write software, and used to orchestrate what is running.">
+          <defs>
+            <marker id="ah" viewBox="0 0 8 8" refX="7.4" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M0 1 L7.4 4 L0 7z" fill="currentColor"/></marker>
+          </defs>
+
+          <!-- the record itself: unchanged in all three states -->
+          <g class="edge">
+            <path d="M96 74 L138 74"/><path d="M96 150 L138 150"/><path d="M96 226 L138 226"/>
+            <path d="M246 74 L272 74 Q292 74 292 122 L292 138"/>
+            <path d="M246 226 L272 226 Q292 226 292 178 L292 162"/>
+            <path d="M246 150 L292 150"/>
+          </g>
+          <g class="node">
+            <rect x="0" y="60" width="96" height="28" rx="1"/><text x="48" y="78" text-anchor="middle">REQUEST</text>
+            <rect x="0" y="136" width="96" height="28" rx="1"/><text x="48" y="154" text-anchor="middle">DOCUMENT</text>
+            <rect x="0" y="212" width="96" height="28" rx="1"/><text x="48" y="230" text-anchor="middle">APPROVAL</text>
+            <rect x="138" y="56" width="108" height="36" rx="1"/><text x="192" y="78" text-anchor="middle">A PERSON</text>
+            <rect x="138" y="132" width="108" height="36" rx="1"/><text x="192" y="154" text-anchor="middle">A SYSTEM</text>
+            <rect x="138" y="208" width="108" height="36" rx="1"/><text x="192" y="230" text-anchor="middle">A HANDOFF</text>
+          </g>
+          <g class="node core"><rect x="292" y="128" width="76" height="44" rx="1"/>
+            <text x="330" y="146" text-anchor="middle">WORK</text><text x="330" y="160" text-anchor="middle">GRAPH</text></g>
+
+          <!-- what attaches to it, one state at a time -->
+          <g class="att" data-state="mapped" color="#B85C3E">
+            <path d="M368 150 L416 150" marker-end="url(#ah)"/>
+            <rect x="416" y="130" width="132" height="40" rx="1"/>
+            <text x="482" y="147" text-anchor="middle">EVIDENCE</text>
+            <text x="482" y="160" text-anchor="middle" opacity=".62">ALREADY THERE</text>
+          </g>
+          <g class="att" data-state="read" color="#B85C3E">
+            <path d="M416 150 L372 150" marker-end="url(#ah)"/>
+            <rect x="416" y="130" width="132" height="40" rx="1"/>
+            <text x="482" y="147" text-anchor="middle">CODE AGENTS</text>
+            <text x="482" y="160" text-anchor="middle" opacity=".62">QUERY THE MAP</text>
+          </g>
+          <g class="att" data-state="running" color="#B85C3E">
+            <path d="M368 150 L416 150" marker-end="url(#ah)"/>
+            <rect x="416" y="104" width="132" height="34" rx="1"/>
+            <text x="482" y="125" text-anchor="middle">AGENT</text>
+            <rect x="416" y="162" width="132" height="34" rx="1"/>
+            <text x="482" y="183" text-anchor="middle">AGENT</text>
+            <path d="M368 150 Q392 150 392 121 L416 121"/>
+            <path d="M368 150 Q392 150 392 179 L416 179"/>
+          </g>
+        </svg>
+        <figcaption>A generic structure, drawn to show what the record holds. The edges
+          that carry a label are the ones a baseline measures first.</figcaption>
+        </figure>
+
+        <div class="lives__list">
+          <div class="life" data-life>
+            <h4>Mapped</h4>
+            <p class="tx">How work moves through the company, including the parts nobody
+              wrote down. Built from evidence the company already generates.</p>
+          </div>
+          <div class="life" data-life>
+            <h4>Read</h4>
+            <p class="tx">The agents that write the software query it directly, so the
+              structure of the work is available to them rather than restated each time.</p>
+          </div>
+          <div class="life" data-life>
+            <h4>Running</h4>
+            <p class="tx">The same record orchestrates what is live, where operating
+              agents is not a capability a company intends to build.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="tx c-full rv" style="max-width:58ch">One record throughout. It is what keeps a
+        change in year two from starting as a new discovery exercise.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 03 · where the work fits ════════════════════════════════════ -->
+<section class="sec">
+  <div class="sec__in">
+    <div class="rail"><div class="rail__in">
+      <span class="rail__sec">Where it fits</span>
+      <span class="rail__no"></span>
+    </div></div>
+    <div class="field">
+      <div class="hd rv">
+        <span class="eyebrow">The shape of the work</span>
+        <h2>Decisions that have to be traceable.</h2>
+      </div>
+      <div class="c-main rv">
+        <p class="tx">Knowledge that sits with people rather than in systems. Processes
+          that are regulated, or old, or both. The shape of the work decides whether this
+          is useful, not the sector it happens in.</p>
+        <p class="tx">So far that has meant <b>legal</b>, and <b>banking and finance</b>.</p>
+      </div>
+      <div class="c-side rv">
+        <div class="ruled ruled--ac">
+          <span class="mi">Aloi</span>
+          <p class="tx" style="font-size:16px">Aloi is Dagg's AI-native legal venture. It shows
+            what a workflow problem can become when it is rebuilt rather than assisted.</p>
+          <p><a href="https://aloi.law" style="font-size:15px">aloi.law →</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 04 · the first piece of work ════════════════════════════════ -->
+<section class="sec sec--dark" id="assessment">
+  <div class="sec__in">
+    <div class="rail"><div class="rail__in">
+      <img class="rail__mark" src="../../assets/dagg-symbol-dark.png" alt="">
+      <span class="rail__sec">Next step</span>
+      <span class="rail__no"></span>
+    </div></div>
+    <div class="field">
+      <div class="hd rv">
+        <span class="eyebrow">The assessment</span>
+        <h2>It can conclude that nothing should be built.</h2>
+      </div>
+      <div class="c-main stack rv">
+        <p class="lead">An assessment maps one path through the company and ends in a
+          recommendation. It names what should change and what should not, what a change
+          would consist of, who would own the result, and what would make the
+          recommendation wrong.</p>
+        <p class="tx">That last outcome is the one that makes the rest of it worth
+          reading.</p>
+        <div><a class="cta" href="mailto:hello@dagg.ai">Book an assessment →</a></div>
+      </div>
+      <div class="c-side side rv">
+        <span class="mi">What you receive</span>
+        <div class="rows" style="margin-top:14px">
+          <div class="row"><span class="row__n">01</span><span class="row__t">The map of one path</span></div>
+          <div class="row"><span class="row__n">02</span><span class="row__t">A recommendation, or the reason not to</span></div>
+          <div class="row"><span class="row__n">03</span><span class="row__t">What would make it wrong</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot"><div class="foot__in">
+  <img class="foot__mark" src="../../assets/dagg-logotype-dark.png" alt="Dagg">
+  <a href="strategy.html">Strategy</a>
+  <a href="implementation.html">Implementation</a>
+  <a href="company.html">Company</a>
+  <a href="faq.html">FAQ</a>
+  <a href="careers.html">Careers</a>
+  <a href="mailto:hello@dagg.ai">hello@dagg.ai</a>
+  <span class="foot__end">© 2026 Dagg</span>
+</div></footer>
+
+<script src="site.js"></script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Implementation — Dagg</title>
+<meta name="description" content="How a decision becomes something running in production.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Newsreader:opsz,wght@6..72,300..600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+<header class="nav"><div class="nav__in">
+  <a href="index.html" aria-label="Dagg"><img class="nav__mark" src="../../assets/dagg-logotype-dark.png" alt="Dagg"></a>
+  <nav class="nav__links">
+    <a href="strategy.html">Strategy</a>
+    <a href="implementation.html" aria-current="page">Implementation</a>
+    <a href="company.html">Company</a>
+    <a class="cta" href="index.html#assessment">Book an assessment</a>
+  </nav>
+</div></header>
+<main>
+<section class="sec">
+  <div class="sec__in">
+    <div class="rail"><div class="rail__in">
+      <img class="rail__mark" src="../../assets/dagg-symbol-dark.png" alt="">
+      <span class="rail__sec">The door</span><span class="rail__no"></span>
+    </div></div>
+    <div class="field">
+      <div class="hd hd--plain rv"><span class="eyebrow">The Dagg Factory</span></div>
+      <div class="c-main stack rv">
+        <h1>Nothing is built until the decision, the owner and the way back are explicit.</h1>
+        <p class="lead">The Dagg Factory is how a decision becomes something running in
+          production. Its discipline is at the door: what it declines, and on what grounds.</p>
+      </div>
+      <div class="c-side side rv">
+        <span class="mi">Before a build starts</span>
+        <div class="rows" style="margin-top:14px">
+          <div class="row"><span class="row__n">01</span><span class="row__t">The decision is written down</span></div>
+          <div class="row"><span class="row__n">02</span><span class="row__t">Someone owns the outcome</span></div>
+          <div class="row"><span class="row__n">03</span><span class="row__t">The failure mode is understood</span></div>
+          <div class="row"><span class="row__n">04</span><span class="row__t">There is a way back</span></div>
+        </div>
+      </div>
+      <dl class="defs rv">
+        <div><dt>The decision, not the requirement</dt><dd>What is changing, and what is deliberately not.</dd></div>
+        <div><dt>Named, and aware they are named</dt><dd>An owner who does not know they are one is not an owner.</dd></div>
+        <div><dt>What a wrong answer costs here</dt><dd>And who finds out first.</dd></div>
+        <div><dt>Where reversal is impossible</dt><dd>Data written to a third party, an action taken in the world. Said before the work begins, not discovered afterwards.</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--warm">
+  <div class="sec__in">
+    <div class="rail"><div class="rail__in">
+      <span class="rail__sec">Two modes</span><span class="rail__no"></span>
+    </div></div>
+    <div class="field">
+      <div class="hd rv">
+        <span class="eyebrow">What gets built</span>
+        <h2>Automate what should stay. Rebuild what should change.</h2>
+      </div>
+      <div class="c-half ruled rv">
+        <h3>Automate</h3>
+        <p class="tx">Work that is right, carried by people between systems that do not
+          speak. Agents take the carrying; the systems remain. Nobody learns a new tool,
+          because the work continues where it already lives.</p>
+      </div>
+      <div class="c-half ruled ruled--ac rv">
+        <h3>Rebuild</h3>
+        <p class="tx">Where the workflow layer is what is broken, an agent placed on top
+          makes the wrong thing faster. Then it is new software, and often one fewer system
+          afterwards.</p>
+      </div>
+      <div class="inset rv">
+        <p class="q">The WorkGraph is not documentation kept alongside the work.
+          <b>It is what the build reads from.</b></p>
+      </div>
+      <div class="c-main rv">
+        <p class="tx">The agents that write the software query it directly, so the structure
+          of the workflow — which systems hold what, where the handoffs are, which decisions
+          need a person — is available rather than restated. A model without it has to be
+          told all of that by someone who knows it, each time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="sec__in">
+    <div class="rail"><div class="rail__in">
+      <span class="rail__sec">Governance</span><span class="rail__no"></span>
+    </div></div>
+    <div class="field">
+      <div class="hd rv">
+        <span class="eyebrow">Agents that can be trusted with the work</span>
+        <h2>Three things an agent needs before it is allowed to act.</h2>
+      </div>
+
+      <figure class="c-main rv" style="margin:0">
+        <svg viewBox="0 0 520 240" role="img" style="width:100%;height:auto;overflow:visible"
+             aria-label="An agent enclosed by bounds, with an escalation path back to a person and a record written on every action.">
+          <g fill="none" stroke="#141413" stroke-opacity=".2" stroke-width="1" stroke-dasharray="4 4">
+            <rect x="8" y="26" width="330" height="150" rx="2"/>
+          </g>
+          <text x="16" y="18" font-family="'JetBrains Mono',monospace" font-size="10" letter-spacing=".14em" fill="#5F5E58">BOUNDS · WHAT IT MAY TOUCH</text>
+          <g fill="#F5F3EC" stroke="#141413" stroke-opacity=".42" stroke-width="1">
+            <rect x="34" y="60" width="112" height="34" rx="1"/>
+            <rect x="34" y="112" width="112" height="34" rx="1"/>
+          </g>
+          <g fill="#141413" stroke="#B85C3E" stroke-width="1.4"><rect x="204" y="82" width="106" height="42" rx="1"/></g>
+          <g fill="#F5F3EC" stroke="#141413" stroke-opacity=".42" stroke-width="1"><rect x="386" y="24" width="126" height="34" rx="1"/></g>
+          <g fill="#F5F3EC" stroke="#141413" stroke-opacity=".42" stroke-width="1"><rect x="386" y="188" width="126" height="34" rx="1"/></g>
+          <g fill="none" stroke="#141413" stroke-opacity=".26" stroke-width="1">
+            <path d="M146 77 L204 92"/><path d="M146 129 L204 114"/>
+          </g>
+          <g fill="none" stroke="#B85C3E" stroke-width="1.4" stroke-dasharray="5 4">
+            <path d="M310 96 Q356 96 356 41 L386 41"/>
+          </g>
+          <g fill="none" stroke="#141413" stroke-opacity=".3" stroke-width="1">
+            <path d="M257 124 L257 205 L386 205"/>
+          </g>
+          <g font-family="'JetBrains Mono',monospace" font-size="9.5" letter-spacing=".1em" fill="#5F5E58">
+            <text x="90" y="81" text-anchor="middle">A SYSTEM</text>
+            <text x="90" y="133" text-anchor="middle">A SYSTEM</text>
+            <text x="257" y="107" text-anchor="middle" fill="#F0EEE6">AGENT</text>
+            <text x="449" y="45" text-anchor="middle">A PERSON</text>
+            <text x="449" y="209" text-anchor="middle">THE RECORD</text>
+          </g>
+          <g font-family="'JetBrains Mono',monospace" font-size="9" letter-spacing=".09em" fill="#9E4A2E">
+            <text x="330" y="72">escalation</text>
+          </g>
+        </svg>
+        <figcaption>Bounds are enforced, not requested. Escalation is decided in advance.
+          The record is written on every action, including the ones that succeed.</figcaption>
+      </figure>
+
+      <div class="c-side side rv">
+        <div class="rows">
+          <div class="row"><span class="row__n">01</span><span class="row__t"><b>Bounds</b>, expressed as what it may touch rather than as an instruction it is asked to respect.</span></div>
+          <div class="row"><span class="row__n">02</span><span class="row__t"><b>Escalation</b>, with the cases it must hand back decided in advance rather than discovered in production.</span></div>
+          <div class="row"><span class="row__n">03</span><span class="row__t"><b>A record</b> of what it did and on what basis, readable months later when the question is why.</span></div>
+        </div>
+        <p class="tx" style="margin-top:18px">The third is usually treated as compliance
+          overhead. It is what makes the first two enforceable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--dark">
+  <div class="sec__in">
+    <div class="rail"><div class="rail__in">
+      <img class="rail__mark" src="../../assets/dagg-symbol-dark.png" alt="">
+      <span class="rail__sec">Afterwards</span><span class="rail__no"></span>
+    </div></div>
+    <div class="field">
+      <div class="hd rv">
+        <span class="eyebrow">Production and ownership</span>
+        <h2>Work ships with monitoring, a named owner and a documented way back.</h2>
+      </div>
+      <div class="c-half rv">
+        <div class="ruled" style="border-top-color:rgba(240,238,230,.3)">
+          <h3>You operate it</h3>
+          <p class="tx">This requires someone who can read the monitoring, respond when an
+            agent escalates, and judge when behaviour has drifted. We set that up and hand
+            it over, including what to watch and what should worry you.</p>
+        </div>
+      </div>
+      <div class="c-half rv">
+        <div class="ruled" style="border-top-color:var(--accent-bright)">
+          <h3>We operate it</h3>
+          <p class="tx">Where running agents is not a capability a company intends to build,
+            the operation can stay with us under a separate agreement. The same WorkGraph
+            orchestrates what is live.</p>
+        </div>
+      </div>
+      <p class="tx c-full rv">The software and the model of your company are yours either
+        way, and that sits in the agreement rather than in a conversation.</p>
+
+      <dl class="defs rv" style="border-top-color:rgba(240,238,230,.16)">
+        <div><dt>Aloi</dt><dd>Aloi is Dagg's AI-native legal venture. It shows what a workflow problem can become when it is rebuilt rather than assisted. <a href="https://aloi.law">aloi.law →</a></dd></div>
+        <div><dt>Next</dt><dd>An assessment maps one path through the company and ends in a recommendation. <a href="index.html#assessment">Book an assessment →</a></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="foot"><div class="foot__in">
+  <img class="foot__mark" src="../../assets/dagg-logotype-dark.png" alt="Dagg">
+  <a href="strategy.html">Strategy</a>
+  <a href="implementation.html">Implementation</a>
+  <a href="company.html">Company</a>
+  <a href="faq.html">FAQ</a>
+  <a href="careers.html">Careers</a>
+  <a href="mailto:hello@dagg.ai">hello@dagg.ai</a>
+  <span class="foot__end">© 2026 Dagg</span>
+</div></footer>
+<script src="site.js"></script>
+</body>
+</html>
