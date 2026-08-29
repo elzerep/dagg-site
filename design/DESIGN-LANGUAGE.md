@@ -153,10 +153,17 @@ Two rules came out of getting this wrong:
 contrast and thin hairlines — designed to be looked at in one glance. In running
 text those same letterforms read as sharp and effortful.
 
-**Headlines are grotesk. The serif is reserved for the phrase inside a headline
-that should sound spoken** — set in italic, two or three words, never the whole
-line. Setting every headline in a serif reads as formal and traditional, which
-is right for a printed proposal and stiff on a screen.
+**Headlines are serif — but only on a quiet page.** The institutions this work
+sits beside pair a serif display with a sans text face, and that pairing is what
+reads as considered rather than technical.
+
+The correction that matters: a serif headline only feels hard when the page
+around it is busy. The same face that felt sharp beside rotated rail labels,
+mono metadata and italic emphasis reads as warm once those are gone. Fix the
+page before blaming the typeface.
+
+**No italic for emphasis.** It reads as instructing the reader which words
+matter. Use weight, or write the sentence so the emphasis falls where it should.
 
 Three roles, no more. A grotesk for structure and body. **A serif for a spoken
 voice** — a question, a line someone would say aloud — and never for dense text;
@@ -192,9 +199,6 @@ to remove things.
 
 Mono survives in two places: the section eyebrow, and diagram labels. Everywhere
 else metadata is sentence-case sans at reading size.
-
-**No italic for emphasis.** It reads as instructing the reader which words
-matter. Use weight, or write the sentence so the emphasis is in the words.
 
 ### No card grids
 
