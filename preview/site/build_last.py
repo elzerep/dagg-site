@@ -55,21 +55,33 @@ COMPANY = '''
   <img src="../../assets/img/flow-01.webp" alt="" width="2000" height="750" loading="lazy">
 </section>
 
-<section class="s s-reg">
+<section class="s s-bear">
   <div class="w">
-    <div class="hd"><span class="eyebrow">Leadership</span>
-      <h2>Two people are accountable.</h2></div>
+    <div class="hd hd--ruled"><span class="eyebrow">Who is accountable</span>
+      <h2>Nobody hands the work to somebody else.</h2></div>
     <div class="g">
-      <div class="m6"><div class="ruled">
-        <h3>Christian P&eacute;rez</h3>
-        <span class="mi">Chief Executive Officer</span>
-        <p><a href="https://www.linkedin.com/" rel="noopener">LinkedIn &rarr;</a></p>
-      </div></div>
-      <div class="m6"><div class="ruled">
-        <h3>Simon Lundmark</h3>
-        <span class="mi">Chief Technology Officer</span>
-        <p><a href="https://www.linkedin.com/" rel="noopener">LinkedIn &rarr;</a></p>
-      </div></div>
+      <div class="m7 stack">
+        <p class="tx">In most arrangements the people who decide what should change and the
+          people who build it are different people, in different rooms, on different
+          contracts. That is where the cost hides: a recommendation is written by someone who
+          will not have to make it work, and a system is built by someone who was not in the
+          room when the reason was discussed.</p>
+        <p class="tx">Here they are the same people. A recommendation carries what a change
+          would consist of because the person writing it would be building it. A build opens
+          with what was deliberately not made because the person building it made that call.</p>
+        <p class="tx"><b>It is also why the company stays small.</b> This does not scale by
+          adding a delivery layer, and we would rather turn work down than add one.</p>
+      </div>
+      <div class="m5 side">
+        <span class="mi">Founded and run by</span>
+        <div class="rows" style="margin-top:16px">
+          <div class="row"><span class="row__n">&mdash;</span><span class="row__t"><b>Christian P&eacute;rez</b><br>Chief Executive Officer &nbsp;<a href="https://www.linkedin.com/" rel="noopener">LinkedIn &rarr;</a></span></div>
+          <div class="row"><span class="row__n">&mdash;</span><span class="row__t"><b>Simon Lundmark</b><br>Chief Technology Officer &nbsp;<a href="https://www.linkedin.com/" rel="noopener">LinkedIn &rarr;</a></span></div>
+        </div>
+        <p class="tx" style="margin-top:20px;font-size:16px">Headcount is not published. It has
+          never been the constraint, and it is not the thing that decides whether this
+          works.</p>
+      </div>
     </div>
   </div>
 </section>

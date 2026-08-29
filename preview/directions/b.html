@@ -1,0 +1,162 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>B · The Ledger — Dagg</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&amp;family=Newsreader:opsz,wght@6..72,300..600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="tokens.css">
+<style>
+/* B — THE LEDGER. The hero is a running record of what the system did and
+   where a person stepped in. Ink dominates; coral marks human judgment. */
+body{background:var(--color-night);color:var(--color-paper)}
+.nav{background:color-mix(in srgb,var(--color-night) 86%,transparent);
+  border-bottom-color:rgba(240,238,230,.09)}
+.nav img{filter:brightness(0) invert(1)}
+.nav a:not(.btn){color:rgba(240,238,230,.62)}.nav a:not(.btn):hover{color:var(--color-paper)}
+.btn--solid{background:var(--color-paper);color:var(--color-night);border-color:var(--color-paper)}
+.btn--solid:hover{background:var(--color-clay);border-color:var(--color-clay);color:var(--color-night)}
+.btn--ghost{border-color:rgba(240,238,230,.28);color:var(--color-paper)}
+.btn--ghost:hover{border-color:var(--color-paper)}
+
+.hero{min-height:min(100svh,1000px);display:grid;align-items:center;padding:var(--space-8) 0}
+.hero .w{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);
+  gap:clamp(2rem,4vw,4rem);align-items:center}
+.hero h1{font-size:var(--type-h1);line-height:.98;letter-spacing:-.042em;font-weight:400;
+  max-width:12ch;margin:.8rem 0 1.3rem;color:var(--color-paper)}
+.hero .lead{color:rgba(240,238,230,.68);max-width:36ch}
+.hero .eyebrow{color:rgba(240,238,230,.45)}
+.cta{display:flex;gap:.75rem;margin-top:2.2rem;flex-wrap:wrap}
+
+/* the ledger */
+.led{border:1px solid rgba(240,238,230,.14);border-radius:12px;overflow:hidden;
+  background:#191817}
+.led__h{display:flex;align-items:center;gap:.7rem;padding:.8rem 1.1rem;
+  border-bottom:1px solid rgba(240,238,230,.1);font-family:var(--font-instrument);
+  font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:rgba(240,238,230,.5)}
+.led__live{margin-left:auto;color:var(--color-clay);display:flex;align-items:center;gap:.45rem}
+.pulse{width:6px;height:6px;border-radius:50%;background:var(--color-clay)}
+.row{display:grid;grid-template-columns:64px 1fr auto;gap:1rem;align-items:baseline;
+  padding:.85rem 1.1rem;border-bottom:1px solid rgba(240,238,230,.07);
+  opacity:0;transform:translateY(6px)}
+.row.in{opacity:1;transform:none;transition:opacity .5s ease-out,transform .5s ease-out}
+.row:last-child{border-bottom:0}
+.row .t{font-family:var(--font-instrument);font-size:10.5px;color:rgba(240,238,230,.36)}
+.row .d{font-family:var(--font-human);font-size:15px;line-height:1.45;color:rgba(240,238,230,.86)}
+.row .d b{color:var(--color-paper);font-weight:600}
+.row .k{font-family:var(--font-instrument);font-size:9.5px;letter-spacing:.13em;
+  text-transform:uppercase;padding:.28em .6em;border-radius:4px;white-space:nowrap}
+.k--sys{background:rgba(124,132,113,.2);color:#A8B39C}
+.k--hum{background:rgba(217,119,87,.18);color:var(--color-clay)}
+.led__f{padding:.9rem 1.1rem;font-family:var(--font-human);font-size:14px;
+  color:rgba(240,238,230,.5);border-top:1px solid rgba(240,238,230,.1)}
+
+.sec{padding:var(--section-block) 0}
+.sec--paper{background:var(--surface-page);color:var(--text-primary)}
+.sec--paper .eyebrow{color:var(--text-muted)}
+.hd{max-width:24ch;margin-bottom:var(--space-7)}
+.hd h2{font-size:var(--type-h2);line-height:var(--leading-heading);letter-spacing:-.034em;font-weight:400}
+.split{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(2rem,4vw,4.5rem)}
+.stakes{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule-subtle);
+  border:1px solid var(--rule-subtle);border-radius:12px;overflow:hidden;margin-top:var(--space-6)}
+.stakes>div{background:var(--surface-page);padding:1.5rem 1.4rem}
+.stakes .big{font-family:var(--font-display);font-size:clamp(1.75rem,3vw,2.6rem);
+  font-weight:400;letter-spacing:-.03em;line-height:1.05;margin-bottom:.5rem}
+.stakes .big.m{color:var(--color-clay-deep)}
+.stakes p{font-family:var(--font-human);font-size:.9375rem;line-height:1.6;color:var(--text-secondary)}
+.people{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,3vw,3rem);margin-top:var(--space-6)}
+.person{border-top:1px solid var(--rule-subtle);padding-top:1.1rem}
+.person h3{font-size:1.125rem;font-weight:500;letter-spacing:-.02em}
+.person .r{font-family:var(--font-instrument);font-size:10.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--text-muted);margin:.35rem 0 .7rem;display:block}
+.person p{font-family:var(--font-human);font-size:.9375rem;line-height:1.62;color:var(--text-secondary)}
+@media(max-width:1000px){.hero .w,.split,.stakes,.people{grid-template-columns:1fr}}
+@media(max-width:700px){.hero{min-height:auto;padding:var(--space-7) 0}
+  .row{grid-template-columns:1fr;gap:.3rem}.row .k{justify-self:start}}
+</style></head><body>
+
+<header class="nav"><div class="w">
+  <img src="../../assets/dagg-logotype-dark.png" alt="Dagg">
+  <nav><a href="#">Strategy</a><a href="#">Implementation</a><a href="#">WorkGraph</a><a href="#">Company</a>
+  <a class="btn btn--solid" href="#">Book an assessment</a></nav>
+</div></header>
+
+<section class="hero"><div class="w">
+  <div>
+    <span class="eyebrow">AI transformation</span>
+    <h1>Work at machine speed, with people where it matters.</h1>
+    <p class="lead">We map how your company actually works, build the systems that run it, and
+      keep a person on every decision that should not be automatic.</p>
+    <div class="cta">
+      <a class="btn btn--solid" href="#">Book an assessment</a>
+      <a class="btn btn--ghost" href="#">What the record holds</a>
+    </div>
+  </div>
+
+  <figure class="led" id="led">
+    <div class="led__h"><span>Operating record</span><span>· masked</span>
+      <span class="led__live"><span class="pulse"></span>LIVE</span></div>
+    <div class="row"><span class="t">08:14:22</span><span class="d">Intake received. Routed on the path mapped in week one.</span><span class="k k--sys">System</span></div>
+    <div class="row"><span class="t">08:14:26</span><span class="d">Two systems reconciled. No new interface; the work stayed where it lives.</span><span class="k k--sys">Agent</span></div>
+    <div class="row"><span class="t">08:16:03</span><span class="d">Exception met. <b>Not encoded — handed back.</b></span><span class="k k--hum">Escalated</span></div>
+    <div class="row"><span class="d" style="grid-column:2"><b>A person decided.</b> The reason was written into the record, so it will not be decided again.</span><span class="k k--hum">Human</span><span class="t" style="grid-row:1;grid-column:1">08:31:47</span></div>
+    <div class="row"><span class="t">08:31:52</span><span class="d">Resumed. Downstream notified.</span><span class="k k--sys">Agent</span></div>
+    <div class="led__f">Every action is written down, including the ones that worked. That is what
+      makes the boundaries enforceable rather than requested.</div>
+  </figure>
+</div></section>
+
+<section class="sec sec--paper"><div class="w">
+  <div class="split">
+    <div>
+      <div class="hd"><span class="eyebrow">The stakes</span>
+        <h2>Human-organised work does not keep up with machine-speed work.</h2></div>
+      <p class="tx">A company runs at the pace of the people carrying the work between its
+        systems. That pace has not changed in twenty years, and it is now the constraint on
+        everything else.</p>
+      <p class="tx" style="margin-top:1rem">The companies that close that gap do not do it by
+        buying tools. They do it by understanding their own work well enough to rebuild the
+        parts worth rebuilding — and leaving the rest alone.</p>
+      <div class="stakes">
+        <div><div class="big">Human speed</div><p>Work moves when a person is available to move it. Nights, holidays and attention are the schedule.</p></div>
+        <div><div class="big m">Machine speed</div><p>Work moves when the conditions are met. The schedule is the work itself.</p></div>
+      </div>
+    </div>
+    <div>
+      <p class="tx"><b>That gap does not close on its own, and it compounds.</b></p>
+      <p class="tx" style="margin-top:1rem">Not because the technology is hard. Because getting
+        the work out of the people who perform it is hard, and it is where an engagement
+        actually spends its time.</p>
+      <p style="margin-top:1.6rem"><a class="btn btn--ghost" href="#">How the decision is made</a></p>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec sec--paper" style="padding-top:0"><div class="w">
+  <div class="hd" style="max-width:26ch"><span class="eyebrow">Who is accountable</span>
+    <h2>Nobody hands the work to somebody else.</h2></div>
+  <p class="tx">In most arrangements the people who decide what should change and the people who
+    build it are different people, in different rooms, on different contracts. Here they are the
+    same people — which is why a recommendation can carry what a change would consist of, and a
+    build can open with what was deliberately not made.</p>
+  <div class="people">
+    <div class="person"><h3>Christian Pérez</h3><span class="r">Chief Executive Officer</span>
+      <p>Sits with the operations teams whose work is changing, and writes the recommendation that follows. <a href="#">LinkedIn →</a></p></div>
+    <div class="person"><h3>Simon Lundmark</h3><span class="r">Chief Technology Officer</span>
+      <p>Builds what the recommendation describes, and is accountable for what it does in production. <a href="#">LinkedIn →</a></p></div>
+  </div>
+</div></section>
+
+<script>
+(function(){
+  var rows=[].slice.call(document.querySelectorAll('.row'));
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce){ rows.forEach(function(r){r.classList.add('in');}); return; }
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(!e.isIntersecting) return; io.disconnect();
+    rows.forEach(function(r,i){ setTimeout(function(){ r.classList.add('in'); }, 260+i*420); });
+  });},{threshold:.35});
+  io.observe(document.getElementById('led'));
+  var p=document.querySelector('.pulse');
+  p.animate([{opacity:1},{opacity:.25},{opacity:1}],{duration:2200,iterations:Infinity});
+})();
+</script>
+</body></html>

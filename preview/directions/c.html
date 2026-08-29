@@ -1,0 +1,159 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>C · The Argument — Dagg</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&amp;family=Newsreader:opsz,wght@6..72,300..600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="tokens.css">
+<style>
+/* C — THE ARGUMENT. Conclusion-led. The claim is the hero and the evidence
+   arrives immediately underneath as a real artefact, not as a panel beside it. */
+.hero{min-height:min(100svh,1000px);display:flex;flex-direction:column;justify-content:center;
+  padding:var(--space-8) 0 0;position:relative}
+.hero h1{font-size:var(--type-hero);line-height:.94;letter-spacing:-.045em;font-weight:400;
+  max-width:15ch}
+.hero h1 em{font-style:normal;color:var(--color-clay-deep)}
+.hero .under{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);
+  gap:clamp(2rem,4vw,5rem);margin-top:2.4rem;align-items:end}
+.hero .lead{max-width:44ch}
+.cta{display:flex;gap:.75rem;margin-top:1.6rem;flex-wrap:wrap}
+.tick{display:flex;gap:2.5rem;margin-top:3.4rem;padding-top:1.4rem;
+  border-top:1px solid var(--rule-subtle);flex-wrap:wrap}
+.tick div{max-width:19ch}
+.tick .k{font-family:var(--font-instrument);font-size:10.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--text-muted);display:block;margin-bottom:.4rem}
+.tick .v{font-family:var(--font-human);font-size:15px;line-height:1.5;color:var(--text-secondary)}
+
+/* the artefact, inline in the argument */
+.sec{padding:var(--section-block) 0}
+.sec--ink{background:var(--color-night);color:var(--color-paper)}
+.sec--ink .eyebrow{color:rgba(240,238,230,.45)}
+.sec--ink .tx{color:rgba(240,238,230,.7)}
+.sec--ink .tx b{color:var(--color-paper)}
+.hd{max-width:25ch;margin-bottom:var(--space-6)}
+.hd h2{font-size:var(--type-h2);line-height:var(--leading-heading);letter-spacing:-.034em;font-weight:400}
+.art{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(2rem,4vw,4rem);
+  align-items:start}
+.card{background:#191817;border:1px solid rgba(240,238,230,.13);border-radius:12px;padding:1.4rem 1.5rem}
+.card h3{font-family:var(--font-instrument);font-size:11px;letter-spacing:.16em;
+  text-transform:uppercase;color:rgba(240,238,230,.5);margin-bottom:1.1rem}
+.f{display:grid;grid-template-columns:auto 1fr;gap:.7rem 1rem;align-items:baseline;
+  padding:.7rem 0;border-bottom:1px solid rgba(240,238,230,.07)}
+.f:last-of-type{border-bottom:0}
+.f .m{font-family:var(--font-instrument);font-size:9.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:rgba(240,238,230,.38);white-space:nowrap}
+.f .v{font-family:var(--font-human);font-size:15.5px;line-height:1.45;color:rgba(240,238,230,.9)}
+.f .v b{color:var(--color-paper);font-weight:600}
+.f .v .c{color:var(--color-clay)}
+.stamp{margin-top:1.2rem;padding-top:1rem;border-top:1px solid rgba(240,238,230,.1);
+  font-family:var(--font-human);font-size:14px;color:rgba(240,238,230,.52)}
+
+/* the human beat */
+.sec--paper{background:var(--surface-page)}
+.quote{max-width:24ch;font-family:var(--font-human);font-size:clamp(1.6rem,3.2vw,2.6rem);
+  line-height:1.2;letter-spacing:-.012em;color:var(--text-primary)}
+.sig{display:flex;gap:1.6rem;align-items:baseline;margin-top:2rem;flex-wrap:wrap}
+.sig span{font-family:var(--font-instrument);font-size:10.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--text-muted)}
+.two{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(2rem,4vw,4.5rem)}
+@media(max-width:1000px){.hero .under,.art,.two{grid-template-columns:1fr}}
+@media(max-width:700px){.hero{min-height:auto;padding:var(--space-7) 0 0}
+  .tick{gap:1.4rem;flex-direction:column}}
+</style></head><body>
+
+<header class="nav"><div class="w">
+  <img src="../../assets/dagg-logotype-dark.png" alt="Dagg">
+  <nav><a href="#">Strategy</a><a href="#">Implementation</a><a href="#">WorkGraph</a><a href="#">Company</a>
+  <a class="btn btn--solid" href="#">Book an assessment</a></nav>
+</div></header>
+
+<section class="hero"><div class="w">
+  <span class="eyebrow">AI transformation</span>
+  <h1 style="margin-top:.8rem">Most of what a company wants to automate <em>should not be.</em></h1>
+  <div class="under">
+    <p class="lead">Working out which part should is the whole of the first engagement — and it
+      is the part that decides whether everything after it was worth building.</p>
+    <div>
+      <div class="cta">
+        <a class="btn btn--solid" href="#">Book an assessment</a>
+        <a class="btn btn--ghost" href="#">How we decide</a>
+      </div>
+    </div>
+  </div>
+  <div class="tick">
+    <div><span class="k">Where we start</span><span class="v">One path through the company, mapped from evidence it already generates.</span></div>
+    <div><span class="k">What we build</span><span class="v">Agents between systems that do not speak — or new software where the layer is what is broken.</span></div>
+    <div><span class="k">What we run</span><span class="v">The same record, orchestrating what is live, where you would rather not.</span></div>
+    <div><span class="k">Where this fits</span><span class="v">Legal, and banking and finance. The shape of the work decides.</span></div>
+  </div>
+</div></section>
+
+<section class="sec sec--ink"><div class="w">
+  <div class="hd"><span class="eyebrow">What a recommendation looks like</span>
+    <h2>Not an amount. What the change is made of.</h2></div>
+  <div class="art">
+    <div class="card">
+      <h3>Recommendation · masked</h3>
+      <div class="f"><span class="m">Outcome</span><span class="v"><b>Rebuild</b> — the workflow layer is what is broken</span></div>
+      <div class="f"><span class="m">Integrations</span><span class="v">Two. One does not exist yet.</span></div>
+      <div class="f"><span class="m">Human point</span><span class="v"><span class="c">A person approves at the point of commitment</span></span></div>
+      <div class="f"><span class="m">Interface</span><span class="v">None. The work stays where it already happens.</span></div>
+      <div class="f"><span class="m">Retired</span><span class="v">One system</span></div>
+      <div class="f"><span class="m">Withdraw if</span><span class="v">The upstream data proves unreliable under load</span></div>
+      <div class="f"><span class="m">Assumed</span><span class="v">That the exception rate holds outside quarter end</span></div>
+      <div class="stamp">Every recommendation names what would make it wrong. A recommendation you
+        cannot argue with is a report.</div>
+    </div>
+    <div>
+      <p class="tx">Amounts belong in the room where your company is discussed, not on a public
+        page. What belongs here is the shape: what must change, what stays, who owns the result,
+        and the observation that would make us withdraw it.</p>
+      <p class="tx" style="margin-top:1rem">It is also the sentence a strategy firm cannot
+        write. Naming the components requires knowing what building it involves, and the person
+        writing this would be the one building it.</p>
+      <p style="margin-top:1.8rem"><a class="btn btn--ghost" href="#">The five outcomes</a></p>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec sec--paper"><div class="w">
+  <div class="two">
+    <div>
+      <span class="eyebrow">Why it is not a tooling problem</span>
+      <p class="quote" style="margin-top:1.2rem">The hard part was never the software. It was
+        getting the work out of the people who do it.</p>
+      <div class="sig">
+        <span>Christian Pérez · CEO</span>
+        <span>Simon Lundmark · CTO</span>
+      </div>
+    </div>
+    <div>
+      <p class="tx">What a company knows about itself sits in a form nobody can query: in the
+        judgement of the person who has done the job for nine years, in the exception nobody
+        documented, in the meeting where a decision gets made again because the reason was never
+        written down.</p>
+      <p class="tx" style="margin-top:1rem">Building a workflow into software is the part that
+        has become straightforward. Extracting it is not, and it is where an engagement actually
+        spends its time.</p>
+      <p class="tx" style="margin-top:1rem"><b>That is the work we do first</b>, and it is why
+        the second engagement is not the first one again.</p>
+    </div>
+  </div>
+</div></section>
+
+<script>
+(function(){
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce) return;
+  var rows=[].slice.call(document.querySelectorAll('.f'));
+  rows.forEach(function(r){ r.style.opacity=0; r.style.transform='translateY(6px)'; });
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(!e.isIntersecting) return; io.disconnect();
+    rows.forEach(function(r,i){ setTimeout(function(){
+      r.style.transition='opacity .5s ease-out, transform .5s ease-out';
+      r.style.opacity=1; r.style.transform='none';
+    }, 180+i*130); });
+  });},{threshold:.3});
+  io.observe(document.querySelector('.card'));
+})();
+</script>
+</body></html>
