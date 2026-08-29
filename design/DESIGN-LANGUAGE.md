@@ -127,12 +127,34 @@ vertically, a hairline. It is what makes a set of pages read as a document
 rather than as slides, and it fills the margin with structure instead of
 nothing.
 
-### Two grounds only
+### The ground is ivory, and it moves
 
-Light carries the argument. Night marks a beat — an opening, a pivot, a close.
-Three or four dark pages in fifteen, never two adjacent. A third ground with a
-3% luminance step is invisible when projected and is not restraint, it is a
-wasted variable.
+`#F0EEE6` is the ground. Not `#FAF9F5` — that is a lift, used for a raised card
+or a diagram node, never for the page.
+
+This was got wrong once and it is worth stating why. In the deck, `#FAF9F5`
+*is* the dominant slide, and it reads warm. It reads warm because each slide is
+a card floating on `#DDDACF`, a frankly brown surround, and that surround does
+the warming. Ported to a website the near-white runs edge to edge with nothing
+around it, the surround is gone, and the same hex reads cold and hard. **A
+colour's warmth is a property of what surrounds it, not of the colour.** When a
+value moves from a bounded format to a full-bleed one, the ground has to step
+warmer to compensate.
+
+Raised surfaces go **warmer and darker** than the ground, never whiter. Anthropic's
+cards measure `#E3DACC` on an `#F0EEE6` page; a white card on ivory is the move
+that makes a warm palette look like a cold one.
+
+**The ground changes as you go down.** The deck alternates: seven near-white
+slides, four ivory, three night, never more than two adjacent on the same
+ground. That rhythm is most of why fourteen pages do not read flat. A site on
+one uninterrupted ground is the same mistake at greater length. Zones step
+between the ground, a warmer panel, and one night beat — and a zone bleeds to
+the viewport edge, or it is a card and not a zone.
+
+Night marks a beat — an opening, a pivot, a close. Three or four in fifteen,
+never two adjacent. A third light ground separated by a 3% luminance step is
+invisible when projected and is not restraint, it is a wasted variable.
 
 ### One accent
 
@@ -153,22 +175,37 @@ Two rules came out of getting this wrong:
 contrast and thin hairlines — designed to be looked at in one glance. In running
 text those same letterforms read as sharp and effortful.
 
-**Headlines are serif — but only on a quiet page.** The institutions this work
-sits beside pair a serif display with a sans text face, and that pairing is what
-reads as considered rather than technical.
+**The headline is grotesk. The serif goes where the eye actually reads.**
+This is the reverse of the intuition, and it is what the institutions this work
+sits beside actually do. Their headline is a bold, tightly tracked sans; their
+lead paragraph, card copy and running text are serif; the only display serif on
+the page is one large, quiet statement carrying atmosphere rather than
+structure.
 
-The correction that matters: a serif headline only feels hard when the page
-around it is busy. The same face that felt sharp beside rotated rail labels,
-mono metadata and italic emphasis reads as warm once those are gone. Fix the
-page before blaming the typeface.
+The logic holds up: a headline is *seen*, not read, so it can be firm without
+costing the reader anything. Body text is where the eye spends minutes, and
+that is where softness is worth paying for. Putting the serif in the headline
+and the grotesk in the body spends the warmth where nobody is looking and the
+hardness where everybody is.
+
+*How this was got wrong:* the claim that headlines should be serif rested on a
+single `font-family` declaration found in a page source. Looking at where that
+declaration was actually applied, it styled a 20px label inside an SVG
+animation. **A declaration is not evidence of a role.** Render the page and look
+at it before concluding anything about how it is set.
 
 **No italic for emphasis.** It reads as instructing the reader which words
 matter. Use weight, or write the sentence so the emphasis falls where it should.
 
-Three roles, no more. A grotesk for structure and body. **A serif for a spoken
-voice** — a question, a line someone would say aloud — and never for dense text;
-that assignment is what gives the serif meaning. A mono for metadata, page
-numbers and diagram labels, small and widely tracked.
+Three roles, no more. **A grotesk for headlines, labels and interface** —
+buttons, navigation, eyebrows, the small key above a paragraph. **A serif for
+everything that gets read** — lead, body, list items, captions — plus one large
+quiet serif statement per document as the spoken beat. A mono for metadata,
+page numbers and diagram labels, small and widely tracked.
+
+Serif set at a grotesk's size looks smaller than it is. Step the size up
+roughly a point and pull the line-height in — around 1.65 rather than 1.78 —
+or the page reads loose.
 
 Body weight is **400 on light grounds, never 300.** Thin light type on a light
 ground is what tires the eye, and it is the most common reason a page that

@@ -8,30 +8,38 @@
        <html data-accent="violet">   ← Dagg's own (default)
        <html data-accent="coral">    ← the warmer variant
 
-   Measured contrast against --paper #FAF9F5:
-       violet #5B3BC4 → 6.95:1   text and graphic
-       green  #2F6141 → 6.86:1   text and graphic
-       coral  #D97757 → 2.96:1   GRAPHIC ONLY, never text on light
+   Measured contrast against --paper #F0EEE6 (the ground):
+       violet #5B3BC4 → 6.30:1   text and graphic
+       green  #2F6141 → 6.22:1   text and graphic
+       coral  #B85C3E → 3.90:1   graphic and large text; not small text
+       coral  #9E4A2E → 5.21:1   small text and links on light
+       coral  #D97757 → 2.69:1   GRAPHIC ONLY on light; 5.90:1 on night
    ═══════════════════════════════════════════════════════════════════ */
 
 :root {
   /* ── grounds ───────────────────────────────────────────────────
-     Two only. Light carries the argument; night marks a beat.      */
-  --paper:        #FAF9F5;   /* the working ground                  */
-  --paper-2:      #F0EEE6;   /* alternating pages, panels           */
-  --panel:        #E8E6DC;   /* a raised surface                    */
+     The ground is the ivory, and it steps as you go down the page.
+     Raised surfaces go warmer and darker, never whiter — a white
+     card on ivory is what makes a warm palette look cold.          */
+  --paper:        #F0EEE6;   /* THE GROUND                          */
+  --paper-2:      #E8E6DC;   /* the zone that steps warmer          */
+  --panel:        #E3DACC;   /* a raised card                       */
+  --lift:         #F5F3EC;   /* a lift: diagram node, inset. Rare.  */
   --night:        #141413;   /* the dark beat                       */
   --night-2:      #1E1E1C;
 
   /* ── ink ───────────────────────────────────────────────────────
      Every value below carries text at its stated size.             */
-  --ink:          #141413;   /* 15.9:1                              */
-  --ink-2:        #3D3D3A;   /* 10.3:1  body                        */
-  --ink-3:        #6F6E68;   /*  4.9:1  captions, metadata          */
-  --ink-faint:    #A9A79E;   /*         hairline labels only        */
+  --ink:          #141413;   /* 15.87:1                             */
+  --ink-2:        #3D3D3A;   /*  9.38:1  body                       */
+  --ink-3:        #5F5E58;   /*  5.60:1  captions, metadata.
+                                Darkened from #6F6E68, which fell to
+                                4.40:1 once the ground warmed.      */
+  --ink-faint:    #A9A79E;   /*  2.08:1  hairline labels only, never
+                                text at any size                    */
 
-  --n-fg:         #F0EEE6;   /* 15.9:1 on night                     */
-  --n-fg-2:       #B0AEA5;   /*  8.0:1 on night                     */
+  --n-fg:         #F0EEE6;   /* 15.87:1 on night                    */
+  --n-fg-2:       #B0AEA5;   /*  8.29:1 on night                    */
 
   /* ── structure ─────────────────────────────────────────────────
      Hairlines, never borders. Structure is felt, not drawn.        */
@@ -44,7 +52,8 @@
   /* ── accent · variant B, Dagg's own (default) ──────────────────
      Derived from the brand violet #8B5CF0 and green #6FA982,
      darkened to hold contrast on a light ground.                   */
-  --accent:       #5B3BC4;
+  --accent:       #5B3BC4;   /* 6.30:1 — text at any size           */
+  --accent-text:  #5B3BC4;   /* violet needs no deeper end          */
   --accent-lift:  #A78BFF;   /* the same accent on night            */
   --accent-wash:  rgba(91,59,196,.055);
   --accent-glow:  rgba(139,92,240,.16);
@@ -90,8 +99,12 @@
    Coral cannot carry text on the light ground (2.96:1), so the
    ink tokens do not change — only the graphic accent does.        */
 :root[data-accent="coral"] {
-  --accent:       #B85C3E;   /* 4.30:1 — large text and graphics    */
-  --accent-lift:  #D97757;   /* 5.90:1 on night                     */
+  --accent:       #B85C3E;   /* 3.90:1 on ivory — graphic and text
+                                at 24px and up. NOT small text.     */
+  --accent-text:  #9E4A2E;   /* 5.21:1 — small text and links on
+                                light. The deep end of the same hue,
+                                so the page still reads coral.      */
+  --accent-lift:  #D97757;   /* 5.90:1 on night; graphic on light   */
   --accent-wash:  rgba(217,119,87,.075);
   --accent-glow:  rgba(217,119,87,.18);
   --second:       #2F6141;

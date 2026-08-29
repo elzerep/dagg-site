@@ -9,10 +9,15 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..400&family=JetBrains+Mono:wght@400;500">
 <style>
 :root{
-  --paper:#FAF9F5; --paper-2:#F0EEE6; --panel:#E8E6DC; --night:#141413;
-  --ink:#141413; --ink-2:#3A3A36; --ink-3:#6F6E68; --ink-faint:#A9A79E;
+  --paper:#F0EEE6;             /* the ground — ivory, the deck's warm register */
+  --paper-2:#E8E6DC;           /* a zone that steps warmer, never whiter        */
+  --panel:#E3DACC;             /* raised card — warmer and darker, as theirs is */
+  --lift:#F5F3EC;              /* the rare lift; never the page                 */
+  --night:#141413;
+  --ink:#141413; --ink-2:#3A3A36; --ink-3:#5F5E58; --ink-faint:#A9A79E;
   --hair:rgba(20,20,19,.13); --hair-firm:rgba(20,20,19,.26); --hair-soft:rgba(20,20,19,.06);
-  --accent:#B85C3E;            /* terracotta — carries text, 4.30:1 */
+  --accent:#B85C3E;            /* 3.90:1 — graphic and text 24px+   */
+  --accent-text:#9E4A2E;       /* 5.21:1 — small text and links     */
   --accent-bright:#D97757;     /* fields, tint, aurora only         */
   --accent-wash:rgba(217,119,87,.07);
   --accent-glow:rgba(217,119,87,.16);
@@ -68,7 +73,7 @@ h1,h2,h3,p,ul,figure{margin:0}
 .rows{display:flex;flex-direction:column}
 .row{display:grid;grid-template-columns:26px 1fr;gap:16px;align-items:baseline;padding:11px 0}
 
-.row .n{font-size:14px;color:var(--accent);font-variant-numeric:tabular-nums}
+.row .n{font-size:14px;color:var(--accent-text);font-variant-numeric:tabular-nums}
 .row .t{font-size:clamp(16px,1.22vw,18px);line-height:1.58}
 
 /* ── the one dark beat ────────────────────────────────────────── */
@@ -79,8 +84,20 @@ h1,h2,h3,p,ul,figure{margin:0}
 .dk>*{position:relative}
 .dk .q{font-family:var(--serif);font-size:clamp(17px,1.5vw,22px);line-height:1.45}
 
+/* ── zones: the deck never sits on one ground for long ──────────── */
+.blk{position:relative}
+.blk.z2,.blk.zd{border-top:0}
+.blk.z2{background:var(--paper-2);clip-path:inset(0 -100vmax);box-shadow:0 0 0 100vmax var(--paper-2)}
+.blk.zd{background:var(--night);color:var(--n-fg);clip-path:inset(0 -100vmax);box-shadow:0 0 0 100vmax var(--night)}
+.blk.zd .h,.blk.zd .mi,.blk.zd .band .k,.blk.zd .tx b,.blk.zd .lead b{color:var(--n-fg)}
+.blk.zd .lead,.blk.zd .tx,.blk.zd .band .v,.blk.zd .row .t{color:var(--n-fg-2)}
+.blk.zd .eyebrow,.blk.zd .cap,.blk.zd .rail .sec,.blk.zd .rail .no{color:var(--n-fg-2)}
+.blk.zd .band,.blk.zd .row{border-color:var(--n-hair)}
+.blk.zd .row .n{color:var(--accent-bright)}
+.blk.zd .rail .mk,.blk.zd img{filter:brightness(0) invert(1)!important}
+
 /* ── nav ──────────────────────────────────────────────────────── */
-.top{position:sticky;top:0;z-index:20;background:rgba(250,249,245,.82);
+.top{position:sticky;top:0;z-index:20;background:rgba(240,238,230,.84);
   backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid var(--hair-soft)}
 .top .in{max-width:var(--maxw);margin:0 auto;padding:14px var(--gutter);display:flex;align-items:center;gap:26px}
 .top img{height:19px;width:auto}
@@ -97,11 +114,11 @@ h1,h2,h3,p,ul,figure{margin:0}
 .wg .edge{fill:none;stroke:var(--ink);stroke-opacity:.26;stroke-width:1}
 .wg .edge.hot{stroke:var(--accent);stroke-opacity:.9;stroke-width:1.6}
 .wg .edge.grn{stroke:var(--second);stroke-opacity:.5}
-.wg .node rect{fill:var(--paper);stroke:var(--ink);stroke-opacity:.4;stroke-width:1}
+.wg .node rect{fill:var(--lift);stroke:var(--ink);stroke-opacity:.4;stroke-width:1}
 .wg .node.hot rect{fill:var(--night);stroke:var(--accent);stroke-width:1.4}
 .wg .node text{font-family:var(--mono);font-size:9.5px;letter-spacing:.11em;fill:var(--ink-2)}
 .wg .node.hot text{fill:var(--n-fg)}
-.wg .tag{font-family:var(--mono);font-size:9px;letter-spacing:.09em;fill:var(--accent)}
+.wg .tag{font-family:var(--mono);font-size:9px;letter-spacing:.09em;fill:var(--accent-text)}
 </style>
 </head>
 <body>
@@ -154,7 +171,7 @@ h1,h2,h3,p,ul,figure{margin:0}
   </section>
 
   <!-- ══ workgraph ══ -->
-  <section class="blk">
+  <section class="blk z2">
     <div class="rail">
     </div>
     <div class="field">
