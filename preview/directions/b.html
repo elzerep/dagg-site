@@ -42,10 +42,11 @@ body{background:var(--color-night);color:var(--color-paper)}
 .row .t{font-family:var(--font-instrument);font-size:10.5px;color:rgba(240,238,230,.36)}
 .row .d{font-family:var(--font-human);font-size:15px;line-height:1.45;color:rgba(240,238,230,.86)}
 .row .d b{color:var(--color-paper);font-weight:600}
-.row .k{font-family:var(--font-instrument);font-size:9.5px;letter-spacing:.13em;
-  text-transform:uppercase;padding:.28em .6em;border-radius:4px;white-space:nowrap}
+.row .k{font-family:var(--font-instrument);font-size:10px;letter-spacing:.13em;
+  text-transform:uppercase;padding:.42em .8em;border-radius:5px;white-space:nowrap}
 .k--sys{background:rgba(124,132,113,.2);color:#A8B39C}
-.k--hum{background:rgba(217,119,87,.18);color:var(--color-clay)}
+.k--hum{background:var(--color-clay);color:#241009;font-weight:500}
+.row:has(.k--hum){background:rgba(217,119,87,.09)}
 .led__f{padding:.9rem 1.1rem;font-family:var(--font-human);font-size:14px;
   color:rgba(240,238,230,.5);border-top:1px solid rgba(240,238,230,.1)}
 
@@ -61,6 +62,9 @@ body{background:var(--color-night);color:var(--color-paper)}
 .stakes .big{font-family:var(--font-display);font-size:clamp(1.75rem,3vw,2.6rem);
   font-weight:400;letter-spacing:-.03em;line-height:1.05;margin-bottom:.5rem}
 .stakes .big.m{color:var(--color-clay-deep)}
+.stakes>div.hot{background:var(--color-clay);color:#241009}
+.stakes>div.hot .big{color:#241009}
+.stakes>div.hot p{color:rgba(36,16,9,.78)}
 .stakes p{font-family:var(--font-human);font-size:.9375rem;line-height:1.6;color:var(--text-secondary)}
 .people{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,3vw,3rem);margin-top:var(--space-6)}
 .person{border-top:1px solid var(--rule-subtle);padding-top:1.1rem}
@@ -117,7 +121,7 @@ body{background:var(--color-night);color:var(--color-paper)}
         parts worth rebuilding — and leaving the rest alone.</p>
       <div class="stakes">
         <div><div class="big">Human speed</div><p>Work moves when a person is available to move it. Nights, holidays and attention are the schedule.</p></div>
-        <div><div class="big m">Machine speed</div><p>Work moves when the conditions are met. The schedule is the work itself.</p></div>
+        <div class="hot"><div class="big">Machine speed</div><p>Work moves when the conditions are met. The schedule is the work itself.</p></div>
       </div>
     </div>
     <div>

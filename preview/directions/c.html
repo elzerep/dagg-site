@@ -49,6 +49,12 @@
 
 /* the human beat */
 .sec--paper{background:var(--surface-page)}
+.band{background:var(--color-clay);color:#241009;padding:clamp(2.2rem,5vw,3.6rem) 0}
+.band .w{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(1.5rem,3vw,3rem);align-items:center}
+.band .big{font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2.4rem);font-weight:400;
+  letter-spacing:-.03em;line-height:1.1;max-width:22ch}
+.band p{font-family:var(--font-human);font-size:1rem;line-height:1.55;color:rgba(36,16,9,.76);margin:0}
+@media(max-width:1000px){.band .w{grid-template-columns:1fr}}
 .quote{max-width:24ch;font-family:var(--font-human);font-size:clamp(1.6rem,3.2vw,2.6rem);
   line-height:1.2;letter-spacing:-.012em;color:var(--text-primary)}
 .sig{display:flex;gap:1.6rem;align-items:baseline;margin-top:2rem;flex-wrap:wrap}
@@ -113,6 +119,12 @@
       <p style="margin-top:1.8rem"><a class="btn btn--ghost" href="#">The five outcomes</a></p>
     </div>
   </div>
+</div></section>
+
+<section class="band"><div class="w">
+  <div class="big">A machine works at machine speed. A person works at human speed.</div>
+  <p>That gap does not close on its own, and it compounds. It is the reason a company that
+    understood its own work first ends up somewhere a company that bought tools cannot follow.</p>
 </div></section>
 
 <section class="sec sec--paper"><div class="w">
