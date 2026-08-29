@@ -1,14 +1,6 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Dagg — AI transformation</title>
-<meta name="description" content="Dagg maps how a company actually works, then builds the system that runs it.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&amp;family=Newsreader:opsz,wght@6..72,300..600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
-<link rel="stylesheet" href="style.css">
+exec(open('_h.py').read())
+
+EXTRA = '''
 <style>
 .hero{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,4vw,64px);align-items:end}
 @media(max-width:1040px){.hero{grid-template-columns:1fr}}
@@ -33,23 +25,9 @@
 .life.on h3{color:var(--accent-text)}
 @media (prefers-reduced-motion:reduce){.hg .att{transition:none}
   .hg .att:first-of-type{opacity:1}}
-</style>
-</head>
-<body data-ground="ivory">
-<div class="progress" aria-hidden="true"></div>
-<header class="nav"><div class="nav__in">
-  <a href="index.html" aria-label="Dagg"><img class="nav__mark" src="../../assets/dagg-logotype-dark.png" alt="Dagg"></a>
-  <button class="nav__toggle" aria-expanded="false" aria-controls="navlinks">Menu</button>
-  <nav class="nav__links" id="navlinks">
-    <a href="strategy.html">Strategy</a>
-    <a href="implementation.html">Implementation</a>
-    <a href="workgraph.html">WorkGraph</a>
-    <a href="company.html">Company</a>
-    <a class="cta" href="index.html#assessment">Book an assessment</a>
-  </nav>
-</div></header>
-<main>
+</style>'''
 
+BODY = '''
 <!-- OPENING · 420–560px · the claim, and nothing behind it -->
 <section class="s s-open">
   <div class="w">
@@ -251,18 +229,7 @@
     </div>
   </div></div>
 </section>
-</main>
-<footer class="foot"><div class="foot__in">
-  <img class="foot__mark" src="../../assets/dagg-logotype-dark.png" alt="Dagg">
-  <a href="strategy.html">Strategy</a>
-  <a href="implementation.html">Implementation</a>
-  <a href="workgraph.html">WorkGraph</a>
-  <a href="company.html">Company</a>
-  <a href="faq.html">FAQ</a>
-  <a href="careers.html">Careers</a>
-  <a href="mailto:hello@dagg.ai">hello@dagg.ai</a>
-  <span class="foot__end">&copy; 2026 Dagg</span>
-</div></footer>
-<script src="site.js"></script>
-</body>
-</html>
+'''
+build('index','Dagg — AI transformation',
+      'Dagg maps how a company actually works, then builds the system that runs it.',
+      'ivory','', BODY, EXTRA)

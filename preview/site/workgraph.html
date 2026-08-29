@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WorkGraph — Dagg</title>
+<meta name="description" content="The record of how work actually moves through a company.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&amp;family=Newsreader:opsz,wght@6..72,300..600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-ground="clear">
+<div class="progress" aria-hidden="true"></div>
+<header class="nav"><div class="nav__in">
+  <a href="index.html" aria-label="Dagg"><img class="nav__mark" src="../../assets/dagg-logotype-dark.png" alt="Dagg"></a>
+  <button class="nav__toggle" aria-expanded="false" aria-controls="navlinks">Menu</button>
+  <nav class="nav__links" id="navlinks">
+    <a href="strategy.html">Strategy</a>
+    <a href="implementation.html">Implementation</a>
+    <a href="workgraph.html" aria-current="page">WorkGraph</a>
+    <a href="company.html">Company</a>
+    <a class="cta" href="index.html#assessment">Book an assessment</a>
+  </nav>
+</div></header>
+<main>
+
+<section class="s s-open">
+  <div class="w"><div class="g">
+    <div class="m7 rv">
+      <span class="eyebrow">WorkGraph</span>
+      <h1>A company knows its org chart. It does not have a map of how work moves.</h1>
+    </div>
+    <div class="m5 rv" style="padding-top:12px">
+      <p class="tx">Across people&rsquo;s heads, chat, spreadsheets, meetings, legacy systems
+        and undocumented judgement. You cannot automate what you cannot see, so before anything
+        is built the work has to be understood.</p>
+    </div>
+  </div></div>
+</section>
+
+<section class="s s-punct">
+  <div class="w"><div class="punct">
+    <span class="k">Built from</span>
+    <span class="v">Evidence the company already generates &mdash; not a workshop.</span>
+  </div></div>
+</section>
+
+<section class="s s-instr">
+  <div class="w">
+    <div class="hd"><span class="eyebrow">The artefact</span>
+      <h2>What a record holds, with the contents removed.</h2></div>
+    <div class="g">
+      <figure class="full scroll-x">
+        <svg viewBox="0 0 920 280" role="img"
+             aria-label="A generic workflow record: three inputs move through people and systems to a wait, a decision that gets re-made, and a rework loop back to the start.">
+          <defs><marker id="g1" viewBox="0 0 8 8" refX="7.4" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 1 L7.4 4 L0 7z" fill="#5F5E58"/></marker>
+          <marker id="g2" viewBox="0 0 8 8" refX="7.4" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 1 L7.4 4 L0 7z" fill="#B85C3E"/></marker></defs>
+          <g fill="none" stroke="#141413" stroke-opacity=".22" stroke-width="1" marker-end="url(#g1)">
+            <path d="M122 64 L162 64"/><path d="M122 146 L162 146"/><path d="M122 228 L162 228"/>
+            <path d="M310 64 L350 64 Q378 64 378 112 L378 126"/>
+            <path d="M310 228 L350 228 Q378 228 378 180 L378 166"/>
+            <path d="M310 146 L378 146"/><path d="M512 146 L570 146"/><path d="M726 172 L726 212"/></g>
+          <g fill="none" stroke="#B85C3E" stroke-width="1.6" marker-end="url(#g2)"><path d="M452 146 L480 146"/></g>
+          <g fill="none" stroke="#B85C3E" stroke-opacity=".5" stroke-width="1" stroke-dasharray="3 4"><path d="M690 124 Q560 30 210 46 L164 54"/></g>
+          <g fill="#F0EEE6" stroke="#141413" stroke-opacity=".34" stroke-width="1">
+            <rect x="0" y="50" width="122" height="28" rx="1"/><rect x="0" y="132" width="122" height="28" rx="1"/><rect x="0" y="214" width="122" height="28" rx="1"/>
+            <rect x="162" y="46" width="148" height="36" rx="1"/><rect x="162" y="128" width="148" height="36" rx="1"/><rect x="162" y="210" width="148" height="36" rx="1"/>
+            <rect x="570" y="122" width="156" height="48" rx="1"/><rect x="614" y="212" width="172" height="34" rx="1"/></g>
+          <g fill="#141413" stroke="#B85C3E" stroke-width="1.4"><rect x="378" y="124" width="74" height="44" rx="1"/></g>
+          <g fill="#5F5E58">
+            <text x="61" y="68" text-anchor="middle">REQUEST</text><text x="61" y="150" text-anchor="middle">DOCUMENT</text><text x="61" y="232" text-anchor="middle">APPROVAL</text>
+            <text x="236" y="68" text-anchor="middle">A PERSON</text><text x="236" y="150" text-anchor="middle">A SYSTEM</text><text x="236" y="232" text-anchor="middle">A HANDOFF</text>
+            <text x="648" y="142" text-anchor="middle" fill="#141413">DECISION</text><text x="648" y="158" text-anchor="middle">RE-MADE</text>
+            <text x="700" y="233" text-anchor="middle">DOWNSTREAM</text>
+            <text x="415" y="150" text-anchor="middle" fill="#F0EEE6">WAIT</text></g>
+          <g fill="#9E4A2E" font-size="9.5"><text x="382" y="112">queue time</text><text x="300" y="30">rework loop</text></g>
+        </svg>
+        <figcaption>A generic structure, drawn to show the form of the record rather than any
+          company&rsquo;s contents. The two labelled edges carry metric names, never values —
+          the measurements belong to the client and stay there.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="s s-bear">
+  <div class="w">
+    <div class="hd hd--ruled"><span class="eyebrow">Why it is the asset</span>
+      <h2>The hard part was never the tooling.</h2></div>
+    <div class="g">
+      <div class="m7 stack">
+        <p class="tx">Building a workflow into software is the part that has become
+          straightforward. Getting the workflow out of the people who perform it is not, and it
+          is where an engagement actually spends its time.</p>
+        <p class="tx">What a company knows about itself is held in a form nobody can query: in
+          the judgement of the person who has done the job for nine years, in the exception
+          nobody documented, in the meeting where a decision gets made again because the reason
+          was never written down.</p>
+        <p class="tx">The WorkGraph is that knowledge in a form a machine can read. It is built
+          from the artefacts the work already produces — build history, version control, ticket
+          and issue data — rather than from a session where people describe what they believe
+          they do, which is a different thing and usually wrong in the same places.</p>
+        <p class="tx"><b>It is also why the second engagement is not the first one again.</b>
+          The record persists after the build, so a later change reads from something that
+          already exists.</p>
+      </div>
+      <div class="m5 side">
+        <span class="mi">What it holds</span>
+        <div class="rows" style="margin-top:16px">
+          <div class="row"><span class="row__n">&mdash;</span><span class="row__t">Workflows, and the paths through them</span></div>
+          <div class="row"><span class="row__n">&mdash;</span><span class="row__t">Decisions, and who makes them</span></div>
+          <div class="row"><span class="row__n">&mdash;</span><span class="row__t">Systems, and what each holds</span></div>
+          <div class="row"><span class="row__n">&mdash;</span><span class="row__t">Handoffs, and where they wait</span></div>
+          <div class="row"><span class="row__n">&mdash;</span><span class="row__t">Knowledge that lives in a person</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s s-state">
+  <div class="w"><div class="g">
+    <p class="statement m8">Clients do not appear on this site, and that will include you. What
+      can be shown is the form of the record — never its contents.</p>
+    <div class="m4" style="padding-top:10px">
+      <p class="tx"><a href="faq.html">How confidentiality works &rarr;</a></p>
+    </div>
+  </div></div>
+</section>
+
+<section class="s s-close">
+  <div class="w"><div class="g">
+    <div class="m7 stack">
+      <span class="eyebrow">Three states</span>
+      <h2>Built once. Read by the build. Runs what is live.</h2>
+      <p class="lead">The record made during the assessment is the same object the code agents
+        query while building, and the same one that orchestrates agents in production.</p>
+      <p style="margin-top:6px">
+        <a class="cta" href="implementation.html">What gets built &rarr;</a>
+        <a class="cta" href="index.html#assessment" style="margin-left:10px">Book an assessment &rarr;</a></p>
+    </div>
+  </div></div>
+</section>
+</main>
+<footer class="foot"><div class="foot__in">
+  <img class="foot__mark" src="../../assets/dagg-logotype-dark.png" alt="Dagg">
+  <a href="strategy.html">Strategy</a>
+  <a href="implementation.html">Implementation</a>
+  <a href="workgraph.html">WorkGraph</a>
+  <a href="company.html">Company</a>
+  <a href="faq.html">FAQ</a>
+  <a href="careers.html">Careers</a>
+  <a href="mailto:hello@dagg.ai">hello@dagg.ai</a>
+  <span class="foot__end">&copy; 2026 Dagg</span>
+</div></footer>
+<script src="site.js"></script>
+</body>
+</html>

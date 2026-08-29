@@ -9,7 +9,7 @@
   /* the single entrance: the first section only, on load */
   if(!reduce){
     root.setAttribute('data-anim','on');
-    var first = d.querySelector('.sec');
+    var first = d.querySelector('.s-open');
     if(first){
       first.querySelectorAll('.rv').forEach(function(el,i){
         el.style.setProperty('--i', Math.min(i,4));
