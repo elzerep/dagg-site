@@ -7,7 +7,8 @@ Siffrorna står i [MEASURED.md](MEASURED.md).
 
 ### 1 · En grund per sida
 
-Ingen av de tre växlar botten mellan sektioner. En sida har en botten, plus
+Ingen av de **fyra** växlar botten mellan sektioner. Palantir kör rent vitt
+över 9757 pixlar utan ett enda avbrott. En sida har en botten, plus
 möjligen en mörk avslutning.
 
 Grunden varierar i stället **mellan sidor**. Anthropic kör elfenben på
@@ -69,6 +70,7 @@ Sidan behöver flera former, och en sida använder fyra till fem av dem.
 | **Bärare** | 1000–1500px | Sidans argument. Bär hälften av texten. |
 | **Kort** | 550–700px | Tre eller fyra parallella saker. Får upprepas inom sig själv. |
 | **Instrument** | 700–1000px | Ett diagram som gör något. Bryter textmåttet. |
+| **Skiljetecken** | 120–180px | En rad. Nästan ingenting. Palantir har tre. |
 | **Uttalande** | 260–420px | En mening. Nästan bara luft. |
 | **Register** | 400–600px | Definitioner, frågor, en lista att slå i. |
 | **Avslut** | 380–470px | Mörk. Nästa steg. |

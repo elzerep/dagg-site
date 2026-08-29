@@ -75,3 +75,40 @@ inte kompositionen.
 OpenAI upprepar en kortrad tre gånger på exakt 614px — men bara som en
 *serie*. Sidan i övrigt varierar 368 → 5651. Upprepning är tillåten inom ett
 parallellt block, aldrig som sidans genomgående form.
+
+## Palantir — närmast Daggs affär av alla fyra
+
+| Sida | Grunder | Kortast | Högst | Kvot |
+|---|---|---|---|---|
+| palantir.com/platforms/foundry | **1** (`#FFFFFF`) | 120px | 1909px | stor |
+| palantir.com/impact | **1** (`#FFFFFF`) | 740px | 2076px | 2,8× |
+
+Rent vitt, hela vägen, 9757px utan en enda grundväxling. Regeln håller nu
+hos fyra av fyra.
+
+Foundry-sidans höjder: 120 · 141 · 175 · 611 · 613 · 632 · 636 · 791 · 1145
+· 1520 · 1909. **Korta skiljesektioner på 120–175px** — något vi saknar helt.
+
+### Tre grepp värda att ta
+
+**Ontology är en egen flik.** WorkGraph-motsvarigheten får plats i navet, inte
+inuti en metodsida. Det motsäger mitt tidigare beslut att degradera den.
+
+**"Impact Studies", inte "Case Studies".** Ett namn som överlever att vara få,
+och som pekar på utfallet i stället för på kunden.
+
+**"In the Words of Our Customers".** Kunden talar i stället för att bolaget
+beskriver. En sektion på 1225px med 649 ord och 34 mediaelement.
+
+Deras Impact-sidas rubrik: *Enterprise Transformation – from Insight to
+Impact.* Nära er positionering.
+
+### Ett grepp att inte ta
+
+Registret. *"Activate your data and analytics in a dynamic system for
+closed-loop operations."* Det är precis den teknikbolagsröst som ska undvikas.
+Palantirs struktur är värd att låna. Deras språk är det inte.
+
+### Hero
+
+740px, **21 ord.** Ingen bild ovanför vecket.
