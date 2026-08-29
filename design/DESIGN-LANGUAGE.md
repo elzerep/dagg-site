@@ -177,6 +177,25 @@ edges get measured is the insight; fabricating numbers for them is the failure.
 
 Every illustrative diagram carries its provenance in plain words.
 
+### Count the devices
+
+Clutter is a count, not a size. A page carrying a vertical rail label, a mono
+eyebrow, mono metadata keys, mono row numbers, mono diagram labels, hairlines
+between every zone and italic emphasis is running seven signals at once, and it
+reads as busy however carefully each one is set.
+
+**The palette and the type have to agree.** A hard dark ground supports hard
+typography — tight tracking, dense uppercase metadata, italic emphasis. Move
+the ground to warm and light and those same devices fight it. When the colour
+softens, the type has to soften with it, and the way to soften type is mostly
+to remove things.
+
+Mono survives in two places: the section eyebrow, and diagram labels. Everywhere
+else metadata is sentence-case sans at reading size.
+
+**No italic for emphasis.** It reads as instructing the reader which words
+matter. Use weight, or write the sentence so the emphasis is in the words.
+
 ### No card grids
 
 Structure comes from hairlines, columns and whitespace. A grid of bordered
