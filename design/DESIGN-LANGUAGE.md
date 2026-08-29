@@ -230,6 +230,29 @@ Body weight is **400 on light grounds, never 300.** Thin light type on a light
 ground is what tires the eye, and it is the most common reason a page that
 looks elegant in a screenshot is unreadable in a room.
 
+### Money is never on the page
+
+No amounts, no ranges, no day rates, no estimates of what an engagement costs
+or what a change is worth. Not on any page, not in an illustration, not as an
+example. Price is client-specific and case-specific, and it belongs in the room
+where the case is discussed.
+
+This is not caution about disclosure. A firm that publishes numbers is asking
+to be compared on them, and comparison on price is the one contest where being
+right is worth nothing.
+
+**What replaces the number is the bill of materials.** Not "eight to fourteen
+weeks", which anyone can write — but *two integrations, one human control
+point, no new interface.* The reader prices it themselves, and they price it
+against their own situation rather than against a figure that was never about
+them. It is also the sentence that cannot be written without having built the
+thing, which is the point.
+
+Thresholds are allowed where amounts are not, because a threshold is a rule
+rather than a measurement: a workflow is worth rebuilding when the cost of the
+waiting exceeds the cost of the building inside one budget cycle. That can turn
+out to be wrong, which is what makes it judgement.
+
 ### The navigation is not the argument
 
 Three separate attempts to make the site's structure carry the proof of the
