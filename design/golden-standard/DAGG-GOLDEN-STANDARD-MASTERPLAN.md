@@ -1049,18 +1049,19 @@ The integration gate rejects JSON whose values are unsupported by the screenshot
 | Package | Scope | Claude stops when |
 |---|---|---|
 | P0 | Reconcile repository rules and immutable revision-safe preview | Docs no longer conflict and every served response belongs to one deterministic snapshot ID. |
-| P1 | Tokens, type, grid and accessibility pairs | Foundation specimens render at all breakpoints. |
-| P2 | Header, navigation and footer | Real routes, keyboard and mobile pass. |
-| P3 | Two or three vertical-slice directions | Comparable desktop/mobile slices and a recommendation are ready for the direction-choice gate. |
-| P4 | Decision continuum | Five outcomes pass interaction and comprehension gates. |
-| P5 | Company context and WorkGraph mechanism | One path proves the harness value without making it mandatory or circuit-like. |
-| P6 | Factory modes | Automate/rebuild proof is concrete. |
-| P7 | Operations and trust | Client-run/Dagg-run, bounds and record are inspectable. |
-| P8 | Impact gateway and assessment close | Homepage remains general; Impact route and conversion work without inserting a named venture feature. |
-| P9 | Full homepage integration | Rhythm, narrative and palette work as a whole. |
-| P10 | Supporting pages | Each page passes its brief before the next begins. |
-| P11 | Accessibility, no-JS, reduced motion and performance | Hard gates pass with evidence. |
-| P12 | Final production polish | Completion matrix is ready for Christian. |
+| P1 | Message architecture, page briefs, evidence ledger and final vertical-slice copy | Every visible claim, section role and copy block is final enough to design without Claude inventing the story. |
+| P2 | Tokens, type, grid and accessibility pairs | Foundation specimens render at all breakpoints. |
+| P3 | Header, navigation and footer | Real routes, keyboard and mobile pass. |
+| P4 | Two or three vertical-slice directions | Comparable desktop/mobile slices and a recommendation are ready for the direction-choice gate. |
+| P5 | Decision continuum | Five outcomes pass interaction and comprehension gates. |
+| P6 | Company context and WorkGraph mechanism | One path proves the harness value without making it circuit-like or reducing Dagg to WorkGraph. |
+| P7 | Factory modes | Automate/rebuild proof is concrete. |
+| P8 | Operations and trust | Client-run/Dagg-run, bounds and record are inspectable without claiming public managed-operations proof. |
+| P9 | Impact gateway and assessment close | Homepage remains general; Impact route and conversion work without inserting a named venture feature. |
+| P10 | Full homepage integration | Rhythm, narrative and palette work as a whole. |
+| P11 | Supporting pages | Each page passes its brief before the next begins. |
+| P12 | Accessibility, no-JS, reduced motion and performance | Hard gates pass with evidence. |
+| P13 | Final production polish | Completion matrix is ready for Christian. |
 
 ## Agent handoff format
 
