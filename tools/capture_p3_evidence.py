@@ -817,18 +817,25 @@ def main(argv=None) -> int:  # noqa: C901
     args = parser.parse_args(argv)
 
     EVIDENCE_DIR.mkdir(parents=True, exist_ok=True)
+    # Freeze the package's immutable source snapshot before the acceptance
+    # suite rewrites files under evidence/P3. Evidence is deliberately
+    # excluded from the served snapshot, but starting the server afterward
+    # would still make the revision metadata look dirty on an otherwise
+    # clean post-commit run. The frozen server can safely remain live while
+    # the suite writes evidence because it never reads disk again.
+    server, base_url, startup_seconds = p2.start_server(args.port, args.host)
+    status, revision_headers, revision_body = p2.fetch(base_url, "/__revision")
+    revision = json.loads(revision_body)
+    snapshot_id = revision["snapshotId"]
+
     tests = {} if args.skip_tests else run_acceptance_suite()
 
-    server, base_url, startup_seconds = p2.start_server(args.port, args.host)
     profile_dir = Path(tempfile.mkdtemp(prefix="dagg-p3-chrome-"))
     chrome = None
     cdp = None
     screenshots: list[dict] = []
     deviations: list[str] = []
     try:
-        status, revision_headers, revision_body = p2.fetch(base_url, "/__revision")
-        revision = json.loads(revision_body)
-        snapshot_id = revision["snapshotId"]
         (EVIDENCE_DIR / "revision.json").write_bytes(revision_body)
 
         chrome, browser_ws, chrome_path = p2.start_chrome(profile_dir)

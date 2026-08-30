@@ -1,19 +1,19 @@
 {
   "baseCommit": "772ea9d875ac79fcfb1bef7c339150e81f66b516",
   "branch": "design-language",
-  "capturedAt": "2026-08-30T16:14:48.091109+00:00",
+  "capturedAt": "2026-08-30T16:21:32.288173+00:00",
   "chrome": "Chrome/152.0.7977.65",
   "chromeDriver": "Chrome DevTools Protocol over a raw WebSocket; no Playwright, Selenium or bundled browser",
   "chromePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-  "commit": "772ea9d875ac79fcfb1bef7c339150e81f66b516",
+  "commit": "db55759a916c141a431bdb7c6bf02678d69c403e",
   "deviations": [
     "This capture drives a real Chrome process directly (not a canned/simulated run) but was produced without a preceding P3A visual acceptance by Codex, per the P3B subpackage split: P3B may not alter P3A source to make a test pass and does not grade its own rendering.",
-    "The no-JavaScript capture blocks only the exact local chrome.js request via Network.setBlockedURLs, rather than disabling the JS engine, so the CDP measurement harness's own Runtime.evaluate calls (readiness wait, measurement, the dispatched click on the native <summary>) keep working. The resulting failed network load for chrome.js (http://127.0.0.1:52765/design/golden-standard/system/chrome.js) is an intentional no-JS condition, not a console/network failure.",
+    "The no-JavaScript capture blocks only the exact local chrome.js request via Network.setBlockedURLs, rather than disabling the JS engine, so the CDP measurement harness's own Runtime.evaluate calls (readiness wait, measurement, the dispatched click on the native <summary>) keep working. The resulting failed network load for chrome.js (http://127.0.0.1:53148/design/golden-standard/system/chrome.js) is an intentional no-JS condition, not a console/network failure.",
     "200% zoom is emulated via Emulation.setDeviceMetricsOverride with a halved CSS viewport and doubled deviceScaleFactor (the WCAG 1.4.10 reflow-testing proxy), because headless Chrome's DevTools Protocol exposes no direct 'browser zoom' verb equivalent to a user pressing Ctrl-Plus."
   ],
   "dirtyAtCapture": true,
   "evidenceExcludedFromSnapshot": true,
-  "label": "codex-visual-gate-r4",
+  "label": "capture-order-verification",
   "mobileMenuTrapStops": [
     "Transformation",
     "WorkGraph",
@@ -25,13 +25,13 @@
     "Menu\n        Close"
   ],
   "noJavaScript": {
-    "chromeJsBlocked": "http://127.0.0.1:52765/design/golden-standard/system/chrome.js",
+    "chromeJsBlocked": "http://127.0.0.1:53148/design/golden-standard/system/chrome.js",
     "chromeJsFailedRequests": [
       {
         "blockedReason": "inspector",
         "errorText": null,
-        "requestId": "49079.21",
-        "url": "http://127.0.0.1:52765/design/golden-standard/system/chrome.js"
+        "requestId": "50411.21",
+        "url": "http://127.0.0.1:53148/design/golden-standard/system/chrome.js"
       }
     ],
     "documentOverflowAfterNativeClick": "",
@@ -162,9 +162,7 @@
       "tests/test_p3_chrome.py",
       "tools/capture_p3_evidence.py"
     ],
-    "committedVersusBase": [],
-    "outOfScope": [],
-    "workingTree": [
+    "committedVersusBase": [
       "CLAUDE.md",
       "design/golden-standard/packages/P3-GLOBAL-CHROME.md",
       "design/golden-standard/system/chrome.css",
@@ -202,6 +200,16 @@
       "preview/golden-standard/chrome/routes/trust/index.html",
       "preview/golden-standard/chrome/routes/workgraph/index.html",
       "tests/test_p3_chrome.py",
+      "tools/capture_p3_evidence.py"
+    ],
+    "outOfScope": [],
+    "workingTree": [
+      "design/golden-standard/packages/P3-GLOBAL-CHROME.md",
+      "evidence/P3/result.json",
+      "evidence/P3/revision.json",
+      "evidence/P3/server-stderr.txt",
+      "evidence/P3/tests-output.txt",
+      "evidence/P3/tests.json",
       "tools/capture_p3_evidence.py"
     ]
   },
@@ -390,11 +398,11 @@
       "scrollY": 2102
     }
   },
-  "serverBaseUrl": "http://127.0.0.1:52765",
-  "serverStartupSeconds": 0.195,
+  "serverBaseUrl": "http://127.0.0.1:53148",
+  "serverStartupSeconds": 0.201,
   "snapshotAcquisitionAttempts": 1,
   "snapshotConsistencyPasses": 2,
-  "snapshotId": "96e0d67da3d6f522a42b5e63fb2aca403c935f073aaa8ec6477fb924e19247ba",
+  "snapshotId": "9541ecc131bf269b74341fcb5b8022fb177bcd947da465ae2c4c778043386d7b",
   "subpackage": "P3B",
   "tests": {
     "command": "python3 -B -m unittest discover -s tests -p test_p3_chrome.py -v",
@@ -417,7 +425,7 @@
         "zeroServerExceptions": true
       },
       "chrome": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-      "commit": "772ea9d875ac79fcfb1bef7c339150e81f66b516",
+      "commit": "db55759a916c141a431bdb7c6bf02678d69c403e",
       "coverage": [
         "CSS-chrome",
         "CSS-tokens",
@@ -515,61 +523,61 @@
             "footerCount": 1,
             "headerCount": 1,
             "preview": "/preview/golden-standard/chrome/",
-            "url": "http://127.0.0.1:52683/preview/golden-standard/chrome/"
+            "url": "http://127.0.0.1:53151/preview/golden-standard/chrome/"
           },
           "/assessment": {
             "footerCount": 1,
             "headerCount": 1,
             "preview": "/preview/golden-standard/chrome/routes/assessment/",
-            "url": "http://127.0.0.1:52683/preview/golden-standard/chrome/routes/assessment/"
+            "url": "http://127.0.0.1:53151/preview/golden-standard/chrome/routes/assessment/"
           },
           "/build": {
             "footerCount": 1,
             "headerCount": 1,
             "preview": "/preview/golden-standard/chrome/routes/build/",
-            "url": "http://127.0.0.1:52683/preview/golden-standard/chrome/routes/build/"
+            "url": "http://127.0.0.1:53151/preview/golden-standard/chrome/routes/build/"
           },
           "/company": {
             "footerCount": 1,
             "headerCount": 1,
             "preview": "/preview/golden-standard/chrome/routes/company/",
-            "url": "http://127.0.0.1:52683/preview/golden-standard/chrome/routes/company/"
+            "url": "http://127.0.0.1:53151/preview/golden-standard/chrome/routes/company/"
           },
           "/impact": {
             "footerCount": 1,
             "headerCount": 1,
             "preview": "/preview/golden-standard/chrome/routes/impact/",
-            "url": "http://127.0.0.1:52683/preview/golden-standard/chrome/routes/impact/"
+            "url": "http://127.0.0.1:53151/preview/golden-standard/chrome/routes/impact/"
           },
           "/privacy": {
             "footerCount": 1,
             "headerCount": 1,
             "preview": "/preview/golden-standard/chrome/routes/privacy/",
-            "url": "http://127.0.0.1:52683/preview/golden-standard/chrome/routes/privacy/"
+            "url": "http://127.0.0.1:53151/preview/golden-standard/chrome/routes/privacy/"
           },
           "/terms": {
             "footerCount": 1,
             "headerCount": 1,
             "preview": "/preview/golden-standard/chrome/routes/terms/",
-            "url": "http://127.0.0.1:52683/preview/golden-standard/chrome/routes/terms/"
+            "url": "http://127.0.0.1:53151/preview/golden-standard/chrome/routes/terms/"
           },
           "/transformation": {
             "footerCount": 1,
             "headerCount": 1,
             "preview": "/preview/golden-standard/chrome/routes/transformation/",
-            "url": "http://127.0.0.1:52683/preview/golden-standard/chrome/routes/transformation/"
+            "url": "http://127.0.0.1:53151/preview/golden-standard/chrome/routes/transformation/"
           },
           "/trust": {
             "footerCount": 1,
             "headerCount": 1,
             "preview": "/preview/golden-standard/chrome/routes/trust/",
-            "url": "http://127.0.0.1:52683/preview/golden-standard/chrome/routes/trust/"
+            "url": "http://127.0.0.1:53151/preview/golden-standard/chrome/routes/trust/"
           },
           "/workgraph": {
             "footerCount": 1,
             "headerCount": 1,
             "preview": "/preview/golden-standard/chrome/routes/workgraph/",
-            "url": "http://127.0.0.1:52683/preview/golden-standard/chrome/routes/workgraph/"
+            "url": "http://127.0.0.1:53151/preview/golden-standard/chrome/routes/workgraph/"
           }
         },
         "scope": {
@@ -598,6 +606,7 @@
             "evidence/P3/route-transformation-active-1440px.png",
             "evidence/P3/server-stderr.txt",
             "evidence/P3/tests-output.txt",
+            "evidence/P3/tests.json",
             "preview/golden-standard/chrome/chrome-preview.css",
             "preview/golden-standard/chrome/index.html",
             "preview/golden-standard/chrome/routes/assessment/index.html",
@@ -612,9 +621,7 @@
             "tests/test_p3_chrome.py",
             "tools/capture_p3_evidence.py"
           ],
-          "committedVersusBase": [],
-          "outOfScope": [],
-          "workingTree": [
+          "committedVersusBase": [
             "CLAUDE.md",
             "design/golden-standard/packages/P3-GLOBAL-CHROME.md",
             "design/golden-standard/system/chrome.css",
@@ -639,6 +646,7 @@
             "evidence/P3/route-transformation-active-1440px.png",
             "evidence/P3/server-stderr.txt",
             "evidence/P3/tests-output.txt",
+            "evidence/P3/tests.json",
             "preview/golden-standard/chrome/chrome-preview.css",
             "preview/golden-standard/chrome/index.html",
             "preview/golden-standard/chrome/routes/assessment/index.html",
@@ -651,6 +659,17 @@
             "preview/golden-standard/chrome/routes/trust/index.html",
             "preview/golden-standard/chrome/routes/workgraph/index.html",
             "tests/test_p3_chrome.py",
+            "tools/capture_p3_evidence.py"
+          ],
+          "outOfScope": [],
+          "workingTree": [
+            "design/golden-standard/packages/P3-GLOBAL-CHROME.md",
+            "evidence/P3/mobile-menu-focus-trapped-390px.png",
+            "evidence/P3/result.json",
+            "evidence/P3/revision.json",
+            "evidence/P3/server-stderr.txt",
+            "evidence/P3/tests-output.txt",
+            "evidence/P3/tests.json",
             "tools/capture_p3_evidence.py"
           ]
         },
@@ -745,14 +764,14 @@
         "/trust",
         "/workgraph"
       ],
-      "snapshotId": "96e0d67da3d6f522a42b5e63fb2aca403c935f073aaa8ec6477fb924e19247ba"
+      "snapshotId": "9541ecc131bf269b74341fcb5b8022fb177bcd947da465ae2c4c778043386d7b"
     },
     "integrityProblems": [],
     "passed": true,
     "returnCode": 0,
-    "seconds": 35.266,
+    "seconds": 34.855,
     "summary": [
-      "Ran 14 tests in 35.200s",
+      "Ran 14 tests in 34.788s",
       "OK"
     ]
   },

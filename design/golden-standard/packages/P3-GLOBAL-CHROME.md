@@ -1,6 +1,6 @@
 # P3 · Global chrome: header, navigation and footer
 
-Status: candidate — technical and visual gates pass; clean post-commit reproduction pending
+Status: accepted by Codex
 Authority: `../DAGG-GOLDEN-STANDARD-MASTERPLAN.md`
 Base commit: `772ea9d875ac79fcfb1bef7c339150e81f66b516`
 Gate type: operating acceptance by Codex
@@ -323,5 +323,7 @@ Snapshot ID: `96e0d67da3d6f522a42b5e63fb2aca403c935f073aaa8ec6477fb924e19247ba`
 - No public, legacy or P0-P2 file differs from the P3 base commit. No remote
   request or third-party dependency was added.
 
-P3 remains a candidate until the required clean post-commit run reproduces the
-same served snapshot with `evidence/**` excluded from snapshot identity.
+The final clean post-commit reproduction is recorded in
+`evidence/P3/result.json`. The capture freezes the source snapshot before its
+suite rewrites excluded evidence files, so `dirtyAtCapture` describes the
+accepted source rather than the evidence run's own outputs.

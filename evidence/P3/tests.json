@@ -17,7 +17,7 @@
     "zeroServerExceptions": true
   },
   "chrome": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-  "commit": "772ea9d875ac79fcfb1bef7c339150e81f66b516",
+  "commit": "db55759a916c141a431bdb7c6bf02678d69c403e",
   "coverage": [
     "CSS-chrome",
     "CSS-tokens",
@@ -115,61 +115,61 @@
         "footerCount": 1,
         "headerCount": 1,
         "preview": "/preview/golden-standard/chrome/",
-        "url": "http://127.0.0.1:52683/preview/golden-standard/chrome/"
+        "url": "http://127.0.0.1:53151/preview/golden-standard/chrome/"
       },
       "/assessment": {
         "footerCount": 1,
         "headerCount": 1,
         "preview": "/preview/golden-standard/chrome/routes/assessment/",
-        "url": "http://127.0.0.1:52683/preview/golden-standard/chrome/routes/assessment/"
+        "url": "http://127.0.0.1:53151/preview/golden-standard/chrome/routes/assessment/"
       },
       "/build": {
         "footerCount": 1,
         "headerCount": 1,
         "preview": "/preview/golden-standard/chrome/routes/build/",
-        "url": "http://127.0.0.1:52683/preview/golden-standard/chrome/routes/build/"
+        "url": "http://127.0.0.1:53151/preview/golden-standard/chrome/routes/build/"
       },
       "/company": {
         "footerCount": 1,
         "headerCount": 1,
         "preview": "/preview/golden-standard/chrome/routes/company/",
-        "url": "http://127.0.0.1:52683/preview/golden-standard/chrome/routes/company/"
+        "url": "http://127.0.0.1:53151/preview/golden-standard/chrome/routes/company/"
       },
       "/impact": {
         "footerCount": 1,
         "headerCount": 1,
         "preview": "/preview/golden-standard/chrome/routes/impact/",
-        "url": "http://127.0.0.1:52683/preview/golden-standard/chrome/routes/impact/"
+        "url": "http://127.0.0.1:53151/preview/golden-standard/chrome/routes/impact/"
       },
       "/privacy": {
         "footerCount": 1,
         "headerCount": 1,
         "preview": "/preview/golden-standard/chrome/routes/privacy/",
-        "url": "http://127.0.0.1:52683/preview/golden-standard/chrome/routes/privacy/"
+        "url": "http://127.0.0.1:53151/preview/golden-standard/chrome/routes/privacy/"
       },
       "/terms": {
         "footerCount": 1,
         "headerCount": 1,
         "preview": "/preview/golden-standard/chrome/routes/terms/",
-        "url": "http://127.0.0.1:52683/preview/golden-standard/chrome/routes/terms/"
+        "url": "http://127.0.0.1:53151/preview/golden-standard/chrome/routes/terms/"
       },
       "/transformation": {
         "footerCount": 1,
         "headerCount": 1,
         "preview": "/preview/golden-standard/chrome/routes/transformation/",
-        "url": "http://127.0.0.1:52683/preview/golden-standard/chrome/routes/transformation/"
+        "url": "http://127.0.0.1:53151/preview/golden-standard/chrome/routes/transformation/"
       },
       "/trust": {
         "footerCount": 1,
         "headerCount": 1,
         "preview": "/preview/golden-standard/chrome/routes/trust/",
-        "url": "http://127.0.0.1:52683/preview/golden-standard/chrome/routes/trust/"
+        "url": "http://127.0.0.1:53151/preview/golden-standard/chrome/routes/trust/"
       },
       "/workgraph": {
         "footerCount": 1,
         "headerCount": 1,
         "preview": "/preview/golden-standard/chrome/routes/workgraph/",
-        "url": "http://127.0.0.1:52683/preview/golden-standard/chrome/routes/workgraph/"
+        "url": "http://127.0.0.1:53151/preview/golden-standard/chrome/routes/workgraph/"
       }
     },
     "scope": {
@@ -198,6 +198,7 @@
         "evidence/P3/route-transformation-active-1440px.png",
         "evidence/P3/server-stderr.txt",
         "evidence/P3/tests-output.txt",
+        "evidence/P3/tests.json",
         "preview/golden-standard/chrome/chrome-preview.css",
         "preview/golden-standard/chrome/index.html",
         "preview/golden-standard/chrome/routes/assessment/index.html",
@@ -212,9 +213,7 @@
         "tests/test_p3_chrome.py",
         "tools/capture_p3_evidence.py"
       ],
-      "committedVersusBase": [],
-      "outOfScope": [],
-      "workingTree": [
+      "committedVersusBase": [
         "CLAUDE.md",
         "design/golden-standard/packages/P3-GLOBAL-CHROME.md",
         "design/golden-standard/system/chrome.css",
@@ -239,6 +238,7 @@
         "evidence/P3/route-transformation-active-1440px.png",
         "evidence/P3/server-stderr.txt",
         "evidence/P3/tests-output.txt",
+        "evidence/P3/tests.json",
         "preview/golden-standard/chrome/chrome-preview.css",
         "preview/golden-standard/chrome/index.html",
         "preview/golden-standard/chrome/routes/assessment/index.html",
@@ -251,6 +251,17 @@
         "preview/golden-standard/chrome/routes/trust/index.html",
         "preview/golden-standard/chrome/routes/workgraph/index.html",
         "tests/test_p3_chrome.py",
+        "tools/capture_p3_evidence.py"
+      ],
+      "outOfScope": [],
+      "workingTree": [
+        "design/golden-standard/packages/P3-GLOBAL-CHROME.md",
+        "evidence/P3/mobile-menu-focus-trapped-390px.png",
+        "evidence/P3/result.json",
+        "evidence/P3/revision.json",
+        "evidence/P3/server-stderr.txt",
+        "evidence/P3/tests-output.txt",
+        "evidence/P3/tests.json",
         "tools/capture_p3_evidence.py"
       ]
     },
@@ -345,5 +356,5 @@
     "/trust",
     "/workgraph"
   ],
-  "snapshotId": "96e0d67da3d6f522a42b5e63fb2aca403c935f073aaa8ec6477fb924e19247ba"
+  "snapshotId": "9541ecc131bf269b74341fcb5b8022fb177bcd947da465ae2c4c778043386d7b"
 }
