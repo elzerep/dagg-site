@@ -1,0 +1,772 @@
+{
+  "baseCommit": "772ea9d875ac79fcfb1bef7c339150e81f66b516",
+  "branch": "design-language",
+  "capturedAt": "2026-08-30T16:14:48.091109+00:00",
+  "chrome": "Chrome/152.0.7977.65",
+  "chromeDriver": "Chrome DevTools Protocol over a raw WebSocket; no Playwright, Selenium or bundled browser",
+  "chromePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+  "commit": "772ea9d875ac79fcfb1bef7c339150e81f66b516",
+  "deviations": [
+    "This capture drives a real Chrome process directly (not a canned/simulated run) but was produced without a preceding P3A visual acceptance by Codex, per the P3B subpackage split: P3B may not alter P3A source to make a test pass and does not grade its own rendering.",
+    "The no-JavaScript capture blocks only the exact local chrome.js request via Network.setBlockedURLs, rather than disabling the JS engine, so the CDP measurement harness's own Runtime.evaluate calls (readiness wait, measurement, the dispatched click on the native <summary>) keep working. The resulting failed network load for chrome.js (http://127.0.0.1:52765/design/golden-standard/system/chrome.js) is an intentional no-JS condition, not a console/network failure.",
+    "200% zoom is emulated via Emulation.setDeviceMetricsOverride with a halved CSS viewport and doubled deviceScaleFactor (the WCAG 1.4.10 reflow-testing proxy), because headless Chrome's DevTools Protocol exposes no direct 'browser zoom' verb equivalent to a user pressing Ctrl-Plus."
+  ],
+  "dirtyAtCapture": true,
+  "evidenceExcludedFromSnapshot": true,
+  "label": "codex-visual-gate-r4",
+  "mobileMenuTrapStops": [
+    "Transformation",
+    "WorkGraph",
+    "Build",
+    "Impact",
+    "Company",
+    "Start an assessment",
+    "",
+    "Menu\n        Close"
+  ],
+  "noJavaScript": {
+    "chromeJsBlocked": "http://127.0.0.1:52765/design/golden-standard/system/chrome.js",
+    "chromeJsFailedRequests": [
+      {
+        "blockedReason": "inspector",
+        "errorText": null,
+        "requestId": "49079.21",
+        "url": "http://127.0.0.1:52765/design/golden-standard/system/chrome.js"
+      }
+    ],
+    "documentOverflowAfterNativeClick": "",
+    "footerLinkCount": 10,
+    "inlineEventAttributes": 0,
+    "nativeClickOpenedDisclosure": true,
+    "navLinkCount": 5,
+    "scriptElements": 1,
+    "summaryAriaExpandedWithoutEnhancement": "false",
+    "summaryLabelAfterNativeClick": "Menu"
+  },
+  "package": "P3",
+  "performance": {
+    "budget": {
+      "chromeCssBytesMax": 24576,
+      "chromeJavaScriptBytesMax": 12288
+    },
+    "chromeCssBytes": 12162,
+    "chromeJavaScriptBytes": 6053,
+    "withinBudget": true
+  },
+  "protectedByteIdentity": {
+    "compared": 36,
+    "differing": [],
+    "missing": []
+  },
+  "reducedMotionTransitionsPresentBeforeReduction": true,
+  "routeTable": [
+    {
+      "label": "Dagg logotype",
+      "nav": "root",
+      "preview": "/preview/golden-standard/chrome/",
+      "production": "/"
+    },
+    {
+      "label": "Transformation",
+      "nav": "header+footer",
+      "preview": "/preview/golden-standard/chrome/routes/transformation/",
+      "production": "/transformation"
+    },
+    {
+      "label": "WorkGraph",
+      "nav": "header+footer",
+      "preview": "/preview/golden-standard/chrome/routes/workgraph/",
+      "production": "/workgraph"
+    },
+    {
+      "label": "Build",
+      "nav": "header+footer",
+      "preview": "/preview/golden-standard/chrome/routes/build/",
+      "production": "/build"
+    },
+    {
+      "label": "Impact",
+      "nav": "header+footer",
+      "preview": "/preview/golden-standard/chrome/routes/impact/",
+      "production": "/impact"
+    },
+    {
+      "label": "Company",
+      "nav": "header+footer",
+      "preview": "/preview/golden-standard/chrome/routes/company/",
+      "production": "/company"
+    },
+    {
+      "label": "Start an assessment",
+      "nav": "header+footer",
+      "preview": "/preview/golden-standard/chrome/routes/assessment/",
+      "production": "/assessment"
+    },
+    {
+      "label": "Trust",
+      "nav": "footer",
+      "preview": "/preview/golden-standard/chrome/routes/trust/",
+      "production": "/trust"
+    },
+    {
+      "label": "Privacy",
+      "nav": "footer",
+      "preview": "/preview/golden-standard/chrome/routes/privacy/",
+      "production": "/privacy"
+    },
+    {
+      "label": "Terms",
+      "nav": "footer",
+      "preview": "/preview/golden-standard/chrome/routes/terms/",
+      "production": "/terms"
+    }
+  ],
+  "scope": {
+    "changedVersusBase": [
+      "CLAUDE.md",
+      "design/golden-standard/packages/P3-GLOBAL-CHROME.md",
+      "design/golden-standard/system/chrome.css",
+      "design/golden-standard/system/chrome.js",
+      "evidence/P3/header-compact-1024px.png",
+      "evidence/P3/header-compact-940px.png",
+      "evidence/P3/header-hidden-on-down-scroll-1440px.png",
+      "evidence/P3/header-ink-adapted-1440px.png",
+      "evidence/P3/header-revealed-on-up-scroll-1440px.png",
+      "evidence/P3/header-warm-1440px.png",
+      "evidence/P3/mobile-menu-closed-390px.png",
+      "evidence/P3/mobile-menu-focus-trapped-390px.png",
+      "evidence/P3/mobile-menu-keyboard-open-390px.png",
+      "evidence/P3/no-javascript-390px.png",
+      "evidence/P3/reduced-motion-390px.png",
+      "evidence/P3/result.json",
+      "evidence/P3/revision.json",
+      "evidence/P3/root-1440px.png",
+      "evidence/P3/root-320px.png",
+      "evidence/P3/root-360px.png",
+      "evidence/P3/root-390px.png",
+      "evidence/P3/route-transformation-active-1440px.png",
+      "evidence/P3/server-stderr.txt",
+      "evidence/P3/tests-output.txt",
+      "evidence/P3/tests.json",
+      "preview/golden-standard/chrome/chrome-preview.css",
+      "preview/golden-standard/chrome/index.html",
+      "preview/golden-standard/chrome/routes/assessment/index.html",
+      "preview/golden-standard/chrome/routes/build/index.html",
+      "preview/golden-standard/chrome/routes/company/index.html",
+      "preview/golden-standard/chrome/routes/impact/index.html",
+      "preview/golden-standard/chrome/routes/privacy/index.html",
+      "preview/golden-standard/chrome/routes/terms/index.html",
+      "preview/golden-standard/chrome/routes/transformation/index.html",
+      "preview/golden-standard/chrome/routes/trust/index.html",
+      "preview/golden-standard/chrome/routes/workgraph/index.html",
+      "tests/test_p3_chrome.py",
+      "tools/capture_p3_evidence.py"
+    ],
+    "committedVersusBase": [],
+    "outOfScope": [],
+    "workingTree": [
+      "CLAUDE.md",
+      "design/golden-standard/packages/P3-GLOBAL-CHROME.md",
+      "design/golden-standard/system/chrome.css",
+      "design/golden-standard/system/chrome.js",
+      "evidence/P3/header-compact-1024px.png",
+      "evidence/P3/header-compact-940px.png",
+      "evidence/P3/header-hidden-on-down-scroll-1440px.png",
+      "evidence/P3/header-ink-adapted-1440px.png",
+      "evidence/P3/header-revealed-on-up-scroll-1440px.png",
+      "evidence/P3/header-warm-1440px.png",
+      "evidence/P3/mobile-menu-closed-390px.png",
+      "evidence/P3/mobile-menu-focus-trapped-390px.png",
+      "evidence/P3/mobile-menu-keyboard-open-390px.png",
+      "evidence/P3/no-javascript-390px.png",
+      "evidence/P3/reduced-motion-390px.png",
+      "evidence/P3/result.json",
+      "evidence/P3/revision.json",
+      "evidence/P3/root-1440px.png",
+      "evidence/P3/root-320px.png",
+      "evidence/P3/root-360px.png",
+      "evidence/P3/root-390px.png",
+      "evidence/P3/route-transformation-active-1440px.png",
+      "evidence/P3/server-stderr.txt",
+      "evidence/P3/tests-output.txt",
+      "evidence/P3/tests.json",
+      "preview/golden-standard/chrome/chrome-preview.css",
+      "preview/golden-standard/chrome/index.html",
+      "preview/golden-standard/chrome/routes/assessment/index.html",
+      "preview/golden-standard/chrome/routes/build/index.html",
+      "preview/golden-standard/chrome/routes/company/index.html",
+      "preview/golden-standard/chrome/routes/impact/index.html",
+      "preview/golden-standard/chrome/routes/privacy/index.html",
+      "preview/golden-standard/chrome/routes/terms/index.html",
+      "preview/golden-standard/chrome/routes/transformation/index.html",
+      "preview/golden-standard/chrome/routes/trust/index.html",
+      "preview/golden-standard/chrome/routes/workgraph/index.html",
+      "tests/test_p3_chrome.py",
+      "tools/capture_p3_evidence.py"
+    ]
+  },
+  "screenshotViewports": [
+    1440,
+    390,
+    360,
+    320
+  ],
+  "screenshots": [
+    {
+      "path": "evidence/P3/root-1440px.png",
+      "pixelDimensions": {
+        "height": 4205,
+        "width": 1440
+      },
+      "sha256": "766b16cbcecb88538a53b8cd7892343ab7527dc444391d77d01a39ace58b490e",
+      "state": "default",
+      "viewport": 1440
+    },
+    {
+      "path": "evidence/P3/root-390px.png",
+      "pixelDimensions": {
+        "height": 4583,
+        "width": 390
+      },
+      "sha256": "ca7e7ece1bc3f3fada7dea0bd98bd4ca8a8b93c3831bc5c9da3b6e3713e8cb74",
+      "state": "default",
+      "viewport": 390
+    },
+    {
+      "path": "evidence/P3/root-360px.png",
+      "pixelDimensions": {
+        "height": 4572,
+        "width": 360
+      },
+      "sha256": "03ab7664840eb79e0052e5875c66bca4228bf3470eb937e33330b367d1cb7e04",
+      "state": "default",
+      "viewport": 360
+    },
+    {
+      "path": "evidence/P3/root-320px.png",
+      "pixelDimensions": {
+        "height": 4678,
+        "width": 320
+      },
+      "sha256": "dfc7a55bb7689a41362bf185a5708f1d2f92e90db3be6503791f75be55310b2b",
+      "state": "default",
+      "viewport": 320
+    },
+    {
+      "path": "evidence/P3/header-compact-940px.png",
+      "pixelDimensions": {
+        "height": 900,
+        "width": 940
+      },
+      "sha256": "63da8f918ebe3e12355de0b0c8927314325473551d1fcab56c976bc2cef37bb7",
+      "state": "compact-desktop",
+      "viewport": 940
+    },
+    {
+      "path": "evidence/P3/header-compact-1024px.png",
+      "pixelDimensions": {
+        "height": 900,
+        "width": 1024
+      },
+      "sha256": "75175b1ed0a46cbb13e2648ee9ace788ad459363514a350f6e97907018d2dac0",
+      "state": "compact-desktop",
+      "viewport": 1024
+    },
+    {
+      "path": "evidence/P3/mobile-menu-closed-390px.png",
+      "pixelDimensions": {
+        "height": 844,
+        "width": 390
+      },
+      "sha256": "7a75b3eaea90b564d204b4bca608979bce6de169a94c2a7417cb867ca0b7463e",
+      "state": "menu-closed",
+      "viewport": 390
+    },
+    {
+      "path": "evidence/P3/mobile-menu-keyboard-open-390px.png",
+      "pixelDimensions": {
+        "height": 844,
+        "width": 390
+      },
+      "sha256": "1dbb6941c33947dc7b2f7025811042b0ea5660cf6beeac4697ea248a4d187ec3",
+      "state": "menu-open-keyboard",
+      "viewport": 390
+    },
+    {
+      "path": "evidence/P3/mobile-menu-focus-trapped-390px.png",
+      "pixelDimensions": {
+        "height": 844,
+        "width": 390
+      },
+      "sha256": "a251acffcb9464a68ff9823e770dba3a670cee925d084b7ef2893dea2a986f43",
+      "state": "menu-open-focus-trapped",
+      "viewport": 390
+    },
+    {
+      "path": "evidence/P3/header-warm-1440px.png",
+      "pixelDimensions": {
+        "height": 900,
+        "width": 1440
+      },
+      "sha256": "6b61134630871e4535accb718168dfd146a07564b719e8528dbef03d39f109ab",
+      "state": "warm",
+      "viewport": 1440
+    },
+    {
+      "path": "evidence/P3/header-ink-adapted-1440px.png",
+      "pixelDimensions": {
+        "height": 900,
+        "width": 1440
+      },
+      "sha256": "e21203166d3e8e7718545e5fa6d2b05c2641a7c478088af27a5030330b13a4eb",
+      "state": "ink-adapted-or-hidden",
+      "viewport": 1440
+    },
+    {
+      "path": "evidence/P3/header-hidden-on-down-scroll-1440px.png",
+      "pixelDimensions": {
+        "height": 900,
+        "width": 1440
+      },
+      "sha256": "86edb02dc98e391286888407c93b4b7e7dc7b2b1ad33adf3865027977a3890f3",
+      "state": "hidden-on-down-scroll",
+      "viewport": 1440
+    },
+    {
+      "path": "evidence/P3/header-revealed-on-up-scroll-1440px.png",
+      "pixelDimensions": {
+        "height": 900,
+        "width": 1440
+      },
+      "sha256": "b51748d984cc1d9def94cd40c6bd3331cb482aa03081fb8a293d504ad13ba734",
+      "state": "revealed-on-up-scroll",
+      "viewport": 1440
+    },
+    {
+      "path": "evidence/P3/route-transformation-active-1440px.png",
+      "pixelDimensions": {
+        "height": 1168,
+        "width": 1440
+      },
+      "sha256": "a3bd895516a3b2040638e3e5a599af8b6a9fea49bba2dbe1b2a67300aa5338eb",
+      "state": "aria-current active route",
+      "viewport": 1440
+    },
+    {
+      "path": "evidence/P3/no-javascript-390px.png",
+      "pixelDimensions": {
+        "height": 4583,
+        "width": 390
+      },
+      "sha256": "9c4b72afb97723f092f9d4a9e7455a31adcf8958aecb6e9228d392f703b05b20",
+      "state": "no-javascript-native-menu-open",
+      "viewport": 390
+    },
+    {
+      "path": "evidence/P3/reduced-motion-390px.png",
+      "pixelDimensions": {
+        "height": 4583,
+        "width": 390
+      },
+      "sha256": "ca7e7ece1bc3f3fada7dea0bd98bd4ca8a8b93c3831bc5c9da3b6e3713e8cb74",
+      "state": "prefers-reduced-motion: reduce",
+      "viewport": 390
+    }
+  ],
+  "scrollSequences": {
+    "furtherDown": {
+      "headerHidden": true,
+      "headerTheme": "warm",
+      "scrollY": 2046
+    },
+    "toInkOrHidden": {
+      "headerHidden": false,
+      "headerTheme": "ink",
+      "scrollY": 991
+    },
+    "up": {
+      "headerHidden": false,
+      "headerTheme": "warm",
+      "scrollY": 2102
+    }
+  },
+  "serverBaseUrl": "http://127.0.0.1:52765",
+  "serverStartupSeconds": 0.195,
+  "snapshotAcquisitionAttempts": 1,
+  "snapshotConsistencyPasses": 2,
+  "snapshotId": "96e0d67da3d6f522a42b5e63fb2aca403c935f073aaa8ec6477fb924e19247ba",
+  "subpackage": "P3B",
+  "tests": {
+    "command": "python3 -B -m unittest discover -s tests -p test_p3_chrome.py -v",
+    "detail": {
+      "checks": {
+        "ariaCurrentCorrectEverywhere": true,
+        "collapseAt940PreservesOrderHidesNav": true,
+        "everyDestinationServesOneHeaderAndFooter": true,
+        "keyboardOrderAndVisibleFocus": true,
+        "localOnlyNoConsoleErrorsOwnedScope": true,
+        "mobileDisclosureOpenTrapCloseRestore": true,
+        "noHorizontalScrollIncluding200PctZoom": true,
+        "noJavaScriptDisclosureExposesEveryRoute": true,
+        "noPlaceholderLinksMailIsOnlyNonHttp": true,
+        "oneSnapshotAcrossHtmlCssJsFontsAndLogos": true,
+        "primaryLabelOrderAndRootIsNotTransformation": true,
+        "reducedMotionLayoutContentSafe": true,
+        "scrollHideRevealAndInkAdaptation": true,
+        "textAndTouchTargetFloors": true,
+        "zeroServerExceptions": true
+      },
+      "chrome": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "commit": "772ea9d875ac79fcfb1bef7c339150e81f66b516",
+      "coverage": [
+        "CSS-chrome",
+        "CSS-tokens",
+        "JS-chrome",
+        "PNG-logotype",
+        "PNG-logotype-dark",
+        "WOFF2-Geist-Variable.woff2",
+        "WOFF2-JetBrainsMono-Variable.woff2",
+        "WOFF2-Newsreader-Variable.woff2"
+      ],
+      "dirty": true,
+      "measurements": {
+        "collapse": {
+          "1440": {
+            "panelWidth": 873.984375
+          },
+          "939": {
+            "order": [
+              "Transformation",
+              "WorkGraph",
+              "Build",
+              "Impact",
+              "Company"
+            ],
+            "summaryDisplay": "flex"
+          },
+          "940": {
+            "order": [
+              "Transformation",
+              "WorkGraph",
+              "Build",
+              "Impact",
+              "Company"
+            ],
+            "panelWidth": 748.296875,
+            "summaryDisplay": "none"
+          }
+        },
+        "focusRings": [
+          {
+            "contrast": 5.15,
+            "text": ""
+          },
+          {
+            "contrast": 15.87,
+            "text": "Transformation"
+          }
+        ],
+        "minimumComputedTextPx": 12,
+        "minimumFooterTextPx": 13,
+        "mobilePanelOpen": {
+          "backgroundColor": [
+            240,
+            238,
+            230
+          ],
+          "color": [
+            20,
+            20,
+            19
+          ],
+          "opacity": 1,
+          "panelRect": {
+            "height": 784,
+            "width": 390,
+            "x": 0,
+            "y": 60
+          }
+        },
+        "mobileTrapStops": [
+          "Transformation",
+          "WorkGraph",
+          "Build",
+          "Impact",
+          "Company",
+          "Start an assessment",
+          "",
+          "Menu\n        Close"
+        ],
+        "primaryOrder": [
+          "Transformation",
+          "WorkGraph",
+          "Build",
+          "Impact",
+          "Company",
+          "Start an assessment"
+        ],
+        "protectedByteIdentity": {
+          "compared": 36,
+          "differing": [],
+          "missing": []
+        },
+        "routeTable": {
+          "/": {
+            "footerCount": 1,
+            "headerCount": 1,
+            "preview": "/preview/golden-standard/chrome/",
+            "url": "http://127.0.0.1:52683/preview/golden-standard/chrome/"
+          },
+          "/assessment": {
+            "footerCount": 1,
+            "headerCount": 1,
+            "preview": "/preview/golden-standard/chrome/routes/assessment/",
+            "url": "http://127.0.0.1:52683/preview/golden-standard/chrome/routes/assessment/"
+          },
+          "/build": {
+            "footerCount": 1,
+            "headerCount": 1,
+            "preview": "/preview/golden-standard/chrome/routes/build/",
+            "url": "http://127.0.0.1:52683/preview/golden-standard/chrome/routes/build/"
+          },
+          "/company": {
+            "footerCount": 1,
+            "headerCount": 1,
+            "preview": "/preview/golden-standard/chrome/routes/company/",
+            "url": "http://127.0.0.1:52683/preview/golden-standard/chrome/routes/company/"
+          },
+          "/impact": {
+            "footerCount": 1,
+            "headerCount": 1,
+            "preview": "/preview/golden-standard/chrome/routes/impact/",
+            "url": "http://127.0.0.1:52683/preview/golden-standard/chrome/routes/impact/"
+          },
+          "/privacy": {
+            "footerCount": 1,
+            "headerCount": 1,
+            "preview": "/preview/golden-standard/chrome/routes/privacy/",
+            "url": "http://127.0.0.1:52683/preview/golden-standard/chrome/routes/privacy/"
+          },
+          "/terms": {
+            "footerCount": 1,
+            "headerCount": 1,
+            "preview": "/preview/golden-standard/chrome/routes/terms/",
+            "url": "http://127.0.0.1:52683/preview/golden-standard/chrome/routes/terms/"
+          },
+          "/transformation": {
+            "footerCount": 1,
+            "headerCount": 1,
+            "preview": "/preview/golden-standard/chrome/routes/transformation/",
+            "url": "http://127.0.0.1:52683/preview/golden-standard/chrome/routes/transformation/"
+          },
+          "/trust": {
+            "footerCount": 1,
+            "headerCount": 1,
+            "preview": "/preview/golden-standard/chrome/routes/trust/",
+            "url": "http://127.0.0.1:52683/preview/golden-standard/chrome/routes/trust/"
+          },
+          "/workgraph": {
+            "footerCount": 1,
+            "headerCount": 1,
+            "preview": "/preview/golden-standard/chrome/routes/workgraph/",
+            "url": "http://127.0.0.1:52683/preview/golden-standard/chrome/routes/workgraph/"
+          }
+        },
+        "scope": {
+          "changedVersusBase": [
+            "CLAUDE.md",
+            "design/golden-standard/packages/P3-GLOBAL-CHROME.md",
+            "design/golden-standard/system/chrome.css",
+            "design/golden-standard/system/chrome.js",
+            "evidence/P3/header-compact-1024px.png",
+            "evidence/P3/header-compact-940px.png",
+            "evidence/P3/header-hidden-on-down-scroll-1440px.png",
+            "evidence/P3/header-ink-adapted-1440px.png",
+            "evidence/P3/header-revealed-on-up-scroll-1440px.png",
+            "evidence/P3/header-warm-1440px.png",
+            "evidence/P3/mobile-menu-closed-390px.png",
+            "evidence/P3/mobile-menu-focus-trapped-390px.png",
+            "evidence/P3/mobile-menu-keyboard-open-390px.png",
+            "evidence/P3/no-javascript-390px.png",
+            "evidence/P3/reduced-motion-390px.png",
+            "evidence/P3/result.json",
+            "evidence/P3/revision.json",
+            "evidence/P3/root-1440px.png",
+            "evidence/P3/root-320px.png",
+            "evidence/P3/root-360px.png",
+            "evidence/P3/root-390px.png",
+            "evidence/P3/route-transformation-active-1440px.png",
+            "evidence/P3/server-stderr.txt",
+            "evidence/P3/tests-output.txt",
+            "preview/golden-standard/chrome/chrome-preview.css",
+            "preview/golden-standard/chrome/index.html",
+            "preview/golden-standard/chrome/routes/assessment/index.html",
+            "preview/golden-standard/chrome/routes/build/index.html",
+            "preview/golden-standard/chrome/routes/company/index.html",
+            "preview/golden-standard/chrome/routes/impact/index.html",
+            "preview/golden-standard/chrome/routes/privacy/index.html",
+            "preview/golden-standard/chrome/routes/terms/index.html",
+            "preview/golden-standard/chrome/routes/transformation/index.html",
+            "preview/golden-standard/chrome/routes/trust/index.html",
+            "preview/golden-standard/chrome/routes/workgraph/index.html",
+            "tests/test_p3_chrome.py",
+            "tools/capture_p3_evidence.py"
+          ],
+          "committedVersusBase": [],
+          "outOfScope": [],
+          "workingTree": [
+            "CLAUDE.md",
+            "design/golden-standard/packages/P3-GLOBAL-CHROME.md",
+            "design/golden-standard/system/chrome.css",
+            "design/golden-standard/system/chrome.js",
+            "evidence/P3/header-compact-1024px.png",
+            "evidence/P3/header-compact-940px.png",
+            "evidence/P3/header-hidden-on-down-scroll-1440px.png",
+            "evidence/P3/header-ink-adapted-1440px.png",
+            "evidence/P3/header-revealed-on-up-scroll-1440px.png",
+            "evidence/P3/header-warm-1440px.png",
+            "evidence/P3/mobile-menu-closed-390px.png",
+            "evidence/P3/mobile-menu-focus-trapped-390px.png",
+            "evidence/P3/mobile-menu-keyboard-open-390px.png",
+            "evidence/P3/no-javascript-390px.png",
+            "evidence/P3/reduced-motion-390px.png",
+            "evidence/P3/result.json",
+            "evidence/P3/revision.json",
+            "evidence/P3/root-1440px.png",
+            "evidence/P3/root-320px.png",
+            "evidence/P3/root-360px.png",
+            "evidence/P3/root-390px.png",
+            "evidence/P3/route-transformation-active-1440px.png",
+            "evidence/P3/server-stderr.txt",
+            "evidence/P3/tests-output.txt",
+            "preview/golden-standard/chrome/chrome-preview.css",
+            "preview/golden-standard/chrome/index.html",
+            "preview/golden-standard/chrome/routes/assessment/index.html",
+            "preview/golden-standard/chrome/routes/build/index.html",
+            "preview/golden-standard/chrome/routes/company/index.html",
+            "preview/golden-standard/chrome/routes/impact/index.html",
+            "preview/golden-standard/chrome/routes/privacy/index.html",
+            "preview/golden-standard/chrome/routes/terms/index.html",
+            "preview/golden-standard/chrome/routes/transformation/index.html",
+            "preview/golden-standard/chrome/routes/trust/index.html",
+            "preview/golden-standard/chrome/routes/workgraph/index.html",
+            "tests/test_p3_chrome.py",
+            "tools/capture_p3_evidence.py"
+          ]
+        },
+        "scrollHideReveal": {
+          "furtherDown": {
+            "headerHidden": true,
+            "headerTheme": "warm",
+            "scrollY": 2046
+          },
+          "inkBackground": [
+            20,
+            20,
+            19
+          ],
+          "inkForeground": [
+            240,
+            238,
+            230
+          ],
+          "toInk": {
+            "headerHidden": false,
+            "headerTheme": "ink",
+            "scrollY": 991
+          },
+          "up": {
+            "headerHidden": false,
+            "headerTheme": "warm",
+            "scrollY": 1246
+          }
+        },
+        "scrollWidth": {
+          "1024": [
+            1024,
+            1024
+          ],
+          "1440": [
+            1440,
+            1440
+          ],
+          "320": [
+            320,
+            320
+          ],
+          "360": [
+            360,
+            360
+          ],
+          "390": [
+            390,
+            390
+          ],
+          "768": [
+            768,
+            768
+          ],
+          "zoom200pct": [
+            640,
+            640
+          ]
+        },
+        "smallestInteractiveEdge": 44,
+        "tabOrder": [
+          "",
+          "Transformation",
+          "WorkGraph",
+          "Build",
+          "Impact",
+          "Company",
+          "Start an assessment",
+          "Transformation",
+          "WorkGraph",
+          "Build",
+          "Impact",
+          "Company",
+          "Start an assessment",
+          "Trust",
+          "hello@dagg.ai",
+          "Privacy",
+          "Terms"
+        ]
+      },
+      "notes": [],
+      "routesRendered": [
+        "/",
+        "/assessment",
+        "/build",
+        "/company",
+        "/impact",
+        "/privacy",
+        "/terms",
+        "/transformation",
+        "/trust",
+        "/workgraph"
+      ],
+      "snapshotId": "96e0d67da3d6f522a42b5e63fb2aca403c935f073aaa8ec6477fb924e19247ba"
+    },
+    "integrityProblems": [],
+    "passed": true,
+    "returnCode": 0,
+    "seconds": 35.266,
+    "summary": [
+      "Ran 14 tests in 35.200s",
+      "OK"
+    ]
+  },
+  "unmeasuredInP3": [
+    "This is the P3B rig only. P3C (Codex) owns the real-Chrome run, visual review and the accepted status/acceptance record; this script and evidence/P3/** are not themselves a claim that P3 passed.",
+    "Screen-reader announcement quality was not tested.",
+    "Real-device rendering was not tested."
+  ],
+  "viewports": [
+    320,
+    360,
+    390,
+    768,
+    1024,
+    1440
+  ]
+}

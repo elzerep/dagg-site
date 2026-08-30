@@ -1,0 +1,153 @@
+/* Dagg P3 chrome specimen — local page styles
+ *
+ * This file is not part of the shared chrome. It only lays out the P3
+ * diagnostic carriers and route shells so chrome.css can be inspected in
+ * context. No homepage, direction or product surface is styled here.
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink-2);
+  font-family: var(--font-serif);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.t-h1,
+.t-h2,
+.t-h3 {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  color: var(--ink);
+  margin: 0;
+  text-wrap: wrap;
+}
+
+.t-h1 {
+  font-size: var(--fs-h1);
+  line-height: var(--lh-h1);
+  letter-spacing: var(--tracking-h1);
+}
+
+.t-h2 {
+  font-size: var(--fs-h2);
+  line-height: var(--lh-h2);
+  letter-spacing: var(--tracking-h2);
+}
+
+.t-h3 {
+  font-size: var(--fs-h3);
+  line-height: var(--lh-h3);
+  letter-spacing: var(--tracking-h3);
+}
+
+.t-lead {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: var(--fs-lead);
+  line-height: var(--lh-lead);
+  color: var(--ink-2);
+  margin: 0;
+  text-wrap: pretty;
+}
+
+.t-meta {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: var(--fs-meta);
+  line-height: var(--lh-meta);
+  letter-spacing: var(--tracking-meta);
+  color: var(--ink-2);
+  margin: 0;
+}
+
+.on-ink {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.on-ink :is(.t-h1, .t-h2, .t-h3, .t-lead, .t-meta) {
+  color: var(--paper);
+}
+
+.page {
+  padding-inline: var(--page-gutter);
+}
+
+.field {
+  max-width: var(--field-max);
+  margin-inline: auto;
+  width: 100%;
+}
+
+/* ------------------------------------------------------------------ *
+ * Diagnostic carriers                                                  *
+ * ------------------------------------------------------------------ */
+
+.specimen-carrier {
+  padding-block: var(--section-lg);
+}
+
+.specimen-carrier__marker {
+  margin-bottom: var(--space-5);
+}
+
+.specimen-carrier__note {
+  margin-top: var(--space-5);
+  max-width: var(--measure-max);
+}
+
+.specimen-carrier--warm {
+  background: var(--paper);
+}
+
+.specimen-carrier--lift {
+  background: var(--lift);
+  padding-block: var(--section-md);
+}
+
+.specimen-carrier--ink {
+  padding-block: var(--section-lg);
+}
+
+.specimen-carrier--scroll {
+  min-height: 2400px;
+  border-top: 1px solid var(--rule);
+}
+
+/* ------------------------------------------------------------------ *
+ * Route shell                                                          *
+ * ------------------------------------------------------------------ */
+
+.route-shell {
+  padding-block: var(--section-lg) var(--section-md);
+  min-height: 60vh;
+}
+
+.route-shell__marker {
+  margin-bottom: var(--space-5);
+}
+
+.route-shell__title {
+  margin-bottom: var(--space-5);
+}
+
+.route-shell__note {
+  max-width: var(--measure-max);
+}
