@@ -1,12 +1,12 @@
 {
-  "assetRevision": "89364097327005263024c562adf68dbdd8c31dc162db75711afcc70294a9942b",
+  "assetRevision": "5146189363d7f445b8f690720ad3b96943fc0b1bf1ac370c801466ab0da42a64",
   "baseCommit": "cf9bdcdfa1e47ff75e193155feee00b0bda67e86",
   "branch": "design-language",
-  "capturedAt": "2026-08-30T14:12:20.909427+00:00",
+  "capturedAt": "2026-08-30T14:16:37.554771+00:00",
   "chrome": "Chrome/152.0.7977.65",
   "chromeDriver": "Chrome DevTools Protocol over a raw WebSocket; no Playwright, Selenium or bundled browser",
   "chromePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-  "commit": "cf9bdcdfa1e47ff75e193155feee00b0bda67e86",
+  "commit": "c64be1592ef25bac5c74ca8435439d0db21c999d",
   "consoleErrors": 0,
   "contrastExclusions": [
     {
@@ -430,7 +430,7 @@
     }
   },
   "httpErrorResponses": [],
-  "label": "accepted-pre-commit",
+  "label": "accepted-reporting-fix",
   "loadedFontFamilies": [
     "Geist",
     "JetBrains Mono",
@@ -534,15 +534,46 @@
     }
   ],
   "scope": {
-    "committedVersusBase": [],
+    "committedVersusBase": [
+      "assets/fonts/golden-standard/PROVENANCE.md",
+      "assets/fonts/golden-standard/geist/Geist-Variable.woff2",
+      "assets/fonts/golden-standard/geist/LICENSE.txt",
+      "assets/fonts/golden-standard/geist/OFL.txt",
+      "assets/fonts/golden-standard/jetbrains-mono/JetBrainsMono-Variable.woff2",
+      "assets/fonts/golden-standard/jetbrains-mono/OFL.txt",
+      "assets/fonts/golden-standard/newsreader/Newsreader-Variable.woff2",
+      "assets/fonts/golden-standard/newsreader/OFL.txt",
+      "design/golden-standard/packages/P2-FOUNDATIONS.md",
+      "design/golden-standard/system/TOKENS.md",
+      "design/golden-standard/system/tokens.css",
+      "evidence/P2/dom-metadata.json",
+      "evidence/P2/focus-ink-secondary-1440px.png",
+      "evidence/P2/focus-paper-primary-1440px.png",
+      "evidence/P2/foundations-1440px.png",
+      "evidence/P2/foundations-320px.png",
+      "evidence/P2/foundations-360px.png",
+      "evidence/P2/foundations-390px.png",
+      "evidence/P2/foundations-head-dom.html",
+      "evidence/P2/foundations-reduced-motion-390px.png",
+      "evidence/P2/request-log.json",
+      "evidence/P2/response-headers.json",
+      "evidence/P2/result.json",
+      "evidence/P2/revision.json",
+      "evidence/P2/server-stderr.txt",
+      "evidence/P2/tests-output.txt",
+      "evidence/P2/tests.json",
+      "preview/golden-standard/foundations/foundations.css",
+      "preview/golden-standard/foundations/index.html",
+      "tests/test_p2_foundations.py",
+      "tools/capture_p2_evidence.py"
+    ],
     "publicOrLegacyChanged": [],
     "workingTree": [
-      "assets/fonts/",
-      "design/golden-standard/packages/P2-FOUNDATIONS.md",
-      "design/golden-standard/system/",
-      "evidence/P2/",
-      "preview/golden-standard/",
-      "tests/test_p2_foundations.py",
+      "evidence/P2/foundations-head-dom.html",
+      "evidence/P2/response-headers.json",
+      "evidence/P2/revision.json",
+      "evidence/P2/tests-output.txt",
+      "evidence/P2/tests.json",
       "tools/capture_p2_evidence.py"
     ]
   },
@@ -560,7 +591,7 @@
         "width": 320
       },
       "sha256": "853de28aaa2b023f38c9bf1fc7f378263faa70010bb84730c37a734700dd301e",
-      "snapshotId": "89364097327005263024c562adf68dbdd8c31dc162db75711afcc70294a9942b",
+      "snapshotId": "5146189363d7f445b8f690720ad3b96943fc0b1bf1ac370c801466ab0da42a64",
       "state": "default",
       "viewport": 320
     },
@@ -571,7 +602,7 @@
         "width": 360
       },
       "sha256": "91bc4839f9e0362214db7d7268140bf1ee0211a5f384e1321b9fa280f529bc53",
-      "snapshotId": "89364097327005263024c562adf68dbdd8c31dc162db75711afcc70294a9942b",
+      "snapshotId": "5146189363d7f445b8f690720ad3b96943fc0b1bf1ac370c801466ab0da42a64",
       "state": "default",
       "viewport": 360
     },
@@ -582,7 +613,7 @@
         "width": 390
       },
       "sha256": "bf6cbd410c5897aee814be1c0140e409e426708a64d9cf3635c99ae26bfff135",
-      "snapshotId": "89364097327005263024c562adf68dbdd8c31dc162db75711afcc70294a9942b",
+      "snapshotId": "5146189363d7f445b8f690720ad3b96943fc0b1bf1ac370c801466ab0da42a64",
       "state": "default",
       "viewport": 390
     },
@@ -593,7 +624,7 @@
         "width": 1440
       },
       "sha256": "1375dd7e7c53a90f8720ddb7bf1c19e54e05358c9c44622059b9ca3517548944",
-      "snapshotId": "89364097327005263024c562adf68dbdd8c31dc162db75711afcc70294a9942b",
+      "snapshotId": "5146189363d7f445b8f690720ad3b96943fc0b1bf1ac370c801466ab0da42a64",
       "state": "default",
       "viewport": 1440
     },
@@ -604,7 +635,7 @@
         "width": 1440
       },
       "sha256": "e15506189987bac201c0544ed618a515ac17c1c0f4b83037e9087ebaf6d131f3",
-      "snapshotId": "89364097327005263024c562adf68dbdd8c31dc162db75711afcc70294a9942b",
+      "snapshotId": "5146189363d7f445b8f690720ad3b96943fc0b1bf1ac370c801466ab0da42a64",
       "state": "focus-visible:paper-primary",
       "viewport": 1440
     },
@@ -615,7 +646,7 @@
         "width": 1440
       },
       "sha256": "ae62b03538bb9a763764f211e6eb162a353f2d3fdba361e51ac5f7332c563104",
-      "snapshotId": "89364097327005263024c562adf68dbdd8c31dc162db75711afcc70294a9942b",
+      "snapshotId": "5146189363d7f445b8f690720ad3b96943fc0b1bf1ac370c801466ab0da42a64",
       "state": "focus-visible:ink-secondary",
       "viewport": 1440
     },
@@ -626,7 +657,7 @@
         "width": 390
       },
       "sha256": "bf6cbd410c5897aee814be1c0140e409e426708a64d9cf3635c99ae26bfff135",
-      "snapshotId": "89364097327005263024c562adf68dbdd8c31dc162db75711afcc70294a9942b",
+      "snapshotId": "5146189363d7f445b8f690720ad3b96943fc0b1bf1ac370c801466ab0da42a64",
       "state": "prefers-reduced-motion: reduce",
       "viewport": 390
     }
@@ -659,13 +690,13 @@
     ]
   },
   "scrollWidthMatches": true,
-  "serverBaseUrl": "http://127.0.0.1:60966",
+  "serverBaseUrl": "http://127.0.0.1:61513",
   "serverExceptions": 0,
-  "serverStartupSeconds": 0.202,
+  "serverStartupSeconds": 0.269,
   "smallestInteractiveTarget": 44,
   "snapshotAcquisitionAttempts": 1,
   "snapshotAcquisitionStable": true,
-  "snapshotByteCount": 22578790,
+  "snapshotByteCount": 22578858,
   "snapshotConsistencyPasses": 2,
   "snapshotExcludes": [
     ".git/**",
@@ -675,7 +706,7 @@
     ".DS_Store"
   ],
   "snapshotFileCount": 114,
-  "snapshotId": "89364097327005263024c562adf68dbdd8c31dc162db75711afcc70294a9942b",
+  "snapshotId": "5146189363d7f445b8f690720ad3b96943fc0b1bf1ac370c801466ab0da42a64",
   "splitCollapse": {
     "at1024": {
       "aWidth": 528,
@@ -729,7 +760,7 @@
         "zeroServerExceptions": true
       },
       "chrome": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-      "commit": "cf9bdcdfa1e47ff75e193155feee00b0bda67e86",
+      "commit": "c64be1592ef25bac5c74ca8435439d0db21c999d",
       "coverage": [
         "CSS-page",
         "CSS-tokens",
@@ -988,15 +1019,15 @@
           }
         ],
         "distinctRequests": [
-          "http://127.0.0.1:60895/assets/dagg-logotype-dark.png",
-          "http://127.0.0.1:60895/assets/dagg-logotype.png",
-          "http://127.0.0.1:60895/assets/dagg-symbol.png",
-          "http://127.0.0.1:60895/assets/fonts/golden-standard/geist/Geist-Variable.woff2",
-          "http://127.0.0.1:60895/assets/fonts/golden-standard/jetbrains-mono/JetBrainsMono-Variable.woff2",
-          "http://127.0.0.1:60895/assets/fonts/golden-standard/newsreader/Newsreader-Variable.woff2",
-          "http://127.0.0.1:60895/design/golden-standard/system/tokens.css",
-          "http://127.0.0.1:60895/preview/golden-standard/foundations/foundations.css",
-          "http://127.0.0.1:60895/preview/golden-standard/foundations/index.html"
+          "http://127.0.0.1:61439/assets/dagg-logotype-dark.png",
+          "http://127.0.0.1:61439/assets/dagg-logotype.png",
+          "http://127.0.0.1:61439/assets/dagg-symbol.png",
+          "http://127.0.0.1:61439/assets/fonts/golden-standard/geist/Geist-Variable.woff2",
+          "http://127.0.0.1:61439/assets/fonts/golden-standard/jetbrains-mono/JetBrainsMono-Variable.woff2",
+          "http://127.0.0.1:61439/assets/fonts/golden-standard/newsreader/Newsreader-Variable.woff2",
+          "http://127.0.0.1:61439/design/golden-standard/system/tokens.css",
+          "http://127.0.0.1:61439/preview/golden-standard/foundations/foundations.css",
+          "http://127.0.0.1:61439/preview/golden-standard/foundations/index.html"
         ],
         "focusRings": [
           {
@@ -1380,7 +1411,7 @@
         }
       },
       "notes": [],
-      "snapshotId": "89364097327005263024c562adf68dbdd8c31dc162db75711afcc70294a9942b",
+      "snapshotId": "5146189363d7f445b8f690720ad3b96943fc0b1bf1ac370c801466ab0da42a64",
       "viewportsRendered": [
         320,
         360,
@@ -1455,9 +1486,9 @@
     ],
     "passed": true,
     "returnCode": 0,
-    "seconds": 17.225,
+    "seconds": 16.943,
     "summary": [
-      "Ran 14 tests in 17.153s",
+      "Ran 14 tests in 16.863s",
       "OK"
     ]
   },

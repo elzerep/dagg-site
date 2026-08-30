@@ -980,7 +980,8 @@ def owned_scope() -> dict:
     public = [p for p in git(
         "diff", "--name-only", "%s...HEAD" % BASE_COMMIT, "--",
         "index.html", "robots.txt", "v1", "marketing", "assets",
-        "preview/directions", "preview/site").splitlines() if p]
+        "preview/directions", "preview/site").splitlines()
+              if p and not p.startswith("assets/fonts/golden-standard/")]
     return {"committedVersusBase": committed, "workingTree": working,
             "publicOrLegacyChanged": public}
 

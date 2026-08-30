@@ -17,7 +17,7 @@
     "zeroServerExceptions": true
   },
   "chrome": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-  "commit": "cf9bdcdfa1e47ff75e193155feee00b0bda67e86",
+  "commit": "c64be1592ef25bac5c74ca8435439d0db21c999d",
   "coverage": [
     "CSS-page",
     "CSS-tokens",
@@ -276,15 +276,15 @@
       }
     ],
     "distinctRequests": [
-      "http://127.0.0.1:60895/assets/dagg-logotype-dark.png",
-      "http://127.0.0.1:60895/assets/dagg-logotype.png",
-      "http://127.0.0.1:60895/assets/dagg-symbol.png",
-      "http://127.0.0.1:60895/assets/fonts/golden-standard/geist/Geist-Variable.woff2",
-      "http://127.0.0.1:60895/assets/fonts/golden-standard/jetbrains-mono/JetBrainsMono-Variable.woff2",
-      "http://127.0.0.1:60895/assets/fonts/golden-standard/newsreader/Newsreader-Variable.woff2",
-      "http://127.0.0.1:60895/design/golden-standard/system/tokens.css",
-      "http://127.0.0.1:60895/preview/golden-standard/foundations/foundations.css",
-      "http://127.0.0.1:60895/preview/golden-standard/foundations/index.html"
+      "http://127.0.0.1:61439/assets/dagg-logotype-dark.png",
+      "http://127.0.0.1:61439/assets/dagg-logotype.png",
+      "http://127.0.0.1:61439/assets/dagg-symbol.png",
+      "http://127.0.0.1:61439/assets/fonts/golden-standard/geist/Geist-Variable.woff2",
+      "http://127.0.0.1:61439/assets/fonts/golden-standard/jetbrains-mono/JetBrainsMono-Variable.woff2",
+      "http://127.0.0.1:61439/assets/fonts/golden-standard/newsreader/Newsreader-Variable.woff2",
+      "http://127.0.0.1:61439/design/golden-standard/system/tokens.css",
+      "http://127.0.0.1:61439/preview/golden-standard/foundations/foundations.css",
+      "http://127.0.0.1:61439/preview/golden-standard/foundations/index.html"
     ],
     "focusRings": [
       {
@@ -668,7 +668,7 @@
     }
   },
   "notes": [],
-  "snapshotId": "89364097327005263024c562adf68dbdd8c31dc162db75711afcc70294a9942b",
+  "snapshotId": "5146189363d7f445b8f690720ad3b96943fc0b1bf1ac370c801466ab0da42a64",
   "viewportsRendered": [
     320,
     360,
