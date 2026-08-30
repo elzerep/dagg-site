@@ -22,9 +22,9 @@
 .inst__bar{display:flex;align-items:center;gap:.6rem;padding:.75rem 1rem;
   border-bottom:1px solid rgba(240,238,230,.1)}
 .inst__dot{width:7px;height:7px;border-radius:50%;background:rgba(240,238,230,.22)}
-.inst__name{font-family:var(--font-instrument);font-size:11px;letter-spacing:.16em;
+.inst__name{font-family:var(--font-instrument);font-size:11.5px;letter-spacing:.16em;
   text-transform:uppercase;color:rgba(240,238,230,.5);margin-left:.4rem}
-.inst__state{margin-left:auto;font-family:var(--font-instrument);font-size:11px;
+.inst__state{margin-left:auto;font-family:var(--font-instrument);font-size:11.5px;
   letter-spacing:.14em;color:var(--color-clay)}
 .inst__body{padding:1.1rem 1.1rem 1.3rem}
 .steps{display:flex;gap:.35rem;padding:0 1.1rem 1rem}
@@ -35,8 +35,18 @@
 .step[aria-selected="true"]{color:var(--color-paper);border-top-color:var(--color-clay);border-top-width:2px}
 .step:hover{color:rgba(240,238,230,.8)}
 .inst svg{width:100%;height:auto;display:block}
+/* below the fold width the instrument keeps its legible size and scrolls,
+   rather than shrinking its labels to six pixels */
+@media(max-width:760px){
+  .inst__body{overflow-x:auto;-webkit-overflow-scrolling:touch;
+    padding-right:0;scrollbar-width:thin}
+  .inst svg{width:560px;max-width:none}
+  .inst__hint{display:block}
+}
+.inst__hint{display:none;font-family:var(--font-instrument);font-size:11px;letter-spacing:.13em;
+  text-transform:uppercase;color:rgba(240,238,230,.45);padding:0 1.1rem .9rem}
 .g-node rect{fill:#221F1D;stroke:rgba(240,238,230,.4);stroke-width:1}
-.g-node text{font-family:var(--font-instrument);font-size:11px;letter-spacing:.09em;fill:rgba(240,238,230,.82)}
+.g-node text{font-family:var(--font-instrument);font-size:11.5px;letter-spacing:.09em;fill:rgba(240,238,230,.82)}
 .g-edge{fill:none;stroke:rgba(240,238,230,.34);stroke-width:1.2}
 .g-lit rect{stroke:var(--color-clay);stroke-width:1.5}
 .g-lit text{fill:var(--color-paper)}
@@ -83,10 +93,10 @@
   padding:.9rem 1.1rem;border-bottom:1px solid rgba(240,238,230,.07);opacity:0;transform:translateY(6px)}
 .lrow.in{opacity:1;transform:none;transition:opacity .5s ease-out,transform .5s ease-out}
 .lrow.hum{background:rgba(217,119,87,.1)}
-.lrow .t{font-family:var(--font-instrument);font-size:10.5px;color:rgba(240,238,230,.4)}
+.lrow .t{font-family:var(--font-instrument);font-size:11.5px;color:rgba(240,238,230,.4)}
 .lrow .d{font-family:var(--font-human);font-size:15.5px;line-height:1.45;color:rgba(240,238,230,.88)}
 .lrow .d b{color:var(--color-paper);font-weight:600}
-.lrow .k{font-family:var(--font-instrument);font-size:10px;letter-spacing:.13em;
+.lrow .k{font-family:var(--font-instrument);font-size:11px;letter-spacing:.13em;
   text-transform:uppercase;padding:.42em .8em;border-radius:5px;white-space:nowrap}
 .k--sys{background:rgba(124,132,113,.34);color:#C3CCB8}
 .k--hum{background:var(--color-clay);color:#241009;font-weight:500}
@@ -142,7 +152,7 @@
   background:var(--surface-page);border-radius:14px;padding:clamp(1.6rem,3vw,2.4rem);
   min-height:230px}
 .case h3{font-size:clamp(1.5rem,2.6vw,2rem);font-weight:400;letter-spacing:-.03em;margin:.7rem 0 .9rem}
-.case .mi{font-family:var(--font-instrument);font-size:10.5px;letter-spacing:.15em;
+.case .mi{font-family:var(--font-instrument);font-size:11.5px;letter-spacing:.15em;
   text-transform:uppercase;color:var(--text-muted);display:block;margin-bottom:.5rem}
 .case p{font-size:1rem}
 .case__l,.case__r{transition:opacity .3s ease}
@@ -166,7 +176,8 @@
 
 <header class="nav"><div class="w">
   <img src="../../assets/dagg-logotype-dark.png" alt="Dagg">
-  <nav><a href="#">Strategy</a><a href="#">Implementation</a><a href="#">WorkGraph</a><a href="#">Company</a>
+  <button class="nav__toggle" aria-expanded="false" aria-controls="nv">Menu</button>
+  <nav id="nv"><a href="#">Strategy</a><a href="#">Implementation</a><a href="#">WorkGraph</a><a href="#">Company</a>
   <a class="btn btn--solid" href="#">Book an assessment</a></nav>
 </div></header>
 
@@ -219,6 +230,7 @@
         </g>
       </svg>
     </div>
+    <span class="inst__hint">Drag to see the whole path &rarr;</span>
     <div class="steps" role="tablist">
       <button class="step" role="tab" aria-selected="true"  data-s="0">Map</button>
       <button class="step" role="tab" aria-selected="false" data-s="1">Decide</button>
@@ -390,6 +402,12 @@
     else if(!e.isIntersecting){ stop(); }
   });},{threshold:.4});
   io.observe(document.getElementById('inst'));
+  var tg=document.querySelector('.nav__toggle'), nv=document.getElementById('nv');
+  if(tg&&nv){ tg.addEventListener('click',function(){
+    var open=nv.classList.toggle('open');
+    tg.setAttribute('aria-expanded',open?'true':'false');
+    tg.textContent=open?'Close':'Menu'; }); }
+
   go(0);
 
   /* the decision model: one outcome at a time, and the scale shows where it sits */
