@@ -373,10 +373,23 @@ So the fact stays true and stays unsaid. If the work is good the reader draws
 the conclusion, and a conclusion the reader drew is the only one that holds —
 which is the same rule as everywhere else here: prove, never assert.
 
-So: **real photographs of the actual team, framed on the work.** Hands at a
-board, a workflow being drawn and crossed out, a room mid-argument. Real
-people and real moments — but the subject is what is happening, not who is
-standing there.
+**Corrected, and this supersedes the paragraph above:** the imagery is not
+photographs of people at all. It is abstract and editorial — the family that
+sits beside serious research writing rather than beside a careers page.
+Tactile materials, real surfaces, restrained warm colour, used sparingly and
+given room.
+
+Four subjects carry the whole system:
+
+**Human judgment** — a warm organic mark crossing an exact structure, where
+the structure yields and rearranges around it.
+**Strategy** — layers, maps, crossings-out, a structure being reshaped.
+**Implementation** — a flow moving from disorder into ordered movement.
+**Intelligence** — material and transformation. Never circuitry, never a
+brain, never neon.
+
+This also settles the headcount question for good: a firm that shows no people
+has no size for a reader to weigh.
 
 **The headcount is never published**, as a number or as an implication. Not
 because it is small, but because it is not the thing that decides whether the
