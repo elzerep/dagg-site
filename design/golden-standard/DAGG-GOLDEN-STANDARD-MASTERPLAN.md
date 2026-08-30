@@ -471,6 +471,9 @@ Humanity is not serif + beige. It is judgment, language and consequence.
 The masterplan is exhaustive so the public site can be selective. None of its internal explanation is entitled to appear in the interface. The visible language must project confidence through compression rather than self-description.
 
 - Proof density must exceed claim density. A material claim is followed by an artifact, mechanism, boundary or sourced outcome, not another claim.
+- Assume an intelligent reader. Do not define adjacent concepts, restate the obvious or explain the conclusion after the artifact has made it legible.
+- Show before teaching. Product states, conceptual images, decisions and cases carry the argument; explanatory depth is progressively disclosed on supporting pages.
+- Mission is expressed first through Dagg's choices, products and consequences. A formal mission statement belongs only where it adds information, not as homepage authority theatre.
 - Each section makes one main point. If the headline and artifact already carry it, delete the body copy.
 - Above the fold, use one conclusion and at most one short lead before the first inspectable proof.
 - Avoid self-rating language such as `world-class`, `revolutionary`, `best`, `unmatched`, `10x` or `100x` unless a named, sourced and comparable result makes the term factual.
