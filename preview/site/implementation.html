@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Implementation — Dagg</title>
+<meta name="description" content="How a decision becomes something running in production.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&amp;family=Newsreader:opsz,wght@6..72,300..600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-ground="ivory">
+<div class="progress" aria-hidden="true"></div>
+<header class="nav"><div class="nav__in">
+  <a href="index.html" aria-label="Dagg"><img class="nav__mark" src="../../assets/dagg-logotype-dark.png" alt="Dagg"></a>
+  <button class="nav__toggle" aria-expanded="false" aria-controls="navlinks">Menu</button>
+  <nav class="nav__links" id="navlinks">
+    <a href="strategy.html">Strategy</a>
+    <a href="implementation.html" aria-current="page">Implementation</a>
+    <a href="workgraph.html">WorkGraph</a>
+    <a href="company.html">Company</a>
+    <a class="cta" href="index.html#assessment">Book an assessment</a>
+  </nav>
+</div></header>
+<main>
+
+<section class="s s-open">
+  <div class="w"><div class="g">
+    <div class="m8 rv">
+      <span class="eyebrow">Implementation &middot; The Dagg Factory</span>
+      <h1 class="wide">Nothing is built until the decision, the owner and the way back are explicit.</h1>
+    </div>
+    <div class="m4 rv" style="padding-top:14px">
+      <p class="tx">A factory is not a place that makes whatever it is asked to make. It makes
+        one class of thing, to a standard, and its discipline is at the door.</p>
+    </div>
+  </div></div>
+</section>
+
+<section class="s s-punct">
+  <div class="w"><div class="punct">
+    <span class="k">Two modes</span>
+    <span class="v">Automate what should stay. Rebuild what should change.</span>
+  </div></div>
+</section>
+
+<section class="s s-cards">
+  <div class="w"><div class="g">
+    <div class="m6"><div class="ruled"><h3>Automate</h3>
+      <p class="tx">Work that is right, carried by people between systems that do not speak.
+        Agents take the carrying; the systems remain. Nobody learns a new tool, because the
+        work continues where it already lives.</p></div></div>
+    <div class="m6"><div class="ruled ruled--ac"><h3>Rebuild</h3>
+      <p class="tx">Where the workflow layer is what is broken, an agent placed on top makes
+        the wrong thing faster. Then it is new software, and often one fewer system
+        afterwards.</p></div></div>
+  </div></div>
+</section>
+
+<section class="s s-instr">
+  <div class="w">
+    <div class="hd">
+      <span class="eyebrow">Governance</span>
+      <h2>An agent needs three things before it is allowed to act.</h2>
+    </div>
+    <div class="g">
+      <figure class="m7 scroll-x">
+        <svg class="dg ill" viewBox="0 0 700 340" role="img"
+     aria-label="An agent inside a boundary, with an escalation path to a person and a record written on every action.">
+  <defs>
+    <marker id="aa" viewBox="0 0 8 8" refX="7.2" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 1.2 L7.2 4 L0 6.8z" fill="#8A8578"/></marker>
+  </defs>
+  <rect class="panel" x="0" y="0" width="700" height="340" rx="16"/>
+
+  <g class="grp">
+    <rect x="40" y="66" width="380" height="212" rx="12"/>
+    <text class="grp-t" x="230" y="54" text-anchor="middle">BOUNDS &#183; WHAT IT MAY TOUCH</text>
+  </g>
+
+  <g class="edges" fill="none" marker-end="url(#aa)">
+    <path class="edge" d="M196 116 L252 134"/>
+    <path class="edge" d="M196 214 L252 196"/>
+  </g>
+  <g fill="none"><path class="edge esc" d="M368 150 Q446 150 446 96 L494 96"/></g>
+  <g fill="none"><path class="edge rec" d="M310 216 L310 288 L494 288"/></g>
+
+  <g class="pill mid">
+    <rect class="node" x="72" y="98" width="124" height="38" rx="10"/>
+    <rect class="node" x="72" y="196" width="124" height="38" rx="10"/>
+  </g>
+  <g class="pill wait"><rect class="node" x="252" y="146" width="116" height="48" rx="10"/></g>
+  <g class="pill out">
+    <rect class="node" x="494" y="76" width="150" height="40" rx="10"/>
+    <rect class="node" x="494" y="268" width="150" height="40" rx="10"/>
+  </g>
+
+  <g class="lbl">
+    <text class="lab" x="134" y="121" text-anchor="middle">A SYSTEM</text>
+    <text class="lab" x="134" y="219" text-anchor="middle">A SYSTEM</text>
+    <text class="lab on-dark" x="310" y="175" text-anchor="middle">AGENT</text>
+    <text class="lab strong" x="569" y="101" text-anchor="middle">A PERSON</text>
+    <text class="lab strong" x="569" y="293" text-anchor="middle">THE RECORD</text>
+  </g>
+  <g class="tag"><text class="lab acc" x="392" y="128">escalates</text>
+    <text class="lab sec" x="322" y="262">every action, including the ones that work</text></g>
+</svg>
+        <figcaption>Bounds are enforced, not requested. Escalation is decided in advance. The
+          record is written on every action, including the ones that succeed.</figcaption>
+      </figure>
+      <div class="m5 side">
+        <div class="rows">
+          <div class="row"><span class="row__n">01</span><span class="row__t"><b>Bounds</b>, expressed as what it may touch rather than as an instruction it is asked to respect.</span></div>
+          <div class="row"><span class="row__n">02</span><span class="row__t"><b>Escalation</b>, with the cases it must hand back decided in advance rather than discovered in production.</span></div>
+          <div class="row"><span class="row__n">03</span><span class="row__t"><b>A record</b> of what it did and on what basis, readable months later when the question is why.</span></div>
+        </div>
+        <p class="tx" style="margin-top:20px;font-size:16px">The third is usually treated as
+          compliance overhead. It is what makes the first two enforceable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s s-state">
+  <div class="w"><div class="g">
+    <p class="statement m7">The WorkGraph is not documentation kept alongside the work. It is
+      what the build reads from.</p>
+    <div class="m5" style="padding-top:10px">
+      <p class="tx">The agents that write the software query it directly, so the structure of
+        the workflow is available rather than restated. <a href="workgraph.html">The record
+        &rarr;</a></p>
+    </div>
+  </div></div>
+</section>
+
+<section class="s s-reg">
+  <div class="w">
+    <div class="hd"><span class="eyebrow">Production and ownership</span>
+      <h2>Work ships with monitoring, a named owner and a documented way back.</h2></div>
+    <div class="g">
+      <div class="m6"><div class="ruled"><h4>You operate it</h4>
+        <p class="tx">This requires someone who can read the monitoring, respond when an agent
+          escalates, and judge when behaviour has drifted. We set that up and hand it over,
+          including what to watch and what should worry you.</p></div></div>
+      <div class="m6"><div class="ruled ruled--ac"><h4>We operate it</h4>
+        <p class="tx">Where running agents is not a capability a company intends to build, the
+          operation can stay with us under a separate agreement. The same record orchestrates
+          what is live.</p></div></div>
+      <p class="tx full">The software and the model of your company are yours either way, and
+        that sits in the agreement rather than in a conversation.</p>
+    </div>
+  </div>
+</section>
+
+<section class="s s-close">
+  <div class="w"><div class="g">
+    <div class="m7 stack">
+      <span class="eyebrow">Aloi</span>
+      <h2>One workflow problem became a company.</h2>
+      <p class="lead">Aloi is Dagg&rsquo;s AI-native legal venture. It shows what a workflow
+        problem can become when it is rebuilt rather than assisted.</p>
+      <p style="margin-top:6px">
+        <a class="cta" href="https://aloi.law">aloi.law &rarr;</a>
+        <a class="cta" href="index.html#assessment" style="margin-left:10px">Book an assessment &rarr;</a></p>
+    </div>
+  </div></div>
+</section>
+</main>
+<footer class="foot"><div class="foot__in">
+  <img class="foot__mark" src="../../assets/dagg-logotype-dark.png" alt="Dagg">
+  <a href="strategy.html">Strategy</a>
+  <a href="implementation.html">Implementation</a>
+  <a href="workgraph.html">WorkGraph</a>
+  <a href="company.html">Company</a>
+  <a href="faq.html">FAQ</a>
+  <a href="careers.html">Careers</a>
+  <a href="mailto:hello@dagg.ai">hello@dagg.ai</a>
+  <span class="foot__end">&copy; 2026 Dagg</span>
+</div></footer>
+<script src="site.js"></script>
+</body>
+</html>
