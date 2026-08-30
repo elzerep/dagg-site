@@ -26,6 +26,12 @@ The emotional story is:
 
 > The gap between companies that operate at human speed and those that learn and execute at machine speed compounds. Becoming AI-native is not an isolated technology project; it is a continuous redesign of how the company works. Dagg makes that transition real while the business keeps running.
 
+The defining commercial edge is execution capability:
+
+> Dagg does not only hold a view of the AI-native future. We know how to move a company toward it: translate strategic direction into an operating model, make the company-specific context usable and owned, decide what should change, build the justified agents and software, and make the result work in production. Vision, mission and ambition establish the trajectory; inspectable execution makes Dagg credible as the partner that can get there.
+
+The site must therefore communicate the ambition and potential of a future category-defining company without pretending that Dagg already has the scale or proof footprint of Palantir, Anthropic, OpenAI or SpaceXAI. It sells a credible trajectory, not borrowed status. Every major promise must resolve into a method, decision, product artifact, control, permissioned case or operating consequence. Unsupported transformation language is forbidden.
+
 The tone is full force in the stakes and zero pressure in the voice. The site shows the accelerating asymmetry through changed work, shorter feedback loops and operating evidence. It never threatens the reader with irrelevance; the mechanism makes that risk the reader's own conclusion.
 
 ## Production artifact set
@@ -47,13 +53,14 @@ The masterplan governs a complete artifact set rather than one prompt:
 
 ## What “golden standard” means
 
-Golden standard is not an aesthetic compliment. The site becomes a publication candidate only when it is strong in all ten dimensions:
+Golden standard is not an aesthetic compliment. The site becomes a publication candidate only when it is strong in all eleven dimensions:
 
 | Dimension | Required outcome |
 |---|---|
 | Strategic clarity | A CEO understands Dagg’s role in under 20 seconds. |
 | Visual distinction | The site has a recognizable Dagg image and motion grammar, not a remix of a reference company. |
 | Product concreteness | WorkGraph, Factory and Operations are shown as core mechanisms inside the broader transformation, not as consultancy claims or decorative architecture. |
+| Execution credibility | The route from strategic direction to operating change, harness, build and production is inspectable; ambition never stands alone as a claim. |
 | Executive accessibility | The homepage does not require engineering knowledge. |
 | Technical credibility | A CTO can inspect bounds, ownership, escalation, records and reversibility. |
 | Narrative flow | Every section answers the question created by the previous section. |
@@ -110,6 +117,15 @@ The product story has six causal stages:
 
 This is not a linear consulting process that ends in a report, and it is not a one-off automation programme. It is a live transition of the operating model: workflow by workflow, system by system, with continuity across strategy, production and operation while the business continues to run.
 
+## The two compounding execution loops
+
+Dagg's execution advantage compounds at two distinct levels, and the website must make both legible without blurring client ownership boundaries:
+
+1. **Inside the client.** WorkGraph, decisions, evaluations, operating records and production evidence preserve company-specific context. The next workflow, system change or agent does not restart discovery from zero; it begins with more owned knowledge and a more mature operating harness.
+2. **Inside Dagg.** Dagg Factory, agent workflows, tools, evaluation systems and reusable non-confidential delivery patterns improve with each engagement. Engineers work with an expanding execution system rather than an empty toolchain, so delivery capability and velocity can compound over time.
+
+Client data, IP, decisions and operational alpha never become a cross-client learning pool. What Dagg may reuse is method, tooling, agent capability, evaluation practice and general patterns that do not expose confidential client context. Public copy may describe the compounding mechanism and accumulated capability, but it may not publish a `10–100x` productivity claim without auditable evidence and a defined comparison baseline.
+
 ## Market story and harness architecture
 
 The public hierarchy has three levels:
@@ -158,12 +174,14 @@ The difference is migration versus creation, not Dagg’s underlying competence.
 1. **Strategic foresight.** Dagg understands where AI capabilities are moving and converts uncertainty into decisions for now, the near horizon and the longer operating model. Future capability is treated as scenarios and design optionality, not unsupported prophecy.
 2. **Company and product building.** Dagg brings entrepreneurial experience of products, organizations, customers and execution, not only technology advice.
 3. **Harness engineering.** Dagg architects the data, context, tools, model routing, security, governance, evaluations and runtime around AI so the company’s edge is not reduced to whichever model is currently strongest.
-4. **Execution and operation.** Dagg turns the direction into agents, software and operating systems, then hands them over or runs them with the client. Strategy without implementation and implementation without strategic direction are both incomplete.
+4. **Execution and operation.** This is Dagg's primary commercial differentiator. Dagg turns the direction into agents, software and operating systems, then hands them over or runs them with the client. Strategy without implementation and implementation without strategic direction are both incomplete. The site must prove the chain from judgment to production rather than merely state that Dagg can execute.
 
 The website must make all four legible before it asks the reader to understand an internal product name.
 
 Binding communication rules:
 
+- Present vision, mission and ambition as the trajectory, then earn belief by showing the execution path. Dagg's point of difference is not that it predicts an AI-native future; it is that it knows how to make the transition operational.
+- No loose claims. A promise about transformation, speed, ownership, intelligence or control must connect to an inspectable method, artifact, boundary, record or permissioned outcome.
 - Lead with the operating transformation, then make WorkGraph unmistakably central as the technology that preserves and activates company context.
 - Introduce WorkGraph early enough to establish a proprietary edge, but only after the reader understands the business outcome it serves.
 - Describe it externally as a company-specific operating-context layer or part of the Dagg harness, not merely as an internal database.
@@ -439,14 +457,26 @@ Whole-page balance is a diagnostic, not a target to optimize section by section:
 
 | Role | Desktop | Mobile | Rule |
 |---|---:|---:|---|
-| H1 | 56–72 px | 40–48 px | 11–17 words, max 2.5 desktop lines. |
-| H2 | 40–56 px | 32–40 px | 5–11 words, max three desktop lines. |
+| H1 | 56–72 px | 40–48 px | 6–12 words, max 2.5 desktop lines. |
+| H2 | 40–56 px | 32–40 px | 4–9 words, max three desktop lines. |
 | H3 | 26–34 px | 24–30 px | Conclusion, not category. |
-| Lead | 21–24 px | 19–21 px | 26–42 words. |
-| Body | 17–19 px | 17–18 px | 30–60 words per paragraph. |
+| Lead | 21–24 px | 19–21 px | 18–32 words. |
+| Body | 17–19 px | 17–18 px | 20–45 words per paragraph. |
 | Meta/mono | 12–14 px | 12–13 px | Never below 12 px, including SVG. |
 
 Humanity is not serif + beige. It is judgment, language and consequence.
+
+## Public copy discipline
+
+The masterplan is exhaustive so the public site can be selective. None of its internal explanation is entitled to appear in the interface. The visible language must project confidence through compression rather than self-description.
+
+- Proof density must exceed claim density. A material claim is followed by an artifact, mechanism, boundary or sourced outcome, not another claim.
+- Each section makes one main point. If the headline and artifact already carry it, delete the body copy.
+- Above the fold, use one conclusion and at most one short lead before the first inspectable proof.
+- Avoid self-rating language such as `world-class`, `revolutionary`, `best`, `unmatched`, `10x` or `100x` unless a named, sourced and comparable result makes the term factual.
+- Do not publish the internal theory in full. Compress compounding execution into one memorable line and let recurring context, Factory states and operating evidence demonstrate it.
+- Every visible sentence must do one job: conclusion, mechanism, evidence, boundary or action. If it does none, remove it.
+- Claude drafts for completeness; Codex edits for authority, rhythm and deletion before copy is accepted.
 
 ## Grid and width
 
@@ -645,7 +675,7 @@ Aloi does not receive a top-level navigation item and is not promoted as a named
 
 ## Homepage sequence
 
-Visible copy target: 850–1,050 words. Total including interactive states: maximum 1,450 words.
+Visible copy target: 600–800 words. Total including all interactive states: maximum 1,100 words. These are ceilings, not quotas; a shorter page wins when it preserves the complete argument and proof.
 
 The homepage behaves like an executive memo. The first screen states the conclusion; the following acts make the whole company understandable without requiring a navigation click. Each act gives only the minimum mechanism needed to earn the next question, then offers an in-context route to deeper material: Transformation after the strategic decision, WorkGraph after company context, Build after Factory, and Impact after the complete mechanism. Supporting pages must add depth, evidence or interaction; they must not repeat the homepage in longer prose.
 
@@ -1124,7 +1154,7 @@ Everything else is an execution problem for the team to solve.
 | WorkGraph becomes a graph graphic | Show one real path, state, decision and consequence. |
 | WorkGraph becomes the only company story | Lead with AI-native operating transformation; make WorkGraph the central technology underneath strategy, Factory and Operations. |
 | Motion becomes decoration | Require a before/after semantic state and an equally clear reduced-motion frame. |
-| Team size becomes the story | No roster or headcount; compact leadership accountability only where useful. |
+| Team size becomes the story | Never publish or imply headcount. Let Dagg's AI-native capability density appear through artifacts, parallel execution and concrete output; do not turn a `10–50x` intuition into an unsupported public claim. The position remains valid as Dagg hires. |
 | Agents optimize proxies | Acceptance scans all rendered HTML/SVG and requires fresh visual evidence. |
 
 ---
