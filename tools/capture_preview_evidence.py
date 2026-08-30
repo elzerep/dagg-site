@@ -1,18 +1,24 @@
 #!/usr/bin/env python3
-"""Capture P0R1 preview evidence from one immutable-snapshot server process.
+"""Capture P0R2 preview evidence from one immutable-snapshot server process.
 
 Runs the acceptance suite, then starts ``tools/serve_preview.py`` once and
 drives the installed Google Chrome over the Chrome DevTools Protocol.
 Screenshots, the ``/__revision`` response, a ``<head>`` DOM snapshot, a
-response-header record and ``evidence/P0R1/result.json`` all come from that
-single process, so every artefact provably describes one snapshot ID.
+response-header record and ``evidence/P0R2/result.json`` all come from that
+single process, so every artefact provably describes one snapshot ID -- and,
+under P0R2, one snapshot that two complete acquisition passes agreed on
+before the port opened. The consistency pass count and the number of pair
+attempts are recorded next to the snapshot ID.
 
 The capture is refused outright if any response header, any injected DOM
 meta tag or any screenshot record disagrees with the server's snapshot ID:
 partial evidence is worse than none, because it looks like proof.
 
+The race and refusal proofs are not browser-observable and come from the
+acceptance suite recorded in ``tests.json``, not from this capture.
+
 Standard library only: the CDP transport below is a minimal RFC 6455
-client. Nothing is written outside ``evidence/P0R1/`` and a temporary Chrome
+client. Nothing is written outside ``evidence/P0R2/`` and a temporary Chrome
 profile that is removed on exit.
 
     python3 tools/capture_preview_evidence.py
@@ -38,7 +44,7 @@ import urllib.request
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-EVIDENCE_DIR = REPO_ROOT / "evidence" / "P0R1"
+EVIDENCE_DIR = REPO_ROOT / "evidence" / "P0R2"
 PAGE_PATH = "/preview/directions/a-plus.html"
 VIEWPORTS = (1440, 390)
 
@@ -49,7 +55,7 @@ CHROME_CANDIDATES = (
     "/usr/bin/chromium",
 )
 
-BASE_COMMIT = "972700bf95641bb6615a72d859fdd037329cbc86"
+BASE_COMMIT = "9e0a670a9689a16ce4641c86b5e92a320da0e9f6"
 
 # The three authority documents must be byte-identical from the first
 # recording to the pre-commit recomputation. The three implementation files
@@ -58,7 +64,7 @@ BASE_COMMIT = "972700bf95641bb6615a72d859fdd037329cbc86"
 CONTROL_DOCUMENTS = (
     "design/golden-standard/DAGG-GOLDEN-STANDARD-MASTERPLAN.md",
     "design/golden-standard/packages/P0R1-IMMUTABLE-PREVIEW-SNAPSHOT.md",
-    "design/golden-standard/packages/P0-RECONCILE-AND-PREVIEW.md",
+    "design/golden-standard/packages/P0R2-CONSISTENT-SNAPSHOT-ACQUISITION.md",
 )
 IMPLEMENTATION_FILES = (
     "tools/serve_preview.py",
@@ -516,7 +522,8 @@ def git(*args: str) -> str:
 def default_port_is_free(port: int = 8912) -> tuple[bool, str | None]:
     """Report whether the documented preview port is free, and if not, name
     what holds it. A forgotten plain static server on this port is the exact
-    failure P0R1 exists to prevent, so it must be identified, not shrugged at."""
+    failure the immutable preview exists to prevent, so it must be identified,
+    not shrugged at."""
     probe = socket.socket()
     try:
         probe.bind(("127.0.0.1", port))
@@ -581,17 +588,24 @@ def build_deviations(dom_records: dict, default_port_free: bool,
     if placeholders:
         out.append(
             "%d placeholder links (href=\"#\") remain in this design-direction "
-            "preview. Out of P0R1 scope; recorded for the package that owns "
+            "preview. Out of P0R2 scope; recorded for the package that owns "
             "navigation." % placeholders)
     out.append(
-        "P0R1 changed no public design, copy, IA, interaction or asset byte. "
-        "These screenshots therefore look identical to the P0 capture; they "
-        "exist to prove that the immutable snapshot serves the same page, not "
-        "to show a visual change.")
+        "P0R2 changed no public design, copy, IA, interaction or asset byte. "
+        "These screenshots therefore look identical to the P0 and P0R1 "
+        "captures; they exist to prove that the accepted snapshot serves the "
+        "same page, not to show a visual change.")
+    out.append(
+        "This capture proves the steady state only. That a one-time race "
+        "retries and that continuous change refuses to bind is proved by the "
+        "acceptance suite, not by a browser: see the "
+        "midAcquisitionByteChangeRejected, midAcquisitionStatusChangeRejected, "
+        "continuousChangeRefused and noSocketOnRefusal checks and the recorded "
+        "refusal stderr in evidence/P0R2/tests.json.")
     out.append(
         "Screenshots at 1440 and 390 px only. The full masterplan viewport "
         "ladder and the contrast, reduced-motion, no-JavaScript and computed "
-        "text-size measurements are not covered by P0R1 and are recorded as "
+        "text-size measurements are not covered by P0R2 and are recorded as "
         "unmeasured rather than as passes.")
     return out
 
@@ -599,7 +613,7 @@ def build_deviations(dom_records: dict, default_port_free: bool,
 def run_acceptance_suite() -> dict:
     """Run the real suite and record what it proved, pass or fail."""
     target = EVIDENCE_DIR / "tests.json"
-    environment = dict(os.environ, DAGG_P0R1_TEST_JSON=str(target),
+    environment = dict(os.environ, DAGG_P0R2_TEST_JSON=str(target),
                        PYTHONDONTWRITEBYTECODE="1")
     started = time.monotonic()
     completed = subprocess.run(
@@ -649,7 +663,7 @@ def main(argv=None) -> int:
     tests = {} if args.skip_tests else run_acceptance_suite()
 
     server, base_url, startup_seconds = start_server(args.port, args.host)
-    profile_dir = Path(tempfile.mkdtemp(prefix="dagg-p0r1-chrome-"))
+    profile_dir = Path(tempfile.mkdtemp(prefix="dagg-p0r2-chrome-"))
     chrome = None
     cdp = None
     screenshots = []
@@ -722,7 +736,7 @@ def main(argv=None) -> int:
             name = "a-plus-%dpx.png" % width
             (EVIDENCE_DIR / name).write_bytes(png)
             screenshots.append({
-                "path": "evidence/P0R1/" + name,
+                "path": "evidence/P0R2/" + name,
                 "viewport": width,
                 "pixelDimensions": png_size(png),
                 "pageUrl": facts["url"],
@@ -767,7 +781,7 @@ def main(argv=None) -> int:
                                       port_holder_description)
         if not tests.get("passed", True):
             deviations.insert(0, "The acceptance suite did not pass; see "
-                                 "evidence/P0R1/tests-output.txt.")
+                                 "evidence/P0R2/tests-output.txt.")
 
         end_hashes = control_hashes()
         control_comparison = compare_control_hashes(start_hashes, end_hashes)
@@ -782,11 +796,15 @@ def main(argv=None) -> int:
         (EVIDENCE_DIR / "server-stderr.txt").write_text(server_stderr)
 
         result = {
-            "package": "P0R1",
+            "package": "P0R2",
             "commit": head_commit,
             "baseCommit": base_commit,
             "snapshotId": snapshot_id,
             "assetRevision": snapshot_id,
+            "snapshotConsistencyPasses": revision["snapshotConsistencyPasses"],
+            "snapshotAcquisitionAttempts": revision["snapshotAcquisitionAttempts"],
+            "snapshotAcquisitionStable": revision["snapshotAcquisitionStable"],
+            "snapshotRejectedPairs": revision.get("snapshotRejectedPairs", []),
             "snapshotFileCount": revision["snapshotFileCount"],
             "snapshotByteCount": revision["snapshotByteCount"],
             "snapshotSkippedPaths": revision.get("snapshotSkippedPaths", []),
@@ -801,7 +819,7 @@ def main(argv=None) -> int:
             "chrome": chrome_version.get("product"),
             "chromePath": chrome_path,
             "viewports": sorted(VIEWPORTS),
-            "viewportScope": "P0R1 captures 1440 and 390 only; the full "
+            "viewportScope": "P0R2 captures 1440 and 390 only; the full "
                              "masterplan viewport ladder belongs to later packages.",
             "statesTested": ["default (no interaction, no reduced-motion override)"],
             "scrollWidthMatches": all(
@@ -819,9 +837,9 @@ def main(argv=None) -> int:
                                       for item in record["failedRequests"]}),
             "httpErrorResponses": sorted({item for record in dom_records.values()
                                           for item in record["httpErrorResponses"]}),
-            "reducedMotion": "not measured; out of P0R1 scope",
-            "noJavaScript": "not measured; out of P0R1 scope",
-            "unmeasuredInP0R1": ["minimumComputedTextPx", "textCoverage",
+            "reducedMotion": "not measured; out of P0R2 scope",
+            "noJavaScript": "not measured; out of P0R2 scope",
+            "unmeasuredInP0R2": ["minimumComputedTextPx", "textCoverage",
                                  "contrastFailures", "reducedMotion",
                                  "noJavaScript"],
             "screenshots": screenshots,
@@ -844,14 +862,16 @@ def main(argv=None) -> int:
             "controlFileComparison": control_comparison,
             "serverExceptions": server_stderr.count("Traceback"),
             "evidenceFiles": sorted(
-                "evidence/P0R1/" + item.name for item in EVIDENCE_DIR.iterdir()
+                "evidence/P0R2/" + item.name for item in EVIDENCE_DIR.iterdir()
                 if item.name != "result.json"),
             "tests": tests,
         }
         (EVIDENCE_DIR / "result.json").write_text(
             json.dumps(result, indent=2, sort_keys=True) + "\n")
         print(json.dumps({k: result[k] for k in (
-            "commit", "snapshotId", "dirtyAtCapture", "snapshotFileCount",
+            "commit", "snapshotId", "snapshotConsistencyPasses",
+            "snapshotAcquisitionAttempts", "snapshotAcquisitionStable",
+            "dirtyAtCapture", "snapshotFileCount",
             "revisionEndpointMatchesGit", "domSnapshotMatchesEndpoint",
             "allScreenshotsShareOneSnapshot", "dirtyStateMatchesGit",
             "noStoreCoverage", "publicSourceChangedVersusBase",

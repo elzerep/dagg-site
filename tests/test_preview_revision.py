@@ -9,12 +9,22 @@ files while a server runs cannot alter a single served byte. Restarting
 after those changes is proved to be the only way to see them, and to produce
 a different snapshot ID.
 
+P0R2 adds the acquisition half of the same guarantee: the workspace must be
+read twice with identical results before a socket exists. A repository that
+changes between the two passes is rejected, a repository that stops changing
+is accepted on a later pair, and a repository that never stops is refused
+with no listening port at all. Those races are driven through the
+``acquire`` seam of ``acquire_consistent``, never through sleeps, so they
+fail or pass for one reason only.
+
 Coverage: HTML, CSS, JavaScript, raster image (PNG), JSON, directory
 indexes, traversal refusal, percent-encoded spaces, query strings,
-clean/dirty reporting, post-startup mutation, restart behaviour, evidence
-exclusion, startup time, owned-file scope and server exceptions. The Dagg
-worktree is never mutated: every mutation test runs in a throwaway Git
-repository under a temporary directory. Standard library only.
+clean/dirty reporting, two-pass acquisition agreement, mid-acquisition byte
+change, mid-acquisition status change, continuous-change refusal,
+post-startup mutation, restart behaviour, evidence exclusion, startup time,
+owned-file scope and server exceptions. The Dagg worktree is never mutated:
+every mutation test runs in a throwaway Git repository under a temporary
+directory. Standard library only.
 
     python3 -B -m unittest discover -s tests -v
 """
@@ -45,7 +55,7 @@ sys.path.insert(0, str(TOOLS))
 
 import serve_preview  # noqa: E402  (path set above)
 
-BASE_COMMIT = "972700bf95641bb6615a72d859fdd037329cbc86"
+BASE_COMMIT = "9e0a670a9689a16ce4641c86b5e92a320da0e9f6"
 
 HTML_PATH = "/preview/directions/a-plus.html"
 CSS_PATH = "/preview/directions/tokens.css"
@@ -58,24 +68,25 @@ REQUIRED_NO_STORE = {
     "expires": "0",
 }
 
-# Everything P0R1 is allowed to create or change. Anything else in the diff
-# or in the working tree is a scope failure, not a detail.
+# Everything P0R2 is allowed to create or change, taken verbatim from the
+# package. Anything else in the diff or in the working tree is a scope
+# failure, not a detail.
 OWNED_PATHS = {
     "README.md",
     "design/golden-standard/DAGG-GOLDEN-STANDARD-MASTERPLAN.md",
-    "design/golden-standard/packages/P0-RECONCILE-AND-PREVIEW.md",
     "design/golden-standard/packages/P0R1-IMMUTABLE-PREVIEW-SNAPSHOT.md",
+    "design/golden-standard/packages/P0R2-CONSISTENT-SNAPSHOT-ACQUISITION.md",
     "tools/serve_preview.py",
     "tools/capture_preview_evidence.py",
     "tests/test_preview_revision.py",
-    "evidence/P0/REJECTED-BY-CODEX.md",
+    "evidence/P0R1/REJECTED-BY-CODEX.md",
 }
-OWNED_PREFIXES = ("evidence/P0R1/",)
+OWNED_PREFIXES = ("evidence/P0R2/",)
 
 PUBLIC_PREFIXES = ("preview/", "assets/", "marketing/", "v1/")
 PUBLIC_FILES = {"index.html", "robots.txt"}
 
-# Filled in as tests run, written out when DAGG_P0R1_TEST_JSON is set.
+# Filled in as tests run, written out when DAGG_P0R2_TEST_JSON is set.
 RESULTS: dict = {"checks": {}, "coverage": [], "notes": []}
 
 
@@ -468,10 +479,46 @@ class SnapshotContractTest(unittest.TestCase):
     # -- 14. startup time -------------------------------------------------
 
     def test_14_startup_is_under_two_seconds(self):
+        """Measured on the running CLI, so the second acquisition pass is
+        inside the number."""
         self.assertLess(self.server.startup_seconds, 2.0,
                         "startup took %.3fs" % self.server.startup_seconds)
         RESULTS["startupSeconds"] = self.server.startup_seconds
         RESULTS["checks"]["startupUnderTwoSeconds"] = True
+
+    # -- 16. the accepted snapshot is declared as two agreeing passes ------
+
+    def test_16_accepted_snapshot_declares_its_consistency(self):
+        """P0R2 point 7 on the live repository: the endpoint, every response
+        header and the HTML meta all carry the one accepted snapshot ID, and
+        the endpoint says how that snapshot was accepted."""
+        self.assertEqual(self.revision["snapshotConsistencyPasses"], 2)
+        self.assertEqual(self.revision["snapshotAcquisitionStable"], True)
+        self.assertIsInstance(self.revision["snapshotAcquisitionAttempts"], int)
+        self.assertGreaterEqual(self.revision["snapshotAcquisitionAttempts"], 1)
+        self.assertLessEqual(self.revision["snapshotAcquisitionAttempts"],
+                             serve_preview.MAX_ACQUISITION_ATTEMPTS)
+
+        for label, path in (("HTML", HTML_PATH), ("CSS", CSS_PATH),
+                            ("JavaScript", JS_PATH), ("raster-image", IMAGE_PATH),
+                            ("JSON", "/__revision"), ("directory", "/assets/"),
+                            ("missing", "/missing.html")):
+            _, headers, _ = self.server.get(path)
+            self.assertEqual({k.lower(): v for k, v in headers.items()}
+                             ["x-dagg-snapshot"], self.revision["snapshotId"],
+                             "%s left the accepted snapshot" % label)
+        _, _, html = self.server.get(HTML_PATH)
+        self.assertIn('content="%s"' % self.revision["snapshotId"],
+                      html.decode("utf-8"))
+
+        RESULTS["snapshotConsistencyPasses"] = \
+            self.revision["snapshotConsistencyPasses"]
+        RESULTS["snapshotAcquisitionAttempts"] = \
+            self.revision["snapshotAcquisitionAttempts"]
+        RESULTS["snapshotAcquisitionStable"] = \
+            self.revision["snapshotAcquisitionStable"]
+        RESULTS["checks"]["acceptedSnapshotDeclaresTwoPasses"] = True
+        RESULTS["checks"]["oneAcceptedSnapshotAcrossEverySurface"] = True
 
 
 # --------------------------------------------------------------------------
@@ -483,7 +530,7 @@ class ImmutabilityTest(unittest.TestCase):
     """Acceptance points 6-10. Never touches the Dagg worktree."""
 
     def setUp(self):
-        self.tmp = Path(tempfile.mkdtemp(prefix="dagg-p0r1-"))
+        self.tmp = Path(tempfile.mkdtemp(prefix="dagg-p0r2-"))
         self.addCleanup(shutil.rmtree, self.tmp, ignore_errors=True)
 
     # -- 6, 7. mutation during one server lifetime -----------------------
@@ -620,6 +667,223 @@ class ImmutabilityTest(unittest.TestCase):
 
 
 # --------------------------------------------------------------------------
+# Consistent acquisition, all in throwaway repositories
+# --------------------------------------------------------------------------
+
+
+# Runs the real CLI with one seam replaced, so the refusal path is proved on
+# a real process rather than on an in-process call. The seam changes the
+# throwaway repository after every complete pass, which makes the outcome a
+# property of the code and not of how fast the machine happens to be.
+CONTINUOUS_CHANGE_DRIVER = (
+    "import sys\n"
+    "sys.dont_write_bytecode = True\n"
+    "sys.path.insert(0, %r)\n"
+    "from pathlib import Path\n"
+    "import serve_preview\n"
+    "_complete_pass = serve_preview.acquire_once\n"
+    "_writes = [0]\n"
+    "def always_changing(repo_root):\n"
+    "    result = _complete_pass(repo_root)\n"
+    "    _writes[0] += 1\n"
+    "    (Path(repo_root) / 'style.css').write_text(\n"
+    "        'body{color:#111}/*' + str(_writes[0]) + '*/\\n')\n"
+    "    return result\n"
+    "serve_preview.acquire_once = always_changing\n"
+    "raise SystemExit(serve_preview.main(sys.argv[1:]))\n"
+) % str(TOOLS)
+
+
+class AcquisitionConsistencyTest(unittest.TestCase):
+    """P0R2 points 1-5. The workspace must be read twice with identical
+    results before anything can be served, and the race is driven through
+    the ``acquire`` seam so no test depends on elapsed time."""
+
+    # These tests call the acquisition functions directly instead of going
+    # through the CLI, so they must resolve the throwaway root themselves.
+    # ``find_repo_root`` does that for every real start, which is why the
+    # macOS ``/var`` symlink never reaches production.
+    def setUp(self):
+        self.tmp = Path(tempfile.mkdtemp(prefix="dagg-p0r2-"))
+        self.addCleanup(shutil.rmtree, self.tmp, ignore_errors=True)
+
+    # -- 17. a stable repository is accepted on the first pair ------------
+
+    def test_17_stable_repository_is_accepted_on_the_first_pair(self):
+        root = make_throwaway_repo(self.tmp / "probe")
+        server = ServerProcess(root)
+        try:
+            revision = server.revision()
+        finally:
+            stderr = server.stop()
+        self.assertEqual(revision["snapshotConsistencyPasses"], 2)
+        self.assertEqual(revision["snapshotAcquisitionAttempts"], 1)
+        self.assertIs(revision["snapshotAcquisitionStable"], True)
+        self.assertEqual(revision["snapshotRejectedPairs"], [])
+        self.assertIn("stable after 1 attempt(s)", stderr)
+        self.assertNotIn("Traceback", stderr)
+        RESULTS["checks"]["stableRepositoryAcceptedOnFirstPair"] = True
+
+    # -- 18. bytes that change between the passes are rejected ------------
+
+    def test_18_bytes_changing_between_passes_are_rejected_then_settle(self):
+        """One write lands between pass A and pass B. That pair must die,
+        and the pair after it must carry only the final bytes."""
+        root = make_throwaway_repo(self.tmp / "probe").resolve()
+        final_css = b"body{color:#0f0}\n"
+        passes: list = []
+
+        def write_between_the_passes(repo_root: Path):
+            completed = serve_preview.acquire_once(repo_root)
+            passes.append(completed)
+            if len(passes) == 1:
+                (repo_root / "style.css").write_bytes(final_css)
+            return completed
+
+        accepted, attempts, per_attempt = serve_preview.acquire_consistent(
+            root, acquire=write_between_the_passes)
+
+        self.assertEqual(attempts, 2, "the changed pair was not retried")
+        self.assertEqual(len(passes), 4, "an attempt is not two complete passes")
+        # The replacement CSS is the same length as the original, so the
+        # byte count cannot catch this edit. The digest and the direct byte
+        # comparison have to, and the status has to move with them.
+        self.assertEqual(len(final_css), len(passes[0].files["style.css"]))
+        self.assertEqual(per_attempt[0],
+                         ["status", "dirtyEntryCount", "snapshotId",
+                          "frozenBytes"])
+        self.assertEqual(per_attempt[1], [], "the accepted pair disagreed")
+
+        # Nothing from the discarded pair survives into the accepted value.
+        self.assertEqual(accepted.files["style.css"], final_css)
+        self.assertEqual(accepted.snapshot_id, passes[3].snapshot_id)
+        self.assertNotEqual(accepted.snapshot_id, passes[0].snapshot_id)
+        self.assertTrue(accepted.dirty, "the accepted pass hid the edit")
+        self.assertEqual(accepted.status_raw, passes[3].status_raw)
+        RESULTS["checks"]["midAcquisitionByteChangeRejected"] = True
+        RESULTS["checks"]["retryAcceptsOnlyFinalBytes"] = True
+
+    # -- 19. status that changes between the passes is rejected -----------
+
+    def test_19_status_changing_between_passes_is_rejected(self):
+        """Staging an already-modified file leaves every served byte and the
+        snapshot ID untouched and moves only the porcelain columns. The pair
+        must still die, or status and bytes could come from different reads."""
+        root = make_throwaway_repo(self.tmp / "probe", dirty=True).resolve()
+        passes: list = []
+
+        def stage_between_the_passes(repo_root: Path):
+            completed = serve_preview.acquire_once(repo_root)
+            passes.append(completed)
+            if len(passes) == 1:
+                git("add", "style.css", cwd=repo_root)
+            return completed
+
+        accepted, attempts, per_attempt = serve_preview.acquire_consistent(
+            root, acquire=stage_between_the_passes)
+
+        self.assertEqual(per_attempt[0], ["status"],
+                         "the rejection was not attributed to raw status alone")
+        self.assertEqual(passes[0].snapshot_id, passes[1].snapshot_id,
+                         "this test only proves its point if the bytes match")
+        self.assertEqual(dict(passes[0].files), dict(passes[1].files))
+        self.assertEqual(attempts, 2)
+        self.assertEqual(accepted.status_raw, passes[3].status_raw)
+        self.assertTrue(accepted.status_raw.startswith(b"M "),
+                        "expected the staged status, got %r" % accepted.status_raw)
+        RESULTS["checks"]["midAcquisitionStatusChangeRejected"] = True
+
+    # -- 20. continuous change is refused, with no socket at all ----------
+
+    def test_20_continuous_change_refuses_before_any_socket_exists(self):
+        root = make_throwaway_repo(self.tmp / "probe").resolve()
+        writes = [0]
+
+        def always_changing(repo_root: Path):
+            completed = serve_preview.acquire_once(repo_root)
+            writes[0] += 1
+            (repo_root / "style.css").write_bytes(
+                b"body{color:#111}/*%d*/\n" % writes[0])
+            return completed
+
+        # A tripwire in place of the server class: if acquisition ever gives
+        # up and binds, the test fails on construction rather than on a
+        # missing assertion later.
+        created: list = []
+
+        class Tripwire(serve_preview.PreviewServer):
+            def __init__(self, *args, **kwargs):
+                created.append(args)
+                raise AssertionError("a socket was created for a changing "
+                                     "workspace")
+
+        original = serve_preview.PreviewServer
+        serve_preview.PreviewServer = Tripwire
+        try:
+            with self.assertRaises(serve_preview.SnapshotError) as raised:
+                serve_preview.build_server(root, "127.0.0.1", 0, True,
+                                           acquire=always_changing)
+        finally:
+            serve_preview.PreviewServer = original
+
+        self.assertEqual(created, [], "a socket was created before refusing")
+        self.assertEqual(writes[0], serve_preview.MAX_ACQUISITION_ATTEMPTS * 2,
+                         "the bound on pair attempts is not three")
+        self.assertIn("changed while it was being read", str(raised.exception))
+
+        # The same refusal through the real CLI, one process, one seam.
+        driver = self.tmp / "continuous_change_driver.py"
+        driver.write_text(CONTINUOUS_CHANGE_DRIVER)
+        completed = subprocess.run(
+            [sys.executable, "-B", str(driver), "--port", "0", "--quiet",
+             "--repo-root", str(root)],
+            cwd=str(REPO_ROOT), capture_output=True, text=True, timeout=120)
+        self.assertEqual(completed.returncode, 2,
+                         "the CLI did not exit non-zero: %s" % completed.stderr)
+        self.assertNotIn("LISTENING", completed.stdout,
+                         "the CLI announced a port for a changing workspace")
+        self.assertEqual(completed.stdout.strip(), "")
+        self.assertIn("snapshot refused", completed.stderr)
+        self.assertIn("changed while it was being read", completed.stderr)
+        RESULTS["checks"]["continuousChangeRefused"] = True
+        RESULTS["checks"]["noSocketOnRefusal"] = True
+        RESULTS["checks"]["noListeningLineOnRefusal"] = True
+        RESULTS["acquisitionRefusalStderr"] = completed.stderr.strip()
+
+    # -- 21. the accepted pass is independently reproducible --------------
+
+    def test_21_accepted_pass_is_independently_recomputed(self):
+        root = make_throwaway_repo(self.tmp / "probe", dirty=True).resolve()
+        accepted, attempts, _ = serve_preview.acquire_consistent(root)
+        digest, count, total = independent_snapshot_id(root)
+        self.assertEqual(digest, accepted.snapshot_id)
+        self.assertEqual(count, accepted.file_count)
+        self.assertEqual(total, accepted.byte_count)
+        for relative, content in accepted.files.items():
+            self.assertEqual(content, (root / relative).read_bytes(),
+                             "accepted bytes differ from disk for %s" % relative)
+        self.assertEqual(attempts, 1)
+        self.assertEqual(accepted.status_raw,
+                         git_raw("status", "--porcelain", cwd=root).encode("utf-8"))
+        RESULTS["checks"]["acceptedPassIndependentlyRecomputed"] = True
+
+    # -- 22. two passes still start in well under two seconds -------------
+
+    def test_22_two_pass_acquisition_of_the_real_repository_is_fast(self):
+        """Point 8, measured on the real 20-25 MB repository rather than on
+        a throwaway one."""
+        started = time.monotonic()
+        accepted, attempts, _ = serve_preview.acquire_consistent(REPO_ROOT)
+        seconds = round(time.monotonic() - started, 3)
+        self.assertLess(seconds, 2.0,
+                        "two-pass acquisition took %.3fs" % seconds)
+        self.assertGreater(accepted.byte_count, 0)
+        RESULTS["twoPassAcquisitionSeconds"] = seconds
+        RESULTS["twoPassAcquisitionAttempts"] = attempts
+        RESULTS["checks"]["twoPassAcquisitionUnderTwoSeconds"] = True
+
+
+# --------------------------------------------------------------------------
 # Scope
 # --------------------------------------------------------------------------
 
@@ -657,7 +921,7 @@ class ScopeTest(unittest.TestCase):
 
 
 def _write_results():
-    target = os.environ.get("DAGG_P0R1_TEST_JSON")
+    target = os.environ.get("DAGG_P0R2_TEST_JSON")
     if not target:
         return
     RESULTS["coverage"] = sorted(RESULTS["coverage"])

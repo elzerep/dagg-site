@@ -9,6 +9,8 @@ Source of truth: private `founder-os` repo (`sites/dagg/`).
 
 Run the immutable preview command below. At startup it freezes every served HTML, CSS, JavaScript, font and image into one in-memory snapshot, computes a deterministic snapshot ID and exposes the commit, dirty state and snapshot ID at `/__revision`, in response headers and in invisible HTML metadata. A running preview never reads changed source bytes from disk. Restart it after every source change and do not review the site through another static server.
 
+Before opening the port, the server reads the complete snapshot twice and starts only when both passes agree; if files are changing continuously, startup fails instead of producing mixed evidence.
+
 ```
 python3 tools/serve_preview.py --port 8912
 ```

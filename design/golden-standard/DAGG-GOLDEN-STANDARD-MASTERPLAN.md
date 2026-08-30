@@ -757,7 +757,7 @@ Gate: “looks good” cannot close a work package.
 
 ### 4. Set revision-safe previewing
 
-Freeze every served HTML, CSS, JS, font and image byte into one immutable in-memory snapshot when the preview server starts. Compute a deterministic SHA-256 snapshot ID across the sorted path-and-byte set; expose commit, dirty state and snapshot ID in `/__revision`, response headers and invisible HTML metadata. A running server never reads changed source bytes from disk. Source changes become reviewable only after restart, when a new snapshot ID is produced.  
+Freeze every served HTML, CSS, JS, font and image byte into one immutable in-memory snapshot when the preview server starts. Snapshot acquisition itself must be consistency-safe: two consecutive complete passes must produce identical commit/status, candidate paths, byte counts and snapshot ID before the socket binds; a mismatch triggers a bounded retry and then a clear refusal. Compute a deterministic SHA-256 snapshot ID across the sorted path-and-byte set; expose commit, dirty state and snapshot ID in `/__revision`, response headers and invisible HTML metadata. A running server never reads changed source bytes from disk. Source changes become reviewable only after restart, when a new snapshot ID is produced.  
 Output: exact-revision preview.  
 Gate: every response in a review session carries one snapshot ID, HTML and assets cannot come from mixed workspace states, and a dirty snapshot remains exactly identifiable even when it does not equal a Git commit.
 

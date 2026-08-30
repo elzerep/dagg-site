@@ -1,6 +1,6 @@
 # P0R1 · Make the preview an immutable workspace snapshot
 
-Status: ready  
+Status: rejected by Codex · superseded by `P0R2-CONSISTENT-SNAPSHOT-ACQUISITION.md`  
 Authority: `design/golden-standard/DAGG-GOLDEN-STANDARD-MASTERPLAN.md`  
 Base commit: `972700bf95641bb6615a72d859fdd037329cbc86`  
 Gate type: operating acceptance by Codex

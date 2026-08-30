@@ -2,12 +2,16 @@
 """Immutable-snapshot local preview server for the Dagg site.
 
 One running process serves exactly one workspace moment. Before the socket
-is bound and before ``LISTENING`` is announced, every served HTML, CSS,
-JavaScript, font, JSON and image byte is frozen into an in-memory
-path-and-byte map and reduced to a deterministic SHA-256 ``snapshotId``. A
-running server never reads a served source path again, so HTML from one
-workspace moment can never be combined with CSS, JavaScript or images from
-another -- not even while the working tree is dirty.
+is bound and before ``LISTENING`` is announced, the workspace is read twice
+by two complete acquisition passes. A pass takes the Git commit, the raw
+``git status --porcelain`` bytes and every served HTML, CSS, JavaScript,
+font, JSON and image byte, and reduces them to a deterministic SHA-256
+``snapshotId``. The server starts only when two consecutive passes agree on
+every declared field and on every frozen byte; a workspace that moves during
+acquisition is retried a bounded number of times and then refused. A running
+server never reads a served source path again, so HTML from one workspace
+moment can never be combined with CSS, JavaScript or images from another --
+not even while the working tree is dirty.
 
 Source changes become reviewable only after a restart, which produces a new
 snapshot ID. The commit, dirty state and snapshot ID are exposed at
@@ -24,6 +28,7 @@ Standard library only. Development use only; this serves no production code.
 from __future__ import annotations
 
 import argparse
+import dataclasses
 import datetime as _dt
 import hashlib
 import json
@@ -37,10 +42,18 @@ import urllib.parse
 from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
+from types import MappingProxyType
 
 DEFAULT_PORT = 8912
 DEFAULT_HOST = "127.0.0.1"
 REVISION_PATH = "/__revision"
+
+# Two complete passes must agree before the socket is bound. Three pair
+# attempts is enough to ride out a single editor save or a finished Git
+# command; a workspace still moving after that is refused rather than
+# guessed at.
+CONSISTENCY_PASSES = 2
+MAX_ACQUISITION_ATTEMPTS = 3
 
 NO_STORE_HEADERS = (
     ("Cache-Control", "no-store, max-age=0"),
@@ -101,21 +114,32 @@ def _git(repo_root: Path, *args: str) -> str:
     return result.stdout.strip()
 
 
+def _git_bytes(repo_root: Path, *args: str) -> bytes:
+    """The exact output bytes of a read-only git command. ``status
+    --porcelain`` encodes state in its first two columns, so its output is
+    compared raw and never stripped."""
+    result = subprocess.run(
+        ["git", "--no-optional-locks", "-C", str(repo_root), *args],
+        check=True,
+        capture_output=True,
+    )
+    return result.stdout
+
+
 def find_repo_root(start: Path) -> Path:
     return Path(_git(start, "rev-parse", "--show-toplevel")).resolve()
 
 
-def read_revision(repo_root: Path) -> dict:
-    """Read commit and dirty state. Taken once, at snapshot start."""
-    porcelain = _git(repo_root, "status", "--porcelain")
+def read_git_state(repo_root: Path) -> dict:
+    """Commit, branch and raw dirty state of one moment. Read inside an
+    acquisition pass, never on its own, so status and bytes always come
+    from the same pass."""
+    status_raw = _git_bytes(repo_root, "status", "--porcelain")
     return {
         "commit": _git(repo_root, "rev-parse", "HEAD"),
         "abbreviatedCommit": _git(repo_root, "rev-parse", "--short", "HEAD"),
         "branch": _git(repo_root, "rev-parse", "--abbrev-ref", "HEAD"),
-        "dirty": bool(porcelain),
-        "dirtyEntryCount": len([l for l in porcelain.splitlines() if l.strip()]),
-        "serverStartedAt": _dt.datetime.now(_dt.timezone.utc).isoformat(),
-        "repositoryRoot": str(repo_root),
+        "statusRaw": status_raw,
     }
 
 
@@ -204,26 +228,154 @@ def compute_snapshot_id(files: dict[str, bytes]) -> str:
     return digest.hexdigest()
 
 
-class Snapshot:
-    """One immutable path-and-byte view of the workspace.
+# --------------------------------------------------------------------------
+# Consistent acquisition: one pass, then the pair that must agree
+# --------------------------------------------------------------------------
 
-    Every byte is read in ``__init__``. Nothing here reopens a source path
-    afterwards, so the served set cannot drift while the server runs.
+
+@dataclasses.dataclass(frozen=True)
+class Acquisition:
+    """One complete acquisition pass, as an immutable value.
+
+    A pass carries the Git moment *and* the bytes read in that same moment.
+    Keeping them in one value is the whole point: status can never be
+    reported from one read while the served bytes come from another.
     """
 
-    def __init__(self, repo_root: Path):
+    commit: str
+    abbreviated_commit: str
+    branch: str
+    status_raw: bytes
+    dirty_entry_count: int
+    candidate_paths: tuple[str, ...]
+    files: MappingProxyType
+    skipped: tuple[str, ...]
+    snapshot_id: str
+    file_count: int
+    byte_count: int
+
+    @property
+    def dirty(self) -> bool:
+        return bool(self.status_raw.strip())
+
+    def disagreements(self, other: "Acquisition") -> list[str]:
+        """Name every declared field on which two passes differ.
+
+        A matching ``snapshotId`` is necessary but never sufficient, so the
+        metadata is compared field by field and the frozen bytes are then
+        compared directly rather than trusted to the digest.
+        """
+        differing = []
+        for label, mine, theirs in (
+            ("commit", self.commit, other.commit),
+            ("abbreviatedCommit", self.abbreviated_commit,
+             other.abbreviated_commit),
+            ("branch", self.branch, other.branch),
+            ("status", self.status_raw, other.status_raw),
+            ("dirtyEntryCount", self.dirty_entry_count, other.dirty_entry_count),
+            ("candidatePaths", self.candidate_paths, other.candidate_paths),
+            ("skippedPaths", self.skipped, other.skipped),
+            ("fileCount", self.file_count, other.file_count),
+            ("byteCount", self.byte_count, other.byte_count),
+            ("snapshotId", self.snapshot_id, other.snapshot_id),
+        ):
+            if mine != theirs:
+                differing.append(label)
+        if (sorted(self.files) != sorted(other.files)
+                or any(content != other.files.get(path)
+                       for path, content in self.files.items())):
+            differing.append("frozenBytes")
+        return differing
+
+
+def acquire_once(repo_root: Path) -> Acquisition:
+    """Run one complete acquisition pass.
+
+    Git state, the candidate list and every served byte are read here and
+    nowhere else, so a pass is a single unit that can be compared whole
+    against another pass.
+    """
+    state = read_git_state(repo_root)
+    candidates = list_candidate_paths(repo_root)
+    files: dict[str, bytes] = {}
+    skipped: list[str] = []
+    for relative in candidates:
+        content = _snapshot_read(repo_root, relative)
+        if content is None:
+            skipped.append(relative)
+            continue
+        files[relative] = content
+    status_raw = state["statusRaw"]
+    return Acquisition(
+        commit=state["commit"],
+        abbreviated_commit=state["abbreviatedCommit"],
+        branch=state["branch"],
+        status_raw=status_raw,
+        dirty_entry_count=len([l for l in status_raw.splitlines() if l.strip()]),
+        candidate_paths=tuple(candidates),
+        files=MappingProxyType(files),
+        skipped=tuple(skipped),
+        snapshot_id=compute_snapshot_id(files),
+        file_count=len(files),
+        byte_count=sum(len(v) for v in files.values()),
+    )
+
+
+def acquire_consistent(repo_root: Path,
+                       max_attempts: int = MAX_ACQUISITION_ATTEMPTS,
+                       acquire=None) -> tuple[Acquisition, int, list[list[str]]]:
+    """Accept a snapshot only when two consecutive complete passes agree.
+
+    A disagreeing pair is discarded whole, so no part of a rejected pass can
+    survive into a later accepted one. After ``max_attempts`` pairs the
+    workspace is declared to be changing and the caller is refused; there is
+    no fallback that serves a single unverified pass.
+
+    ``acquire`` is a seam for the acceptance suite, which needs to change a
+    throwaway repository at an exact point between two passes. Left alone it
+    is the module-level pass, so the production path is the default path.
+
+    Returns the accepted pass, how many pair attempts it took, and the
+    disagreeing fields of each attempt.
+    """
+    acquire = acquire or acquire_once
+    attempts: list[list[str]] = []
+    for _ in range(max_attempts):
+        first = acquire(repo_root)
+        second = acquire(repo_root)
+        differing = first.disagreements(second)
+        attempts.append(differing)
+        if not differing:
+            return second, len(attempts), attempts
+    fields = sorted({field for attempt in attempts for field in attempt})
+    raise SnapshotError(
+        "the workspace changed while it was being read: %d pair attempts of "
+        "%d complete passes each disagreed on %s. Stop whatever is writing to "
+        "the repository, then start the preview again."
+        % (max_attempts, CONSISTENCY_PASSES, ", ".join(fields) or "unknown fields"))
+
+
+# --------------------------------------------------------------------------
+# The immutable snapshot
+# --------------------------------------------------------------------------
+
+
+class Snapshot:
+    """One immutable path-and-byte view of the workspace, built from an
+    accepted acquisition pass.
+
+    Nothing here reads or reopens a source path, so the served set cannot
+    drift while the server runs.
+    """
+
+    def __init__(self, acquisition: Acquisition, repo_root: Path):
         self.repo_root = repo_root
-        self.files: dict[str, bytes] = {}
-        self.skipped: list[str] = []
-        for relative in list_candidate_paths(repo_root):
-            content = _snapshot_read(repo_root, relative)
-            if content is None:
-                self.skipped.append(relative)
-                continue
-            self.files[relative] = content
+        self.acquisition = acquisition
+        self.files = acquisition.files
+        self.skipped = list(acquisition.skipped)
         self.paths = sorted(self.files, key=lambda p: p.encode("utf-8"))
-        self.snapshot_id = compute_snapshot_id(self.files)
-        self.byte_count = sum(len(v) for v in self.files.values())
+        self.snapshot_id = acquisition.snapshot_id
+        self.byte_count = acquisition.byte_count
         self.directories = self._build_directories()
 
     def _build_directories(self) -> dict[str, set[str]]:
@@ -444,16 +596,40 @@ class PreviewServer(ThreadingHTTPServer):
     exception_count = 0
 
 
-def build_server(repo_root: Path, host: str, port: int, quiet: bool) -> PreviewServer:
-    """Freeze first, bind second. Nothing is served before the snapshot is
-    complete, so no request can observe a partially read workspace."""
-    revision = read_revision(repo_root)
-    snapshot = Snapshot(repo_root)
-    revision["snapshotId"] = snapshot.snapshot_id
-    revision["abbreviatedSnapshotId"] = snapshot.snapshot_id[:12]
-    revision["snapshotFileCount"] = len(snapshot.paths)
-    revision["snapshotByteCount"] = snapshot.byte_count
-    revision["snapshotSkippedPaths"] = snapshot.skipped
+def build_server(repo_root: Path, host: str, port: int, quiet: bool,
+                 acquire=None,
+                 max_attempts: int = MAX_ACQUISITION_ATTEMPTS) -> PreviewServer:
+    """Agree first, freeze second, bind third.
+
+    ``acquire_consistent`` raises before this function creates a socket, so a
+    changing workspace can never reach a listening port. Every field below
+    comes from the one accepted pass; nothing is carried over from an earlier
+    read or from a rejected pair.
+    """
+    accepted, attempts, attempt_fields = acquire_consistent(
+        repo_root, max_attempts=max_attempts, acquire=acquire)
+    snapshot = Snapshot(accepted, repo_root)
+    revision = {
+        "commit": accepted.commit,
+        "abbreviatedCommit": accepted.abbreviated_commit,
+        "branch": accepted.branch,
+        "dirty": accepted.dirty,
+        "dirtyEntryCount": accepted.dirty_entry_count,
+        "serverStartedAt": _dt.datetime.now(_dt.timezone.utc).isoformat(),
+        "repositoryRoot": str(repo_root),
+        "snapshotId": accepted.snapshot_id,
+        "abbreviatedSnapshotId": accepted.snapshot_id[:12],
+        "snapshotFileCount": accepted.file_count,
+        "snapshotByteCount": accepted.byte_count,
+        "snapshotSkippedPaths": list(accepted.skipped),
+        "snapshotConsistencyPasses": CONSISTENCY_PASSES,
+        "snapshotAcquisitionAttempts": attempts,
+        "snapshotAcquisitionStable": True,
+        # The pairs that were thrown away, named by the fields that moved.
+        # Empty on a normal start; a reviewer should be able to see a retry.
+        "snapshotRejectedPairs": [sorted(set(fields))
+                                  for fields in attempt_fields[:-1]],
+    }
     handler = type("BoundPreviewHandler", (PreviewHandler,), {
         "snapshot": snapshot,
         "revision": revision,
@@ -502,6 +678,9 @@ def main(argv=None) -> int:
     print("  snapshot %s  %d files  %d bytes"
           % (revision["abbreviatedSnapshotId"], revision["snapshotFileCount"],
              revision["snapshotByteCount"]), file=sys.stderr)
+    print("  acquisition %d consistency passes, stable after %d attempt(s)"
+          % (revision["snapshotConsistencyPasses"],
+             revision["snapshotAcquisitionAttempts"]), file=sys.stderr)
     print("  snapshotId %s" % revision["snapshotId"], file=sys.stderr, flush=True)
 
     try:
