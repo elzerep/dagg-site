@@ -14,6 +14,6 @@ test_13_reduced_motion_is_layout_and_content_safe (test_p3_chrome.RenderedChrome
 test_14_local_only_zero_console_errors_and_owned_scope (test_p3_chrome.RenderedChrome.test_14_local_only_zero_console_errors_and_owned_scope) ... ok
 
 ----------------------------------------------------------------------
-Ran 14 tests in 34.788s
+Ran 14 tests in 36.295s
 
 OK

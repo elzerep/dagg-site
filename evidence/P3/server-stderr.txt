@@ -1,5 +1,5 @@
-Dagg immutable preview  http://127.0.0.1:53148/
-  revision db55759 (design-language) dirty=true
+Dagg immutable preview  http://127.0.0.1:53290/
+  revision 7c42c55 (design-language) dirty=false
   snapshot 9541ecc131bf  130 files  22777642 bytes
   acquisition 2 consistency passes, stable after 1 attempt(s)
   snapshotId 9541ecc131bf269b74341fcb5b8022fb177bcd947da465ae2c4c778043386d7b

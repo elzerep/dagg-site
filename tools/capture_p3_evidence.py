@@ -1015,10 +1015,9 @@ def main(argv=None) -> int:  # noqa: C901
                 {k: budget[k] for k in ("chromeCssBytes", "chromeJavaScriptBytes")}))
         deviations.append(
             "This capture drives a real Chrome process directly (not a "
-            "canned/simulated run) but was produced without a preceding "
-            "P3A visual acceptance by Codex, per the P3B subpackage split: "
-            "P3B may not alter P3A source to make a test pass and does not "
-            "grade its own rendering.")
+            "canned/simulated run) and records P3B machine evidence only. "
+            "Codex's independent P3C visual acceptance is documented in "
+            "the package record; this script does not infer it from tests.")
         deviations.append(
             "The no-JavaScript capture blocks only the exact local chrome.js "
             "request via Network.setBlockedURLs, rather than disabling the "
@@ -1089,10 +1088,10 @@ def main(argv=None) -> int:  # noqa: C901
             "evidenceExcludedFromSnapshot": True,
             "deviations": deviations,
             "unmeasuredInP3": [
-                "This is the P3B rig only. P3C (Codex) owns the real-Chrome "
-                "run, visual review and the accepted status/acceptance "
-                "record; this script and evidence/P3/** are not themselves "
-                "a claim that P3 passed.",
+                "This is the P3B machine-evidence rig only. P3C (Codex) owns "
+                "the independent visual review and the accepted status/"
+                "acceptance record; this script does not grade its own "
+                "rendering.",
                 "Screen-reader announcement quality was not tested.",
                 "Real-device rendering was not tested.",
             ],

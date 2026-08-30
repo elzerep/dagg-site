@@ -17,7 +17,7 @@
     "zeroServerExceptions": true
   },
   "chrome": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-  "commit": "db55759a916c141a431bdb7c6bf02678d69c403e",
+  "commit": "7c42c55197923d47d8d34210e4f1055931da71fe",
   "coverage": [
     "CSS-chrome",
     "CSS-tokens",
@@ -115,61 +115,61 @@
         "footerCount": 1,
         "headerCount": 1,
         "preview": "/preview/golden-standard/chrome/",
-        "url": "http://127.0.0.1:53151/preview/golden-standard/chrome/"
+        "url": "http://127.0.0.1:53293/preview/golden-standard/chrome/"
       },
       "/assessment": {
         "footerCount": 1,
         "headerCount": 1,
         "preview": "/preview/golden-standard/chrome/routes/assessment/",
-        "url": "http://127.0.0.1:53151/preview/golden-standard/chrome/routes/assessment/"
+        "url": "http://127.0.0.1:53293/preview/golden-standard/chrome/routes/assessment/"
       },
       "/build": {
         "footerCount": 1,
         "headerCount": 1,
         "preview": "/preview/golden-standard/chrome/routes/build/",
-        "url": "http://127.0.0.1:53151/preview/golden-standard/chrome/routes/build/"
+        "url": "http://127.0.0.1:53293/preview/golden-standard/chrome/routes/build/"
       },
       "/company": {
         "footerCount": 1,
         "headerCount": 1,
         "preview": "/preview/golden-standard/chrome/routes/company/",
-        "url": "http://127.0.0.1:53151/preview/golden-standard/chrome/routes/company/"
+        "url": "http://127.0.0.1:53293/preview/golden-standard/chrome/routes/company/"
       },
       "/impact": {
         "footerCount": 1,
         "headerCount": 1,
         "preview": "/preview/golden-standard/chrome/routes/impact/",
-        "url": "http://127.0.0.1:53151/preview/golden-standard/chrome/routes/impact/"
+        "url": "http://127.0.0.1:53293/preview/golden-standard/chrome/routes/impact/"
       },
       "/privacy": {
         "footerCount": 1,
         "headerCount": 1,
         "preview": "/preview/golden-standard/chrome/routes/privacy/",
-        "url": "http://127.0.0.1:53151/preview/golden-standard/chrome/routes/privacy/"
+        "url": "http://127.0.0.1:53293/preview/golden-standard/chrome/routes/privacy/"
       },
       "/terms": {
         "footerCount": 1,
         "headerCount": 1,
         "preview": "/preview/golden-standard/chrome/routes/terms/",
-        "url": "http://127.0.0.1:53151/preview/golden-standard/chrome/routes/terms/"
+        "url": "http://127.0.0.1:53293/preview/golden-standard/chrome/routes/terms/"
       },
       "/transformation": {
         "footerCount": 1,
         "headerCount": 1,
         "preview": "/preview/golden-standard/chrome/routes/transformation/",
-        "url": "http://127.0.0.1:53151/preview/golden-standard/chrome/routes/transformation/"
+        "url": "http://127.0.0.1:53293/preview/golden-standard/chrome/routes/transformation/"
       },
       "/trust": {
         "footerCount": 1,
         "headerCount": 1,
         "preview": "/preview/golden-standard/chrome/routes/trust/",
-        "url": "http://127.0.0.1:53151/preview/golden-standard/chrome/routes/trust/"
+        "url": "http://127.0.0.1:53293/preview/golden-standard/chrome/routes/trust/"
       },
       "/workgraph": {
         "footerCount": 1,
         "headerCount": 1,
         "preview": "/preview/golden-standard/chrome/routes/workgraph/",
-        "url": "http://127.0.0.1:53151/preview/golden-standard/chrome/routes/workgraph/"
+        "url": "http://127.0.0.1:53293/preview/golden-standard/chrome/routes/workgraph/"
       }
     },
     "scope": {
@@ -255,14 +255,7 @@
       ],
       "outOfScope": [],
       "workingTree": [
-        "design/golden-standard/packages/P3-GLOBAL-CHROME.md",
-        "evidence/P3/mobile-menu-focus-trapped-390px.png",
-        "evidence/P3/result.json",
-        "evidence/P3/revision.json",
-        "evidence/P3/server-stderr.txt",
-        "evidence/P3/tests-output.txt",
-        "evidence/P3/tests.json",
-        "tools/capture_p3_evidence.py"
+        "evidence/P3/tests.json"
       ]
     },
     "scrollHideReveal": {
