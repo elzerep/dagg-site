@@ -1,6 +1,6 @@
 # P0 · Reconcile authority and create an exact-revision preview
 
-Status: ready · control set frozen after IA sign-off  
+Status: rejected by Codex · superseded by `P0R1-IMMUTABLE-PREVIEW-SNAPSHOT.md`  
 Authority: `design/golden-standard/DAGG-GOLDEN-STANDARD-MASTERPLAN.md`  
 Base commit: `1e939b5d3acc46f77b53830b25901c8e6a36dadf`  
 Gate type: operating acceptance by Codex

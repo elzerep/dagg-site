@@ -1,0 +1,20 @@
+test_06_and_07_post_startup_mutation_cannot_reach_the_client (test_preview_revision.ImmutabilityTest.test_06_and_07_post_startup_mutation_cannot_reach_the_client) ... ok
+test_08_restart_serves_the_new_snapshot (test_preview_revision.ImmutabilityTest.test_08_restart_serves_the_new_snapshot) ... ok
+test_09_evidence_files_do_not_change_the_snapshot_id (test_preview_revision.ImmutabilityTest.test_09_evidence_files_do_not_change_the_snapshot_id) ... ok
+test_10_dirty_state_is_truthful_at_snapshot_start (test_preview_revision.ImmutabilityTest.test_10_dirty_state_is_truthful_at_snapshot_start) ... ok
+test_15_only_owned_files_differ_from_the_base_commit (test_preview_revision.ScopeTest.test_15_only_owned_files_differ_from_the_base_commit) ... ok
+test_01_revision_endpoint_has_every_required_field (test_preview_revision.SnapshotContractTest.test_01_revision_endpoint_has_every_required_field) ... ok
+test_02_every_content_type_carries_one_snapshot_id (test_preview_revision.SnapshotContractTest.test_02_every_content_type_carries_one_snapshot_id) ... ok
+test_03_html_has_exactly_one_of_each_meta_inside_head (test_preview_revision.SnapshotContractTest.test_03_html_has_exactly_one_of_each_meta_inside_head) ... ok
+test_04_stripping_the_meta_tags_restores_the_snapshot_bytes (test_preview_revision.SnapshotContractTest.test_04_stripping_the_meta_tags_restores_the_snapshot_bytes) ... ok
+test_05_snapshot_id_recomputes_from_the_declared_algorithm (test_preview_revision.SnapshotContractTest.test_05_snapshot_id_recomputes_from_the_declared_algorithm) ... ok
+test_11_no_store_headers_on_every_content_type (test_preview_revision.SnapshotContractTest.test_11_no_store_headers_on_every_content_type) ... ok
+test_12_traversal_spaces_queries_and_directory_indexes (test_preview_revision.SnapshotContractTest.test_12_traversal_spaces_queries_and_directory_indexes) ... ok
+test_13_server_raises_no_exceptions (test_preview_revision.SnapshotContractTest.test_13_server_raises_no_exceptions)
+Drive success, refusal, 404, HEAD and directory paths through a ... ok
+test_14_startup_is_under_two_seconds (test_preview_revision.SnapshotContractTest.test_14_startup_is_under_two_seconds) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 1.577s
+
+OK

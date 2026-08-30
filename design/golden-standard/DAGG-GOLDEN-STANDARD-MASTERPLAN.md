@@ -757,9 +757,9 @@ Gate: “looks good” cannot close a work package.
 
 ### 4. Set revision-safe previewing
 
-Fingerprint CSS, JS and images; render the commit hash visibly in preview metadata.  
+Freeze every served HTML, CSS, JS, font and image byte into one immutable in-memory snapshot when the preview server starts. Compute a deterministic SHA-256 snapshot ID across the sorted path-and-byte set; expose commit, dirty state and snapshot ID in `/__revision`, response headers and invisible HTML metadata. A running server never reads changed source bytes from disk. Source changes become reviewable only after restart, when a new snapshot ID is produced.  
 Output: exact-revision preview.  
-Gate: HTML and assets can never come from mixed commits.
+Gate: every response in a review session carries one snapshot ID, HTML and assets cannot come from mixed workspace states, and a dirty snapshot remains exactly identifiable even when it does not equal a Git commit.
 
 ## Phase B · Understand the audience and references
 
@@ -1013,7 +1013,7 @@ Every prompt contains:
 
 Claude's four requested inputs are therefore mandatory: final copy, runnable acceptance tests, owned-file boundaries and explicit invariants. They remove productive ambiguity.
 
-Machine tests are necessary but never sufficient for visual acceptance. The earlier test falsely reported “no small text” because it excluded SVG, while the preview mixed current HTML with cached CSS. Each test contract must therefore state its coverage and prove that the rendered HTML, CSS, JS and assets belong to the same commit.
+Machine tests are necessary but never sufficient for visual acceptance. The earlier test falsely reported “no small text” because it excluded SVG, while the preview mixed current HTML with cached CSS. No-store headers alone do not solve this: a live-disk server can still return HTML from one workspace moment and CSS from another. Each test contract must therefore state its coverage and prove that the rendered HTML, CSS, JS and assets belong to the same immutable snapshot. A test that celebrates fresh bytes appearing without server restart is a rejection condition, not a pass.
 
 ### Package evidence JSON
 
@@ -1022,8 +1022,10 @@ Each package writes one machine-readable result with at least:
 ```json
 {
   "package": "P#",
-  "commit": "full commit hash",
-  "assetRevision": "same commit or content hash",
+  "commit": "full commit hash at snapshot start",
+  "dirtyAtCapture": true,
+  "snapshotId": "sha256 of the complete served path-and-byte set",
+  "assetRevision": "same snapshotId",
   "viewports": [320, 360, 390, 768, 1024, 1440],
   "statesTested": [],
   "scrollWidthMatches": true,
@@ -1046,7 +1048,7 @@ The integration gate rejects JSON whose values are unsupported by the screenshot
 
 | Package | Scope | Claude stops when |
 |---|---|---|
-| P0 | Reconcile repository rules and revision-safe preview | Docs no longer conflict and commit/asset version is visible. |
+| P0 | Reconcile repository rules and immutable revision-safe preview | Docs no longer conflict and every served response belongs to one deterministic snapshot ID. |
 | P1 | Tokens, type, grid and accessibility pairs | Foundation specimens render at all breakpoints. |
 | P2 | Header, navigation and footer | Real routes, keyboard and mobile pass. |
 | P3 | Two or three vertical-slice directions | Comparable desktop/mobile slices and a recommendation are ready for the direction-choice gate. |
@@ -1086,7 +1088,7 @@ The project must move today without lowering the bar.
 4. If an image is missing, generate it from the accepted Decision Field grammar; do not insert stock people or an unrelated visual.
 5. If two iterations fail for the same reason, return to the last accepted gate and change the approach. Do not tune numbers indefinitely.
 6. Separate research, design, implementation and QA so the implementer does not grade its own work.
-7. One package, one commit, one exact preview revision.
+7. One package, one implementation commit and one exact preview snapshot. Evidence generated before that commit must key itself to the served snapshot ID, not pretend to contain its own future commit hash. A clean post-commit run must reproduce the same snapshot ID when evidence paths are excluded from the served set.
 8. Preserve working accepted components while replacing failed sections.
 9. Do not publish, deploy or merge to production without Christian.
 

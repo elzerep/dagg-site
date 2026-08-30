@@ -1,14 +1,18 @@
 #!/usr/bin/env python3
-"""Capture P0 preview evidence from one revision-safe server process.
+"""Capture P0R1 preview evidence from one immutable-snapshot server process.
 
-Starts ``tools/serve_preview.py``, drives the installed Google Chrome over
-the Chrome DevTools Protocol, and writes screenshots, the ``/__revision``
-response, a ``<head>`` DOM snapshot, a response-header record and
-``evidence/P0/result.json`` — all from the same server process, so the
-screenshots and the machine evidence provably describe one revision.
+Runs the acceptance suite, then starts ``tools/serve_preview.py`` once and
+drives the installed Google Chrome over the Chrome DevTools Protocol.
+Screenshots, the ``/__revision`` response, a ``<head>`` DOM snapshot, a
+response-header record and ``evidence/P0R1/result.json`` all come from that
+single process, so every artefact provably describes one snapshot ID.
 
-Standard library only: the CCDP transport below is a minimal RFC 6455
-client. Nothing is written outside ``evidence/P0/`` and a temporary Chrome
+The capture is refused outright if any response header, any injected DOM
+meta tag or any screenshot record disagrees with the server's snapshot ID:
+partial evidence is worse than none, because it looks like proof.
+
+Standard library only: the CDP transport below is a minimal RFC 6455
+client. Nothing is written outside ``evidence/P0R1/`` and a temporary Chrome
 profile that is removed on exit.
 
     python3 tools/capture_preview_evidence.py
@@ -34,7 +38,7 @@ import urllib.request
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-EVIDENCE_DIR = REPO_ROOT / "evidence" / "P0"
+EVIDENCE_DIR = REPO_ROOT / "evidence" / "P0R1"
 PAGE_PATH = "/preview/directions/a-plus.html"
 VIEWPORTS = (1440, 390)
 
@@ -45,16 +49,23 @@ CHROME_CANDIDATES = (
     "/usr/bin/chromium",
 )
 
-CONTROL_FILES = (
-    "CLAUDE.md",
+BASE_COMMIT = "972700bf95641bb6615a72d859fdd037329cbc86"
+
+# The three authority documents must be byte-identical from the first
+# recording to the pre-commit recomputation. The three implementation files
+# are recorded in the same table precisely so their change is visible and
+# attributable rather than hidden.
+CONTROL_DOCUMENTS = (
     "design/golden-standard/DAGG-GOLDEN-STANDARD-MASTERPLAN.md",
-    "design/golden-standard/CLAUDE-WORK-PACKAGE-TEMPLATE.md",
+    "design/golden-standard/packages/P0R1-IMMUTABLE-PREVIEW-SNAPSHOT.md",
     "design/golden-standard/packages/P0-RECONCILE-AND-PREVIEW.md",
-    "design/golden-standard/reference-audits/ANTHROPIC-OPENAI-RECIPE.md",
-    "design/golden-standard/reference-audits/PALANTIR-RECIPE.md",
-    "design/golden-standard/reference-audits/xai-current/XAI-CURRENT-AUDIT.md",
-    "design/golden-standard/image-system/decision-field-hero-v2.png",
 )
+IMPLEMENTATION_FILES = (
+    "tools/serve_preview.py",
+    "tools/capture_preview_evidence.py",
+    "tests/test_preview_revision.py",
+)
+CONTROL_FILES = CONTROL_DOCUMENTS + IMPLEMENTATION_FILES
 
 HEADER_TARGETS = (
     ("HTML", PAGE_PATH),
@@ -68,6 +79,10 @@ REQUIRED_NO_STORE = {
     "pragma": "no-cache",
     "expires": "0",
 }
+
+
+class SnapshotDisagreement(RuntimeError):
+    """A served artefact did not carry the server's snapshot ID."""
 
 
 # --------------------------------------------------------------------------
@@ -362,8 +377,10 @@ PAGE_FACTS = """
   url: location.href,
   revisionMeta: document.querySelectorAll('meta[name="dagg-revision"]').length,
   dirtyMeta: document.querySelectorAll('meta[name="dagg-dirty"]').length,
+  snapshotMeta: document.querySelectorAll('meta[name="dagg-snapshot"]').length,
   revision: (document.querySelector('meta[name="dagg-revision"]')||{}).content || null,
   dirty: (document.querySelector('meta[name="dagg-dirty"]')||{}).content || null,
+  snapshot: (document.querySelector('meta[name="dagg-snapshot"]')||{}).content || null,
   headOuterHTML: document.head.outerHTML,
   bodyElementCount: document.body.getElementsByTagName('*').length,
   scrollWidth: document.documentElement.scrollWidth,
@@ -460,6 +477,23 @@ def control_hashes() -> dict:
     return out
 
 
+def compare_control_hashes(start: dict, end: dict) -> dict:
+    """Say plainly which control files changed. The authority documents must
+    not have moved; the implementation files are expected to have."""
+    changed = sorted(k for k in end
+                     if k in start and start[k] != end[k])
+    missing = sorted(k for k in CONTROL_FILES if k not in start)
+    return {
+        "changedSinceStart": changed,
+        "notRecordedAtStart": missing,
+        "authorityDocumentsUnchanged": (
+            None if any(d in missing for d in CONTROL_DOCUMENTS)
+            else all(d not in changed for d in CONTROL_DOCUMENTS)),
+        "implementationFilesChanged": [f for f in IMPLEMENTATION_FILES
+                                       if f in changed],
+    }
+
+
 def read_start_hashes() -> dict:
     """Parse the record written before the first write of this package."""
     path = EVIDENCE_DIR / "control-hashes-start.txt"
@@ -479,32 +513,57 @@ def git(*args: str) -> str:
         check=True, capture_output=True, text=True).stdout.strip()
 
 
-def default_port_is_free(port: int = 8912) -> bool:
+def default_port_is_free(port: int = 8912) -> tuple[bool, str | None]:
+    """Report whether the documented preview port is free, and if not, name
+    what holds it. A forgotten plain static server on this port is the exact
+    failure P0R1 exists to prevent, so it must be identified, not shrugged at."""
     probe = socket.socket()
     try:
         probe.bind(("127.0.0.1", port))
-        return True
+        return True, None
     except OSError:
-        return False
+        return False, port_holder(port)
     finally:
         probe.close()
 
 
-def build_deviations(dom_records: dict, default_port_free: bool) -> list[str]:  # noqa: C901
+def port_holder(port: int) -> str | None:
+    lsof = shutil.which("lsof")
+    if not lsof:
+        return None
+    listing = subprocess.run(
+        [lsof, "-nP", "-iTCP:%d" % port, "-sTCP:LISTEN"],
+        capture_output=True, text=True)
+    rows = [line.split() for line in listing.stdout.splitlines()[1:] if line.strip()]
+    if not rows:
+        return None
+    pid = rows[0][1]
+    described = subprocess.run(["ps", "-p", pid, "-o", "command="],
+                               capture_output=True, text=True).stdout.strip()
+    return "pid %s: %s" % (pid, described or rows[0][0])
+
+
+def build_deviations(dom_records: dict, default_port_free: bool,
+                     port_holder_description: str | None = None) -> list[str]:  # noqa: C901
     """Everything a reviewer must know that the pass/fail flags do not say."""
     out = []
     if not default_port_free:
         out.append(
-            "Default port 8912 was already bound by an unrelated pre-existing "
-            "process at capture time, so this evidence was captured on an "
-            "ephemeral port. The documented default is unchanged.")
+            "Documented preview port 8912 was already bound at capture time by "
+            "a pre-existing process (%s), so this evidence was captured on an "
+            "ephemeral port. That process was started before this package and "
+            "was left running; it is not the immutable preview server. Anyone "
+            "opening http://127.0.0.1:8912/ while it lives is reviewing a "
+            "live-disk static server, which the masterplan forbids. Stop it "
+            "before the next review. The documented default is unchanged."
+            % (port_holder_description or "not identifiable on this system"))
     if any(record.get("carouselState") for record in dom_records.values()):
         out.append(
             "preview/directions/a-plus.html runs an IntersectionObserver "
             "carousel that auto-advances every 2600 ms, so its screenshots are "
             "not byte-reproducible. Each capture records carouselState and "
-            "carouselSelected; both runs were captured at MAP/step 0 because "
-            "the section is out of view at scroll position 0.")
+            "carouselSelected. Screenshot bytes are therefore not a snapshot "
+            "identity check; the recorded snapshot ID is.")
     out.append(
         'The page carries a loading="lazy" image below the fold that '
         "captureBeyondViewport alone leaves blank. The harness sweeps the "
@@ -522,9 +581,55 @@ def build_deviations(dom_records: dict, default_port_free: bool) -> list[str]:  
     if placeholders:
         out.append(
             "%d placeholder links (href=\"#\") remain in this design-direction "
-            "preview. Out of P0 scope; recorded for the package that owns "
+            "preview. Out of P0R1 scope; recorded for the package that owns "
             "navigation." % placeholders)
+    out.append(
+        "P0R1 changed no public design, copy, IA, interaction or asset byte. "
+        "These screenshots therefore look identical to the P0 capture; they "
+        "exist to prove that the immutable snapshot serves the same page, not "
+        "to show a visual change.")
+    out.append(
+        "Screenshots at 1440 and 390 px only. The full masterplan viewport "
+        "ladder and the contrast, reduced-motion, no-JavaScript and computed "
+        "text-size measurements are not covered by P0R1 and are recorded as "
+        "unmeasured rather than as passes.")
     return out
+
+
+def run_acceptance_suite() -> dict:
+    """Run the real suite and record what it proved, pass or fail."""
+    target = EVIDENCE_DIR / "tests.json"
+    environment = dict(os.environ, DAGG_P0R1_TEST_JSON=str(target),
+                       PYTHONDONTWRITEBYTECODE="1")
+    started = time.monotonic()
+    completed = subprocess.run(
+        [sys.executable, "-B", "-m", "unittest", "discover", "-s", "tests", "-v"],
+        cwd=str(REPO_ROOT), capture_output=True, text=True, env=environment)
+    output = completed.stdout + completed.stderr
+    (EVIDENCE_DIR / "tests-output.txt").write_text(output)
+    detail = json.loads(target.read_text()) if target.exists() else {}
+    summary = [line for line in output.splitlines()
+               if line.startswith(("OK", "FAILED", "Ran "))]
+    return {
+        "command": "python3 -B -m unittest discover -s tests -v",
+        "returnCode": completed.returncode,
+        "passed": completed.returncode == 0,
+        "seconds": round(time.monotonic() - started, 3),
+        "summary": summary,
+        "outcomes": [line.rsplit(" ... ", 1) for line in output.splitlines()
+                     if " ... " in line],
+        "detail": detail,
+    }
+
+
+def require_snapshot(headers: dict, snapshot_id: str, label: str):
+    """Refuse the capture rather than write evidence that only looks whole."""
+    lowered = {k.lower(): v for k, v in headers.items()}
+    actual = lowered.get("x-dagg-snapshot")
+    if actual != snapshot_id:
+        raise SnapshotDisagreement(
+            "%s carried snapshot %r, the server reports %r"
+            % (label, actual, snapshot_id))
 
 
 def main(argv=None) -> int:
@@ -532,28 +637,34 @@ def main(argv=None) -> int:
     parser.add_argument("--port", type=int, default=0,
                         help="preview server port (default: 0, pick a free port)")
     parser.add_argument("--host", default="127.0.0.1")
-    parser.add_argument("--base-commit", default=None,
+    parser.add_argument("--base-commit", default=BASE_COMMIT,
                         help="commit to compare the served preview against")
+    parser.add_argument("--skip-tests", action="store_true",
+                        help="do not re-run the acceptance suite")
     args = parser.parse_args(argv)
 
     EVIDENCE_DIR.mkdir(parents=True, exist_ok=True)
     start_hashes = read_start_hashes()
-    default_port_free = default_port_is_free()
+    default_port_free, port_holder_description = default_port_is_free()
+    tests = {} if args.skip_tests else run_acceptance_suite()
 
     server, base_url, startup_seconds = start_server(args.port, args.host)
-    profile_dir = Path(tempfile.mkdtemp(prefix="dagg-p0-chrome-"))
+    profile_dir = Path(tempfile.mkdtemp(prefix="dagg-p0r1-chrome-"))
     chrome = None
     cdp = None
     screenshots = []
     try:
         status, revision_headers, revision_body = fetch(base_url, "/__revision")
         revision = json.loads(revision_body)
+        snapshot_id = revision["snapshotId"]
         (EVIDENCE_DIR / "revision.json").write_bytes(revision_body)
+        require_snapshot(revision_headers, snapshot_id, "/__revision")
 
         headers_record = {}
         no_store_coverage = []
         for label, path in HEADER_TARGETS:
             code, headers, body = fetch(base_url, path)
+            require_snapshot(headers, snapshot_id, label)
             lowered = {k.lower(): v for k, v in headers.items()}
             compliant = all(lowered.get(k) == v for k, v in REQUIRED_NO_STORE.items())
             headers_record[label] = {
@@ -562,18 +673,23 @@ def main(argv=None) -> int:
                 "bytes": len(body),
                 "headers": headers,
                 "noStore": compliant,
+                "snapshotMatches": True,
             }
             if compliant:
                 no_store_coverage.append(label)
-        headers_record["JSON /__revision"] = {
+        json_no_store = all(
+            {k.lower(): v for k, v in revision_headers.items()}.get(k) == v
+            for k, v in REQUIRED_NO_STORE.items())
+        headers_record["JSON"] = {
             "url": base_url + "/__revision",
             "status": status,
             "bytes": len(revision_body),
             "headers": revision_headers,
-            "noStore": all(
-                {k.lower(): v for k, v in revision_headers.items()}.get(k) == v
-                for k, v in REQUIRED_NO_STORE.items()),
+            "noStore": json_no_store,
+            "snapshotMatches": True,
         }
+        if json_no_store:
+            no_store_coverage.append("JSON")
         (EVIDENCE_DIR / "response-headers.json").write_text(
             json.dumps(headers_record, indent=2, sort_keys=True) + "\n")
 
@@ -594,14 +710,23 @@ def main(argv=None) -> int:
             height = 900 if width >= 600 else 844
             cdp.events.clear()
             facts, png = capture_viewport(cdp, session, page_url, width, height)
+            if facts["snapshot"] != snapshot_id:
+                raise SnapshotDisagreement(
+                    "the %dpx DOM reported snapshot %r, the server reports %r"
+                    % (width, facts["snapshot"], snapshot_id))
+            if (facts["revisionMeta"], facts["dirtyMeta"],
+                    facts["snapshotMeta"]) != (1, 1, 1):
+                raise SnapshotDisagreement(
+                    "the %dpx DOM did not carry exactly one of each meta tag"
+                    % width)
             name = "a-plus-%dpx.png" % width
             (EVIDENCE_DIR / name).write_bytes(png)
-            size = png_size(png)
             screenshots.append({
-                "path": "evidence/P0/" + name,
+                "path": "evidence/P0R1/" + name,
                 "viewport": width,
-                "pixelDimensions": size,
+                "pixelDimensions": png_size(png),
                 "pageUrl": facts["url"],
+                "snapshotId": facts["snapshot"],
                 "serverRevision": revision["commit"],
                 "serverDirty": revision["dirty"],
                 "sha256": hashlib.sha256(png).hexdigest(),
@@ -612,6 +737,11 @@ def main(argv=None) -> int:
                 (EVIDENCE_DIR / "a-plus-head-dom.html").write_text(
                     facts["headOuterHTML"] + "\n")
 
+        recorded = {shot["snapshotId"] for shot in screenshots}
+        if recorded != {snapshot_id}:
+            raise SnapshotDisagreement(
+                "screenshots span more than one snapshot: %s" % sorted(recorded))
+
         (EVIDENCE_DIR / "dom-metadata.json").write_text(
             json.dumps({"pageUrl": page_url,
                         "serverRevision": revision,
@@ -620,34 +750,48 @@ def main(argv=None) -> int:
         # -- correctness checks against git and the base revision ---------
         head_commit = git("rev-parse", "HEAD")
         porcelain = git("status", "--porcelain")
-        base_commit = args.base_commit or head_commit
-        preview_diff = git("diff", "--name-only", base_commit, "--",
-                           "preview", "assets", "index.html")
+        base_commit = args.base_commit
+        public_diff = git("diff", "--name-only", base_commit, "--",
+                          "preview", "assets", "marketing", "v1", "index.html",
+                          "robots.txt")
 
         dom_matches = all(
             record["revision"] == revision["commit"]
             and record["dirty"] == ("true" if revision["dirty"] else "false")
+            and record["snapshot"] == snapshot_id
             and record["revisionMeta"] == 1 and record["dirtyMeta"] == 1
+            and record["snapshotMeta"] == 1
             for record in dom_records.values())
 
-        deviations = build_deviations(dom_records, default_port_free)
+        deviations = build_deviations(dom_records, default_port_free,
+                                      port_holder_description)
+        if not tests.get("passed", True):
+            deviations.insert(0, "The acceptance suite did not pass; see "
+                                 "evidence/P0R1/tests-output.txt.")
 
         end_hashes = control_hashes()
-        control_unchanged = (start_hashes == end_hashes) if start_hashes else None
+        control_comparison = compare_control_hashes(start_hashes, end_hashes)
+        if control_comparison["authorityDocumentsUnchanged"] is False:
+            deviations.insert(0, "An authority document changed during "
+                                 "execution: %s"
+                              % ", ".join(control_comparison["changedSinceStart"]))
 
         server.terminate()
         server.wait(timeout=10)
         server_stderr = server.stderr.read()
         (EVIDENCE_DIR / "server-stderr.txt").write_text(server_stderr)
 
-        tests_path = EVIDENCE_DIR / "tests.json"
-        tests = json.loads(tests_path.read_text()) if tests_path.exists() else {}
-
         result = {
-            "package": "P0",
+            "package": "P0R1",
             "commit": head_commit,
             "baseCommit": base_commit,
-            "assetRevision": head_commit,
+            "snapshotId": snapshot_id,
+            "assetRevision": snapshot_id,
+            "snapshotFileCount": revision["snapshotFileCount"],
+            "snapshotByteCount": revision["snapshotByteCount"],
+            "snapshotSkippedPaths": revision.get("snapshotSkippedPaths", []),
+            "snapshotExcludes": [".git/**", "evidence/**", "**/__pycache__/**",
+                                 "**/*.pyc", ".DS_Store"],
             "branch": revision["branch"],
             "dirtyAtCapture": revision["dirty"],
             "capturedAt": _dt.datetime.now(_dt.timezone.utc).isoformat(),
@@ -657,7 +801,7 @@ def main(argv=None) -> int:
             "chrome": chrome_version.get("product"),
             "chromePath": chrome_path,
             "viewports": sorted(VIEWPORTS),
-            "viewportScope": "P0 captures 1440 and 390 only; the full "
+            "viewportScope": "P0R1 captures 1440 and 390 only; the full "
                              "masterplan viewport ladder belongs to later packages.",
             "statesTested": ["default (no interaction, no reduced-motion override)"],
             "scrollWidthMatches": all(
@@ -675,43 +819,45 @@ def main(argv=None) -> int:
                                       for item in record["failedRequests"]}),
             "httpErrorResponses": sorted({item for record in dom_records.values()
                                           for item in record["httpErrorResponses"]}),
-            "reducedMotion": "not measured; out of P0 scope",
-            "noJavaScript": "not measured; out of P0 scope",
-            "unmeasuredInP0": ["minimumComputedTextPx", "textCoverage",
-                               "contrastFailures", "reducedMotion",
-                               "noJavaScript"],
+            "reducedMotion": "not measured; out of P0R1 scope",
+            "noJavaScript": "not measured; out of P0R1 scope",
+            "unmeasuredInP0R1": ["minimumComputedTextPx", "textCoverage",
+                                 "contrastFailures", "reducedMotion",
+                                 "noJavaScript"],
             "screenshots": screenshots,
             "deviations": deviations,
 
-            "authorityNotes": {
-                path: (REPO_ROOT / path).read_text().count(
-                    "**Authority status:** Historical evidence and implementation context.")
-                for path in ("design/DESIGN-LANGUAGE.md", "design/TEMPLATE.md",
-                             "design/SITEMAP.md")
-            },
             "revisionEndpointMatchesGit": revision["commit"] == head_commit,
-            "domRevisionMatchesEndpoint": dom_matches,
+            "domSnapshotMatchesEndpoint": dom_matches,
+            "allResponseHeadersMatchSnapshot": True,
+            "allScreenshotsShareOneSnapshot": True,
             "dirtyStateMatchesGit": revision["dirty"] == bool(porcelain),
             "noStoreCoverage": no_store_coverage,
-            "visiblePreviewChanged": bool(preview_diff),
+            "evidenceExcludedFromSnapshot": True,
+            "documentedPortFree": default_port_free,
+            "documentedPortHolder": port_holder_description,
+            "publicSourceChangedVersusBase": bool(public_diff),
+            "publicDiffVersusBase": public_diff.splitlines(),
 
             "controlFileHashesAtStart": start_hashes,
             "controlFileHashesBeforeCommit": end_hashes,
-            "controlFilesUnchanged": control_unchanged,
-            "previewAndAssetDiffVersusBase": preview_diff.splitlines(),
+            "controlFileComparison": control_comparison,
             "serverExceptions": server_stderr.count("Traceback"),
             "evidenceFiles": sorted(
-                "evidence/P0/" + p.name for p in EVIDENCE_DIR.iterdir()
-                if p.name != "result.json"),
+                "evidence/P0R1/" + item.name for item in EVIDENCE_DIR.iterdir()
+                if item.name != "result.json"),
             "tests": tests,
         }
         (EVIDENCE_DIR / "result.json").write_text(
             json.dumps(result, indent=2, sort_keys=True) + "\n")
         print(json.dumps({k: result[k] for k in (
-            "commit", "revisionEndpointMatchesGit", "domRevisionMatchesEndpoint",
-            "dirtyStateMatchesGit", "noStoreCoverage", "visiblePreviewChanged",
-            "controlFilesUnchanged", "serverExceptions")}, indent=2))
-        return 0
+            "commit", "snapshotId", "dirtyAtCapture", "snapshotFileCount",
+            "revisionEndpointMatchesGit", "domSnapshotMatchesEndpoint",
+            "allScreenshotsShareOneSnapshot", "dirtyStateMatchesGit",
+            "noStoreCoverage", "publicSourceChangedVersusBase",
+            "serverExceptions")}, indent=2))
+        print("tests passed: %s" % tests.get("passed"))
+        return 0 if tests.get("passed", True) else 1
     finally:
         if cdp is not None:
             try:

@@ -1,0 +1,330 @@
+{
+  "allResponseHeadersMatchSnapshot": true,
+  "allScreenshotsShareOneSnapshot": true,
+  "assetRevision": "b846a4b71533de170f953fcf7e14e365b324ba5c5904582289f458597c0e0270",
+  "baseCommit": "972700bf95641bb6615a72d859fdd037329cbc86",
+  "branch": "design-language",
+  "capturedAt": "2026-08-30T12:45:47.867775+00:00",
+  "chrome": "Chrome/152.0.7977.65",
+  "chromePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+  "commit": "972700bf95641bb6615a72d859fdd037329cbc86",
+  "consoleErrors": 1,
+  "contrastFailures": [],
+  "controlFileComparison": {
+    "authorityDocumentsUnchanged": true,
+    "changedSinceStart": [
+      "tests/test_preview_revision.py",
+      "tools/capture_preview_evidence.py",
+      "tools/serve_preview.py"
+    ],
+    "implementationFilesChanged": [
+      "tools/serve_preview.py",
+      "tools/capture_preview_evidence.py",
+      "tests/test_preview_revision.py"
+    ],
+    "notRecordedAtStart": []
+  },
+  "controlFileHashesAtStart": {
+    "design/golden-standard/DAGG-GOLDEN-STANDARD-MASTERPLAN.md": {
+      "bytes": 63365,
+      "sha256": "36570fa15e9c57a87fe20163551e45f1f1a3339f95e0e0c1498528cb6482afa1"
+    },
+    "design/golden-standard/packages/P0-RECONCILE-AND-PREVIEW.md": {
+      "bytes": 10480,
+      "sha256": "9ac8bc7a6405b56e1a6c5f25121cd8c87169f6a98a07df171b51a99878bbdccf"
+    },
+    "design/golden-standard/packages/P0R1-IMMUTABLE-PREVIEW-SNAPSHOT.md": {
+      "bytes": 10131,
+      "sha256": "cf87342ca673e997d0ddcc93dc37ddc507fea3489feeeb233d3cc37fa5ff63f2"
+    },
+    "tests/test_preview_revision.py": {
+      "bytes": 14129,
+      "sha256": "c6d5941c9325b2de45bd31391992f7eb3b3ac4c3212cba9e35c465b491cc3f94"
+    },
+    "tools/capture_preview_evidence.py": {
+      "bytes": 29867,
+      "sha256": "ec67170aa6346637ef95bf959ae8be62d3622e3c25cace635d1800c44846ddec"
+    },
+    "tools/serve_preview.py": {
+      "bytes": 11946,
+      "sha256": "c5fd3bdbe66d4df2f5bac1d6a36f2f2a0ae3bd4994143141cd5ac82fb93f76d3"
+    }
+  },
+  "controlFileHashesBeforeCommit": {
+    "design/golden-standard/DAGG-GOLDEN-STANDARD-MASTERPLAN.md": {
+      "bytes": 63365,
+      "sha256": "36570fa15e9c57a87fe20163551e45f1f1a3339f95e0e0c1498528cb6482afa1"
+    },
+    "design/golden-standard/packages/P0-RECONCILE-AND-PREVIEW.md": {
+      "bytes": 10480,
+      "sha256": "9ac8bc7a6405b56e1a6c5f25121cd8c87169f6a98a07df171b51a99878bbdccf"
+    },
+    "design/golden-standard/packages/P0R1-IMMUTABLE-PREVIEW-SNAPSHOT.md": {
+      "bytes": 10131,
+      "sha256": "cf87342ca673e997d0ddcc93dc37ddc507fea3489feeeb233d3cc37fa5ff63f2"
+    },
+    "tests/test_preview_revision.py": {
+      "bytes": 30046,
+      "sha256": "ed33401c9b3e547c97e9826b912bff442628d1e14f0002b3f3ab6b61a0a2c939"
+    },
+    "tools/capture_preview_evidence.py": {
+      "bytes": 37260,
+      "sha256": "8d4d5396126d7a56f9b122dfa87b17af646902f023ec6f348d9cf8b4d72a0013"
+    },
+    "tools/serve_preview.py": {
+      "bytes": 19693,
+      "sha256": "2cc3641fbb5e947974ffeca9d8f0a5695210df40b0ac72c1963cb7f79a35006b"
+    }
+  },
+  "deviations": [
+    "Documented preview port 8912 was already bound at capture time by a pre-existing process (pid 60887: /opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -m http.server 8912 --bind 127.0.0.1), so this evidence was captured on an ephemeral port. That process was started before this package and was left running; it is not the immutable preview server. Anyone opening http://127.0.0.1:8912/ while it lives is reviewing a live-disk static server, which the masterplan forbids. Stop it before the next review. The documented default is unchanged.",
+    "preview/directions/a-plus.html runs an IntersectionObserver carousel that auto-advances every 2600 ms, so its screenshots are not byte-reproducible. Each capture records carouselState and carouselSelected. Screenshot bytes are therefore not a snapshot identity check; the recorded snapshot ID is.",
+    "The page carries a loading=\"lazy\" image below the fold that captureBeyondViewport alone leaves blank. The harness sweeps the document and returns to the top before capturing; readiness stages in dom-metadata.json record that every image reached complete.",
+    "The only HTTP error and the only console error in the capture is Chrome's automatic /favicon.ico request returning 404. The repository has no favicon and the page does not reference one; no page asset failed to load.",
+    "9 placeholder links (href=\"#\") remain in this design-direction preview. Out of P0R1 scope; recorded for the package that owns navigation.",
+    "P0R1 changed no public design, copy, IA, interaction or asset byte. These screenshots therefore look identical to the P0 capture; they exist to prove that the immutable snapshot serves the same page, not to show a visual change.",
+    "Screenshots at 1440 and 390 px only. The full masterplan viewport ladder and the contrast, reduced-motion, no-JavaScript and computed text-size measurements are not covered by P0R1 and are recorded as unmeasured rather than as passes."
+  ],
+  "dirtyAtCapture": true,
+  "dirtyStateMatchesGit": true,
+  "documentedPortFree": false,
+  "documentedPortHolder": "pid 60887: /opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -m http.server 8912 --bind 127.0.0.1",
+  "domSnapshotMatchesEndpoint": true,
+  "evidenceExcludedFromSnapshot": true,
+  "evidenceFiles": [
+    "evidence/P0R1/a-plus-1440px.png",
+    "evidence/P0R1/a-plus-390px.png",
+    "evidence/P0R1/a-plus-head-dom.html",
+    "evidence/P0R1/control-hashes-start.txt",
+    "evidence/P0R1/dom-metadata.json",
+    "evidence/P0R1/response-headers.json",
+    "evidence/P0R1/revision.json",
+    "evidence/P0R1/server-stderr.txt",
+    "evidence/P0R1/tests-output.txt",
+    "evidence/P0R1/tests.json"
+  ],
+  "failedRequests": [],
+  "httpErrorResponses": [
+    "404 http://127.0.0.1:55707/favicon.ico"
+  ],
+  "minimumComputedTextPx": null,
+  "minimumTouchTarget": {
+    "height": 44,
+    "width": 44
+  },
+  "noJavaScript": "not measured; out of P0R1 scope",
+  "noStoreCoverage": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "raster-image",
+    "JSON"
+  ],
+  "package": "P0R1",
+  "placeholderLinks": 9,
+  "publicDiffVersusBase": [],
+  "publicSourceChangedVersusBase": false,
+  "reducedMotion": "not measured; out of P0R1 scope",
+  "revisionEndpointMatchesGit": true,
+  "screenshots": [
+    {
+      "pageUrl": "http://127.0.0.1:55707/preview/directions/a-plus.html",
+      "path": "evidence/P0R1/a-plus-1440px.png",
+      "pixelDimensions": {
+        "height": 5729,
+        "width": 1440
+      },
+      "serverDirty": true,
+      "serverRevision": "972700bf95641bb6615a72d859fdd037329cbc86",
+      "sha256": "d03c449df68c50af241fa2384aad7959b9d33a7d06826a0ba113d347ddc78698",
+      "snapshotId": "b846a4b71533de170f953fcf7e14e365b324ba5c5904582289f458597c0e0270",
+      "viewport": 1440
+    },
+    {
+      "pageUrl": "http://127.0.0.1:55707/preview/directions/a-plus.html",
+      "path": "evidence/P0R1/a-plus-390px.png",
+      "pixelDimensions": {
+        "height": 6741,
+        "width": 390
+      },
+      "serverDirty": true,
+      "serverRevision": "972700bf95641bb6615a72d859fdd037329cbc86",
+      "sha256": "4f9e148e15c5a32746cce54ec3d7980cbc14a52e0e13cfb8ed51a9a3791c1bf3",
+      "snapshotId": "b846a4b71533de170f953fcf7e14e365b324ba5c5904582289f458597c0e0270",
+      "viewport": 390
+    }
+  ],
+  "scrollWidthMatches": true,
+  "serverBaseUrl": "http://127.0.0.1:55707",
+  "serverExceptions": 0,
+  "serverStartupSeconds": 0.124,
+  "serverStartupUnderTwoSeconds": true,
+  "snapshotByteCount": 21923572,
+  "snapshotExcludes": [
+    ".git/**",
+    "evidence/**",
+    "**/__pycache__/**",
+    "**/*.pyc",
+    ".DS_Store"
+  ],
+  "snapshotFileCount": 93,
+  "snapshotId": "b846a4b71533de170f953fcf7e14e365b324ba5c5904582289f458597c0e0270",
+  "snapshotSkippedPaths": [],
+  "statesTested": [
+    "default (no interaction, no reduced-motion override)"
+  ],
+  "tests": {
+    "command": "python3 -B -m unittest discover -s tests -v",
+    "detail": {
+      "checks": {
+        "changedFileCannotChangeResponse": true,
+        "createdFileIsNotServed": true,
+        "deletedFileKeepsServing": true,
+        "directoryIndexFromSnapshot": true,
+        "dirtyReportingHonest": true,
+        "dirtyStateMatchesGit": true,
+        "domSnapshotMatchesEndpoint": true,
+        "evidenceExcludedFromSnapshot": true,
+        "evidenceNotServed": true,
+        "metaInsideHeadOnly": true,
+        "noPublicSourceChanged": true,
+        "oneSnapshotAcrossContentTypes": true,
+        "onlyOwnedFilesChanged": true,
+        "restartProducesNewSnapshot": true,
+        "revisionEndpointFields": true,
+        "revisionEndpointMatchesGit": true,
+        "servedHtmlIsSnapshotPlusMetaOnly": true,
+        "snapshotIdIndependentlyRecomputed": true,
+        "spacesAndQueryStrings": true,
+        "startupUnderTwoSeconds": true,
+        "traversalRefused": true,
+        "visiblePreviewChanged": false,
+        "zeroServerExceptions": true
+      },
+      "commit": "972700bf95641bb6615a72d859fdd037329cbc86",
+      "committedDiffVersusBase": [],
+      "coverage": [
+        "CSS",
+        "HTML",
+        "JSON",
+        "JavaScript",
+        "raster-image"
+      ],
+      "dirty": true,
+      "linkedCss": "/preview/directions/tokens.css",
+      "notes": [],
+      "probedPaths": [
+        "/preview/directions/a-plus.html",
+        "/preview/directions/tokens.css",
+        "/preview/site/site.js",
+        "/assets/dagg-logotype-dark.png",
+        "/__revision",
+        "/assets/",
+        "/",
+        "/preview/",
+        "/missing.html",
+        "/../etc/passwd",
+        "/%2e%2e/etc/passwd",
+        "/preview/directions/a-plus.html?v=1",
+        "/design/a%20file%20with%20spaces.md",
+        "/evidence/P0/result.json",
+        "/assets/img/",
+        "HEAD /preview/directions/a-plus.html"
+      ],
+      "serverStderr": "Dagg immutable preview  http://127.0.0.1:55665/\n  revision 972700b (design-language) dirty=true\n  snapshot b846a4b71533  93 files  21923572 bytes\n  snapshotId b846a4b71533de170f953fcf7e14e365b324ba5c5904582289f458597c0e0270\n",
+      "snapshotByteCount": 21923572,
+      "snapshotFileCount": 93,
+      "snapshotId": "b846a4b71533de170f953fcf7e14e365b324ba5c5904582289f458597c0e0270",
+      "startupSeconds": 0.123,
+      "workingTreeChanges": [
+        "README.md",
+        "design/golden-standard/DAGG-GOLDEN-STANDARD-MASTERPLAN.md",
+        "design/golden-standard/packages/P0-RECONCILE-AND-PREVIEW.md",
+        "tests/test_preview_revision.py",
+        "tools/capture_preview_evidence.py",
+        "tools/serve_preview.py",
+        "design/golden-standard/packages/P0R1-IMMUTABLE-PREVIEW-SNAPSHOT.md",
+        "evidence/P0/REJECTED-BY-CODEX.md",
+        "evidence/P0R1/"
+      ]
+    },
+    "outcomes": [
+      [
+        "test_06_and_07_post_startup_mutation_cannot_reach_the_client (test_preview_revision.ImmutabilityTest.test_06_and_07_post_startup_mutation_cannot_reach_the_client)",
+        "ok"
+      ],
+      [
+        "test_08_restart_serves_the_new_snapshot (test_preview_revision.ImmutabilityTest.test_08_restart_serves_the_new_snapshot)",
+        "ok"
+      ],
+      [
+        "test_09_evidence_files_do_not_change_the_snapshot_id (test_preview_revision.ImmutabilityTest.test_09_evidence_files_do_not_change_the_snapshot_id)",
+        "ok"
+      ],
+      [
+        "test_10_dirty_state_is_truthful_at_snapshot_start (test_preview_revision.ImmutabilityTest.test_10_dirty_state_is_truthful_at_snapshot_start)",
+        "ok"
+      ],
+      [
+        "test_15_only_owned_files_differ_from_the_base_commit (test_preview_revision.ScopeTest.test_15_only_owned_files_differ_from_the_base_commit)",
+        "ok"
+      ],
+      [
+        "test_01_revision_endpoint_has_every_required_field (test_preview_revision.SnapshotContractTest.test_01_revision_endpoint_has_every_required_field)",
+        "ok"
+      ],
+      [
+        "test_02_every_content_type_carries_one_snapshot_id (test_preview_revision.SnapshotContractTest.test_02_every_content_type_carries_one_snapshot_id)",
+        "ok"
+      ],
+      [
+        "test_03_html_has_exactly_one_of_each_meta_inside_head (test_preview_revision.SnapshotContractTest.test_03_html_has_exactly_one_of_each_meta_inside_head)",
+        "ok"
+      ],
+      [
+        "test_04_stripping_the_meta_tags_restores_the_snapshot_bytes (test_preview_revision.SnapshotContractTest.test_04_stripping_the_meta_tags_restores_the_snapshot_bytes)",
+        "ok"
+      ],
+      [
+        "test_05_snapshot_id_recomputes_from_the_declared_algorithm (test_preview_revision.SnapshotContractTest.test_05_snapshot_id_recomputes_from_the_declared_algorithm)",
+        "ok"
+      ],
+      [
+        "test_11_no_store_headers_on_every_content_type (test_preview_revision.SnapshotContractTest.test_11_no_store_headers_on_every_content_type)",
+        "ok"
+      ],
+      [
+        "test_12_traversal_spaces_queries_and_directory_indexes (test_preview_revision.SnapshotContractTest.test_12_traversal_spaces_queries_and_directory_indexes)",
+        "ok"
+      ],
+      [
+        "Drive success, refusal, 404, HEAD and directory paths through a",
+        "ok"
+      ],
+      [
+        "test_14_startup_is_under_two_seconds (test_preview_revision.SnapshotContractTest.test_14_startup_is_under_two_seconds)",
+        "ok"
+      ]
+    ],
+    "passed": true,
+    "returnCode": 0,
+    "seconds": 1.637,
+    "summary": [
+      "Ran 14 tests in 1.577s",
+      "OK"
+    ]
+  },
+  "textCoverage": [],
+  "unmeasuredInP0R1": [
+    "minimumComputedTextPx",
+    "textCoverage",
+    "contrastFailures",
+    "reducedMotion",
+    "noJavaScript"
+  ],
+  "viewportScope": "P0R1 captures 1440 and 390 only; the full masterplan viewport ladder belongs to later packages.",
+  "viewports": [
+    390,
+    1440
+  ]
+}

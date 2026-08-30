@@ -7,11 +7,13 @@ Source of truth: private `founder-os` repo (`sites/dagg/`).
 
 ## Golden-standard preview
 
-Run the revision-safe preview command below. It serves every HTML, CSS, JavaScript and image response with no-store headers, exposes the exact Git revision and dirty state at `/__revision`, and injects the same revision into each served HTML document as `<meta name="dagg-revision">`. Do not review the site through another static server.
+Run the immutable preview command below. At startup it freezes every served HTML, CSS, JavaScript, font and image into one in-memory snapshot, computes a deterministic snapshot ID and exposes the commit, dirty state and snapshot ID at `/__revision`, in response headers and in invisible HTML metadata. A running preview never reads changed source bytes from disk. Restart it after every source change and do not review the site through another static server.
 
 ```
 python3 tools/serve_preview.py --port 8912
 ```
+
+The terminal prints the snapshot ID. Record it with the full commit hash and dirty state in every review. If two screenshots do not carry the same snapshot ID, they are not comparable.
 
 Then open `http://127.0.0.1:8912/preview/directions/a-plus.html`. Use `--port` to
 choose another port and `--host` to change the interface; the default binds
@@ -27,4 +29,4 @@ python3 -B tools/capture_preview_evidence.py
 
 The capture harness starts the same server, drives the installed Google Chrome
 over the Chrome DevTools Protocol and writes screenshots, the revision
-response, response headers and `evidence/P0/result.json` into `evidence/P0/`.
+response, response headers and `evidence/P0R1/result.json` into `evidence/P0R1/`.
