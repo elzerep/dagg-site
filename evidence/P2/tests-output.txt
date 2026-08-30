@@ -1,0 +1,23 @@
+test_01_every_served_asset_carries_one_snapshot_id (test_p2_foundations.RenderedSpecimen.test_01_every_served_asset_carries_one_snapshot_id)
+HTML, both stylesheets, every WOFF2, both logotype PNGs and the ... ok
+test_02_no_document_horizontal_scroll_at_any_required_width (test_p2_foundations.RenderedSpecimen.test_02_no_document_horizontal_scroll_at_any_required_width) ... ok
+test_03_every_rendered_text_node_is_at_least_twelve_px (test_p2_foundations.RenderedSpecimen.test_03_every_rendered_text_node_is_at_least_twelve_px)
+Coverage is every text node in the document, found with a ... ok
+test_04_type_scale_matches_the_frozen_endpoints (test_p2_foundations.RenderedSpecimen.test_04_type_scale_matches_the_frozen_endpoints) ... ok
+test_05_gutters_and_the_field_ceiling (test_p2_foundations.RenderedSpecimen.test_05_gutters_and_the_field_ceiling) ... ok
+test_06_twelve_equal_tracks_and_the_940_collapse (test_p2_foundations.RenderedSpecimen.test_06_twelve_equal_tracks_and_the_940_collapse) ... ok
+test_07_every_interactive_target_is_at_least_44_by_44 (test_p2_foundations.RenderedSpecimen.test_07_every_interactive_target_is_at_least_44_by_44) ... ok
+test_08_keyboard_reaches_every_control_once_with_a_visible_ring (test_p2_foundations.RenderedSpecimen.test_08_keyboard_reaches_every_control_once_with_a_visible_ring) ... ok
+test_09_accepted_pairs_meet_aa_and_rejected_pairs_are_marked (test_p2_foundations.RenderedSpecimen.test_09_accepted_pairs_meet_aa_and_rejected_pairs_are_marked)
+Every rendered text node is checked, not only the pair specimens. ... ok
+test_10_all_three_families_load_locally_with_their_licenses (test_p2_foundations.RenderedSpecimen.test_10_all_three_families_load_locally_with_their_licenses) ... ok
+test_11_no_request_leaves_localhost_and_no_console_error_occurs (test_p2_foundations.RenderedSpecimen.test_11_no_request_leaves_localhost_and_no_console_error_occurs) ... ok
+test_12_reduced_motion_removes_transitions_without_changing_layout (test_p2_foundations.RenderedSpecimen.test_12_reduced_motion_removes_transitions_without_changing_layout) ... ok
+test_13_only_p2_owned_files_differ_and_public_bytes_are_identical (test_p2_foundations.RenderedSpecimen.test_13_only_p2_owned_files_differ_and_public_bytes_are_identical) ... ok
+test_14_the_specimen_renders_the_contract_it_documents (test_p2_foundations.RenderedSpecimen.test_14_the_specimen_renders_the_contract_it_documents)
+P2 section 6: the specimen must actually contain the eight roles, ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 17.153s
+
+OK

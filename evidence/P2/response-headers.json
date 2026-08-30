@@ -1,0 +1,189 @@
+{
+  "CSS-page": {
+    "bytes": 15331,
+    "contentType": "text/css; charset=utf-8",
+    "headers": {
+      "Cache-Control": "no-store, max-age=0",
+      "Content-Length": "15331",
+      "Content-Type": "text/css; charset=utf-8",
+      "Date": "Sun, 30 Aug 2026 14:12:07 GMT",
+      "Expires": "0",
+      "Pragma": "no-cache",
+      "Server": "DaggPreview/2.0 Python/3.14.7",
+      "X-Dagg-Dirty": "true",
+      "X-Dagg-Revision": "cf9bdcdfa1e47ff75e193155feee00b0bda67e86",
+      "X-Dagg-Snapshot": "89364097327005263024c562adf68dbdd8c31dc162db75711afcc70294a9942b"
+    },
+    "noStore": true,
+    "sha256": "2885d5e0cf39e5fa0da15429da4128d4b17c00ead8edc62f9fef1513150be6f5",
+    "snapshotMatches": true,
+    "status": 200,
+    "url": "http://127.0.0.1:60966/preview/golden-standard/foundations/foundations.css"
+  },
+  "CSS-tokens": {
+    "bytes": 6231,
+    "contentType": "text/css; charset=utf-8",
+    "headers": {
+      "Cache-Control": "no-store, max-age=0",
+      "Content-Length": "6231",
+      "Content-Type": "text/css; charset=utf-8",
+      "Date": "Sun, 30 Aug 2026 14:12:07 GMT",
+      "Expires": "0",
+      "Pragma": "no-cache",
+      "Server": "DaggPreview/2.0 Python/3.14.7",
+      "X-Dagg-Dirty": "true",
+      "X-Dagg-Revision": "cf9bdcdfa1e47ff75e193155feee00b0bda67e86",
+      "X-Dagg-Snapshot": "89364097327005263024c562adf68dbdd8c31dc162db75711afcc70294a9942b"
+    },
+    "noStore": true,
+    "sha256": "68005110f62bf2f476a4e842497ae8423bd6e8cb8add75c43d99a70f6268803e",
+    "snapshotMatches": true,
+    "status": 200,
+    "url": "http://127.0.0.1:60966/design/golden-standard/system/tokens.css"
+  },
+  "HTML": {
+    "bytes": 18608,
+    "contentType": "text/html; charset=utf-8",
+    "headers": {
+      "Cache-Control": "no-store, max-age=0",
+      "Content-Length": "18608",
+      "Content-Type": "text/html; charset=utf-8",
+      "Date": "Sun, 30 Aug 2026 14:12:07 GMT",
+      "Expires": "0",
+      "Pragma": "no-cache",
+      "Server": "DaggPreview/2.0 Python/3.14.7",
+      "X-Dagg-Dirty": "true",
+      "X-Dagg-Revision": "cf9bdcdfa1e47ff75e193155feee00b0bda67e86",
+      "X-Dagg-Snapshot": "89364097327005263024c562adf68dbdd8c31dc162db75711afcc70294a9942b"
+    },
+    "noStore": true,
+    "sha256": "9cbc0378f33c970d28f1b5024e875deb5c1046db12e648880fe45a474dd9dc77",
+    "snapshotMatches": true,
+    "status": 200,
+    "url": "http://127.0.0.1:60966/preview/golden-standard/foundations/index.html"
+  },
+  "JSON": {
+    "bytes": 642,
+    "headers": {
+      "Cache-Control": "no-store, max-age=0",
+      "Content-Length": "642",
+      "Content-Type": "application/json; charset=utf-8",
+      "Date": "Sun, 30 Aug 2026 14:12:07 GMT",
+      "Expires": "0",
+      "Pragma": "no-cache",
+      "Server": "DaggPreview/2.0 Python/3.14.7",
+      "X-Dagg-Dirty": "true",
+      "X-Dagg-Revision": "cf9bdcdfa1e47ff75e193155feee00b0bda67e86",
+      "X-Dagg-Snapshot": "89364097327005263024c562adf68dbdd8c31dc162db75711afcc70294a9942b"
+    },
+    "noStore": true,
+    "snapshotMatches": true,
+    "status": 200,
+    "url": "http://127.0.0.1:60966/__revision"
+  },
+  "PNG-logotype": {
+    "bytes": 29822,
+    "contentType": "image/png",
+    "headers": {
+      "Cache-Control": "no-store, max-age=0",
+      "Content-Length": "29822",
+      "Content-Type": "image/png",
+      "Date": "Sun, 30 Aug 2026 14:12:07 GMT",
+      "Expires": "0",
+      "Pragma": "no-cache",
+      "Server": "DaggPreview/2.0 Python/3.14.7",
+      "X-Dagg-Dirty": "true",
+      "X-Dagg-Revision": "cf9bdcdfa1e47ff75e193155feee00b0bda67e86",
+      "X-Dagg-Snapshot": "89364097327005263024c562adf68dbdd8c31dc162db75711afcc70294a9942b"
+    },
+    "noStore": true,
+    "sha256": "d41c498d3776d82990e4159776cbd2de455db8b97b1ab05525df174919a409bb",
+    "snapshotMatches": true,
+    "status": 200,
+    "url": "http://127.0.0.1:60966/assets/dagg-logotype.png"
+  },
+  "PNG-logotype-dark": {
+    "bytes": 23718,
+    "contentType": "image/png",
+    "headers": {
+      "Cache-Control": "no-store, max-age=0",
+      "Content-Length": "23718",
+      "Content-Type": "image/png",
+      "Date": "Sun, 30 Aug 2026 14:12:07 GMT",
+      "Expires": "0",
+      "Pragma": "no-cache",
+      "Server": "DaggPreview/2.0 Python/3.14.7",
+      "X-Dagg-Dirty": "true",
+      "X-Dagg-Revision": "cf9bdcdfa1e47ff75e193155feee00b0bda67e86",
+      "X-Dagg-Snapshot": "89364097327005263024c562adf68dbdd8c31dc162db75711afcc70294a9942b"
+    },
+    "noStore": true,
+    "sha256": "b7c21f23ce98e702077a1840100abd08601f13b0ce013a0ddf27c883c20fdc8f",
+    "snapshotMatches": true,
+    "status": 200,
+    "url": "http://127.0.0.1:60966/assets/dagg-logotype-dark.png"
+  },
+  "WOFF2-Geist-Variable.woff2": {
+    "bytes": 69760,
+    "contentType": "font/woff2",
+    "headers": {
+      "Cache-Control": "no-store, max-age=0",
+      "Content-Length": "69760",
+      "Content-Type": "font/woff2",
+      "Date": "Sun, 30 Aug 2026 14:12:07 GMT",
+      "Expires": "0",
+      "Pragma": "no-cache",
+      "Server": "DaggPreview/2.0 Python/3.14.7",
+      "X-Dagg-Dirty": "true",
+      "X-Dagg-Revision": "cf9bdcdfa1e47ff75e193155feee00b0bda67e86",
+      "X-Dagg-Snapshot": "89364097327005263024c562adf68dbdd8c31dc162db75711afcc70294a9942b"
+    },
+    "noStore": true,
+    "sha256": "2ffebe993e969069a9789d15164b7715d42491b5835516c5e3b935d5f81b05f1",
+    "snapshotMatches": true,
+    "status": 200,
+    "url": "http://127.0.0.1:60966/assets/fonts/golden-standard/geist/Geist-Variable.woff2"
+  },
+  "WOFF2-JetBrainsMono-Variable.woff2": {
+    "bytes": 113672,
+    "contentType": "font/woff2",
+    "headers": {
+      "Cache-Control": "no-store, max-age=0",
+      "Content-Length": "113672",
+      "Content-Type": "font/woff2",
+      "Date": "Sun, 30 Aug 2026 14:12:07 GMT",
+      "Expires": "0",
+      "Pragma": "no-cache",
+      "Server": "DaggPreview/2.0 Python/3.14.7",
+      "X-Dagg-Dirty": "true",
+      "X-Dagg-Revision": "cf9bdcdfa1e47ff75e193155feee00b0bda67e86",
+      "X-Dagg-Snapshot": "89364097327005263024c562adf68dbdd8c31dc162db75711afcc70294a9942b"
+    },
+    "noStore": true,
+    "sha256": "31ec365b93e4bad6f202ce23352a56d01ca4462b2afc782ed2cf6fa42ca9ac0e",
+    "snapshotMatches": true,
+    "status": 200,
+    "url": "http://127.0.0.1:60966/assets/fonts/golden-standard/jetbrains-mono/JetBrainsMono-Variable.woff2"
+  },
+  "WOFF2-Newsreader-Variable.woff2": {
+    "bytes": 215264,
+    "contentType": "font/woff2",
+    "headers": {
+      "Cache-Control": "no-store, max-age=0",
+      "Content-Length": "215264",
+      "Content-Type": "font/woff2",
+      "Date": "Sun, 30 Aug 2026 14:12:07 GMT",
+      "Expires": "0",
+      "Pragma": "no-cache",
+      "Server": "DaggPreview/2.0 Python/3.14.7",
+      "X-Dagg-Dirty": "true",
+      "X-Dagg-Revision": "cf9bdcdfa1e47ff75e193155feee00b0bda67e86",
+      "X-Dagg-Snapshot": "89364097327005263024c562adf68dbdd8c31dc162db75711afcc70294a9942b"
+    },
+    "noStore": true,
+    "sha256": "f25206ca663fd7dcf9c5305a2fa9767acfe354b284238232dce9a4a0383ff9ac",
+    "snapshotMatches": true,
+    "status": 200,
+    "url": "http://127.0.0.1:60966/assets/fonts/golden-standard/newsreader/Newsreader-Variable.woff2"
+  }
+}

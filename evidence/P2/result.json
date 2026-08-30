@@ -1,0 +1,2246 @@
+{
+  "assetRevision": "89364097327005263024c562adf68dbdd8c31dc162db75711afcc70294a9942b",
+  "baseCommit": "cf9bdcdfa1e47ff75e193155feee00b0bda67e86",
+  "branch": "design-language",
+  "capturedAt": "2026-08-30T14:12:20.909427+00:00",
+  "chrome": "Chrome/152.0.7977.65",
+  "chromeDriver": "Chrome DevTools Protocol over a raw WebSocket; no Playwright, Selenium or bundled browser",
+  "chromePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+  "commit": "cf9bdcdfa1e47ff75e193155feee00b0bda67e86",
+  "consoleErrors": 0,
+  "contrastExclusions": [
+    {
+      "fontSizePx": 17,
+      "ratio": 2.69,
+      "reason": "deliberately rejected pair specimen",
+      "required": 4.5,
+      "text": "--coral / --paper",
+      "viewport": 320
+    },
+    {
+      "fontSizePx": 17,
+      "ratio": 3.35,
+      "reason": "deliberately rejected pair specimen",
+      "required": 4.5,
+      "text": "--sage / --paper",
+      "viewport": 320
+    },
+    {
+      "fontSizePx": 17,
+      "ratio": 2.39,
+      "reason": "disabled control, WCAG 1.4.3 exempt",
+      "required": 4.5,
+      "text": "Primary action",
+      "viewport": 320
+    },
+    {
+      "fontSizePx": 17,
+      "ratio": 2.39,
+      "reason": "disabled control, WCAG 1.4.3 exempt",
+      "required": 4.5,
+      "text": "Secondary action",
+      "viewport": 320
+    },
+    {
+      "fontSizePx": 17,
+      "ratio": 2.69,
+      "reason": "deliberately rejected pair specimen",
+      "required": 4.5,
+      "text": "--coral / --paper",
+      "viewport": 360
+    },
+    {
+      "fontSizePx": 17,
+      "ratio": 3.35,
+      "reason": "deliberately rejected pair specimen",
+      "required": 4.5,
+      "text": "--sage / --paper",
+      "viewport": 360
+    },
+    {
+      "fontSizePx": 17,
+      "ratio": 2.39,
+      "reason": "disabled control, WCAG 1.4.3 exempt",
+      "required": 4.5,
+      "text": "Primary action",
+      "viewport": 360
+    },
+    {
+      "fontSizePx": 17,
+      "ratio": 2.39,
+      "reason": "disabled control, WCAG 1.4.3 exempt",
+      "required": 4.5,
+      "text": "Secondary action",
+      "viewport": 360
+    },
+    {
+      "fontSizePx": 17,
+      "ratio": 2.69,
+      "reason": "deliberately rejected pair specimen",
+      "required": 4.5,
+      "text": "--coral / --paper",
+      "viewport": 390
+    },
+    {
+      "fontSizePx": 17,
+      "ratio": 3.35,
+      "reason": "deliberately rejected pair specimen",
+      "required": 4.5,
+      "text": "--sage / --paper",
+      "viewport": 390
+    },
+    {
+      "fontSizePx": 17,
+      "ratio": 2.39,
+      "reason": "disabled control, WCAG 1.4.3 exempt",
+      "required": 4.5,
+      "text": "Primary action",
+      "viewport": 390
+    },
+    {
+      "fontSizePx": 17,
+      "ratio": 2.39,
+      "reason": "disabled control, WCAG 1.4.3 exempt",
+      "required": 4.5,
+      "text": "Secondary action",
+      "viewport": 390
+    },
+    {
+      "fontSizePx": 17.36,
+      "ratio": 2.69,
+      "reason": "deliberately rejected pair specimen",
+      "required": 4.5,
+      "text": "--coral / --paper",
+      "viewport": 768
+    },
+    {
+      "fontSizePx": 17.36,
+      "ratio": 3.35,
+      "reason": "deliberately rejected pair specimen",
+      "required": 4.5,
+      "text": "--sage / --paper",
+      "viewport": 768
+    },
+    {
+      "fontSizePx": 17.36,
+      "ratio": 2.39,
+      "reason": "disabled control, WCAG 1.4.3 exempt",
+      "required": 4.5,
+      "text": "Primary action",
+      "viewport": 768
+    },
+    {
+      "fontSizePx": 17.36,
+      "ratio": 2.39,
+      "reason": "disabled control, WCAG 1.4.3 exempt",
+      "required": 4.5,
+      "text": "Secondary action",
+      "viewport": 768
+    },
+    {
+      "fontSizePx": 17.6038,
+      "ratio": 2.69,
+      "reason": "deliberately rejected pair specimen",
+      "required": 4.5,
+      "text": "--coral / --paper",
+      "viewport": 1024
+    },
+    {
+      "fontSizePx": 17.6038,
+      "ratio": 3.35,
+      "reason": "deliberately rejected pair specimen",
+      "required": 4.5,
+      "text": "--sage / --paper",
+      "viewport": 1024
+    },
+    {
+      "fontSizePx": 17.6038,
+      "ratio": 2.39,
+      "reason": "disabled control, WCAG 1.4.3 exempt",
+      "required": 4.5,
+      "text": "Primary action",
+      "viewport": 1024
+    },
+    {
+      "fontSizePx": 17.6038,
+      "ratio": 2.39,
+      "reason": "disabled control, WCAG 1.4.3 exempt",
+      "required": 4.5,
+      "text": "Secondary action",
+      "viewport": 1024
+    },
+    {
+      "fontSizePx": 18,
+      "ratio": 2.69,
+      "reason": "deliberately rejected pair specimen",
+      "required": 4.5,
+      "text": "--coral / --paper",
+      "viewport": 1440
+    },
+    {
+      "fontSizePx": 18,
+      "ratio": 3.35,
+      "reason": "deliberately rejected pair specimen",
+      "required": 4.5,
+      "text": "--sage / --paper",
+      "viewport": 1440
+    },
+    {
+      "fontSizePx": 18,
+      "ratio": 2.39,
+      "reason": "disabled control, WCAG 1.4.3 exempt",
+      "required": 4.5,
+      "text": "Primary action",
+      "viewport": 1440
+    },
+    {
+      "fontSizePx": 18,
+      "ratio": 2.39,
+      "reason": "disabled control, WCAG 1.4.3 exempt",
+      "required": 4.5,
+      "text": "Secondary action",
+      "viewport": 1440
+    }
+  ],
+  "contrastFailures": [],
+  "deviations": [
+    "The acceptance command is `unittest discover -p test_p2_foundations.py`, not a full `discover -s tests`. tests/test_preview_revision.py pins its scope assertion to the P0R2 base commit 9e0a670 and therefore fails on every file P1 and P2 legitimately added. P2 does not own that file and did not repair it; the P0R2 suite otherwise still passes and its stale scope test belongs to whoever next owns that file.",
+    "The twelve-column ruler renders the real content grid at every width. Below 768 px the twelve tracks are hairlines, because twelve columns with a 24 px gap genuinely leave about 7 px per track at 390 px and about 1 px at 320 px. The track numbers are therefore hidden below 768 px and the mobile layout spans the full field instead of using column spans. That is the measured truth about the frozen grid on a phone, not a rendering fault.",
+    "Screenshots are full-page at 1440, 390, 360 and 320 px, plus two viewport-height focus captures at 1440 px and one reduced-motion capture at 390 px. The 768 and 1024 px viewports are measured for overflow, gutters and grid collapse but are not screenshotted; P2 section 8 does not require them.",
+    "Contrast is computed by this harness from the colours Chrome actually rendered, composited through every ancestor background, for every rendered text node. Two categories are excluded from the pass requirement and named individually in contrastExclusions: the two deliberately rejected Coral and Sage specimens, and text inside disabled controls, which WCAG 1.4.3 exempts.",
+    "No SVG text exists on this page, so the SVG half of the text sweep covered zero nodes. The sweep is a document-wide TreeWalker over every text node rather than a selector list, so it would have found SVG text had any been rendered. Recorded as coverage, not as a pass."
+  ],
+  "dirtyAtCapture": true,
+  "dirtyStateMatchesGit": true,
+  "evidenceExcludedFromSnapshot": true,
+  "evidenceFiles": [
+    "evidence/P2/dom-metadata.json",
+    "evidence/P2/focus-ink-secondary-1440px.png",
+    "evidence/P2/focus-paper-primary-1440px.png",
+    "evidence/P2/foundations-1440px.png",
+    "evidence/P2/foundations-320px.png",
+    "evidence/P2/foundations-360px.png",
+    "evidence/P2/foundations-390px.png",
+    "evidence/P2/foundations-head-dom.html",
+    "evidence/P2/foundations-reduced-motion-390px.png",
+    "evidence/P2/request-log.json",
+    "evidence/P2/response-headers.json",
+    "evidence/P2/revision.json",
+    "evidence/P2/server-stderr.txt",
+    "evidence/P2/tests-output.txt",
+    "evidence/P2/tests.json"
+  ],
+  "failedRequests": [],
+  "fieldWidths": {
+    "1024": [
+      928
+    ],
+    "1440": [
+      1240
+    ],
+    "320": [
+      280
+    ],
+    "360": [
+      320
+    ],
+    "390": [
+      350
+    ],
+    "768": [
+      720
+    ]
+  },
+  "focus": [
+    {
+      "domIndex": 0,
+      "matchesFocusVisible": true,
+      "name": "paper-primary",
+      "onInk": false,
+      "outlineColor": [
+        20,
+        20,
+        19
+      ],
+      "outlineContrastAgainstSurface": 14.73,
+      "outlineOffset": 2,
+      "outlineStyle": "solid",
+      "outlineWidth": 2,
+      "rect": {
+        "height": 44,
+        "width": 172.03125,
+        "x": 132,
+        "y": 428.078125
+      },
+      "screenshot": "evidence/P2/focus-paper-primary-1440px.png",
+      "surface": [
+        232,
+        230,
+        220
+      ],
+      "tag": "BUTTON",
+      "text": "Primary action"
+    },
+    {
+      "domIndex": 4,
+      "matchesFocusVisible": true,
+      "name": "ink-secondary",
+      "onInk": true,
+      "outlineColor": [
+        240,
+        238,
+        230
+      ],
+      "outlineContrastAgainstSurface": 15.87,
+      "outlineOffset": 2,
+      "outlineStyle": "solid",
+      "outlineWidth": 2,
+      "rect": {
+        "height": 44,
+        "width": 197,
+        "x": 956.03125,
+        "y": 474.4375
+      },
+      "screenshot": "evidence/P2/focus-ink-secondary-1440px.png",
+      "surface": [
+        20,
+        20,
+        19
+      ],
+      "tag": "BUTTON",
+      "text": "Secondary action"
+    }
+  ],
+  "fontProvenance": {
+    "assets/fonts/golden-standard/geist/Geist-Variable.woff2": {
+      "bytes": 69760,
+      "present": true,
+      "sha256": "2ffebe993e969069a9789d15164b7715d42491b5835516c5e3b935d5f81b05f1"
+    },
+    "assets/fonts/golden-standard/geist/LICENSE.txt": {
+      "bytes": 4368,
+      "present": true,
+      "sha256": "930853ee1daa68554d9e35c8a9175affb74f699fad9a5da6ee5ebe76379d9137"
+    },
+    "assets/fonts/golden-standard/geist/OFL.txt": {
+      "bytes": 4383,
+      "present": true,
+      "sha256": "c683bfbcc7e087f5d37a54ef628f10387c451a83ddc459b151403a164ac46c90"
+    },
+    "assets/fonts/golden-standard/jetbrains-mono/JetBrainsMono-Variable.woff2": {
+      "bytes": 113672,
+      "present": true,
+      "sha256": "31ec365b93e4bad6f202ce23352a56d01ca4462b2afc782ed2cf6fa42ca9ac0e"
+    },
+    "assets/fonts/golden-standard/jetbrains-mono/OFL.txt": {
+      "bytes": 4399,
+      "present": true,
+      "sha256": "a76abf002c49097d146e86740a3105a5d00450b1592e820a1109a8c5680cd697"
+    },
+    "assets/fonts/golden-standard/newsreader/Newsreader-Variable.woff2": {
+      "bytes": 215264,
+      "present": true,
+      "sha256": "f25206ca663fd7dcf9c5305a2fa9767acfe354b284238232dce9a4a0383ff9ac"
+    },
+    "assets/fonts/golden-standard/newsreader/OFL.txt": {
+      "bytes": 4394,
+      "present": true,
+      "sha256": "fdfad38143ec470553cae82a1e45320bdd1b9ec70415d37bd0171051d8a4ded8"
+    }
+  },
+  "fontsCheck": {
+    "Geist": true,
+    "JetBrains Mono": true,
+    "Newsreader": true
+  },
+  "gridTracks1440": [
+    74,
+    74,
+    74,
+    74,
+    74,
+    74,
+    74,
+    74,
+    74,
+    74,
+    74,
+    74
+  ],
+  "gutters": {
+    "1024": {
+      "declared": 48,
+      "matches": true,
+      "measured": [
+        [
+          48,
+          48
+        ]
+      ]
+    },
+    "1440": {
+      "declared": 72,
+      "matches": true,
+      "measured": [
+        [
+          72,
+          72
+        ]
+      ]
+    },
+    "320": {
+      "declared": 20,
+      "matches": true,
+      "measured": [
+        [
+          20,
+          20
+        ]
+      ]
+    },
+    "360": {
+      "declared": 20,
+      "matches": true,
+      "measured": [
+        [
+          20,
+          20
+        ]
+      ]
+    },
+    "390": {
+      "declared": 20,
+      "matches": true,
+      "measured": [
+        [
+          20,
+          20
+        ]
+      ]
+    },
+    "768": {
+      "declared": 24,
+      "matches": true,
+      "measured": [
+        [
+          24,
+          24
+        ]
+      ]
+    }
+  },
+  "httpErrorResponses": [],
+  "label": "accepted-pre-commit",
+  "loadedFontFamilies": [
+    "Geist",
+    "JetBrains Mono",
+    "Newsreader"
+  ],
+  "minimumComputedTextPx": 12,
+  "minimumTouchTarget": {
+    "height": 44,
+    "width": 44
+  },
+  "noJavaScript": "passed: 0 script elements, 0 inline event attributes, 0 bytes of page JavaScript",
+  "noStoreCoverage": [
+    "HTML",
+    "CSS-tokens",
+    "CSS-page",
+    "PNG-logotype-dark",
+    "PNG-logotype",
+    "WOFF2-Geist-Variable.woff2",
+    "WOFF2-Newsreader-Variable.woff2",
+    "WOFF2-JetBrainsMono-Variable.woff2",
+    "JSON"
+  ],
+  "nonLocalRequests": [],
+  "package": "P2",
+  "performance": {
+    "budget": {
+      "cssBytesMax": 56320,
+      "htmlBytesMax": 40960,
+      "javaScriptBytesMax": 0,
+      "woff2BytesMax": 768000
+    },
+    "combinedCssBytes": 21562,
+    "combinedWoff2Bytes": 398696,
+    "htmlBytes": 18608,
+    "javaScriptBytes": 0,
+    "pageCssBytes": 15331,
+    "tokensCssBytes": 6231,
+    "withinBudget": true,
+    "woff2Bytes": {
+      "/assets/fonts/golden-standard/geist/Geist-Variable.woff2": 69760,
+      "/assets/fonts/golden-standard/jetbrains-mono/JetBrainsMono-Variable.woff2": 113672,
+      "/assets/fonts/golden-standard/newsreader/Newsreader-Variable.woff2": 215264
+    }
+  },
+  "placeholderLinks": 0,
+  "reducedMotion": "passed",
+  "reducedMotionLayoutIdentical": true,
+  "reducedMotionTransitionsRemoved": true,
+  "requestsAreLocalOnly": true,
+  "revisionEndpointMatchesGit": true,
+  "rhythm1440": [
+    {
+      "background": [
+        240,
+        238,
+        230
+      ],
+      "caption": "One long carrier.",
+      "height": 720,
+      "name": "carrier"
+    },
+    {
+      "background": [
+        250,
+        249,
+        245
+      ],
+      "caption": "One short punctuation.",
+      "height": 240,
+      "name": "punctuation"
+    },
+    {
+      "background": [
+        240,
+        238,
+        230
+      ],
+      "caption": "One contained instrument.",
+      "height": 360,
+      "name": "instrument"
+    },
+    {
+      "background": [
+        240,
+        238,
+        230
+      ],
+      "caption": "One proof split.",
+      "height": 420,
+      "name": "proof"
+    },
+    {
+      "background": [
+        20,
+        20,
+        19
+      ],
+      "caption": "One decisive close.",
+      "height": 320,
+      "name": "close"
+    }
+  ],
+  "scope": {
+    "committedVersusBase": [],
+    "publicOrLegacyChanged": [],
+    "workingTree": [
+      "assets/fonts/",
+      "design/golden-standard/packages/P2-FOUNDATIONS.md",
+      "design/golden-standard/system/",
+      "evidence/P2/",
+      "preview/golden-standard/",
+      "tests/test_p2_foundations.py",
+      "tools/capture_p2_evidence.py"
+    ]
+  },
+  "screenshotViewports": [
+    1440,
+    390,
+    360,
+    320
+  ],
+  "screenshots": [
+    {
+      "path": "evidence/P2/foundations-320px.png",
+      "pixelDimensions": {
+        "height": 9098,
+        "width": 320
+      },
+      "sha256": "853de28aaa2b023f38c9bf1fc7f378263faa70010bb84730c37a734700dd301e",
+      "snapshotId": "89364097327005263024c562adf68dbdd8c31dc162db75711afcc70294a9942b",
+      "state": "default",
+      "viewport": 320
+    },
+    {
+      "path": "evidence/P2/foundations-360px.png",
+      "pixelDimensions": {
+        "height": 8749,
+        "width": 360
+      },
+      "sha256": "91bc4839f9e0362214db7d7268140bf1ee0211a5f384e1321b9fa280f529bc53",
+      "snapshotId": "89364097327005263024c562adf68dbdd8c31dc162db75711afcc70294a9942b",
+      "state": "default",
+      "viewport": 360
+    },
+    {
+      "path": "evidence/P2/foundations-390px.png",
+      "pixelDimensions": {
+        "height": 8645,
+        "width": 390
+      },
+      "sha256": "bf6cbd410c5897aee814be1c0140e409e426708a64d9cf3635c99ae26bfff135",
+      "snapshotId": "89364097327005263024c562adf68dbdd8c31dc162db75711afcc70294a9942b",
+      "state": "default",
+      "viewport": 390
+    },
+    {
+      "path": "evidence/P2/foundations-1440px.png",
+      "pixelDimensions": {
+        "height": 7947,
+        "width": 1440
+      },
+      "sha256": "1375dd7e7c53a90f8720ddb7bf1c19e54e05358c9c44622059b9ca3517548944",
+      "snapshotId": "89364097327005263024c562adf68dbdd8c31dc162db75711afcc70294a9942b",
+      "state": "default",
+      "viewport": 1440
+    },
+    {
+      "path": "evidence/P2/focus-paper-primary-1440px.png",
+      "pixelDimensions": {
+        "height": 900,
+        "width": 1440
+      },
+      "sha256": "e15506189987bac201c0544ed618a515ac17c1c0f4b83037e9087ebaf6d131f3",
+      "snapshotId": "89364097327005263024c562adf68dbdd8c31dc162db75711afcc70294a9942b",
+      "state": "focus-visible:paper-primary",
+      "viewport": 1440
+    },
+    {
+      "path": "evidence/P2/focus-ink-secondary-1440px.png",
+      "pixelDimensions": {
+        "height": 900,
+        "width": 1440
+      },
+      "sha256": "ae62b03538bb9a763764f211e6eb162a353f2d3fdba361e51ac5f7332c563104",
+      "snapshotId": "89364097327005263024c562adf68dbdd8c31dc162db75711afcc70294a9942b",
+      "state": "focus-visible:ink-secondary",
+      "viewport": 1440
+    },
+    {
+      "path": "evidence/P2/foundations-reduced-motion-390px.png",
+      "pixelDimensions": {
+        "height": 8645,
+        "width": 390
+      },
+      "sha256": "bf6cbd410c5897aee814be1c0140e409e426708a64d9cf3635c99ae26bfff135",
+      "snapshotId": "89364097327005263024c562adf68dbdd8c31dc162db75711afcc70294a9942b",
+      "state": "prefers-reduced-motion: reduce",
+      "viewport": 390
+    }
+  ],
+  "scriptElements": 0,
+  "scrollWidthByViewport": {
+    "1024": [
+      1024,
+      1024
+    ],
+    "1440": [
+      1440,
+      1440
+    ],
+    "320": [
+      320,
+      320
+    ],
+    "360": [
+      360,
+      360
+    ],
+    "390": [
+      390,
+      390
+    ],
+    "768": [
+      768,
+      768
+    ]
+  },
+  "scrollWidthMatches": true,
+  "serverBaseUrl": "http://127.0.0.1:60966",
+  "serverExceptions": 0,
+  "serverStartupSeconds": 0.202,
+  "smallestInteractiveTarget": 44,
+  "snapshotAcquisitionAttempts": 1,
+  "snapshotAcquisitionStable": true,
+  "snapshotByteCount": 22578790,
+  "snapshotConsistencyPasses": 2,
+  "snapshotExcludes": [
+    ".git/**",
+    "evidence/**",
+    "**/__pycache__/**",
+    "**/*.pyc",
+    ".DS_Store"
+  ],
+  "snapshotFileCount": 114,
+  "snapshotId": "89364097327005263024c562adf68dbdd8c31dc162db75711afcc70294a9942b",
+  "splitCollapse": {
+    "at1024": {
+      "aWidth": 528,
+      "bWidth": 368,
+      "columnCount": 12,
+      "ratio": 1.434782608695652,
+      "sameRow": true
+    },
+    "at768": {
+      "aWidth": 720,
+      "bWidth": 720,
+      "columnCount": 12,
+      "ratio": 1,
+      "sameRow": false
+    }
+  },
+  "statesTested": [
+    "default",
+    "keyboard focus-visible on warm paper",
+    "keyboard focus-visible on ink",
+    "hover (computed styles only)",
+    "disabled",
+    "prefers-reduced-motion: reduce"
+  ],
+  "tabOrder": [
+    "Primary action",
+    "Secondary action",
+    "Text link",
+    "Primary action",
+    "Secondary action",
+    "Text link"
+  ],
+  "tests": {
+    "command": "python3 -B -m unittest discover -s tests -p test_p2_foundations.py -v",
+    "detail": {
+      "checks": {
+        "contrastAcceptedAndRejected": true,
+        "fortyFourPixelTargets": true,
+        "guttersAndFieldCeiling": true,
+        "keyboardOrderAndVisibleFocus": true,
+        "localFontsWithLicenses": true,
+        "localOnlyAndNoConsoleErrors": true,
+        "noHorizontalScroll": true,
+        "noTextBelowTwelvePx": true,
+        "oneSnapshotAcrossHtmlCssFontsAndLogo": true,
+        "onlyOwnedFilesChanged": true,
+        "reducedMotionSafe": true,
+        "specimenContract": true,
+        "twelveEqualTracksAndCollapse": true,
+        "typeScaleMatchesEndpoints": true,
+        "zeroServerExceptions": true
+      },
+      "chrome": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "commit": "cf9bdcdfa1e47ff75e193155feee00b0bda67e86",
+      "coverage": [
+        "CSS-page",
+        "CSS-tokens",
+        "HTML",
+        "PNG-logotype",
+        "PNG-logotype-dark",
+        "WOFF2-Geist-Variable.woff2",
+        "WOFF2-JetBrainsMono-Variable.woff2",
+        "WOFF2-Newsreader-Variable.woff2",
+        "every rendered text node (TreeWalker, HTML+SVG)"
+      ],
+      "dirty": true,
+      "measurements": {
+        "changedVersusBase": [
+          "assets/fonts/golden-standard/PROVENANCE.md",
+          "assets/fonts/golden-standard/geist/Geist-Variable.woff2",
+          "assets/fonts/golden-standard/geist/LICENSE.txt",
+          "assets/fonts/golden-standard/geist/OFL.txt",
+          "assets/fonts/golden-standard/jetbrains-mono/JetBrainsMono-Variable.woff2",
+          "assets/fonts/golden-standard/jetbrains-mono/OFL.txt",
+          "assets/fonts/golden-standard/newsreader/Newsreader-Variable.woff2",
+          "assets/fonts/golden-standard/newsreader/OFL.txt",
+          "design/golden-standard/packages/P2-FOUNDATIONS.md",
+          "design/golden-standard/system/TOKENS.md",
+          "design/golden-standard/system/tokens.css",
+          "evidence/P2/dom-metadata.json",
+          "evidence/P2/focus-ink-secondary-1440px.png",
+          "evidence/P2/focus-paper-primary-1440px.png",
+          "evidence/P2/foundations-1440px.png",
+          "evidence/P2/foundations-320px.png",
+          "evidence/P2/foundations-360px.png",
+          "evidence/P2/foundations-390px.png",
+          "evidence/P2/foundations-head-dom.html",
+          "evidence/P2/foundations-reduced-motion-390px.png",
+          "evidence/P2/request-log.json",
+          "evidence/P2/response-headers.json",
+          "evidence/P2/result.json",
+          "evidence/P2/revision.json",
+          "evidence/P2/server-stderr.txt",
+          "evidence/P2/tests-output.txt",
+          "evidence/P2/tests.json",
+          "preview/golden-standard/foundations/foundations.css",
+          "preview/golden-standard/foundations/index.html",
+          "tests/test_p2_foundations.py",
+          "tools/capture_p2_evidence.py"
+        ],
+        "collapse": {
+          "939": {
+            "aWidth": 891,
+            "bWidth": 891,
+            "columnCount": 12,
+            "ratio": 1,
+            "sameRow": false
+          },
+          "940": {
+            "aWidth": 510.328125,
+            "bWidth": 357.65625,
+            "columnCount": 12,
+            "ratio": 1.426867627785059,
+            "sameRow": true
+          }
+        },
+        "combinedWoff2Bytes": 398696,
+        "contrastExclusions": [
+          {
+            "fontSizePx": 17,
+            "ratio": 2.69,
+            "reason": "deliberately rejected pair specimen",
+            "required": 4.5,
+            "text": "--coral / --paper",
+            "viewport": 320
+          },
+          {
+            "fontSizePx": 17,
+            "ratio": 3.35,
+            "reason": "deliberately rejected pair specimen",
+            "required": 4.5,
+            "text": "--sage / --paper",
+            "viewport": 320
+          },
+          {
+            "fontSizePx": 17,
+            "ratio": 2.39,
+            "reason": "disabled control, WCAG 1.4.3 exempt",
+            "required": 4.5,
+            "text": "Primary action",
+            "viewport": 320
+          },
+          {
+            "fontSizePx": 17,
+            "ratio": 2.39,
+            "reason": "disabled control, WCAG 1.4.3 exempt",
+            "required": 4.5,
+            "text": "Secondary action",
+            "viewport": 320
+          },
+          {
+            "fontSizePx": 17,
+            "ratio": 2.69,
+            "reason": "deliberately rejected pair specimen",
+            "required": 4.5,
+            "text": "--coral / --paper",
+            "viewport": 360
+          },
+          {
+            "fontSizePx": 17,
+            "ratio": 3.35,
+            "reason": "deliberately rejected pair specimen",
+            "required": 4.5,
+            "text": "--sage / --paper",
+            "viewport": 360
+          },
+          {
+            "fontSizePx": 17,
+            "ratio": 2.39,
+            "reason": "disabled control, WCAG 1.4.3 exempt",
+            "required": 4.5,
+            "text": "Primary action",
+            "viewport": 360
+          },
+          {
+            "fontSizePx": 17,
+            "ratio": 2.39,
+            "reason": "disabled control, WCAG 1.4.3 exempt",
+            "required": 4.5,
+            "text": "Secondary action",
+            "viewport": 360
+          },
+          {
+            "fontSizePx": 17,
+            "ratio": 2.69,
+            "reason": "deliberately rejected pair specimen",
+            "required": 4.5,
+            "text": "--coral / --paper",
+            "viewport": 390
+          },
+          {
+            "fontSizePx": 17,
+            "ratio": 3.35,
+            "reason": "deliberately rejected pair specimen",
+            "required": 4.5,
+            "text": "--sage / --paper",
+            "viewport": 390
+          },
+          {
+            "fontSizePx": 17,
+            "ratio": 2.39,
+            "reason": "disabled control, WCAG 1.4.3 exempt",
+            "required": 4.5,
+            "text": "Primary action",
+            "viewport": 390
+          },
+          {
+            "fontSizePx": 17,
+            "ratio": 2.39,
+            "reason": "disabled control, WCAG 1.4.3 exempt",
+            "required": 4.5,
+            "text": "Secondary action",
+            "viewport": 390
+          },
+          {
+            "fontSizePx": 17.36,
+            "ratio": 2.69,
+            "reason": "deliberately rejected pair specimen",
+            "required": 4.5,
+            "text": "--coral / --paper",
+            "viewport": 768
+          },
+          {
+            "fontSizePx": 17.36,
+            "ratio": 3.35,
+            "reason": "deliberately rejected pair specimen",
+            "required": 4.5,
+            "text": "--sage / --paper",
+            "viewport": 768
+          },
+          {
+            "fontSizePx": 17.36,
+            "ratio": 2.39,
+            "reason": "disabled control, WCAG 1.4.3 exempt",
+            "required": 4.5,
+            "text": "Primary action",
+            "viewport": 768
+          },
+          {
+            "fontSizePx": 17.36,
+            "ratio": 2.39,
+            "reason": "disabled control, WCAG 1.4.3 exempt",
+            "required": 4.5,
+            "text": "Secondary action",
+            "viewport": 768
+          },
+          {
+            "fontSizePx": 17.6038,
+            "ratio": 2.69,
+            "reason": "deliberately rejected pair specimen",
+            "required": 4.5,
+            "text": "--coral / --paper",
+            "viewport": 1024
+          },
+          {
+            "fontSizePx": 17.6038,
+            "ratio": 3.35,
+            "reason": "deliberately rejected pair specimen",
+            "required": 4.5,
+            "text": "--sage / --paper",
+            "viewport": 1024
+          },
+          {
+            "fontSizePx": 17.6038,
+            "ratio": 2.39,
+            "reason": "disabled control, WCAG 1.4.3 exempt",
+            "required": 4.5,
+            "text": "Primary action",
+            "viewport": 1024
+          },
+          {
+            "fontSizePx": 17.6038,
+            "ratio": 2.39,
+            "reason": "disabled control, WCAG 1.4.3 exempt",
+            "required": 4.5,
+            "text": "Secondary action",
+            "viewport": 1024
+          },
+          {
+            "fontSizePx": 18,
+            "ratio": 2.69,
+            "reason": "deliberately rejected pair specimen",
+            "required": 4.5,
+            "text": "--coral / --paper",
+            "viewport": 1440
+          },
+          {
+            "fontSizePx": 18,
+            "ratio": 3.35,
+            "reason": "deliberately rejected pair specimen",
+            "required": 4.5,
+            "text": "--sage / --paper",
+            "viewport": 1440
+          },
+          {
+            "fontSizePx": 18,
+            "ratio": 2.39,
+            "reason": "disabled control, WCAG 1.4.3 exempt",
+            "required": 4.5,
+            "text": "Primary action",
+            "viewport": 1440
+          },
+          {
+            "fontSizePx": 18,
+            "ratio": 2.39,
+            "reason": "disabled control, WCAG 1.4.3 exempt",
+            "required": 4.5,
+            "text": "Secondary action",
+            "viewport": 1440
+          }
+        ],
+        "distinctRequests": [
+          "http://127.0.0.1:60895/assets/dagg-logotype-dark.png",
+          "http://127.0.0.1:60895/assets/dagg-logotype.png",
+          "http://127.0.0.1:60895/assets/dagg-symbol.png",
+          "http://127.0.0.1:60895/assets/fonts/golden-standard/geist/Geist-Variable.woff2",
+          "http://127.0.0.1:60895/assets/fonts/golden-standard/jetbrains-mono/JetBrainsMono-Variable.woff2",
+          "http://127.0.0.1:60895/assets/fonts/golden-standard/newsreader/Newsreader-Variable.woff2",
+          "http://127.0.0.1:60895/design/golden-standard/system/tokens.css",
+          "http://127.0.0.1:60895/preview/golden-standard/foundations/foundations.css",
+          "http://127.0.0.1:60895/preview/golden-standard/foundations/index.html"
+        ],
+        "focusRings": [
+          {
+            "contrast": 14.73,
+            "offset": 2,
+            "onInk": false,
+            "text": "Primary action",
+            "width": 2
+          },
+          {
+            "contrast": 14.73,
+            "offset": 2,
+            "onInk": false,
+            "text": "Secondary action",
+            "width": 2
+          },
+          {
+            "contrast": 14.73,
+            "offset": 2,
+            "onInk": false,
+            "text": "Text link",
+            "width": 2
+          },
+          {
+            "contrast": 15.87,
+            "offset": 2,
+            "onInk": true,
+            "text": "Primary action",
+            "width": 2
+          },
+          {
+            "contrast": 15.87,
+            "offset": 2,
+            "onInk": true,
+            "text": "Secondary action",
+            "width": 2
+          },
+          {
+            "contrast": 15.87,
+            "offset": 2,
+            "onInk": true,
+            "text": "Text link",
+            "width": 2
+          }
+        ],
+        "gridTracks1440": [
+          74,
+          74,
+          74,
+          74,
+          74,
+          74,
+          74,
+          74,
+          74,
+          74,
+          74,
+          74
+        ],
+        "gutters": {
+          "1023": {
+            "fields": [
+              975
+            ],
+            "gutter": 24
+          },
+          "1024": {
+            "fields": [
+              928
+            ],
+            "gutter": 48
+          },
+          "1439": {
+            "fields": [
+              1240
+            ],
+            "gutter": 48
+          },
+          "1440": {
+            "fields": [
+              1240
+            ],
+            "gutter": 72
+          },
+          "320": {
+            "fields": [
+              280
+            ],
+            "gutter": 20
+          },
+          "360": {
+            "fields": [
+              320
+            ],
+            "gutter": 20
+          },
+          "390": {
+            "fields": [
+              350
+            ],
+            "gutter": 20
+          },
+          "767": {
+            "fields": [
+              727
+            ],
+            "gutter": 20
+          },
+          "768": {
+            "fields": [
+              720
+            ],
+            "gutter": 24
+          }
+        },
+        "interactiveTargetsMeasured": 48,
+        "minimumComputedTextPx": 12,
+        "pairs": [
+          {
+            "bg": "--paper",
+            "fg": "--ink",
+            "ratio": 15.87,
+            "status": "accepted"
+          },
+          {
+            "bg": "--paper",
+            "fg": "--ink-2",
+            "ratio": 10.92,
+            "status": "accepted"
+          },
+          {
+            "bg": "--lift",
+            "fg": "--ink",
+            "ratio": 17.5,
+            "status": "accepted"
+          },
+          {
+            "bg": "--panel",
+            "fg": "--ink",
+            "ratio": 14.73,
+            "status": "accepted"
+          },
+          {
+            "bg": "--paper",
+            "fg": "--coral-deep",
+            "ratio": 5.21,
+            "status": "accepted"
+          },
+          {
+            "bg": "--ink",
+            "fg": "--paper",
+            "ratio": 15.87,
+            "status": "accepted"
+          },
+          {
+            "bg": "--ink",
+            "fg": "--coral",
+            "ratio": 5.9,
+            "status": "accepted"
+          },
+          {
+            "bg": "--sage",
+            "fg": "--ink",
+            "ratio": 4.74,
+            "status": "accepted"
+          },
+          {
+            "bg": "--paper",
+            "fg": "--coral",
+            "ratio": 2.69,
+            "status": "rejected"
+          },
+          {
+            "bg": "--paper",
+            "fg": "--sage",
+            "ratio": 3.35,
+            "status": "rejected"
+          }
+        ],
+        "performance": {
+          "budget": {
+            "cssBytesMax": 56320,
+            "htmlBytesMax": 40960,
+            "javaScriptBytesMax": 0,
+            "woff2BytesMax": 768000
+          },
+          "combinedCssBytes": 21562,
+          "combinedWoff2Bytes": 398696,
+          "htmlBytes": 18608,
+          "javaScriptBytes": 0,
+          "pageCssBytes": 15331,
+          "tokensCssBytes": 6231,
+          "withinBudget": true,
+          "woff2Bytes": {
+            "/assets/fonts/golden-standard/geist/Geist-Variable.woff2": 69760,
+            "/assets/fonts/golden-standard/jetbrains-mono/JetBrainsMono-Variable.woff2": 113672,
+            "/assets/fonts/golden-standard/newsreader/Newsreader-Variable.woff2": 215264
+          }
+        },
+        "protectedFilesCompared": 65,
+        "reducedMotion": {
+          "layoutIdentical": true,
+          "transitionsAfter": [
+            1e-05
+          ],
+          "transitionsBefore": [
+            0.18
+          ]
+        },
+        "rhythmHeights1440": [
+          720,
+          240,
+          360,
+          420,
+          320
+        ],
+        "scrollWidth": {
+          "1024": [
+            1024,
+            1024
+          ],
+          "1440": [
+            1440,
+            1440
+          ],
+          "320": [
+            320,
+            320
+          ],
+          "360": [
+            360,
+            360
+          ],
+          "390": [
+            390,
+            390
+          ],
+          "768": [
+            768,
+            768
+          ]
+        },
+        "smallestInteractiveEdge": 44,
+        "tabOrder": [
+          [
+            "Primary action",
+            false
+          ],
+          [
+            "Secondary action",
+            false
+          ],
+          [
+            "Text link",
+            false
+          ],
+          [
+            "Primary action",
+            true
+          ],
+          [
+            "Secondary action",
+            true
+          ],
+          [
+            "Text link",
+            true
+          ]
+        ],
+        "textNamespaces": [
+          "http://www.w3.org/1999/xhtml"
+        ],
+        "textNodesMeasured": 1164,
+        "typeScale": {
+          "1440": {
+            "body": {
+              "expected": 18.0,
+              "fontSize": 18,
+              "lineHeightRatio": 1.62
+            },
+            "h1": {
+              "expected": 68.0,
+              "fontSize": 68,
+              "lineHeightRatio": 1.02
+            },
+            "h1Lines": {
+              "lastLineFraction": 0.367,
+              "lineEquivalentMeasure": 2.244,
+              "renderedLineWidths": [
+                1224.7,
+                1103.28,
+                455
+              ],
+              "renderedLines": 3
+            },
+            "h2": {
+              "expected": 52.0,
+              "fontSize": 52,
+              "lineHeightRatio": 1.07
+            },
+            "h3": {
+              "expected": 32.0,
+              "fontSize": 32,
+              "lineHeightRatio": 1.12
+            },
+            "lead": {
+              "expected": 23.0,
+              "fontSize": 23,
+              "lineHeightRatio": 1.44
+            },
+            "meta": {
+              "expected": 13.0,
+              "fontSize": 13,
+              "lineHeightRatio": 1.42
+            }
+          },
+          "320": {
+            "body": {
+              "expected": 17.0,
+              "fontSize": 17,
+              "lineHeightRatio": 1.62
+            },
+            "h1": {
+              "expected": 42.0,
+              "fontSize": 42,
+              "lineHeightRatio": 1.02
+            },
+            "h2": {
+              "expected": 34.0,
+              "fontSize": 34,
+              "lineHeightRatio": 1.07
+            },
+            "h3": {
+              "expected": 26.0,
+              "fontSize": 26,
+              "lineHeightRatio": 1.12
+            },
+            "lead": {
+              "expected": 19.0,
+              "fontSize": 19,
+              "lineHeightRatio": 1.44
+            },
+            "meta": {
+              "expected": 12.0,
+              "fontSize": 12,
+              "lineHeightRatio": 1.42
+            }
+          },
+          "390": {
+            "body": {
+              "expected": 17.0,
+              "fontSize": 17,
+              "lineHeightRatio": 1.62
+            },
+            "h1": {
+              "expected": 44.0,
+              "fontSize": 44,
+              "lineHeightRatio": 1.02
+            },
+            "h2": {
+              "expected": 36.0,
+              "fontSize": 36,
+              "lineHeightRatio": 1.07
+            },
+            "h3": {
+              "expected": 27.0,
+              "fontSize": 27,
+              "lineHeightRatio": 1.12
+            },
+            "lead": {
+              "expected": 20.0,
+              "fontSize": 20,
+              "lineHeightRatio": 1.44
+            },
+            "meta": {
+              "expected": 12.0,
+              "fontSize": 12,
+              "lineHeightRatio": 1.42
+            }
+          }
+        }
+      },
+      "notes": [],
+      "snapshotId": "89364097327005263024c562adf68dbdd8c31dc162db75711afcc70294a9942b",
+      "viewportsRendered": [
+        320,
+        360,
+        390,
+        767,
+        768,
+        939,
+        940,
+        1023,
+        1024,
+        1439,
+        1440
+      ]
+    },
+    "outcomes": [
+      [
+        "HTML, both stylesheets, every WOFF2, both logotype PNGs and the",
+        "ok"
+      ],
+      [
+        "test_02_no_document_horizontal_scroll_at_any_required_width (test_p2_foundations.RenderedSpecimen.test_02_no_document_horizontal_scroll_at_any_required_width)",
+        "ok"
+      ],
+      [
+        "Coverage is every text node in the document, found with a",
+        "ok"
+      ],
+      [
+        "test_04_type_scale_matches_the_frozen_endpoints (test_p2_foundations.RenderedSpecimen.test_04_type_scale_matches_the_frozen_endpoints)",
+        "ok"
+      ],
+      [
+        "test_05_gutters_and_the_field_ceiling (test_p2_foundations.RenderedSpecimen.test_05_gutters_and_the_field_ceiling)",
+        "ok"
+      ],
+      [
+        "test_06_twelve_equal_tracks_and_the_940_collapse (test_p2_foundations.RenderedSpecimen.test_06_twelve_equal_tracks_and_the_940_collapse)",
+        "ok"
+      ],
+      [
+        "test_07_every_interactive_target_is_at_least_44_by_44 (test_p2_foundations.RenderedSpecimen.test_07_every_interactive_target_is_at_least_44_by_44)",
+        "ok"
+      ],
+      [
+        "test_08_keyboard_reaches_every_control_once_with_a_visible_ring (test_p2_foundations.RenderedSpecimen.test_08_keyboard_reaches_every_control_once_with_a_visible_ring)",
+        "ok"
+      ],
+      [
+        "Every rendered text node is checked, not only the pair specimens.",
+        "ok"
+      ],
+      [
+        "test_10_all_three_families_load_locally_with_their_licenses (test_p2_foundations.RenderedSpecimen.test_10_all_three_families_load_locally_with_their_licenses)",
+        "ok"
+      ],
+      [
+        "test_11_no_request_leaves_localhost_and_no_console_error_occurs (test_p2_foundations.RenderedSpecimen.test_11_no_request_leaves_localhost_and_no_console_error_occurs)",
+        "ok"
+      ],
+      [
+        "test_12_reduced_motion_removes_transitions_without_changing_layout (test_p2_foundations.RenderedSpecimen.test_12_reduced_motion_removes_transitions_without_changing_layout)",
+        "ok"
+      ],
+      [
+        "test_13_only_p2_owned_files_differ_and_public_bytes_are_identical (test_p2_foundations.RenderedSpecimen.test_13_only_p2_owned_files_differ_and_public_bytes_are_identical)",
+        "ok"
+      ],
+      [
+        "P2 section 6: the specimen must actually contain the eight roles,",
+        "ok"
+      ]
+    ],
+    "passed": true,
+    "returnCode": 0,
+    "seconds": 17.225,
+    "summary": [
+      "Ran 14 tests in 17.153s",
+      "OK"
+    ]
+  },
+  "textCoverage": [
+    "HTML",
+    "SVG"
+  ],
+  "textCoverageMethod": "document-wide TreeWalker over every text node in <body>, not a selector list",
+  "textNamespaces": [
+    "http://www.w3.org/1999/xhtml"
+  ],
+  "textNodesMeasured": 1164,
+  "typeRoles": {
+    "1024": {
+      "body": {
+        "fontFamily": "Newsreader, Georgia, \"Times New Roman\", serif",
+        "fontSize": 17.6038,
+        "fontWeight": "400",
+        "lastLineFraction": 0.906,
+        "lineEquivalentMeasure": 1.876,
+        "lineHeight": 28.5182,
+        "lineHeightRatio": 1.620002499460344,
+        "printedEndpoints": "18 / 17 / 17",
+        "printedLeading": "1.62",
+        "renderedHeight": 57.03125,
+        "renderedLineWidths": [
+          601.64,
+          561.69
+        ],
+        "renderedLines": 2,
+        "renderedWidth": 620,
+        "text": "WorkGraph connects workflows, content, systems, decisions, exceptions and domain knowledge so the strategic decision and the build can draw on the same record.",
+        "words": 23
+      },
+      "h1": {
+        "fontFamily": "Geist, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "fontSize": 58.4914,
+        "fontWeight": "400",
+        "lastLineFraction": 0.698,
+        "lineEquivalentMeasure": 2.58,
+        "lineHeight": 59.6613,
+        "lineHeightRatio": 1.020001230950191,
+        "printedEndpoints": "68 / 44 / 42",
+        "printedLeading": "1.02",
+        "renderedHeight": 178.921875,
+        "renderedLineWidths": [
+          818.92,
+          927.72,
+          647.48
+        ],
+        "renderedLines": 3,
+        "renderedWidth": 928,
+        "text": "We redesign how your company works \u2014 and build what its AI-native operating model requires.",
+        "words": 15
+      },
+      "h2": {
+        "fontFamily": "Geist, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "fontSize": 45.661,
+        "fontWeight": "400",
+        "lastLineFraction": 0.244,
+        "lineEquivalentMeasure": 1.145,
+        "lineHeight": 48.8572,
+        "lineHeightRatio": 1.0699984669630538,
+        "printedEndpoints": "52 / 36 / 34",
+        "printedLeading": "1.07",
+        "renderedHeight": 97.6875,
+        "renderedLineWidths": [
+          835.36,
+          226.84
+        ],
+        "renderedLines": 2,
+        "renderedWidth": 928,
+        "text": "The first AI decision is what should not be automated.",
+        "words": 10
+      },
+      "h3": {
+        "fontFamily": "Geist, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "fontSize": 30.019,
+        "fontWeight": "400",
+        "lastLineFraction": 0.543,
+        "lineEquivalentMeasure": 0.543,
+        "lineHeight": 33.6213,
+        "lineHeightRatio": 1.1200006662447117,
+        "printedEndpoints": "32 / 27 / 26",
+        "printedLeading": "1.12",
+        "renderedHeight": 33.609375,
+        "renderedLineWidths": [
+          504
+        ],
+        "renderedLines": 1,
+        "renderedWidth": 928,
+        "text": "The map becomes part of the system.",
+        "words": 7
+      },
+      "lead": {
+        "fontFamily": "Newsreader, Georgia, \"Times New Roman\", serif",
+        "fontSize": 21.8114,
+        "fontWeight": "400",
+        "lastLineFraction": 0.173,
+        "lineEquivalentMeasure": 1.162,
+        "lineHeight": 31.4085,
+        "lineHeightRatio": 1.4400038511970805,
+        "printedEndpoints": "23 / 20 / 19",
+        "printedLeading": "1.44",
+        "renderedHeight": 62.8125,
+        "renderedLineWidths": [
+          613.16,
+          107.47
+        ],
+        "renderedLines": 2,
+        "renderedWidth": 620,
+        "text": "A machine works at machine speed. A company moves at the speed of its handoffs.",
+        "words": 15
+      },
+      "meta": {
+        "fontFamily": "\"JetBrains Mono\", ui-monospace, \"SF Mono\", Menlo, monospace",
+        "fontSize": 12.6038,
+        "fontWeight": "400",
+        "lastLineFraction": 0.341,
+        "lineEquivalentMeasure": 0.341,
+        "lineHeight": 17.8974,
+        "lineHeightRatio": 1.4200003173646045,
+        "printedEndpoints": "13 / 12 / 12",
+        "printedLeading": "1.42",
+        "renderedHeight": 17.890625,
+        "renderedLineWidths": [
+          316.03
+        ],
+        "renderedLines": 1,
+        "renderedWidth": 928,
+        "text": "REPRESENTATIVE RECORD \u00b7 SYNTHETIC DATA",
+        "words": 5
+      }
+    },
+    "1440": {
+      "body": {
+        "fontFamily": "Newsreader, Georgia, \"Times New Roman\", serif",
+        "fontSize": 18,
+        "fontWeight": "400",
+        "lastLineFraction": 0.917,
+        "lineEquivalentMeasure": 1.899,
+        "lineHeight": 29.16,
+        "lineHeightRatio": 1.62,
+        "printedEndpoints": "18 / 17 / 17",
+        "printedLeading": "1.62",
+        "renderedHeight": 58.3125,
+        "renderedLineWidths": [
+          609,
+          568.59
+        ],
+        "renderedLines": 2,
+        "renderedWidth": 620,
+        "text": "WorkGraph connects workflows, content, systems, decisions, exceptions and domain knowledge so the strategic decision and the build can draw on the same record.",
+        "words": 23
+      },
+      "h1": {
+        "fontFamily": "Geist, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "fontSize": 68,
+        "fontWeight": "400",
+        "lastLineFraction": 0.367,
+        "lineEquivalentMeasure": 2.244,
+        "lineHeight": 69.36,
+        "lineHeightRatio": 1.02,
+        "printedEndpoints": "68 / 44 / 42",
+        "printedLeading": "1.02",
+        "renderedHeight": 208.078125,
+        "renderedLineWidths": [
+          1224.7,
+          1103.28,
+          455
+        ],
+        "renderedLines": 3,
+        "renderedWidth": 1240,
+        "text": "We redesign how your company works \u2014 and build what its AI-native operating model requires.",
+        "words": 15
+      },
+      "h2": {
+        "fontFamily": "Geist, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "fontSize": 52,
+        "fontWeight": "400",
+        "lastLineFraction": 0.985,
+        "lineEquivalentMeasure": 0.985,
+        "lineHeight": 55.64,
+        "lineHeightRatio": 1.07,
+        "printedEndpoints": "52 / 36 / 34",
+        "printedLeading": "1.07",
+        "renderedHeight": 55.625,
+        "renderedLineWidths": [
+          1221.91
+        ],
+        "renderedLines": 1,
+        "renderedWidth": 1240,
+        "text": "The first AI decision is what should not be automated.",
+        "words": 10
+      },
+      "h3": {
+        "fontFamily": "Geist, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "fontSize": 32,
+        "fontWeight": "400",
+        "lastLineFraction": 0.433,
+        "lineEquivalentMeasure": 0.433,
+        "lineHeight": 35.84,
+        "lineHeightRatio": 1.12,
+        "printedEndpoints": "32 / 27 / 26",
+        "printedLeading": "1.12",
+        "renderedHeight": 35.828125,
+        "renderedLineWidths": [
+          537.25
+        ],
+        "renderedLines": 1,
+        "renderedWidth": 1240,
+        "text": "The map becomes part of the system.",
+        "words": 7
+      },
+      "lead": {
+        "fontFamily": "Newsreader, Georgia, \"Times New Roman\", serif",
+        "fontSize": 23,
+        "fontWeight": "400",
+        "lastLineFraction": 0.319,
+        "lineEquivalentMeasure": 1.228,
+        "lineHeight": 33.12,
+        "lineHeightRatio": 1.44,
+        "printedEndpoints": "23 / 20 / 19",
+        "printedLeading": "1.44",
+        "renderedHeight": 66.21875,
+        "renderedLineWidths": [
+          563.73,
+          197.67
+        ],
+        "renderedLines": 2,
+        "renderedWidth": 620,
+        "text": "A machine works at machine speed. A company moves at the speed of its handoffs.",
+        "words": 15
+      },
+      "meta": {
+        "fontFamily": "\"JetBrains Mono\", ui-monospace, \"SF Mono\", Menlo, monospace",
+        "fontSize": 13,
+        "fontWeight": "400",
+        "lastLineFraction": 0.263,
+        "lineEquivalentMeasure": 0.263,
+        "lineHeight": 18.46,
+        "lineHeightRatio": 1.4200000000000002,
+        "printedEndpoints": "13 / 12 / 12",
+        "printedLeading": "1.42",
+        "renderedHeight": 18.453125,
+        "renderedLineWidths": [
+          325.81
+        ],
+        "renderedLines": 1,
+        "renderedWidth": 1240,
+        "text": "REPRESENTATIVE RECORD \u00b7 SYNTHETIC DATA",
+        "words": 5
+      }
+    },
+    "320": {
+      "body": {
+        "fontFamily": "Newsreader, Georgia, \"Times New Roman\", serif",
+        "fontSize": 17,
+        "fontWeight": "400",
+        "lastLineFraction": 0.315,
+        "lineEquivalentMeasure": 4.031,
+        "lineHeight": 27.54,
+        "lineHeightRatio": 1.6199999999999999,
+        "printedEndpoints": "18 / 17 / 17",
+        "printedLeading": "1.62",
+        "renderedHeight": 137.65625,
+        "renderedLineWidths": [
+          229.88,
+          268.45,
+          271.97,
+          270.17,
+          88.31
+        ],
+        "renderedLines": 5,
+        "renderedWidth": 280,
+        "text": "WorkGraph connects workflows, content, systems, decisions, exceptions and domain knowledge so the strategic decision and the build can draw on the same record.",
+        "words": 23
+      },
+      "h1": {
+        "fontFamily": "Geist, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "fontSize": 42,
+        "fontWeight": "400",
+        "lastLineFraction": 0.559,
+        "lineEquivalentMeasure": 5.933,
+        "lineHeight": 42.84,
+        "lineHeightRatio": 1.02,
+        "printedEndpoints": "68 / 44 / 42",
+        "printedLeading": "1.02",
+        "renderedHeight": 385.453125,
+        "renderedLineWidths": [
+          228.53,
+          170.28,
+          169.94,
+          237.86,
+          244.78,
+          164.23,
+          174.22,
+          114.92,
+          156.5
+        ],
+        "renderedLines": 9,
+        "renderedWidth": 280,
+        "text": "We redesign how your company works \u2014 and build what its AI-native operating model requires.",
+        "words": 15
+      },
+      "h2": {
+        "fontFamily": "Geist, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "fontSize": 34,
+        "fontWeight": "400",
+        "lastLineFraction": 0.603,
+        "lineEquivalentMeasure": 2.768,
+        "lineHeight": 36.38,
+        "lineHeightRatio": 1.07,
+        "printedEndpoints": "52 / 36 / 34",
+        "printedLeading": "1.07",
+        "renderedHeight": 145.5,
+        "renderedLineWidths": [
+          160.36,
+          240.77,
+          204.95,
+          168.92
+        ],
+        "renderedLines": 4,
+        "renderedWidth": 280,
+        "text": "The first AI decision is what should not be automated.",
+        "words": 10
+      },
+      "h3": {
+        "fontFamily": "Geist, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "fontSize": 26,
+        "fontWeight": "400",
+        "lastLineFraction": 0.586,
+        "lineEquivalentMeasure": 1.537,
+        "lineHeight": 29.12,
+        "lineHeightRatio": 1.12,
+        "printedEndpoints": "32 / 27 / 26",
+        "printedLeading": "1.12",
+        "renderedHeight": 58.21875,
+        "renderedLineWidths": [
+          266.48,
+          163.94
+        ],
+        "renderedLines": 2,
+        "renderedWidth": 280,
+        "text": "The map becomes part of the system.",
+        "words": 7
+      },
+      "lead": {
+        "fontFamily": "Newsreader, Georgia, \"Times New Roman\", serif",
+        "fontSize": 19,
+        "fontWeight": "400",
+        "lastLineFraction": 0.332,
+        "lineEquivalentMeasure": 2.214,
+        "lineHeight": 27.36,
+        "lineHeightRatio": 1.44,
+        "printedEndpoints": "23 / 20 / 19",
+        "printedLeading": "1.44",
+        "renderedHeight": 82.078125,
+        "renderedLineWidths": [
+          271.72,
+          255,
+          93.08
+        ],
+        "renderedLines": 3,
+        "renderedWidth": 280,
+        "text": "A machine works at machine speed. A company moves at the speed of its handoffs.",
+        "words": 15
+      },
+      "meta": {
+        "fontFamily": "\"JetBrains Mono\", ui-monospace, \"SF Mono\", Menlo, monospace",
+        "fontSize": 12,
+        "fontWeight": "400",
+        "lastLineFraction": 0.113,
+        "lineEquivalentMeasure": 1.047,
+        "lineHeight": 17.04,
+        "lineHeightRatio": 1.42,
+        "printedEndpoints": "13 / 12 / 12",
+        "printedLeading": "1.42",
+        "renderedHeight": 34.0625,
+        "renderedLineWidths": [
+          261.38,
+          31.69
+        ],
+        "renderedLines": 2,
+        "renderedWidth": 280,
+        "text": "REPRESENTATIVE RECORD \u00b7 SYNTHETIC DATA",
+        "words": 5
+      }
+    },
+    "360": {
+      "body": {
+        "fontFamily": "Newsreader, Georgia, \"Times New Roman\", serif",
+        "fontSize": 17,
+        "fontWeight": "400",
+        "lastLineFraction": 0.762,
+        "lineEquivalentMeasure": 3.539,
+        "lineHeight": 27.54,
+        "lineHeightRatio": 1.6199999999999999,
+        "printedEndpoints": "18 / 17 / 17",
+        "printedLeading": "1.62",
+        "renderedHeight": 110.125,
+        "renderedLineWidths": [
+          291.03,
+          294.86,
+          302.83,
+          243.86
+        ],
+        "renderedLines": 4,
+        "renderedWidth": 320,
+        "text": "WorkGraph connects workflows, content, systems, decisions, exceptions and domain knowledge so the strategic decision and the build can draw on the same record.",
+        "words": 23
+      },
+      "h1": {
+        "fontFamily": "Geist, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "fontSize": 43.1429,
+        "fontWeight": "400",
+        "lastLineFraction": 0.902,
+        "lineEquivalentMeasure": 5.425,
+        "lineHeight": 44.0057,
+        "lineHeightRatio": 1.0199986556304745,
+        "printedEndpoints": "68 / 44 / 42",
+        "printedLeading": "1.02",
+        "renderedHeight": 308,
+        "renderedLineWidths": [
+          234.73,
+          174.89,
+          299.44,
+          221.44,
+          214.41,
+          302.47,
+          288.7
+        ],
+        "renderedLines": 7,
+        "renderedWidth": 320,
+        "text": "We redesign how your company works \u2014 and build what its AI-native operating model requires.",
+        "words": 15
+      },
+      "h2": {
+        "fontFamily": "Geist, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "fontSize": 35.1429,
+        "fontWeight": "400",
+        "lastLineFraction": 0.694,
+        "lineEquivalentMeasure": 2.529,
+        "lineHeight": 37.6029,
+        "lineHeightRatio": 1.0699999146342505,
+        "printedEndpoints": "52 / 36 / 34",
+        "printedLeading": "1.07",
+        "renderedHeight": 112.78125,
+        "renderedLineWidths": [
+          303.09,
+          284.08,
+          222.06
+        ],
+        "renderedLines": 3,
+        "renderedWidth": 320,
+        "text": "The first AI decision is what should not be automated.",
+        "words": 10
+      },
+      "h3": {
+        "fontFamily": "Geist, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "fontSize": 26.5714,
+        "fontWeight": "400",
+        "lastLineFraction": 0.427,
+        "lineEquivalentMeasure": 1.375,
+        "lineHeight": 29.76,
+        "lineHeightRatio": 1.1200012043023702,
+        "printedEndpoints": "32 / 27 / 26",
+        "printedLeading": "1.12",
+        "renderedHeight": 59.53125,
+        "renderedLineWidths": [
+          303.09,
+          136.77
+        ],
+        "renderedLines": 2,
+        "renderedWidth": 320,
+        "text": "The map becomes part of the system.",
+        "words": 7
+      },
+      "lead": {
+        "fontFamily": "Newsreader, Georgia, \"Times New Roman\", serif",
+        "fontSize": 19.5714,
+        "fontWeight": "400",
+        "lastLineFraction": 0.3,
+        "lineEquivalentMeasure": 1.999,
+        "lineHeight": 28.1829,
+        "lineHeightRatio": 1.4400042919770686,
+        "printedEndpoints": "23 / 20 / 19",
+        "printedLeading": "1.44",
+        "renderedHeight": 84.5625,
+        "renderedLineWidths": [
+          280.69,
+          262.97,
+          95.98
+        ],
+        "renderedLines": 3,
+        "renderedWidth": 320,
+        "text": "A machine works at machine speed. A company moves at the speed of its handoffs.",
+        "words": 15
+      },
+      "meta": {
+        "fontFamily": "\"JetBrains Mono\", ui-monospace, \"SF Mono\", Menlo, monospace",
+        "fontSize": 12,
+        "fontWeight": "400",
+        "lastLineFraction": 0.941,
+        "lineEquivalentMeasure": 0.941,
+        "lineHeight": 17.04,
+        "lineHeightRatio": 1.42,
+        "printedEndpoints": "13 / 12 / 12",
+        "printedLeading": "1.42",
+        "renderedHeight": 17.03125,
+        "renderedLineWidths": [
+          300.97
+        ],
+        "renderedLines": 1,
+        "renderedWidth": 320,
+        "text": "REPRESENTATIVE RECORD \u00b7 SYNTHETIC DATA",
+        "words": 5
+      }
+    },
+    "390": {
+      "body": {
+        "fontFamily": "Newsreader, Georgia, \"Times New Roman\", serif",
+        "fontSize": 17,
+        "fontWeight": "400",
+        "lastLineFraction": 0.582,
+        "lineEquivalentMeasure": 3.236,
+        "lineHeight": 27.54,
+        "lineHeightRatio": 1.6199999999999999,
+        "printedEndpoints": "18 / 17 / 17",
+        "printedLeading": "1.62",
+        "renderedHeight": 110.125,
+        "renderedLineWidths": [
+          291.03,
+          294.86,
+          343.02,
+          203.67
+        ],
+        "renderedLines": 4,
+        "renderedWidth": 350,
+        "text": "WorkGraph connects workflows, content, systems, decisions, exceptions and domain knowledge so the strategic decision and the build can draw on the same record.",
+        "words": 23
+      },
+      "h1": {
+        "fontFamily": "Geist, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "fontSize": 44,
+        "fontWeight": "400",
+        "lastLineFraction": 0.841,
+        "lineEquivalentMeasure": 5.088,
+        "lineHeight": 44.88,
+        "lineHeightRatio": 1.02,
+        "printedEndpoints": "68 / 44 / 42",
+        "printedLeading": "1.02",
+        "renderedHeight": 269.25,
+        "renderedLineWidths": [
+          332.08,
+          273.86,
+          249.19,
+          322.75,
+          308.48,
+          294.45
+        ],
+        "renderedLines": 6,
+        "renderedWidth": 350,
+        "text": "We redesign how your company works \u2014 and build what its AI-native operating model requires.",
+        "words": 15
+      },
+      "h2": {
+        "fontFamily": "Geist, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "fontSize": 36,
+        "fontWeight": "400",
+        "lastLineFraction": 0.511,
+        "lineEquivalentMeasure": 2.369,
+        "lineHeight": 38.52,
+        "lineHeightRatio": 1.07,
+        "printedEndpoints": "52 / 36 / 34",
+        "printedLeading": "1.07",
+        "renderedHeight": 115.546875,
+        "renderedLineWidths": [
+          345.03,
+          305.14,
+          178.86
+        ],
+        "renderedLines": 3,
+        "renderedWidth": 350,
+        "text": "The first AI decision is what should not be automated.",
+        "words": 10
+      },
+      "h3": {
+        "fontFamily": "Geist, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "fontSize": 27,
+        "fontWeight": "400",
+        "lastLineFraction": 0.397,
+        "lineEquivalentMeasure": 1.277,
+        "lineHeight": 30.24,
+        "lineHeightRatio": 1.1199999999999999,
+        "printedEndpoints": "32 / 27 / 26",
+        "printedLeading": "1.12",
+        "renderedHeight": 60.46875,
+        "renderedLineWidths": [
+          307.88,
+          138.92
+        ],
+        "renderedLines": 2,
+        "renderedWidth": 350,
+        "text": "The map becomes part of the system.",
+        "words": 7
+      },
+      "lead": {
+        "fontFamily": "Newsreader, Georgia, \"Times New Roman\", serif",
+        "fontSize": 20,
+        "fontWeight": "400",
+        "lastLineFraction": 0.28,
+        "lineEquivalentMeasure": 1.868,
+        "lineHeight": 28.8,
+        "lineHeightRatio": 1.44,
+        "printedEndpoints": "23 / 20 / 19",
+        "printedLeading": "1.44",
+        "renderedHeight": 86.390625,
+        "renderedLineWidths": [
+          286.95,
+          268.84,
+          98.13
+        ],
+        "renderedLines": 3,
+        "renderedWidth": 350,
+        "text": "A machine works at machine speed. A company moves at the speed of its handoffs.",
+        "words": 15
+      },
+      "meta": {
+        "fontFamily": "\"JetBrains Mono\", ui-monospace, \"SF Mono\", Menlo, monospace",
+        "fontSize": 12,
+        "fontWeight": "400",
+        "lastLineFraction": 0.86,
+        "lineEquivalentMeasure": 0.86,
+        "lineHeight": 17.04,
+        "lineHeightRatio": 1.42,
+        "printedEndpoints": "13 / 12 / 12",
+        "printedLeading": "1.42",
+        "renderedHeight": 17.03125,
+        "renderedLineWidths": [
+          300.97
+        ],
+        "renderedLines": 1,
+        "renderedWidth": 350,
+        "text": "REPRESENTATIVE RECORD \u00b7 SYNTHETIC DATA",
+        "words": 5
+      }
+    },
+    "768": {
+      "body": {
+        "fontFamily": "Newsreader, Georgia, \"Times New Roman\", serif",
+        "fontSize": 17.36,
+        "fontWeight": "400",
+        "lastLineFraction": 0.898,
+        "lineEquivalentMeasure": 1.861,
+        "lineHeight": 28.1232,
+        "lineHeightRatio": 1.62,
+        "printedEndpoints": "18 / 17 / 17",
+        "printedLeading": "1.62",
+        "renderedHeight": 56.21875,
+        "renderedLineWidths": [
+          596.64,
+          557
+        ],
+        "renderedLines": 2,
+        "renderedWidth": 620,
+        "text": "WorkGraph connects workflows, content, systems, decisions, exceptions and domain knowledge so the strategic decision and the build can draw on the same record.",
+        "words": 23
+      },
+      "h1": {
+        "fontFamily": "Geist, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "fontSize": 52.64,
+        "fontWeight": "400",
+        "lastLineFraction": 0.489,
+        "lineEquivalentMeasure": 2.976,
+        "lineHeight": 53.6928,
+        "lineHeightRatio": 1.02,
+        "printedEndpoints": "68 / 44 / 42",
+        "printedLeading": "1.02",
+        "renderedHeight": 214.75,
+        "renderedLineWidths": [
+          511.94,
+          647.69,
+          630.69,
+          352.28
+        ],
+        "renderedLines": 4,
+        "renderedWidth": 720,
+        "text": "We redesign how your company works \u2014 and build what its AI-native operating model requires.",
+        "words": 15
+      },
+      "h2": {
+        "fontFamily": "Geist, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "fontSize": 41.76,
+        "fontWeight": "400",
+        "lastLineFraction": 0.367,
+        "lineEquivalentMeasure": 1.349,
+        "lineHeight": 44.6832,
+        "lineHeightRatio": 1.07,
+        "printedEndpoints": "52 / 36 / 34",
+        "printedLeading": "1.07",
+        "renderedHeight": 89.375,
+        "renderedLineWidths": [
+          707.59,
+          263.89
+        ],
+        "renderedLines": 2,
+        "renderedWidth": 720,
+        "text": "The first AI decision is what should not be automated.",
+        "words": 10
+      },
+      "h3": {
+        "fontFamily": "Geist, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "fontSize": 28.8,
+        "fontWeight": "400",
+        "lastLineFraction": 0.672,
+        "lineEquivalentMeasure": 0.672,
+        "lineHeight": 32.256,
+        "lineHeightRatio": 1.1199999999999999,
+        "printedEndpoints": "32 / 27 / 26",
+        "printedLeading": "1.12",
+        "renderedHeight": 32.25,
+        "renderedLineWidths": [
+          483.5
+        ],
+        "renderedLines": 1,
+        "renderedWidth": 720,
+        "text": "The map becomes part of the system.",
+        "words": 7
+      },
+      "lead": {
+        "fontFamily": "Newsreader, Georgia, \"Times New Roman\", serif",
+        "fontSize": 21.08,
+        "fontWeight": "400",
+        "lastLineFraction": 0.167,
+        "lineEquivalentMeasure": 1.12,
+        "lineHeight": 30.3552,
+        "lineHeightRatio": 1.4400000000000002,
+        "printedEndpoints": "23 / 20 / 19",
+        "printedLeading": "1.44",
+        "renderedHeight": 60.6875,
+        "renderedLineWidths": [
+          590.52,
+          103.66
+        ],
+        "renderedLines": 2,
+        "renderedWidth": 620,
+        "text": "A machine works at machine speed. A company moves at the speed of its handoffs.",
+        "words": 15
+      },
+      "meta": {
+        "fontFamily": "\"JetBrains Mono\", ui-monospace, \"SF Mono\", Menlo, monospace",
+        "fontSize": 12.36,
+        "fontWeight": "400",
+        "lastLineFraction": 0.43,
+        "lineEquivalentMeasure": 0.43,
+        "lineHeight": 17.5512,
+        "lineHeightRatio": 1.4200000000000002,
+        "printedEndpoints": "13 / 12 / 12",
+        "printedLeading": "1.42",
+        "renderedHeight": 17.546875,
+        "renderedLineWidths": [
+          309.77
+        ],
+        "renderedLines": 1,
+        "renderedWidth": 720,
+        "text": "REPRESENTATIVE RECORD \u00b7 SYNTHETIC DATA",
+        "words": 5
+      }
+    }
+  },
+  "unmeasuredInP2": [
+    "LCP, INP and CLS were not instrumented; CLS is argued from font-display: block plus width/height and aspect-ratio on both logotypes, not measured with a layout-shift observer.",
+    "Screen-reader announcement quality was not tested.",
+    "200% browser zoom was not tested; P2 section 7 does not require it and the masterplan places it in the P12 gate.",
+    "Real-device rendering was not tested; all measurements come from headless Google Chrome on macOS."
+  ],
+  "viewports": [
+    320,
+    360,
+    390,
+    768,
+    1024,
+    1440
+  ]
+}
