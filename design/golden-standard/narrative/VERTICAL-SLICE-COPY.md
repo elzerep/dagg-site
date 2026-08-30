@@ -1,6 +1,6 @@
 # Final vertical-slice copy
 
-Status: accepted P1 source of truth  
+Status: accepted P1R1 source of truth
 Authority: `../DAGG-GOLDEN-STANDARD-MASTERPLAN.md`  
 Instruction: use visible copy verbatim in every P4 direction. Layout may change; wording may not.
 
@@ -32,10 +32,10 @@ Menu
 AI-native transformation
 
 **H1**  
-We redesign how your company works — and build what its AI-native operating model requires.
+We redesign how your company works — then build what makes it AI-native.
 
 **Body**  
-Dagg combines strategic foresight, company-building experience and engineering to decide how the business should work — what people direct and verify, what AI may execute within defined bounds, and which systems should stay, change or disappear. Then we build what that decision requires.
+Dagg combines strategic foresight, company-building experience and engineering to decide what should change, build the agents or software the decision requires, and create a governed path into operation and learning.
 
 **Primary action**  
 Start an assessment
@@ -50,30 +50,30 @@ Supplier payment exception
 Representative WorkGraph record · synthetic data
 
 **One-pass lifecycle sequence**  
-Evidence → Decision → Build → Boundary → Record
+Mismatch found → Draft prepared → Release withheld → Finance decides → Record updated
 
 **Motion controls**  
 Pause motion  
 Replay
 
 **Default state summary**  
-One supplier payment exception reveals the complete operating path: an agent may prepare the action, but only an accountable Finance owner may release it.
+A payment mismatch is found. The agent may prepare a draft, but it stays withheld until Finance resolves the exception.
 
 **Artifact caption**  
 The same company context moves from evidence to decision, build and governed operation.
 
 **Artifact disclosure**  
-Constructed example showing the Dagg method and control model. Not client data, a live system or evidence of a production deployment.
+All artifacts on this page are constructed examples, not client data or production deployments.
 
 ---
 
 ## 2 · Stakes
 
 **H2**  
-A machine works at machine speed. A company moves at the speed of its handoffs.
+A company moves at the speed of its handoffs.
 
 **Body**  
-The constraint is not the number of AI tools. It appears when decisions, exceptions and company knowledge must be reconstructed by hand. An AI-native operating model redesigns those handoffs so knowledge can be reused across systems.
+Machines can execute continuously. A company still slows where context, ownership and decisions must be reconstructed by hand. Those handoffs are where the gap compounds.
 
 ---
 
@@ -83,13 +83,13 @@ The constraint is not the number of AI tools. It appears when decisions, excepti
 The strategic decision
 
 **H2**  
-The first AI decision is what should not be automated.
+The first decision is what not to automate.
 
 **Body**  
-We trace one path through the company, make the operating reality legible and choose the smallest intervention that changes the outcome. Technology follows that decision.
+We map how work actually moves, then choose what to preserve, simplify, automate, rebuild or retire. The smallest justified intervention wins.
 
 **Outcome summary**  
-Five outcomes. Three mean nothing gets built.
+Five outcomes. The build is a result, never a premise.
 
 ### Preserve
 
@@ -150,7 +150,7 @@ The value is merely hidden or poorly measured.
 A recommendation is not complete until it names an owner and the evidence that would make it change.
 
 **Human role**  
-People move from routine execution toward intent, requirements, material exceptions and verification. AI acts only where those responsibilities, boundaries and ways back are explicit.
+People set intent, define requirements, decide material exceptions and verify outcomes. AI carries routine execution inside those boundaries.
 
 **Contextual text link**  
 Explore Transformation
@@ -166,19 +166,26 @@ Company context
 The map becomes part of the system.
 
 **Body**  
-WorkGraph is Dagg's company-context layer. It connects workflows, content, systems, decisions, exceptions and domain knowledge so the strategic decision, Factory build and later operating decisions can draw on the same record.
-
-Durable context lets one intervention inform the next. WorkGraph can begin at the depth an intervention requires and expand as more of the company changes.
+WorkGraph keeps the workflow, evidence, decisions, exceptions and controls behind an intervention in one company-specific context layer. The same record informs strategy, the Factory build and what happens in operation.
 
 **Artifact provenance**  
 Representative WorkGraph record · synthetic data
 
-**Artifact disclosure**  
-Constructed example showing the Dagg method and control model. Not client data, a live system or evidence of a production deployment.
+**Record fields**
+
+- Source: purchase order, goods receipt, invoice, payment policy.
+- Captured state: invoice and receipt disagree; release is awaiting review.
+- System: finance platform.
+- Work item: payment exception.
+- Owner: Finance owner.
+- Exception: source mismatch.
+- Decision state: automate preparation; human release.
+- Permission: agent prepares; Finance releases.
+- Provenance: this synthetic record.
 
 ### Map
 
-Approved evidence reveals a payment waiting because the invoice and goods receipt disagree, while release ownership remains unclear.
+Approved sources reveal an invoice-receipt mismatch requiring Finance review.
 
 ### Decide
 
@@ -190,14 +197,14 @@ Factory receives the purchase order, goods receipt, invoice, payment policy, per
 
 ### Govern
 
-The agent may prepare a payment proposal from approved sources. Only the accountable Finance owner may release it.
+The agent may prepare a payment draft from approved sources. Only the accountable Finance owner may release it.
 
 ### Operate
 
-A source mismatch withholds the proposal. The decision and evidence can return to WorkGraph for the next review.
+A source mismatch withholds the draft from release. Finance chooses correction, rejection or return to the manual path. The decision and evidence return to WorkGraph.
 
 **Closing line**  
-Models can change. The company's context, controls and recorded learning can remain usable and governable.
+Each decision, evaluation and operating record can strengthen the next intervention. Models can change; company context and learning need not restart from zero.
 
 **Contextual text link**  
 Explore WorkGraph
@@ -213,11 +220,11 @@ From decision to execution
 The decision becomes a build with a boundary.
 
 **Body**  
-Dagg Factory turns the approved intervention into governed agents or custom software, with the context, tools, access and evaluations it needs. It automates what should stay and rebuilds the workflow layer that should change.
+Dagg Factory turns the intervention into an agent or software with the context, tools, permissions and evaluations needed to act within the decision.
 
-**Mode controls**  
-Automate what stays  
-Rebuild what should change
+Reusable tools and evaluations improve the next build. The delivery system is designed to keep client-specific context out of reusable cross-engagement patterns.
+
+### Automate what stays
 
 **Build-plan provenance**  
 Illustrative Factory build plan · not a client deployment
@@ -228,21 +235,31 @@ Build plan
 Evaluation  
 Ready for governed review
 
-**Bill of materials**
+**Build plan**
 
-- Intervention: prepare the payment proposal; preserve human release.
+- Intervention: prepare the payment draft; preserve human release.
 - Context: purchase order, goods receipt, invoice and payment policy.
 - Tools: approved finance-system read and payment-draft tool.
 - Permission: prepare only; never release.
-- Evaluation: mismatched evidence is withheld, the owner is identifiable and the action has a defined way back.
+- Evaluation: a source mismatch withholds the draft from release and routes the exception to the Finance owner.
 - Release owner: Finance owner.
 - Way back: disable the agent, remove the draft and return the item to the manual queue.
 
+### Rebuild what should change
+
+**Build plan**
+
+- Intervention: purpose-built exception workspace.
+- Target workflow: a mismatch opens review; the draft cannot advance until resolved.
+- Application boundary: exception review and draft state; finance remains the system of record.
+- Interfaces: read source records; return the reviewed decision.
+- Behavior: show the conflict, capture the owner decision and update draft state.
+- Acceptance test: a mismatch blocks release; only the Finance owner resolves it.
+- Release owner: Finance owner.
+- Way back: disable the write path; return the item to the manual queue.
+
 **Contextual text link**  
 Explore Build
-
-**Artifact disclosure**  
-Constructed example showing the Dagg method and control model. Not client data, a live system or evidence of a production deployment.
 
 ---
 
@@ -255,7 +272,7 @@ Human control
 A decision is not finished until it runs.
 
 **Body**  
-The client can run the result, or Dagg can take a defined operating role when the engagement requires it. Both delivery models require inspectable actions, exceptions and human decisions.
+The client can run the result, or Dagg can take a defined operating role. Either way, material exceptions stop, accountable people decide and the record returns evidence to the next cycle.
 
 **Operating-record title**  
 One material exception
@@ -265,7 +282,7 @@ Illustrative operating record · constructed example
 
 ### Intent received
 
-Prepare an approved supplier payment from validated company records.
+Prepare a supplier payment draft for Finance review from approved company records.
 
 ### Context resolved
 
@@ -273,19 +290,19 @@ The purchase order, goods receipt, invoice and payment policy are resolved from 
 
 ### Action proposed
 
-The agent proposes a payment draft. No payment has been released.
+The agent prepares a payment draft from approved sources. It remains withheld from release.
 
 ### Boundary triggered
 
-The invoice and goods receipt disagree. The payment is withheld.
+The invoice and goods receipt disagree. The draft remains withheld and the exception is routed to Finance.
 
 ### Human decision recorded
 
-The Finance owner approves the matched items and routes the remainder for review.
+The Finance owner confirms the exception and returns the item for source correction.
 
 ### Outcome and way back recorded
 
-Approved items may proceed. The withheld remainder, evidence and reversal path remain recorded.
+No payment proceeds. The decision and evidence remain recorded; the agent can be disabled and the item returned to the manual queue.
 
 **Control rail**
 
@@ -296,9 +313,6 @@ Approved items may proceed. The withheld remainder, evidence and reversal path r
 **Closing line**  
 Speed matters only when the company can see what happened, why it happened and who remains accountable.
 
-**Artifact disclosure**  
-Constructed example showing the Dagg method and control model. Not client data, a live system or evidence of a production deployment.
-
 **Eyebrow**  
 Impact
 
@@ -306,7 +320,7 @@ Impact
 See what changed — and where the evidence stops.
 
 **Body**  
-Every Impact case follows the work from its starting condition through the operating change to the verified outcome, with the timeframe, source and limits visible.
+Impact separates companies built from companies transformed. Each case shows the starting condition, strategic thesis, operating change, verified outcome, timeframe, source and limits.
 
 **Contextual text link**  
 Explore Impact
@@ -322,9 +336,7 @@ Start with one path
 Make the first decision before making the first build.
 
 **Body**  
-An assessment maps how the work actually moves and ends with a decision: preserve, simplify, automate, rebuild or retire. It can conclude that nothing should be built.
-
-You leave with the evidence needed to act — or the reason not to.
+An assessment follows one material path to a decision. You leave with the evidence to act — or the reason not to.
 
 **Deliverable strip**  
 Operating map · Recommendation or refusal · Intervention brief · Accountable owner · Evidence that would change the decision

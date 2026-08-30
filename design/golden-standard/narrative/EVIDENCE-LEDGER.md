@@ -26,14 +26,18 @@ The vertical slice proves Dagg's method, product logic and control model. It is 
 | Dagg maps visible work and hidden handoffs, waiting, exceptions, decisions, systems and knowledge before selecting an intervention. | P | Christian Perez, CEO / delivery owner | Operating method accepted in Masterplan Part I | 2026-08-30 | Method statement; a displayed example is R. |
 | Dagg tests five outcomes: preserve, simplify, automate, rebuild or retire. | P | Christian Perez, CEO / delivery owner | Operating method accepted in Masterplan Part I | 2026-08-30 | Method statement. |
 | A recommendation may conclude that nothing should be built. | P | Christian Perez, CEO / delivery owner | Assessment boundary accepted in the masterplan and P1 copy | 2026-08-30 | Method and assessment boundary. |
+| The build is a result, never a premise. | P | Christian Perez, CEO / delivery owner | Assessment and intervention method accepted in the masterplan and P1 copy | 2026-08-30 | Method statement, not a claim that Dagg never builds. |
 | A machine works at machine speed; a company moves at the speed of its handoffs. | P | Christian Perez, CEO | Strategic point of view accepted in the masterplan and P1 copy | 2026-08-30 | No market-prevalence, performance or outcome claim. |
 | WorkGraph is Dagg's company-context and knowledge layer connecting workflow, content, systems, decisions, exceptions and domain knowledge. | P | Christian Perez, CEO / WorkGraph technical owner | Founder architecture brief accepted in Masterplan Part I | 2026-08-30 | Public product definition; deeper implementation and security details require V. |
 | Dagg may describe WorkGraph publicly as `proprietary`. | V | Christian Perez, CEO / corporate owner | IP ownership confirmation to be linked before publication | Pending | Do not use `proprietary` in final copy until the evidence owner records the confirmation. |
 | WorkGraph can inform the strategic decision, Factory build and later operating decisions. | P | Christian Perez, CEO / WorkGraph technical owner | Founder architecture brief accepted in Masterplan Part I | 2026-08-30 | Capability/architecture statement; any customer example is R, V or C. |
 | Dagg Factory turns an approved intervention into governed agents or custom software. | P | Christian Perez, CEO / Factory technical owner | Founder architecture brief accepted in Masterplan Part I | 2026-08-30 | Capability statement; a displayed build is R unless sourced. |
+| Dagg's delivery system is designed so reusable tools, evaluations and non-confidential patterns improve the next build. | P | Christian Perez, CEO / Factory technical owner | Founder operating brief accepted in Masterplan Part I | 2026-08-30 | Reuse is limited to method, tooling, evaluation practice and non-confidential patterns. Do not claim output multipliers or transfer of client-specific context or outcomes. |
+| The delivery system is designed to keep client-specific context out of reusable cross-engagement patterns. | P | Christian Perez, CEO / technical owner | Founder architecture intent accepted in Masterplan Part I | 2026-08-30 | Public design intention. Do not turn it into a technical or contractual isolation assurance. |
+| Dagg's implementation technically and contractually isolates client-specific context. | V | Christian Perez, CEO / technical, security and legal owners | Exact controls and contractual terms to be linked | Pending | Do not publish before verification. Claims about tenancy, provider use, residency, retention, encryption or access control require specific evidence. |
 | Models can change while company-specific context, controls and recorded learning are designed to remain governable. | P | Christian Perez, CEO / technical owner | Harness architecture intent accepted in Masterplan Part I | 2026-08-30 | Design principle; do not promise universal portability or export without V. |
 | People set intent, define requirements, decide material exceptions and verify outcomes. | P | Christian Perez, CEO | Target operating-model principle accepted in Masterplan Part I | 2026-08-30 | Point of view, not a claim that every current deployment works this way. |
-| A client can operate the result or Dagg can provide continued support, depending on the engagement. | P | Christian Perez, CEO / commercial owner | Delivery model accepted in Masterplan Part I | 2026-08-30 | Delivery model only. Never present it as current managed-operations proof. |
+| The client can run the result, or Dagg can take a defined operating role, depending on the engagement. | P | Christian Perez, CEO / commercial owner | Delivery model accepted in Masterplan Part I | 2026-08-30 | Offer and delivery model only. Never present it as current managed-operations proof. |
 | Assessment produces an operating map, recommendation or refusal, intervention brief, accountable owner and evidence that would change the decision. | P | Christian Perez, CEO / delivery owner | Offer scope frozen in `VERTICAL-SLICE-COPY.md` and this P1 package | 2026-08-30 | Current offer definition; any future change requires delivery-owner revision. |
 | Aloi is a company Dagg helped create and can serve as the first `Companies built` proof. | V / C | Christian Perez, CEO + Aloi evidence owner | Corporate record, public source and publication permission to be linked | Pending | Do not publish as Dagg Impact proof until role, claims, permission and limits are verified. |
 | Any named customer, workflow, result, time saving, ROI, user count or scale measure. | C / V | Named account owner + Christian Perez | Customer permission plus source, timeframe and methodology | Pending per case | Requires permission, source, timeframe and boundary. |
@@ -45,7 +49,9 @@ The vertical slice proves Dagg's method, product logic and control model. It is 
 - `Representative WorkGraph record · synthetic data`
 - `Illustrative Factory build plan · not a client deployment`
 - `Illustrative operating record · constructed example`
-- Shared caption: `Constructed example showing the Dagg method and control model. Not client data, a live system or evidence of a production deployment.`
+- One shared page disclosure in the hero: `All artifacts on this page are constructed examples, not client data or production deployments.`
+
+The shared disclosure governs every constructed artifact on the vertical slice. Each artifact still requires its own local provenance label. Do not repeat the full disclosure after every artifact.
 
 Do not place `LIVE`, `production`, realistic customer names, real-looking timestamps, fabricated metrics, volumes, latencies, costs or savings inside constructed artifacts.
 
@@ -72,6 +78,8 @@ Pass the same record into one two-mode build instrument:
 
 Valid state sequence: `Context received → build plan → evaluation → ready for governed review`.
 
+Both `Automate what stays` and `Rebuild what should change` require their own visible build plan. The rebuild plan must name the target workflow, application boundary, interfaces, behavior, acceptance test, accountable release owner and way back.
+
 ### Operating record
 
 Show control, not a system Dagg claims to operate:
@@ -81,7 +89,7 @@ Show control, not a system Dagg claims to operate:
 3. Action proposed; nothing executed yet.
 4. Material boundary triggered; action withheld.
 5. Human decision recorded with accountable owner.
-6. Outcome and way back recorded.
+6. Outcome and concrete way back recorded.
 
 Visible fields include actor, proposed action, permission boundary, material exception, decision, owner, evidence reference and reversal path.
 
@@ -101,7 +109,8 @@ Visible fields include actor, proposed action, permission boundary, material exc
 P1 fails if:
 
 - a visible claim lacks P/R/V/C/X status;
-- a representative artifact lacks the provenance label and shared caption;
+- the hero lacks the exact shared page disclosure;
+- a representative artifact lacks its local provenance label;
 - customer-like detail can be mistaken for a case;
 - `live`, `production` or present managed operation is implied;
 - WorkGraph is rendered as a node cloud or becomes the whole company promise;

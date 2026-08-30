@@ -7,15 +7,15 @@ Page role: executive memo for the whole company
 
 ## The argument in one sentence
 
-Dagg helps existing companies become AI-native and new companies begin that way by combining strategic judgment, company-building experience and engineering: decide how the company should work, preserve its company-specific context, build the justified intervention and create a governed path into operation and learning.
+Dagg turns strategic direction into an AI-native operating model, preserves company-specific context in WorkGraph, builds and governs the required agents or software through Factory, and carries operating evidence into the next decision.
 
 ## The emotional movement
 
 The reader should move through six states:
 
-`recognition → consequence → judgment → proprietary mechanism → controlled execution → credible first step`
+`recognition → consequence → judgment → company-context mechanism → controlled execution → credible first step`
 
-The urgency comes from a visible asymmetry: machine-speed systems can execute and learn continuously while most companies still reconstruct context at every handoff. The voice remains calm. The site never says “transform or die”; it makes the cost of remaining human-speed legible.
+The urgency comes from a visible asymmetry: machines can execute continuously; a company still slows where decisions, exceptions and context must be reconstructed by hand. The voice remains calm. The mechanism makes the cost of remaining handoff-bound legible.
 
 ## The seven visual macrosections
 
@@ -34,9 +34,9 @@ The masterplan's nine narrative acts are grouped into seven visual macrosections
 ## Message hierarchy
 
 1. **Company promise:** redesign the company for an AI-native world and build what the new operating model requires.
-2. **Strategic distinction:** technology follows the operating decision; Dagg can recommend that nothing should be built.
-3. **Proprietary edge:** WorkGraph keeps company-specific context useful across strategy, Factory and later operating decisions.
-4. **Execution:** Dagg Factory turns the approved intervention into governed agents or custom software.
+2. **Execution edge:** carry strategic direction through build, governed operation and the next learning cycle.
+3. **Company-context edge:** WorkGraph keeps company-specific context useful across strategy, Factory and later operating decisions.
+4. **Strategic distinction:** technology follows the operating decision; Dagg can recommend that nothing should be built.
 5. **Human role:** people set intent, define requirements, decide material exceptions and verify outcomes.
 6. **Control:** every proposed action has a boundary, accountable owner, evidence trail and way back.
 7. **Conversion:** begin with one path and leave with a decision, including a refusal to build when that is the right answer.
@@ -53,17 +53,17 @@ The masterplan's nine narrative acts are grouped into seven visual macrosections
 
 ## Copy budget
 
-- Hero: H1 11–17 words, maximum 2.5 desktop lines; supporting paragraph 45–70 words; two actions.
-- Stakes: H2 maximum 18 words; supporting paragraph 35–60 words.
-- Decision: H2 maximum 14 words; lede 35–55 words; each outcome 25–45 words across its state.
-- WorkGraph: H2 maximum 10 words; primary explanation 70–100 words; lifecycle states 12–24 words each.
-- Factory / operating record: primary explanation 60–90 words; record rows 8–18 words each.
-- Assessment: H2 maximum 10 words; explanation 35–55 words; one deliverable strip; one primary action.
-- Complete visible homepage: 850–1,050 words. All interactive states combined: maximum 1,450 words.
+- H1: 6–12 words, maximum 2.5 desktop lines.
+- H2: 4–9 words, maximum three desktop lines.
+- Lead: 18–32 words. Body paragraph: 20–45 words.
+- Decision and lifecycle states: 8–24 words each; depth appears on demand.
+- Complete visible homepage: 600–800 words. All interactive states combined: maximum 1,100 words.
+- These are ceilings, not quotas. Delete copy when the artifact already carries the point.
 
 ## Binding editorial rules
 
 - Conclusions before categories. Every headline must make a claim or answer a question.
+- Assume intelligence: show the consequence, reveal depth on demand and never teach back what the artifact already proved.
 - One idea per paragraph. No paragraph above 75 words on desktop or five lines at its accepted width.
 - Sans carries decisions and structure; serif carries judgment, consequence and reflective explanation.
 - Use `company`, `work`, `decision`, `context`, `build`, `owner`, `boundary` and `evidence` before technical vocabulary.

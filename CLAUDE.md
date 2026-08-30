@@ -6,11 +6,11 @@ The masterplan overrides earlier design, sitemap, template, measurement and prev
 
 Work one bounded package at a time. The current package is:
 
-`design/golden-standard/packages/P3-GLOBAL-CHROME.md`
+`design/golden-standard/packages/P1-MESSAGE-ARCHITECTURE-AND-COPY.md` (revision gate before P4)
 
 Rules:
 
-1. Do not begin P4 or change public design, homepage copy, imagery, product mechanisms or direction-specific composition while P3 is active.
+1. Do not begin P4 or change public design, imagery, product mechanisms or direction-specific composition while the P1 revision is active.
 2. Change only files the active package owns.
 3. Use final copy verbatim when a package supplies it.
 4. Report failures and deviations before successes.

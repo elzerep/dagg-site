@@ -21,7 +21,7 @@ The common five-act anatomy is:
 - **Question:** What transition does Dagg make real, why now and how does the complete system connect?
 - **Decision:** Dagg is a relevant transformation partner; an assessment is worth starting.
 - **Sequence:** Hero → stakes → transform/decide → WorkGraph → Factory → operate/trust/Impact → assessment.
-- **Primary object:** Decision-to-Operation Record following the same constructed work item across the page.
+- **Primary object:** One constructed work item followed from evidence through decision, build, boundary and record.
 - **Motion verb:** `reveal → decide → build → bound → record`.
 - **Boundary:** No named case, customer outcome or current managed-operations proof.
 - **Next action:** Start an assessment; contextual links to Transformation, WorkGraph, Build and Impact.
@@ -32,7 +32,7 @@ The common five-act anatomy is:
 - **Question:** How should the company work when people, agents and software take different roles?
 - **Decision:** Define the target operating model before selecting technology.
 - **Sequence:** AI-native thesis → operating reality → target operating model → five decisions → transition while running → first bounded move.
-- **Primary object:** Operating Model Decision Memo showing current state, target state, selected intervention, owner and reversal evidence.
+- **Primary object:** Operating-model decision showing current state, target state, selected intervention, owner and evidence that would change it.
 - **Motion verb:** `compare → choose → sequence`.
 - **Local navigation:** AI-native · Map · Decide · Roadmap.
 - **Boundary:** Future AI capability is scenario and optionality, never unsupported prophecy.
@@ -41,11 +41,11 @@ The common five-act anatomy is:
 ## `/workgraph` · WorkGraph
 
 - **Role:** Explain Dagg's central cross-lifecycle technology in business language before technical depth.
-- **Question:** How can AI understand and act inside this company, and how does learning survive model changes?
-- **Decision:** WorkGraph is a durable company-context asset linking transformation, build and later operating decisions.
+- **Question:** How can AI act with this company's context, and how can that context remain usable as models change?
+- **Decision:** WorkGraph links transformation, build and later operating decisions through reusable company context.
 - **Sequence:** Business value → what enters → how context becomes useful → lifecycle → ownership/proportionality → next move.
-- **Primary object:** Company Context Dossier: sources, workflow state, system, decision, exception, owner, permission and evidence history.
-- **Motion verb:** `retrieve → attest → retain → compound`.
+- **Primary object:** Company-context record with sources, workflow state, system, decision, exception, owner, permission and evidence history.
+- **Motion verb:** `connect → decide → build → learn`.
 - **Local navigation:** Context · Factory connection · Control · Learning.
 - **Boundary:** No node cloud, graph-for-graph's-sake or claim that WorkGraph alone is Dagg.
 - **Next action:** Explore Build or start an assessment.
@@ -54,9 +54,9 @@ The common five-act anatomy is:
 
 - **Role:** Show how strategy becomes agents or software and how the result is governed.
 - **Question:** What does Dagg build, how is it evaluated and who is accountable?
-- **Decision:** Choose the appropriate Factory mode and operating responsibility.
-- **Sequence:** Strategy becomes production → automate/rebuild modes → proportionate harness → human control and Trust → client-run or continued Dagg support → build record.
-- **Primary object:** Factory Job Record with intervention, context, tools, permissions, evaluations, accountable release owner and way back.
+- **Decision:** Choose the appropriate Factory mode and who will operate the result.
+- **Sequence:** Strategy becomes production → automate/rebuild modes → proportionate harness → human control and Trust → client-run or defined Dagg operating role → build record.
+- **Primary object:** Factory build record with intervention, context, tools, permissions, evaluations, accountable release owner and way back.
 - **Motion verb:** `specify → evaluate → pause → approve → release/rollback`.
 - **Local navigation:** Dagg Factory · Agents & software · Operate · Trust.
 - **Boundary:** `Operate` describes a delivery model, not current public evidence of systems operated.
@@ -68,7 +68,7 @@ The common five-act anatomy is:
 - **Question:** Is the evidence credible, bounded and relevant?
 - **Decision:** Read a permissioned proof or continue to an assessment.
 - **Sequence:** Evidence principle → Companies built / Companies transformed → permissioned lead proof → evidence chain → boundary/falsifier → next step.
-- **Primary object:** Impact Case File with starting condition, thesis, operating change, WorkGraph/harness, Factory build, operator, outcome, timeframe and provenance.
+- **Primary object:** Sourced case record with starting condition, thesis, operating change, WorkGraph/harness, Factory build, operator, outcome, timeframe and provenance.
 - **Motion verb:** `source → verify → attribute → bound`.
 - **Local navigation:** Companies built · Companies transformed.
 - **Boundary:** Aloi is the intended first Companies built proof, but it enters the accepted public route only after its claims, source, permission and limits pass the evidence ledger. No empty categories, invented customer names, unsourced outcomes or `Systems operated` category.
@@ -102,7 +102,7 @@ The common five-act anatomy is:
 - **Question:** What may act, on which data, under whose authority, and how can it be stopped or reversed?
 - **Decision:** Begin technical diligence or request the security pack.
 - **Sequence:** Control model → data and providers → permissions → evaluation → records/monitoring → reversibility → diligence route.
-- **Primary object:** Control Boundary Record with source, actor, permitted action, escalation owner, evidence and way back.
+- **Primary object:** Control record with source, actor, permitted action, escalation owner, evidence and way back.
 - **Motion verb:** `scope → permit → inspect → reverse`.
 - **Boundary:** All data-residency, retention, encryption, provider and certification claims require technical/legal verification before publication.
 - **Next action:** Request the security pack or start an assessment.
