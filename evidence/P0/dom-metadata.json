@@ -1,0 +1,110 @@
+{
+  "byViewport": {
+    "1440": {
+      "bodyElementCount": 209,
+      "carouselSelected": 0,
+      "carouselState": "MAP",
+      "consoleErrorDetail": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "consoleErrors": 1,
+      "dirty": "true",
+      "dirtyMeta": 1,
+      "failedRequests": [],
+      "httpErrorResponses": [
+        "404 http://127.0.0.1:54632/favicon.ico"
+      ],
+      "innerWidth": 1440,
+      "placeholderLinks": 9,
+      "readiness": {
+        "fontStatus": "loaded",
+        "images": [
+          {
+            "complete": true,
+            "naturalHeight": 375,
+            "naturalWidth": 1844,
+            "src": "http://127.0.0.1:54632/assets/dagg-logotype-dark.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 934,
+            "naturalWidth": 1400,
+            "src": "http://127.0.0.1:54632/assets/img/judgment-01.webp"
+          }
+        ],
+        "loadedFontFamilies": [
+          "Geist",
+          "JetBrains Mono",
+          "Newsreader"
+        ],
+        "stages": [
+          "load:ok",
+          "fonts:ok",
+          "images:ok"
+        ]
+      },
+      "revision": "1e939b5d3acc46f77b53830b25901c8e6a36dadf",
+      "revisionMeta": 1,
+      "scrollHeight": 5729,
+      "scrollWidth": 1440,
+      "scrollY": 0,
+      "url": "http://127.0.0.1:54632/preview/directions/a-plus.html"
+    },
+    "390": {
+      "bodyElementCount": 209,
+      "carouselSelected": 0,
+      "carouselState": "MAP",
+      "consoleErrorDetail": [],
+      "consoleErrors": 0,
+      "dirty": "true",
+      "dirtyMeta": 1,
+      "failedRequests": [],
+      "httpErrorResponses": [],
+      "innerWidth": 390,
+      "placeholderLinks": 9,
+      "readiness": {
+        "fontStatus": "loaded",
+        "images": [
+          {
+            "complete": true,
+            "naturalHeight": 375,
+            "naturalWidth": 1844,
+            "src": "http://127.0.0.1:54632/assets/dagg-logotype-dark.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 934,
+            "naturalWidth": 1400,
+            "src": "http://127.0.0.1:54632/assets/img/judgment-01.webp"
+          }
+        ],
+        "loadedFontFamilies": [
+          "Geist",
+          "JetBrains Mono",
+          "Newsreader"
+        ],
+        "stages": [
+          "load:ok",
+          "fonts:ok",
+          "images:ok"
+        ]
+      },
+      "revision": "1e939b5d3acc46f77b53830b25901c8e6a36dadf",
+      "revisionMeta": 1,
+      "scrollHeight": 6741,
+      "scrollWidth": 390,
+      "scrollY": 0,
+      "url": "http://127.0.0.1:54632/preview/directions/a-plus.html"
+    }
+  },
+  "pageUrl": "http://127.0.0.1:54632/preview/directions/a-plus.html",
+  "serverRevision": {
+    "abbreviatedCommit": "1e939b5",
+    "branch": "design-language",
+    "commit": "1e939b5d3acc46f77b53830b25901c8e6a36dadf",
+    "dirty": true,
+    "dirtyEntryCount": 9,
+    "repositoryRoot": "/Users/christianperez/Developer/dagg-site",
+    "serverStartedAt": "2026-08-30T12:29:59.420382+00:00"
+  }
+}

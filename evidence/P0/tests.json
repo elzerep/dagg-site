@@ -1,0 +1,28 @@
+{
+  "checks": {
+    "dirtyReportingHonest": true,
+    "dirtyStateMatchesGit": true,
+    "domRevisionMatchesEndpoint": true,
+    "freshBytesAfterChange": true,
+    "metaInsideHeadOnly": true,
+    "revisionEndpointFields": true,
+    "revisionEndpointMatchesGit": true,
+    "servedHtmlIsSourcePlusMetaOnly": true,
+    "spacesAndQueryStrings": true,
+    "traversalRefused": true,
+    "visiblePreviewChanged": false,
+    "zeroServerExceptions": true
+  },
+  "commit": "1e939b5d3acc46f77b53830b25901c8e6a36dadf",
+  "coverage": [
+    "CSS",
+    "HTML",
+    "JSON",
+    "JavaScript",
+    "raster-image"
+  ],
+  "dirty": true,
+  "linkedCss": "/preview/directions/tokens.css",
+  "notes": [],
+  "serverStderr": "Dagg revision-safe preview  http://127.0.0.1:54614/\n  revision 1e939b5 (design-language) dirty=true\n"
+}

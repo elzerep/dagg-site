@@ -1,5 +1,7 @@
 # Dagg — design language
 
+> **Authority status:** Historical evidence and implementation context. If this file conflicts with `design/golden-standard/DAGG-GOLDEN-STANDARD-MASTERPLAN.md`, the masterplan wins. Do not implement a new visual, narrative, IA, motion or component decision from this file alone.
+
 The rules behind the Arrowhead deck, written down so the next thing anyone
 builds arrives in the same voice without having to remember why.
 

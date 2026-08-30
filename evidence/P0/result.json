@@ -1,0 +1,203 @@
+{
+  "assetRevision": "1e939b5d3acc46f77b53830b25901c8e6a36dadf",
+  "authorityNotes": {
+    "design/DESIGN-LANGUAGE.md": 1,
+    "design/SITEMAP.md": 1,
+    "design/TEMPLATE.md": 1
+  },
+  "baseCommit": "1e939b5d3acc46f77b53830b25901c8e6a36dadf",
+  "branch": "design-language",
+  "capturedAt": "2026-08-30T12:30:05.962715+00:00",
+  "chrome": "Chrome/152.0.7977.65",
+  "chromePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+  "commit": "1e939b5d3acc46f77b53830b25901c8e6a36dadf",
+  "consoleErrors": 1,
+  "contrastFailures": [],
+  "controlFileHashesAtStart": {
+    "CLAUDE.md": {
+      "bytes": 1244,
+      "sha256": "58c4031ba6c27a88f222360c1845e1904f3af018447e080035efc6755e942b85"
+    },
+    "design/golden-standard/CLAUDE-WORK-PACKAGE-TEMPLATE.md": {
+      "bytes": 3920,
+      "sha256": "7851b31e6ece7eae1822b6d7d3755a1d5b6ecf441ff5d655353c119a1332447b"
+    },
+    "design/golden-standard/DAGG-GOLDEN-STANDARD-MASTERPLAN.md": {
+      "bytes": 62175,
+      "sha256": "721ae5f9ae6480c59babed1d21f276374a5ab7712fea2927906bad5f7d2aba6b"
+    },
+    "design/golden-standard/image-system/decision-field-hero-v2.png": {
+      "bytes": 2275873,
+      "sha256": "0daff1a42813dc82ad2db089354acd12b939729d599b3e05d86a94588810a246"
+    },
+    "design/golden-standard/packages/P0-RECONCILE-AND-PREVIEW.md": {
+      "bytes": 10454,
+      "sha256": "d1ebeb8c2585b10f0aca8d4d0fea57af3756b2d42563329ec22188ec4dc0bb5b"
+    },
+    "design/golden-standard/reference-audits/ANTHROPIC-OPENAI-RECIPE.md": {
+      "bytes": 13469,
+      "sha256": "d443617a859dcebc81ec0992425970b06d8ed5c1cd4fdee1195440474cadcb1d"
+    },
+    "design/golden-standard/reference-audits/PALANTIR-RECIPE.md": {
+      "bytes": 22870,
+      "sha256": "a0f0640e1b62b0765b73ebac1119286f85e29617ee5fc24bb05b9f5832bfe298"
+    },
+    "design/golden-standard/reference-audits/xai-current/XAI-CURRENT-AUDIT.md": {
+      "bytes": 16853,
+      "sha256": "7b0d5614ee7447a95a453e4a2bc7aabb0b20f6028d14402727efac326b86e04b"
+    }
+  },
+  "controlFileHashesBeforeCommit": {
+    "CLAUDE.md": {
+      "bytes": 1244,
+      "sha256": "58c4031ba6c27a88f222360c1845e1904f3af018447e080035efc6755e942b85"
+    },
+    "design/golden-standard/CLAUDE-WORK-PACKAGE-TEMPLATE.md": {
+      "bytes": 3920,
+      "sha256": "7851b31e6ece7eae1822b6d7d3755a1d5b6ecf441ff5d655353c119a1332447b"
+    },
+    "design/golden-standard/DAGG-GOLDEN-STANDARD-MASTERPLAN.md": {
+      "bytes": 62175,
+      "sha256": "721ae5f9ae6480c59babed1d21f276374a5ab7712fea2927906bad5f7d2aba6b"
+    },
+    "design/golden-standard/image-system/decision-field-hero-v2.png": {
+      "bytes": 2275873,
+      "sha256": "0daff1a42813dc82ad2db089354acd12b939729d599b3e05d86a94588810a246"
+    },
+    "design/golden-standard/packages/P0-RECONCILE-AND-PREVIEW.md": {
+      "bytes": 10454,
+      "sha256": "d1ebeb8c2585b10f0aca8d4d0fea57af3756b2d42563329ec22188ec4dc0bb5b"
+    },
+    "design/golden-standard/reference-audits/ANTHROPIC-OPENAI-RECIPE.md": {
+      "bytes": 13469,
+      "sha256": "d443617a859dcebc81ec0992425970b06d8ed5c1cd4fdee1195440474cadcb1d"
+    },
+    "design/golden-standard/reference-audits/PALANTIR-RECIPE.md": {
+      "bytes": 22870,
+      "sha256": "a0f0640e1b62b0765b73ebac1119286f85e29617ee5fc24bb05b9f5832bfe298"
+    },
+    "design/golden-standard/reference-audits/xai-current/XAI-CURRENT-AUDIT.md": {
+      "bytes": 16853,
+      "sha256": "7b0d5614ee7447a95a453e4a2bc7aabb0b20f6028d14402727efac326b86e04b"
+    }
+  },
+  "controlFilesUnchanged": true,
+  "deviations": [
+    "Default port 8912 was already bound by an unrelated pre-existing process at capture time, so this evidence was captured on an ephemeral port. The documented default is unchanged.",
+    "preview/directions/a-plus.html runs an IntersectionObserver carousel that auto-advances every 2600 ms, so its screenshots are not byte-reproducible. Each capture records carouselState and carouselSelected; both runs were captured at MAP/step 0 because the section is out of view at scroll position 0.",
+    "The page carries a loading=\"lazy\" image below the fold that captureBeyondViewport alone leaves blank. The harness sweeps the document and returns to the top before capturing; readiness stages in dom-metadata.json record that every image reached complete.",
+    "The only HTTP error and the only console error in the capture is Chrome's automatic /favicon.ico request returning 404. The repository has no favicon and the page does not reference one; no page asset failed to load.",
+    "9 placeholder links (href=\"#\") remain in this design-direction preview. Out of P0 scope; recorded for the package that owns navigation."
+  ],
+  "dirtyAtCapture": true,
+  "dirtyStateMatchesGit": true,
+  "domRevisionMatchesEndpoint": true,
+  "evidenceFiles": [
+    "evidence/P0/a-plus-1440px.png",
+    "evidence/P0/a-plus-390px.png",
+    "evidence/P0/a-plus-head-dom.html",
+    "evidence/P0/control-hashes-start.txt",
+    "evidence/P0/dom-metadata.json",
+    "evidence/P0/response-headers.json",
+    "evidence/P0/revision.json",
+    "evidence/P0/server-stderr.txt",
+    "evidence/P0/tests.json"
+  ],
+  "failedRequests": [],
+  "httpErrorResponses": [
+    "404 http://127.0.0.1:54632/favicon.ico"
+  ],
+  "minimumComputedTextPx": null,
+  "minimumTouchTarget": {
+    "height": 44,
+    "width": 44
+  },
+  "noJavaScript": "not measured; out of P0 scope",
+  "noStoreCoverage": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "raster-image"
+  ],
+  "package": "P0",
+  "placeholderLinks": 9,
+  "previewAndAssetDiffVersusBase": [],
+  "reducedMotion": "not measured; out of P0 scope",
+  "revisionEndpointMatchesGit": true,
+  "screenshots": [
+    {
+      "pageUrl": "http://127.0.0.1:54632/preview/directions/a-plus.html",
+      "path": "evidence/P0/a-plus-1440px.png",
+      "pixelDimensions": {
+        "height": 5729,
+        "width": 1440
+      },
+      "serverDirty": true,
+      "serverRevision": "1e939b5d3acc46f77b53830b25901c8e6a36dadf",
+      "sha256": "ea7095b2183de6e1c924462054fe49f6736e0e0d2ad3fd64e47e854d7056eeb8",
+      "viewport": 1440
+    },
+    {
+      "pageUrl": "http://127.0.0.1:54632/preview/directions/a-plus.html",
+      "path": "evidence/P0/a-plus-390px.png",
+      "pixelDimensions": {
+        "height": 6741,
+        "width": 390
+      },
+      "serverDirty": true,
+      "serverRevision": "1e939b5d3acc46f77b53830b25901c8e6a36dadf",
+      "sha256": "b8e2c5fc3b7fb9b7e80b91de2db97c093ed4993d0470300bf152ff5530bdd8d1",
+      "viewport": 390
+    }
+  ],
+  "scrollWidthMatches": true,
+  "serverBaseUrl": "http://127.0.0.1:54632",
+  "serverExceptions": 0,
+  "serverStartupSeconds": 0.099,
+  "serverStartupUnderTwoSeconds": true,
+  "statesTested": [
+    "default (no interaction, no reduced-motion override)"
+  ],
+  "tests": {
+    "checks": {
+      "dirtyReportingHonest": true,
+      "dirtyStateMatchesGit": true,
+      "domRevisionMatchesEndpoint": true,
+      "freshBytesAfterChange": true,
+      "metaInsideHeadOnly": true,
+      "revisionEndpointFields": true,
+      "revisionEndpointMatchesGit": true,
+      "servedHtmlIsSourcePlusMetaOnly": true,
+      "spacesAndQueryStrings": true,
+      "traversalRefused": true,
+      "visiblePreviewChanged": false,
+      "zeroServerExceptions": true
+    },
+    "commit": "1e939b5d3acc46f77b53830b25901c8e6a36dadf",
+    "coverage": [
+      "CSS",
+      "HTML",
+      "JSON",
+      "JavaScript",
+      "raster-image"
+    ],
+    "dirty": true,
+    "linkedCss": "/preview/directions/tokens.css",
+    "notes": [],
+    "serverStderr": "Dagg revision-safe preview  http://127.0.0.1:54614/\n  revision 1e939b5 (design-language) dirty=true\n"
+  },
+  "textCoverage": [],
+  "unmeasuredInP0": [
+    "minimumComputedTextPx",
+    "textCoverage",
+    "contrastFailures",
+    "reducedMotion",
+    "noJavaScript"
+  ],
+  "viewportScope": "P0 captures 1440 and 390 only; the full masterplan viewport ladder belongs to later packages.",
+  "viewports": [
+    390,
+    1440
+  ],
+  "visiblePreviewChanged": false
+}

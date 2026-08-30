@@ -1,0 +1,87 @@
+{
+  "CSS": {
+    "bytes": 5965,
+    "headers": {
+      "Cache-Control": "no-store, max-age=0",
+      "Content-Length": "5965",
+      "Content-Type": "text/css; charset=utf-8",
+      "Date": "Sun, 30 Aug 2026 12:29:59 GMT",
+      "Expires": "0",
+      "Pragma": "no-cache",
+      "Server": "DaggPreview/1.0 Python/3.14.7",
+      "X-Dagg-Dirty": "true",
+      "X-Dagg-Revision": "1e939b5d3acc46f77b53830b25901c8e6a36dadf"
+    },
+    "noStore": true,
+    "status": 200,
+    "url": "http://127.0.0.1:54632/preview/directions/tokens.css"
+  },
+  "HTML": {
+    "bytes": 29868,
+    "headers": {
+      "Cache-Control": "no-store, max-age=0",
+      "Content-Length": "29868",
+      "Content-Type": "text/html; charset=utf-8",
+      "Date": "Sun, 30 Aug 2026 12:29:59 GMT",
+      "Expires": "0",
+      "Pragma": "no-cache",
+      "Server": "DaggPreview/1.0 Python/3.14.7",
+      "X-Dagg-Dirty": "true",
+      "X-Dagg-Revision": "1e939b5d3acc46f77b53830b25901c8e6a36dadf"
+    },
+    "noStore": true,
+    "status": 200,
+    "url": "http://127.0.0.1:54632/preview/directions/a-plus.html"
+  },
+  "JSON /__revision": {
+    "bytes": 286,
+    "headers": {
+      "Cache-Control": "no-store, max-age=0",
+      "Content-Length": "286",
+      "Content-Type": "application/json; charset=utf-8",
+      "Date": "Sun, 30 Aug 2026 12:29:59 GMT",
+      "Expires": "0",
+      "Pragma": "no-cache",
+      "Server": "DaggPreview/1.0 Python/3.14.7",
+      "X-Dagg-Dirty": "true",
+      "X-Dagg-Revision": "1e939b5d3acc46f77b53830b25901c8e6a36dadf"
+    },
+    "noStore": true,
+    "status": 200,
+    "url": "http://127.0.0.1:54632/__revision"
+  },
+  "JavaScript": {
+    "bytes": 4953,
+    "headers": {
+      "Cache-Control": "no-store, max-age=0",
+      "Content-Length": "4953",
+      "Content-Type": "text/javascript; charset=utf-8",
+      "Date": "Sun, 30 Aug 2026 12:29:59 GMT",
+      "Expires": "0",
+      "Pragma": "no-cache",
+      "Server": "DaggPreview/1.0 Python/3.14.7",
+      "X-Dagg-Dirty": "true",
+      "X-Dagg-Revision": "1e939b5d3acc46f77b53830b25901c8e6a36dadf"
+    },
+    "noStore": true,
+    "status": 200,
+    "url": "http://127.0.0.1:54632/preview/site/site.js"
+  },
+  "raster-image": {
+    "bytes": 23718,
+    "headers": {
+      "Cache-Control": "no-store, max-age=0",
+      "Content-Length": "23718",
+      "Content-Type": "image/png",
+      "Date": "Sun, 30 Aug 2026 12:29:59 GMT",
+      "Expires": "0",
+      "Pragma": "no-cache",
+      "Server": "DaggPreview/1.0 Python/3.14.7",
+      "X-Dagg-Dirty": "true",
+      "X-Dagg-Revision": "1e939b5d3acc46f77b53830b25901c8e6a36dadf"
+    },
+    "noStore": true,
+    "status": 200,
+    "url": "http://127.0.0.1:54632/assets/dagg-logotype-dark.png"
+  }
+}

@@ -1,5 +1,7 @@
 # Daggs sidmall
 
+> **Authority status:** Historical evidence and implementation context. If this file conflicts with `design/golden-standard/DAGG-GOLDEN-STANDARD-MASTERPLAN.md`, the masterplan wins. Do not implement a new visual, narrative, IA, motion or component decision from this file alone.
+
 Byggd på mätningar av anthropic.com, openai.com och x.ai — inte på intryck.
 Siffrorna står i [MEASURED.md](MEASURED.md).
 
