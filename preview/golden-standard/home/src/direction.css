@@ -1,0 +1,882 @@
+/* FS5 Lane A Home composition
+ * Position -> operating shift -> retained record -> governed execution ->
+ * compounding evidence -> accountable partner. Shared chrome and tokens stay
+ * untouched. Each act's exact narrative unit is one contiguous owner; where
+ * the accepted composition splits a headline from its paragraphs across grid
+ * columns, the owner is `display: contents` and the children keep the same
+ * grid placement the accepted FS3/FS4 layout produced. */
+
+.home {
+  background: var(--paper);
+  color: var(--ink-2);
+}
+
+.home-act {
+  position: relative;
+}
+
+.home-act--shift,
+.home-act--record,
+.home-act--build,
+.home-act--compound,
+.home-act--partner {
+  padding-block: var(--section-lg);
+}
+
+.home-act--shift {
+  padding-block-start: var(--space-8);
+}
+
+.home-act--record {
+  background: var(--lift);
+}
+
+.home-act--build {
+  overflow: hidden;
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.home-act--partner {
+  padding-block-start: var(--section-md);
+  padding-block-end: var(--section-lg);
+}
+
+.home-h1,
+.home-h2 {
+  hyphens: none;
+  text-wrap: balance;
+}
+
+.home-h2 {
+  max-width: 19ch;
+}
+
+.home-measure {
+  max-width: min(var(--measure-max), 64ch);
+}
+
+.home-eyebrow {
+  margin-bottom: var(--space-4);
+}
+
+.home-actions {
+  margin-top: var(--space-7);
+  align-items: center;
+}
+
+.home-text-link {
+  width: fit-content;
+  margin-top: var(--space-5);
+}
+
+/* --------------------------------------------------------------------
+ * Act 1: the founder-selected causal composition. Copy establishes the
+ * strategic position above one edge-to-edge image: operating reality,
+ * human decision, governed boundary, coherent machine-speed execution.
+ *
+ * Protected geometry. The former `.home-hero__explanation` box held the
+ * lead and the actions in column 2, bottom-aligned. The exact narrative
+ * owner (eyebrow, H1, lead) is now `display: contents`; the lead and the
+ * actions are direct grid items in an explicit `1fr auto` row pair. With an
+ * indefinite grid height the 1fr row resolves to
+ * max(lead height, copy height - actions height), which reproduces the
+ * earlier positions exactly in both regimes (copy taller than lead+actions
+ * at 1440/1536, lead+actions taller at 1024).
+ * ------------------------------------------------------------------ */
+
+.home-act--position {
+  background: var(--paper);
+}
+
+.home-hero {
+  overflow: hidden;
+  background: var(--paper);
+}
+
+.home-hero__visual {
+  display: block;
+  width: 100%;
+  height: clamp(300px, 27vw, 430px);
+  overflow: hidden;
+  background: var(--ink);
+}
+
+.home-hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.home-hero__page {
+  padding-block: clamp(48px, 3.8vw, 58px) clamp(36px, 3.1vw, 48px);
+}
+
+.home-hero__field {
+  display: grid;
+  row-gap: 0;
+  align-items: start;
+}
+
+.home-hero__narrative {
+  display: contents;
+}
+
+.home-hero__copy {
+  max-width: 820px;
+}
+
+.home-h1 {
+  max-width: 14ch;
+  font-family: var(--font-serif);
+  font-size: clamp(54px, 6.1vw, 92px);
+  font-weight: 420;
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+}
+
+.home-lead {
+  max-width: 470px;
+  margin-top: var(--space-8);
+  min-width: 0;
+}
+
+.home-hero__actions {
+  max-width: 520px;
+  min-width: 0;
+}
+
+@media (min-width: 940px) {
+  .home-hero__field {
+    grid-template-columns: minmax(0, 8fr) minmax(340px, 4fr);
+    grid-template-rows: minmax(0, 1fr) auto;
+    column-gap: var(--col-gap);
+    align-items: end;
+  }
+
+  .home-hero__copy {
+    grid-column: 1;
+    grid-row: 1 / 3;
+  }
+
+  .home-lead {
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: 0;
+    align-self: end;
+  }
+
+  .home-hero__actions {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+
+@media (min-width: 1180px) {
+  .home-hero__actions {
+    flex-wrap: wrap;
+    margin-top: var(--space-5);
+  }
+
+  .home-hero__actions .cl-button {
+    padding-inline: var(--space-4);
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 1400px) {
+  .home-hero__actions {
+    flex-wrap: nowrap;
+  }
+}
+
+/* --------------------------------------------------------------------
+ * Act 2: an editorial shift with deliberately unequal columns.
+ * ------------------------------------------------------------------ */
+
+.home-shift {
+  display: grid;
+  row-gap: 0;
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--rule-strong);
+}
+
+.home-shift__narrative {
+  display: contents;
+}
+
+.home-shift__title {
+  position: relative;
+  padding-top: var(--space-5);
+}
+
+.home-shift__title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 72px;
+  height: 4px;
+  background: var(--coral);
+}
+
+.home-shift__argument {
+  display: grid;
+  gap: var(--space-5);
+  max-width: 620px;
+  margin-top: var(--space-8);
+}
+
+.home-shift__link {
+  margin-top: var(--space-7);
+}
+
+@media (min-width: 940px) {
+  .home-shift {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    grid-template-rows: auto auto;
+    column-gap: var(--col-gap);
+    align-items: start;
+  }
+
+  .home-shift__title {
+    grid-column: 1;
+    grid-row: 1 / 3;
+  }
+
+  .home-shift__argument {
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: 0;
+  }
+
+  .home-shift__link {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+
+/* --------------------------------------------------------------------
+ * Act 3: one retained identity. The disclosure precedes the first
+ * synthetic identifier; Owner and Permission are the two default fields.
+ * It is a quiet Paper surface on Lift, not a feature card and not the
+ * WorkGraph deep-page record.
+ * ------------------------------------------------------------------ */
+
+.home-record-layout {
+  display: grid;
+  gap: var(--space-9);
+  align-items: end;
+}
+
+.home-record__copy,
+.home-record__narrative {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.home-record__body {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.home-record {
+  overflow: hidden;
+  border-block: 1px solid var(--rule-strong);
+  background: var(--paper);
+}
+
+.home-record__disclosure {
+  max-width: 52ch;
+  padding: var(--space-5) var(--space-6) 0;
+  color: var(--ink-2);
+  font: 500 var(--fs-meta)/var(--lh-meta) var(--font-mono);
+  letter-spacing: 0.02em;
+}
+
+.home-record__identity {
+  display: grid;
+}
+
+.home-record__kicker {
+  padding: var(--space-6) var(--space-6) 0;
+  color: var(--ink-2);
+  font: 500 var(--fs-meta)/var(--lh-meta) var(--font-mono);
+  letter-spacing: var(--tracking-meta);
+  text-transform: uppercase;
+}
+
+.home-record__name {
+  max-width: 28ch;
+  padding: var(--space-2) var(--space-6) var(--space-6);
+  border-bottom: 1px solid var(--rule);
+  color: var(--ink);
+  font: 500 var(--fs-lead)/1.3 var(--font-sans);
+}
+
+.home-record__fields {
+  display: grid;
+  margin: 0;
+}
+
+.home-record__field {
+  display: grid;
+  grid-template-columns: minmax(104px, 0.3fr) minmax(0, 1fr);
+  gap: var(--space-5);
+  align-items: center;
+  min-height: 64px;
+  padding: var(--space-3) var(--space-6);
+  border-bottom: 1px solid var(--rule);
+}
+
+.home-record__field:last-child {
+  border-bottom: 0;
+}
+
+.home-record__field dt {
+  color: var(--ink-2);
+  font: 520 var(--fs-meta)/var(--lh-meta) var(--font-sans);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.home-record__field dd {
+  color: var(--ink);
+  font: var(--fs-body)/var(--lh-body) var(--font-serif);
+}
+
+.home-record__field--permission {
+  border-inline-start: 2px solid var(--sage);
+  padding-inline-start: calc(var(--space-6) - 2px);
+}
+
+@media (min-width: 940px) {
+  .home-record-layout {
+    grid-template-columns: minmax(0, 7fr) minmax(320px, 5fr);
+    column-gap: var(--col-gap);
+  }
+}
+
+/* --------------------------------------------------------------------
+ * Act 4: one connected record becomes execution. Operational Evidence
+ * is the contained instrument; Machine Signal is only the finite state
+ * transition running through it. Identity, static Request, signal line,
+ * four states, status.
+ * ------------------------------------------------------------------ */
+
+.home-build-layout {
+  display: grid;
+  gap: var(--space-9);
+}
+
+.home-build__copy,
+.home-build__narrative {
+  display: grid;
+  align-content: start;
+  gap: var(--space-6);
+}
+
+.home-build__copy .home-h2,
+.home-build__copy .cl-body {
+  color: var(--paper);
+}
+
+.home-build__body {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.home-build__boundary {
+  max-width: 48ch;
+  color: rgb(240 238 230 / 0.68);
+  font: var(--fs-body)/1.55 var(--font-serif);
+}
+
+.home-execution {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--rule-on-ink);
+  border-radius: var(--radius-instrument);
+  background: color-mix(in srgb, var(--paper) 3%, var(--ink));
+}
+
+.home-execution__trigger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}
+
+.home-execution__identity {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-6);
+  align-items: end;
+  padding: var(--space-6) var(--space-6) var(--space-5);
+}
+
+.home-execution__identity-copy {
+  min-width: 0;
+}
+
+.home-execution__record,
+.home-execution__status,
+.home-execution__request dt {
+  font: 500 var(--fs-meta)/var(--lh-meta) var(--font-mono);
+  letter-spacing: var(--tracking-meta);
+}
+
+.home-execution__record {
+  color: var(--coral);
+  text-transform: uppercase;
+}
+
+.home-execution__title {
+  max-width: 30ch;
+  margin-top: var(--space-2);
+  color: var(--paper);
+  font: 500 var(--fs-h3)/var(--lh-h3) var(--font-sans);
+}
+
+/* Controls reserve their row so the identity block never reflows when
+   Pause becomes Resume or Replay appears; every label has one fixed width. */
+.home-execution__controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--space-2);
+  flex-shrink: 0;
+  min-height: var(--target-min);
+}
+
+.home-execution__controls[hidden],
+.home-execution__controls button[hidden] {
+  display: none;
+}
+
+.home-execution__controls button {
+  min-width: 152px;
+  min-height: var(--target-min);
+  padding-inline: var(--space-4);
+  border: 1px solid var(--rule-on-ink);
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--paper);
+  font: 500 var(--fs-meta)/var(--lh-meta) var(--font-sans);
+  cursor: pointer;
+}
+
+.home-execution__controls button:hover {
+  border-color: var(--paper);
+}
+
+.home-execution__controls button:focus-visible {
+  outline: 2px solid var(--paper);
+  outline-offset: 2px;
+}
+
+/* Static Request context: carrier context, never a fifth animated state. */
+.home-execution__request {
+  margin: 0 var(--space-6);
+  padding-block: var(--space-5);
+  border-top: 1px solid var(--rule-on-ink);
+}
+
+.home-execution__request > div {
+  display: grid;
+  grid-template-columns: minmax(96px, 0.22fr) minmax(0, 1fr);
+  gap: var(--space-5);
+  align-items: baseline;
+}
+
+.home-execution__request dt {
+  color: rgb(240 238 230 / 0.62);
+  text-transform: uppercase;
+}
+
+.home-execution__request dd {
+  max-width: 44ch;
+  color: var(--paper);
+  font: var(--fs-body)/1.5 var(--font-serif);
+}
+
+.home-execution__signal {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  height: 52px;
+  margin-inline: var(--space-6);
+  overflow: hidden;
+  border-block: 1px solid var(--rule-on-ink);
+}
+
+.home-execution__signal::before,
+.home-execution__signal::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 1px;
+  transform-origin: left center;
+  transition: transform 280ms linear, background-color 180ms linear;
+}
+
+.home-execution__signal::before {
+  width: 100%;
+  background: rgb(240 238 230 / 0.18);
+}
+
+.home-execution__signal::after {
+  width: 100%;
+  transform: scaleX(0.13);
+  background: var(--paper);
+}
+
+.home-execution__signal span {
+  position: relative;
+  border-right: 1px solid var(--rule-on-ink);
+}
+
+.home-execution__signal span:last-child {
+  border-right: 0;
+}
+
+.home-execution__signal span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -4px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  transform: translateY(-50%) scale(0.75);
+  background: var(--ink-2);
+  transition: transform 180ms linear, background-color 180ms linear;
+}
+
+.home-execution[data-home-state-index="0"] .home-execution__signal::after {
+  transform: scaleX(0.13);
+}
+
+.home-execution[data-home-state-index="1"] .home-execution__signal::after {
+  transform: scaleX(0.38);
+  background: var(--coral);
+}
+
+.home-execution[data-home-state-index="2"] .home-execution__signal::after {
+  transform: scaleX(0.63);
+  background: var(--paper);
+}
+
+.home-execution[data-home-state-index="3"] .home-execution__signal::after {
+  transform: scaleX(1);
+  background: var(--sage);
+}
+
+.home-execution[data-home-state-index="1"] .home-execution__signal span:nth-child(-n+2)::after {
+  background: var(--coral);
+  transform: translateY(-50%) scale(1);
+}
+
+.home-execution[data-home-state-index="2"] .home-execution__signal span:nth-child(-n+3)::after,
+.home-execution[data-home-state-index="3"] .home-execution__signal span::after {
+  background: var(--sage);
+  transform: translateY(-50%) scale(1);
+}
+
+.home-execution__states {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: var(--space-3);
+}
+
+.home-execution__state {
+  display: grid;
+  align-content: start;
+  min-width: 0;
+  padding: var(--space-5);
+  border-right: 1px solid var(--rule-on-ink);
+  transition: background-color 220ms var(--motion-ease), opacity 220ms var(--motion-ease);
+}
+
+.home-execution__state:last-child {
+  border-right: 0;
+}
+
+.home-execution__state h4 {
+  margin: 0;
+  color: var(--paper);
+  font: 500 var(--fs-body)/1.35 var(--font-sans);
+}
+
+.home-execution__state p {
+  margin-top: var(--space-3);
+  color: rgb(240 238 230 / 0.78);
+  font: var(--fs-body)/1.55 var(--font-serif);
+}
+
+.home-execution__state[data-home-phase="current"] {
+  background: rgb(240 238 230 / 0.065);
+}
+
+/* Enhanced only: states not yet reached recede; the static document and the
+   no-JavaScript reading keep all four states at full weight in source order. */
+.home-execution[data-home-enhanced] .home-execution__state[data-home-phase="pending"] h4,
+.home-execution[data-home-enhanced] .home-execution__state[data-home-phase="pending"] p {
+  color: rgb(240 238 230 / 0.42);
+}
+
+.home-execution__state[data-home-execution-state="1"][data-home-phase="current"] h4 {
+  color: var(--coral);
+}
+
+.home-execution__state[data-home-execution-state="3"][data-home-phase="current"] h4 {
+  color: var(--sage);
+}
+
+.home-execution__status {
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  padding-inline: var(--space-6);
+  border-top: 1px solid var(--rule-on-ink);
+  color: rgb(240 238 230 / 0.64);
+}
+
+@media (min-width: 1100px) {
+  .home-build-layout {
+    grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+    column-gap: var(--col-gap);
+    align-items: start;
+  }
+}
+
+/* --------------------------------------------------------------------
+ * Acts 5 and 6: return to a calm reading ground. The argument compounds
+ * once, then resolves into one bounded next move.
+ * ------------------------------------------------------------------ */
+
+.home-compound,
+.home-partner {
+  display: grid;
+  row-gap: 0;
+}
+
+.home-compound__narrative,
+.home-partner__narrative {
+  display: contents;
+}
+
+.home-compound__lead {
+  margin-top: var(--space-8);
+  color: var(--ink-2);
+}
+
+.home-compound__link {
+  margin-top: calc(var(--space-4) + var(--space-5));
+}
+
+.home-partner {
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--rule-strong);
+}
+
+.home-partner__copy {
+  display: grid;
+  gap: var(--space-5);
+  margin-top: var(--space-8);
+}
+
+.home-partner__actions {
+  margin-top: calc(var(--space-5) + var(--space-7));
+}
+
+@media (min-width: 940px) {
+  .home-compound,
+  .home-partner {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    grid-template-rows: auto auto;
+    column-gap: var(--col-gap);
+    align-items: start;
+  }
+
+  .home-compound .home-h2,
+  .home-partner .home-h2 {
+    grid-column: 1;
+    grid-row: 1 / 3;
+  }
+
+  .home-compound__lead,
+  .home-partner__copy {
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: 0;
+  }
+
+  .home-compound__link,
+  .home-partner__actions {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+
+/* --------------------------------------------------------------------
+ * Tablet and mobile are authored reading modes, not squeezed desktop.
+ * ------------------------------------------------------------------ */
+
+@media (max-width: 1099.98px) {
+  .home-build__copy {
+    max-width: 760px;
+  }
+
+  .home-execution__states {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-execution__state:nth-child(2) {
+    border-right: 0;
+  }
+
+  .home-execution__state:nth-child(-n+2) {
+    border-bottom: 1px solid var(--rule-on-ink);
+  }
+}
+
+@media (max-width: 939.98px) {
+  .home-act--shift,
+  .home-act--record,
+  .home-act--build,
+  .home-act--compound,
+  .home-act--partner {
+    padding-block: var(--section-md);
+  }
+
+  .home-hero__visual {
+    height: clamp(300px, 48vw, 410px);
+  }
+
+  .home-hero__image {
+    object-position: 50% 50%;
+  }
+
+  .home-record-layout {
+    gap: var(--space-8);
+  }
+}
+
+@media (max-width: 639.98px) {
+  .home-act--shift,
+  .home-act--record,
+  .home-act--build,
+  .home-act--compound,
+  .home-act--partner {
+    padding-block: var(--section-md);
+  }
+
+  .home-hero__visual {
+    height: clamp(250px, 72vw, 330px);
+  }
+
+  .home-hero__page {
+    padding-block: var(--space-8) var(--space-7);
+  }
+
+  .home-lead {
+    margin-top: var(--space-7);
+  }
+
+  .home-h1 {
+    max-width: 10.5ch;
+    font-size: clamp(48px, 14vw, 62px);
+    line-height: 0.98;
+  }
+
+  .home-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .home-actions .cl-button {
+    width: 100%;
+    max-width: 100%;
+    min-height: 48px;
+  }
+
+  .home-execution__identity {
+    display: grid;
+    align-items: start;
+    padding: var(--space-5) var(--space-5) var(--space-4);
+  }
+
+  .home-execution__controls {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .home-execution__controls button {
+    flex: 1 1 100%;
+    min-height: 48px;
+  }
+
+  .home-execution__request {
+    margin-inline: var(--space-5);
+  }
+
+  .home-execution__request > div {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-2);
+  }
+
+  .home-execution__signal {
+    margin-inline: var(--space-5);
+  }
+
+  .home-execution__states {
+    grid-template-columns: 1fr;
+  }
+
+  .home-execution__state,
+  .home-execution__state:nth-child(2) {
+    border-right: 0;
+    border-bottom: 1px solid var(--rule-on-ink);
+  }
+
+  .home-execution__state:last-child {
+    border-bottom: 0;
+  }
+
+  .home-execution__status {
+    padding-inline: var(--space-5);
+  }
+
+  .home-record__disclosure,
+  .home-record__kicker,
+  .home-record__name,
+  .home-record__field {
+    padding-inline: var(--space-5);
+  }
+
+  .home-record__field--permission {
+    padding-inline-start: calc(var(--space-5) - 2px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home *,
+  .home *::before,
+  .home *::after {
+    animation-duration: 0ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .home-hero__image {
+    transform: none;
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "route": "Company",
+  "frozen": true,
+  "slots": [
+    {
+      "id": "company-opening-accountability-seam",
+      "job": "Bridge the copy-led proposition into the accountability chain as a quiet horizontal seam without turning Company into a hero-image route or a headcount story.",
+      "families": ["decision-field"],
+      "desktopAspect": "intrinsic-5:2",
+      "mobileAspect": "intrinsic-5:2",
+      "exclusions": ["people wall", "anonymous humans", "dashboard", "terminal", "circuit board", "biological ambiguity", "decorative collage"],
+      "evaluation": ["one coral commitment", "precise continuation", "open sage boundary", "warm calm", "supporting rather than dominating the opening"],
+      "candidateIds": [
+        "company-accountability-seam-01-v1",
+        "company-accountability-decision-field-desktop-v2",
+        "company-accountability-decision-field-mobile-v2"
+      ],
+      "selection": "company-accountability-seam-01-v1",
+      "mobileSelection": "company-accountability-seam-01-v1",
+      "selectionReason": "The authored seam renders at its intrinsic 5:2 ratio in a carrier capped at 640x256 on 1440 and 1024 viewports, resolving to 350x140 at 390, aligned to the content-grid end. It sits between the proposition and chain without crossing a row. The v2 pair is review-only and is not an automatic fallback; a visible failure stops route acceptance and returns the route decision to Codex."
+    }
+  ]
+}

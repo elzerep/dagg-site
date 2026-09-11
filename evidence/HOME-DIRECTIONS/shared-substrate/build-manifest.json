@@ -1,0 +1,496 @@
+{
+  "contract": "design/golden-standard/packages/P4R6-DUAL-CUT-HOME-DIRECTIONS.md#9",
+  "tool": "tools/build_golden_standard_previews.mjs",
+  "deterministic": true,
+  "note": "No timestamp is recorded. Two runs over unchanged sources must produce this file byte-identically.",
+  "shared": {
+    "header.html": {
+      "path": "preview/golden-standard/shared/chrome/header.html",
+      "sha256": "077054be7636781944b0520524b229fc8e20fb27cfa5d942ec2462652967d666",
+      "bytes": 12686
+    },
+    "footer.html": {
+      "path": "preview/golden-standard/shared/chrome/footer.html",
+      "sha256": "2a3c56cd9162b8c7b93b3522bb3c1419ba543fd2cd11d712c607dd12e41c401d",
+      "bytes": 3752
+    },
+    "chrome.css": {
+      "path": "preview/golden-standard/shared/chrome/chrome.css",
+      "sha256": "aaeaea97b67d26e320594370f73f6c35a5e14b0dbad41ab40d54267efbd15761",
+      "bytes": 12632
+    },
+    "chrome.js": {
+      "path": "preview/golden-standard/shared/chrome/chrome.js",
+      "sha256": "4d15db4cbd6999a68a5b3ad64691b8f9394be7f914566f6ce147951efafce72e",
+      "bytes": 7092
+    },
+    "tokens.css": {
+      "path": "design/golden-standard/system/tokens.css",
+      "sha256": "acc9fc8367455f23740735e9be7a0d4597c7bcab1fef3b18edcfb494fe8705cd",
+      "bytes": 6228
+    },
+    "component.css": {
+      "path": "preview/golden-standard/component-library/styles.css",
+      "sha256": "0f9cc27324c306f181dd2f60e4d7ecd265bbc415d656ea6cc150dc728f4bc674",
+      "bytes": 78349
+    },
+    "component.js": {
+      "path": "preview/golden-standard/component-library/script.js",
+      "sha256": "3c6c09707975eae870221f757c5ab125a95147d3156bd421fb9f7850195cbeb0",
+      "bytes": 31781
+    }
+  },
+  "headContract": {
+    "stylesheetOrder": [
+      "/design/golden-standard/system/tokens.css",
+      "/preview/golden-standard/shared/chrome/chrome.css",
+      "/preview/golden-standard/component-library/styles.css",
+      "<route>/src/direction.css"
+    ],
+    "scriptOrder": [
+      "/preview/golden-standard/shared/chrome/chrome.js",
+      "/preview/golden-standard/component-library/script.js",
+      "<route>/src/direction.js"
+    ],
+    "mainLandmark": "<main id=\"main\""
+  },
+  "pages": [
+    {
+      "route": "preview/golden-standard/directions/a0-claude",
+      "output": "preview/golden-standard/directions/a0-claude/index.html",
+      "sha256": "80d6b944cdfa0205be442e6b8f517e7aa6e75c5cdd5a94a4326a00d1adfd095d",
+      "bytes": 46340,
+      "brandHref": "/preview/golden-standard/directions/a0-claude/",
+      "currentNavHref": "",
+      "directionCss": [
+        "preview/golden-standard/directions/a0-claude/src/direction.css"
+      ],
+      "directionJs": [
+        "preview/golden-standard/directions/a0-claude/src/direction.js"
+      ],
+      "sharedHashes": {
+        "header.html": "077054be7636781944b0520524b229fc8e20fb27cfa5d942ec2462652967d666",
+        "footer.html": "2a3c56cd9162b8c7b93b3522bb3c1419ba543fd2cd11d712c607dd12e41c401d",
+        "chrome.css": "aaeaea97b67d26e320594370f73f6c35a5e14b0dbad41ab40d54267efbd15761",
+        "chrome.js": "4d15db4cbd6999a68a5b3ad64691b8f9394be7f914566f6ce147951efafce72e",
+        "tokens.css": "acc9fc8367455f23740735e9be7a0d4597c7bcab1fef3b18edcfb494fe8705cd",
+        "component.css": "0f9cc27324c306f181dd2f60e4d7ecd265bbc415d656ea6cc150dc728f4bc674",
+        "component.js": "3c6c09707975eae870221f757c5ab125a95147d3156bd421fb9f7850195cbeb0"
+      }
+    },
+    {
+      "route": "preview/golden-standard/directions/a0-codex",
+      "output": "preview/golden-standard/directions/a0-codex/index.html",
+      "sha256": "40e9a35b87b0ee8e56fa8d1121be5a5ae59a3d0796eb33be77695f0a2230accc",
+      "bytes": 33862,
+      "brandHref": "/preview/golden-standard/directions/a0-codex/",
+      "currentNavHref": "",
+      "directionCss": [
+        "preview/golden-standard/directions/a0-codex/src/direction.css"
+      ],
+      "directionJs": [
+        "preview/golden-standard/directions/a0-codex/src/direction.js"
+      ],
+      "sharedHashes": {
+        "header.html": "077054be7636781944b0520524b229fc8e20fb27cfa5d942ec2462652967d666",
+        "footer.html": "2a3c56cd9162b8c7b93b3522bb3c1419ba543fd2cd11d712c607dd12e41c401d",
+        "chrome.css": "aaeaea97b67d26e320594370f73f6c35a5e14b0dbad41ab40d54267efbd15761",
+        "chrome.js": "4d15db4cbd6999a68a5b3ad64691b8f9394be7f914566f6ce147951efafce72e",
+        "tokens.css": "acc9fc8367455f23740735e9be7a0d4597c7bcab1fef3b18edcfb494fe8705cd",
+        "component.css": "0f9cc27324c306f181dd2f60e4d7ecd265bbc415d656ea6cc150dc728f4bc674",
+        "component.js": "3c6c09707975eae870221f757c5ab125a95147d3156bd421fb9f7850195cbeb0"
+      }
+    },
+    {
+      "route": "preview/golden-standard/directions/a1",
+      "output": "preview/golden-standard/directions/a1/index.html",
+      "sha256": "7c6c54f5d7addbe787d951477ec0dcd68ecac4fff2f6221871e405d7d78ad5f4",
+      "bytes": 33857,
+      "brandHref": "/preview/golden-standard/directions/a1/",
+      "currentNavHref": "",
+      "directionCss": [
+        "preview/golden-standard/directions/a1/src/direction.css"
+      ],
+      "directionJs": [
+        "preview/golden-standard/directions/a1/src/direction.js"
+      ],
+      "sharedHashes": {
+        "header.html": "077054be7636781944b0520524b229fc8e20fb27cfa5d942ec2462652967d666",
+        "footer.html": "2a3c56cd9162b8c7b93b3522bb3c1419ba543fd2cd11d712c607dd12e41c401d",
+        "chrome.css": "aaeaea97b67d26e320594370f73f6c35a5e14b0dbad41ab40d54267efbd15761",
+        "chrome.js": "4d15db4cbd6999a68a5b3ad64691b8f9394be7f914566f6ce147951efafce72e",
+        "tokens.css": "acc9fc8367455f23740735e9be7a0d4597c7bcab1fef3b18edcfb494fe8705cd",
+        "component.css": "0f9cc27324c306f181dd2f60e4d7ecd265bbc415d656ea6cc150dc728f4bc674",
+        "component.js": "3c6c09707975eae870221f757c5ab125a95147d3156bd421fb9f7850195cbeb0"
+      }
+    },
+    {
+      "route": "preview/golden-standard/directions/a2",
+      "output": "preview/golden-standard/directions/a2/index.html",
+      "sha256": "dd52cfc8768c32dbbc446fff46b8156c39eed8934a08df97f7f1062c8e230b22",
+      "bytes": 25219,
+      "brandHref": "/preview/golden-standard/directions/a2/",
+      "currentNavHref": "",
+      "directionCss": [
+        "preview/golden-standard/directions/a2/src/direction.css"
+      ],
+      "directionJs": [
+        "preview/golden-standard/directions/a2/src/direction.js"
+      ],
+      "sharedHashes": {
+        "header.html": "077054be7636781944b0520524b229fc8e20fb27cfa5d942ec2462652967d666",
+        "footer.html": "2a3c56cd9162b8c7b93b3522bb3c1419ba543fd2cd11d712c607dd12e41c401d",
+        "chrome.css": "aaeaea97b67d26e320594370f73f6c35a5e14b0dbad41ab40d54267efbd15761",
+        "chrome.js": "4d15db4cbd6999a68a5b3ad64691b8f9394be7f914566f6ce147951efafce72e",
+        "tokens.css": "acc9fc8367455f23740735e9be7a0d4597c7bcab1fef3b18edcfb494fe8705cd",
+        "component.css": "0f9cc27324c306f181dd2f60e4d7ecd265bbc415d656ea6cc150dc728f4bc674",
+        "component.js": "3c6c09707975eae870221f757c5ab125a95147d3156bd421fb9f7850195cbeb0"
+      }
+    },
+    {
+      "route": "preview/golden-standard/directions/b0-claude",
+      "output": "preview/golden-standard/directions/b0-claude/index.html",
+      "sha256": "30b8f140d3a942f7fdc921f2aa20fc274fe352eec97d9f7766202406325ffebd",
+      "bytes": 45700,
+      "brandHref": "/preview/golden-standard/directions/b0-claude/",
+      "currentNavHref": "",
+      "directionCss": [
+        "preview/golden-standard/directions/b0-claude/src/direction.css"
+      ],
+      "directionJs": [
+        "preview/golden-standard/directions/b0-claude/src/direction.js"
+      ],
+      "sharedHashes": {
+        "header.html": "077054be7636781944b0520524b229fc8e20fb27cfa5d942ec2462652967d666",
+        "footer.html": "2a3c56cd9162b8c7b93b3522bb3c1419ba543fd2cd11d712c607dd12e41c401d",
+        "chrome.css": "aaeaea97b67d26e320594370f73f6c35a5e14b0dbad41ab40d54267efbd15761",
+        "chrome.js": "4d15db4cbd6999a68a5b3ad64691b8f9394be7f914566f6ce147951efafce72e",
+        "tokens.css": "acc9fc8367455f23740735e9be7a0d4597c7bcab1fef3b18edcfb494fe8705cd",
+        "component.css": "0f9cc27324c306f181dd2f60e4d7ecd265bbc415d656ea6cc150dc728f4bc674",
+        "component.js": "3c6c09707975eae870221f757c5ab125a95147d3156bd421fb9f7850195cbeb0"
+      }
+    },
+    {
+      "route": "preview/golden-standard/directions/b0-codex",
+      "output": "preview/golden-standard/directions/b0-codex/index.html",
+      "sha256": "d5efb2a8f082f1450f23f4606e1fcae0bb5199cf61b7f9aa3df7dcec7fb646c8",
+      "bytes": 31883,
+      "brandHref": "/preview/golden-standard/directions/b0-codex/",
+      "currentNavHref": "",
+      "directionCss": [
+        "preview/golden-standard/directions/b0-codex/src/direction.css"
+      ],
+      "directionJs": [
+        "preview/golden-standard/directions/b0-codex/src/direction.js"
+      ],
+      "sharedHashes": {
+        "header.html": "077054be7636781944b0520524b229fc8e20fb27cfa5d942ec2462652967d666",
+        "footer.html": "2a3c56cd9162b8c7b93b3522bb3c1419ba543fd2cd11d712c607dd12e41c401d",
+        "chrome.css": "aaeaea97b67d26e320594370f73f6c35a5e14b0dbad41ab40d54267efbd15761",
+        "chrome.js": "4d15db4cbd6999a68a5b3ad64691b8f9394be7f914566f6ce147951efafce72e",
+        "tokens.css": "acc9fc8367455f23740735e9be7a0d4597c7bcab1fef3b18edcfb494fe8705cd",
+        "component.css": "0f9cc27324c306f181dd2f60e4d7ecd265bbc415d656ea6cc150dc728f4bc674",
+        "component.js": "3c6c09707975eae870221f757c5ab125a95147d3156bd421fb9f7850195cbeb0"
+      }
+    },
+    {
+      "route": "preview/golden-standard/directions/b1",
+      "output": "preview/golden-standard/directions/b1/index.html",
+      "sha256": "c22fd4a79a784b119588bd8ca99ddd308e5fab4c85407987528c28f973206e1c",
+      "bytes": 32475,
+      "brandHref": "/preview/golden-standard/directions/b1/",
+      "currentNavHref": "",
+      "directionCss": [
+        "preview/golden-standard/directions/b1/src/direction.css"
+      ],
+      "directionJs": [
+        "preview/golden-standard/directions/b1/src/direction.js"
+      ],
+      "sharedHashes": {
+        "header.html": "077054be7636781944b0520524b229fc8e20fb27cfa5d942ec2462652967d666",
+        "footer.html": "2a3c56cd9162b8c7b93b3522bb3c1419ba543fd2cd11d712c607dd12e41c401d",
+        "chrome.css": "aaeaea97b67d26e320594370f73f6c35a5e14b0dbad41ab40d54267efbd15761",
+        "chrome.js": "4d15db4cbd6999a68a5b3ad64691b8f9394be7f914566f6ce147951efafce72e",
+        "tokens.css": "acc9fc8367455f23740735e9be7a0d4597c7bcab1fef3b18edcfb494fe8705cd",
+        "component.css": "0f9cc27324c306f181dd2f60e4d7ecd265bbc415d656ea6cc150dc728f4bc674",
+        "component.js": "3c6c09707975eae870221f757c5ab125a95147d3156bd421fb9f7850195cbeb0"
+      }
+    },
+    {
+      "route": "preview/golden-standard/directions/c0-claude",
+      "output": "preview/golden-standard/directions/c0-claude/index.html",
+      "sha256": "6914254c08d713c37b148e0e8e545353513579bcc893620f5b11bc345a121035",
+      "bytes": 46945,
+      "brandHref": "/preview/golden-standard/directions/c0-claude/",
+      "currentNavHref": "",
+      "directionCss": [
+        "preview/golden-standard/directions/c0-claude/src/direction.css"
+      ],
+      "directionJs": [
+        "preview/golden-standard/directions/c0-claude/src/direction.js"
+      ],
+      "sharedHashes": {
+        "header.html": "077054be7636781944b0520524b229fc8e20fb27cfa5d942ec2462652967d666",
+        "footer.html": "2a3c56cd9162b8c7b93b3522bb3c1419ba543fd2cd11d712c607dd12e41c401d",
+        "chrome.css": "aaeaea97b67d26e320594370f73f6c35a5e14b0dbad41ab40d54267efbd15761",
+        "chrome.js": "4d15db4cbd6999a68a5b3ad64691b8f9394be7f914566f6ce147951efafce72e",
+        "tokens.css": "acc9fc8367455f23740735e9be7a0d4597c7bcab1fef3b18edcfb494fe8705cd",
+        "component.css": "0f9cc27324c306f181dd2f60e4d7ecd265bbc415d656ea6cc150dc728f4bc674",
+        "component.js": "3c6c09707975eae870221f757c5ab125a95147d3156bd421fb9f7850195cbeb0"
+      }
+    },
+    {
+      "route": "preview/golden-standard/directions/c0-codex",
+      "output": "preview/golden-standard/directions/c0-codex/index.html",
+      "sha256": "d5040c206b4e04c400767d979bd93a4ba938e4caf7338dddaf1a814558aa2fef",
+      "bytes": 34725,
+      "brandHref": "/preview/golden-standard/directions/c0-codex/",
+      "currentNavHref": "",
+      "directionCss": [
+        "preview/golden-standard/directions/c0-codex/src/direction.css"
+      ],
+      "directionJs": [
+        "preview/golden-standard/directions/c0-codex/src/direction.js"
+      ],
+      "sharedHashes": {
+        "header.html": "077054be7636781944b0520524b229fc8e20fb27cfa5d942ec2462652967d666",
+        "footer.html": "2a3c56cd9162b8c7b93b3522bb3c1419ba543fd2cd11d712c607dd12e41c401d",
+        "chrome.css": "aaeaea97b67d26e320594370f73f6c35a5e14b0dbad41ab40d54267efbd15761",
+        "chrome.js": "4d15db4cbd6999a68a5b3ad64691b8f9394be7f914566f6ce147951efafce72e",
+        "tokens.css": "acc9fc8367455f23740735e9be7a0d4597c7bcab1fef3b18edcfb494fe8705cd",
+        "component.css": "0f9cc27324c306f181dd2f60e4d7ecd265bbc415d656ea6cc150dc728f4bc674",
+        "component.js": "3c6c09707975eae870221f757c5ab125a95147d3156bd421fb9f7850195cbeb0"
+      }
+    },
+    {
+      "route": "preview/golden-standard/directions/c1",
+      "output": "preview/golden-standard/directions/c1/index.html",
+      "sha256": "b064a5fa9ade77855ebe720e5a470a9a73bea6564b307ec0fa98850278c9fe7c",
+      "bytes": 33326,
+      "brandHref": "/preview/golden-standard/directions/c1/",
+      "currentNavHref": "",
+      "directionCss": [
+        "preview/golden-standard/directions/c1/src/direction.css"
+      ],
+      "directionJs": [
+        "preview/golden-standard/directions/c1/src/direction.js"
+      ],
+      "sharedHashes": {
+        "header.html": "077054be7636781944b0520524b229fc8e20fb27cfa5d942ec2462652967d666",
+        "footer.html": "2a3c56cd9162b8c7b93b3522bb3c1419ba543fd2cd11d712c607dd12e41c401d",
+        "chrome.css": "aaeaea97b67d26e320594370f73f6c35a5e14b0dbad41ab40d54267efbd15761",
+        "chrome.js": "4d15db4cbd6999a68a5b3ad64691b8f9394be7f914566f6ce147951efafce72e",
+        "tokens.css": "acc9fc8367455f23740735e9be7a0d4597c7bcab1fef3b18edcfb494fe8705cd",
+        "component.css": "0f9cc27324c306f181dd2f60e4d7ecd265bbc415d656ea6cc150dc728f4bc674",
+        "component.js": "3c6c09707975eae870221f757c5ab125a95147d3156bd421fb9f7850195cbeb0"
+      }
+    },
+    {
+      "route": "preview/golden-standard/home",
+      "output": "preview/golden-standard/home/index.html",
+      "sha256": "8c9ac6111bb954fd3a9df7cecc9c8f508bb60d645543e01403ded4a02afbfaed",
+      "bytes": 33623,
+      "brandHref": "/preview/golden-standard/home/",
+      "currentNavHref": "",
+      "directionCss": [
+        "preview/golden-standard/home/src/direction.css"
+      ],
+      "directionJs": [
+        "preview/golden-standard/home/src/direction.js"
+      ],
+      "sharedHashes": {
+        "header.html": "077054be7636781944b0520524b229fc8e20fb27cfa5d942ec2462652967d666",
+        "footer.html": "2a3c56cd9162b8c7b93b3522bb3c1419ba543fd2cd11d712c607dd12e41c401d",
+        "chrome.css": "aaeaea97b67d26e320594370f73f6c35a5e14b0dbad41ab40d54267efbd15761",
+        "chrome.js": "4d15db4cbd6999a68a5b3ad64691b8f9394be7f914566f6ce147951efafce72e",
+        "tokens.css": "acc9fc8367455f23740735e9be7a0d4597c7bcab1fef3b18edcfb494fe8705cd",
+        "component.css": "0f9cc27324c306f181dd2f60e4d7ecd265bbc415d656ea6cc150dc728f4bc674",
+        "component.js": "3c6c09707975eae870221f757c5ab125a95147d3156bd421fb9f7850195cbeb0"
+      }
+    },
+    {
+      "route": "preview/golden-standard/routes/assessment",
+      "output": "preview/golden-standard/routes/assessment/index.html",
+      "sha256": "9cd3e040b53d2e318ef56a65663f9d5458001c03ae61343973e3f82d2caf8cbd",
+      "bytes": 29502,
+      "brandHref": "/preview/golden-standard/home/",
+      "currentNavHref": "",
+      "directionCss": [
+        "preview/golden-standard/routes/assessment/src/direction.css"
+      ],
+      "directionJs": [
+        "preview/golden-standard/routes/assessment/src/direction.js"
+      ],
+      "sharedHashes": {
+        "header.html": "077054be7636781944b0520524b229fc8e20fb27cfa5d942ec2462652967d666",
+        "footer.html": "2a3c56cd9162b8c7b93b3522bb3c1419ba543fd2cd11d712c607dd12e41c401d",
+        "chrome.css": "aaeaea97b67d26e320594370f73f6c35a5e14b0dbad41ab40d54267efbd15761",
+        "chrome.js": "4d15db4cbd6999a68a5b3ad64691b8f9394be7f914566f6ce147951efafce72e",
+        "tokens.css": "acc9fc8367455f23740735e9be7a0d4597c7bcab1fef3b18edcfb494fe8705cd",
+        "component.css": "0f9cc27324c306f181dd2f60e4d7ecd265bbc415d656ea6cc150dc728f4bc674",
+        "component.js": "3c6c09707975eae870221f757c5ab125a95147d3156bd421fb9f7850195cbeb0"
+      }
+    },
+    {
+      "route": "preview/golden-standard/routes/build",
+      "output": "preview/golden-standard/routes/build/index.html",
+      "sha256": "3572ce0a800175f1298910361db0a2f1e1ab75a553a06cf5ba1c4fe62ea96e38",
+      "bytes": 40536,
+      "brandHref": "/preview/golden-standard/home/",
+      "currentNavHref": "/preview/golden-standard/routes/build/",
+      "directionCss": [
+        "preview/golden-standard/routes/build/src/direction.css"
+      ],
+      "directionJs": [
+        "preview/golden-standard/routes/build/src/direction.js"
+      ],
+      "sharedHashes": {
+        "header.html": "077054be7636781944b0520524b229fc8e20fb27cfa5d942ec2462652967d666",
+        "footer.html": "2a3c56cd9162b8c7b93b3522bb3c1419ba543fd2cd11d712c607dd12e41c401d",
+        "chrome.css": "aaeaea97b67d26e320594370f73f6c35a5e14b0dbad41ab40d54267efbd15761",
+        "chrome.js": "4d15db4cbd6999a68a5b3ad64691b8f9394be7f914566f6ce147951efafce72e",
+        "tokens.css": "acc9fc8367455f23740735e9be7a0d4597c7bcab1fef3b18edcfb494fe8705cd",
+        "component.css": "0f9cc27324c306f181dd2f60e4d7ecd265bbc415d656ea6cc150dc728f4bc674",
+        "component.js": "3c6c09707975eae870221f757c5ab125a95147d3156bd421fb9f7850195cbeb0"
+      }
+    },
+    {
+      "route": "preview/golden-standard/routes/company",
+      "output": "preview/golden-standard/routes/company/index.html",
+      "sha256": "9d5f074636e73ff53d68b17227f53e2527a83afc4b0d39933e964cca398a5aa5",
+      "bytes": 29839,
+      "brandHref": "/preview/golden-standard/home/",
+      "currentNavHref": "/preview/golden-standard/routes/company/",
+      "directionCss": [
+        "preview/golden-standard/routes/company/src/direction.css"
+      ],
+      "directionJs": [
+        "preview/golden-standard/routes/company/src/direction.js"
+      ],
+      "sharedHashes": {
+        "header.html": "077054be7636781944b0520524b229fc8e20fb27cfa5d942ec2462652967d666",
+        "footer.html": "2a3c56cd9162b8c7b93b3522bb3c1419ba543fd2cd11d712c607dd12e41c401d",
+        "chrome.css": "aaeaea97b67d26e320594370f73f6c35a5e14b0dbad41ab40d54267efbd15761",
+        "chrome.js": "4d15db4cbd6999a68a5b3ad64691b8f9394be7f914566f6ce147951efafce72e",
+        "tokens.css": "acc9fc8367455f23740735e9be7a0d4597c7bcab1fef3b18edcfb494fe8705cd",
+        "component.css": "0f9cc27324c306f181dd2f60e4d7ecd265bbc415d656ea6cc150dc728f4bc674",
+        "component.js": "3c6c09707975eae870221f757c5ab125a95147d3156bd421fb9f7850195cbeb0"
+      }
+    },
+    {
+      "route": "preview/golden-standard/routes/impact",
+      "output": "preview/golden-standard/routes/impact/index.html",
+      "sha256": "89953c7a4d9723cd1baa73fcab215dea7e4b473ce8bcb1bdd28281898582a069",
+      "bytes": 23892,
+      "brandHref": "/preview/golden-standard/home/",
+      "currentNavHref": "",
+      "directionCss": [
+        "preview/golden-standard/routes/impact/src/direction.css"
+      ],
+      "directionJs": [
+        "preview/golden-standard/routes/impact/src/direction.js"
+      ],
+      "sharedHashes": {
+        "header.html": "077054be7636781944b0520524b229fc8e20fb27cfa5d942ec2462652967d666",
+        "footer.html": "2a3c56cd9162b8c7b93b3522bb3c1419ba543fd2cd11d712c607dd12e41c401d",
+        "chrome.css": "aaeaea97b67d26e320594370f73f6c35a5e14b0dbad41ab40d54267efbd15761",
+        "chrome.js": "4d15db4cbd6999a68a5b3ad64691b8f9394be7f914566f6ce147951efafce72e",
+        "tokens.css": "acc9fc8367455f23740735e9be7a0d4597c7bcab1fef3b18edcfb494fe8705cd",
+        "component.css": "0f9cc27324c306f181dd2f60e4d7ecd265bbc415d656ea6cc150dc728f4bc674",
+        "component.js": "3c6c09707975eae870221f757c5ab125a95147d3156bd421fb9f7850195cbeb0"
+      }
+    },
+    {
+      "route": "preview/golden-standard/routes/transformation",
+      "output": "preview/golden-standard/routes/transformation/index.html",
+      "sha256": "097115c2267bbbadb2670e896ccc4254eb5a38c8606916f23f8ac15d4152c802",
+      "bytes": 37330,
+      "brandHref": "/preview/golden-standard/home/",
+      "currentNavHref": "/preview/golden-standard/routes/transformation/",
+      "directionCss": [
+        "preview/golden-standard/routes/transformation/src/direction.css"
+      ],
+      "directionJs": [
+        "preview/golden-standard/routes/transformation/src/direction.js"
+      ],
+      "sharedHashes": {
+        "header.html": "077054be7636781944b0520524b229fc8e20fb27cfa5d942ec2462652967d666",
+        "footer.html": "2a3c56cd9162b8c7b93b3522bb3c1419ba543fd2cd11d712c607dd12e41c401d",
+        "chrome.css": "aaeaea97b67d26e320594370f73f6c35a5e14b0dbad41ab40d54267efbd15761",
+        "chrome.js": "4d15db4cbd6999a68a5b3ad64691b8f9394be7f914566f6ce147951efafce72e",
+        "tokens.css": "acc9fc8367455f23740735e9be7a0d4597c7bcab1fef3b18edcfb494fe8705cd",
+        "component.css": "0f9cc27324c306f181dd2f60e4d7ecd265bbc415d656ea6cc150dc728f4bc674",
+        "component.js": "3c6c09707975eae870221f757c5ab125a95147d3156bd421fb9f7850195cbeb0"
+      }
+    },
+    {
+      "route": "preview/golden-standard/routes/trust",
+      "output": "preview/golden-standard/routes/trust/index.html",
+      "sha256": "aac765e18e421bb2111ba6963cf86759f8a94bbdaa929207b108beb601678faf",
+      "bytes": 29901,
+      "brandHref": "/preview/golden-standard/home/",
+      "currentNavHref": "",
+      "directionCss": [
+        "preview/golden-standard/routes/trust/src/direction.css"
+      ],
+      "directionJs": [
+        "preview/golden-standard/routes/trust/src/direction.js"
+      ],
+      "sharedHashes": {
+        "header.html": "077054be7636781944b0520524b229fc8e20fb27cfa5d942ec2462652967d666",
+        "footer.html": "2a3c56cd9162b8c7b93b3522bb3c1419ba543fd2cd11d712c607dd12e41c401d",
+        "chrome.css": "aaeaea97b67d26e320594370f73f6c35a5e14b0dbad41ab40d54267efbd15761",
+        "chrome.js": "4d15db4cbd6999a68a5b3ad64691b8f9394be7f914566f6ce147951efafce72e",
+        "tokens.css": "acc9fc8367455f23740735e9be7a0d4597c7bcab1fef3b18edcfb494fe8705cd",
+        "component.css": "0f9cc27324c306f181dd2f60e4d7ecd265bbc415d656ea6cc150dc728f4bc674",
+        "component.js": "3c6c09707975eae870221f757c5ab125a95147d3156bd421fb9f7850195cbeb0"
+      }
+    },
+    {
+      "route": "preview/golden-standard/routes/workgraph",
+      "output": "preview/golden-standard/routes/workgraph/index.html",
+      "sha256": "7d5e0fbd6f6db1d0784b80502fbd23d760bfe3f5ba5e6d96180a80852123215d",
+      "bytes": 37050,
+      "brandHref": "/preview/golden-standard/home/",
+      "currentNavHref": "/preview/golden-standard/routes/workgraph/",
+      "directionCss": [
+        "preview/golden-standard/routes/workgraph/src/direction.css"
+      ],
+      "directionJs": [
+        "preview/golden-standard/routes/workgraph/src/direction.js"
+      ],
+      "sharedHashes": {
+        "header.html": "077054be7636781944b0520524b229fc8e20fb27cfa5d942ec2462652967d666",
+        "footer.html": "2a3c56cd9162b8c7b93b3522bb3c1419ba543fd2cd11d712c607dd12e41c401d",
+        "chrome.css": "aaeaea97b67d26e320594370f73f6c35a5e14b0dbad41ab40d54267efbd15761",
+        "chrome.js": "4d15db4cbd6999a68a5b3ad64691b8f9394be7f914566f6ce147951efafce72e",
+        "tokens.css": "acc9fc8367455f23740735e9be7a0d4597c7bcab1fef3b18edcfb494fe8705cd",
+        "component.css": "0f9cc27324c306f181dd2f60e4d7ecd265bbc415d656ea6cc150dc728f4bc674",
+        "component.js": "3c6c09707975eae870221f757c5ab125a95147d3156bd421fb9f7850195cbeb0"
+      }
+    },
+    {
+      "route": "preview/golden-standard/shared/fixture",
+      "output": "preview/golden-standard/shared/fixture/index.html",
+      "sha256": "088e3f3852682005c59fdb1fd4d01b6ba6f4784cc53f5501d0395271215b4fea",
+      "bytes": 21653,
+      "brandHref": "/preview/golden-standard/shared/fixture/",
+      "currentNavHref": "",
+      "directionCss": [
+        "preview/golden-standard/shared/fixture/src/direction.css"
+      ],
+      "directionJs": [
+        "preview/golden-standard/shared/fixture/src/direction.js"
+      ],
+      "sharedHashes": {
+        "header.html": "077054be7636781944b0520524b229fc8e20fb27cfa5d942ec2462652967d666",
+        "footer.html": "2a3c56cd9162b8c7b93b3522bb3c1419ba543fd2cd11d712c607dd12e41c401d",
+        "chrome.css": "aaeaea97b67d26e320594370f73f6c35a5e14b0dbad41ab40d54267efbd15761",
+        "chrome.js": "4d15db4cbd6999a68a5b3ad64691b8f9394be7f914566f6ce147951efafce72e",
+        "tokens.css": "acc9fc8367455f23740735e9be7a0d4597c7bcab1fef3b18edcfb494fe8705cd",
+        "component.css": "0f9cc27324c306f181dd2f60e4d7ecd265bbc415d656ea6cc150dc728f4bc674",
+        "component.js": "3c6c09707975eae870221f757c5ab125a95147d3156bd421fb9f7850195cbeb0"
+      }
+    }
+  ]
+}

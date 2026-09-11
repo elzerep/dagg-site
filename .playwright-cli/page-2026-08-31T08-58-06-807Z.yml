@@ -1,0 +1,114 @@
+- generic [active] [ref=f5e1]:
+  - banner [ref=f5e2]:
+    - generic [ref=f5e4]:
+      - link "Dagg — Home" [ref=f5e5] [cursor=pointer]:
+        - /url: /preview/golden-standard/p4r3/c/
+        - img "Dagg" [ref=f5e6]
+      - group [ref=f5e7]:
+        - generic [ref=f5e8]:
+          - navigation "Primary" [ref=f5e9]:
+            - list [ref=f5e10]:
+              - listitem [ref=f5e11]:
+                - link "Transformation" [ref=f5e12] [cursor=pointer]:
+                  - /url: /preview/golden-standard/chrome/routes/transformation/
+              - listitem [ref=f5e13]:
+                - link "WorkGraph" [ref=f5e14] [cursor=pointer]:
+                  - /url: /preview/golden-standard/chrome/routes/workgraph/
+              - listitem [ref=f5e15]:
+                - link "Build" [ref=f5e16] [cursor=pointer]:
+                  - /url: /preview/golden-standard/chrome/routes/build/
+                - group [ref=f5e17]:
+                  - generic "Open Build menu" [ref=f5e18] [cursor=pointer]
+              - listitem [ref=f5e20]:
+                - link "Impact" [ref=f5e21] [cursor=pointer]:
+                  - /url: /preview/golden-standard/chrome/routes/impact/
+              - listitem [ref=f5e22]:
+                - link "Company" [ref=f5e23] [cursor=pointer]:
+                  - /url: /preview/golden-standard/chrome/routes/company/
+          - link "Start an assessment" [ref=f5e24] [cursor=pointer]:
+            - /url: /preview/golden-standard/chrome/routes/assessment/
+  - main [ref=f5e25]:
+    - generic [ref=f5e28]:
+      - generic [ref=f5e29]:
+        - paragraph [ref=f5e30]: AI-native transformation
+        - heading "Make the transition operational." [level=1] [ref=f5e31]
+        - paragraph [ref=f5e32]: Dagg combines strategic foresight with execution capability — redesigning work, building the system and carrying it into reality.
+        - generic [ref=f5e33]:
+          - link "Start an assessment" [ref=f5e34] [cursor=pointer]:
+            - /url: /preview/golden-standard/chrome/routes/assessment/
+          - link "See the operating model" [ref=f5e35] [cursor=pointer]:
+            - /url: "#operating-model"
+      - figure "Decision One governed path Operation" [ref=f5e36]:
+        - img "A precise mechanism carrying a coral decision through a governed green channel" [ref=f5e37]
+        - generic [ref=f5e38]:
+          - generic [ref=f5e39]: Decision
+          - strong [ref=f5e40]: One governed path
+          - generic [ref=f5e41]: Operation
+    - generic [ref=f5e44]:
+      - paragraph [ref=f5e45]: THE STAKES
+      - heading "The gap between human-speed and AI-native companies compounds." [level=2] [ref=f5e46]
+      - paragraph [ref=f5e47]: The answer is not more experiments. It is a new operating model with clear decisions, working systems and accountable boundaries.
+    - generic [ref=f5e50]:
+      - generic [ref=f5e51]:
+        - generic [ref=f5e52]:
+          - paragraph [ref=f5e53]: From intent to operation
+          - heading "The same company truth moves through every stage." [level=2] [ref=f5e54]
+        - paragraph [ref=f5e55]: Strategy, WorkGraph and Factory form one delivery system. Each step produces evidence for the next.
+      - generic [ref=f5e56]:
+        - list [ref=f5e57]:
+          - listitem [ref=f5e58]:
+            - generic [ref=f5e59]: "01"
+            - generic [ref=f5e60]:
+              - strong [ref=f5e61]: Map the work
+              - paragraph [ref=f5e62]: Connect the workflow, context and owners.
+          - listitem [ref=f5e63]:
+            - generic [ref=f5e64]: "02"
+            - generic [ref=f5e65]:
+              - strong [ref=f5e66]: Make the decision
+              - paragraph [ref=f5e67]: Preserve, automate, rebuild or retire.
+          - listitem [ref=f5e68]:
+            - generic [ref=f5e69]: "03"
+            - generic [ref=f5e70]:
+              - strong [ref=f5e71]: Build the system
+              - paragraph [ref=f5e72]: Turn the decision into agents and software.
+          - listitem [ref=f5e73]:
+            - generic [ref=f5e74]: "04"
+            - generic [ref=f5e75]:
+              - strong [ref=f5e76]: Verify the result
+              - paragraph [ref=f5e77]: Keep boundaries, evidence and learning inspectable.
+        - generic [ref=f5e78]:
+          - generic [ref=f5e79]:
+            - paragraph [ref=f5e80]: OPERATING RECORD / EXCEPTION 017
+            - generic [ref=f5e81]: Governed
+          - generic [ref=f5e82]:
+            - paragraph [ref=f5e83]: MATERIAL DECISION
+            - heading "Prepare automatically. Release only with accountable approval." [level=3] [ref=f5e84]
+            - generic [ref=f5e85]:
+              - generic [ref=f5e86]:
+                - term [ref=f5e87]: Evidence
+                - definition [ref=f5e88]: Invoice, purchase order, policy and owner connected
+              - generic [ref=f5e89]:
+                - term [ref=f5e90]: Agent
+                - definition [ref=f5e91]: Draft prepared with source trail
+              - generic [ref=f5e92]:
+                - term [ref=f5e93]: Human
+                - definition [ref=f5e94]: Financial exposure resolved
+              - generic [ref=f5e95]:
+                - term [ref=f5e96]: Learning
+                - definition [ref=f5e97]: Decision returned to company context
+    - generic [ref=f5e100]:
+      - paragraph [ref=f5e101]: DAGG'S EDGE
+      - heading "We do not stop at the recommendation." [level=2] [ref=f5e102]
+      - generic [ref=f5e103]:
+        - paragraph [ref=f5e104]:
+          - strong [ref=f5e105]: Strategy
+          - generic [ref=f5e106]: Decide what the company should become.
+        - paragraph [ref=f5e107]:
+          - strong [ref=f5e108]: Execution
+          - generic [ref=f5e109]: Build what that future requires.
+        - paragraph [ref=f5e110]:
+          - strong [ref=f5e111]: Compounding context
+          - generic [ref=f5e112]: Start every project ahead.
+    - generic [ref=f5e115]:
+      - heading "Transformation, made real." [level=2] [ref=f5e116]
+      - paragraph [ref=f5e117]: Begin with one bounded assessment of where value, friction and the next operating model meet.

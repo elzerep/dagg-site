@@ -220,7 +220,7 @@ Composition, sequence, imagery, motion choreography, navigation and page structu
 | Page JavaScript | 0 bytes | 0 bytes, 0 `<script>` elements |
 | Combined WOFF2 | ≤ 750 KB | 398,696 bytes |
 
-`font-display: block` plus `width`/`height` attributes and `aspect-ratio` on both logotypes are how CLS is held at zero. That argument is not the same as a measured layout-shift score, and the evidence says so.
+`font-display: swap` keeps the first render readable while the local fonts load. Explicit fallback stacks, plus `width`/`height` attributes and `aspect-ratio` on both logotypes, limit avoidable reflow. That argument is not the same as a measured layout-shift score, and the evidence says so.
 
 ---
 

@@ -1,0 +1,6 @@
+{
+  "error": "FS5Failure: Chrome CDP startup failed; diagnostics: /Users/christianperez/Developer/dagg-site/evidence/FULL-SITE-STAGING/FS4B/.home-lossless-baseline-6ef754faf00f.tmp-ndgho2bw/chrome-startup-failure.json",
+  "passed": false,
+  "schemaVersion": 1,
+  "snapshotId": "6ef754faf00f234ba503ddbc83e8226759054a4b57929b9757561b3a6fdfdc50"
+}

@@ -1,0 +1,222 @@
+/* Dagg golden standard — P4R6 · Direction C · Claude first cut (C0)
+ *
+ * Package:  design/golden-standard/packages/P4R6-C0-CLAUDE.md
+ * Requires: /design/golden-standard/system/tokens.css        (frozen tokens)
+ *           /preview/golden-standard/shared/chrome/chrome.css (accepted P3)
+ *           /preview/golden-standard/component-library/styles.css (passed P4R5)
+ *
+ * SCOPE. Composition only. This file introduces no hue, no typeface, no
+ * breakpoint, no radius and no motion token that is not already frozen in
+ * tokens.css, and it declares nothing that the shared layers own: no token
+ * block, no font face, no chrome selector and no component-library selector
+ * is redefined here. Every rule below is either the placement of an accepted
+ * component inside a Direction C act, or one composition primitive this
+ * direction needs and the library does not have.
+ *
+ * The two composition primitives are:
+ *   .c0-stakes     the punctuation act's three operating realities
+ *   .c0-exception  the inspectable governed exception, act 07
+ *
+ * Both are built from the frozen type roles, the frozen spacing scale and
+ * the frozen radius scale. Neither draws a picture: there is no CSS art, no
+ * gradient field, no pattern and no decorative shape anywhere in this file.
+ * The only image on the page is the frozen Direction C hero photograph.
+ */
+
+/* ==================================================================== *
+ * 1 · Act 01 — hero                                                     *
+ * ==================================================================== */
+
+/* The mandated H1 is 41 characters. The library's 19ch cap would break it
+   across three lines inside the 7-column opening; 28ch lets the natural
+   sentence break carry it, and the column itself is the real constraint at
+   every desktop width. */
+.c0-h1 { max-width: 28ch; }
+
+/* The governed state that stays visible in the opening: intent, boundary,
+   accountable owner and way back. It is a record in the metadata voice, on
+   a hairline, not a card and not an ink instrument — the contained
+   Operational Evidence begins in act 04. */
+.c0-state {
+  margin-top: var(--space-7);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--rule-strong);
+}
+.c0-state__label { display: block; margin-bottom: var(--space-4); }
+/* "Accountable owner" does not fit the library's 15ch term column. The
+   override is bounded to 768 px and above on purpose: this file loads after
+   the component library, so an unscoped rule of equal specificity would beat
+   the library's own max-width: 767.98px rule and leave the record in two
+   columns on a phone, where an 18ch term column does not fit. */
+@media (min-width: 768px) {
+  .c0-state > dl > div { grid-template-columns: minmax(0, 18ch) minmax(0, 1fr); }
+}
+
+/* The frozen hero pair is art-directed, not resolution-switched: the two
+   files are different compositions of the same event, so the carrier has to
+   follow whichever frame was actually selected. Without this the width and
+   height attributes reserve 16:10 and the portrait frame would land in a
+   letterboxed hole on first paint. */
+.c0-hero__media img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1586 / 992;
+  object-fit: cover;
+}
+@media (max-width: 767.98px) {
+  .c0-hero__media img { aspect-ratio: 1122 / 1402; }
+}
+.c0-hero__prov { margin-top: var(--space-3); }
+
+/* The Machine Signal band closes the opening. The page disclosure sits
+   beside it rather than under it, so the act ends on one line of type
+   instead of a second stacked block. */
+.c0-signal {
+  display: grid;
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+@media (min-width: 940px) {
+  .c0-signal {
+    grid-template-columns: minmax(0, 8fr) minmax(0, 4fr);
+    column-gap: var(--space-9);
+    align-items: end;
+  }
+}
+
+/* The one shared page disclosure required by the evidence ledger. It is
+   stated once, here, and every constructed artifact below still carries its
+   own local provenance label. */
+.c0-disclosure { max-width: 46ch; }
+
+/* ==================================================================== *
+ * 2 · Act 02 — stakes                                                   *
+ * ==================================================================== */
+
+/* The opening act is .cl-open, not .cl-section, so the library's
+   section-to-section hairline does not fire on the first act boundary. */
+.c0-act--first { border-top: 1px solid var(--rule); }
+
+/* Three operating realities. Not a card grid: no surface, no border box and
+   no radius — one hairline per item and the type does the work. */
+.c0-stakes { display: grid; gap: var(--space-7); }
+@media (min-width: 940px) {
+  .c0-stakes {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: var(--space-8);
+  }
+}
+.c0-stakes__item {
+  display: grid;
+  gap: var(--space-3);
+  align-content: start;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--rule-strong);
+}
+.c0-stakes__n { color: var(--coral-deep); }
+.c0-stakes__name {
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--fs-lead);
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+/* ==================================================================== *
+ * 3 · Act 04 — WorkGraph rail                                           *
+ * ==================================================================== */
+
+/* The narrow column beside the record. It states what the record carries,
+   in the metadata voice, so the act does not repeat the record in prose. */
+.c0-rail { align-self: start; }
+.c0-rail__label { display: block; margin-bottom: var(--space-4); }
+
+/* ==================================================================== *
+ * 4 · Act 07 — the inspectable governed exception                       *
+ * ==================================================================== */
+
+/* Contained material depth on the warm ground, not a fourth ink
+   instrument: acts 04, 05 and 06 already carry the ink register and a
+   fourth in sequence would read as a deck. */
+.c0-exception {
+  display: grid;
+  gap: var(--space-5);
+  align-content: start;
+  padding: var(--space-6);
+  background: var(--lift);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-surface);
+}
+.c0-exception__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+.c0-exception__label { display: block; }
+
+/* The control is created by direction.js, so no inert control exists in the
+   no-JavaScript document. It is the library's secondary action, at the
+   frozen 44 px floor, with the one frozen focus treatment. */
+.c0-exception__control[hidden] { display: none; }
+.c0-exception__control button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--target-min);
+  min-width: var(--target-min);
+  padding-inline: var(--space-4);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  font-weight: 500;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: background-color var(--motion-micro) var(--motion-ease),
+              border-color var(--motion-micro) var(--motion-ease);
+}
+.c0-exception__control button:hover {
+  background: var(--panel);
+  border-color: var(--ink);
+}
+.c0-exception__control button[aria-pressed="true"] {
+  background: var(--coral-deep);
+  border-color: var(--coral-deep);
+  color: var(--paper);
+}
+
+/* Both states are rendered. With JavaScript one is held; without it the two
+   are read in order under their own labels, which is why neither state is
+   hidden in the document itself. */
+.c0-exception__state { display: grid; gap: var(--space-4); }
+.c0-exception__state[hidden] { display: none; }
+.c0-exception__state + .c0-exception__state {
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--rule);
+}
+.c0-exception__unchanged {
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--sage);
+}
+
+/* ==================================================================== *
+ * 5 · Act 08 — impact rail                                              *
+ * ==================================================================== */
+
+.c0-labels { display: grid; gap: var(--space-5); align-self: start; }
+
+/* ==================================================================== *
+ * 6 · Reduced motion                                                    *
+ * ==================================================================== */
+
+/* The library already reduces every transition to effectively zero. The
+   exception control changes state, not position or size, so it has nothing
+   to snap; this rule only guarantees that the direction's one transition
+   cannot survive the preference. */
+@media (prefers-reduced-motion: reduce) {
+  .c0-exception__control button { transition: none; }
+}

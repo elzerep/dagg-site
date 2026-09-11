@@ -1,0 +1,22 @@
+{
+  "route": "Transformation",
+  "frozen": true,
+  "slots": [
+    {
+      "id": "transformation-thesis-hero",
+      "job": "Show that strategy reallocates work and decision rights among people, agents and software before any build is chosen.",
+      "families": ["decision-field"],
+      "desktopAspect": "4:5-side-carrier",
+      "mobileAspect": "4:5",
+      "exclusions": ["machine signal", "operational dashboard", "terminal", "process diagram", "people", "UI", "arrow", "biological ambiguity", "decorative collage"],
+      "evaluation": ["imperfect operating inputs", "one coral accountable judgment", "three distinct work carriers", "stable ownership boundary", "quiet editorial hierarchy"],
+      "candidateIds": [
+        "transformation-hero-decision-field-mobile-v2",
+        "transformation-hero-decision-field-desktop-v2"
+      ],
+      "selection": "transformation-hero-decision-field-mobile-v2",
+      "mobileSelection": "transformation-hero-decision-field-mobile-v2",
+      "selectionReason": "R3-A uses the authored 4:5 companion in the desktop/tablet side carrier and again on mobile so no CSS crop changes the meaning. The 16:10 alternative is review-only and is not an automatic fallback; a visible failure stops route acceptance and returns the route decision to Codex."
+    }
+  ]
+}

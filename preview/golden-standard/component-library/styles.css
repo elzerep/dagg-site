@@ -1,0 +1,2031 @@
+/* Dagg golden standard — P4R5 Component and Interaction Specimen
+ *
+ * Package:   design/golden-standard/packages/P4R5-COMPONENT-INTERACTION-SPECIMEN.md
+ * Requires:  design/golden-standard/system/tokens.css   (frozen tokens)
+ *            design/golden-standard/system/chrome.css   (accepted P3 chrome)
+ *
+ * Sources this file implements, by page:
+ *   Dagg-Design-System-Foundations.pdf
+ *     p.03 palette roles / p.04 page-level colour range / p.05 accessible pairs
+ *     p.06 type roles     / p.07 type scale             / p.08 grid + collapse
+ *     p.09 spacing rhythm / p.10 three radii            / p.11 actions + focus
+ *     p.12 navigation + flyout timings                  / p.13 motion system
+ *     p.14 image-language integration                   / p.15 document map
+ *   Dagg-Image-Language-System.pdf
+ *     p.02 governed mix   / p.03 Decision Field         / p.05 causal motion
+ *     p.06–08 Operational Evidence + 6–8 s timing       / p.09–11 Machine Signal
+ *     p.12 interactive product worlds                   / p.13 production map
+ *
+ * No new hue, family, breakpoint or radius is introduced here. Every value
+ * below is a token, a token multiple, or a number named verbatim by one of
+ * the two approved documents.
+ */
+
+/* ==================================================================== *
+ * 1 · Base                                                              *
+ * ==================================================================== */
+
+:root {
+  /* Two derived neutrals, both alpha on Ink over Paper — the only kind of
+     neutral Foundations p.03 permits ("Neutrals are derived from Ink or
+     Paper"). They exist because the frozen `--ink-disabled` token is a
+     *disabled-control* value: at 0.38 alpha it computes to roughly 2.3:1
+     on Paper, which fails the p.05 readability rule for any text. These
+     two carry the muted register instead.
+
+       --cl-ink-muted   rgb(20 20 19 / 0.66) over Paper ≈ 5.4:1  (AA text)
+       --cl-ink-graphic rgb(20 20 19 / 0.34) over Paper ≈ 3.1:1  (graphic) */
+  --cl-ink-muted: rgb(20 20 19 / 0.66);
+  --cl-ink-graphic: rgb(20 20 19 / 0.34);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink-2);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img { display: block; max-width: 100%; height: auto; }
+svg { display: block; max-width: 100%; }
+button, summary, a, label { -webkit-tap-highlight-color: transparent; }
+h1, h2, h3, p, dd, dl, figure, fieldset, legend { margin: 0; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+fieldset { border: 0; padding: 0; min-width: 0; }
+
+.page { width: 100%; padding-inline: var(--page-gutter); }
+.field { width: 100%; max-width: var(--field-max); margin-inline: auto; }
+
+/* Anchor targets clear the sticky header at every width. */
+[id] { scroll-margin-top: 84px; }
+
+.skip-link {
+  position: fixed;
+  left: var(--space-4);
+  top: var(--space-4);
+  z-index: 100;
+  padding: var(--space-3) var(--space-4);
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-sans);
+  text-decoration: none;
+  border-radius: var(--radius-control);
+  transform: translateY(-200%);
+}
+.skip-link:focus { transform: translateY(0); }
+
+/* Enhancement writes several initial states — the coarse Machine Signal
+   geometry, the first proof-inset state, the Factory's first stage. Those
+   are set-up, not motion the reader asked for, so transitions are inert for
+   the first frame. script.js removes `cl-booting` two frames later. Without
+   this the page would animate itself on load, which Foundations p.13 does
+   not permit: motion has to reveal causality, not arrival. */
+html.cl-booting *,
+html.cl-booting *::before,
+html.cl-booting *::after {
+  transition: none !important;
+}
+
+/* A label that is available to assistive technology but carries no visual
+   weight. Used only where an icon-only control needs a real name. */
+.cl-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ==================================================================== *
+ * 2 · Type roles — Foundations p.06 (three voices) and p.07 (scale)     *
+ * ==================================================================== */
+
+.h1 {
+  max-width: 19ch;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--fs-h1);
+  line-height: var(--lh-h1);
+  letter-spacing: var(--tracking-h1);
+  font-weight: 520;
+}
+
+.h2 {
+  max-width: 26ch;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--fs-h2);
+  line-height: var(--lh-h2);
+  letter-spacing: var(--tracking-h2);
+  font-weight: 500;
+}
+
+.cl-h3 {
+  max-width: 26ch;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--fs-h3);
+  line-height: var(--lh-h3);
+  letter-spacing: var(--tracking-h3);
+  font-weight: 500;
+}
+
+.lead {
+  max-width: var(--measure-max);
+  color: var(--ink-2);
+  font-family: var(--font-serif);
+  font-size: var(--fs-lead);
+  line-height: var(--lh-lead);
+}
+
+.cl-body {
+  max-width: var(--measure-max);
+  color: var(--ink-2);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+}
+
+.cl-note {
+  max-width: var(--measure-max);
+  color: var(--ink-2);
+  font-family: var(--font-serif);
+  font-size: var(--fs-body);
+  line-height: 1.55;
+}
+
+.cl-meta,
+.cl-eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+  line-height: var(--lh-meta);
+  letter-spacing: var(--tracking-meta);
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+
+.cl-eyebrow { color: var(--coral-deep); margin-bottom: var(--space-5); }
+.cl-eyebrow--on-ink { color: var(--coral); }
+.cl-meta--coral { color: var(--coral-deep); }
+.on-ink .cl-meta { color: rgb(240 238 230 / 0.62); }
+.on-ink .cl-meta--coral { color: var(--coral); }
+
+.cl-conclusion {
+  max-width: 34ch;
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--rule-strong);
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: var(--fs-h3);
+  line-height: var(--lh-h3);
+}
+.cl-conclusion--tight { margin-top: var(--space-6); }
+
+.cl-boundary {
+  max-width: 56ch;
+  color: var(--cl-ink-muted);
+  font-family: var(--font-serif);
+  font-size: var(--fs-body);
+  line-height: 1.5;
+}
+.cl-boundary--on-ink { color: rgb(240 238 230 / 0.55); }
+
+.cl-rule {
+  max-width: 88ch;
+  margin-top: var(--space-8);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--rule);
+  color: var(--ink-2);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+.cl-rule .cl-meta { display: block; margin-bottom: var(--space-2); }
+
+.cl-monopair { display: grid; gap: var(--space-2); }
+.cl-monopair > div { display: grid; grid-template-columns: 15ch minmax(0, 1fr); gap: var(--space-4); }
+.cl-monopair dt { color: var(--ink); font-family: var(--font-mono); font-size: var(--fs-body); }
+.cl-monopair dd { color: var(--cl-ink-muted); font-family: var(--font-mono); font-size: var(--fs-body); }
+
+/* ==================================================================== *
+ * 3 · Actions, links and focus — Foundations p.11                       *
+ * ==================================================================== */
+
+.cl-actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-7); }
+.cl-actions--inline { margin-top: 0; }
+
+.cl-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--target-min);
+  min-width: var(--target-min);
+  padding: var(--space-3) var(--space-5);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  font-weight: 520;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--motion-micro) var(--motion-ease),
+              border-color var(--motion-micro) var(--motion-ease),
+              color var(--motion-micro) var(--motion-ease);
+}
+
+.cl-button--primary { background: var(--coral-deep); border-color: var(--coral-deep); color: var(--paper); }
+.cl-button--primary:hover, .cl-button--primary.is-hover { background: var(--ink); border-color: var(--ink); }
+.cl-button--primary:active, .cl-button--primary.is-active { background: var(--ink-2); border-color: var(--ink-2); }
+
+.cl-button--secondary:hover, .cl-button--secondary.is-hover { background: var(--lift); border-color: var(--ink); }
+.cl-button--secondary:active, .cl-button--secondary.is-active { background: var(--panel); border-color: var(--ink); }
+
+.cl-button--on-ink.cl-button--primary { background: var(--coral); border-color: var(--coral); color: var(--ink); }
+.cl-button--on-ink.cl-button--primary:hover, .cl-button--on-ink.cl-button--primary.is-hover { background: var(--paper); border-color: var(--paper); color: var(--ink); }
+.cl-button--on-ink.cl-button--primary:active, .cl-button--on-ink.cl-button--primary.is-active { background: var(--panel); border-color: var(--panel); }
+
+.cl-button--on-ink.cl-button--secondary { color: var(--paper); border-color: var(--rule-on-ink); }
+.cl-button--on-ink.cl-button--secondary:hover, .cl-button--on-ink.cl-button--secondary.is-hover { border-color: var(--paper); background: rgb(240 238 230 / 0.08); }
+.cl-button--on-ink.cl-button--secondary:active, .cl-button--on-ink.cl-button--secondary.is-active { background: rgb(240 238 230 / 0.14); }
+
+/* One frozen focus treatment: 2 px ring, 2 px offset, Ink on warm and
+   Paper on ink (Foundations p.11). Never a second indicator. */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+  outline: var(--focus-width) solid var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+/* Held specimen states. These are rendered inside inert stages so they can
+   never be reached; they exist so hover, active and focus-visible are
+   inspectable side by side without a pointer. */
+.cl-button.is-focus {
+  outline: var(--focus-width) solid var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+.cl-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--target-min);
+  color: var(--coral-deep);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  line-height: 1.3;
+}
+.cl-link:hover { color: var(--ink); }
+.cl-link--on-ink { color: var(--coral); }
+.cl-link--on-ink:hover { color: var(--paper); }
+
+/* Icons.
+ *
+ * Each icon is the vendored official Lucide file referenced as an <img>:
+ * /assets/vendor/lucide-dagg/icons/*.svg (lucide-static v1.38.0, ISC). No
+ * path data is copied into this repository's markup, no <symbol> sprite
+ * exists and nothing is redrawn by hand.
+ *
+ * An <img> cannot inherit `currentColor`, so the vendored stroke paints at
+ * its own initial colour, which is black on the warm ground. Ink grounds
+ * flip the same file with `filter: invert(1)` — an exact tonal inversion of
+ * a monochrome stroke, so Paper-on-Ink contrast equals Ink-on-Paper. Muted
+ * registers use opacity on the warm ground rather than a second asset. */
+.cl-ico { display: block; width: 1em; height: 1em; flex: none; }
+.cl-ico[hidden] { display: none; }
+.cl-ico--chevron { font-size: 16px; }
+.cl-ico--nav { font-size: 22px; }
+.cl-ico--inline { font-size: 15px; }
+.cl-ico--control { font-size: 15px; }
+
+.on-ink .cl-ico,
+.cl-close .cl-ico,
+.chrome-footer .cl-ico,
+.chrome-header[data-theme="ink"] .cl-ico,
+.cl-hdr[data-hdr-theme="ink"] .cl-ico { filter: invert(1); }
+
+/* Two-layer icon grammar.
+ * Familiar utility actions remain visually neutral. Semantic concepts use
+ * the same licensed source inside a Dagg-owned carrier whose tone indicates
+ * judgment (coral), governed resolution (sage), retained context (lift) or
+ * machine structure (ink). The carrier is never used as decoration. */
+.cl-icon-system {
+  display: grid;
+  gap: var(--space-5);
+  margin-top: var(--space-6);
+}
+.cl-icon-layer {
+  display: grid;
+  gap: var(--space-5);
+  padding: clamp(24px, 3vw, 40px);
+  background: var(--lift);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-surface);
+}
+.cl-icon-layer--semantic { background: var(--ink); color: var(--paper); }
+.cl-icon-layer__head {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(260px, 5fr);
+  gap: var(--space-8);
+  align-items: end;
+}
+.cl-icon-layer__head .cl-h3 { margin-top: var(--space-2); max-width: 24ch; }
+.cl-icon-layer__head .cl-body { color: var(--ink-2); }
+.cl-icon-layer--semantic .cl-icon-layer__head .cl-body,
+.cl-icon-layer--semantic .cl-meta { color: rgb(244 241 233 / 0.65); }
+.cl-utility-icons,
+.cl-semantic-icons { list-style: none; margin: 0; padding: 0; }
+.cl-utility-icons {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.cl-utility-icons li {
+  display: grid;
+  justify-items: start;
+  gap: var(--space-3);
+  min-height: 104px;
+  padding: var(--space-5) var(--space-4);
+  border-right: 1px solid var(--rule);
+  color: var(--ink-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+}
+.cl-utility-icons li:last-child { border-right: 0; }
+.cl-utility-icons .cl-ico { font-size: 20px; color: var(--ink); }
+.cl-semantic-icons {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  background: rgb(244 241 233 / 0.16);
+  border: 1px solid rgb(244 241 233 / 0.16);
+}
+.cl-semantic-mark {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: var(--space-4);
+  min-height: 108px;
+  padding: var(--space-5);
+  background: var(--ink);
+}
+.cl-semantic-mark__icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgb(244 241 233 / 0.28);
+  border-radius: var(--radius-control);
+}
+.cl-semantic-mark__icon .cl-ico { font-size: 20px; filter: invert(1); }
+.cl-semantic-mark[data-tone="judgment"] .cl-semantic-mark__icon { color: var(--coral); border-color: var(--coral); }
+.cl-semantic-mark[data-tone="boundary"] .cl-semantic-mark__icon { color: var(--sage); border-color: var(--sage); }
+.cl-semantic-mark strong,
+.cl-semantic-mark small { display: block; }
+.cl-semantic-mark strong { color: var(--paper); font-size: var(--fs-body); font-weight: 520; }
+.cl-semantic-mark small { margin-top: 3px; color: rgb(244 241 233 / 0.58); font-family: var(--font-mono); font-size: var(--fs-meta); }
+
+@media (max-width: 940px) {
+  .cl-icon-layer__head { grid-template-columns: 1fr; gap: var(--space-4); }
+  .cl-utility-icons { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .cl-utility-icons li:nth-child(3) { border-right: 0; }
+  .cl-utility-icons li:nth-child(-n + 3) { border-bottom: 1px solid var(--rule); }
+  .cl-semantic-icons { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 560px) {
+  .cl-icon-layer { padding: var(--space-5); }
+  .cl-utility-icons { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cl-utility-icons li:nth-child(2n) { border-right: 0; }
+  .cl-utility-icons li:nth-child(3) { border-right: 1px solid var(--rule); }
+  .cl-utility-icons li:nth-child(-n + 4) { border-bottom: 1px solid var(--rule); }
+  .cl-semantic-icons { grid-template-columns: 1fr; }
+}
+
+/* ==================================================================== *
+ * 4 · Global chrome additions — Build flyout                            *
+ * Foundations p.12: word + chevron trigger, adaptive panel, real links. *
+ * ==================================================================== */
+
+.cl-nav-build { position: relative; display: flex; align-items: center; }
+
+.cl-flyout { position: relative; display: flex; }
+
+.cl-flyout__trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+}
+.cl-flyout__trigger::-webkit-details-marker,
+.cl-flyout__trigger::marker { display: none; content: ""; }
+
+.cl-flyout__chevron {
+  opacity: 0.66;
+  transition: transform var(--motion-micro) var(--motion-ease),
+              opacity var(--motion-micro) var(--motion-ease);
+}
+.cl-flyout__trigger:hover .cl-flyout__chevron,
+.cl-flyout__trigger:focus-visible .cl-flyout__chevron { opacity: 1; }
+.cl-flyout[open] > .cl-flyout__trigger .cl-flyout__chevron { transform: rotate(180deg); opacity: 1; }
+
+.cl-flyout__panel {
+  background: var(--lift);
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-surface);
+}
+
+/* Belt and braces on "hidden states are not focusable" (P4R5 §5).
+ *
+ * A closed native <details> is supposed to skip its own ::details-content
+ * box, but the two `display: grid` declarations further down — one for the
+ * desktop two-pane panel, one for the mobile stack — are author rules on a
+ * descendant of that box, and in the build P4R4 was measured on they won:
+ * the closed panel computed `display: grid`, height 285 px, and its four
+ * links each had `tabIndex: 0` and a live 44 px box sitting invisibly over
+ * the hero. That was P4R4 finding F8. This rule makes the closed state
+ * unconditional, in every build, at every width. Its specificity (0,3,0)
+ * beats both media-query declarations regardless of source order.           */
+.cl-flyout:not([open]) > .cl-flyout__panel { display: none; }
+
+/* -- the four destinations -------------------------------------------- */
+
+.cl-flyout__list { display: grid; }
+.cl-flyout__link {
+  display: grid;
+  align-content: center;
+  gap: 2px;
+  min-height: var(--target-min);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-control);
+  color: var(--ink);
+  text-decoration: none;
+  transition: background-color var(--motion-micro) var(--motion-ease);
+}
+.cl-flyout__link:hover,
+.cl-flyout__link.is-selected { background: var(--panel); }
+.cl-flyout__link strong { font-family: var(--font-sans); font-size: var(--fs-body); font-weight: 520; }
+.cl-flyout__link span {
+  color: var(--cl-ink-muted);
+  font-family: var(--font-serif);
+  font-size: var(--fs-body);
+  line-height: 1.4;
+}
+
+/* -- the one right-hand proof inset, in four states -------------------- *
+ *
+ * P4R5 §4.1. Each state is a contained Operational Evidence instrument in
+ * the ink register: one coral judgment, one sage boundary, one conclusion.
+ * There is no fake dashboard, no chat transcript, no typing, no particle
+ * field and no new visual language — the states reuse the same chain,
+ * pair, meta and claim components the rest of this page uses.             */
+
+.cl-fp {
+  display: grid;
+  align-content: start;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: var(--radius-instrument);
+  overflow: hidden;
+}
+.cl-fp[hidden] { display: none; }
+
+.cl-fp__chain { display: grid; gap: var(--space-2); }
+.cl-fp__chain li {
+  position: relative;
+  padding-left: var(--space-5);
+  color: rgb(240 238 230 / 0.8);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: 1.34;
+}
+.cl-fp__chain li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 12px;
+  height: 2px;
+  background: rgb(240 238 230 / 0.34);
+}
+.cl-fp__chain li.is-decision { color: var(--paper); }
+.cl-fp__chain li.is-decision::before { background: var(--coral); }
+.cl-fp__chain li.is-boundary::before { background: var(--sage); }
+
+.cl-fp__pair { display: grid; gap: var(--space-4); }
+.cl-fp__pair > li {
+  display: grid;
+  gap: var(--space-1);
+  padding-left: var(--space-5);
+  border-left: 2px solid rgb(240 238 230 / 0.34);
+  color: rgb(240 238 230 / 0.8);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: 1.34;
+}
+.cl-fp__pair > li.is-decision { border-left-color: var(--coral); color: var(--paper); }
+.cl-fp__pairlabel {
+  color: var(--coral);
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+  line-height: var(--lh-meta);
+  letter-spacing: var(--tracking-meta);
+  text-transform: uppercase;
+}
+.cl-fp__pair > li:not(.is-decision) .cl-fp__pairlabel { color: rgb(240 238 230 / 0.62); }
+
+.cl-fp__claim {
+  margin-top: var(--space-1);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--rule-on-ink);
+  max-width: 26ch;
+  color: var(--paper);
+  font-family: var(--font-sans);
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+/* -- desktop flyout: absolutely positioned, adaptive two-pane panel --- */
+@media (min-width: 940px) {
+  .cl-flyout__panel {
+    position: absolute;
+    top: calc(100% + 14px);
+    left: 50%;
+    translate: -50% 0;
+    z-index: 44;
+    width: max-content;
+    max-width: min(620px, calc(100vw - 2 * var(--page-gutter)));
+    display: grid;
+    /* 248 + 224 + 24 gap + 32 padding = 528 px, so the panel still fits
+       inside the 560 px cap that applies below 1200 px and cannot overflow
+       its own max-width at 1024 px. */
+    grid-template-columns: minmax(248px, 1.08fr) minmax(224px, 0.92fr);
+    grid-auto-flow: row;
+    gap: var(--space-5);
+    padding: var(--space-4);
+    box-shadow: 0 2px 4px rgb(20 20 19 / 0.04), 0 24px 56px rgb(20 20 19 / 0.14);
+    /* The outer panel may not jump, flicker or reposition while the inset
+       morphs (P4R5 §4.1). `--fp-max-h` is the tallest of the four measured
+       states, so the panel is pinned to that height once and the morph
+       happens strictly inside it. */
+    min-height: calc(var(--fp-max-h, 0px) + 2 * var(--space-4));
+  }
+
+  /* The list and its items step out of the box tree so the four links and
+     the four proof states become direct children of the panel grid: the
+     links stack down column 1, and all four states occupy the single
+     column-2 area. That is how one right-hand inset and a per-destination
+     mobile disclosure can be the same DOM instead of two copies of the
+     same words. */
+  .cl-flyout__list,
+  .cl-flyout__item { display: contents; }
+
+  .cl-flyout__link { grid-column: 1; }
+  .cl-flyout__reveal { display: none; }
+
+  .cl-fp {
+    grid-column: 2;
+    grid-row: 1 / span 4;
+    align-self: start;
+    /* 200 ms morph (180–240) for the region's own dimensions, 120 ms
+       crossfade (100–140) for its content. Foundations p.12. */
+    height: var(--fp-h, auto);
+    transition: height 200ms var(--motion-ease),
+                opacity 120ms var(--motion-ease),
+                visibility 120ms var(--motion-ease);
+  }
+  html.cl-enhanced .cl-fp { opacity: 0; visibility: hidden; }
+  html.cl-enhanced .cl-fp.is-active { opacity: 1; visibility: visible; }
+  /* With JavaScript absent nothing can select a state, so only the first
+     one — the state that carries the conclusion — is painted. Four ink
+     boxes never stack on one another. */
+  html:not(.cl-enhanced) .cl-flyout__item:not(:first-child) .cl-fp { display: none; }
+
+  /* The panel is not a floating card detached from its trigger: a hover
+     bridge keeps the pointer inside the flyout while it crosses the gap,
+     so the 180–240 ms close grace is never cut short by the gutter, and
+     the corridor from trigger through list into the inset is unbroken. */
+  .cl-flyout[open] > .cl-flyout__trigger::after {
+    content: "";
+    position: absolute;
+    inset: 100% -24px -14px;
+  }
+
+  .cl-flyout__trigger { position: relative; min-height: var(--target-min); }
+}
+
+/* -- mobile flyout: a reading sheet of four disclosures --------------- */
+@media (max-width: 939.98px) {
+  .cl-nav-build { display: block; width: 100%; }
+  .cl-flyout { display: block; width: 100%; }
+  .cl-flyout__trigger {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 48px;
+  }
+  .cl-flyout__panel {
+    margin: var(--space-3) 0 var(--space-5);
+    padding: var(--space-3);
+    display: grid;
+    gap: var(--space-4);
+    background: var(--lift);
+  }
+  .cl-flyout__list { gap: var(--space-1); }
+  .cl-flyout__item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 48px;
+    align-items: center;
+    column-gap: var(--space-2);
+  }
+  .cl-flyout__link { grid-column: 1; min-height: 48px; }
+  .cl-flyout__reveal {
+    grid-column: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border: 1px solid var(--rule-strong);
+    border-radius: var(--radius-control);
+    background: transparent;
+    color: var(--ink);
+    cursor: pointer;
+    transition: background-color var(--motion-micro) var(--motion-ease);
+  }
+  .cl-flyout__reveal:hover { background: var(--panel); }
+  .cl-flyout__reveal .cl-ico { transition: transform var(--motion-micro) var(--motion-ease); }
+  .cl-flyout__reveal[aria-expanded="true"] .cl-ico { transform: rotate(180deg); }
+  .cl-fp {
+    grid-column: 1 / -1;
+    height: auto;
+    margin: var(--space-2) 0 var(--space-4);
+  }
+  .chrome-header[data-theme="ink"] .cl-flyout__panel { --focus-ring: var(--paper); background: var(--ink-2); color: var(--paper); }
+  .chrome-header[data-theme="ink"] .cl-flyout__link { color: var(--paper); }
+  .chrome-header[data-theme="ink"] .cl-flyout__link:hover { background: rgb(240 238 230 / 0.08); }
+  .chrome-header[data-theme="ink"] .cl-flyout__link span { color: rgb(240 238 230 / 0.7); }
+  .chrome-header[data-theme="ink"] .cl-flyout__reveal { border-color: var(--rule-on-ink); color: var(--paper); }
+  .cl-nav-build .cl-flyout__trigger { font-size: var(--fs-h3); }
+}
+
+/* The header disclosure's own summary carries an icon; keep the label and
+   icon on one calm 48 px row (Foundations p.11 mobile-nav floor). */
+.chrome-disclosure__summary { min-height: 48px; gap: var(--space-3); }
+
+/* ==================================================================== *
+ * 5 · Section rhythm — Foundations p.09                                 *
+ * ==================================================================== */
+
+.cl-section { padding-block: var(--section-lg); }
+.cl-section + .cl-section { border-top: 1px solid var(--rule); }
+.cl-section--lift { background: var(--lift); border-top: 1px solid var(--rule); }
+.cl-section--lift + .cl-section { border-top: 1px solid var(--rule); }
+/* A medium act (Foundations p.09: 112 / 88 / 64). Section rhythm varies by
+   argument; a single global padding repeated everywhere is a slide deck. */
+.cl-section--medium { padding-block: var(--section-md); }
+
+.cl-head {
+  display: grid;
+  gap: var(--space-5);
+  margin-bottom: var(--space-9);
+}
+/* A medium act's head puts the eyebrow in a narrow rail beside the
+   conclusion instead of stacking a full 7/5 header above it. */
+.cl-head--rail { margin-bottom: var(--space-8); }
+.cl-head--rail > div { display: grid; gap: var(--space-5); }
+
+.cl-sub {
+  margin-top: var(--space-9);
+  margin-bottom: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--rule-strong);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 21px;
+  line-height: 1.24;
+  letter-spacing: var(--tracking-h3);
+  font-weight: 520;
+}
+.cl-sub--flush { margin-top: var(--space-7); }
+.cl-head + .cl-sub { margin-top: 0; }
+
+.cl-split { display: grid; gap: var(--space-7); align-items: start; }
+.cl-spec { display: grid; gap: var(--space-5); align-content: start; }
+
+.cl-factlist { display: grid; }
+.cl-factlist > div {
+  display: grid;
+  grid-template-columns: minmax(88px, 0.42fr) minmax(0, 1fr);
+  gap: var(--space-4);
+  padding-block: var(--space-3);
+  border-top: 1px solid var(--rule);
+}
+.cl-factlist > div:last-child { border-bottom: 1px solid var(--rule); }
+.cl-factlist dt {
+  color: var(--ink-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+  letter-spacing: var(--tracking-meta);
+  text-transform: uppercase;
+}
+.cl-factlist dd { color: var(--ink); font-family: var(--font-mono); font-size: var(--fs-meta); }
+.cl-factlist--tight > div { padding-block: var(--space-2); }
+
+.cl-states { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.cl-states li {
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-control);
+  background: var(--lift);
+  color: var(--ink-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+  letter-spacing: var(--tracking-meta);
+  text-transform: uppercase;
+}
+
+/* ==================================================================== *
+ * 6 · 00 Opening — asymmetrical 7/5 (Foundations p.08)                  *
+ * ==================================================================== */
+
+.cl-open { padding-block: var(--space-9) var(--section-lg); }
+.cl-open__grid { display: grid; gap: var(--space-8); }
+.cl-open__lead { margin-top: var(--space-6); }
+.cl-open__boundary { margin-top: var(--space-7); }
+
+.cl-open__facts {
+  align-self: start;
+  padding: var(--space-6);
+  background: var(--lift);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-surface);
+}
+.cl-open__facts .cl-meta { display: block; margin-bottom: var(--space-4); color: var(--coral-deep); }
+
+/* ==================================================================== *
+ * 7 · 01 Chapter index — short punctuation act, 240–360 px desktop      *
+ * ==================================================================== */
+
+/* A punctuation act, not a fourth page ground. The whole specimen uses
+   exactly three ground changes (Foundations p.04 maximum): Paper → Lift at
+   the media act, Lift → Paper after it, Paper → Ink at the close and
+   footer. Every other tinted surface here is *contained material depth*
+   inside a Paper section, which p.10 distinguishes from a ground change. */
+.cl-index {
+  border-block: 1px solid var(--rule-strong);
+  padding-block: var(--space-8);
+}
+.cl-index__grid { display: grid; gap: var(--space-7); align-items: start; }
+.cl-index__title {
+  max-width: 22ch;
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: var(--fs-h3);
+  line-height: var(--lh-h3);
+  font-weight: 400;
+}
+.cl-index__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: var(--space-7);
+}
+.cl-index__list a {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  align-items: center;
+  min-height: var(--target-min);
+  border-bottom: 1px solid var(--rule);
+  color: var(--ink);
+  font-size: var(--fs-body);
+  text-decoration: none;
+}
+.cl-index__list a:hover { color: var(--coral-deep); }
+.cl-index__list span {
+  color: var(--coral-deep);
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+}
+
+/* ==================================================================== *
+ * 8 · Specimen frames and rendered header states                        *
+ * ==================================================================== */
+
+.cl-frames { display: grid; gap: var(--space-6); }
+.cl-frames--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.cl-frames--phones { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
+.cl-frames + .cl-frames { margin-top: var(--space-6); }
+
+.cl-frame { display: grid; gap: var(--space-3); min-width: 0; }
+.cl-frame__label {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+  line-height: var(--lh-meta);
+  letter-spacing: var(--tracking-meta);
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.cl-frame__spec { color: var(--cl-ink-muted); }
+
+.cl-frame__stage {
+  background: var(--lift);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-surface);
+  overflow: hidden;
+}
+.cl-frame__stage--ink { background: var(--ink); color: var(--paper); border-color: var(--rule-on-ink); }
+
+/* Below the 940 px collapse the two 1240-field header specimens and the
+   1024 compact specimen no longer fit the frame. They pan inside their own
+   stage rather than being clipped, or silently redrawn at a width they do
+   not describe. The stage is inert, so nothing focusable lives inside it
+   and no keyboard user can be trapped in a scroll container. The actual
+   `overflow-x` switch lives in the responsive section at the end of this
+   file, because it has to come *after* the `max-width: 1024px` rule below
+   in source order — the two have equal specificity. */
+.cl-frame__stage--pan { scrollbar-width: thin; }
+.cl-frame__stage--actions { padding: var(--space-6); }
+
+/* Rendered header specimens. Same palette, same targets, same chevron as
+   the live header; held inert so they add no second tab stop and no
+   duplicate landmark. */
+.cl-hdr {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  min-height: 68px;
+  padding-inline: var(--space-6);
+  background: var(--paper);
+  color: var(--ink);
+  border-bottom: 1px solid var(--rule);
+}
+.cl-hdr[data-hdr-theme="ink"] { background: var(--ink); color: var(--paper); border-bottom-color: var(--rule-on-ink); }
+.cl-hdr__logo { width: 108px; height: auto; aspect-ratio: 1844 / 375; }
+.cl-hdr__nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-7);
+  margin-left: auto;
+  font-size: var(--fs-body);
+}
+.cl-hdr__nav li { display: inline-flex; align-items: center; min-height: var(--target-min); }
+.cl-hdr__build { gap: var(--space-2); }
+.cl-hdr__build .cl-ico--chevron { opacity: 0.66; }
+.cl-hdr__cta {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--target-min);
+  padding-inline: var(--space-5);
+  border-radius: var(--radius-control);
+  background: var(--coral-deep);
+  color: var(--paper);
+  font-size: var(--fs-body);
+  font-weight: 500;
+  white-space: nowrap;
+}
+.cl-hdr[data-hdr-theme="ink"] .cl-hdr__cta { background: var(--coral); color: var(--ink); }
+
+.cl-hdr--compact { gap: var(--space-7); }
+.cl-hdr--compact .cl-hdr__nav { gap: var(--space-5); }
+
+.cl-frame__stage--compact > .cl-hdr { max-width: 1024px; margin-inline: auto; border-inline: 1px solid var(--rule); }
+
+.cl-frame__stage--phone { max-width: 390px; }
+.cl-hdr--phone { gap: var(--space-4); min-height: 60px; padding-inline: var(--space-5); }
+.cl-hdr__menu {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 48px;
+  margin-left: auto;
+  font-size: var(--fs-body);
+  font-weight: 500;
+}
+.cl-hdr__panel { padding: var(--space-6) var(--space-5) var(--space-7); background: var(--paper); }
+.cl-hdr__panel ul { display: grid; }
+.cl-hdr__panel li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 48px;
+  border-bottom: 1px solid var(--rule);
+  color: var(--ink);
+  font-size: var(--fs-h3);
+}
+.cl-hdr__panel .cl-hdr__cta { margin-top: var(--space-6); }
+
+/* Held/simulated states and rendered specimens take no focus and no
+   pointer events: `inert` is applied by script, this is the visual and
+   no-JavaScript equivalent. */
+[data-inert-stage] { user-select: none; }
+[data-inert-stage] a, [data-inert-stage] button { pointer-events: none; }
+
+.cl-actionmatrix { display: grid; gap: var(--space-3); }
+.cl-actionmatrix .cl-meta { margin-top: var(--space-3); }
+.cl-actionmatrix .cl-meta:first-child { margin-top: 0; }
+.cl-frame__stage--ink .cl-actionmatrix .cl-meta { color: rgb(240 238 230 / 0.62); }
+
+.cl-stage {
+  padding: var(--space-6);
+  background: var(--lift);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-surface);
+  min-height: 300px;
+}
+.cl-stage__label { display: block; margin-bottom: var(--space-5); color: var(--cl-ink-muted); }
+.cl-stage__row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-7);
+  min-height: 68px;
+  padding-inline: var(--space-4);
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-control);
+}
+.cl-stage__ghost { color: var(--cl-ink-muted); font-size: var(--fs-body); }
+/* The standalone instance's panel is a real floating flyout, so it is
+   allowed to overlay what follows it. The stage still reserves enough room
+   for the whole open panel — including the tallest proof state — so the
+   specimen can be read and captured without the panel spilling into the
+   next act. */
+.cl-stage--flyout { padding-bottom: var(--space-11); }
+
+/* ==================================================================== *
+ * 9 · Typeset specimen                                                  *
+ * ==================================================================== */
+
+.cl-typeset { display: grid; }
+.cl-typeset__row {
+  display: grid;
+  gap: var(--space-3);
+  padding-block: var(--space-6);
+  border-top: 1px solid var(--rule);
+}
+.cl-typeset__row:last-child { border-bottom: 1px solid var(--rule); }
+.cl-typeset__h1 { max-width: 22ch; }
+
+/* ==================================================================== *
+ * 10 · Composition archetypes                                           *
+ * ==================================================================== */
+
+.cl-arch { display: grid; gap: var(--space-6); }
+.cl-arch__item { display: grid; gap: var(--space-3); min-width: 0; }
+.cl-arch__label {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+  letter-spacing: var(--tracking-meta);
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.cl-arch__stage {
+  display: grid;
+  gap: var(--space-5);
+  min-height: 260px;
+  padding: var(--space-5);
+  background: var(--lift);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-surface);
+}
+.cl-arch__copy { display: grid; gap: var(--space-3); align-content: start; }
+/* The three archetype tiles are composition diagrams. Their annotations
+   therefore use only the metadata voice (mono, never below 12 px per
+   Foundations p.07) plus one real 25 px conclusion, so no run of body copy
+   on this page ever falls under the 17 px floor. */
+.cl-mini-eyebrow {
+  color: var(--coral-deep);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: var(--tracking-meta);
+  text-transform: uppercase;
+}
+.cl-arch__h {
+  max-width: 18ch;
+  color: var(--ink);
+  font-size: 25px;
+  line-height: 1.1;
+  letter-spacing: var(--tracking-h3);
+  font-weight: 520;
+}
+.cl-arch__lead {
+  max-width: 34ch;
+  color: var(--ink-2);
+  font-family: var(--font-serif);
+  font-size: var(--fs-body);
+  line-height: 1.5;
+}
+.cl-arch__actions { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-2); }
+.cl-mini-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px var(--space-4);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius-control);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.cl-mini-button--primary { background: var(--coral-deep); border-color: var(--coral-deep); color: var(--paper); }
+
+/* A · 7/5 with a bounded Decision Field placeholder */
+.cl-arch__stage--a { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
+.cl-arch__field {
+  border-radius: var(--radius-surface);
+  background:
+    radial-gradient(120% 90% at 22% 62%, rgb(20 20 19 / 0.10) 0 34%, rgb(20 20 19 / 0) 62%),
+    linear-gradient(112deg, var(--panel) 0 54%, var(--sage) 54% 100%);
+  position: relative;
+}
+.cl-arch__field::after {
+  content: "";
+  position: absolute;
+  left: 46%;
+  top: 52%;
+  width: 22px;
+  height: 12px;
+  border-radius: 999px;
+  background: var(--coral);
+  transform: translate(-50%, -50%);
+}
+
+/* B · conclusion above one inspectable carrier */
+.cl-arch__stage--b { grid-template-rows: auto minmax(0, 1fr); }
+.cl-arch__carrier {
+  display: grid;
+  gap: 1px;
+  align-content: end;
+  padding: var(--space-4);
+  border-radius: var(--radius-instrument);
+  background: var(--ink);
+}
+.cl-arch__carrier span { height: 9px; border-radius: 2px; background: rgb(240 238 230 / 0.16); }
+.cl-arch__carrier span:nth-child(1) { width: 74%; }
+.cl-arch__carrier span:nth-child(2) { width: 52%; background: var(--coral); }
+.cl-arch__carrier span:nth-child(3) { width: 63%; }
+.cl-arch__carrier span:nth-child(4) { width: 40%; background: var(--sage); }
+
+/* C · institution-level conclusion with one governed state + provenance */
+.cl-arch__stage--c { grid-template-rows: auto minmax(0, 1fr); }
+.cl-arch__state {
+  display: grid;
+  gap: var(--space-2);
+  align-content: end;
+  padding: var(--space-4);
+  background: var(--panel);
+  border-radius: var(--radius-control);
+}
+.cl-mini-row {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding-block: var(--space-2);
+  border-top: 1px solid var(--rule);
+  color: var(--ink-2);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.cl-mini-row .is-coral { color: var(--coral-deep); }
+.cl-mini-prov {
+  margin-top: var(--space-2);
+  color: var(--cl-ink-muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Section-archetype drawings: real ratios, real rhythm tokens. */
+.cl-rhythm { display: grid; gap: 0; }
+.cl-rhythm__item {
+  display: grid;
+  grid-template-columns: minmax(200px, 0.9fr) minmax(220px, 1.5fr) minmax(200px, 1.1fr);
+  gap: var(--space-6);
+  align-items: center;
+  padding-block: var(--space-5);
+  border-top: 1px solid var(--rule);
+}
+.cl-rhythm__item:last-child { border-bottom: 1px solid var(--rule); }
+.cl-rhythm__label {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-4);
+  color: var(--ink);
+  font-size: var(--fs-body);
+  font-weight: 500;
+}
+.cl-rhythm__label span { color: var(--coral-deep); font-family: var(--font-mono); font-size: var(--fs-meta); }
+.cl-rhythm__draw {
+  display: grid;
+  gap: 6px;
+  height: 56px;
+  padding: 8px;
+  background: var(--panel);
+  border-radius: 3px;
+}
+.cl-rhythm__draw--ink { background: var(--ink); }
+.cl-rhythm__bar { width: var(--w, 100%); background: var(--cl-ink-graphic); border-radius: 2px; }
+.cl-rhythm__bar--panel { background: rgb(20 20 19 / 0.18); }
+.cl-rhythm__bar--ink { background: var(--ink); }
+.cl-rhythm__bar--paper { background: rgb(240 238 230 / 0.5); }
+.cl-rhythm__bar--coral { background: var(--coral); }
+.cl-rhythm__draw--punct { align-content: center; }
+.cl-rhythm__draw--punct .cl-rhythm__bar { height: 12px; }
+.cl-rhythm__draw--m48 { grid-template-columns: 4fr 8fr; gap: 6px; }
+.cl-rhythm__draw--m4555 { grid-template-columns: 45fr 55fr; gap: 6px; }
+.cl-rhythm__draw--m31 { grid-template-columns: 3fr 1fr; gap: 6px; }
+.cl-rhythm__draw--m57 { grid-template-columns: 5fr 7fr; gap: 6px; }
+.cl-rhythm__draw--contained { justify-items: center; align-content: center; }
+.cl-rhythm__draw--contained .cl-rhythm__bar { height: 30px; }
+.cl-rhythm__spec { color: var(--ink-2); font-family: var(--font-mono); font-size: var(--fs-meta); line-height: var(--lh-meta); }
+
+/* ==================================================================== *
+ * 11 · Media carriers — ILS p.03, p.06–08, p.09–11                      *
+ * ==================================================================== */
+
+.cl-hero-carriers {
+  display: grid;
+  grid-template-columns: minmax(0, 1.62fr) minmax(0, 0.8fr);
+  gap: var(--space-7);
+  align-items: start;
+}
+
+.cl-carrier { display: grid; gap: var(--space-4); min-width: 0; }
+.cl-carrier__label {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+  letter-spacing: var(--tracking-meta);
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.cl-carrier__media {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-surface);
+  background: var(--panel);
+}
+.cl-carrier__media img { width: 100%; height: auto; }
+
+/* The art-directed carrier swaps aspect ratio, not just resolution, so the
+   box has to follow the frame that was actually selected — otherwise the
+   <img> width/height attributes reserve 3:2 and the portrait frame lands in
+   a letterboxed 3:2 hole on first paint. */
+.cl-carrier__media--art-directed img { aspect-ratio: 840 / 560; object-fit: cover; }
+@media (max-width: 767.98px) {
+  .cl-carrier__media--art-directed img { aspect-ratio: 720 / 900; }
+}
+.cl-carrier__prov,
+.cl-carrier__idea { max-width: 46ch; }
+.cl-carrier__idea { color: var(--ink); font-family: var(--font-serif); font-size: var(--fs-lead); line-height: 1.4; }
+.cl-carrier__prov { color: var(--cl-ink-muted); font-family: var(--font-serif); font-size: var(--fs-body); line-height: 1.45; }
+.cl-carrier figcaption { display: grid; gap: var(--space-2); }
+
+.cl-carrier--wide { min-width: 0; }
+
+/* ==================================================================== *
+ * 11b · Machine Signal — a finite geometric before/resolved transition   *
+ *                                                                       *
+ * ILS p.09 permits "a state transition inside an otherwise A or C        *
+ * section"; p.10 RESOLVE is "context strata align into a traversable     *
+ * record"; p.11 REQUIRES a visible before and after state, with coral    *
+ * appearing once and sage arriving only with control, and FORBIDS        *
+ * cyberpunk glow, endless particles, tunnel motion, circuit-board        *
+ * diagrams and fake UI.                                                 *
+ *                                                                       *
+ * The transition is therefore real geometry: the horizontal position,    *
+ * the width and the opacity of five strata. It is deliberately not a     *
+ * filter, blur, veil or colour remap over the protected Decision Field   *
+ * photograph — that would be a treatment of an image pretending to be a  *
+ * semantic state change, and Foundations p.13 defines reduced motion as  *
+ * snapping *position and size*, which only geometry can honour.          *
+ * ==================================================================== */
+
+.cl-signal {
+  display: grid;
+  gap: var(--space-6);
+  padding: var(--space-6);
+  background: var(--lift);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-instrument);
+}
+.cl-signal__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+.cl-signal__control { display: flex; gap: var(--space-3); }
+.cl-signal__control[hidden] { display: none; }
+.cl-signal__control button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--target-min);
+  min-width: var(--target-min);
+  padding-inline: var(--space-4);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--motion-micro) var(--motion-ease),
+              border-color var(--motion-micro) var(--motion-ease);
+}
+.cl-signal__control button:hover { background: var(--panel); border-color: var(--ink); }
+
+.cl-strata { display: grid; gap: var(--space-4); }
+.cl-strata li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(150px, auto);
+  align-items: center;
+  gap: var(--space-4);
+}
+.cl-strata__rule {
+  display: block;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--cl-ink-graphic);
+  /* The three properties the pass changes, and nothing else. */
+  width: var(--stratum-w, 100%);
+  margin-left: var(--stratum-x, 0px);
+  opacity: var(--stratum-o, 1);
+  transition: width 900ms var(--motion-ease),
+              margin-left 900ms var(--motion-ease),
+              opacity 900ms var(--motion-ease),
+              background-color 900ms var(--motion-ease);
+}
+.cl-strata li.is-decision .cl-strata__rule { background: var(--coral); height: 5px; }
+.cl-strata li.is-boundary .cl-strata__rule { background: var(--sage); height: 5px; }
+.cl-strata__label {
+  color: var(--ink-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+  line-height: var(--lh-meta);
+  letter-spacing: var(--tracking-meta);
+  text-transform: uppercase;
+  text-align: right;
+}
+.cl-signal.is-coarse .cl-strata__label { color: var(--cl-ink-muted); }
+
+/* The before state. Each stratum is short, offset from the shared origin
+   and faint; neither coral nor sage is present yet, because no judgment has
+   been applied and no boundary has verified. */
+.cl-signal.is-coarse .cl-strata li[data-stratum="observed"] .cl-strata__rule { --stratum-w: 34%; --stratum-x: 46px; --stratum-o: 0.42; }
+.cl-signal.is-coarse .cl-strata li[data-stratum="aligned"] .cl-strata__rule { --stratum-w: 52%; --stratum-x: 22px; --stratum-o: 0.5; }
+.cl-signal.is-coarse .cl-strata li[data-stratum="judgment"] .cl-strata__rule { --stratum-w: 27%; --stratum-x: 74px; --stratum-o: 0.38; }
+.cl-signal.is-coarse .cl-strata li[data-stratum="boundary"] .cl-strata__rule { --stratum-w: 41%; --stratum-x: 12px; --stratum-o: 0.44; }
+.cl-signal.is-coarse .cl-strata li[data-stratum="resolved"] .cl-strata__rule { --stratum-w: 19%; --stratum-x: 58px; --stratum-o: 0.32; }
+.cl-signal.is-coarse .cl-strata li.is-decision .cl-strata__rule,
+.cl-signal.is-coarse .cl-strata li.is-boundary .cl-strata__rule {
+  background: var(--cl-ink-graphic);
+  height: 3px;
+}
+
+.cl-signal__status {
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--rule);
+  color: var(--ink-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+  line-height: var(--lh-meta);
+  letter-spacing: var(--tracking-meta);
+  text-transform: uppercase;
+}
+
+/* ==================================================================== *
+ * 11c · Contained Operational Evidence carrier — one named operational   *
+ * event on the ink register, never a dashboard or a terminal             *
+ * (ILS p.06–07).                                                        *
+ * ==================================================================== */
+
+.cl-evidence {
+  display: grid;
+  gap: var(--space-5);
+  padding: var(--space-7);
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: var(--radius-instrument);
+}
+.cl-evidence__event {
+  max-width: 30ch;
+  color: var(--paper);
+  font-family: var(--font-serif);
+  font-size: var(--fs-h3);
+  line-height: var(--lh-h3);
+}
+.cl-evidence__prov {
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--rule-on-ink);
+  color: rgb(240 238 230 / 0.62);
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+  line-height: var(--lh-meta);
+  letter-spacing: var(--tracking-meta);
+  text-transform: uppercase;
+}
+
+/* ==================================================================== *
+ * 12 · Strategic decision continuum                                     *
+ * Native radiogroup: one tab stop, native arrow keys, complete with no  *
+ * JavaScript and complete again without :has() support.                 *
+ * ==================================================================== */
+
+.cl-continuum { display: grid; gap: var(--space-8); }
+.cl-continuum__set { display: grid; gap: var(--space-4); }
+.cl-continuum__legend {
+  padding: 0;
+  color: var(--ink-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+  letter-spacing: var(--tracking-meta);
+  text-transform: uppercase;
+}
+
+/* The axis is directional: Preserve at the "keep" end, Retire at the
+   "stop" end, with the five stations sitting on one continuous line. It is
+   never a coral stripe — coral appears only at the selected station. */
+.cl-continuum__axis {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-2);
+}
+.cl-continuum__axis-end { color: var(--cl-ink-muted); font-family: var(--font-mono); font-size: var(--fs-meta); letter-spacing: var(--tracking-meta); text-transform: uppercase; }
+.cl-continuum__axis-line { flex: 1 1 auto; height: 1px; background: var(--rule); }
+
+.cl-continuum__stations {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  border-top: 1px solid var(--rule-strong);
+}
+
+.cl-station {
+  position: relative;
+  display: grid;
+  grid-template-rows: 14px auto auto;
+  align-items: start;
+  gap: var(--space-3);
+  min-height: 108px;
+  padding: 0 var(--space-3) var(--space-5);
+  cursor: pointer;
+  transition: background-color var(--motion-response) var(--motion-ease);
+}
+.cl-station input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+/* The dot straddles the axis rule the stations container draws. */
+.cl-station__dot {
+  width: 13px; height: 13px;
+  margin-top: -7px;
+  border: 1px solid var(--rule-strong);
+  border-radius: 999px;
+  background: var(--paper);
+  transition: background-color var(--motion-micro) var(--motion-ease),
+              border-color var(--motion-micro) var(--motion-ease);
+}
+.cl-station__n { color: var(--cl-ink-muted); font-family: var(--font-mono); font-size: var(--fs-meta); }
+.cl-station__name { color: var(--ink-2); font-size: var(--fs-lead); font-weight: 500; line-height: 1.2; }
+.cl-station:hover .cl-station__dot { border-color: var(--ink); }
+.cl-station:has(input:checked) { background: var(--lift); }
+.cl-station:has(input:checked) .cl-station__dot { background: var(--coral); border-color: var(--coral-deep); }
+.cl-station:has(input:checked) .cl-station__n,
+.cl-station:has(input:checked) .cl-station__name { color: var(--coral-deep); }
+.cl-station:has(input:focus-visible) {
+  outline: var(--focus-width) solid var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+.cl-continuum__readout {
+  display: grid;
+  gap: var(--space-5);
+  padding: var(--space-7);
+  background: var(--lift);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-surface);
+}
+.cl-outcome { display: grid; gap: var(--space-5); }
+.cl-outcome + .cl-outcome { padding-top: var(--space-6); border-top: 1px solid var(--rule); }
+.cl-outcome__pair { display: grid; gap: var(--space-4); max-width: 78ch; }
+.cl-outcome__pair > div { display: grid; grid-template-columns: minmax(140px, 0.34fr) minmax(0, 1fr); gap: var(--space-4); }
+.cl-outcome__pair dt {
+  color: var(--ink-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+  letter-spacing: var(--tracking-meta);
+  text-transform: uppercase;
+}
+.cl-outcome__pair dd { color: var(--ink-2); font-family: var(--font-serif); font-size: var(--fs-body); line-height: 1.5; }
+
+.cl-proofmark {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--rule);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+  letter-spacing: var(--tracking-meta);
+  text-transform: uppercase;
+}
+.cl-proofmark__dot { width: 9px; height: 9px; border-radius: 999px; background: var(--sage); flex: none; }
+
+/* Only one outcome at a time, where :has() exists. Where it does not —
+   and with JavaScript absent either way — all five remain readable. */
+@supports selector(:has(*)) {
+  .cl-continuum__readout .cl-outcome { display: none; }
+  .cl-continuum__readout .cl-outcome + .cl-outcome { padding-top: 0; border-top: 0; }
+  .cl-continuum:has(input[value="preserve"]:checked) .cl-outcome[data-outcome="preserve"],
+  .cl-continuum:has(input[value="simplify"]:checked) .cl-outcome[data-outcome="simplify"],
+  .cl-continuum:has(input[value="automate"]:checked) .cl-outcome[data-outcome="automate"],
+  .cl-continuum:has(input[value="rebuild"]:checked) .cl-outcome[data-outcome="rebuild"],
+  .cl-continuum:has(input[value="retire"]:checked) .cl-outcome[data-outcome="retire"] { display: grid; }
+}
+
+/* ==================================================================== *
+ * 13 · WorkGraph record — contained Operational Evidence beside a       *
+ * smaller Decision Field context carrier (P4R2 page map, WorkGraph row) *
+ * ==================================================================== */
+
+.cl-split--31 { grid-template-columns: minmax(0, 3fr) minmax(0, 1fr); }
+.cl-split--4-8 { grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); }
+.cl-split--45-55 { grid-template-columns: minmax(0, 45fr) minmax(0, 55fr); }
+
+.cl-record {
+  padding: var(--space-7);
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: var(--radius-instrument);
+}
+.cl-record__head { display: grid; gap: var(--space-3); padding-bottom: var(--space-6); border-bottom: 1px solid var(--rule-on-ink); }
+.cl-record__title { color: var(--paper); font-family: var(--font-sans); font-size: var(--fs-h3); line-height: var(--lh-h3); font-weight: 500; }
+.cl-record__prov { color: rgb(240 238 230 / 0.62); font-family: var(--font-mono); font-size: var(--fs-meta); letter-spacing: var(--tracking-meta); text-transform: uppercase; }
+
+.cl-record__sources { padding-block: var(--space-6) var(--space-5); }
+.cl-record__sourceslabel { display: block; margin-bottom: var(--space-3); }
+/* Author `display` beats the UA `[hidden] { display: none }` rule, so the
+   hidden-until-enhanced hosts have to opt back out explicitly. Without
+   this, the no-JavaScript DOM would lay out an empty control row. */
+.cl-record__tabs { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.cl-record__tabs[hidden] { display: none; }
+.cl-record__tabs button {
+  min-height: var(--target-min);
+  min-width: var(--target-min);
+  padding-inline: var(--space-4);
+  border: 1px solid var(--rule-on-ink);
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--paper);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--motion-micro) var(--motion-ease),
+              border-color var(--motion-micro) var(--motion-ease),
+              color var(--motion-micro) var(--motion-ease);
+}
+.cl-record__tabs button:hover { border-color: var(--paper); background: rgb(240 238 230 / 0.08); }
+.cl-record__tabs button[aria-selected="true"] { background: var(--coral); border-color: var(--coral); color: var(--ink); }
+
+.cl-record__panel { padding-block: var(--space-2) var(--space-5); }
+.cl-record__panelheading {
+  margin-bottom: var(--space-3);
+  color: rgb(240 238 230 / 0.62);
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+  letter-spacing: var(--tracking-meta);
+  text-transform: uppercase;
+  font-weight: 400;
+}
+html.cl-enhanced .cl-record__panelheading { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.cl-record__panel:focus-visible { outline: var(--focus-width) solid var(--paper); outline-offset: var(--focus-offset); }
+
+.cl-record__retained { margin-top: var(--space-5); padding-top: var(--space-6); border-top: 1px solid var(--rule-on-ink); }
+.cl-record__retained .cl-meta { display: block; margin-bottom: var(--space-3); }
+
+.cl-fields { display: grid; }
+.cl-fields > div {
+  display: grid;
+  grid-template-columns: minmax(112px, 0.28fr) minmax(0, 1fr);
+  gap: var(--space-5);
+  padding-block: var(--space-3);
+  border-top: 1px solid var(--rule-on-ink);
+}
+.cl-fields > div:first-child { border-top: 0; }
+.cl-fields dt {
+  color: rgb(240 238 230 / 0.58);
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+  letter-spacing: var(--tracking-meta);
+  text-transform: uppercase;
+}
+.cl-fields dd { color: var(--paper); font-size: var(--fs-body); line-height: 1.45; }
+.cl-fields .is-decision dd { color: var(--coral); }
+.cl-fields .is-decision dt { color: var(--coral); }
+.cl-fields .is-boundary dd { padding-left: var(--space-4); border-left: 3px solid var(--sage); }
+.cl-fields--compact > div { grid-template-columns: minmax(92px, 0.4fr) minmax(0, 1fr); gap: var(--space-4); padding-block: var(--space-2); }
+
+.cl-carrier--rail { align-self: start; position: sticky; top: 104px; }
+
+/* ==================================================================== *
+ * 14 · Factory progression — ILS p.08 (one 6–8 s pass, holds, stop)     *
+ * ==================================================================== */
+
+.cl-factory {
+  overflow: hidden;
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: var(--radius-instrument);
+}
+.cl-factory__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-5);
+  padding: var(--space-6);
+  border-bottom: 1px solid var(--rule-on-ink);
+}
+.cl-factory__claim { margin-top: var(--space-3); max-width: 24ch; font-size: var(--fs-h3); line-height: var(--lh-h3); font-weight: 500; }
+.cl-factory__controls { display: flex; gap: var(--space-2); }
+.cl-factory__controls[hidden] { display: none; }
+.cl-factory__controls button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--target-min);
+  min-width: var(--target-min);
+  padding-inline: var(--space-4);
+  border: 1px solid var(--rule-on-ink);
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--paper);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  letter-spacing: var(--tracking-meta);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color var(--motion-micro) var(--motion-ease),
+              border-color var(--motion-micro) var(--motion-ease);
+}
+.cl-factory__controls button:hover { border-color: var(--paper); background: rgb(240 238 230 / 0.08); }
+
+.cl-factory__stages { display: grid; }
+.cl-factory__stage {
+  padding: var(--space-5) var(--space-6);
+  border-top: 1px solid var(--rule-on-ink);
+  border-left: 2px solid transparent;
+  transition: background-color var(--motion-response) var(--motion-ease),
+              border-left-color var(--motion-response) var(--motion-ease);
+}
+.cl-factory__stage:first-child { border-top: 0; }
+.cl-factory__stagehead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-4);
+  color: var(--paper);
+  font-size: var(--fs-body);
+  font-weight: 520;
+}
+.cl-factory__n { color: rgb(240 238 230 / 0.5); font-family: var(--font-mono); font-size: var(--fs-meta); }
+.cl-factory__holdmark {
+  margin-left: auto;
+  color: var(--sage);
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+  letter-spacing: var(--tracking-meta);
+  text-transform: uppercase;
+}
+.cl-factory__body {
+  max-width: 58ch;
+  margin-top: var(--space-2);
+  color: rgb(240 238 230 / 0.78);
+  font-family: var(--font-serif);
+  font-size: var(--fs-body);
+  line-height: 1.5;
+}
+.cl-factory__stage.is-current { background: rgb(240 238 230 / 0.06); border-left-color: var(--coral); }
+.cl-factory__stage.is-current .cl-factory__n { color: var(--coral); }
+.cl-factory__stage.is-current .cl-factory__body { color: var(--paper); }
+.cl-factory__stage.is-done .cl-factory__n { color: var(--sage); }
+
+.cl-factory__resolved {
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-6);
+  background: var(--panel);
+  color: var(--ink);
+}
+.cl-factory__resolved .cl-meta { color: var(--ink-2); }
+.cl-factory__resolvedtext { max-width: 48ch; color: var(--ink); font-size: var(--fs-lead); font-weight: 500; line-height: 1.3; }
+
+/* ==================================================================== *
+ * 15 · One capability, two surfaces                                     *
+ * ==================================================================== */
+
+.cl-surfaces {
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: var(--radius-instrument);
+  overflow: hidden;
+}
+.cl-surfaces__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+  padding: var(--space-5) var(--space-6);
+  border-bottom: 1px solid var(--rule-on-ink);
+}
+.cl-surfaces__modes { display: flex; gap: var(--space-2); }
+.cl-surfaces__modes button {
+  min-height: var(--target-min);
+  padding-inline: var(--space-5);
+  border: 1px solid var(--rule-on-ink);
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--paper);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--motion-micro) var(--motion-ease),
+              border-color var(--motion-micro) var(--motion-ease),
+              color var(--motion-micro) var(--motion-ease);
+}
+.cl-surfaces__modes button:hover { border-color: var(--paper); background: rgb(240 238 230 / 0.08); }
+.cl-surfaces__modes button[aria-pressed="true"] { background: var(--coral); border-color: var(--coral); color: var(--ink); }
+.cl-surfaces__prov { color: rgb(240 238 230 / 0.58); font-family: var(--font-mono); font-size: var(--fs-meta); letter-spacing: var(--tracking-meta); text-transform: uppercase; }
+
+.cl-surfaces__body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  gap: var(--space-7);
+  padding: var(--space-7) var(--space-6);
+}
+/* The two mode panels auto-place into column 1; the persistent record is
+   explicitly placed in column 2 / row 1 and is never re-rendered, so
+   switching mode provably changes context, action, permission and evidence
+   while the record itself does not move. Without JavaScript both modes
+   stack in reading order beside the same record. */
+.cl-surfaces__mode { display: grid; gap: var(--space-5); align-content: start; grid-column: 1; }
+.cl-surfaces__mode[hidden] { display: none; }
+.cl-surfaces__mode + .cl-surfaces__mode { padding-top: var(--space-6); border-top: 1px solid var(--rule-on-ink); }
+.cl-fields--surface > div { grid-template-columns: minmax(124px, 0.3fr) minmax(0, 1fr); }
+
+.cl-chain { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--space-3); }
+.cl-chain li {
+  padding-top: var(--space-3);
+  border-top: 2px solid rgb(240 238 230 / 0.22);
+  color: var(--paper);
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+  line-height: var(--lh-meta);
+  letter-spacing: var(--tracking-meta);
+  text-transform: uppercase;
+}
+.cl-chain li.is-decision { border-top-color: var(--coral); color: var(--coral); }
+.cl-chain li.is-boundary { border-top-color: var(--sage); }
+
+.cl-surfaces__tools { max-width: 58ch; color: rgb(240 238 230 / 0.7); font-family: var(--font-serif); font-size: var(--fs-body); line-height: 1.5; }
+
+.cl-surfaces__record {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: start;
+  padding: var(--space-6);
+  background: var(--ink-2);
+  border: 1px solid var(--rule-on-ink);
+  border-radius: var(--radius-surface);
+}
+.cl-surfaces__record .cl-meta { display: block; margin-bottom: var(--space-3); }
+.cl-surfaces__recordtitle { margin-bottom: var(--space-4); color: var(--paper); font-size: var(--fs-h3); line-height: var(--lh-h3); font-weight: 500; }
+.cl-surfaces__unchanged {
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--sage);
+  color: var(--paper);
+  font-family: var(--font-serif);
+  font-size: var(--fs-body);
+  line-height: 1.45;
+}
+.cl-surfaces__foot {
+  max-width: 78ch;
+  padding: var(--space-5) var(--space-6) var(--space-6);
+  border-top: 1px solid var(--rule-on-ink);
+  color: rgb(240 238 230 / 0.7);
+  font-family: var(--font-serif);
+  font-size: var(--fs-body);
+  line-height: 1.5;
+}
+
+/* ==================================================================== *
+ * 16 · Proof, provenance and conversion                                 *
+ * ==================================================================== */
+
+.cl-proof { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 1.15fr); gap: var(--space-8); align-items: start; }
+.cl-proof__labels { display: grid; gap: var(--space-5); }
+.cl-provlabel, .cl-boundarylabel {
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-control);
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: var(--fs-body);
+  line-height: 1.5;
+}
+.cl-provlabel { background: var(--panel); border-left: 3px solid var(--sage); }
+.cl-boundarylabel { background: var(--lift); border-left: 3px solid var(--coral-deep); }
+
+.cl-consequence { display: grid; }
+.cl-consequence > div {
+  display: grid;
+  grid-template-columns: minmax(132px, 0.26fr) minmax(0, 1fr);
+  gap: var(--space-5);
+  padding-block: var(--space-4);
+  border-top: 1px solid var(--rule);
+}
+.cl-consequence > div:last-child { border-bottom: 1px solid var(--rule); }
+.cl-consequence dt { color: var(--ink-2); font-family: var(--font-mono); font-size: var(--fs-meta); letter-spacing: var(--tracking-meta); text-transform: uppercase; }
+.cl-consequence dd { color: var(--ink); font-size: var(--fs-body); line-height: 1.45; }
+.cl-consequence .is-decision dt { color: var(--coral-deep); }
+.cl-consequence .is-boundary dd { padding-left: var(--space-4); border-left: 3px solid var(--sage); }
+
+.cl-pack {
+  padding: var(--space-6);
+  background: var(--lift);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-surface);
+}
+.cl-pack .cl-meta { display: block; color: var(--coral-deep); }
+.cl-pack__title { margin: var(--space-3) 0 var(--space-5); color: var(--ink); font-size: var(--fs-h3); line-height: var(--lh-h3); font-weight: 500; }
+.cl-pack__list { display: grid; }
+.cl-pack__list li {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr);
+  gap: var(--space-3);
+  padding-block: var(--space-3);
+  border-top: 1px solid var(--rule);
+  color: var(--ink);
+  font-size: var(--fs-body);
+  line-height: 1.35;
+}
+.cl-pack__list span { color: var(--cl-ink-muted); font-family: var(--font-mono); font-size: var(--fs-meta); }
+.cl-pack__boundary {
+  margin: var(--space-5) 0 var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--rule-strong);
+  color: var(--ink-2);
+  font-family: var(--font-serif);
+  font-size: var(--fs-body);
+  line-height: 1.45;
+}
+
+/* ==================================================================== *
+ * 17 · Assessment close — 5/7 on the ink ground                          *
+ * ==================================================================== */
+
+.cl-close { padding-block: var(--section-lg); background: var(--ink); color: var(--paper); }
+.cl-close__grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-8); align-items: start; }
+.cl-close .h2 { color: var(--paper); max-width: 20ch; }
+.cl-close__lead { margin-top: var(--space-6); color: rgb(240 238 230 / 0.8); }
+.cl-close__deliverables { padding-top: var(--space-2); }
+.cl-close__deliverables .cl-meta { display: block; margin-bottom: var(--space-4); }
+.cl-deliverables { display: grid; }
+.cl-deliverables li {
+  padding-block: var(--space-4);
+  border-top: 1px solid var(--rule-on-ink);
+  color: var(--paper);
+  font-size: var(--fs-lead);
+  font-family: var(--font-sans);
+  font-weight: 500;
+  line-height: 1.25;
+}
+.cl-deliverables li:last-child { border-bottom: 1px solid var(--rule-on-ink); }
+.cl-close__deliverables .cl-boundary { margin-top: var(--space-6); }
+
+/* ==================================================================== *
+ * 18 · Responsive — 940 collapse, then recomposed (Foundations p.08)     *
+ * ==================================================================== */
+
+@media (min-width: 940px) {
+  .cl-open__grid { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); column-gap: var(--space-9); }
+  .cl-index__grid { grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); column-gap: var(--space-9); }
+  .cl-head { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); column-gap: var(--space-9); align-items: end; }
+  .cl-head--rail { grid-template-columns: minmax(0, 3fr) minmax(0, 9fr); align-items: start; }
+  .cl-head--rail .cl-eyebrow { margin-bottom: 0; }
+  .cl-arch { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 1199.98px) {
+  .cl-flyout__panel { max-width: min(560px, calc(100vw - 2 * var(--page-gutter))); }
+  .cl-rhythm__item { grid-template-columns: minmax(160px, 0.9fr) minmax(180px, 1.2fr) minmax(0, 1.1fr); }
+  .cl-stage__row { gap: var(--space-5); }
+}
+
+@media (max-width: 939.98px) {
+  [id] { scroll-margin-top: 76px; }
+
+  .chrome-header__brand { min-height: 48px; }
+
+  .cl-section { padding-block: var(--section-md); }
+  .cl-head { margin-bottom: var(--space-8); }
+  .cl-sub { margin-top: var(--space-8); }
+
+  .cl-open { padding-block: var(--space-8) var(--section-md); }
+  .cl-index { padding-block: var(--space-7); }
+  .cl-index__list { grid-template-columns: minmax(0, 1fr); }
+
+  .cl-split, .cl-hero-carriers, .cl-proof, .cl-close__grid,
+  .cl-split--31, .cl-split--4-8, .cl-split--45-55 { grid-template-columns: minmax(0, 1fr); }
+
+  .cl-frames--2 { grid-template-columns: minmax(0, 1fr); }
+  /* One column below the collapse, so each phone specimen can still be a
+     true 390 px frame instead of a 344 px frame wearing a 390 px label. */
+  .cl-frames--phones { grid-template-columns: minmax(0, 1fr); }
+
+  /* Pannable desktop-header specimens (see section 8). Declared here so it
+     lands after `.cl-frame__stage--compact > .cl-hdr { max-width: 1024px }`. */
+  .cl-frame__stage--pan { overflow-x: auto; overscroll-behavior-x: contain; }
+  .cl-frame__stage--pan > .cl-hdr { min-width: 900px; }
+  .cl-frame__stage--compact > .cl-hdr { max-width: none; border-inline: 0; }
+
+  .cl-carrier--rail { position: static; max-width: 520px; }
+  .cl-carrier--tall { max-width: 360px; }
+
+  .cl-evidence { padding: var(--space-6); }
+
+  .cl-record, .cl-surfaces, .cl-factory, .cl-evidence, .cl-signal { border-radius: var(--radius-surface); }
+  .cl-record { padding: var(--space-6); }
+  .cl-surfaces__body { grid-template-columns: minmax(0, 1fr); }
+  .cl-surfaces__mode, .cl-surfaces__record { grid-column: 1; grid-row: auto; }
+
+  .cl-chain { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4); }
+
+  .cl-continuum__stations { grid-template-columns: minmax(0, 1fr); border-top: 0; }
+  .cl-station {
+    grid-template-columns: 14px 28px minmax(0, 1fr);
+    grid-template-rows: auto;
+    align-items: center;
+    gap: var(--space-4);
+    min-height: 56px;
+    padding: var(--space-3) var(--space-4);
+    border-top: 1px solid var(--rule);
+  }
+  .cl-station:last-child { border-bottom: 1px solid var(--rule); }
+  .cl-station__dot { margin-top: 0; }
+  .cl-continuum__axis { display: none; }
+  .cl-continuum__readout { padding: var(--space-6); }
+  .cl-outcome__pair > div { grid-template-columns: minmax(0, 1fr); gap: var(--space-1); }
+
+  .cl-rhythm__item { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); row-gap: var(--space-3); }
+  .cl-rhythm__draw { grid-column: 1 / -1; grid-row: 2; }
+  .cl-rhythm__spec { grid-column: 1 / -1; grid-row: 3; }
+
+  /* The standalone flyout instance stays present and operable on mobile —
+     it becomes the same stacked disclosure the header uses. Only the ghost
+     nav labels, which exist to show the desktop row context, go away. */
+  .cl-stage--flyout { padding-bottom: var(--space-6); min-height: 0; }
+  .cl-stage__row { display: block; min-height: 0; padding: 0; background: transparent; border: 0; }
+  .cl-stage__ghost { display: none; }
+  .cl-flyout--demo .cl-flyout__trigger { font-size: var(--fs-lead); }
+}
+
+@media (max-width: 767.98px) {
+  .cl-frames--phones { grid-template-columns: minmax(0, 1fr); }
+  .cl-frame__stage--phone { max-width: 100%; }
+  .cl-hdr--phone { gap: var(--space-4); padding-inline: var(--space-4); }
+  .cl-frame__stage--actions { padding: var(--space-5); }
+
+  .cl-actions { flex-direction: column; align-items: stretch; }
+  .cl-actions .cl-button { width: 100%; }
+  .cl-actions--inline { flex-direction: column; }
+
+  .cl-arch__stage--a { grid-template-columns: minmax(0, 1fr); }
+  .cl-arch__field { min-height: 96px; }
+
+  .cl-chain { grid-template-columns: minmax(0, 1fr); }
+
+  .cl-fields > div, .cl-consequence > div, .cl-factlist > div,
+  .cl-monopair > div, .cl-fields--compact > div, .cl-fields--surface > div {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-1);
+  }
+
+  .cl-factory__head { padding: var(--space-5); }
+  .cl-factory__controls { width: 100%; }
+  .cl-factory__controls button { flex: 1 1 0; }
+  .cl-factory__stage { padding: var(--space-4) var(--space-5); }
+  .cl-factory__holdmark { margin-left: 0; }
+  .cl-factory__resolved { padding: var(--space-5); }
+
+  .cl-surfaces__head { padding: var(--space-5); }
+  .cl-surfaces__modes { width: 100%; flex-direction: column; }
+  .cl-surfaces__body { padding: var(--space-6) var(--space-5); }
+  .cl-surfaces__record { padding: var(--space-5); }
+  .cl-surfaces__foot { padding: var(--space-5); }
+
+  .cl-record__tabs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cl-evidence { padding: var(--space-5); }
+  .cl-open__facts { padding: var(--space-5); }
+  .cl-pack { padding: var(--space-5); }
+  .cl-signal { padding: var(--space-5); gap: var(--space-5); }
+  /* The label moves under its stratum so the rule keeps a real measure to
+     resolve across at 390 and 320 px. */
+  .cl-strata li { grid-template-columns: minmax(0, 1fr); gap: var(--space-2); }
+  .cl-strata__label { text-align: left; }
+  .cl-fp { padding: var(--space-4); }
+  .cl-fp__claim { font-size: 17px; }
+}
+
+@media (max-width: 419.98px) {
+  .cl-record__tabs { grid-template-columns: minmax(0, 1fr); }
+  .cl-rhythm__item { grid-template-columns: minmax(0, 1fr); }
+  .cl-carrier--tall { max-width: 100%; }
+  .cl-frame__label, .cl-carrier__label, .cl-arch__label { flex-direction: column; gap: var(--space-1); }
+}
+
+/* ==================================================================== *
+ * 19 · Reduced motion — Foundations p.13: snap position and size,       *
+ * preserve every label and the resolved meaning.                        *
+ * ==================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+  /* The Machine Signal resolves to the same geometry immediately: the
+     strata snap to their aligned position, size and colour, and every
+     label is preserved (Foundations p.13). The coarse class is never
+     applied under reduced motion, so there is nothing to unwind here; this
+     rule is the belt-and-braces guarantee that if it ever were applied the
+     resolved geometry still wins. */
+  .cl-signal.is-coarse .cl-strata__rule {
+    --stratum-w: 100%;
+    --stratum-x: 0px;
+    --stratum-o: 1;
+  }
+  .cl-signal.is-coarse .cl-strata li.is-decision .cl-strata__rule { background: var(--coral); height: 5px; }
+  .cl-signal.is-coarse .cl-strata li.is-boundary .cl-strata__rule { background: var(--sage); height: 5px; }
+
+  /* The right-hand proof inset swaps state instead of morphing. */
+  .cl-fp { transition: none !important; height: auto !important; }
+}

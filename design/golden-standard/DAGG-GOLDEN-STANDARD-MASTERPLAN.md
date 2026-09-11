@@ -1,10 +1,25 @@
 # Dagg Golden Standard Web Masterplan
 
-Version 1.0 · 30 August 2026  
+Version 1.4 · 3 September 2026
 Owner: Christian Perez  
 Design director and integration owner: Codex  
 Implementation lead: Claude Code  
-Status: production plan; Codex may execute it without intermediate taste approval; publication always requires Christian
+Status: production plan; P4 image language, foundations and founder-selected
+Home direction accepted; FS5 bounded implementation active; publication always
+requires Christian
+
+Current execution authority for supporting routes:
+`narrative/FULL-SITE-CONTENT-CONTRACT.md`.
+
+**Current Home authority:**
+`packages/P4R10-FIGMA-HOME-DIRECTION-GATE-AND-SHARED-IMPLEMENTATION-CONTRACT.md`
+and `narrative/HOME-NARRATIVE-FOUNDER-RESET.md` control Home. Home uses the
+six-act, approximately 430–500 default-visible word founder gate. Christian
+selected the V4 Home direction on 2 September 2026. The protected hero, H1 and
+lead are implemented under the founder reset and frozen in the FS5 invariant
+baseline. The prior five-beat Home and all P4R6/P4R7/P4R8/P4R8R1 renders and
+packages are historical diagnostic evidence only. FS5 implements the selected
+Home and all supporting routes through mutually exclusive writer lanes.
 
 ---
 
@@ -42,7 +57,7 @@ The masterplan governs a complete artifact set rather than one prompt:
 2. Dagg positioning, audience and proof ledger.
 3. Design constitution and semantic tokens.
 4. Responsive grid, rhythm and page templates.
-5. Decision Field image bible and production assets.
+5. Selected Dagg image-language bible and production assets.
 6. Motion grammar and reduced-motion frames.
 7. Component contracts and interaction specifications.
 8. Homepage and supporting-page briefs with final copy slots.
@@ -84,12 +99,16 @@ Conflicting instructions caused the earlier drift. From now on, authority is:
 
 If a lower level conflicts with a higher level, the higher level wins. No agent may defend an old decision by pointing to a legacy file.
 
+For Home during the current FS5 build, the explicit authority stated above is
+part of this masterplan: P4R10 and the founder-reset narrative control over
+older Home passages elsewhere in this document.
+
 ## Decision gates and operating gates
 
 The project has three different kinds of gate. They must never be confused:
 
 1. **Operating acceptance.** Codex accepts or rejects copy, components, assets, packages and QA evidence against this plan. Christian is not asked to approve routine work, implementation details or taste micro-decisions.
-2. **Direction choice.** Christian is asked only when two or three genuinely different, high-quality directions would create materially different brand or narrative outcomes. The choice is presented as a bounded vertical slice, not as three complete sites. Each option must include real copy, image language, a working product artifact, motion, desktop and mobile. Color swaps or superficial hero variations do not qualify as alternatives.
+2. **Direction choice.** Christian is asked only when three genuinely different, high-quality directions would create materially different brand or narrative outcomes. The choice is presented as three complete Home vertical slices, not three complete multi-page sites. Each option must include real copy, the governed image-language mix, working product artifacts, motion, desktop and mobile. Color swaps or superficial hero variations do not qualify as alternatives. Each direction is produced first as independent Codex and Claude cuts, cross-reviewed, then resolved into one coherent candidate before Christian sees it.
 3. **Publication.** Christian explicitly decides whether the exact production revision may go live.
 
 A direction-choice gate is therefore not “may we continue?” Work continues up to the choice, and resumes immediately after it. If one direction is objectively superior against the masterplan and no material trade-off remains, Codex chooses it and continues without creating artificial options.
@@ -125,6 +144,39 @@ Dagg's execution advantage compounds at two distinct levels, and the website mus
 2. **Inside Dagg.** Dagg Factory, agent workflows, tools, evaluation systems and reusable non-confidential delivery patterns improve with each engagement. Engineers work with an expanding execution system rather than an empty toolchain, so delivery capability and velocity can compound over time.
 
 Client data, IP, decisions and operational alpha never become a cross-client learning pool. What Dagg may reuse is method, tooling, agent capability, evaluation practice and general patterns that do not expose confidential client context. Public copy may describe the compounding mechanism and accumulated capability, but it may not publish a `10–100x` productivity claim without auditable evidence and a defined comparison baseline.
+
+## Two surfaces of AI-native value
+
+The transformation creates value on two connected surfaces. The website must
+make both legible without turning the homepage into an MCP tutorial or implying
+that a chat interface is the product.
+
+1. **The company inside.** Work, decisions and software are redesigned so agents
+   can carry stable execution continuously while people set intent, specify
+   requirements, decide material exceptions and verify outcomes. This operating
+   transformation is the primary promise.
+2. **The company outside.** The same governed product capabilities can become
+   available wherever customers already work, including agentic interfaces.
+   A customer can reason over, query and act through the product without being
+   limited to its fixed application UI. The company's data, rules, permissions,
+   workflows and source of truth remain authoritative.
+
+The external surface is a consequence of the internal architecture, not a
+separate innovation claim. WorkGraph, Factory and the client harness connect the
+two: owned context and governed capabilities can serve internal agents, the
+native application and permissioned external interfaces without duplicating the
+business logic in prompts.
+
+The customer-edge surface is required product architecture, but its stateful
+two-surface carrier is explicitly deferred from FS5 to FS6. FS5 carries the
+approved Build copy and boundary only; it does not manufacture a chat mock or a
+second product mechanism. FS6 must implement one bounded proof in which a
+natural-language request resolves company-specific context, produces a
+recommendation or action, enforces a permission boundary and returns evidence.
+It may use the clarity of a generative interface, but it may not imitate Claude
+or ChatGPT, display a fake terminal, explain MCP as the headline, or present a
+decorative prompt box. The earlier P4R5 two-surface component contract is the
+starting interaction authority for that FS6 work.
 
 ## Market story and harness architecture
 
@@ -173,7 +225,7 @@ The difference is migration versus creation, not Dagg’s underlying competence.
 
 1. **Strategic foresight.** Dagg understands where AI capabilities are moving and converts uncertainty into decisions for now, the near horizon and the longer operating model. Future capability is treated as scenarios and design optionality, not unsupported prophecy.
 2. **Company and product building.** Dagg brings entrepreneurial experience of products, organizations, customers and execution, not only technology advice.
-3. **Harness engineering.** Dagg architects the data, context, tools, model routing, security, governance, evaluations and runtime around AI so the company’s edge is not reduced to whichever model is currently strongest.
+3. **AI system engineering.** This is the public capability label. Internally it includes harness engineering: Dagg architects the data, context, tools, model routing, security, governance, evaluations and runtime around AI so the company’s edge is not reduced to whichever model is currently strongest.
 4. **Execution and operation.** This is Dagg's primary commercial differentiator. Dagg turns the direction into agents, software and operating systems, then hands them over or runs them with the client. Strategy without implementation and implementation without strategic direction are both incomplete. The site must prove the chain from judgment to production rather than merely state that Dagg can execute.
 
 The website must make all four legible before it asks the reader to understand an internal product name.
@@ -225,7 +277,7 @@ The design therefore moves from executive consequence to inspectable mechanism. 
 3. Dagg maps how the company actually operates: the visible workflows and the hidden handoffs, exceptions, decisions, systems and knowledge around them.
 4. Strategy chooses among five outcomes, including not building.
 5. Dagg applies a proportionate harness around the model: only the context, tools, permissions, evaluations, orchestration and records the intervention needs.
-6. WorkGraph provides persistent company context when the transformation benefits from it; it is an enabling mechanism, not the company promise.
+6. WorkGraph provides the durable company context every serious transformation needs; the depth of graph, retrieval and runtime integration scales with the use case. It is a core enabling mechanism, not the company promise.
 7. Factory turns the chosen intervention into production agents or software.
 8. Dagg or the client operates the result, with people focused on direction, requirements, material exceptions and verification.
 9. Production evidence changes the next workflow, decision and software choice, so transformation compounds rather than restarts.
@@ -375,6 +427,17 @@ Measured current reference: xAI uses approximately 24 px desktop and 16 px mobil
 
 [reference-audits/xai-current/XAI-CURRENT-AUDIT.md](reference-audits/xai-current/XAI-CURRENT-AUDIT.md)
 
+The current framework and interaction implementation audit, including measured
+flyout states, accessible disclosure behavior, the Dagg frontend stack,
+performance budgets and executable navigation tests, is maintained in:
+
+[reference-audits/FRONTEND-INTERACTION-STACK.md](reference-audits/FRONTEND-INTERACTION-STACK.md)
+
+The route-specific interactive-product pattern and Dagg's V1–V3 discovery
+roadmap are maintained in:
+
+[reference-audits/INTERACTIVE-PRODUCT-WORLDS.md](reference-audits/INTERACTIVE-PRODUCT-WORLDS.md)
+
 Compressed rule: **Never draw technology. Show work changing state.**
 
 ### McKinsey/QuantumBlack recipe
@@ -514,30 +577,59 @@ The page must feel composed like a website, not paginated like a deck.
 - Text and artifacts establish the same hierarchy at 320 px.
 - Sticky navigation auto-hides or adapts and never crosses incompatible backgrounds.
 
-## Image system: The Decision Field
+## Selected image-language system
 
-Signature metaphor: a company is a continuous field of work, dependencies and pressure. A human decision changes it. Engineering stabilizes it. Governance defines the permitted boundary.
+Dagg did not freeze its image language from one attractive hero. P4 compared
+three deliberately disparate, complete systems:
 
-Materials:
+1. **The Decision Field** — high-resolution tactile editorial material. A warm
+   human decision changes an exact field, engineering stabilizes it and
+   governance defines its boundary.
+2. **Machine Signal** — controlled digital resolution, raster, sampling and
+   signal cadence. Company context becomes more legible and execution moves
+   from reconstructed handoffs toward machine speed.
+3. **Operational Evidence** — dark cinematic precision and product-near
+   evidence. Context, boundary, accountable decision and way back become the
+   visible source of confidence.
 
-- uncoated fiber paper;
-- graphite channels and powder;
-- matte-clay relief;
-- thin vellum;
-- machine-clean cuts;
-- soft raking daylight.
+Christian selected the production hierarchy on 30 August 2026:
 
-Five states share one camera and material world:
+1. **The Decision Field is the primary brand and conceptual language.** It
+   carries the hero, Transformation, strategic judgment, editorial transitions
+   and the human-meets-machine identity.
+2. **Operational Evidence is the contained product and proof mode.** It carries
+   real coded WorkGraph records, Factory states, governance, Trust and
+   operating evidence. Generated cinematic material may frame a coded record;
+   it never impersonates one.
+3. **Machine Signal is a restrained motion vocabulary, not a third page
+   world.** It may express resolution, velocity and the transition from
+   reconstructed handoffs to machine-speed operation inside a bounded carrier.
+   It does not become the dominant ground or a generic digital brand layer.
 
-1. Map: latent graphite paths appear.
-2. Decide: one coral intervention changes direction.
-3. Build: layers register around the decision.
-4. Govern: a restrained sage limit locks.
-5. Operate: flow continues and the control point remains visible.
+This is one governed system, not free mixing. A section declares one primary
+mode. Decision Field surrounds and explains; Operational Evidence proves;
+Machine Signal may connect states. Coral, sage and ink retain the same meaning
+across all three:
 
-Hero art-direction proof:
+- coral marks a material human decision;
+- sage marks governance, verification or a safe boundary;
+- ink marks machine precision;
+- the same abstract premise becomes a concrete WorkGraph, Factory or operating
+  state in the same viewport or the next;
+- generated concept imagery never impersonates a product screenshot or client
+  deployment.
 
-[image-system/decision-field-hero-v2.png](image-system/decision-field-hero-v2.png)
+The exploration portfolios remain the provenance for the choice. Production
+assets require desktop/mobile crops, reduced-motion terminal frames and exact
+pairing rules with coded product states before release.
+
+Primary art-direction proof:
+
+[image-system/direction-a-decision-field/01-hero-decision-field.png](image-system/direction-a-decision-field/01-hero-decision-field.png)
+
+P4's exact contract is:
+
+[packages/P4-DIRECTION-SLICE.md](packages/P4-DIRECTION-SLICE.md)
 
 Forbidden:
 
@@ -604,11 +696,23 @@ Rules:
 
 - Decision continuum.
 - WorkGraph lifecycle.
+- WorkGraph source and provenance explorer.
+- Harness anatomy: model routing, context, tools, permissions, evaluations,
+  orchestration and operating record.
 - Hidden-work reveal.
 - Factory mode selector: automate / rebuild.
+- Factory build-path explorer.
 - Operating record.
 - Control boundary and escalation path.
 - Ownership/way-back rail.
+
+V1 proves one causal interaction per central mechanism. V2 may give
+Transformation, WorkGraph and Build deeper route-specific product worlds. V3
+may add a permissioned demonstration or sandbox. Every stage follows
+[reference-audits/INTERACTIVE-PRODUCT-WORLDS.md](reference-audits/INTERACTIVE-PRODUCT-WORLDS.md):
+one declared question per control, realistic synthetic data, explicit
+provenance, keyboard/touch parity, a resolved reduced-motion state and a full
+no-JavaScript argument.
 
 ### Conversion
 
@@ -625,7 +729,7 @@ Every component needs default, hover, focus, active, disabled where relevant, re
 
 ## Recommended primary navigation
 
-`Transformation | WorkGraph | Build | Impact | Company | Start an assessment`
+`Transformation | WorkGraph | Build | Company | Start an assessment`
 
 Rationale:
 
@@ -633,7 +737,9 @@ Rationale:
 - Transformation is the strategic deep dive. It expands the AI-native thesis, future operating model, mapping, the five decisions and continuous change without making strategy look like a detached consulting practice.
 - WorkGraph earns a top-level destination because it is the proprietary context layer that crosses Transformation, Build and future operation. That cross-lifecycle role, rather than a claim that it is Dagg's only important technology, justifies the navigation position. The page must explain the business value before graph/RAG detail.
 - Build is the primary execution destination and Dagg Factory is its lead mechanism. Its local navigation is **Dagg Factory · Operate · Trust**. Factory can be technically as important as WorkGraph without receiving the same navigation treatment: Factory is the engine of a specific stage, while WorkGraph persists across stages. `Build` is stronger than `Implementation`, which sounds like a consulting phase, and cleaner than promoting `Operate` before it is a standalone commercial destination. The page still makes continuing operation explicit.
-- Impact houses Aloi and future permissioned proof.
+- Impact is a gated evidence route. Aloi can become its first named proof only
+  after the evidence ledger, permission and complete case boundary pass; until
+  then Impact is absent atomically from public navigation, metadata and sitemap.
 - Company covers mission, leadership accountability and principles without a team roster.
 - Start an assessment is a button and the universal entry point.
 
@@ -647,7 +753,9 @@ Do not replace WorkGraph with `Technology` in the primary navigation. `Technolog
 - `/transformation` — strategic deep dive: AI-native thesis, future operating model, visible and hidden work, five outcomes and continuous change while the business runs.
 - `/workgraph` — the proprietary context/knowledge layer, graph plus retrieval, role in the harness, ownership, Factory input and operating feedback.
 - `/build` — execution deep dive led by Dagg Factory, plus client-run or Dagg-run operation when required, with local routes/anchors for Factory, Operate and Trust.
-- `/impact` — Aloi now; future sourced Impact Studies.
+- `/impact` — internal staging route until Aloi or another named proof passes the
+  evidence ledger and publication gate; future sourced Impact Studies then live
+  here.
 - `/company` — mission, principles, compact leadership accountability, confidentiality.
 - `/trust` — data, access, providers, human control, records, reversibility, security pack.
 - `/assessment` — first engagement, outputs, boundaries, process and contact.
@@ -676,7 +784,13 @@ Every full proof uses the same evidence chain:
 
 Aloi does not receive a top-level navigation item and is not promoted as a named feature on the homepage. It receives the lead position inside Impact under **Companies built**, with its own complete proof page when the evidence and copy are ready. The homepage may contain a restrained gateway to Impact after the Dagg mechanism has been explained, but it does not become a portfolio page. The content model is ready for future ventures and transformation cases, while the public site contains no empty cards, invented customer names or “coming soon” proof.
 
-## Homepage sequence
+## Historical homepage sequence - superseded for the current build on 1 September 2026
+
+The following nine-act sequence and 600-800 word budget are retained as
+planning history. They are not implementation authority. Use
+`packages/P4R10-FIGMA-HOME-DIRECTION-GATE-AND-SHARED-IMPLEMENTATION-CONTRACT.md`
+and `narrative/HOME-NARRATIVE-FOUNDER-RESET.md` for the current six-act Home;
+move all page-specific depth to its assigned supporting route.
 
 Visible copy target: 600–800 words. Total including all interactive states: maximum 1,100 words. These are ceilings, not quotas; a shorter page wins when it preserves the complete argument and proof.
 
@@ -684,12 +798,12 @@ The homepage behaves like an executive memo. The first screen states the conclus
 
 | # | Act | Executive question | Design form | Proof |
 |---|---|---|---|---|
-| 1 | Hero | What transition does Dagg make real? | Warm 7/5 or 45/55 carrier; Decision Field becomes one readable mechanism. | One workflow moving from human-speed handoffs to governed machine execution. |
+| 1 | Hero | What transition does Dagg make real? | Warm 7/5 or 45/55 carrier; the selected Dagg image language becomes one readable mechanism. | One workflow moving from human-speed handoffs to governed machine execution. |
 | 2 | Stakes | Why now? | Short punctuation, 240–360 px. | Human-speed handoff versus machine-speed operation, stated without unsupported numbers. |
-| 3 | Transform and decide | How do you decide what the future company should become? | Interactive five-outcome continuum plus target-operating-model implication. | Preserve, simplify, automate, rebuild or retire; some outcomes mean no new software. |
+| 3 | Transform, decide and define the human role | How do you decide what the future company should become? | Interactive five-outcome continuum plus target-operating-model implication. | Preserve, simplify, automate, rebuild or retire; people set intent, requirements, material judgment and verification; some outcomes mean no new software. |
 | 4 | WorkGraph | How can AI act inside this company rather than on a generic task? | Visible and hidden work, content, systems and decisions resolve into the proprietary graph-and-retrieval context layer. | The same company knowledge informs strategy, a Factory build and an operating decision. |
-| 5 | Human role | What changes for people? | One causal Decision Field sequence integrated with the transformation, not a separate “people” campaign. | People move from routine execution toward intent, requirements, material judgment and verification. |
-| 6 | Factory | What becomes real? | Two-mode product stage. | Automate what stays; rebuild what should change. |
+| 5 | Factory | What becomes real? | Two-mode product stage. | Automate what stays; rebuild what should change. |
+| 6 | Two surfaces of impact | How does AI-native change both the company and what its customers can do? | A concise internal/external contrast followed by one bounded generative product moment; never a generic chat mock. | Internally, agents carry stable execution within human boundaries. Externally, a customer request resolves governed company context, permissioned action and evidence wherever the customer works. |
 | 7 | Operate, human role and trust | Who runs it, where do people decide and how is it controlled? | One contained ink operational act. | Intent, requirements, material exception, verification, bounds, escalation, record and way back; client-run or Dagg-run. |
 | 8 | Impact gateway | Where is the evidence? | A restrained route into the evidence system, not a named Aloi feature or case-study carousel. | Companies built and companies transformed live on Impact; only sourced evidence is visible. |
 | 9 | Assessment | How do we start? | Full-bleed ink close with one action. | Map, recommendation/refusal, bill of materials, owner and falsifier. |
@@ -733,8 +847,10 @@ Done when: three materially different page acts can be built without inventing n
 ### WS4 · Image and motion
 
 Owner: ImageGen + motion agent.  
-Output: Decision Field series, crop matrix, motion storyboards and reduced-motion states.  
-Done when: all assets share one world and every movement has narrative meaning.
+Output: three image-language portfolios, comparison moodboards, selected series,
+crop matrix, motion storyboards and reduced-motion states.
+Done when: the three candidates are materially different; the selected assets
+share one world and every movement has narrative meaning.
 
 ### WS5 · Product artifacts
 
@@ -858,11 +974,15 @@ Storyboard the homepage only as rectangles and height ratios.
 Output: rhythm strip.  
 Gate: no consecutive slides; at least 2.5× height variation; maximum three ground changes.
 
-### 15. Freeze the Decision Field
+### 15. Freeze the selected Dagg image language
 
-Approve hero master, latent structure, human intervention, governed operation and trust close as one image family.  
-Output: production asset brief and crop matrix.  
-Gate: same material/camera/light; every asset has causal meaning.
+The comparison is complete. Freeze the selected hierarchy: Decision Field as
+the page world, Operational Evidence as the contained proof mode and Machine
+Signal as a restrained transition vocabulary.
+Output: source families, selected image bible, hashes, responsive derivatives,
+motion grammar and crop matrix.
+Gate: one section has one primary mode; every production asset has one semantic
+role and no generated image impersonates product or customer evidence.
 
 ### 16. Freeze motion grammar
 
@@ -935,11 +1055,14 @@ Gate: every CTA works and the first engagement is specific.
 
 ## Phase F · Prove the direction before scaling
 
-### 28. Build the direction-choice vertical slices
+### 28. Build the direction-choice Home vertical slices
 
-Build two or three genuinely different executions of the same bounded slice: hero, stakes, decision continuum, one company-context/WorkGraph state and operating record. Every option uses final-quality copy, image assets, product behavior, motion, desktop and mobile. Options must differ in composition, narrative emphasis and interaction model, not merely color or decoration.  
-Output: two or three comparable vertical-slice prototypes plus a trade-off note and Codex recommendation.  
-Gate owner: Christian chooses only when the alternatives contain a real brand/narrative trade-off. If one clearly dominates the masterplan scorecard, Codex selects it and records why.
+First prove one shared Component and Interaction Library in a real responsive browser specimen. Then build three genuinely different, complete Home executions: A strategic/editorial, B product/mechanism and C operational/enterprise. Every direction uses final-quality copy, image assets, product behavior, motion, desktop and mobile. Directions differ in composition, narrative emphasis, proof order and interaction model, not merely color or decoration.
+
+For each direction, Codex and Claude independently produce an internal `X0` from the same frozen brief and shared library. They then cross-review each other against the PDFs, peer evidence and acceptance matrix. The design director resolves the strongest compatible decisions into one coherent `X1`; this must not become a compromise collage.
+
+Output: the accepted shared library specimen; six internal exploratory cuts; three cross-reviewed `A1`/`B1`/`C1` Home prototypes; a trade-off note; and Codex's recommendation.
+Gate owner: Christian chooses only after all three `X1` alternatives contain a real brand/narrative trade-off and have passed joint operating acceptance.
 
 ### 29. Conduct visual red team
 
@@ -1085,7 +1208,7 @@ The integration gate rejects JSON whose values are unsupported by the screenshot
 | P1 | Message architecture, page briefs, evidence ledger and final vertical-slice copy | Every visible claim, section role and copy block is final enough to design without Claude inventing the story. |
 | P2 | Tokens, type, grid and accessibility pairs | Foundation specimens render at all breakpoints. |
 | P3 | Header, navigation and footer | Real routes, keyboard and mobile pass. |
-| P4 | Two or three vertical-slice directions | Comparable desktop/mobile slices and a recommendation are ready for the direction-choice gate. |
+| P4 | Shared Component and Interaction specimen, then dual-cut A/B/C full-Home gate | The library passes responsive/keyboard/reduced/no-JS evidence; independent Codex and Claude `X0` cuts are cross-reviewed; three coherent `A1`/`B1`/`C1` candidates pass joint operating acceptance and are ready for Christian's direction choice. |
 | P5 | Decision continuum | Five outcomes pass interaction and comprehension gates. |
 | P6 | Company context and WorkGraph mechanism | One path proves the harness value without making it circuit-like or reducing Dagg to WorkGraph. |
 | P7 | Factory modes | Automate/rebuild proof is concrete. |
@@ -1106,7 +1229,7 @@ Every agent returns:
 - Screenshots at required widths.
 - Tests run and what they actually cover.
 - Deviations, unknowns and provenance labels.
-- Which operating acceptance criterion remains, or whether a genuine Christian direction choice is required.
+- Which operating acceptance criterion remains. P4's direction choice is closed.
 
 No agent may report “verified” from a proxy test that excludes visible elements or from source code that was not rendered.
 
@@ -1119,7 +1242,8 @@ The project must move today without lowering the bar.
 1. Make reversible decisions from this plan rather than asking Christian about minor taste choices.
 2. If facts are missing, label the artifact illustrative; never invent provenance.
 3. If an external tool is unavailable, use the verified HTML prototype as source of truth and mirror to Figma later.
-4. If an image is missing, generate it from the accepted Decision Field grammar; do not insert stock people or an unrelated visual.
+4. If an image is missing, generate it from the selected P4 grammar and the
+declared section role. Never insert stock people or an unrelated visual.
 5. If two iterations fail for the same reason, return to the last accepted gate and change the approach. Do not tune numbers indefinitely.
 6. Separate research, design, implementation and QA so the implementer does not grade its own work.
 7. One package, one implementation commit and one exact preview snapshot. Evidence generated before that commit must key itself to the served snapshot ID, not pretend to contain its own future commit hash. A clean post-commit run must reproduce the same snapshot ID when evidence paths are excluded from the served set.
@@ -1150,7 +1274,7 @@ Everything else is an execution problem for the team to solve.
 | Too soft | Ink instruments, exact typography, hard boundaries and operating proof. |
 | Too slide-like | Height variation, one page ground, punctuations, no repeated panel template. |
 | Too Palantir-like | No ontology jargon, circuit diagrams or intimidating control-room visuals. |
-| Too Anthropic-like | One proprietary Decision Field mechanism rather than borrowed collage language. |
+| Too Anthropic-like | A proprietary selected Dagg image language rather than borrowed collage language. |
 | Too SpaceX-like | No sci-fi surfaces, unsupported numbers or developer-first hierarchy. |
 | Too McKinsey-like | No principles wall or self-described excellence; mechanism replaces authority theater. |
 | Fear becomes sales pressure | Describe compounding asymmetry and let the reader infer the risk. |
@@ -1177,7 +1301,7 @@ The site is not complete until evidence exists for every row:
 - [ ] WorkGraph is concrete, central, not circuit-like and connected visibly to strategy, Factory and Operations; implementation depth is proportionate to the engagement.
 - [ ] Factory and Operations show what is built, controlled and run.
 - [ ] Every claim has provenance or an honest illustrative label.
-- [ ] Decision Field imagery is coherent across all assets and crops.
+- [ ] The selected Dagg image language is coherent across all assets and crops.
 - [ ] Desktop and mobile renders pass visual comparison.
 - [ ] Reduced motion and no-JS retain the full core story.
 - [ ] Accessibility hard gates pass.

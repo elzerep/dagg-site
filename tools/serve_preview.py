@@ -87,7 +87,7 @@ HTML_SUFFIXES = (".html", ".htm")
 # cannot reference itself and so the post-commit clean run reproduces the
 # pre-commit snapshot ID; the rest is Git plumbing and build litter that is
 # not website content.
-EXCLUDED_TOP_DIRS = (".git", "evidence")
+EXCLUDED_TOP_DIRS = (".git", ".claude", ".playwright-cli", "evidence")
 EXCLUDED_DIR_NAMES = ("__pycache__",)
 EXCLUDED_SUFFIXES = (".pyc",)
 EXCLUDED_BASENAMES = (".DS_Store",)

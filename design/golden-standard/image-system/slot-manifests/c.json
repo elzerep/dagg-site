@@ -1,0 +1,29 @@
+{
+  "direction": "C",
+  "frozen": true,
+  "slots": [
+    {
+      "id": "c-home-hero",
+      "job": "Show a real operating decision retaining intent, boundary, accountable owner and way back while work continues.",
+      "families": ["decision-field", "restrained-machine-signal"],
+      "desktopAspect": "16:10",
+      "mobileAspect": "4:5",
+      "exclusions": ["military aesthetic", "crisis theater", "fake metrics", "full-screen dashboard"],
+      "evaluation": ["enterprise consequence", "accountability", "control without heaviness", "warm operational reality"],
+      "candidateIds": [
+        "p4r6-c-home-hero-03-desktop",
+        "p4r6-c-home-hero-03-mobile"
+      ],
+      "selection": "p4r6-c-home-hero-03-desktop",
+      "mobileSelection": "p4r6-c-home-hero-03-mobile",
+      "selectionReason": "C03 makes accountable control tangible without a dashboard: a coral intervention spans exact operating paths inside transparent governance planes, while the dotted boundary preserves a visible way back. The mobile image is independently composed.",
+      "rejectedCandidateIds": [
+        "p4r6-c-home-hero-01-desktop",
+        "p4r6-c-home-hero-01-mobile",
+        "p4r6-c-home-hero-02-desktop",
+        "p4r6-c-home-hero-02-mobile"
+      ],
+      "rejectionReason": "C01 introduced Operational Evidence into the Home hero, while C02 retained a fatal sperm-and-ovum silhouette despite otherwise strong operational authority."
+    }
+  ]
+}

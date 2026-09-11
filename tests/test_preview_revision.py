@@ -130,7 +130,10 @@ def independent_snapshot_id(repo_root: Path) -> tuple[str, int, int]:
             continue
         name = chunk.decode("utf-8", errors="surrogateescape")
         segments = name.split("/")
-        if segments[0] in (".git", "evidence"):
+        # Mirror the server's public-snapshot exclusions. Claude Code and
+        # browser-runner state are local tooling, can contain worktree
+        # symlinks, and must never affect or enter the served snapshot.
+        if segments[0] in (".git", ".claude", ".playwright-cli", "evidence"):
             continue
         if "__pycache__" in segments[:-1] or name.endswith(".pyc"):
             continue

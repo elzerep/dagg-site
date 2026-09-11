@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "package": "P4R6-DUAL-CUT-HOME-DIRECTIONS.md",
+  "gate": "six equally eligible X0 routes before cross-review",
+  "sharedSources": {
+    "tokens": "design/golden-standard/system/tokens.css",
+    "chromeCss": "preview/golden-standard/shared/chrome/chrome.css",
+    "chromeJs": "preview/golden-standard/shared/chrome/chrome.js",
+    "componentCss": "preview/golden-standard/component-library/styles.css",
+    "componentJs": "preview/golden-standard/component-library/script.js",
+    "registry": "design/golden-standard/image-system/ASSET-REGISTRY.json"
+  },
+  "routes": [
+    { "direction": "A", "builder": "codex", "path": "preview/golden-standard/directions/a0-codex" },
+    { "direction": "A", "builder": "claude", "path": "preview/golden-standard/directions/a0-claude" },
+    { "direction": "B", "builder": "codex", "path": "preview/golden-standard/directions/b0-codex" },
+    { "direction": "B", "builder": "claude", "path": "preview/golden-standard/directions/b0-claude" },
+    { "direction": "C", "builder": "codex", "path": "preview/golden-standard/directions/c0-codex" },
+    { "direction": "C", "builder": "claude", "path": "preview/golden-standard/directions/c0-claude" }
+  ],
+  "resolvedRoutes": [
+    { "direction": "A", "builder": "director", "path": "preview/golden-standard/directions/a1" },
+    { "direction": "B", "builder": "director", "path": "preview/golden-standard/directions/b1" },
+    {
+      "direction": "C",
+      "builder": "director",
+      "path": "preview/golden-standard/directions/c1",
+      "leadOverride": "Dagg carries strategic judgment into governed execution, so the company can change how work runs without losing context or control."
+    }
+  ],
+  "directions": {
+    "A": {
+      "h1": "Build the company AI makes possible.",
+      "lead": "Dagg turns strategic direction into an AI-native operating model - then builds the context, agents and software that make it work.",
+      "visibleWordMin": 390,
+      "visibleWordMax": 500,
+      "heroWordMaxBeyondActions": 30,
+      "firstTwoViewportWordMax": 115,
+      "selectedDesktopAsset": "p4r6-a-home-hero-04-desktop",
+      "selectedMobileAsset": "p4r6-a-home-hero-04-mobile"
+    },
+    "B": {
+      "h1": "Turn company context into working systems.",
+      "lead": "Dagg decides what should change, captures the operating logic in WorkGraph, and builds the agents or software that put it to work.",
+      "visibleWordMin": 270,
+      "visibleWordMax": 380,
+      "heroWordMaxBeyondActions": 25,
+      "stateWordMax": 12,
+      "selectedDesktopAsset": "p4r6-b-home-hero-04-desktop",
+      "selectedMobileAsset": "p4r6-b-home-hero-04-mobile"
+    },
+    "C": {
+      "h1": "Change the operating model. Keep control.",
+      "lead": "Dagg maps the real company, builds the justified agents and software, and keeps context, permissions, owners and evidence attached as work moves into execution.",
+      "visibleWordMin": 360,
+      "visibleWordMax": 470,
+      "heroWordMaxBeyondActions": 32,
+      "recordValueWordMax": 10,
+      "selectedDesktopAsset": "p4r6-c-home-hero-03-desktop",
+      "selectedMobileAsset": "p4r6-c-home-hero-03-mobile"
+    }
+  },
+  "nineActs": [
+    "hero",
+    "stakes",
+    "transformation",
+    "workgraph",
+    "factory",
+    "surfaces",
+    "operate-trust",
+    "impact",
+    "assessment"
+  ],
+  "viewports": [
+    { "width": 1440, "height": 900, "class": "desktop" },
+    { "width": 1280, "height": 900, "class": "desktop" },
+    { "width": 1366, "height": 1024, "class": "tablet-landscape", "profile": "iPad Pro 13 landscape" },
+    { "width": 1180, "height": 820, "class": "tablet-landscape", "profile": "iPad Air landscape" },
+    { "width": 1024, "height": 768, "class": "tablet-landscape", "profile": "iPad landscape" },
+    { "width": 1024, "height": 1366, "class": "tablet-portrait", "profile": "iPad Pro 13 portrait" },
+    { "width": 940, "height": 900, "class": "boundary" },
+    { "width": 820, "height": 1180, "class": "tablet-portrait", "profile": "iPad Air portrait" },
+    { "width": 768, "height": 1024, "class": "tablet-portrait", "profile": "iPad portrait" },
+    { "width": 390, "height": 844, "class": "mobile" },
+    { "width": 360, "height": 844, "class": "mobile" },
+    { "width": 320, "height": 844, "class": "mobile" }
+  ],
+  "requiredStates": [
+    "default",
+    "build-flyout-open",
+    "build-flyout-four-proof-states",
+    "mobile-menu-open",
+    "mobile-build-disclosure",
+    "five-strategic-decisions",
+    "workgraph-source-states",
+    "factory-initial",
+    "factory-decision-hold",
+    "factory-resolved",
+    "factory-replay-or-pause",
+    "surface-operator",
+    "surface-customer",
+    "governed-exception",
+    "reduced-motion",
+    "no-javascript"
+  ],
+  "hardChecks": {
+    "oneH1": true,
+    "orderedNineActs": true,
+    "staticNineActsWithoutJavascript": true,
+    "noHorizontalOverflow": true,
+    "bodyTextMinPx": 17,
+    "metadataTextMinPx": 12,
+    "h1RenderedLineMax": 2.5,
+    "targetMinPx": 44,
+    "mobileNavTargetMinPx": 48,
+    "aaTextContrast": true,
+    "noDuplicateIds": true,
+    "noBrokenAriaReferences": true,
+    "visibleKeyboardFocus": true,
+    "touchActivation": true,
+    "tabletPortraitTouchDisclosure": true,
+    "tabletLandscapePointerAndTouch": true,
+    "tabletOrientationChangePreservesState": true,
+    "tabletNoHoverDependency": true,
+    "escapeAndFocusReturn": true,
+    "mobileBodyScrollUnlock": true,
+    "reducedMotionSameFinalState": true,
+    "noContinuingAmbientAnimation": true,
+    "allLocalLinksResolve": true,
+    "assessmentCtasResolve": true,
+    "zeroOffOriginRequests": true,
+    "responsiveHeroUsesSelectedCompanion": true,
+    "noAllThreeImageLanguagesInOneAct": true,
+    "noConsecutiveImageHeavyActs": true,
+    "impactTruthBoundary": true,
+    "noUnsupportedClaims": true
+  },
+  "forbiddenPublicCopy": [
+    "10x",
+    "100x",
+    "1000x",
+    "proprietary",
+    "systems operated",
+    "managed operations",
+    "Anthropic",
+    "OpenAI",
+    "Palantir",
+    "xAI",
+    "SpaceX",
+    "McKinsey"
+  ],
+  "performance": {
+    "initialJsGzipMaxBytes": 122880,
+    "navigationJsGzipMaxBytes": 20480,
+    "cssGzipMaxBytes": 46080,
+    "freshMobileTransferMaxBytes": 1258291,
+    "heroDesktopMaxBytes": 512000,
+    "heroMobileMaxBytes": 307200,
+    "autoplayVideoInFirstViewport": false
+  },
+  "evidencePolicy": {
+    "equalCoverageSignatureRequired": true,
+    "machineNullRequiresManualResolution": true,
+    "latestPointerWrittenOnlyAfterAllSixRoutes": true,
+    "sameViewportPeerAndPrototypeBoardRequired": true,
+    "screenshotsAloneAreNotAcceptance": true
+  }
+}

@@ -1,0 +1,99 @@
+- generic [active] [ref=f12e1]:
+  - banner [ref=f12e2]:
+    - generic [ref=f12e4]:
+      - link "Dagg — Home" [ref=f12e5] [cursor=pointer]:
+        - /url: /preview/golden-standard/p4r3/b/
+        - img "Dagg" [ref=f12e6]
+      - group [ref=f12e7]:
+        - generic [ref=f12e8]:
+          - navigation "Primary" [ref=f12e9]:
+            - list [ref=f12e10]:
+              - listitem [ref=f12e11]:
+                - link "Transformation" [ref=f12e12] [cursor=pointer]:
+                  - /url: /preview/golden-standard/chrome/routes/transformation/
+              - listitem [ref=f12e13]:
+                - link "WorkGraph" [ref=f12e14] [cursor=pointer]:
+                  - /url: /preview/golden-standard/chrome/routes/workgraph/
+              - listitem [ref=f12e15]:
+                - link "Build" [ref=f12e16] [cursor=pointer]:
+                  - /url: /preview/golden-standard/chrome/routes/build/
+                - group [ref=f12e17]:
+                  - generic "Open Build menu" [ref=f12e18] [cursor=pointer]
+              - listitem [ref=f12e20]:
+                - link "Impact" [ref=f12e21] [cursor=pointer]:
+                  - /url: /preview/golden-standard/chrome/routes/impact/
+              - listitem [ref=f12e22]:
+                - link "Company" [ref=f12e23] [cursor=pointer]:
+                  - /url: /preview/golden-standard/chrome/routes/company/
+          - link "Start an assessment" [ref=f12e24] [cursor=pointer]:
+            - /url: /preview/golden-standard/chrome/routes/assessment/
+  - main [ref=f12e25]:
+    - generic [ref=f12e28]:
+      - generic [ref=f12e29]:
+        - paragraph [ref=f12e30]: The Dagg system
+        - heading "Turn company context into working systems." [level=1] [ref=f12e31]
+        - paragraph [ref=f12e32]: One decision record moves from strategic intent to agents, software and verified operation.
+        - generic [ref=f12e33]:
+          - link "Start an assessment" [ref=f12e34] [cursor=pointer]:
+            - /url: /preview/golden-standard/chrome/routes/assessment/
+          - link "Explore the system" [ref=f12e35] [cursor=pointer]:
+            - /url: "#product"
+      - generic [ref=f12e36]:
+        - figure [ref=f12e37]:
+          - img "A dark machine field resolving into an illuminated path" [ref=f12e38]
+        - generic "Illustrative Dagg system state" [ref=f12e39]:
+          - generic [ref=f12e40]:
+            - generic [ref=f12e41]: WORKGRAPH / DECISION 04
+            - generic [ref=f12e42]: READY
+          - paragraph [ref=f12e43]: Supplier-payment exception
+          - generic [ref=f12e44]:
+            - generic [ref=f12e45]:
+              - term [ref=f12e46]: Decision
+              - definition [ref=f12e47]: Prepare automatically
+            - generic [ref=f12e48]:
+              - term [ref=f12e49]: Boundary
+              - definition [ref=f12e50]: Human releases funds
+            - generic [ref=f12e51]:
+              - term [ref=f12e52]: Build
+              - definition [ref=f12e53]: Evaluation passed
+    - generic [ref=f12e56]:
+      - generic [ref=f12e57]:
+        - paragraph [ref=f12e58]: A compound system
+        - heading "The work does not restart at every handoff." [level=2] [ref=f12e59]
+        - paragraph [ref=f12e60]: WorkGraph carries the company-specific context. Dagg Factory turns the chosen path into software. Evaluation returns what the system learned.
+      - generic [ref=f12e61]:
+        - navigation "System stages" [ref=f12e62]:
+          - button "01 Map" [pressed] [ref=f12e63] [cursor=pointer]:
+            - generic [ref=f12e64]: "01"
+            - text: Map
+          - button "02 Decide" [ref=f12e65] [cursor=pointer]:
+            - generic [ref=f12e66]: "02"
+            - text: Decide
+          - button "03 Build" [ref=f12e67] [cursor=pointer]:
+            - generic [ref=f12e68]: "03"
+            - text: Build
+          - button "04 Verify" [ref=f12e69] [cursor=pointer]:
+            - generic [ref=f12e70]: "04"
+            - text: Verify
+        - generic [ref=f12e71]:
+          - generic [ref=f12e72]:
+            - paragraph [ref=f12e73]: CURRENT STATE
+            - heading "The workflow becomes legible." [level=3] [ref=f12e74]
+            - paragraph [ref=f12e75]: Sources, owners, exceptions and handoffs resolve into one company-specific record.
+          - generic [ref=f12e76]:
+            - generic [ref=f12e77]:
+              - term [ref=f12e78]: Sources
+              - definition [ref=f12e79]: 4 connected
+            - generic [ref=f12e80]:
+              - term [ref=f12e81]: Owner
+              - definition [ref=f12e82]: Finance operations
+            - generic [ref=f12e83]:
+              - term [ref=f12e84]: Next
+              - definition [ref=f12e85]: Strategic decision
+    - generic [ref=f12e88]:
+      - paragraph [ref=f12e89]: STRATEGY × ENGINEERING
+      - heading "Build only what the future operating model justifies." [level=2] [ref=f12e90]
+      - paragraph [ref=f12e91]: Preserve the judgment that creates value. Automate the stable path. Rebuild what no longer fits.
+    - generic [ref=f12e94]:
+      - heading "See your company as a system." [level=2] [ref=f12e95]
+      - paragraph [ref=f12e96]: Start with one bounded assessment of the work, the decision and the build it requires.

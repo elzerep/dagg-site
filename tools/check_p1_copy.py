@@ -108,7 +108,10 @@ def main() -> int:
     hero = section_text(text, "1 · Hero")
     workgraph = section_text(text, "4 · WorkGraph")
     factory = section_text(text, "5 · Factory")
-    operating = section_text(text, "6 · Govern, operate and prove")
+    # Section 6 now carries the customer-facing impact proof. Governance and
+    # operating evidence moved intact to section 7 when that narrative beat
+    # was added; keep the checker keyed to the current frozen heading.
+    operating = section_text(text, "7 · Govern, operate and prove")
     workgraph_fields = [
         "Source:", "Captured state:", "System:", "Work item:", "Owner:",
         "Exception:", "Decision state:", "Permission:", "Provenance:",

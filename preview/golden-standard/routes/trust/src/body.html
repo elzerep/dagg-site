@@ -1,0 +1,183 @@
+<!-- Dagg golden standard - Trust (FS5 Lane B)
+   Copy authority: design/golden-standard/narrative/FULL-SITE-CONTENT-CONTRACT.md, Page 7 and §5.1
+   Exact unit ownership: design/golden-standard/narrative/COPY-UNIT-MANIFEST.json
+   Composition authority: design/golden-standard/design-mapping/TRUST-PAGE-MAP.md
+   Shared header, footer and main landmark are assembled centrally.
+
+   Trust opens copy-first; the constructed control path follows as a separate
+   horizontal band. Operational Evidence only; no bitmap. Every public text
+   node sits under exactly one data-copy-ref owner. -->
+<div class="trust-page" data-trust>
+
+  <section class="trust-section trust-section--hero" data-trust-section="position" aria-labelledby="trust-title">
+    <div class="page"><div class="field trust-hero">
+      <div class="trust-hero__copy" data-narrative-anchor>
+        <div class="trust-hero__narrative"
+             data-copy-ref="trust.position.narrative"
+             data-copy-kind="narrative"
+             data-copy-scope="default">
+          <p class="cl-eyebrow trust-eyebrow">Trust</p>
+          <h1 class="h1 trust-h1" id="trust-title">Control belongs inside the system.</h1>
+          <p class="lead trust-lead">An AI system that acts inside a company needs more than a capable model. It needs approved context, explicit permissions, evaluation, an accountable owner, an inspectable record and a way back.</p>
+        </div>
+        <div class="cl-actions trust-actions"
+             data-copy-ref="trust.position.actions"
+             data-copy-kind="action"
+             data-copy-scope="default">
+          <a class="cl-button cl-button--primary" href="#permission">Inspect the control model</a>
+          <a class="cl-button cl-button--secondary" href="mailto:hello@dagg.ai?subject=Dagg%20technical%20diligence">Start technical diligence</a>
+        </div>
+      </div>
+    </div></div>
+  </section>
+
+  <!-- The constructed three-step control path in its own bounded band. The
+       visible provenance names the band; there is no separate accessible
+       label or live-state string. The settle starts when the band enters view
+       and holds; reduced motion, a missing observer and no JavaScript show the
+       resolved state immediately. -->
+  <section class="trust-control-path" data-trust-section="control-path" aria-labelledby="trust-control-provenance">
+    <div class="page"><div class="field">
+      <div class="trust-control on-ink" data-trust-control data-trust-instrument data-narrative-anchor>
+        <p class="trust-provenance" id="trust-control-provenance"
+           data-copy-ref="trust.control-path.provenance"
+           data-copy-kind="provenance"
+           data-copy-scope="default">Constructed control path</p>
+        <ol class="trust-control__path"
+            data-copy-ref="trust.control-path.artifact"
+            data-copy-kind="artifact-static"
+            data-copy-scope="default">
+          <li data-trust-node="withheld"><span>01</span><strong>Action withheld</strong><small>Invoice and receipt disagree.</small></li>
+          <li data-trust-node="permission"><span>02</span><strong>Permission</strong><small>The agent may prepare, never release.</small></li>
+          <li data-trust-node="owner"><span>03</span><strong>Accountable owner</strong><small>Finance owner decides; the manual path remains available.</small></li>
+        </ol>
+        <p class="trust-control__state" data-trust-state
+           data-copy-ref="trust.control-path.state"
+           data-copy-kind="artifact-state"
+           data-copy-scope="default">Human decision recorded. Release withheld.</p>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="trust-section trust-section--permission" id="permission" data-trust-section="permission" aria-labelledby="trust-permission-title">
+    <div class="page"><div class="field trust-permission" data-narrative-anchor>
+      <div class="trust-permission__copy"
+           data-copy-ref="trust.permission.narrative"
+           data-copy-kind="narrative"
+           data-copy-scope="default">
+        <h2 class="h2" id="trust-permission-title">Permission is attached to the action.</h2>
+        <p class="cl-body trust-copy">Every intervention defines what the system may read, propose or execute; what it must withhold; and who decides a material exception. Access to context does not imply permission to act.</p>
+      </div>
+      <dl class="trust-fields"
+          data-copy-ref="trust.permission.fields"
+          data-copy-kind="artifact-static"
+          data-copy-scope="default">
+        <div><dt>Actor</dt><dd>the person, agent or software component requesting the action.</dd></div>
+        <div><dt>Context</dt><dd>the approved sources the decision may use.</dd></div>
+        <div class="trust-fields__sage"><dt>Permission</dt><dd>the action the actor may take.</dd></div>
+        <div class="trust-fields__sage"><dt>Stop condition</dt><dd>the event that withholds execution.</dd></div>
+        <div><dt>Owner</dt><dd>the person accountable for the decision.</dd></div>
+      </dl>
+    </div></div>
+  </section>
+
+  <section class="trust-section trust-section--record" data-trust-section="record" aria-labelledby="trust-record-title">
+    <div class="page"><div class="field" data-narrative-anchor>
+      <div class="trust-record-intro">
+        <div class="trust-record-intro__narrative"
+             data-copy-ref="trust.record.narrative"
+             data-copy-kind="narrative"
+             data-copy-scope="default">
+          <h2 class="h2" id="trust-record-title">The exception is part of the product.</h2>
+          <p class="cl-body">Evaluation tests the intended path, the material exception and the way back before release. The operating record keeps the intent, approved context, proposed action, boundary, human decision, evidence and resulting state together so the company can inspect what happened.</p>
+        </div>
+        <p class="trust-disclosure"
+           data-copy-ref="trust.record.disclosure"
+           data-copy-kind="disclosure"
+           data-copy-scope="default">All artifacts on this page are constructed examples, not client data or production deployments.</p>
+      </div>
+
+      <details class="trust-record-disclosure">
+        <summary>
+          <span data-copy-ref="trust.record.summary-action"
+                data-copy-kind="functional"
+                data-copy-scope="default">Inspect the full operating record</span>
+          <small data-copy-ref="trust.record.summary-meta"
+                 data-copy-kind="functional"
+                 data-copy-scope="default">11 fields · constructed example</small>
+        </summary>
+        <article class="trust-record on-ink" aria-labelledby="trust-record-object-title">
+          <div class="trust-record__header">
+            <p class="trust-provenance"
+               data-copy-ref="trust.record.provenance"
+               data-copy-kind="provenance"
+               data-copy-scope="progressive">Illustrative operating record · constructed example</p>
+            <div class="trust-record__title-row">
+              <h3 class="trust-record__title" id="trust-record-object-title"
+                  data-copy-ref="trust.record.identity"
+                  data-copy-kind="artifact-static"
+                  data-copy-scope="progressive">OR-021 · Governed exception</h3>
+              <span class="trust-record__status"
+                    data-copy-ref="trust.record.header-status"
+                    data-copy-kind="artifact-state"
+                    data-copy-scope="progressive">Release withheld</span>
+            </div>
+          </div>
+          <dl class="trust-record__fields"
+              data-copy-ref="trust.record.fields"
+              data-copy-kind="artifact-static"
+              data-copy-scope="progressive">
+            <div><dt>Intent</dt><dd>Prepare a payment draft.</dd></div>
+            <div><dt>Actor</dt><dd>Bounded agent.</dd></div>
+            <div><dt>Approved context</dt><dd>WorkGraph WG-034.</dd></div>
+            <div><dt>Proposed action</dt><dd>Draft prepared. Nothing executed.</dd></div>
+            <div class="trust-record__boundary"><dt>Permission boundary</dt><dd>Agent cannot release payment.</dd></div>
+            <div class="trust-record__exception"><dt>Material exception</dt><dd>Invoice and receipt disagree.</dd></div>
+            <div><dt>Decision</dt><dd>Withhold and route for review.</dd></div>
+            <div><dt>Owner</dt><dd>Finance owner.</dd></div>
+            <div><dt>Evidence</dt><dd>WG-034 · source mismatch.</dd></div>
+            <div><dt>Way back</dt><dd>Disable capability; return item to manual queue.</dd></div>
+            <div class="trust-record__resolved"><dt>State</dt><dd>Human decision recorded. Release withheld.</dd></div>
+          </dl>
+        </article>
+      </details>
+      <a class="cl-link trust-link" href="/preview/golden-standard/routes/build/#factory"
+         data-copy-ref="trust.record.action"
+         data-copy-kind="action"
+         data-copy-scope="default">See how controls enter the Factory build</a>
+    </div></div>
+  </section>
+
+  <section class="trust-section trust-section--models" data-trust-section="models" aria-labelledby="trust-models-title">
+    <div class="page"><div class="field trust-models" data-narrative-anchor>
+      <div class="trust-models__narrative"
+           data-copy-ref="trust.models.narrative"
+           data-copy-kind="narrative"
+           data-copy-scope="default">
+        <h2 class="h2 trust-models__title" id="trust-models-title">Keep the operating model governable beyond any one model.</h2>
+        <p class="cl-body trust-models__body">Dagg treats the model as one part of the harness. Company-specific context, tools, permissions, evaluations and records are designed as governable parts of the company's system rather than as intelligence trapped in one prompt or provider.</p>
+        <p class="trust-boundary">This is an architecture principle, not a promise of universal portability. Exact model providers, hosting, data residency, retention, encryption, access control, isolation and contractual commitments are established in technical diligence and the agreement.</p>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="trust-section trust-section--diligence" id="diligence" data-trust-section="diligence" aria-labelledby="trust-diligence-title">
+    <div class="page"><div class="field trust-diligence" data-narrative-anchor>
+      <div class="trust-diligence__narrative"
+           data-copy-ref="trust.diligence.narrative"
+           data-copy-kind="narrative"
+           data-copy-scope="default">
+        <h2 class="h2 trust-diligence__title" id="trust-diligence-title">A release needs a way back.</h2>
+        <p class="lead trust-diligence__lead">Each build defines how the capability can be disabled, how work returns to an approved manual or previous path, and who may make that decision. Evaluation of that reversal should be proportionate to the consequence of the action.</p>
+        <p class="cl-body trust-copy trust-diligence__body">Technical diligence should resolve the exact data sources, model and provider choices, roles, environments, retention, access controls, evaluations, monitoring, incident responsibilities and contractual boundaries for the engagement.</p>
+      </div>
+      <div class="cl-actions trust-actions trust-diligence__actions"
+           data-copy-ref="trust.diligence.actions"
+           data-copy-kind="action"
+           data-copy-scope="default">
+        <a class="cl-button cl-button--primary" href="mailto:hello@dagg.ai?subject=Dagg%20technical%20diligence">Start technical diligence</a>
+        <a class="cl-link" href="/preview/golden-standard/routes/build/#factory">See the governed build</a>
+      </div>
+    </div></div>
+  </section>
+</div>

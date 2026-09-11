@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-09-02T23:26:31.795542+00:00",
+  "purpose": "Protected FS5 invariants that remain stable while route source files are intentionally recomposed",
+  "sourceSnapshotId": "6ef754faf00f234ba503ddbc83e8226759054a4b57929b9757561b3a6fdfdc50",
+  "homeHero": {
+    "copy": {
+      "eyebrow": "AI-native transformation",
+      "h1": "Build the company AI makes possible.",
+      "lead": "Dagg decides how a company should work when agents and software carry more of the execution — then builds the systems that make that decision real.",
+      "primaryAction": "Start an assessment",
+      "secondaryAction": "See what must change",
+      "alt": "Fragmented company work crosses a human decision boundary and becomes a coherent machine-speed system."
+    },
+    "assets": [
+      {
+        "path": "design/golden-standard/image-system/home/home-hero-selected-desktop-v4.webp",
+        "width": 1983,
+        "height": 793,
+        "sha256": "49f87d8366fad64b01c7ac6d1d64d2b37740045148f94dd40b9c85c53b79d607"
+      },
+      {
+        "path": "design/golden-standard/image-system/home/home-hero-selected-desktop-v4.png",
+        "width": 1983,
+        "height": 793,
+        "sha256": "fa231e002b25626cc17bd0203f21482c63be7004a34b5c04092f7909fff26ac7"
+      },
+      {
+        "path": "design/golden-standard/image-system/home/home-hero-selected-mobile-v4.webp",
+        "width": 1448,
+        "height": 1086,
+        "sha256": "b740f0f573c8472380e6329beaacc48e8fbe14cb48dd7d62920b8510c47d8808"
+      },
+      {
+        "path": "design/golden-standard/image-system/home/home-hero-selected-mobile-v4.png",
+        "width": 1448,
+        "height": 1086,
+        "sha256": "d1f9ea85d7d54ba3d2918385d17ad4bdae6bd0e2d59705fd7ffefc9e51191ac4"
+      }
+    ],
+    "renderedBaselines": {
+      "manifest": "evidence/FULL-SITE-STAGING/FS4B/home-lossless-baseline-6ef754faf00f/manifest.json",
+      "maximumDifferentPixelPercent": 0.5,
+      "captures": [
+        {
+          "viewport": [390, 844],
+          "path": "evidence/FULL-SITE-STAGING/FS4B/home-lossless-baseline-6ef754faf00f/home-390x844.png",
+          "sha256": "d89675d7dd3c8881136b8677fb764acf2b8ecda8ecbed5e796a9c8e2c1c8b44c"
+        },
+        {
+          "viewport": [1024, 768],
+          "path": "evidence/FULL-SITE-STAGING/FS4B/home-lossless-baseline-6ef754faf00f/home-1024x768.png",
+          "sha256": "206896c60b62d4fa7ba99d0e8c7397b6eb0ba2f8d72cb04d0ab39ebdc91cac68"
+        },
+        {
+          "viewport": [1440, 900],
+          "path": "evidence/FULL-SITE-STAGING/FS4B/home-lossless-baseline-6ef754faf00f/home-1440x900.png",
+          "sha256": "8f3532df14eaadf2178b58398117cd5967591fa0b518907b9ecb43645c013962"
+        },
+        {
+          "viewport": [1536, 1024],
+          "path": "evidence/FULL-SITE-STAGING/FS4B/home-lossless-baseline-6ef754faf00f/home-1536x1024.png",
+          "sha256": "a6959a206d683c9b1817a100323232608624e76e0b9670d6e93409567cb35713"
+        }
+      ]
+    }
+  },
+  "writerRule": "Route files may change only within their FS5 package scope. Home hero copy, selected asset bytes, source selection and rendered first-viewport region remain invariant. Behavior and downstream composition are proven by the FS5 runner rather than whole-file hashes."
+}

@@ -1,0 +1,82 @@
+- generic [active] [ref=f1e1]:
+  - banner [ref=f1e2]:
+    - generic [ref=f1e4]:
+      - link "Dagg — Home" [ref=f1e5] [cursor=pointer]:
+        - /url: /preview/golden-standard/p4r3/b/
+        - img "Dagg" [ref=f1e6]
+      - group [ref=f1e7]:
+        - generic [ref=f1e8]:
+          - navigation "Primary" [ref=f1e9]:
+            - list [ref=f1e10]:
+              - listitem [ref=f1e11]:
+                - link "Transformation" [ref=f1e12] [cursor=pointer]:
+                  - /url: /preview/golden-standard/chrome/routes/transformation/
+              - listitem [ref=f1e13]:
+                - link "WorkGraph" [ref=f1e14] [cursor=pointer]:
+                  - /url: /preview/golden-standard/chrome/routes/workgraph/
+              - listitem [ref=f1e15]:
+                - link "Build" [ref=f1e16] [cursor=pointer]:
+                  - /url: /preview/golden-standard/chrome/routes/build/
+                - group [ref=f1e17]:
+                  - generic "Open Build menu" [ref=f1e18] [cursor=pointer]
+              - listitem [ref=f1e20]:
+                - link "Impact" [ref=f1e21] [cursor=pointer]:
+                  - /url: /preview/golden-standard/chrome/routes/impact/
+              - listitem [ref=f1e22]:
+                - link "Company" [ref=f1e23] [cursor=pointer]:
+                  - /url: /preview/golden-standard/chrome/routes/company/
+          - link "Start an assessment" [ref=f1e24] [cursor=pointer]:
+            - /url: /preview/golden-standard/chrome/routes/assessment/
+  - main [ref=f1e25]:
+    - generic [ref=f1e28]:
+      - generic [ref=f1e29]:
+        - paragraph [ref=f1e30]: Strategy into execution
+        - heading "From strategic decision to working system." [level=1] [ref=f1e31]
+        - generic [ref=f1e32]:
+          - link "Start an assessment" [ref=f1e33] [cursor=pointer]:
+            - /url: /preview/golden-standard/chrome/routes/assessment/
+          - link "Inspect the system" [ref=f1e34] [cursor=pointer]:
+            - /url: "#system"
+      - paragraph [ref=f1e35]: Dagg maps how work moves, decides what should change, and builds the agents and software the new operating model requires.
+    - generic [ref=f1e38]:
+      - generic [ref=f1e39]:
+        - generic [ref=f1e40]:
+          - generic [ref=f1e41]:
+            - paragraph [ref=f1e42]: Decision carrier
+            - tablist [ref=f1e43]:
+              - tab "Context" [selected] [ref=f1e44] [cursor=pointer]
+              - tab "Decision" [ref=f1e45] [cursor=pointer]
+              - tab "Build" [ref=f1e46] [cursor=pointer]
+              - tab "Verify" [ref=f1e47] [cursor=pointer]
+          - tabpanel [ref=f1e49]:
+            - generic [ref=f1e50]:
+              - heading "WorkGraph record" [level=3] [ref=f1e51]
+              - generic [ref=f1e52]: Context retained
+            - generic [ref=f1e53]:
+              - generic [ref=f1e54]:
+                - term [ref=f1e55]: Work
+                - definition [ref=f1e56]: Supplier-payment exception handling.
+              - generic [ref=f1e57]:
+                - term [ref=f1e58]: Sources
+                - definition [ref=f1e59]: ERP record, purchase order, approval policy and exception history.
+              - generic [ref=f1e60]:
+                - term [ref=f1e61]: Owner
+                - definition [ref=f1e62]: Finance operations.
+        - paragraph [ref=f1e63]: One synthetic record shows the operating logic. It is a demonstrator, not client data or a production claim.
+      - complementary [ref=f1e64]:
+        - figure "Judgment changes the path." [ref=f1e65]
+        - generic [ref=f1e69]:
+          - generic [ref=f1e70]: Context
+          - generic [ref=f1e71]: Decision
+          - generic [ref=f1e72]: Verified state
+    - generic [ref=f1e75]:
+      - heading "Strategy earns its value in execution." [level=2] [ref=f1e76]
+      - paragraph [ref=f1e77]: The recommendation, build and operating boundary use the same company-specific record. The transformation does not restart at every handoff.
+    - generic [ref=f1e81]:
+      - generic [ref=f1e82]:
+        - paragraph [ref=f1e83]: What changes
+        - heading "People specify, judge and verify." [level=2] [ref=f1e84]
+      - paragraph [ref=f1e85]: Agents execute the bounded path. Material exceptions remain explicit, accountable and reversible.
+    - generic [ref=f1e88]:
+      - heading "Build what the decision justifies." [level=2] [ref=f1e89]
+      - paragraph [ref=f1e90]: Automate what should stay. Rebuild what should change. Retire what no longer belongs.

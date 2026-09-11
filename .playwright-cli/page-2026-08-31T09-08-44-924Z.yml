@@ -1,0 +1,28 @@
+- main [ref=f42e2]:
+  - paragraph [ref=f42e3]: P4 · VERTICAL-SLICE GATE
+  - generic [ref=f42e4]:
+    - heading "Choose the Dagg world." [level=1] [ref=f42e5]
+    - paragraph [ref=f42e6]: "Three genuinely different strategic directions, built in the same Dagg system. Open each one and judge the whole: copy, composition, image language, product evidence and motion."
+  - generic [ref=f42e7]:
+    - link "Preview of Direction A A · EDITORIAL STRATEGY Open ↗ Warm intelligence Anthropic restraint meets strategic judgment. Calm, tactile and argument-led." [ref=f42e8] [cursor=pointer]:
+      - /url: a/
+      - img "Preview of Direction A" [ref=f42e10]
+      - generic [ref=f42e11]:
+        - generic [ref=f42e12]: A · EDITORIAL STRATEGY Open ↗
+        - heading "Warm intelligence" [level=2] [ref=f42e13]
+        - paragraph [ref=f42e14]: Anthropic restraint meets strategic judgment. Calm, tactile and argument-led.
+    - link "Preview of Direction B B · PRODUCT SYSTEM Open ↗ Machine capability A dark, interactive product world. WorkGraph and Factory feel like one compound system." [ref=f42e15] [cursor=pointer]:
+      - /url: b/
+      - img "Preview of Direction B" [ref=f42e17]
+      - generic [ref=f42e18]:
+        - generic [ref=f42e19]: B · PRODUCT SYSTEM Open ↗
+        - heading "Machine capability" [level=2] [ref=f42e20]
+        - paragraph [ref=f42e21]: A dark, interactive product world. WorkGraph and Factory feel like one compound system.
+    - link "Preview of Direction C C · OPERATIONAL FORCE Open ↗ Transformation made real High stakes, decisive movement and operating evidence. Strategy carried into accountable execution." [ref=f42e22] [cursor=pointer]:
+      - /url: c/
+      - img "Preview of Direction C" [ref=f42e24]
+      - generic [ref=f42e25]:
+        - generic [ref=f42e26]: C · OPERATIONAL FORCE Open ↗
+        - heading "Transformation made real" [level=2] [ref=f42e27]
+        - paragraph [ref=f42e28]: High stakes, decisive movement and operating evidence. Strategy carried into accountable execution.
+  - paragraph [ref=f42e29]: This is the decision gate. No full website is built from a direction until you choose one.

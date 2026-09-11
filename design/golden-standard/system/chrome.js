@@ -23,6 +23,15 @@
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   var lastScrollY = window.scrollY;
   var hideThreshold = 160;
+  var backgroundRegions = Array.prototype.slice.call(
+    document.querySelectorAll("main, .chrome-footer")
+  );
+
+  /* The disclosure is authored open so desktop navigation remains available
+     in browsers that do not expose the non-standard ::details-content hook,
+     and when JavaScript is disabled. Enhanced mobile closes it immediately
+     and returns to an explicit touch disclosure. */
+  disclosure.open = desktopQuery.matches;
 
   /* ------------------------------------------------------------------ *
    * Menu / Close label + explicit aria-expanded                         *
@@ -30,12 +39,16 @@
 
   function syncDisclosureState() {
     var open = disclosure.open;
+    var modalOpen = open && !desktopQuery.matches;
     summary.setAttribute("aria-expanded", open ? "true" : "false");
     if (labelOpen && labelClose) {
       labelOpen.hidden = open;
       labelClose.hidden = !open;
     }
-    if (open && !desktopQuery.matches) {
+    backgroundRegions.forEach(function (region) {
+      region.toggleAttribute("inert", modalOpen);
+    });
+    if (modalOpen) {
       document.documentElement.style.overflow = "hidden";
       revealHeader();
     } else if (!desktopQuery.matches) {
@@ -52,6 +65,9 @@
     }
     disclosure.open = false;
     document.documentElement.style.overflow = "";
+    backgroundRegions.forEach(function (region) {
+      region.removeAttribute("inert");
+    });
     if (restoreFocus) {
       summary.focus();
     }
@@ -106,9 +122,12 @@
   });
 
   desktopQuery.addEventListener("change", function (query) {
-    if (query.matches) {
-      closeDisclosure(false);
-    }
+    disclosure.open = query.matches;
+    document.documentElement.style.overflow = "";
+    backgroundRegions.forEach(function (region) {
+      region.removeAttribute("inert");
+    });
+    syncDisclosureState();
   });
 
   /* ------------------------------------------------------------------ *

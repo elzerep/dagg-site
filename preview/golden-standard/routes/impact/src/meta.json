@@ -1,0 +1,11 @@
+{
+  "title": "Impact - Evidence with a boundary - Dagg",
+  "description": "Inspect the starting condition, operating change, build, owner, outcome, attribution and boundary behind every Dagg proof.",
+  "lang": "en",
+  "brandHref": "/preview/golden-standard/home/",
+  "routeState": "internal-staging",
+  "publication": "omitted-until-approved-proof",
+  "robots": "noindex, nofollow",
+  "css": ["direction.css?v=fs1-20260902"],
+  "js": ["direction.js?v=fs1-20260902"]
+}

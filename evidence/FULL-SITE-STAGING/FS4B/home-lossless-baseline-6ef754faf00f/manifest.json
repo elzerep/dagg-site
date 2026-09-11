@@ -1,0 +1,402 @@
+{
+  "capturedAt": "2026-09-02T23:26:31.795542+00:00",
+  "captures": [
+    {
+      "bytes": 94335,
+      "heroRect": {
+        "bottom": 1020.015625,
+        "height": 959.015625,
+        "right": 390,
+        "width": 390,
+        "x": 0,
+        "y": 61
+      },
+      "kind": "viewport",
+      "path": "home-390x844.png",
+      "pixelDimensions": {
+        "height": 844,
+        "width": 390
+      },
+      "sha256": "d89675d7dd3c8881136b8677fb764acf2b8ecda8ecbed5e796a9c8e2c1c8b44c",
+      "snapshotId": "6ef754faf00f234ba503ddbc83e8226759054a4b57929b9757561b3a6fdfdc50",
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "bytes": 498996,
+      "heroRect": {
+        "bottom": 764.28125,
+        "height": 695.28125,
+        "right": 1024,
+        "width": 1024,
+        "x": 0,
+        "y": 69
+      },
+      "kind": "viewport",
+      "path": "home-1024x768.png",
+      "pixelDimensions": {
+        "height": 768,
+        "width": 1024
+      },
+      "sha256": "206896c60b62d4fa7ba99d0e8c7397b6eb0ba2f8d72cb04d0ab39ebdc91cac68",
+      "snapshotId": "6ef754faf00f234ba503ddbc83e8226759054a4b57929b9757561b3a6fdfdc50",
+      "viewport": [
+        1024,
+        768
+      ]
+    },
+    {
+      "bytes": 827131,
+      "heroRect": {
+        "bottom": 763.75,
+        "height": 694.75,
+        "right": 1440,
+        "width": 1440,
+        "x": 0,
+        "y": 69
+      },
+      "kind": "viewport",
+      "path": "home-1440x900.png",
+      "pixelDimensions": {
+        "height": 900,
+        "width": 1440
+      },
+      "sha256": "8f3532df14eaadf2178b58398117cd5967591fa0b518907b9ecb43645c013962",
+      "snapshotId": "6ef754faf00f234ba503ddbc83e8226759054a4b57929b9757561b3a6fdfdc50",
+      "viewport": [
+        1440,
+        900
+      ]
+    },
+    {
+      "bytes": 950006,
+      "heroRect": {
+        "bottom": 804.09375,
+        "height": 735.09375,
+        "right": 1536,
+        "width": 1536,
+        "x": 0,
+        "y": 69
+      },
+      "kind": "viewport",
+      "path": "home-1536x1024.png",
+      "pixelDimensions": {
+        "height": 1024,
+        "width": 1536
+      },
+      "sha256": "a6959a206d683c9b1817a100323232608624e76e0b9670d6e93409567cb35713",
+      "snapshotId": "6ef754faf00f234ba503ddbc83e8226759054a4b57929b9757561b3a6fdfdc50",
+      "viewport": [
+        1536,
+        1024
+      ]
+    }
+  ],
+  "chromeLaunch": {
+    "chromePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    "debugPort": 63429,
+    "devToolsActivePortExists": false,
+    "processExitCode": null,
+    "startupSeconds": 0.923,
+    "stderrTail": "\nDevTools listening on ws://127.0.0.1:63429/devtools/browser/eab69650-2f50-4ff0-907a-e3f51523425f\nTrying to load the allocator multiple times. This is *not* supported.\n[35942:8916351:0903/012622.556318:ERROR:ui/display/mac/cv_display_link_mac.mm:195] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[35942:8916351:0903/012622.556677:ERROR:ui/display/mac/cv_display_link_mac.mm:195] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[35942:8916351:0903/012622.556731:ERROR:ui/display/mac/cv_display_link_mac.mm:195] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[35942:8916351:0903/012622.556785:ERROR:ui/display/mac/cv_display_link_mac.mm:195] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n[35942:8916351:0903/012622.556847:ERROR:ui/display/mac/cv_display_link_mac.mm:195] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670\n",
+    "versionEndpoint": {
+      "Browser": "Chrome/152.0.7977.65",
+      "Protocol-Version": "1.3",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+      "V8-Version": "15.2.124.18",
+      "WebKit-Version": "537.36 (@fc4d67f1788019a27e32511137ceccbd2fafdaaa)",
+      "webSocketDebuggerUrl": "ws://127.0.0.1:63429/devtools/browser/eab69650-2f50-4ff0-907a-e3f51523425f"
+    }
+  },
+  "chromePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+  "chromeVersion": {
+    "jsVersion": "15.2.124.18",
+    "product": "Chrome/152.0.7977.65",
+    "protocolVersion": "1.3",
+    "revision": "@fc4d67f1788019a27e32511137ceccbd2fafdaaa",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36"
+  },
+  "expectedSnapshotPrefix": "6ef754faf00f",
+  "kind": "fs4-home-lossless-baseline",
+  "passed": true,
+  "resources": [
+    {
+      "bytes": 23718,
+      "currentSourceSha256": "b7c21f23ce98e702077a1840100abd08601f13b0ce013a0ddf27c883c20fdc8f",
+      "expectedServedSha256": "b7c21f23ce98e702077a1840100abd08601f13b0ce013a0ddf27c883c20fdc8f",
+      "passed": true,
+      "path": "/assets/dagg-logotype-dark.png",
+      "servedSha256": "b7c21f23ce98e702077a1840100abd08601f13b0ce013a0ddf27c883c20fdc8f",
+      "snapshotHeader": "6ef754faf00f234ba503ddbc83e8226759054a4b57929b9757561b3a6fdfdc50",
+      "sourcePath": "assets/dagg-logotype-dark.png",
+      "status": 200
+    },
+    {
+      "bytes": 29822,
+      "currentSourceSha256": "d41c498d3776d82990e4159776cbd2de455db8b97b1ab05525df174919a409bb",
+      "expectedServedSha256": "d41c498d3776d82990e4159776cbd2de455db8b97b1ab05525df174919a409bb",
+      "passed": true,
+      "path": "/assets/dagg-logotype.png",
+      "servedSha256": "d41c498d3776d82990e4159776cbd2de455db8b97b1ab05525df174919a409bb",
+      "snapshotHeader": "6ef754faf00f234ba503ddbc83e8226759054a4b57929b9757561b3a6fdfdc50",
+      "sourcePath": "assets/dagg-logotype.png",
+      "status": 200
+    },
+    {
+      "bytes": 73830,
+      "currentSourceSha256": "fa937d2faba7922a937ba30fbc54fc06a50bbf46aba9502386a48f7183c8ba5d",
+      "expectedServedSha256": "fa937d2faba7922a937ba30fbc54fc06a50bbf46aba9502386a48f7183c8ba5d",
+      "passed": true,
+      "path": "/assets/dagg-symbol.png",
+      "servedSha256": "fa937d2faba7922a937ba30fbc54fc06a50bbf46aba9502386a48f7183c8ba5d",
+      "snapshotHeader": "6ef754faf00f234ba503ddbc83e8226759054a4b57929b9757561b3a6fdfdc50",
+      "sourcePath": "assets/dagg-symbol.png",
+      "status": 200
+    },
+    {
+      "bytes": 69760,
+      "currentSourceSha256": "2ffebe993e969069a9789d15164b7715d42491b5835516c5e3b935d5f81b05f1",
+      "expectedServedSha256": "2ffebe993e969069a9789d15164b7715d42491b5835516c5e3b935d5f81b05f1",
+      "passed": true,
+      "path": "/assets/fonts/golden-standard/geist/Geist-Variable.woff2",
+      "servedSha256": "2ffebe993e969069a9789d15164b7715d42491b5835516c5e3b935d5f81b05f1",
+      "snapshotHeader": "6ef754faf00f234ba503ddbc83e8226759054a4b57929b9757561b3a6fdfdc50",
+      "sourcePath": "assets/fonts/golden-standard/geist/Geist-Variable.woff2",
+      "status": 200
+    },
+    {
+      "bytes": 113672,
+      "currentSourceSha256": "31ec365b93e4bad6f202ce23352a56d01ca4462b2afc782ed2cf6fa42ca9ac0e",
+      "expectedServedSha256": "31ec365b93e4bad6f202ce23352a56d01ca4462b2afc782ed2cf6fa42ca9ac0e",
+      "passed": true,
+      "path": "/assets/fonts/golden-standard/jetbrains-mono/JetBrainsMono-Variable.woff2",
+      "servedSha256": "31ec365b93e4bad6f202ce23352a56d01ca4462b2afc782ed2cf6fa42ca9ac0e",
+      "snapshotHeader": "6ef754faf00f234ba503ddbc83e8226759054a4b57929b9757561b3a6fdfdc50",
+      "sourcePath": "assets/fonts/golden-standard/jetbrains-mono/JetBrainsMono-Variable.woff2",
+      "status": 200
+    },
+    {
+      "bytes": 215264,
+      "currentSourceSha256": "f25206ca663fd7dcf9c5305a2fa9767acfe354b284238232dce9a4a0383ff9ac",
+      "expectedServedSha256": "f25206ca663fd7dcf9c5305a2fa9767acfe354b284238232dce9a4a0383ff9ac",
+      "passed": true,
+      "path": "/assets/fonts/golden-standard/newsreader/Newsreader-Variable.woff2",
+      "servedSha256": "f25206ca663fd7dcf9c5305a2fa9767acfe354b284238232dce9a4a0383ff9ac",
+      "snapshotHeader": "6ef754faf00f234ba503ddbc83e8226759054a4b57929b9757561b3a6fdfdc50",
+      "sourcePath": "assets/fonts/golden-standard/newsreader/Newsreader-Variable.woff2",
+      "status": 200
+    },
+    {
+      "bytes": 319,
+      "currentSourceSha256": "0bcbb922baab73aaf2dd62a0e98dc2e91076cc0c226e9495678a5dc34fecaa2c",
+      "expectedServedSha256": "0bcbb922baab73aaf2dd62a0e98dc2e91076cc0c226e9495678a5dc34fecaa2c",
+      "passed": true,
+      "path": "/assets/vendor/lucide-dagg/icons/chevron-down.svg",
+      "servedSha256": "0bcbb922baab73aaf2dd62a0e98dc2e91076cc0c226e9495678a5dc34fecaa2c",
+      "snapshotHeader": "6ef754faf00f234ba503ddbc83e8226759054a4b57929b9757561b3a6fdfdc50",
+      "sourcePath": "assets/vendor/lucide-dagg/icons/chevron-down.svg",
+      "status": 200
+    },
+    {
+      "bytes": 354,
+      "currentSourceSha256": "60da18eb50fab43358db1257232167e994f0f88e26e3d15497ca29b501c6ca2a",
+      "expectedServedSha256": "60da18eb50fab43358db1257232167e994f0f88e26e3d15497ca29b501c6ca2a",
+      "passed": true,
+      "path": "/assets/vendor/lucide-dagg/icons/menu.svg",
+      "servedSha256": "60da18eb50fab43358db1257232167e994f0f88e26e3d15497ca29b501c6ca2a",
+      "snapshotHeader": "6ef754faf00f234ba503ddbc83e8226759054a4b57929b9757561b3a6fdfdc50",
+      "sourcePath": "assets/vendor/lucide-dagg/icons/menu.svg",
+      "status": 200
+    },
+    {
+      "bytes": 332,
+      "currentSourceSha256": "a7a42200b0428c678568e6cda02a0e06d310aef2eda22324c133eb28bf0f74bd",
+      "expectedServedSha256": "a7a42200b0428c678568e6cda02a0e06d310aef2eda22324c133eb28bf0f74bd",
+      "passed": true,
+      "path": "/assets/vendor/lucide-dagg/icons/x.svg",
+      "servedSha256": "a7a42200b0428c678568e6cda02a0e06d310aef2eda22324c133eb28bf0f74bd",
+      "snapshotHeader": "6ef754faf00f234ba503ddbc83e8226759054a4b57929b9757561b3a6fdfdc50",
+      "sourcePath": "assets/vendor/lucide-dagg/icons/x.svg",
+      "status": 200
+    },
+    {
+      "bytes": 263702,
+      "currentSourceSha256": "49f87d8366fad64b01c7ac6d1d64d2b37740045148f94dd40b9c85c53b79d607",
+      "expectedServedSha256": "49f87d8366fad64b01c7ac6d1d64d2b37740045148f94dd40b9c85c53b79d607",
+      "passed": true,
+      "path": "/design/golden-standard/image-system/home/home-hero-selected-desktop-v4.webp",
+      "servedSha256": "49f87d8366fad64b01c7ac6d1d64d2b37740045148f94dd40b9c85c53b79d607",
+      "snapshotHeader": "6ef754faf00f234ba503ddbc83e8226759054a4b57929b9757561b3a6fdfdc50",
+      "sourcePath": "design/golden-standard/image-system/home/home-hero-selected-desktop-v4.webp",
+      "status": 200
+    },
+    {
+      "bytes": 218164,
+      "currentSourceSha256": "b740f0f573c8472380e6329beaacc48e8fbe14cb48dd7d62920b8510c47d8808",
+      "expectedServedSha256": "b740f0f573c8472380e6329beaacc48e8fbe14cb48dd7d62920b8510c47d8808",
+      "passed": true,
+      "path": "/design/golden-standard/image-system/home/home-hero-selected-mobile-v4.webp",
+      "servedSha256": "b740f0f573c8472380e6329beaacc48e8fbe14cb48dd7d62920b8510c47d8808",
+      "snapshotHeader": "6ef754faf00f234ba503ddbc83e8226759054a4b57929b9757561b3a6fdfdc50",
+      "sourcePath": "design/golden-standard/image-system/home/home-hero-selected-mobile-v4.webp",
+      "status": 200
+    },
+    {
+      "bytes": 6228,
+      "currentSourceSha256": "acc9fc8367455f23740735e9be7a0d4597c7bcab1fef3b18edcfb494fe8705cd",
+      "expectedServedSha256": "acc9fc8367455f23740735e9be7a0d4597c7bcab1fef3b18edcfb494fe8705cd",
+      "passed": true,
+      "path": "/design/golden-standard/system/tokens.css",
+      "servedSha256": "acc9fc8367455f23740735e9be7a0d4597c7bcab1fef3b18edcfb494fe8705cd",
+      "snapshotHeader": "6ef754faf00f234ba503ddbc83e8226759054a4b57929b9757561b3a6fdfdc50",
+      "sourcePath": "design/golden-standard/system/tokens.css",
+      "status": 200
+    },
+    {
+      "bytes": 31376,
+      "currentSourceSha256": "165ea42d7ca2d4daa15224e0c442430c7c3c8661102591f0be56c86228e2b2ac",
+      "expectedServedSha256": "165ea42d7ca2d4daa15224e0c442430c7c3c8661102591f0be56c86228e2b2ac",
+      "passed": true,
+      "path": "/preview/golden-standard/component-library/script.js",
+      "servedSha256": "165ea42d7ca2d4daa15224e0c442430c7c3c8661102591f0be56c86228e2b2ac",
+      "snapshotHeader": "6ef754faf00f234ba503ddbc83e8226759054a4b57929b9757561b3a6fdfdc50",
+      "sourcePath": "preview/golden-standard/component-library/script.js",
+      "status": 200
+    },
+    {
+      "bytes": 78349,
+      "currentSourceSha256": "0f9cc27324c306f181dd2f60e4d7ecd265bbc415d656ea6cc150dc728f4bc674",
+      "expectedServedSha256": "0f9cc27324c306f181dd2f60e4d7ecd265bbc415d656ea6cc150dc728f4bc674",
+      "passed": true,
+      "path": "/preview/golden-standard/component-library/styles.css",
+      "servedSha256": "0f9cc27324c306f181dd2f60e4d7ecd265bbc415d656ea6cc150dc728f4bc674",
+      "snapshotHeader": "6ef754faf00f234ba503ddbc83e8226759054a4b57929b9757561b3a6fdfdc50",
+      "sourcePath": "preview/golden-standard/component-library/styles.css",
+      "status": 200
+    },
+    {
+      "bytes": 25895,
+      "currentSourceSha256": "ab926b961b9764774b9662f526bdc14652c2c1b66c6492f9cca0df96502d51f4",
+      "expectedServedSha256": "50fa27aa85658c2cb5805e76ba6da370bca41a2973260b97573896372e82cfc1",
+      "passed": true,
+      "path": "/preview/golden-standard/home/",
+      "servedSha256": "50fa27aa85658c2cb5805e76ba6da370bca41a2973260b97573896372e82cfc1",
+      "snapshotHeader": "6ef754faf00f234ba503ddbc83e8226759054a4b57929b9757561b3a6fdfdc50",
+      "sourcePath": "preview/golden-standard/home/index.html",
+      "status": 200
+    },
+    {
+      "bytes": 25895,
+      "currentSourceSha256": "ab926b961b9764774b9662f526bdc14652c2c1b66c6492f9cca0df96502d51f4",
+      "expectedServedSha256": "50fa27aa85658c2cb5805e76ba6da370bca41a2973260b97573896372e82cfc1",
+      "passed": true,
+      "path": "/preview/golden-standard/home/index.html",
+      "servedSha256": "50fa27aa85658c2cb5805e76ba6da370bca41a2973260b97573896372e82cfc1",
+      "snapshotHeader": "6ef754faf00f234ba503ddbc83e8226759054a4b57929b9757561b3a6fdfdc50",
+      "sourcePath": "preview/golden-standard/home/index.html",
+      "status": 200
+    },
+    {
+      "bytes": 11677,
+      "currentSourceSha256": "fe7c03d45fc36f094c0551f7c2dc1b6a874402b2e6e020fbfca6f26db02df5a4",
+      "expectedServedSha256": "100b07768988e1ecdcf839c77c1c8711cfabd6a90712bf458b827bf16f08c6ad",
+      "passed": true,
+      "path": "/preview/golden-standard/home/src/body.html",
+      "servedSha256": "100b07768988e1ecdcf839c77c1c8711cfabd6a90712bf458b827bf16f08c6ad",
+      "snapshotHeader": "6ef754faf00f234ba503ddbc83e8226759054a4b57929b9757561b3a6fdfdc50",
+      "sourcePath": "preview/golden-standard/home/src/body.html",
+      "status": 200
+    },
+    {
+      "bytes": 15007,
+      "currentSourceSha256": "213eb771c6f2714833778d024834a6caa46467e4e4a5c400cb7fc24edaa1e5bf",
+      "expectedServedSha256": "213eb771c6f2714833778d024834a6caa46467e4e4a5c400cb7fc24edaa1e5bf",
+      "passed": true,
+      "path": "/preview/golden-standard/home/src/direction.css",
+      "servedSha256": "213eb771c6f2714833778d024834a6caa46467e4e4a5c400cb7fc24edaa1e5bf",
+      "snapshotHeader": "6ef754faf00f234ba503ddbc83e8226759054a4b57929b9757561b3a6fdfdc50",
+      "sourcePath": "preview/golden-standard/home/src/direction.css",
+      "status": 200
+    },
+    {
+      "bytes": 5604,
+      "currentSourceSha256": "0d3e2fbfdeb4fb5380dbb52eb2d993c3a1dcf18a6639605d47d46b7ab5783905",
+      "expectedServedSha256": "0d3e2fbfdeb4fb5380dbb52eb2d993c3a1dcf18a6639605d47d46b7ab5783905",
+      "passed": true,
+      "path": "/preview/golden-standard/home/src/direction.js",
+      "servedSha256": "0d3e2fbfdeb4fb5380dbb52eb2d993c3a1dcf18a6639605d47d46b7ab5783905",
+      "snapshotHeader": "6ef754faf00f234ba503ddbc83e8226759054a4b57929b9757561b3a6fdfdc50",
+      "sourcePath": "preview/golden-standard/home/src/direction.js",
+      "status": 200
+    },
+    {
+      "bytes": 12632,
+      "currentSourceSha256": "aaeaea97b67d26e320594370f73f6c35a5e14b0dbad41ab40d54267efbd15761",
+      "expectedServedSha256": "aaeaea97b67d26e320594370f73f6c35a5e14b0dbad41ab40d54267efbd15761",
+      "passed": true,
+      "path": "/preview/golden-standard/shared/chrome/chrome.css",
+      "servedSha256": "aaeaea97b67d26e320594370f73f6c35a5e14b0dbad41ab40d54267efbd15761",
+      "snapshotHeader": "6ef754faf00f234ba503ddbc83e8226759054a4b57929b9757561b3a6fdfdc50",
+      "sourcePath": "preview/golden-standard/shared/chrome/chrome.css",
+      "status": 200
+    },
+    {
+      "bytes": 6878,
+      "currentSourceSha256": "e88b079d881f173401dbb7141b9289ac8f6bdee500227e1540b2021f23e7bdf8",
+      "expectedServedSha256": "e88b079d881f173401dbb7141b9289ac8f6bdee500227e1540b2021f23e7bdf8",
+      "passed": true,
+      "path": "/preview/golden-standard/shared/chrome/chrome.js",
+      "servedSha256": "e88b079d881f173401dbb7141b9289ac8f6bdee500227e1540b2021f23e7bdf8",
+      "snapshotHeader": "6ef754faf00f234ba503ddbc83e8226759054a4b57929b9757561b3a6fdfdc50",
+      "sourcePath": "preview/golden-standard/shared/chrome/chrome.js",
+      "status": 200
+    },
+    {
+      "bytes": 3067,
+      "currentSourceSha256": "848ab35032815d968e0fd80baf0e7b23d1495a56f0437fb13d6513d0fe6e7185",
+      "expectedServedSha256": "2d7c6784b059b60a07ef760abe3b28303d6f4aead9187120e545c39b266d45af",
+      "passed": true,
+      "path": "/preview/golden-standard/shared/chrome/footer.html",
+      "servedSha256": "2d7c6784b059b60a07ef760abe3b28303d6f4aead9187120e545c39b266d45af",
+      "snapshotHeader": "6ef754faf00f234ba503ddbc83e8226759054a4b57929b9757561b3a6fdfdc50",
+      "sourcePath": "preview/golden-standard/shared/chrome/footer.html",
+      "status": 200
+    },
+    {
+      "bytes": 9964,
+      "currentSourceSha256": "5510d69d0f33769f0eb095af3c1d3deb295bbec1b8db7561c437cf122bb938dc",
+      "expectedServedSha256": "c1cf2b25f08cc46a4e7b4ffd36c2667a834e6a1dd52e2d1247381abc5b797466",
+      "passed": true,
+      "path": "/preview/golden-standard/shared/chrome/header.html",
+      "servedSha256": "c1cf2b25f08cc46a4e7b4ffd36c2667a834e6a1dd52e2d1247381abc5b797466",
+      "snapshotHeader": "6ef754faf00f234ba503ddbc83e8226759054a4b57929b9757561b3a6fdfdc50",
+      "sourcePath": "preview/golden-standard/shared/chrome/header.html",
+      "status": 200
+    }
+  ],
+  "schemaVersion": 1,
+  "serverBaseUrl": "http://127.0.0.1:8933",
+  "serverRevision": {
+    "abbreviatedCommit": "f688c54",
+    "abbreviatedSnapshotId": "6ef754faf00f",
+    "branch": "design-language",
+    "commit": "f688c5431960bae3fda7dbe237c47cb0a95cf57c",
+    "dirty": true,
+    "dirtyEntryCount": 103,
+    "repositoryRoot": "/Users/christianperez/Developer/dagg-site",
+    "serverStartedAt": "2026-09-02T14:11:44.054008+00:00",
+    "snapshotAcquisitionAttempts": 1,
+    "snapshotAcquisitionStable": true,
+    "snapshotByteCount": 268175151,
+    "snapshotConsistencyPasses": 2,
+    "snapshotFileCount": 661,
+    "snapshotId": "6ef754faf00f234ba503ddbc83e8226759054a4b57929b9757561b3a6fdfdc50",
+    "snapshotRejectedPairs": [],
+    "snapshotSkippedPaths": []
+  },
+  "snapshotId": "6ef754faf00f234ba503ddbc83e8226759054a4b57929b9757561b3a6fdfdc50",
+  "sourceServedComparedCount": 23,
+  "sourceServedFailures": []
+}

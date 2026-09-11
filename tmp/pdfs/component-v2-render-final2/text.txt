@@ -1,0 +1,581 @@
+DAGG DESIGN SYSTEM · DOCUMENT 03 · REVISION 02
+
+Component &
+Interaction Library
+A restrained operating grammar for strategic judgment,
+retained context and governed execution.
+
+BEHAVIOR / COMPONENTS / MOTION / RESPONSIVE / ACCESSIBILITY
+
+DAGG DESIGN SYSTEM · DOCUMENT 03 · REVISION 02
+
+COVER
+
+/
+
+01
+
+SYSTEM THESIS
+
+Intelligence is felt through behavior.
+The site earns modernity when context changes, permissions remain legible and every transition resolves — not when every heading receives an icon.
+
+The image system carries the world. The
+component system makes that world usable.
+
+World
+Decision Field supplies warmth, strategic ambiguity and human judgment.
+
+Instrument
+Operational Evidence makes WorkGraph, Factory, boundaries and proof inspectable.
+
+BINDING RULE
+
+Pictures explain the idea.
+Components expose the
+mechanism. Icons only clarify an
+action or a durable product
+concept.
+
+Transition
+Machine Signal shows one causal resolution, then stops.
+
+DAGG DESIGN SYSTEM · DOCUMENT 03 · REVISION 02
+
+No icon walls. No decorative dashboards. No terminal
+theatre.
+
+SYSTEM THESIS
+
+/
+
+02
+
+PEER AUDIT
+
+Four references point to restraint, not abundance.
+Official pages were inspected beside the Dagg specimen. Identity comes from composition and stateful behavior; icon density remains low.
+
+Anthropic
+
+xAI
+
+DAGG DESIGN SYSTEM · DOCUMENT 03 · REVISION 02
+
+Typography and material world
+
+Sparse own marks beside evidence
+
+OpenAI
+
+Product icons inside a mechanism
+
+Dagg
+
+Adaptive nav with governed proof
+
+PEER AUDIT
+
+/
+
+03
+
+SYSTEM ARCHITECTURE
+
+One substrate. Three visual directions.
+A, B and C vary rhythm, proof order and narrative emphasis. Navigation, controls, states and accessibility do not fork.
+
+A
+
+B
+
+C
+
+Strategic editorial
+
+Product intelligence
+
+Operational authority
+
+Conclusion-led. Decision Field frames the
+argument. Product proof arrives as evidence.
+
+Mechanism-forward. State change and
+discovery carry the narrative.
+
+Consequence-forward. Ownership, boundary
+and provenance become prominent.
+
+SAME TOKENS · BEHAVIOR · TRUTH
+
+SAME TOKENS · BEHAVIOR · TRUTH
+
+SAME TOKENS · BEHAVIOR · TRUTH
+
+The director selects one coherent direction. The final site never becomes a compromise collage of all three.
+
+DAGG DESIGN SYSTEM · DOCUMENT 03 · REVISION 02
+
+SYSTEM ARCHITECTURE
+
+/
+
+04
+
+ICON GRAMMAR
+
+A library is not a usage quota.
+The internal collection supports product UI and presentations. The public site uses only what helps a reader act or understand one durable concept.
+
+0
+
+1–2
+
+8
+
+Hero icons
+
+Icons per instrument
+
+Semantic concepts
+
+The thesis is carried by copy, imagery and motion —
+never an icon row.
+
+Only when they clarify state, ownership, boundary or
+evidence.
+
+Decision, context, boundary, build, verification,
+evidence, ownership and way back.
+
+Two layers
+Utility
+Menu, close, disclosure, external destination and playback use familiar licensed
+symbols.
+
+Semantic
+Dagg owns the concept mapping, carrier, tone and motion grammar; the pictogram
+remains replaceable.
+
+DAGG DESIGN SYSTEM · DOCUMENT 03 · REVISION 02
+
+PUBLIC-SITE RESTRAINT
+
+No icon before every headline. No
+capability-card constellation. No icon as a
+substitute for product proof.
+
+ICON GRAMMAR
+
+/
+
+05
+
+COMPONENT 01
+
+Adaptive navigation previews intent.
+The menu remains navigation. A single proof inset changes with the destination and carries context into the next page.
+STATE CONTRACT
+
+Open
+70–100 ms intent; 180–240 ms close grace.
+
+Preview
+Four destinations change one inset; the panel
+stays stable.
+
+Carry
+Selected context continues into the destination.
+
+Fallback
+Every destination is a real link. Touch uses
+disclosure.
+
+DAGG DESIGN SYSTEM · DOCUMENT 03 · REVISION 02
+
+COMPONENT 01
+
+/
+
+06
+
+COMPONENT 01B
+
+Desktop, tablet and mobile are authored modes.
+A compact desktop menu is not stretched mobile. Touch, keyboard and pointer all receive a deliberate path.
+BINDING BEHAVIOR
+
+Desktop
+Pointer and keyboard expose the same proof states.
+
+Tablet landscape
+Pointer plus touch; flyout remains bounded.
+
+Tablet portrait
+Touch-first disclosure and editorial reflow.
+
+Mobile
+Full-canvas navigation, focus containment and body lock.
+
+All modes
+No critical meaning depends on hover or animation.
+
+DAGG DESIGN SYSTEM · DOCUMENT 03 · REVISION 02
+
+COMPONENT 01B
+
+/
+
+07
+
+COMPONENT 02
+
+Actions look like actions.
+Typography establishes hierarchy. Controls explain consequence. Metadata appears only where it carries real provenance or state.
+TYPE ROLES
+
+Geist
+decisions, structure and controls
+
+Newsreader
+judgment, reflection and warmth
+
+JetBrains Mono
+record, state and provenance only
+
+CONTROL FLOOR
+
+44 px target · 48 px mobile navigation · 2 px
+visible focus ring · no pill theatre
+
+DAGG DESIGN SYSTEM · DOCUMENT 03 · REVISION 02
+
+COMPONENT 02
+
+/
+
+08
+
+COMPONENT 05
+
+The decision appears before the technology.
+Preserve, simplify, automate, rebuild or retire. One choice changes one explanation and one proof marker.
+
+DAGG DESIGN SYSTEM · DOCUMENT 03 · REVISION 02
+
+COMPONENT 05
+
+/
+
+09
+
+COMPONENT 06
+
+One retained WorkGraph record.
+Sources can change while work, decision, owner, boundary and evidence remain part of the same company-specific context.
+PERSISTENT INVARIANTS
+
+Context
+The company-specific record remains the source of working
+truth.
+
+Decision
+A material judgment stays attached to the work it changed.
+
+Boundary
+Authority and accountable ownership remain explicit.
+
+Evidence
+The next intervention begins with retained learning.
+
+DAGG DESIGN SYSTEM · DOCUMENT 03 · REVISION 02
+
+COMPONENT 06
+
+/
+
+10
+
+COMPONENT 07
+
+Finite Factory progression.
+Requirement resolves through decision, architecture, build, evaluation and review — with judgment and verification held visibly.
+THE PASS
+
+Finite
+One 6–8 second pass, then an inspectable resolved state.
+
+Judgment hold
+The product decision is visible before the machine
+continues.
+
+Verification hold
+Evaluation can withhold release and route the exception.
+
+Way back
+Disable, remove the draft and return to the manual queue.
+
+DAGG DESIGN SYSTEM · DOCUMENT 03 · REVISION 02
+
+COMPONENT 07
+
+/
+
+11
+
+COMPONENT 08
+
+One capability. Two surfaces.
+The interface changes. The customer harness, permissions, accountable owner and retained record do not.
+WHAT MUST CHANGE TOGETHER
+
+Context
+The request resolves against approved company context.
+
+Action
+The same capability can prepare, explain or execute.
+
+Permission
+No external write or commitment without accountable
+approval.
+
+Evidence
+The result returns to the same retained record.
+
+DAGG DESIGN SYSTEM · DOCUMENT 03 · REVISION 02
+
+COMPONENT 08
+
+/
+
+12
+
+MOTION SYSTEM
+
+Motion explains causality — then stops.
+The system never moves simply to announce that a page loaded. Every pass resolves, holds or returns control to the reader.
+Micro response
+
+120–180 ms
+
+hover, focus and selected state
+
+State change
+
+220–300 ms
+
+continuum, source and surface selection
+
+Machine Signal
+
+0.8–1.2 s
+
+one coarse-to-resolved causal change
+
+Factory pass
+
+6–8 s max
+
+pause, replay, judgment and verification holds
+
+Reduced motion
+
+immediate
+
+same end state without interpolation
+
+DAGG DESIGN SYSTEM · DOCUMENT 03 · REVISION 02
+
+MOTION SYSTEM
+
+/
+
+13
+
+RESPONSIVE SYSTEM
+
+Six widths. Three interaction modes.
+Desktop, iPad landscape, iPad portrait and mobile are separate proofs. Orientation change and zoom remain part of acceptance.
+Desktop
+
+iPad Pro landscape
+full navigation · pointer · keyboard
+
+1440 / 1280
+
+bounded flyout · pointer + touch
+1366 × 1024
+
+iPad Air landscape
+
+iPad landscape
+editorial grid · pointer + touch
+
+1180 × 820
+
+boundary-aware composition
+1024 × 768
+
+iPad Pro portrait
+
+iPad Air portrait
+touch-first disclosure
+
+1024 × 1366
+
+recomposed editorial grid
+820 × 1180
+
+iPad portrait
+
+Mobile
+never stretched mobile
+
+768 × 1024
+
+DAGG DESIGN SYSTEM · DOCUMENT 03 · REVISION 02
+
+full-canvas navigation
+390 / 360 / 320
+
+RESPONSIVE SYSTEM
+
+/
+
+14
+
+RESILIENCE
+
+Meaning survives different capabilities.
+Keyboard, touch, reduced motion and no JavaScript preserve the same story, routes and accountable end state.
+NO-JS TRUTH
+
+Core content is readable. Real
+destinations remain available.
+Inert enhanced controls
+disappear.
+
+The fallback is a complete reading path,
+not a warning screen.
+
+Visible focus and logical tab order
+
+Hidden states are never focusable
+
+Reduced motion resolves to the same end state
+
+AA text contrast, 200% zoom and minimum targets
+
+DAGG DESIGN SYSTEM · DOCUMENT 03 · REVISION 02
+
+No-JS exposes core content and real destinations
+
+RESILIENCE
+
+/
+
+15
+
+DIRECTION USE
+
+A, B and C share the parts — not the rhythm.
+The system remains recognizable while each direction gives Christian a real choice about how Dagg enters the market.
+COMPONENT
+
+A · STRATEGIC
+
+B · PRODUCT
+
+C · OPERATIONAL
+
+Hero
+
+bounded thesis
+
+mechanism forward
+
+consequence forward
+
+Decision
+
+editorial continuum
+
+interactive continuum
+
+control-led continuum
+
+WorkGraph
+
+context + judgment
+
+inspectable record
+
+owner + boundary
+
+Factory
+
+proof after strategy
+
+primary product moment
+
+governed execution
+
+Impact
+
+named consequence
+
+state change + evidence
+
+truth + provenance
+
+Selection criterion: the strongest coherent narrative, not the most effects.
+
+DAGG DESIGN SYSTEM · DOCUMENT 03 · REVISION 02
+
+DIRECTION USE
+
+/
+
+16
+
+ACCEPTANCE
+
+Functional substrate passed. Brand restraint revised.
+The 40 existing checks remain valid. This revision adds the peer-backed icon budget, adaptive-intelligence rules and repaired rendering.
+REVISION CLOSES
+
+40 / 40
+
+Icon overreach
+
+FUNCTIONAL CHECKS RETAINED
+
+Navigation and instruments change meaningful state, not merely animate.
+
+DESKTOP · TABLET · MOBILE
+KEYBOARD · TOUCH · NO-JS · REDUCED MOTION
+
+Public-site usage is explicitly sparse; the larger set remains an internal resource.
+
+Adaptive behavior
+
+Broken documentation
+Factory, WorkGraph and surface specimens are fully contained and legible.
+
+Shared authority
+The exact PDF and revision brief are pinned for Claude before A/B/C synthesis.
+
+NEXT GATE
+
+Three complete, genuinely different and equally verified Home vertical
+slices: A1, B1 and C1.
+
+DAGG DESIGN SYSTEM · DOCUMENT 03 · REVISION 02
+
+ACCEPTANCE
+
+/
+
+17
+
+

@@ -1,6 +1,6 @@
 # Final vertical-slice copy
 
-Status: accepted P1R1 source of truth
+Status: accepted P1R2 source of truth
 Authority: `../DAGG-GOLDEN-STANDARD-MASTERPLAN.md`  
 Instruction: use visible copy verbatim in every P4 direction. Layout may change; wording may not.
 
@@ -28,7 +28,7 @@ Menu
 
 ## 1 · Hero
 
-**Eyebrow**  
+**Eyebrow**
 AI-native transformation
 
 **H1**  
@@ -69,10 +69,10 @@ All artifacts on this page are constructed examples, not client data or producti
 
 ## 2 · Stakes
 
-**H2**  
+**H2**
 A company moves at the speed of its handoffs.
 
-**Body**  
+**Body**
 Machines can execute continuously. A company still slows where context, ownership and decisions must be reconstructed by hand. Those handoffs are where the gap compounds.
 
 ---
@@ -97,7 +97,7 @@ Five outcomes. The build is a result, never a premise.
 Keep the work as it is.
 
 **Choose when**  
-The work is proportionate and human judgment is the value.
+The work is proportionate to its value, and human judgment is essential.
 
 **Do not choose when**  
 Delay, rework or unclear ownership is quietly compounding.
@@ -119,7 +119,7 @@ A control or exception protects something material.
 Let agents execute a stable path.
 
 **Choose when**  
-Inputs, rules, exceptions and success can be made explicit.
+Inputs, rules, exceptions and success criteria can be made explicit.
 
 **Do not choose when**  
 The operating logic is still contested or changing.
@@ -147,7 +147,7 @@ The activity no longer changes a decision, protects a requirement or serves the 
 The value is merely hidden or poorly measured.
 
 **Closing line**  
-A recommendation is not complete until it names an owner and the evidence that would make it change.
+A recommendation is not complete until it names an owner and the evidence that would change it.
 
 **Human role**  
 People set intent, define requirements, decide material exceptions and verify outcomes. AI carries routine execution inside those boundaries.
@@ -179,7 +179,7 @@ Representative WorkGraph record · synthetic data
 - Work item: payment exception.
 - Owner: Finance owner.
 - Exception: source mismatch.
-- Decision state: automate preparation; human release.
+- Decision state: automate preparation; human approval for release.
 - Permission: agent prepares; Finance releases.
 - Provenance: this synthetic record.
 
@@ -189,7 +189,7 @@ Approved sources reveal an invoice-receipt mismatch requiring Finance review.
 
 ### Decide
 
-Automate preparation, preserve human release. Finance owns the decision and the exception evidence that could reverse it.
+Automate preparation; preserve human approval for release. Finance owns the decision and the exception evidence that could reverse it.
 
 ### Build
 
@@ -201,7 +201,7 @@ The agent may prepare a payment draft from approved sources. Only the accountabl
 
 ### Operate
 
-A source mismatch withholds the draft from release. Finance chooses correction, rejection or return to the manual path. The decision and evidence return to WorkGraph.
+When source records disagree, the draft is withheld from release. Finance chooses whether to correct, reject or return the item to the manual path. The decision and evidence return to WorkGraph.
 
 **Closing line**  
 Each decision, evaluation and operating record can strengthen the next intervention. Models can change; company context and learning need not restart from zero.
@@ -222,7 +222,7 @@ The decision becomes a build with a boundary.
 **Body**  
 Dagg Factory turns the intervention into an agent or software with the context, tools, permissions and evaluations needed to act within the decision.
 
-Reusable tools and evaluations improve the next build. The delivery system is designed to keep client-specific context out of reusable cross-engagement patterns.
+Reusable tools and evaluations are designed to improve the next build. The delivery system is designed to keep client-specific context out of reusable cross-engagement patterns.
 
 ### Automate what stays
 
@@ -237,11 +237,11 @@ Ready for governed review
 
 **Build plan**
 
-- Intervention: prepare the payment draft; preserve human release.
+- Intervention: prepare the payment draft; preserve human approval for release.
 - Context: purchase order, goods receipt, invoice and payment policy.
 - Tools: approved finance-system read and payment-draft tool.
 - Permission: prepare only; never release.
-- Evaluation: a source mismatch withholds the draft from release and routes the exception to the Finance owner.
+- Evaluation: when source records disagree, the draft is withheld from release and the exception is routed to the Finance owner.
 - Release owner: Finance owner.
 - Way back: disable the agent, remove the draft and return the item to the manual queue.
 
@@ -263,16 +263,53 @@ Explore Build
 
 ---
 
-## 6 · Govern, operate and prove
+## 6 · Two surfaces of impact
+
+**Eyebrow**
+One transformation, two surfaces
+
+**H2**
+AI-native changes how the company works — and how customers work with it.
+
+**Body**
+Inside the company, agents carry stable execution while people direct, decide and verify. Outside it, the same governed capabilities can meet customers wherever they work — without leaving the company’s rules, permissions or source of truth behind.
+
+**Product-moment title**
+The product meets the customer where the customer works.
+
+**Product-moment provenance**
+Illustrative capability · synthetic data · not a client deployment
+
+**Customer request**
+Which parts of my month-end close need attention, and what can be resolved now?
+
+**Context resolved**
+Two supporting documents are missing. One VAT discrepancy needs accountant review. The filing deadline is in five days.
+
+**Permissioned response**
+Prepare the two document requests. Route the VAT discrepancy to the accountable adviser before any tax decision or external communication.
+
+**Boundary**
+The agent may assemble evidence and prepare drafts. The adviser approves external requests and resolves the material tax exception.
+
+**Evidence returned**
+Every source, proposed action, permission check and owner returns to the company system of record.
+
+**Closing line**
+The interface can change. The company’s context, rules and accountability do not.
+
+---
+
+## 7 · Govern, operate and prove
 
 **Eyebrow**  
 Human control
 
 **H2**  
-A decision is not finished until it runs.
+Execution is not complete until it runs within bounds.
 
 **Body**  
-The client can run the result, or Dagg can take a defined operating role. Either way, material exceptions stop, accountable people decide and the record returns evidence to the next cycle.
+The client can run the result, or Dagg can take a defined operating role. In either model, action stops at material exceptions, accountable people decide and the record returns evidence to the next cycle.
 
 **Operating-record title**  
 One material exception
@@ -317,17 +354,17 @@ Speed matters only when the company can see what happened, why it happened and w
 Impact
 
 **Gateway title**  
-See what changed — and where the evidence stops.
+How we evidence change — and where the evidence stops.
 
 **Body**  
-Impact separates companies built from companies transformed. Each case shows the starting condition, strategic thesis, operating change, verified outcome, timeframe, source and limits.
+Impact distinguishes companies built from companies transformed. Evidence is published only with a verified starting condition, strategic thesis, operating change, outcome, timeframe, source and limits.
 
 **Contextual text link**  
 Explore Impact
 
 ---
 
-## 7 · Assessment close
+## 8 · Assessment close
 
 **Eyebrow**  
 Start with one path

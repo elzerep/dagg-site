@@ -1,0 +1,24 @@
+{
+  "route": "WorkGraph",
+  "frozen": true,
+  "slots": [
+    {
+      "id": "workgraph-context-picture",
+      "job": "Support the Context act by showing plural company context becoming one retained and governable record, after the record-first Position opening.",
+      "families": ["decision-field", "restrained-operational-evidence"],
+      "desktopAspect": "landscape-near-16:10",
+      "mobileAspect": "4:5",
+      "exclusions": ["node graph", "network", "terminal", "dashboard", "ring", "hole", "arrow", "biological ambiguity", "decorative collage"],
+      "evaluation": ["plural sources", "coral registration contact", "retained distinct materials", "sage boundary", "subordinate to the record-first opening"],
+      "candidateIds": [
+        "workgraph-company-record-01-desktop-v1",
+        "workgraph-company-record-01-mobile-v1"
+      ],
+      "selection": "workgraph-company-record-01-desktop-v1",
+      "mobileSelection": "workgraph-company-record-01-mobile-v1",
+      "selectionReason": "The pair translates the same causal event horizontally and vertically, keeps the coral judgment physically connected, and now belongs to Context rather than Position so the route opens with the inspectable record.",
+      "rejectedCandidateIds": [],
+      "rejectionReason": "An earlier portrait generation was rejected before registry because its coral tab floated decoratively outside the intake path."
+    }
+  ]
+}

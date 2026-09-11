@@ -1,0 +1,32 @@
+{
+  "direction": "A",
+  "frozen": true,
+  "slots": [
+    {
+      "id": "a-home-hero",
+      "job": "Make strategic judgment legible as the operating model resolves into an executable path.",
+      "families": ["decision-field", "restrained-machine-signal"],
+      "desktopAspect": "16:10",
+      "mobileAspect": "4:5",
+      "exclusions": ["product dashboard", "terminal", "circuit aesthetic", "decorative abstraction"],
+      "evaluation": ["strategic consequence", "human judgment", "operational continuation", "quiet first viewport"],
+      "candidateIds": [
+        "p4r7-a2-home-hero-02-desktop",
+        "p4r7-a2-home-hero-02-mobile"
+      ],
+      "selection": "p4r7-a2-home-hero-02-desktop",
+      "mobileSelection": "p4r7-a2-home-hero-02-mobile",
+      "selectionReason": "A2-02 preserves the calm, tactile Decision Field language while enlarging the coral act of judgment and the resolved state enough to remain legible at delivered website scale. Its independent portrait composition carries the complete event on mobile without cropping.",
+      "rejectedCandidateIds": [
+        "p4r6-a-home-hero-01-desktop",
+        "p4r6-a-home-hero-01-mobile",
+        "p4r6-a-home-hero-02-desktop-rejected",
+        "p4r6-a-home-hero-03-desktop",
+        "p4r6-a-home-hero-03-mobile",
+        "p4r7-a2-home-hero-01-desktop",
+        "p4r7-a2-home-hero-01-mobile"
+      ],
+      "rejectionReason": "Earlier P4R6 candidates retained biological ambiguity, lacked a complete companion pair or weakened the causal event. A2-01 was calm but its coral judgment and resolved state became too small at the delivered hero size."
+    }
+  ]
+}

@@ -1,0 +1,1650 @@
+{
+  "captures": [
+    "evidence/P4/moodboards/00-intro-1440x1000.png",
+    "evidence/P4/moodboards/decision-field-full-1440.png",
+    "evidence/P4/moodboards/machine-signal-full-1440.png",
+    "evidence/P4/moodboards/operational-evidence-full-1440.png",
+    "evidence/P4/moodboards/decision-field-top-390.png",
+    "evidence/P4/moodboards/machine-signal-top-390.png",
+    "evidence/P4/moodboards/operational-evidence-top-390.png",
+    "evidence/P4/moodboards/decision-field-top-320.png",
+    "evidence/P4/moodboards/machine-signal-top-320.png",
+    "evidence/P4/moodboards/operational-evidence-top-320.png",
+    "evidence/P4/moodboards/reduced-motion-390.png"
+  ],
+  "chrome": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+  "hardFailures": [],
+  "page": "/preview/golden-standard/p4/moodboards/",
+  "passed": true,
+  "reducedMotion": {
+    "boardRects": [
+      {
+        "height": 11119.53125,
+        "id": "decision-field",
+        "top": 1552.421875,
+        "width": 390
+      },
+      {
+        "height": 11137.484375,
+        "id": "machine-signal",
+        "top": 12671.953125,
+        "width": 390
+      },
+      {
+        "height": 11295.53125,
+        "id": "operational-evidence",
+        "top": 23809.4375,
+        "width": 390
+      }
+    ],
+    "brokenImages": [],
+    "document": {
+      "clientWidth": 390,
+      "scrollHeight": 36782,
+      "scrollWidth": 390
+    },
+    "imageCount": 23,
+    "images": [
+      {
+        "complete": true,
+        "naturalHeight": 375,
+        "naturalWidth": 1844,
+        "renderedHeight": 18.703125,
+        "renderedWidth": 92,
+        "src": "/assets/dagg-logotype-dark.png"
+      },
+      {
+        "complete": true,
+        "naturalHeight": 992,
+        "naturalWidth": 1586,
+        "renderedHeight": 992,
+        "renderedWidth": 350,
+        "src": "/design/golden-standard/image-system/direction-a-decision-field/01-hero-decision-field.png"
+      },
+      {
+        "complete": true,
+        "naturalHeight": 1024,
+        "naturalWidth": 1536,
+        "renderedHeight": 1024,
+        "renderedWidth": 350,
+        "src": "/design/golden-standard/image-system/direction-a-decision-field/02-workgraph-map.png"
+      },
+      {
+        "complete": true,
+        "naturalHeight": 1024,
+        "naturalWidth": 1536,
+        "renderedHeight": 1024,
+        "renderedWidth": 350,
+        "src": "/design/golden-standard/image-system/direction-a-decision-field/03-decision-human-judgment.png"
+      },
+      {
+        "complete": true,
+        "naturalHeight": 1024,
+        "naturalWidth": 1536,
+        "renderedHeight": 1024,
+        "renderedWidth": 350,
+        "src": "/design/golden-standard/image-system/direction-a-decision-field/04-factory-build.png"
+      },
+      {
+        "complete": true,
+        "naturalHeight": 1024,
+        "naturalWidth": 1536,
+        "renderedHeight": 1024,
+        "renderedWidth": 350,
+        "src": "/design/golden-standard/image-system/direction-a-decision-field/05-governance-boundary.png"
+      },
+      {
+        "complete": true,
+        "naturalHeight": 1024,
+        "naturalWidth": 1536,
+        "renderedHeight": 1024,
+        "renderedWidth": 350,
+        "src": "/design/golden-standard/image-system/direction-a-decision-field/06-impact-compounding.png"
+      },
+      {
+        "complete": true,
+        "naturalHeight": 724,
+        "naturalWidth": 2172,
+        "renderedHeight": 724,
+        "renderedWidth": 350,
+        "src": "/design/golden-standard/image-system/direction-a-decision-field/07-motion-storyboard.png"
+      },
+      {
+        "complete": true,
+        "naturalHeight": 1024,
+        "naturalWidth": 1536,
+        "renderedHeight": 1024,
+        "renderedWidth": 350,
+        "src": "/design/golden-standard/image-system/direction-b-machine-signal/01-hero-machine-signal.png"
+      },
+      {
+        "complete": true,
+        "naturalHeight": 1024,
+        "naturalWidth": 1536,
+        "renderedHeight": 1024,
+        "renderedWidth": 350,
+        "src": "/design/golden-standard/image-system/direction-b-machine-signal/02-workgraph-map.png"
+      },
+      {
+        "complete": true,
+        "naturalHeight": 1024,
+        "naturalWidth": 1536,
+        "renderedHeight": 1024,
+        "renderedWidth": 350,
+        "src": "/design/golden-standard/image-system/direction-b-machine-signal/03-decision-human-judgment.png"
+      },
+      {
+        "complete": true,
+        "naturalHeight": 1024,
+        "naturalWidth": 1536,
+        "renderedHeight": 1024,
+        "renderedWidth": 350,
+        "src": "/design/golden-standard/image-system/direction-b-machine-signal/04-factory-build.png"
+      },
+      {
+        "complete": true,
+        "naturalHeight": 1024,
+        "naturalWidth": 1536,
+        "renderedHeight": 1024,
+        "renderedWidth": 350,
+        "src": "/design/golden-standard/image-system/direction-b-machine-signal/05-governance-boundary.png"
+      },
+      {
+        "complete": true,
+        "naturalHeight": 1024,
+        "naturalWidth": 1536,
+        "renderedHeight": 1024,
+        "renderedWidth": 350,
+        "src": "/design/golden-standard/image-system/direction-b-machine-signal/06-impact-compounding.png"
+      },
+      {
+        "complete": true,
+        "naturalHeight": 724,
+        "naturalWidth": 2172,
+        "renderedHeight": 724,
+        "renderedWidth": 350,
+        "src": "/design/golden-standard/image-system/direction-b-machine-signal/07-motion-storyboard.png"
+      },
+      {
+        "complete": true,
+        "naturalHeight": 941,
+        "naturalWidth": 1672,
+        "renderedHeight": 941,
+        "renderedWidth": 350,
+        "src": "/design/golden-standard/image-system/direction-c-operational-evidence/01-hero-operational-evidence.png"
+      },
+      {
+        "complete": true,
+        "naturalHeight": 1024,
+        "naturalWidth": 1536,
+        "renderedHeight": 1024,
+        "renderedWidth": 350,
+        "src": "/design/golden-standard/image-system/direction-c-operational-evidence/02-workgraph-map.png"
+      },
+      {
+        "complete": true,
+        "naturalHeight": 1122,
+        "naturalWidth": 1402,
+        "renderedHeight": 1122,
+        "renderedWidth": 350,
+        "src": "/design/golden-standard/image-system/direction-c-operational-evidence/03-decision-human-judgment.png"
+      },
+      {
+        "complete": true,
+        "naturalHeight": 1024,
+        "naturalWidth": 1536,
+        "renderedHeight": 1024,
+        "renderedWidth": 350,
+        "src": "/design/golden-standard/image-system/direction-c-operational-evidence/04-factory-build.png"
+      },
+      {
+        "complete": true,
+        "naturalHeight": 1003,
+        "naturalWidth": 1568,
+        "renderedHeight": 1003,
+        "renderedWidth": 350,
+        "src": "/design/golden-standard/image-system/direction-c-operational-evidence/05-governance-boundary.png"
+      },
+      {
+        "complete": true,
+        "naturalHeight": 1024,
+        "naturalWidth": 1536,
+        "renderedHeight": 1024,
+        "renderedWidth": 350,
+        "src": "/design/golden-standard/image-system/direction-c-operational-evidence/06-impact-compounding.png"
+      },
+      {
+        "complete": true,
+        "naturalHeight": 941,
+        "naturalWidth": 1672,
+        "renderedHeight": 941,
+        "renderedWidth": 350,
+        "src": "/design/golden-standard/image-system/direction-c-operational-evidence/07-motion-storyboard.png"
+      },
+      {
+        "complete": true,
+        "naturalHeight": 375,
+        "naturalWidth": 1844,
+        "renderedHeight": 19.515625,
+        "renderedWidth": 96,
+        "src": "/assets/dagg-logotype-dark.png"
+      }
+    ],
+    "minVisibleTextPx": 12,
+    "noHorizontalOverflow": true,
+    "viewport": {
+      "height": 844,
+      "width": 390
+    }
+  },
+  "revision": {
+    "abbreviatedCommit": "f688c54",
+    "abbreviatedSnapshotId": "1c9f71ba1135",
+    "branch": "design-language",
+    "commit": "f688c5431960bae3fda7dbe237c47cb0a95cf57c",
+    "dirty": true,
+    "dirtyEntryCount": 12,
+    "repositoryRoot": "/Users/christianperez/Developer/dagg-site",
+    "serverStartedAt": "2026-08-30T18:07:02.218201+00:00",
+    "snapshotAcquisitionAttempts": 1,
+    "snapshotAcquisitionStable": true,
+    "snapshotByteCount": 77330319,
+    "snapshotConsistencyPasses": 2,
+    "snapshotFileCount": 169,
+    "snapshotId": "1c9f71ba11350cf8fd051071f59f9b3feb7e1c64ef5a0c1ba01f67e7ca0f9b1f",
+    "snapshotRejectedPairs": [],
+    "snapshotSkippedPaths": []
+  },
+  "serverStartupSeconds": 0.334,
+  "viewports": {
+    "1440x1000": {
+      "boardRects": [
+        {
+          "height": 7357.375,
+          "id": "decision-field",
+          "top": 1250.59375,
+          "width": 1440
+        },
+        {
+          "height": 7389.375,
+          "id": "machine-signal",
+          "top": 8607.96875,
+          "width": 1440
+        },
+        {
+          "height": 7702.59375,
+          "id": "operational-evidence",
+          "top": 15997.34375,
+          "width": 1440
+        }
+      ],
+      "brokenImages": [],
+      "consoleErrorDetail": [],
+      "consoleErrors": 0,
+      "document": {
+        "clientWidth": 1440,
+        "scrollHeight": 25297,
+        "scrollWidth": 1440
+      },
+      "failedRequests": [],
+      "httpErrorResponses": [],
+      "imageCount": 23,
+      "images": [
+        {
+          "complete": true,
+          "naturalHeight": 375,
+          "naturalWidth": 1844,
+          "renderedHeight": 18.703125,
+          "renderedWidth": 92,
+          "src": "/assets/dagg-logotype-dark.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 992,
+          "naturalWidth": 1586,
+          "renderedHeight": 992,
+          "renderedWidth": 1240,
+          "src": "/design/golden-standard/image-system/direction-a-decision-field/01-hero-decision-field.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 608,
+          "src": "/design/golden-standard/image-system/direction-a-decision-field/02-workgraph-map.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 608,
+          "src": "/design/golden-standard/image-system/direction-a-decision-field/03-decision-human-judgment.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 608,
+          "src": "/design/golden-standard/image-system/direction-a-decision-field/04-factory-build.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 608,
+          "src": "/design/golden-standard/image-system/direction-a-decision-field/05-governance-boundary.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 1240,
+          "src": "/design/golden-standard/image-system/direction-a-decision-field/06-impact-compounding.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 724,
+          "naturalWidth": 2172,
+          "renderedHeight": 724,
+          "renderedWidth": 809.09375,
+          "src": "/design/golden-standard/image-system/direction-a-decision-field/07-motion-storyboard.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 1240,
+          "src": "/design/golden-standard/image-system/direction-b-machine-signal/01-hero-machine-signal.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 608,
+          "src": "/design/golden-standard/image-system/direction-b-machine-signal/02-workgraph-map.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 608,
+          "src": "/design/golden-standard/image-system/direction-b-machine-signal/03-decision-human-judgment.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 608,
+          "src": "/design/golden-standard/image-system/direction-b-machine-signal/04-factory-build.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 608,
+          "src": "/design/golden-standard/image-system/direction-b-machine-signal/05-governance-boundary.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 1240,
+          "src": "/design/golden-standard/image-system/direction-b-machine-signal/06-impact-compounding.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 724,
+          "naturalWidth": 2172,
+          "renderedHeight": 724,
+          "renderedWidth": 809.09375,
+          "src": "/design/golden-standard/image-system/direction-b-machine-signal/07-motion-storyboard.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 941,
+          "naturalWidth": 1672,
+          "renderedHeight": 941,
+          "renderedWidth": 1240,
+          "src": "/design/golden-standard/image-system/direction-c-operational-evidence/01-hero-operational-evidence.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 608,
+          "src": "/design/golden-standard/image-system/direction-c-operational-evidence/02-workgraph-map.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1122,
+          "naturalWidth": 1402,
+          "renderedHeight": 1122,
+          "renderedWidth": 608,
+          "src": "/design/golden-standard/image-system/direction-c-operational-evidence/03-decision-human-judgment.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 608,
+          "src": "/design/golden-standard/image-system/direction-c-operational-evidence/04-factory-build.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1003,
+          "naturalWidth": 1568,
+          "renderedHeight": 1003,
+          "renderedWidth": 608,
+          "src": "/design/golden-standard/image-system/direction-c-operational-evidence/05-governance-boundary.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 1240,
+          "src": "/design/golden-standard/image-system/direction-c-operational-evidence/06-impact-compounding.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 941,
+          "naturalWidth": 1672,
+          "renderedHeight": 941,
+          "renderedWidth": 809.09375,
+          "src": "/design/golden-standard/image-system/direction-c-operational-evidence/07-motion-storyboard.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 375,
+          "naturalWidth": 1844,
+          "renderedHeight": 19.515625,
+          "renderedWidth": 96,
+          "src": "/assets/dagg-logotype-dark.png"
+        }
+      ],
+      "minVisibleTextPx": 12,
+      "noHorizontalOverflow": true,
+      "readiness": {
+        "fontStatus": "loaded",
+        "fontsCheck": {
+          "Geist": true,
+          "JetBrains Mono": true,
+          "Newsreader": true
+        },
+        "images": [
+          {
+            "complete": true,
+            "naturalHeight": 375,
+            "naturalWidth": 1844,
+            "renderedHeight": 18.703125,
+            "renderedWidth": 92,
+            "src": "http://127.0.0.1:58862/assets/dagg-logotype-dark.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 992,
+            "naturalWidth": 1586,
+            "renderedHeight": 992,
+            "renderedWidth": 1240,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/01-hero-decision-field.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 608,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/02-workgraph-map.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 608,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/03-decision-human-judgment.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 608,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/04-factory-build.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 608,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/05-governance-boundary.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 1240,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/06-impact-compounding.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 724,
+            "naturalWidth": 2172,
+            "renderedHeight": 724,
+            "renderedWidth": 809.09375,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/07-motion-storyboard.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 1240,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/01-hero-machine-signal.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 608,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/02-workgraph-map.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 608,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/03-decision-human-judgment.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 608,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/04-factory-build.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 608,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/05-governance-boundary.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 1240,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/06-impact-compounding.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 724,
+            "naturalWidth": 2172,
+            "renderedHeight": 724,
+            "renderedWidth": 809.09375,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/07-motion-storyboard.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 941,
+            "naturalWidth": 1672,
+            "renderedHeight": 941,
+            "renderedWidth": 1240,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/01-hero-operational-evidence.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 608,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/02-workgraph-map.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1122,
+            "naturalWidth": 1402,
+            "renderedHeight": 1122,
+            "renderedWidth": 608,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/03-decision-human-judgment.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 608,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/04-factory-build.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1003,
+            "naturalWidth": 1568,
+            "renderedHeight": 1003,
+            "renderedWidth": 608,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/05-governance-boundary.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 1240,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/06-impact-compounding.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 941,
+            "naturalWidth": 1672,
+            "renderedHeight": 941,
+            "renderedWidth": 809.09375,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/07-motion-storyboard.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 375,
+            "naturalWidth": 1844,
+            "renderedHeight": 19.515625,
+            "renderedWidth": 96,
+            "src": "http://127.0.0.1:58862/assets/dagg-logotype-dark.png"
+          }
+        ],
+        "inlineEventAttributes": 0,
+        "loadedFontFamilies": [
+          "Geist",
+          "JetBrains Mono",
+          "Newsreader"
+        ],
+        "scriptElements": 1,
+        "stages": [
+          "load:ok",
+          "fonts:ok",
+          "images:ok"
+        ]
+      },
+      "reducedMotion": false,
+      "requests": [
+        "http://127.0.0.1:58862/preview/golden-standard/p4/moodboards/",
+        "http://127.0.0.1:58862/design/golden-standard/system/tokens.css",
+        "http://127.0.0.1:58862/preview/golden-standard/p4/moodboards/moodboards.css",
+        "http://127.0.0.1:58862/preview/golden-standard/p4/moodboards/moodboards.js",
+        "http://127.0.0.1:58862/assets/dagg-logotype-dark.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/01-hero-decision-field.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/02-workgraph-map.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/03-decision-human-judgment.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/04-factory-build.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/05-governance-boundary.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/06-impact-compounding.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/07-motion-storyboard.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/01-hero-machine-signal.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/02-workgraph-map.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/03-decision-human-judgment.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/04-factory-build.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/05-governance-boundary.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/06-impact-compounding.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/07-motion-storyboard.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/01-hero-operational-evidence.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/02-workgraph-map.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/03-decision-human-judgment.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/04-factory-build.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/05-governance-boundary.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/06-impact-compounding.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/07-motion-storyboard.png",
+        "http://127.0.0.1:58862/assets/fonts/golden-standard/geist/Geist-Variable.woff2",
+        "http://127.0.0.1:58862/assets/fonts/golden-standard/jetbrains-mono/JetBrainsMono-Variable.woff2",
+        "http://127.0.0.1:58862/assets/fonts/golden-standard/newsreader/Newsreader-Variable.woff2"
+      ],
+      "viewport": {
+        "height": 1000,
+        "width": 1440
+      }
+    },
+    "320x568": {
+      "boardRects": [
+        {
+          "height": 11321.125,
+          "id": "decision-field",
+          "top": 1648.578125,
+          "width": 320
+        },
+        {
+          "height": 11302.328125,
+          "id": "machine-signal",
+          "top": 12969.703125,
+          "width": 320
+        },
+        {
+          "height": 11586.140625,
+          "id": "operational-evidence",
+          "top": 24272.03125,
+          "width": 320
+        }
+      ],
+      "brokenImages": [],
+      "consoleErrorDetail": [],
+      "consoleErrors": 0,
+      "document": {
+        "clientWidth": 320,
+        "scrollHeight": 37629,
+        "scrollWidth": 320
+      },
+      "failedRequests": [],
+      "httpErrorResponses": [],
+      "imageCount": 23,
+      "images": [
+        {
+          "complete": true,
+          "naturalHeight": 375,
+          "naturalWidth": 1844,
+          "renderedHeight": 18.703125,
+          "renderedWidth": 92,
+          "src": "/assets/dagg-logotype-dark.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 992,
+          "naturalWidth": 1586,
+          "renderedHeight": 992,
+          "renderedWidth": 280,
+          "src": "/design/golden-standard/image-system/direction-a-decision-field/01-hero-decision-field.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 280,
+          "src": "/design/golden-standard/image-system/direction-a-decision-field/02-workgraph-map.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 280,
+          "src": "/design/golden-standard/image-system/direction-a-decision-field/03-decision-human-judgment.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 280,
+          "src": "/design/golden-standard/image-system/direction-a-decision-field/04-factory-build.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 280,
+          "src": "/design/golden-standard/image-system/direction-a-decision-field/05-governance-boundary.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 280,
+          "src": "/design/golden-standard/image-system/direction-a-decision-field/06-impact-compounding.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 724,
+          "naturalWidth": 2172,
+          "renderedHeight": 724,
+          "renderedWidth": 280,
+          "src": "/design/golden-standard/image-system/direction-a-decision-field/07-motion-storyboard.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 280,
+          "src": "/design/golden-standard/image-system/direction-b-machine-signal/01-hero-machine-signal.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 280,
+          "src": "/design/golden-standard/image-system/direction-b-machine-signal/02-workgraph-map.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 280,
+          "src": "/design/golden-standard/image-system/direction-b-machine-signal/03-decision-human-judgment.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 280,
+          "src": "/design/golden-standard/image-system/direction-b-machine-signal/04-factory-build.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 280,
+          "src": "/design/golden-standard/image-system/direction-b-machine-signal/05-governance-boundary.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 280,
+          "src": "/design/golden-standard/image-system/direction-b-machine-signal/06-impact-compounding.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 724,
+          "naturalWidth": 2172,
+          "renderedHeight": 724,
+          "renderedWidth": 280,
+          "src": "/design/golden-standard/image-system/direction-b-machine-signal/07-motion-storyboard.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 941,
+          "naturalWidth": 1672,
+          "renderedHeight": 941,
+          "renderedWidth": 280,
+          "src": "/design/golden-standard/image-system/direction-c-operational-evidence/01-hero-operational-evidence.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 280,
+          "src": "/design/golden-standard/image-system/direction-c-operational-evidence/02-workgraph-map.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1122,
+          "naturalWidth": 1402,
+          "renderedHeight": 1122,
+          "renderedWidth": 280,
+          "src": "/design/golden-standard/image-system/direction-c-operational-evidence/03-decision-human-judgment.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 280,
+          "src": "/design/golden-standard/image-system/direction-c-operational-evidence/04-factory-build.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1003,
+          "naturalWidth": 1568,
+          "renderedHeight": 1003,
+          "renderedWidth": 280,
+          "src": "/design/golden-standard/image-system/direction-c-operational-evidence/05-governance-boundary.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 280,
+          "src": "/design/golden-standard/image-system/direction-c-operational-evidence/06-impact-compounding.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 941,
+          "naturalWidth": 1672,
+          "renderedHeight": 941,
+          "renderedWidth": 280,
+          "src": "/design/golden-standard/image-system/direction-c-operational-evidence/07-motion-storyboard.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 375,
+          "naturalWidth": 1844,
+          "renderedHeight": 19.515625,
+          "renderedWidth": 96,
+          "src": "/assets/dagg-logotype-dark.png"
+        }
+      ],
+      "minVisibleTextPx": 12,
+      "noHorizontalOverflow": true,
+      "readiness": {
+        "fontStatus": "loaded",
+        "fontsCheck": {
+          "Geist": true,
+          "JetBrains Mono": true,
+          "Newsreader": true
+        },
+        "images": [
+          {
+            "complete": true,
+            "naturalHeight": 375,
+            "naturalWidth": 1844,
+            "renderedHeight": 18.703125,
+            "renderedWidth": 92,
+            "src": "http://127.0.0.1:58862/assets/dagg-logotype-dark.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 992,
+            "naturalWidth": 1586,
+            "renderedHeight": 992,
+            "renderedWidth": 280,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/01-hero-decision-field.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 280,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/02-workgraph-map.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 280,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/03-decision-human-judgment.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 280,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/04-factory-build.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 280,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/05-governance-boundary.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 280,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/06-impact-compounding.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 724,
+            "naturalWidth": 2172,
+            "renderedHeight": 724,
+            "renderedWidth": 280,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/07-motion-storyboard.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 280,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/01-hero-machine-signal.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 280,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/02-workgraph-map.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 280,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/03-decision-human-judgment.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 280,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/04-factory-build.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 280,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/05-governance-boundary.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 280,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/06-impact-compounding.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 724,
+            "naturalWidth": 2172,
+            "renderedHeight": 724,
+            "renderedWidth": 280,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/07-motion-storyboard.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 941,
+            "naturalWidth": 1672,
+            "renderedHeight": 941,
+            "renderedWidth": 280,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/01-hero-operational-evidence.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 280,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/02-workgraph-map.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1122,
+            "naturalWidth": 1402,
+            "renderedHeight": 1122,
+            "renderedWidth": 280,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/03-decision-human-judgment.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 280,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/04-factory-build.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1003,
+            "naturalWidth": 1568,
+            "renderedHeight": 1003,
+            "renderedWidth": 280,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/05-governance-boundary.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 280,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/06-impact-compounding.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 941,
+            "naturalWidth": 1672,
+            "renderedHeight": 941,
+            "renderedWidth": 280,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/07-motion-storyboard.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 375,
+            "naturalWidth": 1844,
+            "renderedHeight": 19.515625,
+            "renderedWidth": 96,
+            "src": "http://127.0.0.1:58862/assets/dagg-logotype-dark.png"
+          }
+        ],
+        "inlineEventAttributes": 0,
+        "loadedFontFamilies": [
+          "Geist",
+          "JetBrains Mono",
+          "Newsreader"
+        ],
+        "scriptElements": 1,
+        "stages": [
+          "load:ok",
+          "fonts:ok",
+          "images:ok"
+        ]
+      },
+      "reducedMotion": false,
+      "requests": [
+        "http://127.0.0.1:58862/preview/golden-standard/p4/moodboards/",
+        "http://127.0.0.1:58862/design/golden-standard/system/tokens.css",
+        "http://127.0.0.1:58862/preview/golden-standard/p4/moodboards/moodboards.css",
+        "http://127.0.0.1:58862/preview/golden-standard/p4/moodboards/moodboards.js",
+        "http://127.0.0.1:58862/assets/dagg-logotype-dark.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/01-hero-decision-field.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/02-workgraph-map.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/03-decision-human-judgment.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/04-factory-build.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/05-governance-boundary.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/06-impact-compounding.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/07-motion-storyboard.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/01-hero-machine-signal.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/02-workgraph-map.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/03-decision-human-judgment.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/04-factory-build.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/05-governance-boundary.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/06-impact-compounding.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/07-motion-storyboard.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/01-hero-operational-evidence.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/02-workgraph-map.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/03-decision-human-judgment.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/04-factory-build.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/05-governance-boundary.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/06-impact-compounding.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/07-motion-storyboard.png",
+        "http://127.0.0.1:58862/assets/fonts/golden-standard/geist/Geist-Variable.woff2",
+        "http://127.0.0.1:58862/assets/fonts/golden-standard/jetbrains-mono/JetBrainsMono-Variable.woff2",
+        "http://127.0.0.1:58862/assets/fonts/golden-standard/newsreader/Newsreader-Variable.woff2"
+      ],
+      "viewport": {
+        "height": 568,
+        "width": 320
+      }
+    },
+    "390x844": {
+      "boardRects": [
+        {
+          "height": 11119.53125,
+          "id": "decision-field",
+          "top": 1552.421875,
+          "width": 390
+        },
+        {
+          "height": 11137.484375,
+          "id": "machine-signal",
+          "top": 12671.953125,
+          "width": 390
+        },
+        {
+          "height": 11295.53125,
+          "id": "operational-evidence",
+          "top": 23809.4375,
+          "width": 390
+        }
+      ],
+      "brokenImages": [],
+      "consoleErrorDetail": [],
+      "consoleErrors": 0,
+      "document": {
+        "clientWidth": 390,
+        "scrollHeight": 36782,
+        "scrollWidth": 390
+      },
+      "failedRequests": [],
+      "httpErrorResponses": [],
+      "imageCount": 23,
+      "images": [
+        {
+          "complete": true,
+          "naturalHeight": 375,
+          "naturalWidth": 1844,
+          "renderedHeight": 18.703125,
+          "renderedWidth": 92,
+          "src": "/assets/dagg-logotype-dark.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 992,
+          "naturalWidth": 1586,
+          "renderedHeight": 992,
+          "renderedWidth": 350,
+          "src": "/design/golden-standard/image-system/direction-a-decision-field/01-hero-decision-field.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 350,
+          "src": "/design/golden-standard/image-system/direction-a-decision-field/02-workgraph-map.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 350,
+          "src": "/design/golden-standard/image-system/direction-a-decision-field/03-decision-human-judgment.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 350,
+          "src": "/design/golden-standard/image-system/direction-a-decision-field/04-factory-build.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 350,
+          "src": "/design/golden-standard/image-system/direction-a-decision-field/05-governance-boundary.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 350,
+          "src": "/design/golden-standard/image-system/direction-a-decision-field/06-impact-compounding.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 724,
+          "naturalWidth": 2172,
+          "renderedHeight": 724,
+          "renderedWidth": 350,
+          "src": "/design/golden-standard/image-system/direction-a-decision-field/07-motion-storyboard.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 350,
+          "src": "/design/golden-standard/image-system/direction-b-machine-signal/01-hero-machine-signal.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 350,
+          "src": "/design/golden-standard/image-system/direction-b-machine-signal/02-workgraph-map.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 350,
+          "src": "/design/golden-standard/image-system/direction-b-machine-signal/03-decision-human-judgment.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 350,
+          "src": "/design/golden-standard/image-system/direction-b-machine-signal/04-factory-build.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 350,
+          "src": "/design/golden-standard/image-system/direction-b-machine-signal/05-governance-boundary.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 350,
+          "src": "/design/golden-standard/image-system/direction-b-machine-signal/06-impact-compounding.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 724,
+          "naturalWidth": 2172,
+          "renderedHeight": 724,
+          "renderedWidth": 350,
+          "src": "/design/golden-standard/image-system/direction-b-machine-signal/07-motion-storyboard.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 941,
+          "naturalWidth": 1672,
+          "renderedHeight": 941,
+          "renderedWidth": 350,
+          "src": "/design/golden-standard/image-system/direction-c-operational-evidence/01-hero-operational-evidence.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 350,
+          "src": "/design/golden-standard/image-system/direction-c-operational-evidence/02-workgraph-map.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1122,
+          "naturalWidth": 1402,
+          "renderedHeight": 1122,
+          "renderedWidth": 350,
+          "src": "/design/golden-standard/image-system/direction-c-operational-evidence/03-decision-human-judgment.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 350,
+          "src": "/design/golden-standard/image-system/direction-c-operational-evidence/04-factory-build.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1003,
+          "naturalWidth": 1568,
+          "renderedHeight": 1003,
+          "renderedWidth": 350,
+          "src": "/design/golden-standard/image-system/direction-c-operational-evidence/05-governance-boundary.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1536,
+          "renderedHeight": 1024,
+          "renderedWidth": 350,
+          "src": "/design/golden-standard/image-system/direction-c-operational-evidence/06-impact-compounding.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 941,
+          "naturalWidth": 1672,
+          "renderedHeight": 941,
+          "renderedWidth": 350,
+          "src": "/design/golden-standard/image-system/direction-c-operational-evidence/07-motion-storyboard.png"
+        },
+        {
+          "complete": true,
+          "naturalHeight": 375,
+          "naturalWidth": 1844,
+          "renderedHeight": 19.515625,
+          "renderedWidth": 96,
+          "src": "/assets/dagg-logotype-dark.png"
+        }
+      ],
+      "minVisibleTextPx": 12,
+      "noHorizontalOverflow": true,
+      "readiness": {
+        "fontStatus": "loaded",
+        "fontsCheck": {
+          "Geist": true,
+          "JetBrains Mono": true,
+          "Newsreader": true
+        },
+        "images": [
+          {
+            "complete": true,
+            "naturalHeight": 375,
+            "naturalWidth": 1844,
+            "renderedHeight": 18.703125,
+            "renderedWidth": 92,
+            "src": "http://127.0.0.1:58862/assets/dagg-logotype-dark.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 992,
+            "naturalWidth": 1586,
+            "renderedHeight": 992,
+            "renderedWidth": 350,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/01-hero-decision-field.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 350,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/02-workgraph-map.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 350,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/03-decision-human-judgment.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 350,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/04-factory-build.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 350,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/05-governance-boundary.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 350,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/06-impact-compounding.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 724,
+            "naturalWidth": 2172,
+            "renderedHeight": 724,
+            "renderedWidth": 350,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/07-motion-storyboard.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 350,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/01-hero-machine-signal.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 350,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/02-workgraph-map.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 350,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/03-decision-human-judgment.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 350,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/04-factory-build.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 350,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/05-governance-boundary.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 350,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/06-impact-compounding.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 724,
+            "naturalWidth": 2172,
+            "renderedHeight": 724,
+            "renderedWidth": 350,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/07-motion-storyboard.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 941,
+            "naturalWidth": 1672,
+            "renderedHeight": 941,
+            "renderedWidth": 350,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/01-hero-operational-evidence.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 350,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/02-workgraph-map.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1122,
+            "naturalWidth": 1402,
+            "renderedHeight": 1122,
+            "renderedWidth": 350,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/03-decision-human-judgment.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 350,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/04-factory-build.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1003,
+            "naturalWidth": 1568,
+            "renderedHeight": 1003,
+            "renderedWidth": 350,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/05-governance-boundary.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 1024,
+            "naturalWidth": 1536,
+            "renderedHeight": 1024,
+            "renderedWidth": 350,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/06-impact-compounding.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 941,
+            "naturalWidth": 1672,
+            "renderedHeight": 941,
+            "renderedWidth": 350,
+            "src": "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/07-motion-storyboard.png"
+          },
+          {
+            "complete": true,
+            "naturalHeight": 375,
+            "naturalWidth": 1844,
+            "renderedHeight": 19.515625,
+            "renderedWidth": 96,
+            "src": "http://127.0.0.1:58862/assets/dagg-logotype-dark.png"
+          }
+        ],
+        "inlineEventAttributes": 0,
+        "loadedFontFamilies": [
+          "Geist",
+          "JetBrains Mono",
+          "Newsreader"
+        ],
+        "scriptElements": 1,
+        "stages": [
+          "load:ok",
+          "fonts:ok",
+          "images:ok"
+        ]
+      },
+      "reducedMotion": false,
+      "requests": [
+        "http://127.0.0.1:58862/preview/golden-standard/p4/moodboards/",
+        "http://127.0.0.1:58862/design/golden-standard/system/tokens.css",
+        "http://127.0.0.1:58862/preview/golden-standard/p4/moodboards/moodboards.css",
+        "http://127.0.0.1:58862/preview/golden-standard/p4/moodboards/moodboards.js",
+        "http://127.0.0.1:58862/assets/dagg-logotype-dark.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/01-hero-decision-field.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/02-workgraph-map.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/03-decision-human-judgment.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/04-factory-build.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/05-governance-boundary.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/06-impact-compounding.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-a-decision-field/07-motion-storyboard.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/01-hero-machine-signal.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/02-workgraph-map.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/03-decision-human-judgment.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/04-factory-build.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/05-governance-boundary.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/06-impact-compounding.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-b-machine-signal/07-motion-storyboard.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/01-hero-operational-evidence.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/02-workgraph-map.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/03-decision-human-judgment.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/04-factory-build.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/05-governance-boundary.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/06-impact-compounding.png",
+        "http://127.0.0.1:58862/design/golden-standard/image-system/direction-c-operational-evidence/07-motion-storyboard.png",
+        "http://127.0.0.1:58862/assets/fonts/golden-standard/geist/Geist-Variable.woff2",
+        "http://127.0.0.1:58862/assets/fonts/golden-standard/jetbrains-mono/JetBrainsMono-Variable.woff2",
+        "http://127.0.0.1:58862/assets/fonts/golden-standard/newsreader/Newsreader-Variable.woff2"
+      ],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    }
+  }
+}

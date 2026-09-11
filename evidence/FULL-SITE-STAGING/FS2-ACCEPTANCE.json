@@ -1,0 +1,58 @@
+{
+  "package": "design/golden-standard/packages/FS2-SCROLL-LED-CARRIERS.md",
+  "parentAuthority": "design/golden-standard/packages/FS0-WHOLE-SITE-STAGING-AUTHORITY.md",
+  "implementer": "Claude Code (Fable 5.1)",
+  "integrationOwner": "Codex",
+  "date": "2026-09-02",
+  "status": "ACCEPTED-FOR-FS3",
+  "deployment": "none",
+  "publication": "none",
+  "routes": [
+    "/preview/golden-standard/routes/workgraph/",
+    "/preview/golden-standard/routes/build/"
+  ],
+  "assembledRevision": {
+    "assembler": "PASS: 19 assembled pages; 20 files written",
+    "workgraphSourceHashes": {
+      "body.html": "825d52d463f5f76a27d1462cffb014e0325c10ecafd644bdec0aa69dab62f92a",
+      "direction.css": "e6369461e94d1474ee241650420161b040e33f2e018fba2f5a13f4797d38d203",
+      "direction.js": "6fcfc635b3b86094d260bea5e0ccd594f82743719ddfc474102ebda8e4e08640"
+    },
+    "buildSourceHashes": {
+      "body.html": "6770c24944d2caf8afdefd74c533591fbbfe8ae300f576b75182d8e793416bab",
+      "direction.css": "49a1e56917a15214d770e6ca3fcd61d7e325bffe1ab0076a1a3d1a052973d1d4",
+      "direction.js": "11f50faca7b9cc5d28bae7618286e3ffcf316f90f26d272cd09225d7afaaa48f"
+    }
+  },
+  "browserMatrix": [
+    {"viewport": "320x720", "overflow": "PASS", "workgraph": "ordered-inline", "factory": "PASS", "minimumRequiredTargetPx": 44},
+    {"viewport": "360x800", "overflow": "PASS", "workgraph": "ordered-inline", "factory": "PASS", "minimumRequiredTargetPx": 44},
+    {"viewport": "390x844", "overflow": "PASS", "workgraph": "ordered-inline", "factory": "PASS", "minimumRequiredTargetPx": 44},
+    {"viewport": "768x1024", "overflow": "PASS", "workgraph": "ordered-inline", "factory": "PASS", "minimumRequiredTargetPx": 44},
+    {"viewport": "1024x768", "overflow": "PASS", "workgraph": "ordered-inline", "factory": "PASS", "minimumRequiredTargetPx": 44},
+    {"viewport": "1440x900", "overflow": "PASS", "workgraph": "sticky-carrier", "factory": "PASS", "minimumRequiredTargetPx": 44}
+  ],
+  "checks": [
+    {"id": "workgraph-forward-scroll", "result": "PASS", "observed": ["connect", "decide", "build", "learn"]},
+    {"id": "workgraph-reverse-scroll", "result": "PASS", "observed": ["learn", "build", "decide", "connect"]},
+    {"id": "workgraph-record-continuity", "result": "PASS", "record": "WG-034", "permission": "Prepare only. Never release."},
+    {"id": "factory-zero-click-order", "result": "PASS", "observed": ["intervention", "specification", "architecture", "build", "evaluation", "governed review"]},
+    {"id": "factory-final-state-stable-five-seconds", "result": "PASS"},
+    {"id": "factory-explicit-pause-resume", "result": "PASS"},
+    {"id": "factory-replay", "result": "PASS"},
+    {"id": "factory-plan-selection-persists", "result": "PASS", "selected": "rebuild"},
+    {"id": "hover-focus-document-hidden-pauses", "result": "SOURCE-VERIFIED", "note": "event handlers are present; independent synthetic runtime coverage remains in final cross-route QA"},
+    {"id": "reduced-motion-and-missing-observer", "result": "SOURCE-VERIFIED", "note": "both routes resolve immediately in source; independent emulated runtime coverage remains in final cross-route QA"},
+    {"id": "no-js-reading-order", "result": "PASS", "note": "assembled no-JS contract passed and all public states remain in semantic source order"},
+    {"id": "console-errors", "result": "PASS", "observed": []},
+    {"id": "outside-package-source-preservation", "result": "PASS", "note": "Home, Impact, Assessment, Transformation, Company, Trust and shared chrome sources match the FS1 baseline hashes"}
+  ],
+  "acceptedScreenshots": [
+    "evidence/FULL-SITE-STAGING/visual-qa/06-workgraph-fs2-learn-1440.png",
+    "evidence/FULL-SITE-STAGING/visual-qa/07-build-fs2-evaluation-1440.png",
+    "evidence/FULL-SITE-STAGING/visual-qa/08-build-fs2-review-1440.png",
+    "evidence/FULL-SITE-STAGING/visual-qa/09-workgraph-fs2-inline-390.png",
+    "evidence/FULL-SITE-STAGING/visual-qa/10-build-fs2-review-390.png"
+  ],
+  "decision": "FS2 is accepted for Home integration. The two source-verified fallback groups are re-run as emulated browser checks during final whole-site QA; they are not founder gates and do not block FS3."
+}

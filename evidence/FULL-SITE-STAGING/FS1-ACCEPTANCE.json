@@ -1,0 +1,129 @@
+{
+  "package": "design/golden-standard/packages/FS1-WHOLE-SITE-STAGING-SKELETON.md",
+  "parentAuthority": "design/golden-standard/packages/FS0-WHOLE-SITE-STAGING-AUTHORITY.md",
+  "copySource": "design/golden-standard/narrative/FULL-SITE-CONTENT-CONTRACT.md#page-5-impact",
+  "implementer": "Claude Code",
+  "date": "2026-09-02",
+  "status": "IMPLEMENTED-PENDING-CODEX-INTEGRATION",
+  "deployment": "none",
+  "publication": "none",
+  "impactInSharedNavigation": false,
+  "route": {
+    "sourceDir": "preview/golden-standard/routes/impact/src",
+    "expectedOutput": "preview/golden-standard/routes/impact/index.html",
+    "outputGenerated": false,
+    "stagingPath": "/preview/golden-standard/routes/impact/",
+    "routeState": "internal-staging",
+    "anchors": ["evidence-chain", "approved-proof"],
+    "acts": ["Position", "Proof types", "Evidence chain", "Lead proof slot", "Next move"],
+    "visibleWords": 224,
+    "contractBudgetWithApprovedProof": "320-460",
+    "budgetNote": "Below band by design: no approved proof exists, so the contract fallback state applies."
+  },
+  "ownedFiles": {
+    "preview/golden-standard/routes/impact/src/body.html": {
+      "sha256": "78b4c32e6417a7ab3cf41e15530ab5a05700c47060e98f8752ba99a7a26a3325",
+      "state": "pre-existing FS1 draft, retained byte-identical"
+    },
+    "preview/golden-standard/routes/impact/src/direction.css": {
+      "sha256": "b1c6831ade4a9026ef5d92f3b93ff465efc6619515677bb5b0a5b4bfbdcc2e74",
+      "state": "created"
+    },
+    "preview/golden-standard/routes/impact/src/direction.js": {
+      "sha256": "93473828b9fe6fa9090f468c86056de03937214079853cb95be799f6221a1d75",
+      "state": "created"
+    },
+    "preview/golden-standard/routes/impact/src/meta.json": {
+      "sha256": "11221222a4759e2680a81f477ce06ac893d4b1a1b06182a0c021ef04a76faaac",
+      "state": "created"
+    },
+    "evidence/FULL-SITE-STAGING/FS1-IMPLEMENTATION-REPORT.md": {
+      "sha256": "7b3ccf195de332b007853621ada812943fa7c23d6cad24d43e1eec5cb58c31e1",
+      "state": "created"
+    },
+    "evidence/FULL-SITE-STAGING/FS1-ACCEPTANCE.json": {
+      "sha256": null,
+      "state": "created; self-hash omitted"
+    }
+  },
+  "failures": [
+    {
+      "id": "assembler-not-run",
+      "detail": "node tools/build_golden_standard_previews.mjs (build and --check) denied by the session permission layer; impact/index.html and the shared-substrate build-manifest.json were not generated or updated.",
+      "owner": "Codex at integration"
+    },
+    {
+      "id": "no-rendered-verification",
+      "detail": "serve_preview.py, playwright-cli and Python Playwright denied; no viewport, console or rendered-state coverage in this session.",
+      "owner": "Codex at integration; FS4 QA"
+    },
+    {
+      "id": "noindex-runtime-only",
+      "detail": "meta.json records robots noindex,nofollow but the assembler has no robots field and FS1 does not own head.html; direction.js injects the robots meta at runtime.",
+      "owner": "later package decision"
+    }
+  ],
+  "checks": [
+    { "id": "assembler", "result": "NOT-RUN" },
+    { "id": "impact-discovered-and-resolves", "result": "NOT-VERIFIED", "note": "discovery rule read; body.html satisfies it" },
+    { "id": "pre-existing-sources-byte-identical", "result": "PASS", "files": 46, "method": "sha256sum preflight vs postflight" },
+    { "id": "local-references-resolve", "result": "PASS", "scope": "source-level; 4 hrefs; assessment and transformation index.html exist; #approved-proof present" },
+    { "id": "single-h1-and-anchors-once", "result": "PASS", "h1": 1, "evidence-chain": 1, "approved-proof": 1 },
+    { "id": "no-internal-or-forbidden-copy", "result": "PASS", "patterns": ["Aloi", "Systems operated", "not public copy", "Internal anchor", "Internal status", "Fallback rule", "Internal publication rule"], "hits": 0 },
+    { "id": "no-hidden-core-content", "result": "PASS", "scope": "source-level; no hidden, display:none, visibility or svg in route source; no-JS reading order printed complete" },
+    { "id": "no-console-error", "result": "NOT-COVERED" },
+    { "id": "assembler-forbidden-lists", "result": "PASS", "scope": "hand-checked against FORBIDDEN_IN_BODY, FORBIDDEN_IN_DIRECTION_CSS and checkDirectionJs patterns" }
+  ],
+  "preservedSourceHashes": {
+    "preview/golden-standard/routes/assessment/src/body.html": "5bcbf7db5bc85e9d975cb58a9367930272c304286fd41e63dfc3fb7f5a10ff6e",
+    "preview/golden-standard/routes/assessment/src/direction.css": "35a71d0becb920fad2cb1688163a3911a00abf72ed857bdb148b0a6a4adca406",
+    "preview/golden-standard/routes/assessment/src/direction.js": "daf5b1338619255bad1289ec5c48b15030b4048845bd844898cde3707614dc81",
+    "preview/golden-standard/routes/assessment/src/meta.json": "4df28705ab69830b5f123596ddb8d22912a657fab889c400a0f32b120a197913",
+    "preview/golden-standard/routes/build/src/body.html": "20ad8d03f1e093724b27342d22901361afbce5e27c5c16ad17f398d3d1819fbc",
+    "preview/golden-standard/routes/build/src/direction.css": "343db3274d54330523daff41994f08906d10b1c73b88bf18408f3844d2c43b93",
+    "preview/golden-standard/routes/build/src/direction.js": "73d2d7a370668dae62e5a9e1ef517eaf259190d3481048b0c91ac3ec6afa2fea",
+    "preview/golden-standard/routes/build/src/meta.json": "e5360d3efc84e968953fa77ae2cac4ee24af500168271dff79ccceacd13a3ee4",
+    "preview/golden-standard/routes/company/src/body.html": "c9c8480456b84c8c35d2e6b0c13af24111888584dceb97f9b1810b20a018e6ed",
+    "preview/golden-standard/routes/company/src/direction.css": "05ad37cfee0f2d131efd9fca91ff580643074af78c1ed11e6740311230430058",
+    "preview/golden-standard/routes/company/src/direction.js": "a03df84cf2fbcc0838c4a93c8326acb10c838586b5269a7950a43df9ab338b38",
+    "preview/golden-standard/routes/company/src/meta.json": "ecaa69dedb1e4a1b49fc37be76d54a714168b7ff8af9b45ca6d4a54decd49c1b",
+    "preview/golden-standard/routes/transformation/src/body.html": "b14c16ff08e4b7924858b35ff3e67caf54797bd6475a73e278e8b59d68d36032",
+    "preview/golden-standard/routes/transformation/src/direction.css": "a43c2f1794cdf7185fb0675d4621d8d694f39588eeb43720c59cb1270767b088",
+    "preview/golden-standard/routes/transformation/src/direction.js": "7273412684f776ba3353fdb1b806c2756ce50182e9c3646eccce33679e7b0040",
+    "preview/golden-standard/routes/transformation/src/meta.json": "066896168859ad0c2b4e6225bde2cc85a4c6603785ef42f7e5f67cd24d29d2c0",
+    "preview/golden-standard/routes/trust/src/body.html": "6b53765205ad1d3a771e0978d6abb0b01d52e0eb8a1029e2a29babcc8246bcb8",
+    "preview/golden-standard/routes/trust/src/direction.css": "d1bc74be826fc0b66f0afc3f21d6b14acef94740385b15e627c410ab3e60640d",
+    "preview/golden-standard/routes/trust/src/direction.js": "ebcf9d5748a033265e6da0794eb51c0fb6592d0e19bc6b9ba48508fb5f7534b3",
+    "preview/golden-standard/routes/trust/src/meta.json": "036006a1fe61610dc1544ea4e7dd54388f6d6e37ff12375fdd162f2c880daa74",
+    "preview/golden-standard/routes/workgraph/src/body.html": "32fef135916f24f8cbf42f261f597cc0a4e0c6c618e2dbe267e260d76ccbaf4c",
+    "preview/golden-standard/routes/workgraph/src/direction.css": "3444233c707ee6e4aa7b5fef64e9ee56a851df4e6b2afefd93888ee398d2e90e",
+    "preview/golden-standard/routes/workgraph/src/direction.js": "765ba2718c3a6dfe864146c736e4f807d69a5bf1c4aa492c5c0fbb97fa6afe25",
+    "preview/golden-standard/routes/workgraph/src/meta.json": "aea01d7ce5e0d276c17ffa6ae69f30677f76545cc045a26e95a8ed63ac3e6bb0",
+    "preview/golden-standard/home/src/body.html": "92a57d55fad3bfe48d6f1d3ff92e981940aaf731c8cde44b15d0bf68990fc325",
+    "preview/golden-standard/home/src/direction.css": "8499460a3a205e56ee4b38eab9f8886d4e444039aaa1e7bbf7ce3abd1c723eec",
+    "preview/golden-standard/home/src/direction.js": "59c2f3066f906cb853d65bf649da31ca8d2c7dcf6403dd1aa81a679194890f94",
+    "preview/golden-standard/home/src/meta.json": "a4f261e139e5c40a4b6e359634dc103a6bdab92b52af342b90d30b6967859ba7",
+    "preview/golden-standard/shared/chrome/chrome.css": "4909454a75dde120d2968a245957735197e7281dcb15b9c7f24e0d186ace53df",
+    "preview/golden-standard/shared/chrome/chrome.js": "544e590b4c2b19d81c967625eea4ea409f9b71c68a355e46e9c750d97125e3b0",
+    "preview/golden-standard/shared/chrome/footer.html": "070c5e66f6b605936066a4bb29d0d82d34924fcbc3b15028785b6bd77756db2a",
+    "preview/golden-standard/shared/chrome/header.html": "dd827a94208e5c3c3366d87db0b17d108d446d756b58bc74611371fe932475bb",
+    "preview/golden-standard/shared/fixture/src/body.html": "c5cdc077b7e1810e1a27448c821e4d12868f570e6137128416c02a1bd3a2f563",
+    "preview/golden-standard/shared/fixture/src/direction.css": "91f394c385b9b2e35fe6bbbeeaa6488a0f49d4ad362e1988abf0e916842431d3",
+    "preview/golden-standard/shared/fixture/src/direction.js": "4cd6c94daca7f7207b026f7d9dc44559b1ab4215f408115cf4e387cd5b8bff9c",
+    "preview/golden-standard/shared/fixture/src/meta.json": "892737daeb67fb25ca779f8f3ae48510cef85185600bc0b9abed1313541fd7b1",
+    "preview/golden-standard/shared/fixture/index.html": "5abe1da6c5d18a9c0f2d37ea61f7e0db58ad0f465eb65970079cc7ee15c88d87",
+    "preview/golden-standard/home/index.html": "a40a83a067306dba57217aea2dff3ce97242f434f2a1cfc8f82f3d0bf4e4b964",
+    "preview/golden-standard/routes/assessment/index.html": "6d33f02c4886e313d5be4a934b3133ff2b572fbd245bdc050aea591b269429e7",
+    "preview/golden-standard/routes/build/index.html": "167fa72665e8580ac259b956bd6092806e0e0920fd0fb3edb73502c9f2729fec",
+    "preview/golden-standard/routes/company/index.html": "ee18cbb4a425f9f2296f3b93b8f43990c91bebe756aeb64ca99cf2874b87db34",
+    "preview/golden-standard/routes/transformation/index.html": "19215cf36855fc9201cd80587d64b4898a18eec3f11c6a60400288a777b6c58a",
+    "preview/golden-standard/routes/trust/index.html": "533296e9dbdd6bca9eaf1622758bd76a8de53686ef1924e19a56b896be00d305",
+    "preview/golden-standard/routes/workgraph/index.html": "19b685ba1b193925d4ead57c4dfc87fb3f4789fb739d9dc2cc165f43988dfc81",
+    "evidence/HOME-DIRECTIONS/shared-substrate/build-manifest.json": "81201a6a00d0d01143415efeb4703ca477869ed39e9a16a2c573237cea9706c5"
+  },
+  "codexIntegrationSteps": [
+    "node tools/build_golden_standard_previews.mjs",
+    "python3 tools/serve_preview.py --port 8912 and review /preview/golden-standard/routes/impact/ at 320, 390, 768, 1024, 1440",
+    "decide static noindex mechanism (assembler robots field or head.html) in a later package"
+  ]
+}

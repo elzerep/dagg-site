@@ -1,0 +1,225 @@
+/* Dagg golden standard — P4R6 direction A0-Claude: composition stylesheet
+ *
+ * Package:  design/golden-standard/packages/P4R6-A0-CLAUDE.md
+ * Loads:    last, after tokens.css, chrome.css and the passed P4R5
+ *           component-library/styles.css.
+ *
+ * WHAT THIS FILE MAY DO. Compose. It declares the rhythm, the two grids the
+ * accepted component library does not already own (the stakes punctuation
+ * and the impact gateway), the art-directed hero frame, and one
+ * direction-specific component: the editorial reveal that is Direction A's
+ * interaction model.
+ *
+ * WHAT THIS FILE MAY NOT DO, per the shared-substrate contract
+ * (evidence/HOME-DIRECTIONS/shared-substrate/SUBSTRATE.md §4): declare a
+ * token, restyle the global chrome, or fork a component class. Every value
+ * below is a frozen token or a token multiple. No new hue, family, radius,
+ * type step or breakpoint is introduced, and no rule targets a chrome or
+ * component selector — direction classes are `a0-` prefixed so the two
+ * layers cannot collide.
+ *
+ * The assembler mechanically enforces the first half of that: it rejects
+ * this file if it contains a chrome selector, a component-internals
+ * selector, a root declaration or a font declaration.
+ */
+
+/* ==================================================================== *
+ * 1 · Section rhythm                                                    *
+ *                                                                       *
+ * Foundations: section rhythm varies by argument, and repeated global    *
+ * padding that produces a slide deck fails. The component library gives  *
+ * every section one uniform height, which is correct for a catalog and   *
+ * wrong for a page, so the direction owns the rhythm. These three steps  *
+ * carry the argument: strategy is given room, proof is tightened, the    *
+ * gateway is the shortest act before the close.                         *
+ * ==================================================================== */
+
+.a0-act--tall { padding-block: var(--section-lg) var(--section-md); }
+.a0-act--mid { padding-block: var(--section-md); }
+.a0-act--short { padding-block: var(--space-9); }
+
+@media (max-width: 939.98px) {
+  .a0-act--tall,
+  .a0-act--mid { padding-block: var(--section-md); }
+  .a0-act--short { padding-block: var(--space-7); }
+}
+
+/* ==================================================================== *
+ * 2 · Act 1 · hero — 7/5 strategic split, art-directed carrier          *
+ *                                                                       *
+ * The 7/5 grid itself is the accepted opening pattern and is imported,   *
+ * not restated. What the direction adds is the vertical relationship     *
+ * between the editorial column and the frame, and the aspect ratio of    *
+ * the frame — which has to follow the *selected* companion, not the      *
+ * <img> width/height attributes, or the portrait file lands in a         *
+ * letterboxed 16:10 hole on first paint below 768 px.                    *
+ * ==================================================================== */
+
+@media (min-width: 940px) {
+  .a0-hero__grid { align-items: center; }
+}
+
+.a0-hero__media img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1586 / 992;
+  object-fit: cover;
+}
+
+@media (max-width: 767.98px) {
+  .a0-hero__media img { aspect-ratio: 1122 / 1402; }
+}
+
+/* ==================================================================== *
+ * 3 · Act 2 · stakes — the punctuation                                  *
+ *                                                                       *
+ * Ground change 1 of 3. One conclusion and one consequence on Lift, in   *
+ * the 240–360 px band Foundations reserves for a punctuation between     *
+ * larger acts. The split is 5/7, the inverse of every other act on the   *
+ * page, so the reader feels a change of register rather than another     *
+ * row of the same template.                                             *
+ * ==================================================================== */
+
+.a0-punct {
+  background: var(--lift);
+  border-block: 1px solid var(--rule-strong);
+  padding-block: var(--space-7);
+}
+
+.a0-punct__grid { display: grid; gap: var(--space-5); }
+
+.a0-punct__h {
+  max-width: 22ch;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--fs-h2);
+  line-height: var(--lh-h2);
+  letter-spacing: var(--tracking-h2);
+  font-weight: 500;
+}
+
+.a0-punct__body {
+  max-width: var(--measure-max);
+  color: var(--ink-2);
+  font-family: var(--font-serif);
+  font-size: var(--fs-lead);
+  line-height: var(--lh-lead);
+}
+
+@media (min-width: 768px) {
+  .a0-punct { padding-block: var(--space-8); }
+}
+
+@media (min-width: 940px) {
+  .a0-punct__grid {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    column-gap: var(--space-9);
+    align-items: baseline;
+  }
+}
+
+/* ==================================================================== *
+ * 4 · The editorial reveal — Direction A's interaction model             *
+ *                                                                       *
+ * A restrained editorial reveal, not a stateful product discovery: a     *
+ * native <details> that opens, reads and closes with scripts blocked.    *
+ * direction.js only adds aria-expanded and Escape-with-focus-return.     *
+ *                                                                       *
+ * The control is a real 44 px target with the frozen 2 px / 2 px focus   *
+ * ring. The only motion is a 180 ms rotation of the vendored chevron —   *
+ * inside the micro-response band, finite, no overshoot — and reduced     *
+ * motion removes it while the open state and its label are unchanged.    *
+ * ==================================================================== */
+
+.a0-reveal { border-top: 1px solid var(--rule); }
+
+.a0-reveal__summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  max-width: 34ch;
+  min-height: var(--target-min);
+  padding-block: var(--space-3);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  font-weight: 520;
+  list-style: none;
+  cursor: pointer;
+}
+
+.a0-reveal__summary::-webkit-details-marker { display: none; }
+.a0-reveal__summary::marker { content: ""; }
+
+.a0-reveal__summary:hover { color: var(--coral-deep); }
+
+.a0-reveal__summary:focus-visible {
+  outline: var(--focus-width) solid var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+.a0-reveal__chev {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  transition: transform var(--motion-micro) var(--motion-ease);
+}
+
+.a0-reveal[open] .a0-reveal__chev { transform: rotate(180deg); }
+
+.a0-reveal__body { padding-bottom: var(--space-5); }
+
+@media (prefers-reduced-motion: reduce) {
+  .a0-reveal__chev { transition: none; }
+}
+
+/* ==================================================================== *
+ * 5 · Instrument rails                                                  *
+ *                                                                       *
+ * Every contained ink instrument on this page sits at 55% beside a warm  *
+ * 45% column that carries the strategic conclusion. The rail is what     *
+ * keeps the instrument contained material depth inside a Paper act       *
+ * instead of a ground change, and it is why Direction A reads as         *
+ * strategy proven by a mechanism rather than as a mechanism tour.        *
+ * ==================================================================== */
+
+.a0-rail { padding-top: var(--space-2); }
+
+/* The way-back rail in act 7 holds one disclosure. Aligned to the bottom of
+   the row it reads as a footnote to the exception beside it, which is what
+   it is; aligned to the top it would read as a floating control. */
+@media (min-width: 940px) {
+  .a0-rail--foot { align-self: end; padding-top: 0; }
+}
+
+/* The two-surface instrument is the one that needs its full internal width:
+   below the collapse its mode panel and its persistent record stack, and
+   between 940 and 1240 px they are already tight at 8/12 of the field, so it
+   is not put in a split. Containment is done the other way instead — at the
+   widest field it is inset from the reading column, so warm ground stays
+   visible on both sides of it and the act reads as contained material depth
+   rather than a second ink ground. */
+@media (min-width: 1240px) {
+  .a0-surfaces { padding-inline: var(--space-9); }
+}
+
+/* ==================================================================== *
+ * 6 · Act 8 · impact gateway                                            *
+ *                                                                       *
+ * 7/5 again, deliberately: the gateway is the strategic register         *
+ * returning after four proof acts, and the provenance and truth boundary *
+ * sit in the counter column where the reader cannot miss them.           *
+ * ==================================================================== */
+
+.a0-impact__grid { display: grid; gap: var(--space-7); }
+.a0-impact__labels { padding-top: var(--space-2); }
+.a0-linkwrap { margin-top: var(--space-6); }
+
+@media (min-width: 940px) {
+  .a0-impact__grid {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    column-gap: var(--space-9);
+    align-items: start;
+  }
+}
