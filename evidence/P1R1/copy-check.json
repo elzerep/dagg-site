@@ -1,0 +1,57 @@
+{
+  "source": "design/golden-standard/narrative/VERTICAL-SLICE-COPY.md",
+  "source_sha256": "f053fb8a6b605d2c22860da4367fffcf0a7d0288d6cb8f029e6fdcacb79b7892",
+  "checker": "tools/check_p1_copy.py",
+  "checker_sha256": "e6d2142ff21d8bf7b026609bbb093f41f57760398fe89174da197364131322a2",
+  "git_head_at_generation": "f688c5431960bae3fda7dbe237c47cb0a95cf57c",
+  "working_tree_dirty_at_generation": true,
+  "generated_at_utc": "2026-09-02T14:46:56.925163+00:00",
+  "status": "FAIL",
+  "checks": {
+    "one_h1": true,
+    "h1_6_to_12_words": true,
+    "all_h2_4_to_9_words": false,
+    "hero_body_18_to_32_words": true,
+    "other_body_blocks_20_to_45_words": false,
+    "default_visible_copy_600_to_800_words": false,
+    "all_interactive_copy_at_most_1100_words": false,
+    "one_shared_page_disclosure_in_hero": true,
+    "hero_provenance_present": true,
+    "workgraph_local_provenance_present": true,
+    "factory_local_provenance_present": true,
+    "operating_local_provenance_present": true,
+    "workgraph_record_schema_complete": true,
+    "factory_automate_mode_complete": true,
+    "factory_rebuild_mode_complete": true,
+    "required_narrative_lines_present": false,
+    "forbidden_claims_absent": true
+  },
+  "measurements": {
+    "h1_words": [
+      12
+    ],
+    "h2_words": [
+      9,
+      8,
+      7,
+      8,
+      12,
+      9,
+      9
+    ],
+    "body_block_words": [
+      30,
+      25,
+      21,
+      30,
+      48,
+      36,
+      34,
+      25,
+      21
+    ],
+    "default_visible_words": 970,
+    "all_interactive_words": 1292,
+    "shared_disclosures": 1
+  }
+}

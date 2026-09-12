@@ -1,0 +1,31 @@
+{
+  "arguments": [
+    "--headless=new",
+    "--remote-debugging-address=127.0.0.1",
+    "--remote-debugging-port=63411",
+    "--user-data-dir=/var/folders/1m/fcb22x1j1vx590pty9kfzypm0000gn/T/dagg-fs4-home-baseline-chrome-jf5bd8wf",
+    "--no-first-run",
+    "--no-default-browser-check",
+    "--password-store=basic",
+    "--use-mock-keychain",
+    "--disable-extensions",
+    "--disable-gpu",
+    "--disable-background-timer-throttling",
+    "--disable-backgrounding-occluded-windows",
+    "--disable-renderer-backgrounding",
+    "--hide-scrollbars",
+    "--force-device-scale-factor=1",
+    "--remote-allow-origins=*",
+    "about:blank"
+  ],
+  "chromePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+  "debugPort": 63411,
+  "devToolsActivePortExists": false,
+  "lastEndpointError": "Chrome exited with code -6",
+  "processExitCode": -6,
+  "profileEntries": [
+    "chrome-stderr.log"
+  ],
+  "startupSeconds": 0.058,
+  "stderrTail": ""
+}

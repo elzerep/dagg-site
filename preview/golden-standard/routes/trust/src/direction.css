@@ -1,0 +1,152 @@
+/* Trust route composition (FS5 Lane B). Copy-led full-width opening, then a
+ * separate horizontal control-path band on Ink, then editorial 5/7 acts. No
+ * bitmap; Operational Evidence only. Grid placement only; never `order`. */
+
+.trust-page { background: var(--paper); }
+.trust-section { padding-block: var(--section-lg); }
+.trust-section--hero { padding-block: var(--space-8) var(--space-7); }
+.trust-eyebrow { margin-bottom: var(--space-4); color: var(--ink-2); }
+.trust-hero { display: grid; gap: var(--space-8); align-items: start; }
+.trust-hero__copy { max-width: 1080px; }
+.trust-h1 { max-width: 14ch; text-wrap: balance; hyphens: none; }
+.trust-lead { max-width: 62ch; margin-top: var(--space-5); }
+.trust-actions { margin-top: var(--space-7); }
+.trust-provenance { color: color-mix(in srgb, var(--paper) 62%, transparent); font: var(--fs-meta)/var(--lh-meta) var(--font-mono); }
+
+/* ------------------------------------------------------------------ *
+ * Control-path band                                                    *
+ * ------------------------------------------------------------------ */
+
+.trust-control-path { padding-block: 0 var(--section-lg); }
+.trust-control {
+  overflow: hidden;
+  padding: var(--space-6);
+  border-radius: var(--radius-instrument);
+  background: var(--ink);
+  color: var(--paper);
+}
+.trust-control__path { margin: var(--space-5) 0 0; padding: 0; list-style: none; }
+.trust-control__path li {
+  display: grid;
+  grid-template-columns: 3ch minmax(0, 1fr);
+  gap: var(--space-2) var(--space-4);
+  padding-block: var(--space-5);
+  border-top: 1px solid var(--rule-on-ink);
+  opacity: 1;
+  transform: none;
+  transition: opacity 560ms ease, transform 620ms var(--motion-ease), border-color 420ms ease;
+}
+.trust-control__path li span { grid-row: 1 / span 2; padding-top: 0.2em; color: color-mix(in srgb, var(--paper) 72%, transparent); font: var(--fs-meta)/var(--lh-meta) var(--font-mono); }
+.trust-control__path li strong { color: var(--paper); font: 520 var(--fs-lead)/1.25 var(--font-sans); }
+.trust-control__path li small { color: color-mix(in srgb, var(--paper) 78%, transparent); font: var(--fs-body)/var(--lh-body) var(--font-serif); }
+/* Coral marks the material exception; sage marks the accountable boundary. */
+.trust-control__path li[data-trust-node="withheld"] { border-top: 2px solid var(--coral); }
+.trust-control__path li[data-trust-node="owner"] { border-top: 2px solid var(--sage); }
+html.cl-enhanced .trust-page:not([data-trust-ready]) .trust-control__path li { opacity: .35; transform: translate3d(0, 12px, 0); }
+html.cl-enhanced .trust-page:not([data-trust-ready]) .trust-control__path li:nth-child(2) { transform: translate3d(0, 18px, 0); }
+html.cl-enhanced .trust-page:not([data-trust-ready]) .trust-control__path li:nth-child(3) { transform: translate3d(0, 24px, 0); }
+html.cl-enhanced .trust-page[data-trust-ready] .trust-control__path li:nth-child(1) { transition-delay: 0ms; }
+html.cl-enhanced .trust-page[data-trust-ready] .trust-control__path li:nth-child(2) { transition-delay: 300ms; }
+html.cl-enhanced .trust-page[data-trust-ready] .trust-control__path li:nth-child(3) { transition-delay: 600ms; }
+.trust-control__state {
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--rule-on-ink);
+  color: color-mix(in srgb, var(--sage) 58%, var(--paper));
+  font: var(--fs-meta)/var(--lh-meta) var(--font-mono);
+  opacity: 1;
+  transform: none;
+  transition: opacity 360ms ease, transform 420ms var(--motion-ease);
+}
+html.cl-enhanced .trust-page:not([data-trust-ready]) .trust-control__state { opacity: 0; transform: translate3d(0, 8px, 0); }
+html.cl-enhanced .trust-page[data-trust-ready] .trust-control__state { transition-delay: 1080ms; }
+
+@media (min-width: 940px) {
+  .trust-control__path { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: var(--col-gap); }
+  .trust-control__path li { padding-block: var(--space-5) var(--space-4); }
+  .trust-control__state { margin-top: var(--space-6); }
+}
+
+/* ------------------------------------------------------------------ *
+ * Permission, record, models, diligence                                *
+ * ------------------------------------------------------------------ */
+
+.trust-section--permission, .trust-section--models { background: var(--lift); padding-block: var(--section-md); }
+.trust-permission, .trust-models, .trust-diligence { display: grid; gap: var(--space-6); align-items: start; }
+.trust-copy { max-width: 62ch; margin-top: var(--space-5); }
+.trust-fields { margin: 0; border-top: 1px solid var(--rule-strong); }
+.trust-fields > div { display: grid; gap: var(--space-2); padding-block: var(--space-4); border-bottom: 1px solid var(--rule-strong); }
+.trust-fields dt { color: var(--ink-2); font: 520 var(--fs-meta)/var(--lh-meta) var(--font-sans); text-transform: uppercase; letter-spacing: .05em; }
+.trust-fields dd { color: var(--ink); font: var(--fs-body)/var(--lh-body) var(--font-serif); }
+.trust-fields__sage { border-inline-start: 2px solid var(--sage); padding-inline-start: var(--space-4); }
+
+.trust-record-intro { display: grid; gap: var(--space-5); max-width: 760px; }
+.trust-record-intro__narrative { display: grid; gap: var(--space-5); }
+.trust-record-intro .cl-body { max-width: 62ch; }
+.trust-disclosure { color: var(--ink-2); font: var(--fs-meta)/var(--lh-meta) var(--font-sans); }
+.trust-record-disclosure { margin-top: var(--space-8); border-top: 1px solid var(--rule-strong); border-bottom: 1px solid var(--rule-strong); }
+.trust-record-disclosure > summary { display: flex; min-height: 64px; align-items: center; justify-content: space-between; gap: var(--space-5); padding-block: var(--space-4); cursor: pointer; list-style: none; color: var(--ink); font: 520 var(--fs-body)/var(--lh-body) var(--font-sans); }
+.trust-record-disclosure > summary::-webkit-details-marker { display: none; }
+.trust-record-disclosure > summary small { color: var(--ink-2); font: var(--fs-meta)/var(--lh-meta) var(--font-mono); }
+.trust-record-disclosure[open] > summary { border-bottom: 1px solid var(--rule-strong); }
+.trust-record { overflow: hidden; margin-block: var(--space-5); border-radius: var(--radius-instrument); background: var(--ink); }
+.trust-record__header { padding: var(--space-6); }
+.trust-record__title-row { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--space-5); margin-top: var(--space-4); }
+.trust-record__title { max-width: none; color: var(--paper); font: 480 var(--fs-h3)/var(--lh-h3) var(--font-serif); letter-spacing: 0; }
+.trust-record__status { color: color-mix(in srgb, var(--sage) 58%, var(--paper)); font: var(--fs-meta)/var(--lh-meta) var(--font-mono); white-space: nowrap; }
+.trust-record__fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 0; }
+.trust-record__fields > div { display: grid; grid-template-columns: minmax(125px, .34fr) minmax(0, 1fr); gap: var(--space-4); padding: var(--space-4) var(--space-6); border-top: 1px solid var(--rule-on-ink); }
+.trust-record__fields > div:nth-child(even) { border-inline-start: 1px solid var(--rule-on-ink); }
+.trust-record__fields dt { padding-top: 0.2em; color: color-mix(in srgb, var(--paper) 62%, transparent); font: 520 var(--fs-meta)/var(--lh-meta) var(--font-sans); }
+.trust-record__fields dd { color: var(--paper); font: var(--fs-body)/var(--lh-body) var(--font-serif); }
+.trust-record__boundary { box-shadow: inset 3px 0 0 var(--sage); }
+.trust-record__exception { box-shadow: inset 3px 0 0 var(--coral); }
+.trust-record__resolved { box-shadow: inset 3px 0 0 var(--sage); background: color-mix(in srgb, var(--sage) 10%, transparent); }
+.trust-link { display: inline-flex; width: fit-content; margin-top: var(--space-6); }
+
+.trust-models__narrative { display: contents; }
+.trust-models__body { max-width: 62ch; }
+.trust-boundary { max-width: 66ch; padding-inline-start: var(--space-5); border-inline-start: 2px solid var(--sage); color: var(--ink-2); font: var(--fs-body)/var(--lh-body) var(--font-serif); }
+
+.trust-diligence__narrative { display: contents; }
+.trust-diligence__lead { max-width: 54ch; }
+.trust-diligence__body { margin-top: 0; }
+.trust-diligence__actions { margin-top: 0; }
+
+@media (min-width: 940px) {
+  .trust-permission, .trust-models, .trust-diligence { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); column-gap: var(--col-gap); }
+  .trust-fields > div { grid-template-columns: minmax(130px, .34fr) minmax(0, 1fr); }
+
+  .trust-models { grid-template-rows: auto auto; }
+  .trust-models__title { grid-column: 1; grid-row: 1 / span 2; }
+  .trust-models__body { grid-column: 2; grid-row: 1; }
+  .trust-boundary { grid-column: 2; grid-row: 2; }
+
+  .trust-diligence { grid-template-rows: auto auto auto; }
+  .trust-diligence__title { grid-column: 1; grid-row: 1 / span 3; }
+  .trust-diligence__lead { grid-column: 2; grid-row: 1; }
+  .trust-diligence__body { grid-column: 2; grid-row: 2; }
+  .trust-diligence__actions { grid-column: 2; grid-row: 3; }
+}
+@media (max-width: 939.98px) {
+  .trust-record__fields { grid-template-columns: minmax(0, 1fr); }
+  .trust-record__fields > div:nth-child(even) { border-inline-start: 0; }
+}
+@media (max-width: 600px) {
+  .trust-section { padding-block: var(--section-md); }
+  .trust-section--hero { padding-block: var(--space-6) var(--space-6); }
+  .trust-control-path { padding-block-end: var(--section-md); }
+  .trust-control { padding: var(--space-4); }
+  .trust-actions { align-items: stretch; }
+  .trust-record__header, .trust-record__fields > div { padding-inline: var(--space-4); }
+  .trust-record__title-row { align-items: flex-start; flex-direction: column; }
+  .trust-record__fields > div, .trust-fields > div { grid-template-columns: minmax(0, 1fr); }
+  .trust-record-disclosure > summary { align-items: flex-start; flex-direction: column; justify-content: center; }
+  .trust-fields__sage { padding-inline-start: var(--space-3); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .trust-control__path li,
+  html.cl-enhanced .trust-page:not([data-trust-ready]) .trust-control__path li { transition-duration: 0ms; opacity: 1 !important; transform: none !important; }
+  .trust-control__state,
+  html.cl-enhanced .trust-page:not([data-trust-ready]) .trust-control__state { transition-duration: 0ms; opacity: 1 !important; transform: none !important; }
+}

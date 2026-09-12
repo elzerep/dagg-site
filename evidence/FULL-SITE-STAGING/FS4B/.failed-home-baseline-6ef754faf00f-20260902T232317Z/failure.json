@@ -1,0 +1,6 @@
+{
+  "error": "RuntimeError: Chrome did not expose a DevTools port",
+  "passed": false,
+  "schemaVersion": 1,
+  "snapshotId": "6ef754faf00f234ba503ddbc83e8226759054a4b57929b9757561b3a6fdfdc50"
+}

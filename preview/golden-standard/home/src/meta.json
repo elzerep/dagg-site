@@ -1,0 +1,9 @@
+{
+  "title": "Dagg - Build the company AI makes possible",
+  "description": "Dagg turns strategic direction into an AI-native operating model, then builds the context, agents and software that make it work.",
+  "lang": "en",
+  "brandHref": "/preview/golden-standard/home/",
+  "mainDataHooks": ["data-home"],
+  "css": ["direction.css?v=fs4b-20260902"],
+  "js": ["direction.js?v=fs4b-20260902"]
+}

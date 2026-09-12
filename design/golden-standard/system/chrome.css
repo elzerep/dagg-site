@@ -1,0 +1,463 @@
+/* Dagg golden standard — shared global chrome
+ *
+ * Authority: design/golden-standard/DAGG-GOLDEN-STANDARD-MASTERPLAN.md.
+ * Contract:  design/golden-standard/packages/P3-GLOBAL-CHROME.md.
+ * Requires:  design/golden-standard/system/tokens.css loaded first.
+ *
+ * This file styles only the shared header and footer that every route
+ * inherits: it draws no homepage, no direction and no product surface.
+ * The mobile disclosure is a native <details>/<summary>; every rule below
+ * degrades to a legible, fully reachable warm header with JavaScript
+ * absent, per the P3 accessibility contract.
+ */
+
+/* -------------------------------------------------------------------- *
+ * Header shell                                                          *
+ * -------------------------------------------------------------------- */
+
+.chrome-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  width: 100%;
+  background: var(--paper);
+  color: var(--ink);
+  border-bottom: 1px solid var(--rule);
+  transition: transform var(--motion-response) var(--motion-ease),
+              background-color var(--motion-micro) var(--motion-ease),
+              color var(--motion-micro) var(--motion-ease),
+              border-color var(--motion-micro) var(--motion-ease);
+}
+
+.chrome-header[data-theme="ink"] {
+  background: var(--ink);
+  color: var(--paper);
+  border-bottom-color: var(--rule-on-ink);
+}
+
+.chrome-header--hidden {
+  transform: translateY(-100%);
+}
+
+.chrome-header__row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  min-height: 60px;
+}
+
+@media (min-width: 940px) {
+  .chrome-header__row {
+    min-height: 68px;
+  }
+}
+
+.chrome-header__brand {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--target-min);
+  flex-shrink: 0;
+}
+
+.chrome-header__brand img {
+  width: 108px;
+  height: auto;
+  aspect-ratio: 1844 / 375;
+  display: block;
+}
+
+.chrome-header__brand [data-logo-ink] {
+  display: none;
+}
+
+.chrome-header[data-theme="ink"] .chrome-header__brand [data-logo-warm] {
+  display: none;
+}
+
+.chrome-header[data-theme="ink"] .chrome-header__brand [data-logo-ink] {
+  display: block;
+}
+
+/* -------------------------------------------------------------------- *
+ * Disclosure: one native <details> holds primary routes and the         *
+ * assessment action for both mobile and desktop. Desktop forces the     *
+ * panel open and hides the summary; nothing in the DOM moves between    *
+ * the two states.                                                       *
+ * -------------------------------------------------------------------- */
+
+.chrome-disclosure {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.chrome-disclosure__summary {
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: var(--target-min);
+  min-width: var(--target-min);
+  padding-inline: var(--space-4);
+  border-radius: var(--radius-control);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+}
+
+.chrome-disclosure__summary::-webkit-details-marker,
+.chrome-disclosure__summary::marker {
+  display: none;
+  content: "";
+}
+
+.chrome-disclosure__summary:focus-visible {
+  outline: var(--focus-width) solid var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+.chrome-header[data-theme="ink"] .chrome-disclosure__summary {
+  --focus-ring: var(--paper);
+}
+
+.chrome-disclosure__panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-7);
+  padding-block: var(--space-7) var(--space-8);
+}
+
+/* Closed by default: the native details/summary behavior already removes
+   panel content from the accessibility tree and from tab order below
+   940px, satisfying "hidden navigation is not focusable" with no CSS. */
+
+.chrome-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.chrome-nav__link {
+  display: flex;
+  align-items: center;
+  min-height: var(--target-min);
+  padding-block: var(--space-3);
+  font-family: var(--font-sans);
+  font-size: var(--fs-lead);
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+}
+
+.chrome-header[data-theme="ink"] .chrome-nav__link {
+  border-bottom-color: var(--rule-on-ink);
+}
+
+.chrome-nav__link:focus-visible {
+  outline: var(--focus-width) solid var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+.chrome-header[data-theme="ink"] .chrome-nav__link:focus-visible {
+  outline-color: var(--paper);
+}
+
+.chrome-nav__link[aria-current="page"] {
+  font-weight: 500;
+  border-bottom: 1px solid currentColor;
+}
+
+.chrome-header__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--target-min);
+  padding-inline: var(--space-5);
+  border-radius: var(--radius-control);
+  border: 1px solid var(--coral-deep);
+  background: var(--coral-deep);
+  color: var(--paper);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  font-weight: 500;
+  text-decoration: none;
+  align-self: flex-start;
+  transition: background-color var(--motion-micro) var(--motion-ease),
+              border-color var(--motion-micro) var(--motion-ease);
+}
+
+.chrome-header__cta:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+.chrome-header[data-theme="ink"] .chrome-header__cta {
+  background: var(--coral);
+  border-color: var(--coral);
+  color: var(--ink);
+}
+
+.chrome-header[data-theme="ink"] .chrome-header__cta:hover {
+  background: var(--paper);
+  border-color: var(--paper);
+}
+
+.chrome-header__cta:focus-visible {
+  outline: var(--focus-width) solid var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+/* -------------------------------------------------------------------- *
+ * Mobile panel: a full reading surface, not a dropdown card.            *
+ * -------------------------------------------------------------------- */
+
+@media (max-width: 939.98px) {
+  html.cl-enhanced .chrome-disclosure[open] .chrome-disclosure__panel {
+    position: fixed;
+    inset: 60px 0 0 0;
+    overflow-y: auto;
+    background: var(--paper);
+    color: var(--ink);
+    z-index: 39;
+  }
+
+  html.cl-enhanced .chrome-header[data-theme="ink"] .chrome-disclosure[open] .chrome-disclosure__panel {
+    background: var(--ink);
+    color: var(--paper);
+  }
+
+  /* The authored-open disclosure is the no-JavaScript fallback. Without the
+     enhancement class it remains an ordinary in-flow navigation list, never
+     a viewport-covering sheet. The deferred scripts close it on touch widths
+     before enabling the modal treatment above. */
+  html:not(.cl-enhanced) .chrome-disclosure__panel {
+    position: static;
+    overflow: visible;
+    padding-block: var(--space-4) var(--space-6);
+  }
+
+  .chrome-disclosure__panel {
+    padding-inline: var(--page-gutter);
+  }
+
+  .chrome-nav__link {
+    font-size: var(--fs-h3);
+  }
+}
+
+/* -------------------------------------------------------------------- *
+ * Desktop: force the disclosure open, hide the summary, lay the         *
+ * forced-open content as one calm row. This overrides the UA rule that  *
+ * hides a closed <details> body, so no script is required to reach any  *
+ * route at any width.                                                   *
+ * -------------------------------------------------------------------- */
+
+@media (min-width: 940px) {
+  .chrome-disclosure__summary {
+    display: none;
+  }
+
+  /* A closed native <details> lays its non-summary content inside an
+     internal ::details-content box that Chrome collapses to
+     content-visibility:hidden and block-size:0 for the closed-state
+     animation. That box is an ancestor of .chrome-disclosure__panel, so
+     overriding content-visibility on the panel alone has no effect --
+     layout is skipped one level up, before the panel's own declaration is
+     ever consulted. Forcing the pseudo box open here is what actually
+     restores a real, intrinsically sized flex row on desktop. */
+  .chrome-disclosure::details-content {
+    content-visibility: visible !important;
+    block-size: auto !important;
+    overflow: visible !important;
+  }
+
+  .chrome-disclosure__panel {
+    display: flex !important;
+    content-visibility: visible !important;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-8);
+    padding-block: 0;
+    width: auto;
+  }
+
+  .chrome-nav__list {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-7);
+  }
+
+  .chrome-nav__link {
+    min-height: var(--target-min);
+    min-width: var(--target-min);
+    justify-content: center;
+    padding-block: var(--space-2);
+    font-family: var(--font-sans);
+    font-size: var(--fs-body);
+    border-bottom: 1px solid transparent;
+  }
+
+  .chrome-nav__link[aria-current="page"] {
+    border-bottom-color: currentColor;
+  }
+
+  .chrome-header__cta {
+    align-self: center;
+    flex-shrink: 0;
+  }
+}
+
+/* -------------------------------------------------------------------- *
+ * Compact desktop: 940-1199px does not have 1440's spare width. The     *
+ * generous panel/nav gaps set above are what push the CTA outside the   *
+ * field at 940 and 1024, so this band alone trims them back with        *
+ * existing tokens; 1200px and up fall through to the generous values    *
+ * the min-width:940px block already set.                                *
+ * -------------------------------------------------------------------- */
+
+@media (min-width: 940px) and (max-width: 1199.98px) {
+  .chrome-disclosure__panel {
+    gap: var(--space-7);
+  }
+
+  .chrome-nav__list {
+    gap: var(--space-5);
+  }
+}
+
+/* -------------------------------------------------------------------- *
+ * Footer: one full-width Ink ground, asymmetric 5/7 composition.        *
+ * -------------------------------------------------------------------- */
+
+.chrome-footer {
+  background: var(--ink);
+  color: var(--paper);
+  padding-block: var(--section-md);
+}
+
+.chrome-footer__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: var(--space-8);
+}
+
+.chrome-footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  min-width: 0;
+}
+
+.chrome-footer__logo {
+  width: 128px;
+  height: auto;
+  aspect-ratio: 1844 / 375;
+}
+
+.chrome-footer__descriptor {
+  font-family: var(--font-serif);
+  font-size: var(--fs-lead);
+  line-height: var(--lh-lead);
+  color: var(--paper);
+  max-width: var(--measure-max);
+  margin: 0;
+}
+
+.chrome-footer__columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-7);
+}
+
+.chrome-footer__group-title {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: var(--tracking-meta);
+  text-transform: uppercase;
+  color: rgb(240 238 230 / 0.6);
+  margin: 0 0 var(--space-4);
+}
+
+.chrome-footer__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.chrome-footer__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--target-min);
+  min-width: var(--target-min);
+  color: var(--paper);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.chrome-footer__link:hover {
+  border-bottom-color: rgb(240 238 230 / 0.45);
+}
+
+.chrome-footer__link:focus-visible {
+  outline: var(--focus-width) solid var(--paper);
+  outline-offset: var(--focus-offset);
+}
+
+.chrome-footer__legal {
+  margin-top: var(--space-8);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--rule-on-ink);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: var(--tracking-meta);
+  color: rgb(240 238 230 / 0.6);
+}
+
+@media (max-width: 767.98px) {
+  .chrome-footer__columns {
+    gap: 0;
+  }
+
+  .chrome-footer__columns > div + div {
+    margin-top: var(--space-6);
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--rule-on-ink);
+  }
+}
+
+@media (min-width: 768px) {
+  .chrome-footer__columns {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 940px) {
+  .chrome-footer__grid {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    column-gap: var(--space-9);
+  }
+}
+
+/* -------------------------------------------------------------------- *
+ * Reduced motion: header hide/reveal and disclosure motion are the      *
+ * only non-essential transitions here; removing them changes no         *
+ * content, no route order and no resolved open/closed state.            *
+ * -------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .chrome-header {
+    transition: none;
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "capturedAt": "2026-09-02T13:16:00+02:00",
+  "scope": "Pre-FS4A supporting-route implementation",
+  "homeReadOnly": {
+    "body.html": "1a6edffbc3970f259d4dd7e38e8fecf06bb9c9b423cfefaa3b13f19168f74d7c",
+    "direction.css": "53bc7b9ae4c89a3f6937d6d9c1e242fa37b69e9e2e4d300f5d46cc3fd4149c7e",
+    "direction.js": "c9c91cdc1cb6480b8800f7d7adb270d42b3c74069dd1e93880e70e29b9b2bded",
+    "meta.json": "a4f261e139e5c40a4b6e359634dc103a6bdab92b52af342b90d30b6967859ba7"
+  },
+  "transformationReadOnly": {
+    "body.html": "b14c16ff08e4b7924858b35ff3e67caf54797bd6475a73e278e8b59d68d36032",
+    "direction.css": "a43c2f1794cdf7185fb0675d4621d8d694f39588eeb43720c59cb1270767b088",
+    "direction.js": "7273412684f776ba3353fdb1b806c2756ce50182e9c3646eccce33679e7b0040",
+    "meta.json": "066896168859ad0c2b4e6225bde2cc85a4c6603785ef42f7e5f67cd24d29d2c0"
+  },
+  "protectedCarriers": {
+    "workgraphLifecycleHtmlLines112To134": "569e0a3921f507ae1d9c3c794a11d6c71e1861d568d50bda3a8d31980759bdd7",
+    "workgraphDirectionJs": "6fcfc635b3b86094d260bea5e0ccd594f82743719ddfc474102ebda8e4e08640",
+    "buildFactoryHtmlLines52To152": "b411cb14e4dc0daf87bed3de6c70ebe0966a9639d302f70d037e1b78e913a48a",
+    "buildProtectedSuffixLines52ToEof": "6abf561bc6a2b49bb3aa3e5e74c1ab5ce1e7f3740aa456b228fd1fe6799fe176",
+    "buildDirectionJs": "11f50faca7b9cc5d28bae7618286e3ffcf316f90f26d272cd09225d7afaaa48f"
+  },
+  "assemblyCheck": {
+    "command": "node tools/build_golden_standard_previews.mjs --check",
+    "result": "PASS",
+    "assembledPages": 19,
+    "note": "Assembly was current before FS4A. Claude must not run the write assembler; Codex owns integration assembly."
+  }
+}

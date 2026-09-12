@@ -1,0 +1,382 @@
+<title>Dagg Sitemap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Newsreader:opsz,wght@6..72,300..600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#F0EEE6; --paper-2:#E8E6DC; --panel:#E3DACC; --lift:#F5F3EC; --night:#141413;
+  --ink:#141413; --ink-2:#3A3A36; --ink-3:#5F5E58; --ink-faint:#A9A79E;
+  --hair:rgba(20,20,19,.13); --hair-soft:rgba(20,20,19,.07); --hair-firm:rgba(20,20,19,.26);
+  --accent:#B85C3E; --accent-text:#9E4A2E; --accent-bright:#D97757;
+  --accent-wash:rgba(217,119,87,.075); --accent-glow:rgba(217,119,87,.16);
+  --second:#2F6141; --second-wash:rgba(47,97,65,.07);
+  --n-fg:#F0EEE6; --n-fg-2:#B0AEA5; --n-hair:rgba(240,238,230,.16);
+  --sans:'Geist',system-ui,-apple-system,sans-serif;
+  --serif:'Newsreader',Georgia,serif;
+  --mono:'JetBrains Mono','SF Mono',Menlo,monospace;
+  --gutter:clamp(20px,4.2vw,64px); --maxw:1080px;
+}
+:root:not([data-theme="light"]){}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
+  font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,p,ul,ol,figure,table{margin:0}
+.sheet{max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter)}
+
+/* zones */
+.z{position:relative;padding:clamp(52px,6.4vw,92px) 0;border-top:1px solid var(--hair)}
+.z:first-of-type{border-top:0}
+.z.w{background:var(--paper-2);border-top:0;clip-path:inset(0 -100vmax);box-shadow:0 0 0 100vmax var(--paper-2)}
+.z.d{background:var(--night);color:var(--n-fg);border-top:0;clip-path:inset(0 -100vmax);box-shadow:0 0 0 100vmax var(--night)}
+.z.d h2,.z.d h3,.z.d .k,.z.d b,.z.d strong{color:var(--n-fg)}
+.z.d p,.z.d li,.z.d td{color:var(--n-fg-2)}
+.z.d .eyebrow{color:var(--n-fg-2)}
+.z.d table,.z.d th,.z.d td,.z.d .rule{border-color:var(--n-hair)}
+.z.d th{color:var(--n-fg)}
+
+/* type */
+.eyebrow{font-family:var(--mono);font-size:10.5px;letter-spacing:.17em;text-transform:uppercase;
+  color:var(--ink-3);display:block;margin-bottom:18px}
+h1{font-weight:500;font-size:clamp(31px,4vw,50px);line-height:1.14;letter-spacing:-.023em;
+  max-width:19ch;text-wrap:balance}
+h2{font-weight:500;font-size:clamp(24px,2.7vw,35px);line-height:1.2;letter-spacing:-.02em;
+  max-width:24ch;text-wrap:balance}
+h3{font-weight:500;font-size:clamp(17px,1.6vw,20px);line-height:1.32;letter-spacing:-.012em;margin-bottom:8px}
+h4{font-weight:500;font-size:14.5px;letter-spacing:0;margin-bottom:6px}
+p,li{font-family:var(--serif);font-optical-sizing:auto;font-size:17px;line-height:1.66;color:var(--ink-2)}
+p{max-width:64ch}
+p+p,p+ul,ul+p,h2+p,h3+p,p+.rule{margin-top:14px}
+h2+p{margin-top:18px}
+b,strong{font-weight:600;color:var(--ink)}
+.lead{font-size:19.5px;line-height:1.58;max-width:56ch;margin-top:20px}
+.ac{color:var(--accent-text)}
+ul,ol{padding-left:20px;display:flex;flex-direction:column;gap:7px}
+li::marker{color:var(--ink-faint)}
+a{color:var(--accent-text)}
+.stack{display:flex;flex-direction:column;gap:clamp(28px,3.4vw,46px)}
+
+/* nav sketch */
+.navsketch{font-family:var(--mono);font-size:13px;line-height:2.1;color:var(--ink-2);
+  background:var(--paper-2);border-left:2px solid var(--accent);padding:22px 24px;margin-top:24px;
+  overflow-x:auto;white-space:pre}
+.navsketch b{color:var(--accent-text);font-weight:500}
+.navsketch i{color:var(--ink-3);font-style:normal}
+
+/* tables */
+.tw{overflow-x:auto;margin-top:20px}
+table{border-collapse:collapse;width:100%;min-width:520px}
+th{font-family:var(--sans);font-size:11.5px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ink-3);text-align:left;padding:0 16px 9px 0;border-bottom:1px solid var(--hair-firm);vertical-align:bottom}
+td{font-family:var(--serif);font-size:15.5px;line-height:1.52;color:var(--ink-2);
+  padding:11px 16px 11px 0;border-bottom:1px solid var(--hair);vertical-align:top}
+td:last-child,th:last-child{padding-right:0}
+td b{font-weight:600}
+
+/* page cards -> hairline rows, per the language: no card grids */
+.pg{display:grid;grid-template-columns:clamp(88px,13%,140px) 1fr;gap:clamp(16px,2.4vw,34px);
+  padding:24px 0;border-top:1px solid var(--hair)}
+.pg:first-of-type{border-top:1px solid var(--hair-firm)}
+.pg .k{font-family:var(--sans);font-size:14.5px;font-weight:500;color:var(--ink);letter-spacing:-.006em}
+.pg .k span{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.13em;
+  color:var(--ink-3);text-transform:uppercase;margin-top:5px}
+.pg p{margin-top:0}
+.pg p+p{margin-top:10px}
+
+/* the band */
+.band{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.4vw,38px) clamp(20px,2.6vw,42px);
+  border-top:1px solid var(--hair);padding-top:22px;margin-top:34px}
+.band h4{color:var(--ink)}
+.band p{font-size:15.5px;line-height:1.58;margin-top:0}
+@media(max-width:760px){.band{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.band{grid-template-columns:1fr}.pg{grid-template-columns:1fr;gap:10px}}
+
+/* quotes — the one serif display beat */
+.q{border-left:2px solid var(--accent);padding:4px 0 4px 22px;margin-top:22px}
+.q p{font-size:19px;line-height:1.5;color:var(--ink);max-width:52ch}
+.q cite{display:block;font-family:var(--sans);font-style:normal;font-size:12.5px;
+  color:var(--ink-3);margin-top:10px;letter-spacing:0}
+.z.d .q{border-color:var(--accent-bright)}
+.z.d .q p{color:var(--n-fg)}
+.z.d cite{color:var(--n-fg-2)}
+
+.flag{border-left:2px solid var(--second);padding:2px 0 2px 20px;margin-top:20px}
+.flag p{font-size:15.5px;color:var(--ink-2);margin-top:0}
+.flag p+p{margin-top:8px}
+
+.rule{border-top:1px solid var(--hair);margin-top:26px;padding-top:22px}
+.note{font-family:var(--sans);font-size:13px;color:var(--ink-3);line-height:1.6;max-width:70ch}
+
+/* the spine the language requires on every page */
+.sheet{position:relative}
+.z .sheet::before{content:'';position:absolute;left:calc(var(--gutter) * -0.42);top:0;bottom:0;
+  width:1px;background:var(--hair)}
+.z.d .sheet::before{background:var(--n-hair)}
+@media(max-width:720px){.z .sheet::before{display:none}}
+
+/* decision list */
+.dec{counter-reset:d;display:flex;flex-direction:column;margin-top:22px}
+.dec>div{display:grid;grid-template-columns:30px 1fr;gap:14px;padding:15px 0;border-top:1px solid var(--hair)}
+.dec>div::before{counter-increment:d;content:counter(d,decimal-leading-zero);
+  font-family:var(--mono);font-size:13px;color:var(--accent-text)}
+.dec p{margin-top:5px;font-size:16px}
+</style>
+
+<main>
+
+<section class="z">
+<div class="sheet">
+  <span class="eyebrow">dagg.ai · struktur</span>
+  <h1>Kartan ni bygger vecka ett är samma objekt som driver agenterna år två.</h1>
+  <p class="lead">Två försök att bevisa hybriden med struktur föll. Det tredje gör det
+  inte, för det är inte längre en struktur — det är en beskrivning av hur något faktiskt
+  fungerar.</p>
+  <p>Första försöket lät navigationen bära argumentet: en metodsida bredvid en byggsida.
+  Andra försöket flyttade beviset till en byggkostnad i slutet av en sida och ett
+  avstående i början av nästa. Båda föll på samma sak. En navrad kostar en eftermiddag
+  att kopiera; två meningar kostar mindre.</p>
+  <p><b>WorkGraphen är inte en sida. Den är ryggraden.</b> Den byggs i diagnosen, den
+  läses av kodagenterna när något ska produceras, och den kör agenterna i produktion när
+  kunden inte vill göra det själv. Ett objekt, tre liv. Det är inte ett påstående om
+  Dagg — det är en beskrivning av en mekanism, och den kan bara skrivas av någon som
+  byggt alla tre delarna.</p>
+</div>
+</section>
+
+<section class="z w">
+<div class="sheet">
+  <span class="eyebrow">Ryggraden</span>
+  <h2>Ett objekt, tre liv</h2>
+
+  <div class="band" style="border-top:0;margin-top:8px;padding-top:0">
+    <div><h4>I diagnosen</h4><p>Flöden kartläggs — det synliga och det som ligger i huvuden, chattar och odokumenterat omdöme. Kartan är det diagnosen producerar.</p></div>
+    <div><h4>I bygget</h4><p>Samma karta blir underlaget kodagenterna läser när de bygger. Den är inte dokumentation vid sidan av — den är det som byggs utifrån.</p></div>
+    <div><h4>I drift</h4><p>Och när kunden saknar resurser att köra agenterna själv kan kartan driva dem. Samma objekt, tredje gången.</p></div>
+  </div>
+
+  <p style="margin-top:32px">Därför blir arbetet billigare för varje omgång i stället för
+  att börja om. Inte för att någon är snabbare, utan för att nästa initiativ läser ur en
+  karta som redan finns.</p>
+
+  <div class="q">
+    <p>Det här är sajtens viktigaste diagram, och det finns inte ännu.</p>
+    <cite>Tre tillstånd av samma objekt, inte tre steg i en process</cite>
+  </div>
+</div>
+</section>
+
+<section class="z">
+<div class="sheet">
+  <span class="eyebrow">Navigation</span>
+  <h2>Vanliga ord, för att köparen ska veta vad som ligger bakom länken</h2>
+
+  <div class="navsketch"><b>Strategy</b>        <i>arbetsflöden och dolt arbete · WorkGraphen byggs här</i>
+<b>Implementation</b>  <i>agenter och egen mjukvara · sidans rubrik är The Dagg Factory</i>
+<b>Company</b> ▾       <i>djupet ligger i utfällningen, inte i fler flikar</i>
+   <b>About</b>        <i>policy före presentation</i>
+   <b>Aloi</b>         <i>namnet på det som finns — aldrig "Cases" med ett objekt</i>
+   <b>News</b>         <i>nedflyttad, och därmed utan kadenslöfte i navet</i>
+   <b>Careers</b>      <i>inga utlysta roller — men vi träffar gärna bra människor</i>
+   <b>FAQ</b>          <i>invändningarna, som är värda mer under sekretess</i>
+               <i>—</i>
+[<b>Book an assessment</b>]  <i>en knapp, inte en flik · Contact är passivt</i>
+
+<i>senare:</i>
+<b>Operations</b>      <i>öppnas den dag driften går att köpa</i></div>
+
+  <p style="margin-top:22px">En inköpsfunktion vet direkt vad som ligger bakom Strategy
+  och Implementation: analys och beslutsunderlag, respektive integration, utveckling och
+  införande. Att orden är vanliga är inget problem — <b>differentieringen ligger i vad
+  sidorna visar, inte i att menyn är originell.</b></p>
+
+  <p>Att WorkGraph och Dagg Factory stod i navet var felet du pekade på: klickar någon på
+  ett ord de aldrig hört vet de inte vad de får. Namnen finns kvar på sidorna, som det de
+  är.</p>
+
+  <p><b>Dagg Factory behåller namnet, men som sidans rubrik.</b> Det syns mer som H1 än
+  som en menypost på tretton pixlar, och navet blir symmetriskt. Metaforen måste dessutom
+  vändas i första meningen: en fabrik är inte en plats som tillverkar vad som helst man
+  ber om. Då blir avståendet metaforens innebörd i stället för dess motsats.</p>
+
+  <div class="flag">
+    <p><b>En fabrik har råmaterial.</b> Jag dödade Ventures-dörren med argumentet att den
+    kunde få en köpare att undra om deras arbetsflöden är råvara för era bolag — och
+    missade att samma invändning träffar Factory hårdare. Ordet får aldrig stå nära
+    kundens arbete som insats. Metaforen pekar på er egen disciplin.</p>
+  </div>
+</div>
+</section>
+
+<section class="z d">
+<div class="sheet">
+  <span class="eyebrow">Det som inte går att kopiera</span>
+  <h2>Omdöme syns bara där någon kan ha fel. En karta kan inte ha fel.</h2>
+
+  <p>Det är hela problemet, formulerat på en rad. En maskad graf kan inte ha fel. En tes
+  om dolt arbete kan inte ha fel. Ett avstående går inte att kontrollera. Under sekretess
+  kan ni inte visa ett utfall — så det enda som skiljer sajten från en välskriven pitch
+  är om någon mening på den <b>kan vara felaktig.</b></p>
+
+  <div class="rule" style="border-color:var(--n-hair)">
+    <h3 style="color:var(--n-fg)">En materiallista, inte en uppskattning</h3>
+    <p>Ett strategibolag skriver veckor. Den som bygger skriver komponenter: två
+    integrationer, en mänsklig kontrollpunkt, inget nytt gränssnitt. Köparen prissätter
+    själv i huvudet.</p>
+    <p>Det löser samtidigt ordet <b>värt</b>. Ni får inte publicera belopp — men en
+    materiallista är inget belopp, och en tröskel är det inte heller: ett flöde är värt
+    att bygga om när kostnaden för väntan överstiger kostnaden för bygget inom en
+    budgetcykel. Den kan ha fel. Alltså är den omdöme.</p>
+  </div>
+
+  <div class="rule" style="border-color:var(--n-hair)">
+    <h3 style="color:var(--n-fg)">Ett avstående som kostade något</h3>
+    <p>Att inte bygga en chatbot-demo kostar noll och är dessutom en förklädd avfärdning
+    av en kategori. Att inte bygga plattformen ni kunnat licensiera till alla kostar.</p>
+  </div>
+
+  <div class="rule" style="border-color:var(--n-hair)">
+    <h3 style="color:var(--n-fg)">Ett namngivet avslag</h3>
+    <p>En mening som motsäger vad köparen själv hade gjort. Det arbetsflöde tre personer
+    avskyr och kör två gånger i månaden är det de vill börja med — och det är fel, för
+    kostnaden ligger inte i handpåläggningen utan i väntan den skapar nedströms.</p>
+    <p>Och grindarna bakom <b>ännu inte</b>, som är det starkaste ordet i hela strukturen
+    eftersom det betyder att ni tackar nej till intäkt idag: instabil process, reglering
+    under förändring, datakvalitet uppströms, ett beslut ingen människa fattat än.</p>
+  </div>
+</div>
+</section>
+
+<section class="z">
+<div class="sheet">
+  <span class="eyebrow">Sida för sida</span>
+  <h2>Vad varje sida måste innehålla för att inte läsas som processkartläggning</h2>
+
+  <div style="margin-top:26px">
+    <div class="pg">
+      <div class="k">Startsidan<span>saknades helt</span></div>
+      <div>
+        <p>Den fanns inte i förra strukturen, och det är där de flesta läsare avgör.
+        Positioneringsmeningen, diagrammet med ett objekt och tre liv, och vägen vidare.</p>
+      </div>
+    </div>
+
+    <div class="pg">
+      <div class="k">Strategy<span>omdömet</span></div>
+      <div>
+        <p>Öppnar inte i diagnosen — då läses sidan som kartläggning oavsett vad den
+        heter. Öppnar i <b>beslutet:</b> lämna orört, förenkla, automatisera, bygg om,
+        avveckla.</p>
+        <p>Sedan grindarna, avslaget, kostnadsdrivaren. WorkGraphen kommer efter, som
+        evidens och med bildtext — inte som sektion. Blir kartan sidans huvudobjekt är
+        omdöpningen misslyckad.</p>
+      </div>
+    </div>
+
+    <div class="pg">
+      <div class="k">Implementation<span>The Dagg Factory</span></div>
+      <div>
+        <p>Antagningskraven — vad som måste vara sant för att ett bygge tas in.
+        Systemgräns, kontrollpunkter, driftsättning, ägarskap, återställning.</p>
+        <p>Här ligger WorkGraphens andra liv: underlaget kodagenterna läser. Och sist
+        sektionen <b>Production and ownership</b> — vad ni gör och inte gör efter
+        lansering. Det är där frågan om vem som sköter driften besvaras, ärligt, utan att
+        en dörr lovar en tjänst som inte går att köpa. Aloi som idag.</p>
+      </div>
+    </div>
+
+    <div class="pg">
+      <div class="k">Company<span>policy, inte presentation</span></div>
+      <div>
+        <p>Uppdraget byts från <b>om oss</b> till <b>hur vi arbetar</b>: sekretess,
+        äganderätt till det som byggs, datahantering, vem som beslutar. Policy är
+        substans, och det är precis vad en banks inköpsfunktion letar efter.</p>
+        <p>Christian och Simon med LinkedIn, utan antal. <b>Branscherna ligger inte
+        här</b> — de svarar på om det här är för mig, inte på vilka ni är. De blir en
+        sektion på startsidan direkt efter erbjudandet, och en dörr först när de är fler
+        än två.</p>
+      </div>
+    </div>
+
+    <div class="pg">
+      <div class="k">News<span>under Company</span></div>
+      <div>
+        <p>Ramen avgör om den håller. <b>Vad vi bygger med</b> är förstahandsmaterial.
+        <b>Vad som händer i branschen</b> är kommentar på andras släpp, och då kalibrerar
+        läsaren tankekvaliteten mot det billigaste som publiceras.</p>
+        <p>Placeringen under Company löser det jag ville lösa med ett annat namn: <b>inget
+        kadenslöfte syns i navet.</b> Boten skriver mot registret, och en kontroll i repot
+        stoppar en PR som bryter mot det.</p>
+      </div>
+    </div>
+
+<div class="pg">
+      <div class="k">Aloi<span>namnet, inte kategorin</span></div>
+      <div>
+        <p>Ett pluralord med ett objekt får läsaren att räkna — samma fälla som fällde
+        Ventures. En sida som heter Aloi kan inte vara tunn: den innehåller exakt vad
+        namnet lovar.</p>
+        <p>Byter namn den dag det finns ett andra bolag. Inte innan.</p>
+      </div>
+    </div>
+
+    <div class="pg">
+      <div class="k">Careers<span>utan annonser</span></div>
+      <div>
+        <p>Inga utlysta roller, men alltid intresserade av att träffa rätt människor.
+        Det är en hållning och inte en tom sida — ett bolag som anställer när någon dyker
+        upp, snarare än ett som inte växer.</p>
+      </div>
+    </div>
+
+    <div class="pg">
+      <div class="k">FAQ<span>invändningarna</span></div>
+      <div>
+        <p>Värd mer här än på de flesta sajter: när invändningar inte kan bemötas med
+        case är det här enda stället de får svar. Vem äger koden, hur hanteras data,
+        ersätter ni våra system, vem får åtkomst.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="z w">
+<div class="sheet">
+  <span class="eyebrow">Beslut</span>
+  <h2>Ett svar avgör om en hel sida går att skriva</h2>
+
+  <div class="dec">
+    <div><div>
+      <h3>Betyder "värt" ett belopp?</h3>
+      <p>Säger du ja är sidan omöjlig — kunddata är sekretess, påhittade tal och
+      produktivitetsmultiplar är förbjudna i ert eget designspråk, och er intäktsmodell
+      ska inte ut. Säger du nej blir svaret en beslutsregel och en materiallista, och då
+      går den att skriva. <b>Det här måste avgöras innan någon skriver en rad</b>, annars
+      landar den i "betydande värde", vilket är sämre än ingenting.</p>
+    </div></div>
+    <div><div>
+      <h3>Vem äger det som byggs?</h3>
+      <p>Ni ber om åtkomst till känsliga processer och driver samtidigt ett bolag som kom
+      ur ett uppdrag. Frågan ställs oavsett om sajten svarar. Ett uttalat svar bredvid
+      sekretesspolicyn tar udden av den; tystnad gör inte det.</p>
+    </div></div>
+    <div><div>
+      <h3>Vilket avslag står ni för?</h3>
+      <p>Minst en utsaga på sajten måste kosta er något om den är fel. En namngiven grind
+      ni faktiskt tackar nej på. Det är det enda en konkurrent inte kopierar på en
+      eftermiddag, för att kopiera det kostar dem något.</p>
+    </div></div>
+    <div><div>
+      <h3>Språket</h3>
+      <p>Sajten är engelsk idag. Marknaden avgör, och beslutet påverkar varje sida.</p>
+    </div></div>
+  </div>
+
+  <div class="rule">
+    <p class="note">Ordet "consultancy" står i FAQ:n på sajten just nu, tillsammans med
+    en jämförelse mot en kategori av bolag. Båda är förbjudna i ert eget designspråk.
+    Det försvinner i omskrivningen.</p>
+  </div>
+</div>
+</section>
+
+</main>

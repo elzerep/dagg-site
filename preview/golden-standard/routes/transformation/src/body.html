@@ -1,0 +1,271 @@
+<!-- Dagg golden standard - Transformation (FS5 Lane A)
+   Copy authority: design/golden-standard/narrative/FULL-SITE-CONTENT-CONTRACT.md
+   Exact unit ownership: design/golden-standard/narrative/COPY-UNIT-MANIFEST.json
+   Composition authority: design/golden-standard/design-mapping/TRANSFORMATION-PAGE-MAP.md (FS5 amendment, R3-A)
+   Image authority: T-DF-01 in IMAGE-LIBRARY-CATALOG.md; slot-manifests/transformation.json
+   Shared header, footer and main landmark are assembled centrally.
+
+   Every public text node sits under exactly one data-copy-ref owner. The
+   first viewport is a 7/5 thesis-and-decision composition: copy, then the
+   five-label outcome strip, then the assigned 4:5 Decision Field carrier in
+   DOM order at every width. The provenance line sits outside the folio
+   disclosure so it is visible with the folio closed, with or without
+   JavaScript. -->
+<div class="transformation" data-transformation>
+
+  <section class="transformation-section transformation-section--thesis" data-transformation-section="thesis" aria-labelledby="transformation-title">
+    <div class="page"><div class="field transformation-hero">
+      <div class="transformation-hero__copy" data-narrative-anchor>
+        <div class="transformation-hero__narrative"
+             data-copy-ref="transformation.thesis.narrative"
+             data-copy-kind="narrative"
+             data-copy-scope="default">
+          <p class="cl-eyebrow transformation-eyebrow">AI-native operating design</p>
+          <h1 class="h1 transformation-h1" id="transformation-title" data-transformation-h1>Decide how the company should work before choosing what to build.</h1>
+          <p class="lead transformation-lead" data-transformation-lead>Dagg maps how the company works today, defines how people, agents and software should work together, and sequences the transition without confusing activity with progress.</p>
+        </div>
+        <div class="cl-actions transformation-actions transformation-hero__actions"
+             data-copy-ref="transformation.thesis.actions"
+             data-copy-kind="action"
+             data-copy-scope="default">
+          <a class="cl-button cl-button--primary" href="/preview/golden-standard/routes/assessment/" data-transformation-primary-action>Start an assessment</a>
+          <a class="cl-button cl-button--secondary" href="/preview/golden-standard/routes/workgraph/#record">See how the decision is retained</a>
+        </div>
+      </div>
+
+      <!-- The five-outcome strip: mono anchors on one rule, in narrative order.
+           It precedes the image in DOM and reading order at every width. -->
+      <div class="transformation-index" data-transformation-outcome-strip data-narrative-anchor
+           data-copy-ref="transformation.thesis.outcome-index"
+           data-copy-kind="functional"
+           data-copy-scope="default">
+        <a href="#decide" data-transformation-index-label>Preserve</a>
+        <a href="#decide" data-transformation-index-label>Simplify</a>
+        <a href="#decide" data-transformation-index-label>Automate</a>
+        <a href="#decide" data-transformation-index-label>Rebuild</a>
+        <a href="#decide" data-transformation-index-label>Retire</a>
+      </div>
+
+      <div class="transformation-hero__visual" data-narrative-anchor>
+        <picture data-transformation-hero-picture>
+          <img class="transformation-hero__image" data-transformation-hero-image
+               src="/design/golden-standard/image-system/transformation/transformation-hero-decision-field-mobile-v2.webp"
+               width="1122" height="1402" decoding="async" fetchpriority="high"
+               alt="Imperfect operating material is reallocated by one act of judgment into human, agent and software responsibilities inside a stable boundary."
+               data-copy-ref="transformation.thesis.image-alt"
+               data-copy-kind="functional"
+               data-copy-scope="default">
+        </picture>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="transformation-section transformation-section--division" data-transformation-section="division" aria-labelledby="transformation-division-title">
+    <div class="page"><div class="field transformation-division" data-narrative-anchor>
+      <div class="transformation-division__copy"
+           data-copy-ref="transformation.division.narrative"
+           data-copy-kind="narrative"
+           data-copy-scope="default">
+        <h2 class="h2 transformation-h2" id="transformation-division-title">Machine speed requires a different division of work.</h2>
+        <div class="transformation-prose">
+          <p class="cl-body transformation-measure">An AI-native company does not merely give every employee a faster tool. It changes where execution sits. Agents and software can carry stable paths continuously; people set direction, define requirements, resolve material exceptions and verify what the system produces.</p>
+          <p class="cl-body transformation-measure">That division is never absolute. Judgment stays where consequence, ambiguity or accountability makes it valuable. The operating model must say where the machine may act, where it must stop and who owns the decision when it does.</p>
+        </div>
+      </div>
+      <dl class="transformation-roles" data-transformation-roles
+          data-copy-ref="transformation.division.roles"
+          data-copy-kind="artifact-static"
+          data-copy-scope="default">
+        <div><dt>People</dt><dd>intent, requirements, material exceptions, verification.</dd></div>
+        <div><dt>Agents</dt><dd>continuous execution within explicit permissions.</dd></div>
+        <div><dt>Software</dt><dd>durable workflow, interfaces, records and controls.</dd></div>
+        <div><dt>Owners</dt><dd>accountability for the result after release.</dd></div>
+      </dl>
+    </div></div>
+  </section>
+
+  <section class="transformation-section transformation-section--map" data-transformation-section="map" id="map" aria-labelledby="transformation-map-title">
+    <div class="page"><div class="field transformation-map" data-narrative-anchor>
+      <div class="transformation-map__copy">
+        <div class="transformation-map__narrative"
+             data-copy-ref="transformation.map.narrative"
+             data-copy-kind="narrative"
+             data-copy-scope="default">
+          <p class="cl-eyebrow transformation-eyebrow">See the whole path</p>
+          <h2 class="h2 transformation-h2" id="transformation-map-title">See the whole path, not only the visible workflow.</h2>
+          <div class="transformation-prose">
+            <p class="cl-body transformation-measure">We map the steps people can name and the work around them: waiting, rework, exceptions, approvals, systems, knowledge and decisions made more than once. Those handoffs often determine the speed and quality of the company more than the task at the center.</p>
+            <p class="cl-body transformation-measure">The map is built from operating evidence where it exists, then tested with the people who own the work. It becomes the basis for a decision, not a decorative process diagram.</p>
+          </div>
+        </div>
+        <p class="transformation-disclosure" data-transformation-disclosure
+           data-copy-ref="transformation.map.disclosure"
+           data-copy-kind="disclosure"
+           data-copy-scope="default">All artifacts on this page are constructed examples, not client data or production deployments.</p>
+      </div>
+
+      <div class="transformation-folio-block">
+        <details class="transformation-folio" data-transformation-map>
+          <summary class="transformation-folio__summary"
+                   data-copy-ref="transformation.map.summary"
+                   data-copy-kind="functional"
+                   data-copy-scope="default">Current path and accountable owner</summary>
+          <ol class="transformation-folio__fields"
+              data-copy-ref="transformation.map.object-fields"
+              data-copy-kind="artifact-static"
+              data-copy-scope="progressive">
+            <li>Current path and accountable owner.</li>
+            <li>Sources, systems and handoffs.</li>
+            <li>Waiting, rework and material exceptions.</li>
+            <li>Decisions and permission boundaries.</li>
+            <li>Baseline and evidence gaps.</li>
+          </ol>
+        </details>
+        <!-- Local provenance stays outside the disclosure: visible with the
+             folio closed, JavaScript on or off, at every width. -->
+        <p class="transformation-provenance" data-transformation-provenance
+           data-copy-ref="transformation.map.provenance"
+           data-copy-kind="provenance"
+           data-copy-scope="default">Illustrative operating reality map · constructed example</p>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="transformation-section transformation-section--decision" data-transformation-section="decision" id="decide" aria-labelledby="transformation-decision-title">
+    <div class="page"><div class="field" data-narrative-anchor>
+      <div class="transformation-decision__head"
+           data-copy-ref="transformation.decision.narrative"
+           data-copy-kind="narrative"
+           data-copy-scope="default">
+        <p class="cl-eyebrow transformation-eyebrow">The strategic decision</p>
+        <h2 class="h2 transformation-h2" id="transformation-decision-title">The first decision is what not to automate.</h2>
+        <p class="cl-body transformation-measure">Every mapped path is tested against five outcomes. Building is one possible result, never the premise.</p>
+      </div>
+
+      <!-- One five-outcome decision continuum. A native radiogroup carries
+           selection; each outcome keeps its exact heading and explanation in
+           one block. Without JavaScript the radios are hidden and all five
+           outcomes read in order; below 1180 px, on coarse pointers and under
+           reduced motion all five explanations stay visible while the group
+           remains selectable; on a wide fine-pointer desktop the readout
+           shows the selected outcome and scrolling advances Preserve through
+           Retire until a direct choice takes over. -->
+      <div class="transformation-decision__stage" data-transformation-stage>
+        <div class="transformation-continuum" data-continuum data-transformation-continuum>
+          <fieldset class="transformation-continuum__set"
+                    aria-label="Five outcomes, from keeping the work to stopping it"
+                    data-copy-ref="transformation.decision.continuum-legend"
+                    data-copy-kind="functional"
+                    data-copy-scope="default">
+            <div class="transformation-outcomes">
+              <div class="transformation-outcome" data-transformation-outcome data-outcome="preserve"
+                   data-copy-ref="transformation.decision.outcome-preserve"
+                   data-copy-kind="artifact-static"
+                   data-copy-scope="default">
+                <h3 class="cl-h3 transformation-outcome__name"><label class="transformation-outcome__station"><input type="radio" name="outcome" value="preserve" checked><span>Preserve</span></label></h3>
+                <p class="transformation-outcome__body">Keep the work as it is when the effort is proportionate to its value and human judgment is the point of the work.</p>
+              </div>
+              <div class="transformation-outcomes__progressive"
+                   data-copy-ref="transformation.decision.outcomes-progressive"
+                   data-copy-kind="artifact-static"
+                   data-copy-scope="progressive">
+                <div class="transformation-outcome" data-transformation-outcome data-outcome="simplify">
+                  <h3 class="cl-h3 transformation-outcome__name"><label class="transformation-outcome__station"><input type="radio" name="outcome" value="simplify"><span>Simplify</span></label></h3>
+                  <p class="transformation-outcome__body">Remove steps, approvals or transfers that no longer protect a material outcome before encoding the process in software.</p>
+                </div>
+                <div class="transformation-outcome" data-transformation-outcome data-outcome="automate">
+                  <h3 class="cl-h3 transformation-outcome__name"><label class="transformation-outcome__station"><input type="radio" name="outcome" value="automate"><span>Automate</span></label></h3>
+                  <p class="transformation-outcome__body">Let agents execute a stable path when inputs, rules, exceptions and success criteria can be made explicit.</p>
+                </div>
+                <div class="transformation-outcome" data-transformation-outcome data-outcome="rebuild">
+                  <h3 class="cl-h3 transformation-outcome__name"><label class="transformation-outcome__station"><input type="radio" name="outcome" value="rebuild"><span>Rebuild</span></label></h3>
+                  <p class="transformation-outcome__body">Redesign the workflow and its software together when the current system preserves the wrong operating model.</p>
+                </div>
+                <div class="transformation-outcome" data-transformation-outcome data-outcome="retire">
+                  <h3 class="cl-h3 transformation-outcome__name"><label class="transformation-outcome__station"><input type="radio" name="outcome" value="retire"><span>Retire</span></label></h3>
+                  <p class="transformation-outcome__body">Stop doing work that no longer changes a decision, protects a requirement or serves the customer.</p>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+      <p class="transformation-conclusion"
+         data-copy-ref="transformation.decision.closing"
+         data-copy-kind="narrative"
+         data-copy-scope="default">A recommendation is not complete until it names an owner, a boundary and the evidence that would change it.</p>
+    </div></div>
+  </section>
+
+  <section class="transformation-section transformation-section--roadmap" data-transformation-section="roadmap" id="roadmap" aria-labelledby="transformation-roadmap-title">
+    <div class="page"><div class="field transformation-roadmap" data-narrative-anchor>
+      <!-- The exact roadmap narrative is one contiguous unit: H2, body and the
+           existing-company/new-company closing paragraph. The six-step
+           sequence and the action are sibling units. -->
+      <div class="transformation-roadmap__narrative"
+           data-copy-ref="transformation.roadmap.narrative"
+           data-copy-kind="narrative"
+           data-copy-scope="default">
+        <h2 class="h2 transformation-h2" id="transformation-roadmap-title">Sequence the change while the company keeps running.</h2>
+        <p class="cl-body transformation-measure">The target operating model may be large. The first intervention should not be. We sequence bounded moves that create evidence, preserve a way back and make the next decision better informed.</p>
+        <p class="cl-body transformation-measure transformation-roadmap__clarification">For an existing company, this is a migration from accumulated systems and habits. For a new company, product, work, roles, data and software can be designed together from the beginning. The underlying discipline is the same.</p>
+      </div>
+      <div class="transformation-roadmap__ledger">
+        <details class="transformation-sequence" data-transformation-roadmap>
+          <summary data-copy-ref="transformation.roadmap.summary"
+                   data-copy-kind="functional"
+                   data-copy-scope="default">Transition sequence</summary>
+          <ol data-copy-ref="transformation.roadmap.sequence"
+              data-copy-kind="artifact-static"
+              data-copy-scope="progressive">
+            <li>Define the target operating model.</li>
+            <li>Select one material path.</li>
+            <li>Establish the current state and evidence boundary.</li>
+            <li>Choose the smallest justified intervention.</li>
+            <li>Build, evaluate and release under an accountable owner.</li>
+            <li>Return operating evidence to the next decision.</li>
+          </ol>
+        </details>
+        <a class="cl-link transformation-roadmap__link" href="/preview/golden-standard/routes/build/#factory-modes"
+           data-copy-ref="transformation.roadmap.action"
+           data-copy-kind="action"
+           data-copy-scope="default">See how the intervention becomes a build</a>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="transformation-section transformation-section--horizon" data-transformation-section="horizon" aria-labelledby="transformation-horizon-title">
+    <div class="page"><div class="field transformation-horizon" data-narrative-anchor>
+      <div class="transformation-horizon__narrative"
+           data-copy-ref="transformation.horizon.narrative"
+           data-copy-kind="narrative"
+           data-copy-scope="default">
+        <h2 class="h2 transformation-h2" id="transformation-horizon-title">Keep the operating model adaptable as AI capability changes.</h2>
+        <div class="transformation-horizon__body">
+          <p class="cl-body transformation-measure">AI capability will continue to move. Dagg treats that uncertainty as scenarios and reversible choices: what is possible now, what is likely to become viable, and which decisions preserve the ability to adapt without rebuilding the company around every new model.</p>
+          <p class="transformation-boundary">Future capability is a planning scenario, not a promise about a model, date or outcome.</p>
+        </div>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="transformation-section transformation-section--next" data-transformation-section="next" aria-labelledby="transformation-next-title">
+    <div class="page"><div class="field transformation-next" data-narrative-anchor>
+      <div class="transformation-next__narrative"
+           data-copy-ref="transformation.next.narrative"
+           data-copy-kind="narrative"
+           data-copy-scope="default">
+        <h2 class="h2 transformation-h2" id="transformation-next-title">Retain the decision before the build begins.</h2>
+        <p class="cl-body transformation-measure transformation-next__body">An operating decision only survives if its context, evidence, owner and boundary remain usable. WorkGraph retains that record so implementation does not reconstruct the transformation from a disconnected brief.</p>
+      </div>
+      <div class="cl-actions transformation-actions transformation-next__actions"
+           data-copy-ref="transformation.next.actions"
+           data-copy-kind="action"
+           data-copy-scope="default">
+        <a class="cl-button cl-button--primary" href="/preview/golden-standard/routes/workgraph/#record">See how WorkGraph retains the decision</a>
+        <a class="cl-link transformation-next__link" href="/preview/golden-standard/routes/assessment/">Start an assessment</a>
+      </div>
+    </div></div>
+  </section>
+
+</div>

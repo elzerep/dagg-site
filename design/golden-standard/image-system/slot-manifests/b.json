@@ -1,0 +1,31 @@
+{
+  "direction": "B",
+  "frozen": true,
+  "slots": [
+    {
+      "id": "b-home-hero",
+      "job": "Reveal one company-specific record changing state from context through decision, permission, action and evidence.",
+      "families": ["decision-field", "restrained-machine-signal"],
+      "desktopAspect": "16:10",
+      "mobileAspect": "4:5",
+      "exclusions": ["fake terminal", "generic chat", "circuit aesthetic", "ambient particle field"],
+      "evaluation": ["inspectable mechanism", "one persistent object", "governed state change", "progressive discovery"],
+      "candidateIds": [
+        "p4r6-b-home-hero-04-desktop",
+        "p4r6-b-home-hero-04-mobile"
+      ],
+      "selection": "p4r6-b-home-hero-04-desktop",
+      "mobileSelection": "p4r6-b-home-hero-04-mobile",
+      "selectionReason": "B04 preserves dark product energy without hardware metaphor: one tactile field changes from fragments through a coral judgment seam into broad interlocking planes held by sage. The portrait version is independently staged; final carrier QA must keep the coral seam visible.",
+      "rejectedCandidateIds": [
+        "p4r6-b-home-hero-01-desktop",
+        "p4r6-b-home-hero-01-mobile",
+        "p4r6-b-home-hero-02-desktop",
+        "p4r6-b-home-hero-02-mobile",
+        "p4r6-b-home-hero-03-desktop",
+        "p4r6-b-home-hero-03-mobile"
+      ],
+      "rejectionReason": "B01 read as Operational Evidence, B02 retained biological ambiguity, and B03 introduced a glass channel, rails and circuit-adjacent hardware mood."
+    }
+  ]
+}

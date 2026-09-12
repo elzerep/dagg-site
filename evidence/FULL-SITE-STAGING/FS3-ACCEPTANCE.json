@@ -1,0 +1,64 @@
+{
+  "package": "FS3-HOME-INTEGRATION",
+  "status": "accepted",
+  "acceptedAt": "2026-09-02",
+  "acceptanceOwner": "Codex",
+  "immutablePreview": {
+    "url": "http://127.0.0.1:8924/preview/golden-standard/home/",
+    "commit": "f688c5431960bae3fda7dbe237c47cb0a95cf57c",
+    "dirty": true,
+    "snapshotId": "d8ffc928f43145e360c4f484c22a6d98f53011beacc5e3f9108460dea47ba533"
+  },
+  "copy": {
+    "authority": "design/golden-standard/narrative/HOME-NARRATIVE-FOUNDER-RESET.md",
+    "defaultVisibleWords": 500,
+    "firstViewportWords": 41,
+    "sixActOrder": true
+  },
+  "hero": {
+    "asset": "design/golden-standard/image-system/home/home-hero-decision-field-provisional-v3.png",
+    "sha256": "094f9ed09f04448881c50aef9b2919b05198c8c17ef8c144063c10b9e146f6b5",
+    "intrinsicWidth": 1672,
+    "intrinsicHeight": 941,
+    "language": "Decision Field only",
+    "status": "accepted for FS3 staging; responsive optimization remains FS4 work"
+  },
+  "viewports": [
+    {"width": 320, "height": 844, "horizontalOverflow": 0, "requiredTargetsBelow44": 0},
+    {"width": 360, "height": 844, "horizontalOverflow": 0, "requiredTargetsBelow44": 0},
+    {"width": 390, "height": 844, "horizontalOverflow": 0, "requiredTargetsBelow44": 0},
+    {"width": 768, "height": 1024, "horizontalOverflow": 0, "requiredTargetsBelow44": 0},
+    {"width": 1024, "height": 900, "horizontalOverflow": 0, "requiredTargetsBelow44": 0},
+    {"width": 1440, "height": 900, "horizontalOverflow": 0, "requiredTargetsBelow44": 0}
+  ],
+  "interaction": {
+    "zeroClickScrollStart": "pass",
+    "states": ["Operating reality", "Decision retained", "Governed execution", "Evidence returns"],
+    "durationMs": 900,
+    "stableAfterFiveSeconds": true,
+    "pauseResume": "pass",
+    "replay": "pass",
+    "keyboardNativeButtons": true,
+    "reducedMotion": "source-verified resolved state",
+    "missingIntersectionObserver": "source-verified resolved state",
+    "noJavaScript": "source-verified semantic reading order"
+  },
+  "browser": {
+    "consoleErrors": 0,
+    "homeLinks": 8,
+    "localAnchorsResolved": true
+  },
+  "screenshots": [
+    "evidence/FULL-SITE-STAGING/visual-qa/15-home-fs3-accepted-1440.png",
+    "evidence/FULL-SITE-STAGING/visual-qa/16-home-fs3-accepted-390.png",
+    "evidence/FULL-SITE-STAGING/visual-qa/17-home-fs3-accepted-768.png"
+  ],
+  "independentRedTeam": {
+    "reviewer": "Codex sub-agent, read-only",
+    "verdict": "pass",
+    "p0": 0,
+    "p1": 0,
+    "p2": 3
+  },
+  "deployment": "none"
+}

@@ -1,0 +1,538 @@
+DAGG     / DESIGN SYSTEM FOUNDATIONS                                                                01
+
+
+
+
+  FOUNDATIONS AND INTERFACE
+
+
+
+
+  Warm judgment.
+  Exact execution.
+   The visual foundation for a company that combines strategic judgment,
+   proprietary context and machine-speed execution - without becoming cold,
+   decorative or loud.
+
+
+
+
+DAGG DESIGN SYSTEM FOUNDATIONS                                                FOUNDATIONS / AUGUST 2026
+DAGG      / SYSTEM THESIS                                                                                                                                                                     02
+
+
+
+
+   THE OPERATING IDEA
+
+
+
+
+   Soft enough to invite. Exact enough to trust.
+   Dagg must feel like strategic authority and technical execution in the same system. Warm materials communicate judgment.
+   Exact structure communicates control. Product evidence carries the claim.
+
+
+
+
+       01                                                02                                            03                                 04
+
+       Warm, not beige                                   Sparse, not empty                             Proof, not hype                    Motion, not spectacle
+
+       Paper is the reading world. Ink is the            Whitespace creates hierarchy only when        Mechanisms, records and outcomes   Movement reveals state, transition and
+       instrument. Coral is an intervention, not         every object earns its position and carries   replace ungrounded claims about    causality. It never exists merely to look
+       decoration.                                       meaning.                                      intelligence or speed.             advanced.
+
+
+
+
+THE SYSTEM IS A BEHAVIOR CONTRACT, NOT A STYLE COLLAGE                                                                                                                  FOUNDATIONS / AUGUST 2026
+DAGG        / COLOR PALETTE                                                                                                                                            03
+
+
+
+
+  EIGHT SEMANTIC ROLES
+
+
+
+
+  A warm field. A precise machine. Two signals.
+   No extra brand hue exists. Neutrals are derived from Ink or Paper. Each accent has one job.
+
+
+
+
+       PAPER                                          LIFT                                       PANEL               INK
+
+       #F0EEE6                                        #FAF9F5                                    #E8E6DC             #141413
+
+
+       Primary reading ground                         Short editorial lift                       Material depth      Precision and instruments
+
+
+
+
+       INK 2                                          CORAL                                      CORAL DEEP          SAGE
+
+       #33332F                                        #D97757                                    #9E4A2E             #7C8471
+
+
+       Default body text                              Human intervention                         Accessible action   Boundary and stable state
+
+
+
+
+COLOR COMMUNICATES ROLE BEFORE IT COMMUNICATES MOOD                                                                                              FOUNDATIONS / AUGUST 2026
+DAGG       / COLOR COMPOSITION                                                                                                                                                                                      04
+
+
+
+
+  PAGE-LEVEL RANGE
+
+
+
+
+  Warmth carries the page. Signals stay scarce.
+   These are composition ranges, not pixel quotas. They prevent a cold black site and also prevent a beige editorial wash.
+
+
+
+
+        PAPER 55-60%                                                 LIFT 15-20%                                                          INK 15-20%
+
+
+
+
+        CORAL 4-6%                                                   SAGE 2-4%
+
+
+
+
+       GROUND                                                       INK                                                                  CORAL
+
+       At most three page-ground changes. Warm paper remains the    Contained inside mechanisms. Full bleed only for a decisive act or   Marks a human choice, intervention or accessible action. Never a
+       home base.                                                   final close.                                                         stripe.
+
+
+
+
+RANGES PROTECT THE FEEL; CONTENT DETERMINES THE FINAL COMPOSITION                                                                                                                             FOUNDATIONS / AUGUST 2026
+DAGG        / COLOR ACCESSIBILITY                                                                                                                                               05
+
+
+
+
+   READABILITY IS A MATERIAL RULE
+
+
+
+
+   The warm palette still has to work hard.
+   Accessible combinations are frozen. Coral and Sage remain expressive because they are not asked to do jobs they cannot perform.
+
+
+
+
+       Readable evidence                               Readable evidence                        Readable evidence                     Readable evidence
+       Ink / Paper                                     Ink 2 / Paper                            Coral deep / Paper                    Paper / Ink
+
+
+       15.87:1                                         10.92:1                                  5.21:1                                15.87:1
+                                        PASS                                 PASS                                          PASS                                PASS
+
+
+
+
+       Readable evidence                               Readable evidence                        Readable evidence                     Readable evidence
+       Coral / Ink                                     Ink / Sage                               Coral / Paper                         Sage / Paper
+
+
+       5.90:1                                          4.74:1                                   2.69:1                                3.35:1
+                                        PASS                                 PASS                                      GRAPHIC ONLY                        GRAPHIC ONLY
+
+
+
+
+CORAL ON PAPER IS A GRAPHIC SIGNAL, NEVER SMALL TEXT                                                                                                      FOUNDATIONS / AUGUST 2026
+DAGG      / TYPOGRAPHY                                                                                                                                                                                          06
+
+
+
+
+  THREE VOICES, THREE JOBS
+
+
+
+
+  Structure, judgment and instrumentation.
+   The website ships vendored fonts only: Geist, Newsreader and JetBrains Mono. No remote font request is permitted.
+
+
+
+
+       GEIST / DECISIONS AND STRUCTURE                                                         NEWSREADER / JUDGMENT AND REFLECTION
+
+
+
+
+       From strategy to execution.                                                             The decision comes before the build.
+       Headings, navigation, actions and interface labels. Direct, modern and exact.           Leads, explanatory prose, captions and selective editorial emphasis.
+
+
+
+
+       JETBRAINS MONO / REAL METADATA ONLY
+
+
+
+
+       decision.status                     human_review_required
+       context.version                     company_record_034                                                                                                         Never body copy. Never decorative code.
+
+
+
+
+TYPEFACE ROLES ARE SEMANTIC, NOT INTERCHANGEABLE                                                                                                                                        FOUNDATIONS / AUGUST 2026
+DAGG      / TYPE SCALE                                                                                                                             07
+
+
+
+
+   CONTINUOUS FROM 320 TO 1440
+
+
+
+
+   Large ideas. Short measures. No breakpoint jump.
+   Type scales smoothly at every width. The endpoints below are fixed acceptance values, not approximate art direction.
+
+
+
+
+   ROLE                        1440 / 390 / 320                          LEADING                      MEASURE RULE
+
+
+
+
+   H1                          68 / 44 / 42 px                           1.02                         17 words / 2.5 lines
+
+
+
+   H2                          52 / 36 / 34 px                           1.07                         3 lines
+
+
+
+   H3                          32 / 27 / 26 px                           1.12                         Conclusion only
+
+
+
+   Lead                        23 / 20 / 19 px                           1.44                         Up to 42 words
+
+
+
+   Body                        18 / 17 / 17 px                           1.62                         560-620 px measure
+
+
+
+   Meta                        13 / 12 / 12 px                           1.42                         Never below 12 px
+
+
+
+   A headline earns scale by carrying a conclusion, not a topic.
+
+RESPONSIVE TYPE IS CONTINUOUS; HIERARCHY IS EDITORIAL                                                                        FOUNDATIONS / AUGUST 2026
+DAGG      / GRID AND RESPONSIVE STRUCTURE                                                                                                                                                 08
+
+
+
+
+  ONE FIELD, MULTIPLE COMPOSITIONS
+
+
+
+
+  Twelve columns. Editorial asymmetry. Mobile recomposed.
+   The grid gives precision without turning every section into the same template. Reading order never changes at collapse.
+
+
+
+
+        7 / 5 STRATEGIC SPLIT                                                                                                                                      FIELD MAX 1240 PX
+
+
+
+
+  MOBILE IS COMPOSED, NOT STACKED
+
+
+
+                                                             FIELD                                     GAP                              GUTTER
+
+                                                             1240 px maximum                           24 px below 1024 / 32 px above   20 / 24 / 48 / 72 px
+
+
+
+                                                             COLLAPSE                                  PRODUCT SPLIT                    READING ORDER
+
+                                                             940 px                                    45 / 55                          Identical at every width
+
+
+
+
+THE GRID CREATES DISCIPLINE; COMPOSITION CREATES CHARACTER                                                                                                          FOUNDATIONS / AUGUST 2026
+DAGG      / SPACING AND RHYTHM                                                                                                                                                    09
+
+
+
+
+  BREATH WITH INTENT
+
+
+
+
+  Space is paced like an argument.
+   Section rhythm controls attention. It is not a global padding value repeated until the page becomes a slide deck.
+
+
+
+
+                                                                                        SECTION RHYTHM
+                                                            4 px
+
+                                                            8 px
+                                                                                                 Large act                                                   160 / 112 / 88
+                                                           12 px
+
+                                                           16 px
+
+                                                                                                 Medium act                                                   112 / 88 / 64
+                                                           24 px
+
+                                                           32 px
+
+                                                           48 px                                 Punctuation block                                       240-360 px desktop
+
+                                                           64 px
+
+                                                           96 px
+                                                                                                 Ground changes                                      Maximum three per page
+
+                                                          128 px
+                                                                                        Desktop / tablet / mobile values are listed in that order.
+                                                          160 px
+
+
+
+
+WHITESPACE IS EVIDENCE OF CONFIDENCE ONLY WHEN THE SEQUENCE IS STRONG                                                                                       FOUNDATIONS / AUGUST 2026
+DAGG      / SURFACES AND SHAPE                                                                                                                                                                   10
+
+
+
+
+  MATERIAL, NOT CARD GRID
+
+
+
+
+  Three surfaces. Three radii. One reason each.
+   Rounded shape is assigned by meaning. A page section has no radius. An instrument does not pretend to be a soft content card.
+
+
+
+
+       4 px                                                             10 px                                                         14 px
+       CONTROL                                                          SURFACE                                                       INSTRUMENT
+
+
+       Buttons, chips and small detail                                  Contained editorial material                                  Mechanisms and dark product states
+
+
+
+
+  DO       Use ground changes and material depth to create hierarchy.                                  DO NOT   Turn every idea into a floating rounded card.
+
+
+
+
+SHAPE FOLLOWS OPERATIONAL MEANING                                                                                                                                          FOUNDATIONS / AUGUST 2026
+DAGG        / ACTIONS AND FOCUS                                                                                                                                                    11
+
+
+
+
+   COMPACT, DIRECT, ACCESSIBLE
+
+
+
+
+   Actions look like actions.
+   No pills. No ambiguous labels. Links remain visibly links. Every target is at least 44 by 44 px.
+
+
+
+
+       WARM GROUND                                                                                    INK GROUND
+
+
+
+
+               START AN ASSESSMENT                         EXPLORE                                           START AN ASSESSMENT       EXPLORE
+
+
+
+
+       Read the transformation thesis                                                                 Inspect the operating record
+
+
+
+
+   TARGET                                     MOBILE NAV                        FOCUS                                     WARM FOCUS             INK FOCUS
+
+
+   44 px minimum                              48 px minimum                     2 px ring / 2 px offset                   Ink                    Paper
+
+
+
+
+THE CONVERSION ACTION IS PERSISTENT, NEVER A DISCLOSURE                                                                                                      FOUNDATIONS / AUGUST 2026
+DAGG      / NAVIGATION AND INTERACTION                                                                                                                                                        12
+
+
+
+
+  MODERNITY THROUGH BEHAVIOR
+
+
+
+
+  An adaptive system, not a purchased mega-menu.
+   Most routes remain direct. Build earns a flyout because it has real depth. The panel adapts to content and preserves ordinary links.
+
+
+
+
+       DAGG                                  Transformation      WorkGraph            Build               Impact                 Company                          ASSESSMENT
+
+
+
+
+                                                                                 Build overview
+                                                                                                                             FACTORY / BUILD RECORD
+                                                                                 Dagg Factory
+                                                                                                                             One decision becomes
+                                                                                 Agents and software
+                                                                                                                             a buildable system.
+                                                                                 Operating role
+
+
+
+
+  OPEN INTENT                                 CLOSE GRACE                     PANEL MORPH                           CROSSFADE                         KEYBOARD
+
+
+  70-100 ms                                   180-240 ms                      180-240 ms                            100-140 ms                        Enter / Space / Escape
+
+
+
+
+PROGRESSIVE ENHANCEMENT: EVERY DESTINATION REMAINS A REAL LINK                                                                                                          FOUNDATIONS / AUGUST 2026
+DAGG        / MOTION SYSTEM                                                                                                                                                                                          13
+
+
+
+
+   MOVEMENT MUST EXPLAIN
+
+
+
+
+   Motion reveals causality.
+   Dagg moves from context to decision to execution. Animation should make that transition legible, then get out of the way.
+
+
+
+
+       CONTEXT                                          DECISION                                    BUILD                                                          OPERATE
+
+       record enters                                    judgment changes state                      system resolves                                                state remains inspectable
+
+
+
+
+        NORMAL MOTION                                                                              REDUCED MOTION
+
+
+        micro 180 ms / response 240 ms / no overshoot                                              Snap position and size. Preserve labels and resolved meaning.
+
+
+
+
+NO AUTOPLAY VIDEO IN THE INITIAL VIEWPORT                                                                                                                                                      FOUNDATIONS / AUGUST 2026
+DAGG     / IMAGE LANGUAGE INTEGRATION                                                                                                                            14
+
+
+
+
+  ONE SYSTEM, THREE ROLES
+
+
+
+
+  The visual hierarchy is intentionally unequal.
+   Decision Field is the world. Operational Evidence is the proof. Machine Signal is the restrained transition language.
+
+
+
+
+  70%            DECISION FIELD
+                                                                                                    25%        OPERATIONAL EVIDENCE
+                                                                                                                                      5%     MACHINE SIGNAL
+
+                 Primary world                                                                                 Proof and mechanism           Transition only
+
+
+
+
+COMPANION DOCUMENT: DAGG IMAGE LANGUAGE SYSTEM                                                                                             FOUNDATIONS / AUGUST 2026
+DAGG      / DESIGN SYSTEM PACKAGE                                                                                                                                                               15
+
+
+
+
+  WHAT CREATES THE WHOLE FEEL
+
+
+
+
+  Three documents. One implementation truth.
+   The first two documents establish the full visual direction. The third must be extracted from the accepted vertical slice so code, behavior and documentation remain
+   one system.
+
+
+
+                        Image Language System                                                                                                                             COMPLETE
+
+        01              Still image, motion grammar and the 70 / 25 / 5 hierarchy.
+
+
+
+
+                        Foundations and Interface                                                                                                                         COMPLETE
+
+       02               Palette, type, grid, spacing, surfaces, actions, navigation and motion.
+
+
+
+
+                        Component and Interaction Library                                                                                                                   NEXT
+
+       03               Real header, flyout, hero, mechanisms, cards, records, footer and responsive states.
+
+
+
+
+THE MASTERPLAN REMAINS THE EXECUTION REFERENCE, NOT A VISUAL APPROVAL ARTIFACT                                                                                            FOUNDATIONS / AUGUST 2026
+

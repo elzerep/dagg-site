@@ -1,0 +1,367 @@
+/* Dagg Home direction B0 — Claude first cut: composition stylesheet
+ *
+ * Package: design/golden-standard/packages/P4R6-B0-CLAUDE.md
+ *
+ * SCOPE. Composition only, in one `b-` namespace. This file declares no
+ * token, no font face, no colour that is not a frozen token, and it does
+ * not restyle the shared chrome or fork a component's own appearance. It
+ * places accepted components inside this direction's grid and adds the one
+ * component the shared library does not have: the governed-exception mode
+ * in act 07.
+ *
+ * SECTION RHYTHM. Four act heights, chosen by argument, never one global
+ * padding repeated nine times — a repeated rhythm is the slide deck that
+ * P4R2 §5 and Foundations p.09 reject. Punctuation is short, the dominant
+ * proof is tall, the rest are medium, and the close carries its own rhythm
+ * from the accepted component.
+ *
+ * GROUNDS. Three page-ground changes, the maximum: Paper for the reading
+ * page, Lift for the stakes punctuation, and full-bleed Ink reserved for
+ * the final close. Every dark surface between them is a *contained*
+ * instrument, which is not a page-ground change.
+ *
+ * MOTION. This file adds no ambient animation and no loop. The only
+ * transition it declares is the 180 ms micro response on the one control
+ * it creates, and reduced motion removes it while keeping every label and
+ * the same final state.
+ */
+
+/* ==================================================================== *
+ * 1 · Act rhythm and grounds                                            *
+ * ==================================================================== */
+
+.b-act {
+  /* Local composition values. Declared on this direction's own scope
+     because tokens are declared once, in tokens.css. */
+  --b-instrument-rail: minmax(0, 3fr) minmax(0, 1.1fr);
+  --b-hero-split: minmax(0, 54fr) minmax(0, 46fr);
+}
+
+.b-act--hero {
+  padding-top: var(--space-7);
+  padding-bottom: var(--section-md);
+}
+
+/* Stakes: ground change 1 of 3. A short act — roughly 300 px tall on
+   desktop — that punctuates and does not argue. */
+.b-act--punct {
+  padding-block: var(--space-9);
+  background: var(--lift);
+  border-block: 1px solid var(--rule);
+}
+
+.b-act--md {
+  padding-block: var(--section-md);
+}
+
+/* The dominant proof act of this direction gets the tall rhythm. */
+.b-act--lg {
+  padding-block: var(--section-lg);
+}
+
+/* A hairline between consecutive acts on the same Paper ground, so the
+   reading page has structure. The other three act boundaries are already
+   drawn by a ground change — into Lift at act 02, back to Paper at act 03,
+   and into full-bleed Ink at the close — and do not take a rule as well. */
+.b-act--md + .b-act--md,
+.b-act--md + .b-act--lg,
+.b-act--lg + .b-act--md {
+  border-top: 1px solid var(--rule);
+}
+
+/* ==================================================================== *
+ * 2 · Act 01 · hero — conclusion above one carrier (archetype B)         *
+ * ==================================================================== */
+
+.b-hero {
+  display: grid;
+  gap: var(--space-7);
+}
+
+/* The H1 is widened from the catalog's 19ch default so the mandated
+   verbatim headline resolves inside the 2.5-line limit at every width
+   instead of breaking to three lines at the large end of the scale. */
+.b-hero__title {
+  max-width: 24ch;
+}
+
+.b-hero__lead {
+  margin-top: var(--space-5);
+  max-width: 54ch;
+}
+
+/* The record and the six states it will move through, stated as real
+   metadata in the first viewport: this direction shows its mechanism
+   before it explains it. */
+.b-spine {
+  display: grid;
+  gap: var(--space-2);
+  margin-top: var(--space-6);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--rule);
+}
+
+.b-spine > div {
+  display: grid;
+  grid-template-columns: 10ch minmax(0, 1fr);
+  gap: var(--space-4);
+}
+
+.b-spine dt,
+.b-spine dd {
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+  line-height: var(--lh-meta);
+  letter-spacing: var(--tracking-meta);
+  text-transform: uppercase;
+}
+
+.b-spine dt { color: var(--coral-deep); }
+.b-spine dd { color: var(--ink-2); }
+
+/* At the narrowest supported width the label column would leave the six
+   state names only a few characters per line, so the pair stacks — the
+   same recomposition the shared field lists make at 420 px. */
+@media (max-width: 419.98px) {
+  .b-spine > div {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-1);
+  }
+}
+
+.b-hero__carrier {
+  display: grid;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+/* The Decision Field frame is bounded, not full bleed: the warm page
+   remains the reading ground and the dark asset is one semantic moment
+   inside it (P4R2 §2, §5). */
+.b-hero__media img {
+  aspect-ratio: 1122 / 1402;
+  object-fit: cover;
+}
+
+.b-hero__signal {
+  align-self: stretch;
+}
+
+@media (min-width: 940px) {
+  .b-hero {
+    gap: var(--space-8);
+  }
+
+  .b-hero__carrier {
+    grid-template-columns: var(--b-hero-split);
+    gap: var(--space-6);
+  }
+
+  /* Above the collapse the desktop 16:10 frame is the selected source, so
+     the box follows that frame rather than reserving the portrait one. */
+  .b-hero__media img {
+    aspect-ratio: 1586 / 992;
+  }
+}
+
+/* ==================================================================== *
+ * 3 · Act 02 · stakes — typographic punctuation                          *
+ * ==================================================================== */
+
+.b-punct {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.b-punct__h {
+  max-width: 30ch;
+}
+
+.b-punct__p {
+  max-width: 52ch;
+}
+
+@media (min-width: 1024px) {
+  .b-punct {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    gap: var(--space-8);
+    align-items: end;
+  }
+}
+
+/* ==================================================================== *
+ * 4 · Act 03 · transformation — five decisions over one build plan       *
+ * ==================================================================== */
+
+.b-decision {
+  margin-top: var(--space-8);
+}
+
+/* ==================================================================== *
+ * 5 · Acts 04 and 05 · instrument-dominant acts with a narrow rail       *
+ *                                                                       *
+ * Roughly 3/1 (P4R5 §4.3). The rail carries the reading of the           *
+ * instrument; it never repeats what the instrument already shows.        *
+ * ==================================================================== */
+
+.b-record,
+.b-factory {
+  display: grid;
+  gap: var(--space-7);
+  margin-top: var(--space-8);
+  align-items: start;
+}
+
+.b-record__rail,
+.b-factory__rail {
+  display: grid;
+  gap: var(--space-6);
+  align-content: start;
+}
+
+/* The rail's conclusion already owns its rule, so it does not need the
+   catalog's top margin a second time. */
+.b-record__rail > * {
+  margin-top: 0;
+}
+
+@media (min-width: 940px) {
+  .b-record,
+  .b-factory {
+    grid-template-columns: var(--b-instrument-rail);
+    gap: var(--space-8);
+  }
+
+  .b-record__rail,
+  .b-factory__rail {
+    position: sticky;
+    top: 104px;
+  }
+}
+
+/* ==================================================================== *
+ * 6 · Act 07 · governed exception                                        *
+ *                                                                       *
+ * Two states of the same record. Both are static markup in reading       *
+ * order, so the act is complete with scripts blocked; direction.js       *
+ * creates the control and only then shows one state at a time. There is  *
+ * no fourth ink instrument here on purpose — three contained proofs are  *
+ * already present and a fourth would read as a dashboard wall.           *
+ * ==================================================================== */
+
+.b-boundary {
+  display: grid;
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+  padding: var(--space-6);
+  background: var(--lift);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-instrument);
+}
+
+.b-boundary__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.b-boundary__controls[hidden] {
+  display: none;
+}
+
+.b-boundary__controls button {
+  min-height: var(--target-min);
+  padding-inline: var(--space-5);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--motion-micro) var(--motion-ease),
+              border-color var(--motion-micro) var(--motion-ease),
+              color var(--motion-micro) var(--motion-ease);
+}
+
+.b-boundary__controls button:hover {
+  border-color: var(--ink);
+  background: var(--panel);
+}
+
+/* Coral marks the material human decision — here, the state in which a
+   person must act. It is never a decorative stripe. */
+.b-boundary__controls button[aria-pressed="true"] {
+  background: var(--coral);
+  border-color: var(--coral);
+  color: var(--ink);
+}
+
+.b-boundary__controls button:focus-visible {
+  outline: var(--focus-width) solid var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+.b-boundary__state {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.b-boundary__state[hidden] {
+  display: none;
+}
+
+/* Without scripts the two states sit one under the other and need a
+   divider; with scripts only one is ever present, so the divider is not
+   drawn against nothing. */
+.b-boundary__state + .b-boundary__state {
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--rule);
+}
+
+/* Sage marks the governed boundary. */
+.b-boundary__state--exception {
+  border-left: 3px solid var(--sage);
+  padding-left: var(--space-5);
+}
+
+@media (min-width: 940px) {
+  .b-boundary {
+    padding: var(--space-7);
+  }
+}
+
+/* Below 768 px the two mode controls stack full width and each keeps its
+   own 44 px target, matching how the shared two-surface mode group and the
+   shared action rows recompose at the same width. */
+@media (max-width: 767.98px) {
+  .b-boundary {
+    padding: var(--space-5);
+  }
+
+  .b-boundary__controls {
+    flex-direction: column;
+  }
+
+  .b-boundary__controls button {
+    width: 100%;
+  }
+
+  .b-boundary__state--exception {
+    padding-left: var(--space-4);
+  }
+}
+
+/* ==================================================================== *
+ * 7 · Reduced motion                                                     *
+ *                                                                       *
+ * The one transition this file declares is removed. Every label, every   *
+ * state and the same final state remain (Foundations p.13).              *
+ * ==================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .b-boundary__controls button {
+    transition: none;
+  }
+}

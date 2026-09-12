@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>We redesign how your company works — then build what makes it AI-native. · Dagg</title>
+<meta name="description" content="Dagg combines strategic foresight, company-building experience and engineering to decide what should change, build the agents or software the decision requires, and create a governed path into operation and learning.">
+<link rel="icon" href="/assets/dagg-symbol.png">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/golden-standard/geist/Geist-Variable.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/golden-standard/newsreader/Newsreader-Variable.woff2" crossorigin>
+<link rel="preload" as="image" type="image/avif" fetchpriority="high"
+      href="/design/golden-standard/image-system/direction-a-decision-field/delivery/hero-portrait-720.avif"
+      imagesrcset="/design/golden-standard/image-system/direction-a-decision-field/delivery/hero-portrait-360.avif 360w, /design/golden-standard/image-system/direction-a-decision-field/delivery/hero-portrait-720.avif 720w"
+      imagesizes="(min-width: 940px) 0px, calc(100vw - 2 * var(--page-gutter, 20px))"
+      media="(max-width: 939.98px)">
+<link rel="preload" as="image" type="image/avif" fetchpriority="high"
+      href="/design/golden-standard/image-system/direction-a-decision-field/delivery/hero-tall-520.avif"
+      imagesrcset="/design/golden-standard/image-system/direction-a-decision-field/delivery/hero-tall-520.avif 520w, /design/golden-standard/image-system/direction-a-decision-field/delivery/hero-tall-1040.avif 1040w"
+      imagesizes="(min-width: 1240px) 500px, 40vw"
+      media="(min-width: 940px)">
+<link rel="stylesheet" href="/design/golden-standard/system/tokens.css">
+<link rel="stylesheet" href="/design/golden-standard/system/chrome.css">
+<link rel="stylesheet" href="slice.css">
+<script src="slice.js"></script>
+</head>
+<body>
+
+<!-- ==================================================================== -->
+<!-- Accepted P3 global chrome, plus the one justified Build flyout       -->
+<!-- ==================================================================== -->
+<header class="chrome-header" data-chrome-header data-theme="warm" id="chrome-header">
+  <div class="page"><div class="field chrome-header__row">
+    <a class="chrome-header__brand" href="/preview/golden-standard/p4/selected/" data-production-href="/" aria-label="Dagg — Home">
+      <img data-logo-warm src="/assets/dagg-logotype-dark.png" alt="Dagg" width="1844" height="375">
+      <img data-logo-ink src="/assets/dagg-logotype.png" alt="Dagg" width="1844" height="375">
+    </a>
+    <details class="chrome-disclosure" data-disclosure>
+      <summary class="chrome-disclosure__summary" data-summary aria-expanded="false">
+        <span data-label-menu>Menu</span>
+        <span data-label-close hidden>Close</span>
+      </summary>
+      <div class="chrome-disclosure__panel" data-panel>
+        <nav class="chrome-nav" aria-label="Primary">
+          <ul class="chrome-nav__list">
+            <li><a class="chrome-nav__link" href="/preview/golden-standard/chrome/routes/transformation/" data-production-href="/transformation">Transformation</a></li>
+            <li><a class="chrome-nav__link" href="/preview/golden-standard/chrome/routes/workgraph/" data-production-href="/workgraph">WorkGraph</a></li>
+            <li class="flyout-item" data-flyout-item>
+              <a class="chrome-nav__link" href="/preview/golden-standard/chrome/routes/build/" data-production-href="/build">Build</a>
+              <details class="flyout" data-flyout>
+                <summary class="flyout__summary" data-flyout-summary aria-label="Build" aria-expanded="false" aria-controls="build-flyout-panel">
+                  <span class="flyout__chevron" aria-hidden="true"></span>
+                </summary>
+                <div class="flyout__panel" id="build-flyout-panel" data-flyout-panel>
+                  <ul class="flyout__list">
+                    <li><a class="flyout__link" href="/preview/golden-standard/chrome/routes/build/" data-production-href="/build">Build overview</a></li>
+                    <li><a class="flyout__link" href="/preview/golden-standard/chrome/routes/build/" data-production-href="/build/factory">Dagg Factory</a></li>
+                    <li><a class="flyout__link" href="/preview/golden-standard/chrome/routes/build/" data-production-href="/build/agents">Agents and custom software</a></li>
+                    <li><a class="flyout__link" href="/preview/golden-standard/chrome/routes/build/" data-production-href="/build/operating-role">Operating role</a></li>
+                  </ul>
+                  <!-- Coded build-record preview. No generated image, no invented customer. -->
+                  <div class="flyout__preview">
+                    <p class="flyout__provenance">Illustrative Factory build plan · not a client deployment</p>
+                    <ol class="flyout__states">
+                      <li>Context received</li>
+                      <li>Build plan</li>
+                      <li>Evaluation</li>
+                      <li data-resolved>Ready for governed review</li>
+                    </ol>
+                    <dl class="flyout__record">
+                      <div><dt>Permission:</dt> <dd>prepare only; never release.</dd></div>
+                      <div><dt>Release owner:</dt> <dd>Finance owner.</dd></div>
+                    </dl>
+                  </div>
+                </div>
+              </details>
+            </li>
+            <li><a class="chrome-nav__link" href="/preview/golden-standard/chrome/routes/impact/" data-production-href="/impact">Impact</a></li>
+            <li><a class="chrome-nav__link" href="/preview/golden-standard/chrome/routes/company/" data-production-href="/company">Company</a></li>
+          </ul>
+        </nav>
+        <a class="chrome-header__cta" href="/preview/golden-standard/chrome/routes/assessment/" data-production-href="/assessment">Start an assessment</a>
+      </div>
+    </details>
+  </div></div>
+</header>
+
+<main id="main">
+
+<!-- ==================================================================== -->
+<!-- ACT 1 · Hero. World: Decision Field. Instrument: coded record.        -->
+<!-- ==================================================================== -->
+<section class="act act--hero ground-paper" id="hero" data-act="1" data-header-theme="warm" aria-labelledby="hero-title">
+  <div class="page"><div class="field">
+
+    <div class="hero__grid">
+      <div class="hero__copy">
+        <p class="t-eyebrow">AI-native transformation</p>
+        <h1 class="t-h1 hero__title" id="hero-title">We redesign how your company works — then build what makes it AI-native.</h1>
+        <p class="t-lead hero__lead">Dagg combines strategic foresight, company-building experience and engineering to decide what should change, build the agents or software the decision requires, and create a governed path into operation and learning.</p>
+        <div class="actions">
+          <a class="action action--primary" href="/preview/golden-standard/chrome/routes/assessment/" data-production-href="/assessment">Start an assessment</a>
+          <a class="action action--quiet" href="#transform">See the decision model</a>
+        </div>
+      </div>
+
+      <figure class="hero__figure">
+        <picture>
+          <source type="image/avif" media="(min-width: 940px)"
+                  srcset="/design/golden-standard/image-system/direction-a-decision-field/delivery/hero-tall-520.avif 520w, /design/golden-standard/image-system/direction-a-decision-field/delivery/hero-tall-1040.avif 1040w"
+                  sizes="(min-width: 1240px) 500px, 40vw">
+          <source type="image/webp" media="(min-width: 940px)"
+                  srcset="/design/golden-standard/image-system/direction-a-decision-field/delivery/hero-tall-520.webp 520w, /design/golden-standard/image-system/direction-a-decision-field/delivery/hero-tall-1040.webp 1040w"
+                  sizes="(min-width: 1240px) 500px, 40vw">
+          <source type="image/jpeg" media="(min-width: 940px)"
+                  srcset="/design/golden-standard/image-system/direction-a-decision-field/delivery/hero-tall-520.jpg 520w, /design/golden-standard/image-system/direction-a-decision-field/delivery/hero-tall-1040.jpg 1040w"
+                  sizes="(min-width: 1240px) 500px, 40vw">
+          <source type="image/avif"
+                  srcset="/design/golden-standard/image-system/direction-a-decision-field/delivery/hero-portrait-360.avif 360w, /design/golden-standard/image-system/direction-a-decision-field/delivery/hero-portrait-720.avif 720w"
+                  sizes="100vw">
+          <source type="image/webp"
+                  srcset="/design/golden-standard/image-system/direction-a-decision-field/delivery/hero-portrait-360.webp 360w, /design/golden-standard/image-system/direction-a-decision-field/delivery/hero-portrait-720.webp 720w"
+                  sizes="100vw">
+          <img class="hero__image" src="/design/golden-standard/image-system/direction-a-decision-field/delivery/hero-portrait-360.jpg"
+               alt="" width="360" height="450" fetchpriority="high" decoding="async">
+        </picture>
+      </figure>
+
+      <!-- Contained proof mode: Operational Evidence, coded, not generated. -->
+      <figure class="hero__artifact-wrap">
+        <div class="instrument artifact" data-lifecycle>
+          <div class="instrument__head">
+            <h2 class="instrument__title" id="artifact-title">Supplier payment exception</h2>
+            <p class="t-meta instrument__provenance">Representative WorkGraph record · synthetic data</p>
+          </div>
+
+          <ol class="lifecycle" data-lifecycle-track aria-labelledby="artifact-title">
+            <li class="lifecycle__step" data-tone="machine"><span class="lifecycle__name">Mismatch found</span></li>
+            <li class="lifecycle__sep" aria-hidden="true">→</li>
+            <li class="lifecycle__step" data-tone="machine"><span class="lifecycle__name">Draft prepared</span></li>
+            <li class="lifecycle__sep" aria-hidden="true">→</li>
+            <li class="lifecycle__step" data-tone="boundary"><span class="lifecycle__name">Release withheld</span></li>
+            <li class="lifecycle__sep" aria-hidden="true">→</li>
+            <li class="lifecycle__step" data-tone="decision"><span class="lifecycle__name">Finance decides</span></li>
+            <li class="lifecycle__sep" aria-hidden="true">→</li>
+            <li class="lifecycle__step" data-tone="machine"><span class="lifecycle__name">Record updated</span></li>
+          </ol>
+
+          <p class="instrument__summary">A payment mismatch is found. The agent may prepare a draft, but it stays withheld until Finance resolves the exception.</p>
+
+          <div class="motion-controls" data-motion-controls hidden>
+            <button type="button" class="motion-button" data-motion-pause aria-pressed="false">Pause motion</button>
+            <button type="button" class="motion-button" data-motion-replay>Replay</button>
+          </div>
+        </div>
+        <figcaption class="hero__caption">
+          <p class="t-note">The same company context moves from evidence to decision, build and governed operation.</p>
+          <p class="t-meta t-disclosure">All artifacts on this page are constructed examples, not client data or production deployments.</p>
+        </figcaption>
+      </figure>
+    </div>
+
+  </div></div>
+</section>
+
+<!-- ==================================================================== -->
+<!-- ACT 2 · Stakes. Editorial punctuation.                                -->
+<!-- ==================================================================== -->
+<section class="act act--punctuation ground-paper" id="stakes" data-act="2" data-header-theme="warm" aria-labelledby="stakes-title">
+  <div class="page"><div class="field">
+    <div class="punctuation">
+      <h2 class="t-h2 punctuation__line" id="stakes-title">A company moves at the speed of its handoffs.</h2>
+      <p class="t-lead punctuation__body">Machines can execute continuously. A company still slows where context, ownership and decisions must be reconstructed by hand. Those handoffs are where the gap compounds.</p>
+    </div>
+  </div></div>
+</section>
+
+<!-- ==================================================================== -->
+<!-- ACT 3 · Transform and decide. World + continuum.                      -->
+<!-- ==================================================================== -->
+<section class="act ground-lift" id="transform" data-act="3" data-header-theme="warm" aria-labelledby="transform-title">
+  <div class="page"><div class="field">
+
+    <div class="act__head act__head--split">
+      <div class="act__head-main">
+        <p class="t-eyebrow">The strategic decision</p>
+        <h2 class="t-h2" id="transform-title">The first decision is what not to automate.</h2>
+      </div>
+      <div class="act__head-aside">
+        <p class="t-lead">We map how work actually moves, then choose what to preserve, simplify, automate, rebuild or retire. The smallest justified intervention wins.</p>
+        <p class="t-meta t-note-meta">Five outcomes. The build is a result, never a premise.</p>
+      </div>
+    </div>
+
+    <div class="split split--45">
+      <figure class="split__media">
+        <picture>
+          <source type="image/avif" media="(min-width: 768px)"
+                  srcset="/design/golden-standard/image-system/direction-a-decision-field/delivery/decide-editorial-560.avif 560w, /design/golden-standard/image-system/direction-a-decision-field/delivery/decide-editorial-840.avif 840w, /design/golden-standard/image-system/direction-a-decision-field/delivery/decide-editorial-1120.avif 1120w"
+                  sizes="(min-width: 1240px) 545px, 44vw">
+          <source type="image/webp" media="(min-width: 768px)"
+                  srcset="/design/golden-standard/image-system/direction-a-decision-field/delivery/decide-editorial-560.webp 560w, /design/golden-standard/image-system/direction-a-decision-field/delivery/decide-editorial-840.webp 840w, /design/golden-standard/image-system/direction-a-decision-field/delivery/decide-editorial-1120.webp 1120w"
+                  sizes="(min-width: 1240px) 545px, 44vw">
+          <source type="image/jpeg" media="(min-width: 768px)"
+                  srcset="/design/golden-standard/image-system/direction-a-decision-field/delivery/decide-editorial-560.jpg 560w, /design/golden-standard/image-system/direction-a-decision-field/delivery/decide-editorial-840.jpg 840w, /design/golden-standard/image-system/direction-a-decision-field/delivery/decide-editorial-1120.jpg 1120w"
+                  sizes="(min-width: 1240px) 545px, 44vw">
+          <source type="image/avif"
+                  srcset="/design/golden-standard/image-system/direction-a-decision-field/delivery/decide-portrait-360.avif 360w, /design/golden-standard/image-system/direction-a-decision-field/delivery/decide-portrait-720.avif 720w"
+                  sizes="100vw">
+          <source type="image/webp"
+                  srcset="/design/golden-standard/image-system/direction-a-decision-field/delivery/decide-portrait-360.webp 360w, /design/golden-standard/image-system/direction-a-decision-field/delivery/decide-portrait-720.webp 720w"
+                  sizes="100vw">
+          <img src="/design/golden-standard/image-system/direction-a-decision-field/delivery/decide-portrait-360.jpg"
+               alt="" width="360" height="450" loading="lazy" decoding="async">
+        </picture>
+      </figure>
+
+      <div class="split__body">
+        <div class="continuum" data-continuum>
+          <details class="outcome" name="outcome" data-outcome="preserve" open>
+            <summary class="outcome__summary"><span class="outcome__name">Preserve</span></summary>
+            <div class="outcome__body">
+              <p class="outcome__title">Keep the work as it is.</p>
+              <dl class="outcome__when">
+                <div><dt>Choose when</dt><dd>The work is proportionate to its value, and human judgment is essential.</dd></div>
+                <div><dt>Do not choose when</dt><dd>Delay, rework or unclear ownership is quietly compounding.</dd></div>
+              </dl>
+            </div>
+          </details>
+          <details class="outcome" name="outcome" data-outcome="simplify">
+            <summary class="outcome__summary"><span class="outcome__name">Simplify</span></summary>
+            <div class="outcome__body">
+              <p class="outcome__title">Remove work before automating it.</p>
+              <dl class="outcome__when">
+                <div><dt>Choose when</dt><dd>The outcome matters but steps or approvals no longer do.</dd></div>
+                <div><dt>Do not choose when</dt><dd>A control or exception protects something material.</dd></div>
+              </dl>
+            </div>
+          </details>
+          <details class="outcome" name="outcome" data-outcome="automate">
+            <summary class="outcome__summary"><span class="outcome__name">Automate</span></summary>
+            <div class="outcome__body">
+              <p class="outcome__title">Let agents execute a stable path.</p>
+              <dl class="outcome__when">
+                <div><dt>Choose when</dt><dd>Inputs, rules, exceptions and success criteria can be made explicit.</dd></div>
+                <div><dt>Do not choose when</dt><dd>The operating logic is still contested or changing.</dd></div>
+              </dl>
+            </div>
+          </details>
+          <details class="outcome" name="outcome" data-outcome="rebuild">
+            <summary class="outcome__summary"><span class="outcome__name">Rebuild</span></summary>
+            <div class="outcome__body">
+              <p class="outcome__title">Redesign the workflow and its software together.</p>
+              <dl class="outcome__when">
+                <div><dt>Choose when</dt><dd>The current system preserves the wrong process or blocks the target operating model.</dd></div>
+                <div><dt>Do not choose when</dt><dd>A bounded automation is enough.</dd></div>
+              </dl>
+            </div>
+          </details>
+          <details class="outcome" name="outcome" data-outcome="retire">
+            <summary class="outcome__summary"><span class="outcome__name">Retire</span></summary>
+            <div class="outcome__body">
+              <p class="outcome__title">Stop doing the work.</p>
+              <dl class="outcome__when">
+                <div><dt>Choose when</dt><dd>The activity no longer changes a decision, protects a requirement or serves the customer.</dd></div>
+                <div><dt>Do not choose when</dt><dd>The value is merely hidden or poorly measured.</dd></div>
+              </dl>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+
+    <div class="act__foot">
+      <p class="t-close">A recommendation is not complete until it names an owner and the evidence that would change it.</p>
+      <p class="t-body act__foot-note">People set intent, define requirements, decide material exceptions and verify outcomes. AI carries routine execution inside those boundaries.</p>
+      <a class="textlink" href="/preview/golden-standard/chrome/routes/transformation/" data-production-href="/transformation">Explore Transformation</a>
+    </div>
+
+  </div></div>
+</section>
+
+<!-- ==================================================================== -->
+<!-- ACT 4 · WorkGraph. Instrument chapter opens on Ink.                   -->
+<!-- ==================================================================== -->
+<section class="act ground-lift" id="workgraph" data-act="4" data-header-theme="warm" aria-labelledby="workgraph-title">
+  <div class="page"><div class="field">
+
+    <div class="act__head act__head--split">
+      <div class="act__head-main">
+        <p class="t-eyebrow">Company context</p>
+        <h2 class="t-h2" id="workgraph-title">The map becomes part of the system.</h2>
+      </div>
+      <div class="act__head-aside">
+        <p class="t-lead">WorkGraph keeps the workflow, evidence, decisions, exceptions and controls behind an intervention in one company-specific context layer. The same record informs strategy, the Factory build and what happens in operation.</p>
+      </div>
+    </div>
+
+    <div class="instrument wg" data-workgraph>
+      <div class="wg__rail" data-wg-rail>
+        <a class="wg__stage" id="wg-tab-map" href="#wg-map" data-wg-tab data-stage="map">Map</a>
+        <a class="wg__stage" id="wg-tab-decide" href="#wg-decide" data-wg-tab data-stage="decide">Decide</a>
+        <a class="wg__stage" id="wg-tab-build" href="#wg-build" data-wg-tab data-stage="build">Build</a>
+        <a class="wg__stage" id="wg-tab-govern" href="#wg-govern" data-wg-tab data-stage="govern">Govern</a>
+        <a class="wg__stage" id="wg-tab-operate" href="#wg-operate" data-wg-tab data-stage="operate">Operate</a>
+      </div>
+
+      <div class="wg__stack">
+        <div class="wg__panels">
+          <section class="wg__panel" id="wg-map" data-wg-panel data-stage="map">
+            <h3 class="wg__panel-title">Map</h3>
+            <p class="wg__narrative">Approved sources reveal an invoice-receipt mismatch requiring Finance review.</p>
+          </section>
+          <section class="wg__panel" id="wg-decide" data-wg-panel data-stage="decide">
+            <h3 class="wg__panel-title">Decide</h3>
+            <p class="wg__narrative">Automate preparation; preserve human approval for release. Finance owns the decision and the exception evidence that could reverse it.</p>
+          </section>
+          <section class="wg__panel" id="wg-build" data-wg-panel data-stage="build">
+            <h3 class="wg__panel-title">Build</h3>
+            <p class="wg__narrative">Factory receives the purchase order, goods receipt, invoice, payment policy, permission boundary and evaluation cases.</p>
+          </section>
+          <section class="wg__panel" id="wg-govern" data-wg-panel data-stage="govern">
+            <h3 class="wg__panel-title">Govern</h3>
+            <p class="wg__narrative">The agent may prepare a payment draft from approved sources. Only the accountable Finance owner may release it.</p>
+          </section>
+          <section class="wg__panel" id="wg-operate" data-wg-panel data-stage="operate">
+            <h3 class="wg__panel-title">Operate</h3>
+            <p class="wg__narrative">When source records disagree, the draft is withheld from release. Finance chooses whether to correct, reject or return the item to the manual path. The decision and evidence return to WorkGraph.</p>
+          </section>
+        </div>
+
+        <div class="wg__record">
+          <p class="t-meta instrument__provenance">Representative WorkGraph record · synthetic data</p>
+          <dl class="record">
+            <div class="record__row" data-field="source"><dt>Source:</dt><dd>purchase order, goods receipt, invoice, payment policy.</dd></div>
+            <div class="record__row" data-field="captured"><dt>Captured state:</dt><dd>invoice and receipt disagree; release is awaiting review.</dd></div>
+            <div class="record__row" data-field="owner" data-tone="decision"><dt>Owner:</dt><dd>Finance owner.</dd></div>
+            <div class="record__row" data-field="permission" data-tone="boundary"><dt>Permission:</dt><dd>agent prepares; Finance releases.</dd></div>
+            <div class="record__row" data-field="decision" data-tone="decision"><dt>Decision state:</dt><dd>automate preparation; human approval for release.</dd></div>
+            <div class="record__row" data-field="exception"><dt>Exception:</dt><dd>source mismatch.</dd></div>
+            <div class="record__row" data-field="system"><dt>System:</dt><dd>finance platform.</dd></div>
+            <div class="record__row" data-field="work-item"><dt>Work item:</dt><dd>payment exception.</dd></div>
+            <div class="record__row" data-field="provenance"><dt>Provenance:</dt><dd>this synthetic record.</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <div class="act__foot act__foot--split">
+      <p class="t-close">Each decision, evaluation and operating record can strengthen the next intervention. Models can change; company context and learning need not restart from zero.</p>
+      <a class="textlink" href="/preview/golden-standard/chrome/routes/workgraph/" data-production-href="/workgraph">Explore WorkGraph</a>
+    </div>
+
+  </div></div>
+</section>
+
+<!-- ==================================================================== -->
+<!-- ACT 5 · Factory. Instrument chapter continues on Ink.                 -->
+<!-- ==================================================================== -->
+<section class="act ground-paper" id="factory" data-act="5" data-header-theme="warm" aria-labelledby="factory-title">
+  <div class="page"><div class="field">
+
+    <div class="act__head act__head--split">
+      <div class="act__head-main">
+        <p class="t-eyebrow">From decision to execution</p>
+        <h2 class="t-h2" id="factory-title">The decision becomes a build with a boundary.</h2>
+      </div>
+      <div class="act__head-aside">
+        <p class="t-lead">Dagg Factory turns the intervention into an agent or software with the context, tools, permissions and evaluations needed to act within the decision.</p>
+        <p class="t-body">Reusable tools and evaluations are designed to improve the next build. The delivery system is designed to keep client-specific context out of reusable cross-engagement patterns.</p>
+      </div>
+    </div>
+
+    <div class="instrument factory" data-factory>
+      <div class="factory__bar">
+        <div class="factory__modes" data-factory-modes>
+          <a class="factory__mode" id="fx-tab-automate" href="#fx-automate" data-factory-tab data-mode="automate">Automate what stays</a>
+          <a class="factory__mode" id="fx-tab-rebuild" href="#fx-rebuild" data-factory-tab data-mode="rebuild">Rebuild what should change</a>
+        </div>
+        <p class="t-meta instrument__provenance" data-factory-provenance>Illustrative Factory build plan · not a client deployment</p>
+      </div>
+
+      <div class="factory__progress">
+        <ol class="buildstates" data-buildstates>
+          <li class="buildstate">Context received</li>
+          <li class="buildstate">Build plan</li>
+          <li class="buildstate">Evaluation</li>
+          <li class="buildstate" data-terminal>Ready for governed review</li>
+        </ol>
+      </div>
+
+      <div class="factory__panels">
+        <section class="factory__panel" id="fx-automate" data-factory-panel data-mode="automate">
+          <h3 class="factory__panel-title">Automate what stays</h3>
+          <dl class="plan">
+            <div class="plan__row"><dt>Intervention:</dt><dd>prepare the payment draft; preserve human approval for release.</dd></div>
+            <div class="plan__row" data-tone="boundary"><dt>Permission:</dt><dd>prepare only; never release.</dd></div>
+            <div class="plan__row" data-tone="decision"><dt>Release owner:</dt><dd>Finance owner.</dd></div>
+            <div class="plan__row"><dt>Context:</dt><dd>purchase order, goods receipt, invoice and payment policy.</dd></div>
+            <div class="plan__row"><dt>Tools:</dt><dd>approved finance-system read and payment-draft tool.</dd></div>
+            <div class="plan__row"><dt>Evaluation:</dt><dd>when source records disagree, the draft is withheld from release and the exception is routed to the Finance owner.</dd></div>
+            <div class="plan__row" data-tone="boundary"><dt>Way back:</dt><dd>disable the agent, remove the draft and return the item to the manual queue.</dd></div>
+          </dl>
+        </section>
+        <section class="factory__panel" id="fx-rebuild" data-factory-panel data-mode="rebuild">
+          <h3 class="factory__panel-title">Rebuild what should change</h3>
+          <dl class="plan">
+            <div class="plan__row"><dt>Intervention:</dt><dd>purpose-built exception workspace.</dd></div>
+            <div class="plan__row" data-tone="boundary"><dt>Application boundary:</dt><dd>exception review and draft state; finance remains the system of record.</dd></div>
+            <div class="plan__row" data-tone="decision"><dt>Release owner:</dt><dd>Finance owner.</dd></div>
+            <div class="plan__row"><dt>Target workflow:</dt><dd>a mismatch opens review; the draft cannot advance until resolved.</dd></div>
+            <div class="plan__row"><dt>Interfaces:</dt><dd>read source records; return the reviewed decision.</dd></div>
+            <div class="plan__row"><dt>Behavior:</dt><dd>show the conflict, capture the owner decision and update draft state.</dd></div>
+            <div class="plan__row"><dt>Acceptance test:</dt><dd>a mismatch blocks release; only the Finance owner resolves it.</dd></div>
+            <div class="plan__row" data-tone="boundary"><dt>Way back:</dt><dd>disable the write path; return the item to the manual queue.</dd></div>
+          </dl>
+        </section>
+      </div>
+    </div>
+
+    <div class="act__foot act__foot--split">
+      <a class="textlink" href="/preview/golden-standard/chrome/routes/build/" data-production-href="/build">Explore Build</a>
+    </div>
+
+  </div></div>
+</section>
+
+<!-- ==================================================================== -->
+<!-- ACT 6 · Govern, operate and prove. Warm ground, contained instrument. -->
+<!-- ==================================================================== -->
+<section class="act ground-paper" id="operate" data-act="6" data-header-theme="warm" aria-labelledby="operate-title">
+  <div class="page"><div class="field">
+
+    <div class="act__head act__head--split">
+      <div class="act__head-main">
+        <p class="t-eyebrow">Human control</p>
+        <h2 class="t-h2" id="operate-title">Execution is not complete until it runs within bounds.</h2>
+      </div>
+      <div class="act__head-aside">
+        <p class="t-lead">The client can run the result, or Dagg can take a defined operating role. In either model, action stops at material exceptions, accountable people decide and the record returns evidence to the next cycle.</p>
+      </div>
+    </div>
+
+    <div class="operating">
+      <div class="instrument ledger" data-operating>
+        <div class="instrument__head">
+          <h3 class="instrument__title" id="oprec-title">One material exception</h3>
+          <p class="t-meta instrument__provenance">Illustrative operating record · constructed example</p>
+          <div class="motion-controls" data-motion-controls hidden>
+            <button type="button" class="motion-button" data-motion-pause aria-pressed="false">Pause motion</button>
+            <button type="button" class="motion-button" data-motion-replay>Replay</button>
+          </div>
+        </div>
+
+        <ol class="states" data-states aria-labelledby="oprec-title">
+          <li class="state" id="op-intent" data-state="intent" data-tone="machine">
+            <h4 class="state__name"><button type="button" class="state__button" data-state-button>Intent received</button></h4>
+            <p class="state__text">Prepare a supplier payment draft for Finance review from approved company records.</p>
+          </li>
+          <li class="state" id="op-context" data-state="context" data-tone="machine">
+            <h4 class="state__name"><button type="button" class="state__button" data-state-button>Context resolved</button></h4>
+            <p class="state__text">The purchase order, goods receipt, invoice and payment policy are resolved from approved sources.</p>
+          </li>
+          <li class="state" id="op-action" data-state="action" data-tone="machine">
+            <h4 class="state__name"><button type="button" class="state__button" data-state-button>Action proposed</button></h4>
+            <p class="state__text">The agent prepares a payment draft from approved sources. It remains withheld from release.</p>
+          </li>
+          <li class="state" id="op-boundary" data-state="boundary" data-tone="boundary">
+            <h4 class="state__name"><button type="button" class="state__button" data-state-button>Boundary triggered</button></h4>
+            <p class="state__text">The invoice and goods receipt disagree. The draft remains withheld and the exception is routed to Finance.</p>
+          </li>
+          <li class="state" id="op-decision" data-state="decision" data-tone="decision">
+            <h4 class="state__name"><button type="button" class="state__button" data-state-button>Human decision recorded</button></h4>
+            <p class="state__text">The Finance owner confirms the exception and returns the item for source correction.</p>
+          </li>
+          <li class="state" id="op-outcome" data-state="outcome" data-tone="boundary">
+            <h4 class="state__name"><button type="button" class="state__button" data-state-button>Outcome and way back recorded</button></h4>
+            <p class="state__text">No payment proceeds. The decision and evidence remain recorded; the agent can be disabled and the item returned to the manual queue.</p>
+          </li>
+        </ol>
+      </div>
+
+      <aside class="control-rail" aria-labelledby="oprec-title">
+        <dl class="control-rail__list">
+          <div class="control-rail__row" data-tone="boundary"><dt>Boundary:</dt><dd>approved sources and tools only.</dd></div>
+          <div class="control-rail__row" data-tone="decision"><dt>Escalation:</dt><dd>material exceptions require an accountable owner.</dd></div>
+          <div class="control-rail__row" data-tone="boundary"><dt>Way back:</dt><dd>each permitted action needs a defined pause, inspection or reversal path.</dd></div>
+        </dl>
+        <p class="t-close control-rail__close">Speed matters only when the company can see what happened, why it happened and who remains accountable.</p>
+      </aside>
+    </div>
+
+    <!-- Impact gateway: the light returns before the close. -->
+    <div class="gateway" aria-labelledby="gateway-title">
+      <div class="gateway__copy">
+        <p class="t-eyebrow">Impact</p>
+        <h3 class="t-h3" id="gateway-title">How we evidence change — and where the evidence stops.</h3>
+        <p class="t-body">Impact distinguishes companies built from companies transformed. Evidence is published only with a verified starting condition, strategic thesis, operating change, outcome, timeframe, source and limits.</p>
+        <a class="textlink" href="/preview/golden-standard/chrome/routes/impact/" data-production-href="/impact">Explore Impact</a>
+      </div>
+      <figure class="gateway__media">
+        <picture>
+          <source type="image/avif"
+                  srcset="/design/golden-standard/image-system/direction-a-decision-field/delivery/impact-editorial-560.avif 560w, /design/golden-standard/image-system/direction-a-decision-field/delivery/impact-editorial-840.avif 840w, /design/golden-standard/image-system/direction-a-decision-field/delivery/impact-editorial-1120.avif 1120w"
+                  sizes="(min-width: 1240px) 545px, (min-width: 768px) 44vw, 100vw">
+          <source type="image/webp"
+                  srcset="/design/golden-standard/image-system/direction-a-decision-field/delivery/impact-editorial-560.webp 560w, /design/golden-standard/image-system/direction-a-decision-field/delivery/impact-editorial-840.webp 840w, /design/golden-standard/image-system/direction-a-decision-field/delivery/impact-editorial-1120.webp 1120w"
+                  sizes="(min-width: 1240px) 545px, (min-width: 768px) 44vw, 100vw">
+          <img src="/design/golden-standard/image-system/direction-a-decision-field/delivery/impact-editorial-560.jpg"
+               alt="" width="560" height="373" loading="lazy" decoding="async">
+        </picture>
+      </figure>
+    </div>
+
+  </div></div>
+</section>
+
+<!-- ==================================================================== -->
+<!-- ACT 7 · Assessment close.                                             -->
+<!-- ==================================================================== -->
+<section class="act act--close ground-ink on-ink" id="assessment" data-act="7" data-header-theme="ink" aria-labelledby="assessment-title">
+  <div class="page"><div class="field">
+    <div class="close">
+      <p class="t-eyebrow">Start with one path</p>
+      <h2 class="t-h2 close__title" id="assessment-title">Make the first decision before making the first build.</h2>
+      <p class="t-lead close__lead">An assessment follows one material path to a decision. You leave with the evidence to act — or the reason not to.</p>
+      <ul class="deliverables">
+        <li>Operating map</li>
+        <li>Recommendation or refusal</li>
+        <li>Intervention brief</li>
+        <li>Accountable owner</li>
+        <li>Evidence that would change the decision</li>
+      </ul>
+      <p class="t-meta close__boundary">The assessment is a decision instrument, not a commitment to a build.</p>
+      <a class="action action--primary" href="/preview/golden-standard/chrome/routes/assessment/" data-production-href="/assessment">Start an assessment</a>
+    </div>
+  </div></div>
+</section>
+
+</main>
+
+<footer class="chrome-footer on-ink" data-header-theme="ink">
+  <div class="page"><div class="field">
+    <div class="chrome-footer__grid">
+      <div class="chrome-footer__brand">
+        <img class="chrome-footer__logo" src="/assets/dagg-logotype.png" alt="Dagg" width="1844" height="375">
+        <p class="chrome-footer__descriptor">Strategy, context and execution for the AI-native company.</p>
+      </div>
+      <div class="chrome-footer__columns">
+        <div>
+          <h2 class="chrome-footer__group-title" id="footer-explore">Explore</h2>
+          <ul class="chrome-footer__list" aria-labelledby="footer-explore">
+            <li><a class="chrome-footer__link" href="/preview/golden-standard/chrome/routes/transformation/" data-production-href="/transformation">Transformation</a></li>
+            <li><a class="chrome-footer__link" href="/preview/golden-standard/chrome/routes/workgraph/" data-production-href="/workgraph">WorkGraph</a></li>
+            <li><a class="chrome-footer__link" href="/preview/golden-standard/chrome/routes/build/" data-production-href="/build">Build</a></li>
+            <li><a class="chrome-footer__link" href="/preview/golden-standard/chrome/routes/impact/" data-production-href="/impact">Impact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="chrome-footer__group-title" id="footer-company">Company</h2>
+          <ul class="chrome-footer__list" aria-labelledby="footer-company">
+            <li><a class="chrome-footer__link" href="/preview/golden-standard/chrome/routes/company/" data-production-href="/company">Company</a></li>
+            <li><a class="chrome-footer__link" href="/preview/golden-standard/chrome/routes/assessment/" data-production-href="/assessment">Start an assessment</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="chrome-footer__group-title" id="footer-trust">Trust &amp; contact</h2>
+          <ul class="chrome-footer__list" aria-labelledby="footer-trust">
+            <li><a class="chrome-footer__link" href="/preview/golden-standard/chrome/routes/trust/" data-production-href="/trust">Trust</a></li>
+            <li><a class="chrome-footer__link" href="mailto:hello@dagg.ai" data-production-href="mailto:hello@dagg.ai">hello@dagg.ai</a></li>
+            <li><a class="chrome-footer__link" href="/preview/golden-standard/chrome/routes/privacy/" data-production-href="/privacy">Privacy</a></li>
+            <li><a class="chrome-footer__link" href="/preview/golden-standard/chrome/routes/terms/" data-production-href="/terms">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="chrome-footer__legal">© 2026 Dagg. All rights reserved.</div>
+  </div></div>
+</footer>
+
+<script src="/design/golden-standard/system/chrome.js" defer></script>
+</body>
+</html>

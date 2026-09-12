@@ -1,0 +1,102 @@
+{
+  "package": "P4R6-B1-SYNTHESIS",
+  "direction": "B",
+  "status": "source-complete-render-pending",
+  "readerConclusion": "Dagg has built a concrete transformation mechanism.",
+  "resolvedVisibleWords": 376,
+  "inputs": {
+    "codex": "preview/golden-standard/directions/b0-codex",
+    "claude": "preview/golden-standard/directions/b0-claude",
+    "resolved": "preview/golden-standard/directions/b1"
+  },
+  "equalEligibility": {
+    "staticChecker": "pass",
+    "codexVisibleWords": 342,
+    "claudeVisibleWords": 379,
+    "requiredVisibleWords": "270-380",
+    "nineActOrder": [
+      "hero",
+      "stakes",
+      "transformation",
+      "workgraph",
+      "factory",
+      "surfaces",
+      "operate-trust",
+      "impact",
+      "assessment"
+    ],
+    "sharedAssetPair": [
+      "p4r6-b-home-hero-04-desktop",
+      "p4r6-b-home-hero-04-mobile"
+    ],
+    "semanticMismatchesRepairedInB1": [
+      "Codex named four approved sources but rendered three.",
+      "Claude's decision continuum did not update the Factory plan.",
+      "Both cuts used approval wording rejected by P1R2."
+    ]
+  },
+  "transferableDecisions": {
+    "codex": [
+      "Use WG-034 as one persistent record from Context through Evidence.",
+      "Make the selected strategic decision rewrite the Factory plan and all six Factory stages.",
+      "Keep the page sparse, mechanism-forward and within the lower half of the B copy budget.",
+      "Use one two-surface carrier that preserves record, owner and permission."
+    ],
+    "claude": [
+      "Separate the B04 Decision Field from Operational Evidence instead of captioning the image as a product record.",
+      "Use four explicit WorkGraph source families around one retained record.",
+      "Use a warm varied section rhythm with Factory as the only large proof act.",
+      "Expose bounded and governed-exception states through one finite control."
+    ]
+  },
+  "tradeoffs": {
+    "codexOptimizes": "Tight product discovery, state continuity and direct decision-to-build causality.",
+    "codexGivesUp": "The B04 image role was semantically blurred and the WorkGraph source count was internally inconsistent.",
+    "claudeOptimizes": "Editorial rhythm, correct image-language separation, explicit source inspection and a stronger exception state.",
+    "claudeGivesUp": "The strategic choice did not propagate into Factory, weakening the core product-mechanism thesis.",
+    "directorDecision": "Codex supplies the narrative and interaction spine; Claude supplies the warm composition, source completeness, image-role discipline and exception control."
+  },
+  "selectedSpine": {
+    "narrative": "One WG-034 record moves through Context, Decision, Build, Permission, Action and Evidence.",
+    "composition": "Warm 45/55 opening, short stakes punctuation, medium decision and WorkGraph acts, one large Factory act, contained two-surface and exception proofs, restrained Impact and assessment close.",
+    "copy": "The exact B opening, Codex-level compression and P1R2 approval language.",
+    "imageOrchestration": "B04 remains a bounded Decision Field with restrained Machine Signal; the operating record is a separate coded layer in the same carrier.",
+    "interaction": "Decision-to-Factory propagation, finite Factory pass, shared two-surface mode and a two-state governed-exception control."
+  },
+  "rejectedAveraging": [
+    "Do not stack Claude's separate Machine Signal instrument above Codex's six-state lifecycle; the hero has one coherent carrier.",
+    "Do not concatenate both pages' explanatory rails or repeat dark product instruments.",
+    "Do not mix two record names or two examples; WG-034 remains the single synthetic object.",
+    "Do not relabel B04 as Operational Evidence, a product screenshot or a live record."
+  ],
+  "fixes": [
+    "Added Messages as the fourth approved WorkGraph source.",
+    "Changed all visible and scripted release language to human approval for release or equivalent accountable approval wording.",
+    "Separated the B04 Decision Field caption from the WG-034 operating-record label.",
+    "Preserved Codex's decision-to-Factory state model.",
+    "Added Claude's progressively enhanced governed-exception toggle with complete no-JavaScript reading order.",
+    "Kept Factory as the single large proof act and retained warm reading grounds around contained ink instruments."
+  ],
+  "imageRole": {
+    "asset": "B04",
+    "primary": "Decision Field",
+    "support": "restrained Machine Signal",
+    "narrativeJob": "Fragmented company context crosses one coral judgment seam and resolves into legible planes held by a muted-sage permission field.",
+    "operationalEvidenceBoundary": "WG-034 is coded HTML below the image and is explicitly illustrative synthetic data; the image is never claimed as the record, a product screenshot or client evidence.",
+    "pageMapAssessment": "Source composition follows Home hero Decision Field plus Machine Signal, WorkGraph Decision Field plus contained Operational Evidence, and Build Operational Evidence plus finite state motion. Rendered acceptance remains pending."
+  },
+  "authoritiesRead": [
+    "design/golden-standard/authority/Dagg-Image-Language-System.pdf",
+    "design/golden-standard/authority/Dagg-Design-System-Foundations.pdf",
+    "design/golden-standard/authority/Dagg-Component-and-Interaction-Library.pdf",
+    "design/golden-standard/packages/P4R5B-COMPONENT-INTELLIGENCE-REVISION.md",
+    "design/golden-standard/packages/P4R2-THREE-WAY-DIRECTION-GATE.md",
+    "design/golden-standard/image-system/IMAGE-PRODUCTION-PROTOCOL.md",
+    "design/golden-standard/image-system/IMAGE-LIBRARY-CATALOG.md"
+  ],
+  "limitations": [
+    "No browser was connected in the implementing subagent, so desktop, mobile, touch, keyboard, reduced-motion, no-JavaScript, overflow, console and B04 mobile-seam rendering are not claimed.",
+    "The shared assembler was intentionally not run; B1 has source files only until the integration owner assembles it.",
+    "Equal visual evidence and peer-comparison screenshots remain required before Christian sees B1."
+  ]
+}

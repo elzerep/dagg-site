@@ -1,0 +1,18 @@
+{
+  "abbreviatedCommit": "9e0a670",
+  "abbreviatedSnapshotId": "7b0a5352d3cd",
+  "branch": "design-language",
+  "commit": "9e0a670a9689a16ce4641c86b5e92a320da0e9f6",
+  "dirty": true,
+  "dirtyEntryCount": 9,
+  "repositoryRoot": "/Users/christianperez/Developer/dagg-site",
+  "serverStartedAt": "2026-08-30T12:59:01.496584+00:00",
+  "snapshotAcquisitionAttempts": 1,
+  "snapshotAcquisitionStable": true,
+  "snapshotByteCount": 21952595,
+  "snapshotConsistencyPasses": 2,
+  "snapshotFileCount": 94,
+  "snapshotId": "7b0a5352d3cdfc68405bd2ed650a0b0eecdabae2609b055fa66eda1180a91105",
+  "snapshotRejectedPairs": [],
+  "snapshotSkippedPaths": []
+}

@@ -1,0 +1,81 @@
+<!-- Dagg golden standard — shared substrate assembly fixture: composition
+   *
+   * Contract: design/golden-standard/packages/P4R6-DUAL-CUT-HOME-DIRECTIONS.md §9.
+   *
+   * WHAT THIS IS. The one artefact that proves the assembly contract works
+   * end to end: a real route whose only source is this file plus
+   * direction.css, direction.js and meta.json, assembled by
+   * tools/build_golden_standard_previews.mjs with the shared partials into
+   * a static index.html.
+   *
+   * WHAT THIS IS NOT. It is not a Dagg page, not one of the six X0 cuts,
+   * not A/B/C, and not a candidate for anything. It states only mechanical
+   * facts about the build. There is no product claim, no positioning, no
+   * marketing copy and no invented outcome in it, and there must never be.
+   *
+   * It contains no <main>, no shared chrome class, no header or footer DOM
+   * and no copied partial — the build tool rejects all of those, which is
+   * how "composition code without copied shared DOM" is enforced.
+   -->
+    <section class="fx-section">
+      <p class="fx-meta">Build fixture</p>
+      <h1 class="fx-h1">Shared substrate assembly fixture</h1>
+      <p class="fx-lead">This route exists to prove that the build tool assembles the shared
+        chrome into a complete static page. It is not a Dagg direction and carries no
+        product copy.</p>
+    </section>
+
+    <section class="fx-section fx-section--rule">
+      <h2 class="fx-h2">Assembled from</h2>
+      <dl class="fx-list">
+        <div>
+          <dt>Header partial</dt>
+          <dd>preview/golden-standard/shared/chrome/header.html</dd>
+        </div>
+        <div>
+          <dt>Footer partial</dt>
+          <dd>preview/golden-standard/shared/chrome/footer.html</dd>
+        </div>
+        <div>
+          <dt>Chrome stylesheet</dt>
+          <dd>preview/golden-standard/shared/chrome/chrome.css</dd>
+        </div>
+        <div>
+          <dt>Chrome behaviour</dt>
+          <dd>preview/golden-standard/shared/chrome/chrome.js</dd>
+        </div>
+        <div>
+          <dt>Passed component styles</dt>
+          <dd>preview/golden-standard/component-library/styles.css</dd>
+        </div>
+        <div>
+          <dt>Passed component behaviour</dt>
+          <dd>preview/golden-standard/component-library/script.js</dd>
+        </div>
+        <div>
+          <dt>Frozen tokens</dt>
+          <dd>design/golden-standard/system/tokens.css</dd>
+        </div>
+        <div>
+          <dt>This composition</dt>
+          <dd>preview/golden-standard/shared/fixture/src/body.html</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="fx-section fx-section--rule">
+      <h2 class="fx-h2">What this page is for</h2>
+      <ul class="fx-checks">
+        <li>The header and footer are static markup in the delivered file, so the page is
+          complete with JavaScript disabled.</li>
+        <li>The composition above contains no copied header or footer DOM.</li>
+        <li>Every stylesheet, script, font and icon is a local reference.</li>
+        <li>Icons are vendored Lucide files referenced as images; there is no inline vector
+          markup and no text symbol used as an icon.</li>
+        <li>Repeating the build over unchanged sources rewrites the same bytes.</li>
+      </ul>
+      <p class="fx-note">Direction script:
+        <span class="fx-state" data-fixture-js-state>not run</span>.
+        This value is the only thing direction.js changes; with scripts blocked it stays
+        as written, which is the point.</p>
+    </section>

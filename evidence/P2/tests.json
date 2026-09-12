@@ -1,0 +1,685 @@
+{
+  "checks": {
+    "contrastAcceptedAndRejected": true,
+    "fortyFourPixelTargets": true,
+    "guttersAndFieldCeiling": true,
+    "keyboardOrderAndVisibleFocus": true,
+    "localFontsWithLicenses": true,
+    "localOnlyAndNoConsoleErrors": true,
+    "noHorizontalScroll": true,
+    "noTextBelowTwelvePx": true,
+    "oneSnapshotAcrossHtmlCssFontsAndLogo": true,
+    "onlyOwnedFilesChanged": true,
+    "reducedMotionSafe": true,
+    "specimenContract": true,
+    "twelveEqualTracksAndCollapse": true,
+    "typeScaleMatchesEndpoints": true,
+    "zeroServerExceptions": true
+  },
+  "chrome": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+  "commit": "c64be1592ef25bac5c74ca8435439d0db21c999d",
+  "coverage": [
+    "CSS-page",
+    "CSS-tokens",
+    "HTML",
+    "PNG-logotype",
+    "PNG-logotype-dark",
+    "WOFF2-Geist-Variable.woff2",
+    "WOFF2-JetBrainsMono-Variable.woff2",
+    "WOFF2-Newsreader-Variable.woff2",
+    "every rendered text node (TreeWalker, HTML+SVG)"
+  ],
+  "dirty": true,
+  "measurements": {
+    "changedVersusBase": [
+      "assets/fonts/golden-standard/PROVENANCE.md",
+      "assets/fonts/golden-standard/geist/Geist-Variable.woff2",
+      "assets/fonts/golden-standard/geist/LICENSE.txt",
+      "assets/fonts/golden-standard/geist/OFL.txt",
+      "assets/fonts/golden-standard/jetbrains-mono/JetBrainsMono-Variable.woff2",
+      "assets/fonts/golden-standard/jetbrains-mono/OFL.txt",
+      "assets/fonts/golden-standard/newsreader/Newsreader-Variable.woff2",
+      "assets/fonts/golden-standard/newsreader/OFL.txt",
+      "design/golden-standard/packages/P2-FOUNDATIONS.md",
+      "design/golden-standard/system/TOKENS.md",
+      "design/golden-standard/system/tokens.css",
+      "evidence/P2/dom-metadata.json",
+      "evidence/P2/focus-ink-secondary-1440px.png",
+      "evidence/P2/focus-paper-primary-1440px.png",
+      "evidence/P2/foundations-1440px.png",
+      "evidence/P2/foundations-320px.png",
+      "evidence/P2/foundations-360px.png",
+      "evidence/P2/foundations-390px.png",
+      "evidence/P2/foundations-head-dom.html",
+      "evidence/P2/foundations-reduced-motion-390px.png",
+      "evidence/P2/request-log.json",
+      "evidence/P2/response-headers.json",
+      "evidence/P2/result.json",
+      "evidence/P2/revision.json",
+      "evidence/P2/server-stderr.txt",
+      "evidence/P2/tests-output.txt",
+      "evidence/P2/tests.json",
+      "preview/golden-standard/foundations/foundations.css",
+      "preview/golden-standard/foundations/index.html",
+      "tests/test_p2_foundations.py",
+      "tools/capture_p2_evidence.py"
+    ],
+    "collapse": {
+      "939": {
+        "aWidth": 891,
+        "bWidth": 891,
+        "columnCount": 12,
+        "ratio": 1,
+        "sameRow": false
+      },
+      "940": {
+        "aWidth": 510.328125,
+        "bWidth": 357.65625,
+        "columnCount": 12,
+        "ratio": 1.426867627785059,
+        "sameRow": true
+      }
+    },
+    "combinedWoff2Bytes": 398696,
+    "contrastExclusions": [
+      {
+        "fontSizePx": 17,
+        "ratio": 2.69,
+        "reason": "deliberately rejected pair specimen",
+        "required": 4.5,
+        "text": "--coral / --paper",
+        "viewport": 320
+      },
+      {
+        "fontSizePx": 17,
+        "ratio": 3.35,
+        "reason": "deliberately rejected pair specimen",
+        "required": 4.5,
+        "text": "--sage / --paper",
+        "viewport": 320
+      },
+      {
+        "fontSizePx": 17,
+        "ratio": 2.39,
+        "reason": "disabled control, WCAG 1.4.3 exempt",
+        "required": 4.5,
+        "text": "Primary action",
+        "viewport": 320
+      },
+      {
+        "fontSizePx": 17,
+        "ratio": 2.39,
+        "reason": "disabled control, WCAG 1.4.3 exempt",
+        "required": 4.5,
+        "text": "Secondary action",
+        "viewport": 320
+      },
+      {
+        "fontSizePx": 17,
+        "ratio": 2.69,
+        "reason": "deliberately rejected pair specimen",
+        "required": 4.5,
+        "text": "--coral / --paper",
+        "viewport": 360
+      },
+      {
+        "fontSizePx": 17,
+        "ratio": 3.35,
+        "reason": "deliberately rejected pair specimen",
+        "required": 4.5,
+        "text": "--sage / --paper",
+        "viewport": 360
+      },
+      {
+        "fontSizePx": 17,
+        "ratio": 2.39,
+        "reason": "disabled control, WCAG 1.4.3 exempt",
+        "required": 4.5,
+        "text": "Primary action",
+        "viewport": 360
+      },
+      {
+        "fontSizePx": 17,
+        "ratio": 2.39,
+        "reason": "disabled control, WCAG 1.4.3 exempt",
+        "required": 4.5,
+        "text": "Secondary action",
+        "viewport": 360
+      },
+      {
+        "fontSizePx": 17,
+        "ratio": 2.69,
+        "reason": "deliberately rejected pair specimen",
+        "required": 4.5,
+        "text": "--coral / --paper",
+        "viewport": 390
+      },
+      {
+        "fontSizePx": 17,
+        "ratio": 3.35,
+        "reason": "deliberately rejected pair specimen",
+        "required": 4.5,
+        "text": "--sage / --paper",
+        "viewport": 390
+      },
+      {
+        "fontSizePx": 17,
+        "ratio": 2.39,
+        "reason": "disabled control, WCAG 1.4.3 exempt",
+        "required": 4.5,
+        "text": "Primary action",
+        "viewport": 390
+      },
+      {
+        "fontSizePx": 17,
+        "ratio": 2.39,
+        "reason": "disabled control, WCAG 1.4.3 exempt",
+        "required": 4.5,
+        "text": "Secondary action",
+        "viewport": 390
+      },
+      {
+        "fontSizePx": 17.36,
+        "ratio": 2.69,
+        "reason": "deliberately rejected pair specimen",
+        "required": 4.5,
+        "text": "--coral / --paper",
+        "viewport": 768
+      },
+      {
+        "fontSizePx": 17.36,
+        "ratio": 3.35,
+        "reason": "deliberately rejected pair specimen",
+        "required": 4.5,
+        "text": "--sage / --paper",
+        "viewport": 768
+      },
+      {
+        "fontSizePx": 17.36,
+        "ratio": 2.39,
+        "reason": "disabled control, WCAG 1.4.3 exempt",
+        "required": 4.5,
+        "text": "Primary action",
+        "viewport": 768
+      },
+      {
+        "fontSizePx": 17.36,
+        "ratio": 2.39,
+        "reason": "disabled control, WCAG 1.4.3 exempt",
+        "required": 4.5,
+        "text": "Secondary action",
+        "viewport": 768
+      },
+      {
+        "fontSizePx": 17.6038,
+        "ratio": 2.69,
+        "reason": "deliberately rejected pair specimen",
+        "required": 4.5,
+        "text": "--coral / --paper",
+        "viewport": 1024
+      },
+      {
+        "fontSizePx": 17.6038,
+        "ratio": 3.35,
+        "reason": "deliberately rejected pair specimen",
+        "required": 4.5,
+        "text": "--sage / --paper",
+        "viewport": 1024
+      },
+      {
+        "fontSizePx": 17.6038,
+        "ratio": 2.39,
+        "reason": "disabled control, WCAG 1.4.3 exempt",
+        "required": 4.5,
+        "text": "Primary action",
+        "viewport": 1024
+      },
+      {
+        "fontSizePx": 17.6038,
+        "ratio": 2.39,
+        "reason": "disabled control, WCAG 1.4.3 exempt",
+        "required": 4.5,
+        "text": "Secondary action",
+        "viewport": 1024
+      },
+      {
+        "fontSizePx": 18,
+        "ratio": 2.69,
+        "reason": "deliberately rejected pair specimen",
+        "required": 4.5,
+        "text": "--coral / --paper",
+        "viewport": 1440
+      },
+      {
+        "fontSizePx": 18,
+        "ratio": 3.35,
+        "reason": "deliberately rejected pair specimen",
+        "required": 4.5,
+        "text": "--sage / --paper",
+        "viewport": 1440
+      },
+      {
+        "fontSizePx": 18,
+        "ratio": 2.39,
+        "reason": "disabled control, WCAG 1.4.3 exempt",
+        "required": 4.5,
+        "text": "Primary action",
+        "viewport": 1440
+      },
+      {
+        "fontSizePx": 18,
+        "ratio": 2.39,
+        "reason": "disabled control, WCAG 1.4.3 exempt",
+        "required": 4.5,
+        "text": "Secondary action",
+        "viewport": 1440
+      }
+    ],
+    "distinctRequests": [
+      "http://127.0.0.1:61439/assets/dagg-logotype-dark.png",
+      "http://127.0.0.1:61439/assets/dagg-logotype.png",
+      "http://127.0.0.1:61439/assets/dagg-symbol.png",
+      "http://127.0.0.1:61439/assets/fonts/golden-standard/geist/Geist-Variable.woff2",
+      "http://127.0.0.1:61439/assets/fonts/golden-standard/jetbrains-mono/JetBrainsMono-Variable.woff2",
+      "http://127.0.0.1:61439/assets/fonts/golden-standard/newsreader/Newsreader-Variable.woff2",
+      "http://127.0.0.1:61439/design/golden-standard/system/tokens.css",
+      "http://127.0.0.1:61439/preview/golden-standard/foundations/foundations.css",
+      "http://127.0.0.1:61439/preview/golden-standard/foundations/index.html"
+    ],
+    "focusRings": [
+      {
+        "contrast": 14.73,
+        "offset": 2,
+        "onInk": false,
+        "text": "Primary action",
+        "width": 2
+      },
+      {
+        "contrast": 14.73,
+        "offset": 2,
+        "onInk": false,
+        "text": "Secondary action",
+        "width": 2
+      },
+      {
+        "contrast": 14.73,
+        "offset": 2,
+        "onInk": false,
+        "text": "Text link",
+        "width": 2
+      },
+      {
+        "contrast": 15.87,
+        "offset": 2,
+        "onInk": true,
+        "text": "Primary action",
+        "width": 2
+      },
+      {
+        "contrast": 15.87,
+        "offset": 2,
+        "onInk": true,
+        "text": "Secondary action",
+        "width": 2
+      },
+      {
+        "contrast": 15.87,
+        "offset": 2,
+        "onInk": true,
+        "text": "Text link",
+        "width": 2
+      }
+    ],
+    "gridTracks1440": [
+      74,
+      74,
+      74,
+      74,
+      74,
+      74,
+      74,
+      74,
+      74,
+      74,
+      74,
+      74
+    ],
+    "gutters": {
+      "320": {
+        "fields": [
+          280
+        ],
+        "gutter": 20
+      },
+      "360": {
+        "fields": [
+          320
+        ],
+        "gutter": 20
+      },
+      "390": {
+        "fields": [
+          350
+        ],
+        "gutter": 20
+      },
+      "767": {
+        "fields": [
+          727
+        ],
+        "gutter": 20
+      },
+      "768": {
+        "fields": [
+          720
+        ],
+        "gutter": 24
+      },
+      "1023": {
+        "fields": [
+          975
+        ],
+        "gutter": 24
+      },
+      "1024": {
+        "fields": [
+          928
+        ],
+        "gutter": 48
+      },
+      "1439": {
+        "fields": [
+          1240
+        ],
+        "gutter": 48
+      },
+      "1440": {
+        "fields": [
+          1240
+        ],
+        "gutter": 72
+      }
+    },
+    "interactiveTargetsMeasured": 48,
+    "minimumComputedTextPx": 12,
+    "pairs": [
+      {
+        "bg": "--paper",
+        "fg": "--ink",
+        "ratio": 15.87,
+        "status": "accepted"
+      },
+      {
+        "bg": "--paper",
+        "fg": "--ink-2",
+        "ratio": 10.92,
+        "status": "accepted"
+      },
+      {
+        "bg": "--lift",
+        "fg": "--ink",
+        "ratio": 17.5,
+        "status": "accepted"
+      },
+      {
+        "bg": "--panel",
+        "fg": "--ink",
+        "ratio": 14.73,
+        "status": "accepted"
+      },
+      {
+        "bg": "--paper",
+        "fg": "--coral-deep",
+        "ratio": 5.21,
+        "status": "accepted"
+      },
+      {
+        "bg": "--ink",
+        "fg": "--paper",
+        "ratio": 15.87,
+        "status": "accepted"
+      },
+      {
+        "bg": "--ink",
+        "fg": "--coral",
+        "ratio": 5.9,
+        "status": "accepted"
+      },
+      {
+        "bg": "--sage",
+        "fg": "--ink",
+        "ratio": 4.74,
+        "status": "accepted"
+      },
+      {
+        "bg": "--paper",
+        "fg": "--coral",
+        "ratio": 2.69,
+        "status": "rejected"
+      },
+      {
+        "bg": "--paper",
+        "fg": "--sage",
+        "ratio": 3.35,
+        "status": "rejected"
+      }
+    ],
+    "performance": {
+      "budget": {
+        "cssBytesMax": 56320,
+        "htmlBytesMax": 40960,
+        "javaScriptBytesMax": 0,
+        "woff2BytesMax": 768000
+      },
+      "combinedCssBytes": 21562,
+      "combinedWoff2Bytes": 398696,
+      "htmlBytes": 18608,
+      "javaScriptBytes": 0,
+      "pageCssBytes": 15331,
+      "tokensCssBytes": 6231,
+      "withinBudget": true,
+      "woff2Bytes": {
+        "/assets/fonts/golden-standard/geist/Geist-Variable.woff2": 69760,
+        "/assets/fonts/golden-standard/jetbrains-mono/JetBrainsMono-Variable.woff2": 113672,
+        "/assets/fonts/golden-standard/newsreader/Newsreader-Variable.woff2": 215264
+      }
+    },
+    "protectedFilesCompared": 65,
+    "reducedMotion": {
+      "layoutIdentical": true,
+      "transitionsAfter": [
+        1e-05
+      ],
+      "transitionsBefore": [
+        0.18
+      ]
+    },
+    "rhythmHeights1440": [
+      720,
+      240,
+      360,
+      420,
+      320
+    ],
+    "scrollWidth": {
+      "320": [
+        320,
+        320
+      ],
+      "360": [
+        360,
+        360
+      ],
+      "390": [
+        390,
+        390
+      ],
+      "768": [
+        768,
+        768
+      ],
+      "1024": [
+        1024,
+        1024
+      ],
+      "1440": [
+        1440,
+        1440
+      ]
+    },
+    "smallestInteractiveEdge": 44,
+    "tabOrder": [
+      [
+        "Primary action",
+        false
+      ],
+      [
+        "Secondary action",
+        false
+      ],
+      [
+        "Text link",
+        false
+      ],
+      [
+        "Primary action",
+        true
+      ],
+      [
+        "Secondary action",
+        true
+      ],
+      [
+        "Text link",
+        true
+      ]
+    ],
+    "textNamespaces": [
+      "http://www.w3.org/1999/xhtml"
+    ],
+    "textNodesMeasured": 1164,
+    "typeScale": {
+      "320": {
+        "body": {
+          "expected": 17.0,
+          "fontSize": 17,
+          "lineHeightRatio": 1.62
+        },
+        "h1": {
+          "expected": 42.0,
+          "fontSize": 42,
+          "lineHeightRatio": 1.02
+        },
+        "h2": {
+          "expected": 34.0,
+          "fontSize": 34,
+          "lineHeightRatio": 1.07
+        },
+        "h3": {
+          "expected": 26.0,
+          "fontSize": 26,
+          "lineHeightRatio": 1.12
+        },
+        "lead": {
+          "expected": 19.0,
+          "fontSize": 19,
+          "lineHeightRatio": 1.44
+        },
+        "meta": {
+          "expected": 12.0,
+          "fontSize": 12,
+          "lineHeightRatio": 1.42
+        }
+      },
+      "390": {
+        "body": {
+          "expected": 17.0,
+          "fontSize": 17,
+          "lineHeightRatio": 1.62
+        },
+        "h1": {
+          "expected": 44.0,
+          "fontSize": 44,
+          "lineHeightRatio": 1.02
+        },
+        "h2": {
+          "expected": 36.0,
+          "fontSize": 36,
+          "lineHeightRatio": 1.07
+        },
+        "h3": {
+          "expected": 27.0,
+          "fontSize": 27,
+          "lineHeightRatio": 1.12
+        },
+        "lead": {
+          "expected": 20.0,
+          "fontSize": 20,
+          "lineHeightRatio": 1.44
+        },
+        "meta": {
+          "expected": 12.0,
+          "fontSize": 12,
+          "lineHeightRatio": 1.42
+        }
+      },
+      "1440": {
+        "body": {
+          "expected": 18.0,
+          "fontSize": 18,
+          "lineHeightRatio": 1.62
+        },
+        "h1": {
+          "expected": 68.0,
+          "fontSize": 68,
+          "lineHeightRatio": 1.02
+        },
+        "h1Lines": {
+          "lastLineFraction": 0.367,
+          "lineEquivalentMeasure": 2.244,
+          "renderedLineWidths": [
+            1224.7,
+            1103.28,
+            455
+          ],
+          "renderedLines": 3
+        },
+        "h2": {
+          "expected": 52.0,
+          "fontSize": 52,
+          "lineHeightRatio": 1.07
+        },
+        "h3": {
+          "expected": 32.0,
+          "fontSize": 32,
+          "lineHeightRatio": 1.12
+        },
+        "lead": {
+          "expected": 23.0,
+          "fontSize": 23,
+          "lineHeightRatio": 1.44
+        },
+        "meta": {
+          "expected": 13.0,
+          "fontSize": 13,
+          "lineHeightRatio": 1.42
+        }
+      }
+    }
+  },
+  "notes": [],
+  "snapshotId": "5146189363d7f445b8f690720ad3b96943fc0b1bf1ac370c801466ab0da42a64",
+  "viewportsRendered": [
+    320,
+    360,
+    390,
+    767,
+    768,
+    939,
+    940,
+    1023,
+    1024,
+    1439,
+    1440
+  ]
+}

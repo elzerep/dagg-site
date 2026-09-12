@@ -1,0 +1,6 @@
+36570fa15e9c57a87fe20163551e45f1f1a3339f95e0e0c1498528cb6482afa1  63365  design/golden-standard/DAGG-GOLDEN-STANDARD-MASTERPLAN.md
+cf87342ca673e997d0ddcc93dc37ddc507fea3489feeeb233d3cc37fa5ff63f2  10131  design/golden-standard/packages/P0R1-IMMUTABLE-PREVIEW-SNAPSHOT.md
+9ac8bc7a6405b56e1a6c5f25121cd8c87169f6a98a07df171b51a99878bbdccf  10480  design/golden-standard/packages/P0-RECONCILE-AND-PREVIEW.md
+c5fd3bdbe66d4df2f5bac1d6a36f2f2a0ae3bd4994143141cd5ac82fb93f76d3  11946  tools/serve_preview.py
+ec67170aa6346637ef95bf959ae8be62d3622e3c25cace635d1800c44846ddec  29867  tools/capture_preview_evidence.py
+c6d5941c9325b2de45bd31391992f7eb3b3ac4c3212cba9e35c465b491cc3f94  14129  tests/test_preview_revision.py

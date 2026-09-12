@@ -1,0 +1,82 @@
+/* Impact route composition (internal staging; not in public navigation).
+ * Tokens, controls and global chrome remain shared. This file owns only the
+ * editorial Impact sequence and reuses the accepted route-kit grammar. No
+ * motion system is introduced: the route is evidence-led and reads completely
+ * without JavaScript, hover or reduced-motion differences. */
+
+.impact-page { background: var(--paper); }
+.impact-section { padding-block: var(--section-lg); }
+.impact-section--hero { padding-block-start: var(--space-8); }
+.impact-eyebrow { margin-bottom: var(--space-4); color: var(--ink-2); }
+
+/* 1 · Position */
+.impact-hero { display: grid; gap: var(--space-7); align-items: end; }
+.impact-hero__copy { max-width: 1120px; }
+.impact-h1 { max-width: 20ch; }
+.impact-lead { max-width: 62ch; margin-top: var(--space-5); }
+.impact-actions { margin-top: var(--space-7); align-items: center; }
+.impact-hero__state {
+  margin: 0;
+  padding-block-start: var(--space-4);
+  border-top: 1px solid var(--rule-strong);
+  color: var(--ink-2);
+  font: var(--fs-meta)/var(--lh-meta) var(--font-mono);
+  letter-spacing: var(--tracking-meta);
+  text-transform: uppercase;
+}
+
+/* 2 · Proof types */
+.impact-section--types { background: var(--lift); padding-block: var(--section-md); }
+.impact-types { display: grid; gap: var(--space-7); align-items: start; }
+.impact-types__intro { display: grid; gap: var(--space-4); }
+.impact-types__list { display: grid; border-top: 1px solid var(--rule-strong); }
+.impact-types__list article { display: grid; align-content: start; gap: var(--space-4); padding-block: var(--space-6); border-bottom: 1px solid var(--rule-strong); }
+.impact-types__list p { margin: 0; max-width: 44ch; color: var(--ink-2); font: var(--fs-body)/var(--lh-body) var(--font-serif); }
+
+/* 3 · Evidence chain */
+.impact-section--chain { background: var(--ink); }
+.impact-chain { display: grid; gap: var(--space-8); }
+.impact-chain__intro { display: grid; gap: var(--space-4); }
+.impact-chain__title { color: var(--paper); max-width: 18ch; }
+.impact-chain__lead { margin: 0; color: color-mix(in srgb, var(--paper) 82%, var(--ink)); font: var(--fs-lead)/var(--lh-lead) var(--font-serif); }
+.impact-chain__list { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--rule-on-ink); }
+.impact-chain__list li { padding-block: var(--space-5); border-bottom: 1px solid var(--rule-on-ink); }
+.impact-chain__list p { margin: 0; color: var(--paper); font: var(--fs-body)/var(--lh-body) var(--font-serif); }
+.impact-chain__list li.is-boundary p { color: color-mix(in srgb, var(--paper) 92%, var(--sage)); }
+.impact-chain__list li.is-boundary { border-bottom-color: var(--sage); }
+
+/* 4 · Lead proof slot — a truthful, calm staging state, not an empty case card */
+.impact-section--proof { padding-block: var(--section-md); }
+.impact-proof { display: grid; }
+.impact-slot { display: grid; gap: var(--space-4); max-width: 72ch; padding: var(--space-6) 0 var(--space-6) var(--space-5); border-inline-start: 2px solid var(--sage); }
+.impact-slot__status { margin: 0; color: var(--ink-2); font: var(--fs-meta)/var(--lh-meta) var(--font-mono); letter-spacing: var(--tracking-meta); text-transform: uppercase; }
+.impact-slot__disclosure { margin: 0; color: var(--ink-2); font: var(--fs-body)/var(--lh-body) var(--font-serif); }
+
+/* 5 · Next move */
+.impact-section--close { border-top: 1px solid var(--rule-strong); }
+.impact-close-layout, .impact-close, .impact-close__actions { display: grid; gap: var(--space-7); align-items: start; }
+.impact-close__body { max-width: 58ch; }
+
+@media (min-width: 768px) {
+  .impact-types__list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .impact-types__list article { padding: var(--space-6); border-inline-start: 1px solid var(--rule-strong); }
+  .impact-types__list article:first-child { padding-inline-start: 0; border-inline-start: 0; }
+}
+@media (min-width: 940px) {
+  .impact-hero { grid-template-columns: minmax(0, 8fr) minmax(0, 4fr); column-gap: var(--col-gap); }
+  .impact-hero__state { border-top: 0; padding-block-start: 0; text-align: end; }
+  .impact-types { grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); column-gap: var(--col-gap); }
+  .impact-types__list { margin-top: 0; }
+  .impact-chain { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); column-gap: var(--col-gap); }
+  .impact-proof { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); column-gap: var(--col-gap); }
+  .impact-slot { grid-column: 2; }
+  .impact-close, .impact-close__actions { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); column-gap: var(--col-gap); }
+  .impact-close__actions .impact-actions { grid-column: 2; }
+}
+@media (max-width: 600px) {
+  .impact-section { padding-block: var(--section-md); }
+  .impact-section--hero { padding-block-start: var(--space-7); }
+  .impact-hero { gap: var(--space-6); }
+}
+/* Reduced motion: this route declares no transition or animation of its own,
+ * so the resolved state is the only state and no override is required. */

@@ -1,0 +1,78 @@
+- generic [active] [ref=f10e1]:
+  - banner [ref=f10e2]:
+    - generic [ref=f10e4]:
+      - link "Dagg — Home" [ref=f10e5] [cursor=pointer]:
+        - /url: /preview/golden-standard/p4r3/b/
+        - img "Dagg" [ref=f10e6]
+      - group [ref=f10e7]:
+        - generic "Menu" [ref=f10e8] [cursor=pointer]
+  - main [ref=f10e10]:
+    - generic [ref=f10e13]:
+      - generic [ref=f10e14]:
+        - paragraph [ref=f10e15]: The Dagg system
+        - heading "Turn company context into working systems." [level=1] [ref=f10e16]
+        - paragraph [ref=f10e17]: One decision record moves from strategic intent to agents, software and verified operation.
+        - generic [ref=f10e18]:
+          - link "Start an assessment" [ref=f10e19] [cursor=pointer]:
+            - /url: /preview/golden-standard/chrome/routes/assessment/
+          - link "Explore the system" [ref=f10e20] [cursor=pointer]:
+            - /url: "#product"
+      - generic [ref=f10e21]:
+        - figure [ref=f10e22]:
+          - img "A dark machine field resolving into an illuminated path" [ref=f10e23]
+        - generic "Illustrative Dagg system state" [ref=f10e24]:
+          - generic [ref=f10e25]:
+            - generic [ref=f10e26]: WORKGRAPH / DECISION 04
+            - generic [ref=f10e27]: READY
+          - paragraph [ref=f10e28]: Supplier-payment exception
+          - generic [ref=f10e29]:
+            - generic [ref=f10e30]:
+              - term [ref=f10e31]: Decision
+              - definition [ref=f10e32]: Prepare automatically
+            - generic [ref=f10e33]:
+              - term [ref=f10e34]: Boundary
+              - definition [ref=f10e35]: Human releases funds
+            - generic [ref=f10e36]:
+              - term [ref=f10e37]: Build
+              - definition [ref=f10e38]: Evaluation passed
+    - generic [ref=f10e41]:
+      - generic [ref=f10e42]:
+        - paragraph [ref=f10e43]: A compound system
+        - heading "The work does not restart at every handoff." [level=2] [ref=f10e44]
+        - paragraph [ref=f10e45]: WorkGraph carries the company-specific context. Dagg Factory turns the chosen path into software. Evaluation returns what the system learned.
+      - generic [ref=f10e46]:
+        - navigation "System stages" [ref=f10e47]:
+          - button "01 Map" [pressed] [ref=f10e48] [cursor=pointer]:
+            - generic [ref=f10e49]: "01"
+            - text: Map
+          - button "02 Decide" [ref=f10e50] [cursor=pointer]:
+            - generic [ref=f10e51]: "02"
+            - text: Decide
+          - button "03 Build" [ref=f10e52] [cursor=pointer]:
+            - generic [ref=f10e53]: "03"
+            - text: Build
+          - button "04 Verify" [ref=f10e54] [cursor=pointer]:
+            - generic [ref=f10e55]: "04"
+            - text: Verify
+        - generic [ref=f10e56]:
+          - generic [ref=f10e57]:
+            - paragraph [ref=f10e58]: CURRENT STATE
+            - heading "The workflow becomes legible." [level=3] [ref=f10e59]
+            - paragraph [ref=f10e60]: Sources, owners, exceptions and handoffs resolve into one company-specific record.
+          - generic [ref=f10e61]:
+            - generic [ref=f10e62]:
+              - term [ref=f10e63]: Sources
+              - definition [ref=f10e64]: 4 connected
+            - generic [ref=f10e65]:
+              - term [ref=f10e66]: Owner
+              - definition [ref=f10e67]: Finance operations
+            - generic [ref=f10e68]:
+              - term [ref=f10e69]: Next
+              - definition [ref=f10e70]: Strategic decision
+    - generic [ref=f10e73]:
+      - paragraph [ref=f10e74]: STRATEGY × ENGINEERING
+      - heading "Build only what the future operating model justifies." [level=2] [ref=f10e75]
+      - paragraph [ref=f10e76]: Preserve the judgment that creates value. Automate the stable path. Rebuild what no longer fits.
+    - generic [ref=f10e79]:
+      - heading "See your company as a system." [level=2] [ref=f10e80]
+      - paragraph [ref=f10e81]: Start with one bounded assessment of the work, the decision and the build it requires.

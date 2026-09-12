@@ -1,0 +1,518 @@
+/* WorkGraph route composition (FS5 Lane B). Shared tokens, type, controls and
+ * chrome remain owned by the canonical design system. Position is a 5/7
+ * proposition-and-record split; the Decision Field still lives in Context.
+ * DOM order is identical at every width; grid placement only, never `order`. */
+
+.workgraph {
+  --wg-rule: var(--rule);
+  background: var(--paper);
+}
+
+.workgraph-section { padding-block: var(--section-lg); }
+.workgraph-section--hero { padding-block: var(--space-8) var(--space-8); }
+.workgraph-section--record,
+.workgraph-section--next { background: var(--lift); }
+.workgraph-section--lifecycle { padding-block: var(--space-8) var(--space-8); }
+.workgraph-section--control { padding-block-start: var(--section-md); }
+
+.workgraph-h1,
+.workgraph-h2 { hyphens: none; text-wrap: balance; }
+.workgraph-eyebrow { margin-bottom: var(--space-4); color: var(--ink-2); }
+.workgraph-actions { margin-top: var(--space-7); align-items: center; }
+.workgraph-prose { display: grid; gap: var(--space-5); margin-top: var(--space-6); max-width: 66ch; }
+.workgraph-section-link { display: inline-flex; margin-top: var(--space-6); width: fit-content; }
+.workgraph-disclosure {
+  color: var(--ink-2);
+  font-family: var(--font-sans);
+  font-size: var(--fs-meta);
+  line-height: var(--lh-meta);
+}
+
+/* ------------------------------------------------------------------ *
+ * Position: proposition beside the retained record                     *
+ * ------------------------------------------------------------------ */
+
+.workgraph-hero { display: grid; gap: var(--space-7); align-items: start; }
+.workgraph-hero__copy { display: grid; align-content: start; }
+.workgraph-h1 { margin: 0; max-width: 16ch; }
+.workgraph-lead { margin-top: var(--space-5); max-width: 62ch; }
+.workgraph-hero__record { display: grid; gap: var(--space-4); }
+.workgraph-hero__actions { margin-top: 0; }
+
+.workgraph-index {
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--wg-rule);
+}
+.workgraph-index__links { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-6); }
+.workgraph-index a {
+  min-width: 48px;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  color: var(--ink-2);
+  font-family: var(--font-sans);
+  font-size: var(--fs-meta);
+  line-height: var(--lh-meta);
+  text-decoration: none;
+}
+.workgraph-index a:hover,
+.workgraph-index a:focus-visible { color: var(--ink); text-decoration: underline; text-underline-offset: 0.25em; }
+
+@media (min-width: 940px) {
+  .workgraph-hero {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    grid-template-rows: auto auto auto;
+    column-gap: var(--col-gap);
+    row-gap: var(--space-7);
+  }
+  .workgraph-hero__copy { grid-column: 1; grid-row: 1; }
+  .workgraph-hero__record { grid-column: 2; grid-row: 1 / span 2; }
+  .workgraph-hero__actions { grid-column: 1; grid-row: 2; align-self: start; }
+  .workgraph-index { grid-column: 1 / -1; grid-row: 3; }
+}
+
+/* The retained record: one 14 px Ink instrument, four hairline regions. */
+.workgraph-record {
+  overflow: hidden;
+  border-radius: var(--radius-instrument);
+  background: var(--ink);
+  color: var(--paper);
+}
+.workgraph-record__identity,
+.workgraph-record__fields,
+.workgraph-record__depth { padding-inline: var(--space-6); }
+.workgraph-record__identity { padding-block: var(--space-6) var(--space-5); }
+.workgraph-record__provenance {
+  color: color-mix(in srgb, var(--paper) 62%, transparent);
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+  line-height: var(--lh-meta);
+}
+.workgraph-record__title-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--space-4);
+  align-items: end;
+  margin-top: var(--space-4);
+}
+.workgraph-record__title {
+  max-width: none;
+  color: var(--paper);
+  font-family: var(--font-serif);
+  font-size: var(--fs-h3);
+  font-weight: 480;
+  line-height: var(--lh-h3);
+  letter-spacing: 0;
+}
+.workgraph-record__status {
+  color: color-mix(in srgb, var(--sage) 58%, var(--paper));
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+  line-height: var(--lh-meta);
+  white-space: nowrap;
+}
+
+/* Source lenses exist only when script enhances the page. */
+.workgraph-lenses {
+  display: none;
+  padding: var(--space-4) var(--space-6);
+  border-top: 1px solid var(--rule-on-ink);
+}
+html.cl-enhanced .workgraph-lenses { display: grid; gap: var(--space-3); }
+.workgraph-lenses__controls { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.workgraph-lenses button {
+  min-height: 48px;
+  min-width: 48px;
+  padding-inline: var(--space-4);
+  border: 1px solid color-mix(in srgb, var(--paper) 28%, transparent);
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--paper);
+  font: 500 var(--fs-meta)/var(--lh-meta) var(--font-sans);
+  cursor: pointer;
+  transition: border-color var(--motion-micro) var(--motion-ease), background-color var(--motion-micro) var(--motion-ease);
+}
+.workgraph-lenses button:hover { border-color: color-mix(in srgb, var(--paper) 60%, transparent); }
+.workgraph-lenses button[aria-pressed="true"] {
+  border-color: var(--paper);
+  background: color-mix(in srgb, var(--paper) 10%, transparent);
+}
+.workgraph-lenses__status {
+  color: color-mix(in srgb, var(--paper) 62%, transparent);
+  font-family: var(--font-sans);
+  font-size: var(--fs-meta);
+  line-height: var(--lh-meta);
+}
+
+.workgraph-record__fields { margin: 0; }
+.workgraph-record__field {
+  display: grid;
+  grid-template-columns: minmax(112px, 0.32fr) minmax(0, 1fr);
+  gap: var(--space-4);
+  padding-block: var(--space-4);
+  border-top: 1px solid var(--rule-on-ink);
+  transition: background-color var(--motion-response) var(--motion-ease), border-color var(--motion-response) var(--motion-ease);
+}
+.workgraph-record__field dt {
+  color: color-mix(in srgb, var(--paper) 62%, transparent);
+  font-family: var(--font-sans);
+  font-size: var(--fs-meta);
+  font-weight: 520;
+  line-height: var(--lh-meta);
+  padding-top: 0.2em;
+}
+.workgraph-record__field dd {
+  color: var(--paper);
+  font-family: var(--font-serif);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+}
+.workgraph-record__field--coral { border-inline-start: 2px solid var(--coral); padding-inline-start: var(--space-4); }
+.workgraph-record__field--sage { border-inline-start: 2px solid var(--sage); padding-inline-start: var(--space-4); }
+.workgraph-record__field--emphasized {
+  border-top-color: color-mix(in srgb, var(--paper) 40%, transparent);
+  background: color-mix(in srgb, var(--paper) 6%, transparent);
+}
+html.cl-enhanced .workgraph-record__field:not(.workgraph-record__field--emphasized) dd {
+  color: color-mix(in srgb, var(--paper) 82%, transparent);
+}
+
+.workgraph-record__depth { border-top: 1px solid var(--rule-on-ink); }
+.workgraph-record__depth summary {
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  color: var(--paper);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  font-weight: 520;
+  line-height: var(--lh-body);
+  cursor: pointer;
+}
+.workgraph-record__fields--depth { padding-inline: 0; padding-block-end: var(--space-4); }
+
+/* ------------------------------------------------------------------ *
+ * Context: editorial copy beside the Decision Field still              *
+ * ------------------------------------------------------------------ */
+
+.workgraph-context { display: grid; gap: var(--space-8); align-items: start; }
+.workgraph-context__narrative { display: contents; }
+.workgraph-context__copy .cl-body { max-width: 66ch; }
+.workgraph-context__visual picture { display: block; }
+.workgraph-context__visual { overflow: hidden; border-radius: var(--radius-surface); }
+.workgraph-context__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: none;
+  transform-origin: 58% 54%;
+  opacity: 1;
+  transition: transform 1450ms var(--motion-ease), opacity 950ms var(--motion-ease);
+}
+html.cl-enhanced [data-workgraph-page]:not([data-workgraph-ready]) .workgraph-context__image {
+  transform: scale(1.022) translate3d(8px, 5px, 0);
+  opacity: 0.95;
+}
+html.cl-enhanced [data-workgraph-page][data-workgraph-ready] .workgraph-context__image {
+  transform: scale(1) translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+@media (min-width: 1280px) {
+  .workgraph-context {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    column-gap: var(--col-gap);
+  }
+}
+@media (max-width: 939.98px) {
+  .workgraph-context__visual { width: min(100%, 560px); }
+}
+
+/* ------------------------------------------------------------------ *
+ * Lifecycle: FS2 scroll-led carrier                                    *
+ *                                                                      *
+ * The steps move with the page; the record-state card is the one       *
+ * persistent carrier. State is written by direction.js as is-active /   *
+ * is-done and aria-current; the authored state is the resolved one.     *
+ * Row heights at wide desktop are sized so each step crosses the 45 %   *
+ * focus line at one of the four runner scroll positions.               *
+ * ------------------------------------------------------------------ */
+
+.workgraph-lifecycle-layout { display: grid; gap: var(--space-6); align-items: start; }
+.workgraph-lifecycle__default { display: contents; }
+.workgraph-lifecycle__title { max-width: 22ch; }
+.workgraph-lifecycle__intro { max-width: 66ch; }
+
+.workgraph-lifecycle {
+  display: grid;
+  margin-top: var(--space-6);
+  border-top: 1px solid var(--wg-rule);
+  counter-reset: workgraph-step;
+}
+.workgraph-lifecycle li {
+  display: grid;
+  grid-template-columns: 3ch minmax(0, 1fr);
+  column-gap: var(--space-5);
+  align-content: start;
+  min-width: 0;
+  min-height: 72px;
+  padding-block: var(--space-5);
+  border-bottom: 1px solid var(--wg-rule);
+  counter-increment: workgraph-step;
+  transition: border-color 320ms var(--motion-ease);
+}
+.workgraph-lifecycle li::before {
+  content: "0" counter(workgraph-step);
+  padding-top: 0.35em;
+  color: var(--ink-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+  line-height: var(--lh-meta);
+  transition: color 320ms var(--motion-ease);
+}
+.workgraph-lifecycle strong {
+  color: var(--ink);
+  font: 520 var(--fs-lead)/1.3 var(--font-sans);
+  transition: color 320ms var(--motion-ease);
+}
+html.cl-enhanced .workgraph-lifecycle li:not(.is-active):not(.is-done) strong { color: var(--ink-2); }
+html.cl-enhanced .workgraph-lifecycle li.is-active { border-bottom-color: var(--rule-strong); }
+html.cl-enhanced .workgraph-lifecycle li.is-active::before { color: var(--ink); }
+html.cl-enhanced .workgraph-lifecycle li[data-workgraph-step="decide"].is-active::before { color: var(--coral-deep); }
+
+.workgraph-record-state {
+  display: grid;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  border: 1px solid var(--wg-rule);
+  border-radius: var(--radius-surface);
+  background: var(--lift);
+}
+.workgraph-record-state__identity {
+  color: var(--ink);
+  font: 520 var(--fs-body)/1.3 var(--font-sans);
+}
+.workgraph-record-state__state {
+  color: var(--ink);
+  font: var(--fs-meta)/var(--lh-meta) var(--font-mono);
+  letter-spacing: var(--tracking-meta);
+  text-transform: uppercase;
+}
+.workgraph-record-state__rule {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-1);
+  height: 2px;
+}
+.workgraph-record-state__rule i {
+  display: block;
+  background: var(--rule-strong);
+  transition: background-color 320ms var(--motion-ease);
+}
+html.cl-enhanced .workgraph-record-state__rule i.is-done,
+html.cl-enhanced .workgraph-record-state__rule i.is-active { background: var(--ink); }
+html.cl-enhanced .workgraph-record-state__rule i[data-workgraph-state="decide"].is-done,
+html.cl-enhanced .workgraph-record-state__rule i[data-workgraph-state="decide"].is-active { background: var(--coral); }
+html.cl-enhanced .workgraph-record-state__rule i[data-workgraph-state="learn"].is-active { background: var(--sage); }
+html:not(.cl-enhanced) .workgraph-record-state__rule i { background: var(--ink); }
+html:not(.cl-enhanced) .workgraph-record-state__rule i[data-workgraph-state="learn"] { background: var(--sage); }
+
+.workgraph-record-state__invariants { display: grid; margin: 0; border-top: 1px solid var(--wg-rule); }
+.workgraph-record-state__invariants > div {
+  display: grid;
+  grid-template-columns: minmax(88px, 0.32fr) minmax(0, 1fr);
+  gap: var(--space-3);
+  padding-block: var(--space-3);
+  border-bottom: 1px solid var(--wg-rule);
+}
+.workgraph-record-state__invariants dt {
+  color: var(--ink-2);
+  font: 520 var(--fs-meta)/var(--lh-meta) var(--font-sans);
+}
+.workgraph-record-state__invariants dd {
+  color: var(--ink);
+  font: var(--fs-body)/var(--lh-body) var(--font-serif);
+}
+.workgraph-record-state__invariant--sage {
+  border-inline-start: 2px solid var(--sage);
+  padding-inline-start: var(--space-3);
+}
+
+.workgraph-lifecycle__detail { margin-top: var(--space-4); }
+.workgraph-lifecycle__persist { display: grid; gap: var(--space-4); margin-top: var(--space-4); max-width: 66ch; }
+.workgraph-lifecycle__descriptions { display: grid; counter-reset: workgraph-persist; }
+.workgraph-lifecycle__descriptions li {
+  display: grid;
+  grid-template-columns: 3ch minmax(0, 1fr);
+  column-gap: var(--space-4);
+  padding-block: var(--space-3);
+  border-top: 1px solid var(--wg-rule);
+  counter-increment: workgraph-persist;
+  color: var(--ink-2);
+  font: var(--fs-body)/var(--lh-body) var(--font-serif);
+}
+.workgraph-lifecycle__descriptions li::before {
+  content: "0" counter(workgraph-persist);
+  padding-top: 0.25em;
+  color: var(--ink-2);
+  font: var(--fs-meta)/var(--lh-meta) var(--font-mono);
+}
+.workgraph-lifecycle__link { margin-top: var(--space-2); }
+
+/* Compact and tablet: the card sits between the paragraph and the steps
+   (grid placement, not `order`) and stays visible above them. */
+@media (max-width: 1179.98px) {
+  .workgraph-lifecycle-layout {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto minmax(232px, auto) auto auto auto;
+  }
+  .workgraph-lifecycle__title { grid-row: 1; }
+  .workgraph-lifecycle__intro { grid-row: 2; }
+  .workgraph-record-state { grid-row: 3 / span 2; align-self: start; position: sticky; top: 76px; z-index: 2; }
+  .workgraph-lifecycle { grid-row: 4; margin-top: var(--space-6); }
+  .workgraph-lifecycle__detail { grid-row: 5; }
+  .workgraph-lifecycle__link { grid-row: 6; }
+  html.cl-enhanced .workgraph-lifecycle li { min-height: 26svh; align-content: center; }
+}
+
+/* Wide desktop with room: sticky carrier beside the moving steps. Row
+   heights are proportional to the viewport so the four states resolve at the
+   labelled scroll positions and reverse on the way back. */
+@media (min-width: 1180px) and (min-height: 720px) {
+  .workgraph-lifecycle-layout {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    grid-template-rows: auto auto auto auto auto;
+    column-gap: var(--col-gap);
+    row-gap: 0;
+  }
+  .workgraph-lifecycle__title { grid-column: 1; grid-row: 1; }
+  .workgraph-lifecycle__intro { grid-column: 1; grid-row: 2; margin-top: var(--space-6); }
+  .workgraph-lifecycle { grid-column: 1; grid-row: 3; margin-top: var(--space-9); }
+  .workgraph-record-state { grid-column: 2; grid-row: 1 / span 3; align-self: start; position: sticky; top: 104px; margin-top: var(--space-2); }
+  .workgraph-lifecycle__detail { grid-column: 1; grid-row: 4; margin-top: var(--space-7); }
+  .workgraph-lifecycle__link { grid-column: 1; grid-row: 5; margin-top: var(--space-6); }
+  .workgraph-lifecycle li { padding-block: var(--space-6); }
+  .workgraph-lifecycle li[data-workgraph-step="connect"] { min-height: 30vh; }
+  .workgraph-lifecycle li[data-workgraph-step="decide"] { min-height: 54vh; }
+  .workgraph-lifecycle li[data-workgraph-step="build"] { min-height: 58vh; }
+  .workgraph-lifecycle li[data-workgraph-step="learn"] { min-height: 33vh; }
+}
+@media (min-width: 1180px) and (max-height: 719.98px) {
+  .workgraph-lifecycle-layout {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    column-gap: var(--col-gap);
+  }
+  .workgraph-lifecycle__title,
+  .workgraph-lifecycle__intro,
+  .workgraph-lifecycle,
+  .workgraph-lifecycle__detail,
+  .workgraph-lifecycle__link { grid-column: 1; }
+  .workgraph-record-state { grid-column: 2; grid-row: 1 / span 3; align-self: start; }
+}
+
+/* ------------------------------------------------------------------ *
+ * Native disclosures, control, close                                   *
+ * ------------------------------------------------------------------ */
+
+.workgraph-native-detail {
+  padding-block: var(--space-2) var(--space-4);
+  border-block: 1px solid var(--wg-rule);
+  max-width: 76ch;
+}
+.workgraph-native-detail summary {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  color: var(--ink);
+  font: 520 var(--fs-body)/var(--lh-body) var(--font-sans);
+  cursor: pointer;
+}
+.workgraph-native-detail > p { margin-top: var(--space-4); max-width: 66ch; }
+
+.workgraph-control { display: grid; gap: var(--space-6); align-items: start; }
+.workgraph-control__narrative { display: contents; }
+.workgraph-control__body { max-width: 66ch; }
+.workgraph-boundary {
+  padding-inline-start: var(--space-6);
+  border-inline-start: 3px solid var(--sage);
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: var(--fs-lead);
+  line-height: var(--lh-body);
+  max-width: 24ch;
+}
+.workgraph-control__detail { margin-top: 0; }
+.workgraph-control__link { margin-top: 0; }
+
+.workgraph-next { display: grid; gap: var(--space-6); align-items: start; }
+.workgraph-next__narrative { display: contents; }
+.workgraph-next__lead { max-width: 62ch; }
+.workgraph-next__actions { margin-top: 0; }
+
+@media (min-width: 940px) {
+  .workgraph-control {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    grid-template-rows: auto auto auto auto;
+    column-gap: var(--col-gap);
+    row-gap: var(--space-6);
+  }
+  .workgraph-control__title { grid-column: 1; grid-row: 1; }
+  .workgraph-control__body { grid-column: 1; grid-row: 2; }
+  .workgraph-boundary { grid-column: 2; grid-row: 1 / span 2; align-self: start; margin-top: var(--space-3); }
+  .workgraph-control__detail { grid-column: 1; grid-row: 3; }
+  .workgraph-control__link { grid-column: 1; grid-row: 4; }
+
+  .workgraph-next {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    grid-template-rows: auto auto;
+    column-gap: var(--col-gap);
+  }
+  .workgraph-next__title { grid-column: 1; grid-row: 1 / span 2; }
+  .workgraph-next__lead { grid-column: 2; grid-row: 1; }
+  .workgraph-next__actions { grid-column: 2; grid-row: 2; }
+}
+
+@media (max-width: 939.98px) {
+  .workgraph-hero,
+  .workgraph-context,
+  .workgraph-control,
+  .workgraph-next { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .workgraph-section { padding-block: var(--section-md); }
+  .workgraph-section--hero { padding-block: var(--space-6) var(--space-7); }
+  .workgraph-section--lifecycle { padding-block: var(--space-7) var(--space-7); }
+  .workgraph-actions { align-items: stretch; }
+  .workgraph-record__identity,
+  .workgraph-record__fields,
+  .workgraph-record__depth,
+  .workgraph-lenses { padding-inline: var(--space-4); }
+  .workgraph-record__title-row,
+  .workgraph-record__field,
+  .workgraph-record-state__invariants > div { grid-template-columns: minmax(0, 1fr); gap: var(--space-1); }
+  .workgraph-record__title-row { align-items: start; }
+  .workgraph-record__field--coral,
+  .workgraph-record__field--sage { padding-inline-start: var(--space-3); }
+  .workgraph-record-state { padding: var(--space-4); }
+  .workgraph-index__links { column-gap: var(--space-4); }
+  .workgraph-boundary { padding-inline-start: var(--space-4); max-width: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .workgraph-context__image,
+  html.cl-enhanced [data-workgraph-page]:not([data-workgraph-ready]) .workgraph-context__image,
+  html.cl-enhanced [data-workgraph-page][data-workgraph-ready] .workgraph-context__image {
+    transform: none;
+    opacity: 1;
+  }
+  .workgraph *,
+  .workgraph *::before,
+  .workgraph *::after {
+    animation-duration: 0ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+}

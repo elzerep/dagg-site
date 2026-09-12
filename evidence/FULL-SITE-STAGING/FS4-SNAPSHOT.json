@@ -1,0 +1,21 @@
+{
+  "capturedAt": "2026-09-02T14:11:44.054008+00:00",
+  "branch": "design-language",
+  "commit": "f688c5431960bae3fda7dbe237c47cb0a95cf57c",
+  "abbreviatedCommit": "f688c54",
+  "dirty": true,
+  "dirtyEntryCount": 103,
+  "snapshotId": "6ef754faf00f234ba503ddbc83e8226759054a4b57929b9757561b3a6fdfdc50",
+  "abbreviatedSnapshotId": "6ef754faf00f",
+  "snapshotFileCount": 661,
+  "snapshotByteCount": 268175151,
+  "snapshotConsistencyPasses": 2,
+  "snapshotAcquisitionStable": true,
+  "localBaseUrl": "http://127.0.0.1:8933",
+  "publicationAuthorized": false,
+  "notes": [
+    "This immutable snapshot excludes evidence, .git, .claude and .playwright-cli.",
+    "The snapshot is dirty because the complete golden-standard candidate is not committed.",
+    "Visual acceptance must cite this snapshot ID; assembly checks alone are not visual acceptance."
+  ]
+}

@@ -1,0 +1,253 @@
+<!-- Dagg golden standard - Home (FS5 Lane A)
+   Sole copy authority: design/golden-standard/narrative/HOME-NARRATIVE-FOUNDER-RESET.md
+   Exact unit ownership: design/golden-standard/narrative/COPY-UNIT-MANIFEST.json
+   Composition authority: design/golden-standard/design-mapping/HOME-FS5-PAGE-MAP.md
+   Visual authority: the three frozen Dagg design-system PDFs.
+   Shared header, footer and main landmark are assembled centrally.
+
+   Every public text node sits under exactly one data-copy-ref owner. Where an
+   accepted composition places a headline and its paragraphs in different grid
+   columns, the owner is a `display: contents` wrapper so the exact narrative
+   unit stays one contiguous subtree while the rendered geometry is unchanged.
+   The founder-selected hero (bytes, sources, crop, H1, lead, actions) is
+   protected: only keyed ownership attributes were added. -->
+<div class="home" data-home>
+
+  <section class="home-act home-act--position" data-home-act="position" aria-labelledby="home-title">
+    <div class="home-hero" data-home-hero>
+      <div class="page home-hero__page">
+        <div class="field home-hero__field">
+          <div class="home-hero__narrative"
+               data-copy-ref="home.position.narrative"
+               data-copy-kind="narrative"
+               data-copy-scope="default">
+            <div class="home-hero__copy" data-narrative-anchor>
+              <p class="cl-eyebrow home-eyebrow">AI-native transformation</p>
+              <h1 class="h1 home-h1" id="home-title" data-home-h1>Build the company AI makes possible.</h1>
+            </div>
+            <p class="lead home-lead" data-home-lead data-narrative-anchor>Dagg decides how a company should work when agents and software carry more of the execution — then builds the systems that make that decision real.</p>
+          </div>
+          <div class="cl-actions home-actions home-hero__actions"
+               data-copy-ref="home.position.actions"
+               data-copy-kind="action"
+               data-copy-scope="default">
+            <a class="cl-button cl-button--primary" href="/preview/golden-standard/routes/assessment/" data-home-primary-action>Start an assessment</a>
+            <a class="cl-button cl-button--secondary" href="/preview/golden-standard/routes/transformation/">See what must change</a>
+          </div>
+        </div>
+      </div>
+      <picture class="home-hero__visual">
+        <source media="(max-width: 639.98px)" type="image/webp"
+                srcset="/design/golden-standard/image-system/home/home-hero-selected-mobile-v4.webp">
+        <source media="(max-width: 639.98px)"
+                srcset="/design/golden-standard/image-system/home/home-hero-selected-mobile-v4.png">
+        <source type="image/webp"
+                srcset="/design/golden-standard/image-system/home/home-hero-selected-desktop-v4.webp">
+        <img class="home-hero__image" data-home-hero-image
+             src="/design/golden-standard/image-system/home/home-hero-selected-desktop-v4.png"
+             width="1983" height="793" decoding="async" fetchpriority="high"
+             alt="Fragmented company work crosses a human decision boundary and becomes a coherent machine-speed system."
+             data-copy-ref="home.position.image-alt"
+             data-copy-kind="functional"
+             data-copy-scope="default">
+      </picture>
+    </div>
+  </section>
+
+  <section class="home-act home-act--shift" data-home-act="shift" aria-labelledby="home-shift-title">
+    <div class="page"><div class="field home-shift" data-narrative-anchor>
+      <div class="home-shift__narrative"
+           data-copy-ref="home.shift.narrative"
+           data-copy-kind="narrative"
+           data-copy-scope="default">
+        <div class="home-shift__title">
+          <h2 class="h2 home-h2" id="home-shift-title">AI-native changes who executes — and who decides.</h2>
+        </div>
+        <div class="home-shift__argument">
+          <p class="cl-body home-measure">The decisive shift is from people carrying every handoff to people setting direction, defining requirements and resolving material exceptions while agents and software execute continuously. The gap between human-speed handoffs and machine-speed systems compounds.</p>
+          <p class="cl-body home-measure">Automation is not the answer to every process. The first decision is what to preserve, simplify, automate, rebuild or retire — and where a person must stay responsible.</p>
+        </div>
+      </div>
+      <a class="cl-link home-text-link home-shift__link" href="/preview/golden-standard/routes/transformation/"
+         data-copy-ref="home.shift.action"
+         data-copy-kind="action"
+         data-copy-scope="default">See what must change</a>
+    </div></div>
+  </section>
+
+  <section class="home-act home-act--record" data-home-act="record" aria-labelledby="home-record-title">
+    <div class="page"><div class="field home-record-layout">
+      <div class="home-record__copy" data-narrative-anchor>
+        <div class="home-record__narrative"
+             data-copy-ref="home.record.narrative"
+             data-copy-kind="narrative"
+             data-copy-scope="default">
+          <h2 class="h2 home-h2" id="home-record-title">Start with how the company really works.</h2>
+          <div class="home-record__body">
+            <p class="cl-body home-measure">Dagg maps work across teams, systems, decisions and exceptions, including the informal handoffs no process map captures. That gives leadership the operating reality and a target operating model grounded in what AI can do now and what should stay human.</p>
+            <p class="cl-body home-measure">WorkGraph turns that understanding into a retained company record. It keeps the workflow, the decision, its owner and its boundary connected, so the transformation is not rediscovered at every stage.</p>
+          </div>
+        </div>
+        <a class="cl-link home-text-link" href="/preview/golden-standard/routes/workgraph/#record"
+           data-copy-ref="home.record.action"
+           data-copy-kind="action"
+           data-copy-scope="default">See how company context is retained</a>
+      </div>
+
+      <!-- The page's single constructed-example disclosure precedes the first
+           synthetic identifier. Owner and Permission are the two default
+           record fields the founder reset assigns to Act 3. -->
+      <aside class="home-record" data-home-record data-narrative-anchor>
+        <p class="home-record__disclosure"
+           data-copy-ref="home.record.disclosure"
+           data-copy-kind="disclosure"
+           data-copy-scope="default">Constructed example, not client data or a production deployment.</p>
+        <div class="home-record__identity"
+             data-copy-ref="home.record.identity"
+             data-copy-kind="artifact-static"
+             data-copy-scope="default">
+          <p class="home-record__kicker">Context record — WG-034</p>
+          <p class="home-record__name">One governed exception, carried through</p>
+          <dl class="home-record__fields">
+            <div class="home-record__field"><dt>Owner</dt><dd>Finance owner.</dd></div>
+            <div class="home-record__field home-record__field--permission"><dt>Permission</dt><dd>Prepare only. Never release.</dd></div>
+          </dl>
+        </div>
+      </aside>
+    </div></div>
+  </section>
+
+  <section class="home-act home-act--build" data-home-act="build" aria-labelledby="home-build-title">
+    <div class="page"><div class="field home-build-layout">
+      <div class="home-build__copy" data-narrative-anchor>
+        <div class="home-build__narrative"
+             data-copy-ref="home.build.narrative"
+             data-copy-kind="narrative"
+             data-copy-scope="default">
+          <h2 class="h2 home-h2" id="home-build-title">The decision becomes a working system.</h2>
+          <div class="home-build__body">
+            <p class="cl-body home-measure">Once a change is justified, Dagg Factory carries the same context through product design, architecture, build and evaluation. It builds a bounded agent around work that should remain, or custom software for a workflow that should change.</p>
+            <p class="cl-body home-measure">The same governed capability can also serve the customer, inside the product or through an assistant they already use — while the company's own system stays the source of context, permission and record.</p>
+          </div>
+          <p class="home-build__boundary">A product pattern, not a named deployment or provider.</p>
+        </div>
+        <a class="cl-link cl-link--on-ink home-text-link" href="/preview/golden-standard/routes/build/#factory"
+           data-copy-ref="home.build.action"
+           data-copy-kind="action"
+           data-copy-scope="default">See how context becomes a build</a>
+      </div>
+
+      <!-- Operational Evidence as a coded instrument. Order is fixed by the
+           founder reset: identity, static Request, signal line, then exactly
+           four animated states and the status. Pause, Resume and Replay are
+           static controls, hidden only while inert; with JavaScript disabled
+           the status is the resolved state and every state reads in order. -->
+      <article class="home-execution on-ink" data-home-execution data-narrative-anchor aria-labelledby="home-execution-title">
+        <span class="home-execution__trigger" data-home-execution-trigger aria-hidden="true"></span>
+        <div class="home-execution__identity">
+          <div class="home-execution__identity-copy"
+               data-copy-ref="home.build.execution-identity"
+               data-copy-kind="artifact-static"
+               data-copy-scope="default">
+            <p class="home-execution__record">Context record — WG-034</p>
+            <h3 class="home-execution__title" id="home-execution-title">One governed exception, carried through</h3>
+          </div>
+          <div class="home-execution__controls" data-home-execution-controls hidden>
+            <button type="button" data-home-pause hidden
+                    data-copy-ref="home.build.pause-toggle"
+                    data-copy-kind="functional"
+                    data-copy-scope="progressive"
+                    data-copy-state="pause">Pause sequence</button>
+            <button type="button" data-home-replay hidden
+                    data-copy-ref="home.build.replay-control"
+                    data-copy-kind="functional"
+                    data-copy-scope="progressive">Replay sequence</button>
+          </div>
+        </div>
+
+        <dl class="home-execution__request"
+            data-copy-ref="home.build.execution-request"
+            data-copy-kind="artifact-static"
+            data-copy-scope="default">
+          <div><dt>Request</dt><dd>Prepare this supplier payment exception for review.</dd></div>
+        </dl>
+
+        <div class="home-execution__signal" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </div>
+
+        <ol class="home-execution__states" data-home-execution-states>
+          <li class="home-execution__state" data-home-execution-state="0"
+              data-copy-ref="home.build.execution-states.operating-reality"
+              data-copy-kind="artifact-state"
+              data-copy-scope="default">
+            <h4>Operating reality</h4><p>The invoice and receipt disagree.</p>
+          </li>
+          <li class="home-execution__state" data-home-execution-state="1"
+              data-copy-ref="home.build.execution-states.decision-retained"
+              data-copy-kind="artifact-state"
+              data-copy-scope="default">
+            <h4>Decision retained</h4><p>Automate preparation. Keep human approval for release.</p>
+          </li>
+          <li class="home-execution__state" data-home-execution-state="2"
+              data-copy-ref="home.build.execution-states.governed-execution"
+              data-copy-kind="artifact-state"
+              data-copy-scope="default">
+            <h4>Governed execution</h4><p>The agent prepares the draft. It cannot release payment.</p>
+          </li>
+          <li class="home-execution__state" data-home-execution-state="3"
+              data-copy-ref="home.build.execution-states.evidence-returns"
+              data-copy-kind="artifact-state"
+              data-copy-scope="default">
+            <h4>Evidence returns</h4><p>The finance owner decides; the result and evidence update the same record.</p>
+          </li>
+        </ol>
+
+        <p class="home-execution__status" data-home-execution-status aria-live="polite"
+           data-copy-ref="home.build.execution-status"
+           data-copy-kind="artifact-state"
+           data-copy-scope="default"
+           data-copy-state="resolved">Human decision recorded. Release remains withheld.</p>
+      </article>
+    </div></div>
+  </section>
+
+  <section class="home-act home-act--compound" data-home-act="compound" aria-labelledby="home-compound-title">
+    <div class="page"><div class="field home-compound" data-narrative-anchor>
+      <div class="home-compound__narrative"
+           data-copy-ref="home.compound.narrative"
+           data-copy-kind="narrative"
+           data-copy-scope="default">
+        <h2 class="h2 home-h2" id="home-compound-title">Every operating cycle makes the next one better.</h2>
+        <p class="lead home-measure home-compound__lead">Once systems run, decisions, exceptions and evidence return to the same record. Dagg can then measure the result against the context that shaped it, refine the system and decide what people, agents or software should carry next. New evidence sharpens the next decision; reusable tools and evaluation improve the next build.</p>
+      </div>
+      <a class="cl-link home-text-link home-compound__link" href="/preview/golden-standard/routes/trust/#permission"
+         data-copy-ref="home.compound.action"
+         data-copy-kind="action"
+         data-copy-scope="default">Inspect the control model</a>
+    </div></div>
+  </section>
+
+  <section class="home-act home-act--partner" data-home-act="partner" aria-labelledby="home-partner-title">
+    <div class="page"><div class="field home-partner" data-narrative-anchor>
+      <div class="home-partner__narrative"
+           data-copy-ref="home.partner.narrative"
+           data-copy-kind="narrative"
+           data-copy-scope="default">
+        <h2 class="h2 home-h2" id="home-partner-title">One partner, from direction to accountable release.</h2>
+        <div class="home-partner__copy">
+          <p class="cl-body home-measure">Dagg brings strategic judgment, company building and engineering into one engagement. We can stay with the change from the operating decision through build and release, and take a defined operating role when the engagement calls for it.</p>
+          <p class="cl-body home-measure">Start with one material path through the company. We build only when the evidence justifies it.</p>
+        </div>
+      </div>
+      <div class="cl-actions home-actions home-partner__actions"
+           data-copy-ref="home.partner.actions"
+           data-copy-kind="action"
+           data-copy-scope="default">
+        <a class="cl-button cl-button--primary" href="/preview/golden-standard/routes/assessment/" data-home-primary-action>Start an assessment</a>
+        <a class="cl-button cl-button--secondary" href="/preview/golden-standard/routes/company/">See how Dagg stays accountable</a>
+      </div>
+    </div></div>
+  </section>
+
+</div>

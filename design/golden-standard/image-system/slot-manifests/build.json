@@ -1,0 +1,19 @@
+{
+  "route": "Build",
+  "frozen": true,
+  "slots": [
+    {
+      "id": "build-position-hero",
+      "job": "Retired. Build opens with copy and the coded five-row Factory stage; no bitmap competes with the inspectable mechanism.",
+      "families": [],
+      "desktopAspect": "none",
+      "mobileAspect": "none",
+      "exclusions": ["terminal", "dashboard", "code", "circuit board", "neon", "antique machinery", "biological ambiguity", "decorative collage"],
+      "evaluation": ["no bitmap in Position", "five distinct coded rows", "coral judgment bridge", "sage governed endpoint", "calm first viewport"],
+      "candidateIds": [],
+      "selection": null,
+      "mobileSelection": null,
+      "selectionReason": "B-OE-MS-01 was retired after reconciliation. The coded Factory is the route-specific proof and must carry the execution story itself."
+    }
+  ]
+}

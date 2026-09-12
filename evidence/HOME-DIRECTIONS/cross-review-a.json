@@ -1,0 +1,75 @@
+{
+  "direction": "A",
+  "phase": "P4R6 A0 cross-review to resolved A1",
+  "eligibility": {
+    "nineActs": [
+      "hero",
+      "stakes",
+      "transformation",
+      "workgraph",
+      "factory",
+      "surfaces",
+      "operate-trust",
+      "impact",
+      "assessment"
+    ],
+    "exactOpening": true,
+    "exactGlobalDisclosure": true,
+    "exactLocalProvenance": true,
+    "p1r2HumanApprovalLanguage": true,
+    "selectedA04DesktopMobile": true,
+    "staticNoJsReadingOrder": true,
+    "sourceGate": "PASS in standalone A1 audit: 498 visible words, exact nine-act order, exact opening, responsive picture, no forbidden markup, duplicate ids, remote references, CSS overreach or script vector construction",
+    "renderedBrowserQA": "pending root integration and browser review"
+  },
+  "selectedSpine": {
+    "source": "A0-Codex",
+    "reason": "Its conclusion-led warm editorial sequence preserves the strategic 70/30 judgment-to-proof balance.",
+    "sequence": "thesis > stakes > decision continuum > retained context > Factory > two surfaces > governed exception > evidence > assessment"
+  },
+  "transferableDecisions": {
+    "fromA0Codex": [
+      "Warm strategic/editorial composition and restrained proof density",
+      "Light WorkGraph record and light Trust disclosure",
+      "Continuum, Factory controls, surface toggle and native disclosures",
+      "Conclusion-led Impact gateway"
+    ],
+    "fromA0Claude": [
+      "The same capability faces the company and the customer",
+      "Assessment names one material path and evidence to act or refuse",
+      "Escalation and a concrete return to the manual queue"
+    ]
+  },
+  "tradeoffs": [
+    "A1 chooses executive legibility over the denser product-tour detail in A0-Claude.",
+    "Operational Evidence is deliberately limited to Factory and the two-surface carrier; WorkGraph and Trust stay editorial and light.",
+    "The hero remains a conceptual still while finite machine behavior is demonstrated in coded mechanisms."
+  ],
+  "rejectedAveraging": [
+    "Do not concatenate both continuum explanations.",
+    "Do not retain both Impact disclaimers.",
+    "Do not combine Codex spacing with Claude's four consecutive dark instruments.",
+    "Do not add a second hero annotation or explanatory caption system."
+  ],
+  "copyChanges": [
+    "Transferred Claude's two-surface thesis.",
+    "Made the assessment outcome and refusal path explicit.",
+    "Made escalation and return to manual operation concrete.",
+    "Replaced every human release phrase with human approval for release.",
+    "Restored the exact global and all local provenance statements.",
+    "Defined Impact evidence by source, condition, timeframe and limit."
+  ],
+  "imageRole": {
+    "asset": "A04 desktop and independently composed A04 mobile",
+    "language": "Decision Field with restrained Machine Signal",
+    "job": "Strategic judgment redirects imperfect company context into a governed operational path.",
+    "behavior": "still-only",
+    "operationalEvidence": "Rendered as real HTML in Factory and the two-surface mechanism, not as generated interface imagery."
+  },
+  "knownLimitations": [
+    "A04 has no approved coarse-to-resolved start-state pair, so A1 does not claim semantic hero motion.",
+    "The finite machine progression remains owned by the shared Factory component.",
+    "Shared adaptive-header behavior cannot be changed from a direction body and must be verified after assembly.",
+    "Desktop and mobile rendered QA remain required after root assembles the shared chrome."
+  ]
+}

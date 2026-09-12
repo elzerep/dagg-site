@@ -1,0 +1,84 @@
+{
+  "direction": "C",
+  "status": "source-synthesis-complete-browser-pending",
+  "inputs": {
+    "codex": "preview/golden-standard/directions/c0-codex/",
+    "claude": "preview/golden-standard/directions/c0-claude/",
+    "synthesis": "preview/golden-standard/directions/c1/"
+  },
+  "eligibility": {
+    "c0Codex": {
+      "visibleWords": 461,
+      "nineActs": true,
+      "staticContract": "pass"
+    },
+    "c0Claude": {
+      "visibleWords": 470,
+      "nineActs": true,
+      "staticContract": "pass"
+    },
+    "c1": {
+      "visibleWords": 470,
+      "nineActs": true,
+      "sourceAudit": "pass",
+      "browserAudit": "pending root assembly"
+    },
+    "comparisonBasis": "Both C0 cuts satisfied the source contract and were eligible for synthesis."
+  },
+  "transferableDecisions": {
+    "fromCodex": [
+      "Operational-enterprise narrative spine from exception to governed change",
+      "C03 hero orchestration with one light accountability record",
+      "Nine-act executive-summary hierarchy",
+      "WorkGraph provenance and Factory stop-before-release proof",
+      "Two governed surfaces with an explicit truth boundary"
+    ],
+    "fromClaude": [
+      "Finite permitted-path versus material-exception comparison",
+      "Exception-led assessment invitation",
+      "More direct articulation of operational consequence"
+    ]
+  },
+  "tradeoff": {
+    "codexOptimizes": "Calm authority, legible executive hierarchy and one continuous operating-model argument.",
+    "codexGivesUp": "Some of Claude's immediate state-change drama and explicit exception comparison.",
+    "claudeOptimizes": "Operational tension and a clear interactive contrast between a permitted path and a material exception.",
+    "claudeGivesUp": "Editorial restraint and a single unambiguous hierarchy when signal bands and records accumulate.",
+    "directorDecision": "Keep the Codex composition and narrative spine; transfer only Claude's bounded exception toggle and strongest assessment line."
+  },
+  "selectedSpine": {
+    "narrative": "Stakes, strategic decision, retained company context, governed build, two surfaces, controlled operation, impact and assessment.",
+    "composition": "Codex C0 composition with one hero accountability record and no separate signal band.",
+    "copy": "Codex restraint with the authorized lighter lead and P1R2 human-approval language.",
+    "image": "C03 as a Decision Field supported by restrained Machine Signal; Operational Evidence is expressed in HTML below the hero.",
+    "interaction": "One finite permitted-path/material-exception toggle in Operate/Trust, progressively enhanced from a complete static reading order."
+  },
+  "rejectedAveraging": [
+    "No separate signal band from Claude beneath the Codex hero",
+    "No second accountability record",
+    "No second Trust model or parallel operating-state component",
+    "No compromise hero composition that weakens C03's single image role",
+    "No blending of both cuts' repeated explanatory copy"
+  ],
+  "boundedCopyAmendment": {
+    "previousLead": "Dagg maps the real company, builds the justified agents and software, and keeps context, permissions, owners and evidence attached as work moves into execution.",
+    "replacementLead": "Dagg carries strategic judgment into governed execution, so the company can change how work runs without losing context or control.",
+    "reason": "The prior lead read as a capability inventory; the authorized C1 sentence carries the same scope with less weight.",
+    "scope": "C1 only; neither C0 source was edited.",
+    "releaseLanguage": "Every occurrence of human release uses the exact P1R2 human approval for release phrase; named accountable approvals remain explicit.",
+    "mismatchLogic": "A mismatch is found; the draft is withheld. The mismatch itself is never described as withheld."
+  },
+  "imageRole": {
+    "desktopAsset": "p4r6-c-home-hero-03-desktop",
+    "mobileAsset": "p4r6-c-home-hero-03-mobile",
+    "primary": "Decision Field",
+    "supporting": "Restrained Machine Signal",
+    "operationalEvidence": "Coded, selectable and legible HTML rather than bitmap evidence."
+  },
+  "limitations": [
+    "The C03 rail or tunnel ambiguity must still be judged inside the assembled desktop and mobile carriers.",
+    "No assembler was run by the C1 builder.",
+    "Desktop, mobile, touch, keyboard, reduced-motion, no-JS and console audits remain pending for root.",
+    "Constructed states are product explanations, not client data, production deployments or claimed outcomes."
+  ]
+}

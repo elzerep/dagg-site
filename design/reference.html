@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en" data-accent="violet">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dagg — design language reference</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@200..700&family=Hedvig+Letters+Serif:opsz@12..24&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="tokens.css">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-sans);
+     font-size:var(--t-body);line-height:var(--lh-body);font-weight:var(--w-body);
+     -webkit-font-smoothing:antialiased}
+.page{max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter)}
+.spine{display:grid;grid-template-columns:var(--rail) 1fr;column-gap:3vw;
+       border-top:1px solid var(--hair);padding:64px 0}
+.rail{border-right:1px solid var(--hair);padding-right:1.4vw;display:flex;flex-direction:column;
+      justify-content:space-between;align-items:flex-start;min-height:220px}
+.rail .no{font-family:var(--font-mono);font-size:22px;color:var(--ink-3);line-height:1}
+.rail .sec{font-family:var(--font-mono);font-size:var(--t-micro);letter-spacing:var(--track-micro);
+           text-transform:uppercase;color:var(--ink-3);writing-mode:vertical-rl;transform:rotate(180deg)}
+h1,h2,h3,p,ul{margin:0}
+.eyebrow{font-family:var(--font-mono);font-size:var(--t-micro);letter-spacing:var(--track-micro);
+         text-transform:uppercase;color:var(--ink-3)}
+.h1{font-size:var(--t-h1);line-height:var(--lh-head);letter-spacing:var(--track-head);
+    font-weight:var(--w-head);font-family:var(--font-serif);max-width:26ch}
+.h2{font-size:var(--t-h2);line-height:var(--lh-head);letter-spacing:var(--track-head);font-weight:var(--w-head)}
+.lead{font-size:var(--t-lead);color:var(--ink-2);max-width:56ch}
+.tx{color:var(--ink-2);max-width:62ch}
+.cap{font-size:var(--t-cap);color:var(--ink-3)}
+.stack{display:flex;flex-direction:column;gap:18px}
+.grid{display:grid;gap:18px}
+.sw{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px}
+.chip{border-top:1px solid var(--hair-firm);padding-top:10px;display:flex;flex-direction:column;gap:6px}
+.chip .box{height:56px;border:1px solid var(--hair)}
+.chip .n{font-family:var(--font-mono);font-size:var(--t-micro);letter-spacing:.12em;color:var(--ink-3)}
+.chip .v{font-family:var(--font-mono);font-size:var(--t-cap);color:var(--ink-2)}
+.ok{color:var(--second);font-weight:var(--w-strong)}
+.no{color:#A33}
+.band{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;border-top:1px solid var(--hair);
+      padding-top:16px;margin-top:34px}
+.band .k{font-family:var(--font-mono);font-size:var(--t-micro);letter-spacing:var(--track-micro);
+         text-transform:uppercase;color:var(--ink-3);display:block;margin-bottom:5px}
+.band .v{font-size:var(--t-cap);color:var(--ink-2)}
+.night{background:var(--night);color:var(--n-fg);position:relative;overflow:hidden;padding:56px var(--gutter)}
+.night .tx,.night .lead{color:var(--n-fg-2)}
+.night .eyebrow{color:var(--n-fg-2)}
+.night *{position:relative;z-index:1}
+.night .aurora{z-index:0}
+.rows{display:flex;flex-direction:column}
+.row{display:grid;grid-template-columns:34px 1fr;gap:16px;align-items:baseline;
+     padding:13px 0;border-bottom:1px solid var(--hair)}
+.rows .row:first-child{border-top:1px solid var(--hair)}
+.row .n{font-family:var(--font-mono);font-size:var(--t-micro);letter-spacing:.12em;color:var(--accent)}
+.serif{font-family:var(--font-serif)}
+.toggle{position:fixed;right:18px;bottom:16px;z-index:50;display:flex;gap:0;
+        font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.toggle button{border:1px solid var(--hair-firm);background:var(--paper);color:var(--ink-3);
+        padding:9px 14px;cursor:pointer;font:inherit}
+.toggle button[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+.toggle button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+mark{background:var(--accent-wash);color:inherit;padding:0 .2em}
+</style>
+</head>
+<body>
+
+<div class="toggle" role="group" aria-label="Accent variant">
+  <button id="bv" aria-pressed="true">Violet</button>
+  <button id="bc" aria-pressed="false">Coral</button>
+</div>
+
+<div class="page">
+
+  <div class="spine">
+    <div class="rail"><span class="sec">Reference</span><span class="no">01</span></div>
+    <div class="stack">
+      <span class="eyebrow">Dagg · design language</span>
+      <h1 class="h1">The rules behind the work, in one page you can look at.</h1>
+      <p class="lead">Two grounds, one accent, three type roles. Every value below is measured
+        rather than chosen by eye. Switch the accent bottom-right to compare the two variants
+        on real components.</p>
+      <div class="band">
+        <div><span class="k">Grounds</span><span class="v">Light carries the argument. Night marks a beat.</span></div>
+        <div><span class="k">Accent</span><span class="v">A hairline, a mark, one field. Never a surface.</span></div>
+        <div><span class="k">Type</span><span class="v">Grotesk for structure, serif for a spoken voice, mono for metadata.</span></div>
+        <div><span class="k">Weight</span><span class="v">400 on light grounds. Never 300.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="spine">
+    <div class="rail"><span class="sec">Ink</span><span class="no">02</span></div>
+    <div class="stack">
+      <h2 class="h2">Ink, measured against the light ground</h2>
+      <p class="tx">Captions carry content, so they are held to the same bar as body text.
+        Anything below 4.5:1 is a hairline label, not a place to put a sentence.</p>
+      <div class="sw" id="inks"></div>
+    </div>
+  </div>
+
+  <div class="spine">
+    <div class="rail"><span class="sec">Accent</span><span class="no">03</span></div>
+    <div class="stack">
+      <h2 class="h2">The accent, and what it may carry</h2>
+      <p class="tx">This is the decision. Coral is a beautiful field colour and an unusable text
+        colour on ivory — <mark>2.96:1</mark>. Dagg's violet holds <mark>6.95:1</mark> and can carry
+        both. The variant exists so the choice is made by looking, not by argument.</p>
+      <div class="sw" id="accs"></div>
+      <div class="rows" style="margin-top:26px">
+        <div class="row"><span class="n">01</span><span class="serif" style="font-size:var(--t-lead)">“A question set in the serif, which is where a spoken voice lives.”</span></div>
+        <div class="row"><span class="n">02</span><span>A numbered row, where the accent carries the marker and nothing else.</span></div>
+        <div class="row"><span class="n">03</span><span>Structure comes from hairlines. There are no cards anywhere on this page.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="spine">
+    <div class="rail"><span class="sec">Type</span><span class="no">04</span></div>
+    <div class="stack">
+      <h2 class="h2">Document scale, not poster scale</h2>
+      <p class="tx">A headline at billboard size with three lines under it is a poster: loud, empty,
+        and it reads as having nothing to say. The ratio of headline to caption sits near 6:1 on a
+        single-idea page.</p>
+      <div class="stack" style="gap:14px;margin-top:8px">
+        <div style="font-size:var(--t-display);line-height:var(--lh-tight);letter-spacing:-.03em;font-family:var(--font-serif)">Display</div>
+        <div class="h1" style="max-width:none">Headline, serif, conclusion-led</div>
+        <div class="h2">Subhead, grotesk</div>
+        <div class="lead">Lead paragraph. Sets up the argument in one or two sentences and then stops.</div>
+        <div class="tx">Body. Weight 400, line-height 1.72, measured to about 62 characters. Generous leading is what makes a light ground readable in a room rather than only on a laptop.</div>
+        <div class="cap">Caption. Carries content, held to 4.9:1, never decoration.</div>
+        <div class="eyebrow">Metadata · mono · widely tracked</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="night">
+  <div class="aurora"></div>
+  <div class="page" style="padding:0">
+    <div class="spine" style="border-top-color:var(--n-hair);grid-template-columns:var(--rail) 1fr">
+      <div class="rail" style="border-right-color:var(--n-hair)"><span class="sec" style="color:var(--n-fg-2)">Night</span><span class="no" style="color:var(--n-fg-2)">05</span></div>
+      <div class="stack">
+        <span class="eyebrow">The dark beat</span>
+        <h2 class="h1" style="color:var(--n-fg)">Night marks a beat — an opening, a pivot, a close.</h2>
+        <p class="lead">Three or four in fifteen pages, never two adjacent. The aurora gives the black
+          depth without ornament: three slow radials, and nothing else.</p>
+        <div class="band" style="border-top-color:var(--n-hair)">
+          <div><span class="k" style="color:var(--n-fg-2)">Accent on night</span><span class="v" style="color:var(--n-fg-2)">Lifts to a brighter value so it still carries text.</span></div>
+          <div><span class="k" style="color:var(--n-fg-2)">Hairlines</span><span class="v" style="color:var(--n-fg-2)">Warm off-white at low alpha, never pure white.</span></div>
+          <div><span class="k" style="color:var(--n-fg-2)">Body</span><span class="v" style="color:var(--n-fg-2)">8:1 against the ground. Readable, not glowing.</span></div>
+          <div><span class="k" style="color:var(--n-fg-2)">Rule</span><span class="v" style="color:var(--n-fg-2)"><b style="color:var(--n-fg)">Never two dark pages in a row.</b></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const P='#FAF9F5', N='#141413';
+function lum(h){h=h.replace('#','');const v=[0,2,4].map(i=>parseInt(h.substr(i,2),16)/255)
+  .map(c=>c<=.04045?c/12.92:Math.pow((c+.055)/1.055,2.4));
+  return .2126*v[0]+.7152*v[1]+.0722*v[2];}
+function cr(a,b){const x=lum(a),y=lum(b),hi=Math.max(x,y),lo=Math.min(x,y);return (hi+.05)/(lo+.05);}
+function verdict(r){return r>=4.5?['text and graphic','ok']:r>=3?['large text only','ok']:['graphic only','no'];}
+function card(name,hex,ground){
+  const r=cr(hex,ground),[v,cls]=verdict(r);
+  return `<div class="chip"><div class="box" style="background:${hex}"></div>
+    <span class="n">${name}</span><span class="v">${hex} · ${r.toFixed(2)}:1
+    <span class="${cls}">${v}</span></span></div>`;
+}
+document.getElementById('inks').innerHTML =
+  [['ink','#141413'],['ink-2 · body','#3D3D3A'],['ink-3 · caption','#6F6E68'],['ink-faint · label','#A9A79E']]
+  .map(([n,h])=>card(n,h,P)).join('');
+function paintAcc(){
+  const cs=getComputedStyle(document.documentElement);
+  const a=cs.getPropertyValue('--accent').trim(), l=cs.getPropertyValue('--accent-lift').trim(),
+        s=cs.getPropertyValue('--second').trim();
+  document.getElementById('accs').innerHTML =
+    card('accent · on light',a,P)+card('accent-lift · on night',l,N)+card('second · used once',s,P);
+}
+function setAccent(v){
+  document.documentElement.setAttribute('data-accent',v);
+  bv.setAttribute('aria-pressed',String(v==='violet'));
+  bc.setAttribute('aria-pressed',String(v==='coral'));
+  paintAcc();
+}
+bv.onclick=()=>setAccent('violet'); bc.onclick=()=>setAccent('coral');
+paintAcc();
+</script>
+</body></html>

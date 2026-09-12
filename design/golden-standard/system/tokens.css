@@ -1,0 +1,181 @@
+/* Dagg golden standard — frozen foundation tokens
+ *
+ * Authority: design/golden-standard/DAGG-GOLDEN-STANDARD-MASTERPLAN.md, Part III.
+ * Contract:  design/golden-standard/packages/P2-FOUNDATIONS.md, section 5.
+ * Reference: design/golden-standard/system/TOKENS.md.
+ *
+ * This file is the single source of the palette roles, the type scale, the
+ * grid, the spacing scale, the radius scale and the focus treatment. Every
+ * P4 direction composes from these values; none of them may invent a new
+ * hue, a new typeface or a new breakpoint jump.
+ *
+ * Font URLs are absolute so this file behaves identically wherever it is
+ * linked from. The three families are vendored locally under
+ * assets/fonts/golden-standard/ with their licenses; no remote font request
+ * is permitted.
+ */
+
+@font-face {
+  font-family: "Geist";
+  src: url("/assets/fonts/golden-standard/geist/Geist-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Newsreader";
+  src: url("/assets/fonts/golden-standard/newsreader/Newsreader-Variable.woff2") format("woff2");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/assets/fonts/golden-standard/jetbrains-mono/JetBrainsMono-Variable.woff2") format("woff2");
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+
+  /* ---------------------------------------------------------------- *
+   * Palette. Eight roles, no additional brand hue.                     *
+   * ---------------------------------------------------------------- */
+  --paper: #F0EEE6;
+  --lift: #FAF9F5;
+  --panel: #E8E6DC;
+  --ink: #141413;
+  --ink-2: #33332F;
+  --coral: #D97757;
+  --coral-deep: #9E4A2E;
+  --sage: #7C8471;
+
+  /* Derived neutrals. Alpha on Ink or on Paper only — never a new hue. */
+  --rule: rgb(20 20 19 / 0.14);
+  --rule-strong: rgb(20 20 19 / 0.30);
+  --ink-disabled: rgb(20 20 19 / 0.38);
+  --rule-on-ink: rgb(240 238 230 / 0.20);
+  --paper-disabled: rgb(240 238 230 / 0.38);
+
+  /* ---------------------------------------------------------------- *
+   * Type families. Geist decides and structures, Newsreader judges     *
+   * and explains, JetBrains Mono is reserved for genuine metadata.     *
+   * ---------------------------------------------------------------- */
+  --font-sans: "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* ---------------------------------------------------------------- *
+   * Type scale. One continuous piecewise-linear curve per role,        *
+   * anchored on the three frozen endpoints 320 / 390 / 1440 px.        *
+   * The two segments meet exactly at 390 px, so the scale never        *
+   * jumps at a breakpoint. min() selects the lower segment where the   *
+   * mobile segment is the steeper one; clamp() holds both endpoints.   *
+   * ---------------------------------------------------------------- */
+  --fs-h1: clamp(42px, min(32.857143px + 2.857143vw, 35.085714px + 2.285714vw), 68px);
+  --fs-h2: clamp(34px, min(24.857143px + 2.857143vw, 30.057143px + 1.523810vw), 52px);
+  --fs-h3: clamp(26px, min(21.428571px + 1.428571vw, 25.142857px + 0.476190vw), 32px);
+  --fs-lead: clamp(19px, min(14.428571px + 1.428571vw, 18.885714px + 0.285714vw), 23px);
+  --fs-body: clamp(17px, 16.628571px + 0.095238vw, 18px);
+  --fs-meta: clamp(12px, 11.628571px + 0.095238vw, 13px);
+
+  --lh-h1: 1.02;
+  --lh-h2: 1.07;
+  --lh-h3: 1.12;
+  --lh-lead: 1.44;
+  --lh-body: 1.62;
+  --lh-meta: 1.42;
+
+  --tracking-h1: -0.02em;
+  --tracking-h2: -0.015em;
+  --tracking-h3: -0.01em;
+  --tracking-meta: 0.06em;
+
+  /* ---------------------------------------------------------------- *
+   * Spacing. One scale, in px, used for every gap and inset.           *
+   * ---------------------------------------------------------------- */
+  --space-scale: 4 8 12 16 24 32 48 64 96 128 160;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+  --space-11: 160px;
+
+  /* Section rhythm. Mobile is the base; tablet and desktop step up. */
+  --section-lg: 88px;
+  --section-md: 64px;
+
+  /* ---------------------------------------------------------------- *
+   * Grid. Twelve columns inside a 1240 px field.                       *
+   * ---------------------------------------------------------------- */
+  --field-max: 1240px;
+  --columns: 12;
+  --col-gap: 24px;
+  --page-gutter: 20px;
+  --measure-min: 560px;
+  --measure-max: 620px;
+  --split-strategic: 7;
+  --split-strategic-counter: 5;
+  --split-product: 45;
+  --split-product-counter: 55;
+  --collapse: 940px;
+
+  /* ---------------------------------------------------------------- *
+   * Shape, targets and focus.                                          *
+   * ---------------------------------------------------------------- */
+  --radius-control: 4px;
+  --radius-surface: 10px;
+  --radius-instrument: 14px;
+  --target-min: 44px;
+  --focus-width: 2px;
+  --focus-offset: 2px;
+  --focus-ring: var(--ink);
+
+  /* Motion. Non-essential transitions only; removed under reduce. */
+  --motion-micro: 180ms;
+  --motion-response: 240ms;
+  --motion-ease: cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+/* Page gutter and column gap are the only stepped values in the system.
+   They are declared by the masterplan as fixed values per range, not as a
+   fluid curve, so they change at 768, 1024 and 1440 px and nowhere else. */
+@media (min-width: 768px) {
+  :root {
+    --page-gutter: 24px;
+    --section-lg: 112px;
+    --section-md: 88px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --page-gutter: 48px;
+    --col-gap: 32px;
+    --section-lg: 160px;
+    --section-md: 112px;
+  }
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --page-gutter: 72px;
+  }
+}
+
+/* Ink grounds re-point the focus ring so the indicator stays visible on a
+   dark surface without introducing a second focus treatment. */
+.on-ink {
+  --focus-ring: var(--paper);
+  --rule: var(--rule-on-ink);
+}

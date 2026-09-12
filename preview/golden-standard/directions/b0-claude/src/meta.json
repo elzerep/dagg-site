@@ -1,0 +1,8 @@
+{
+  "title": "Turn company context into working systems — Dagg",
+  "description": "Dagg decides what should change, captures the operating logic in WorkGraph, and builds the agents or software that put it to work.",
+  "lang": "en",
+  "brandHref": "/preview/golden-standard/directions/b0-claude/",
+  "css": ["direction.css"],
+  "js": ["direction.js"]
+}

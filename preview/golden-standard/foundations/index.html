@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dagg foundations — P2</title>
+<link rel="icon" href="/assets/dagg-symbol.png">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/golden-standard/geist/Geist-Variable.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/golden-standard/newsreader/Newsreader-Variable.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/golden-standard/jetbrains-mono/JetBrainsMono-Variable.woff2" crossorigin>
+<link rel="stylesheet" href="/design/golden-standard/system/tokens.css">
+<link rel="stylesheet" href="foundations.css">
+</head>
+<body>
+
+<header class="page marker">
+  <div class="field marker__inner">
+    <img class="marker__logo" src="/assets/dagg-logotype-dark.png" alt="Dagg" width="1844" height="375">
+    <p class="marker__text">Dagg / Foundations</p>
+  </div>
+</header>
+
+<main>
+  <div class="page"><div class="field">
+
+    <section class="hero" aria-labelledby="h-hero">
+      <h1 class="t-h1" id="h-hero">Warm intelligence. Precise mechanism.</h1>
+      <p class="t-lead hero__lead">The surrounding world is tactile, warm and editorial. The mechanism inside it is exact, dark and inspectable.</p>
+    </section>
+
+    <!-- 1 ................................................ palette -->
+    <section class="section" aria-labelledby="h-palette">
+      <h2 class="t-h2 section__title" id="h-palette">Palette with a job</h2>
+
+      <ul class="swatches grid-12" role="list">
+        <li class="swatch" data-token="--paper">
+          <span class="swatch__chip" data-chip="--paper"></span>
+          <span class="t-body swatch__caption">Paper — the default reading ground.</span>
+          <span class="t-meta swatch__value"><span data-token-name>--paper</span> <span data-token-value>#F0EEE6</span></span>
+        </li>
+        <li class="swatch" data-token="--lift">
+          <span class="swatch__chip" data-chip="--lift"></span>
+          <span class="t-body swatch__caption">Lift — a short editorial rise.</span>
+          <span class="t-meta swatch__value"><span data-token-name>--lift</span> <span data-token-value>#FAF9F5</span></span>
+        </li>
+        <li class="swatch" data-token="--panel">
+          <span class="swatch__chip" data-chip="--panel"></span>
+          <span class="t-body swatch__caption">Panel — material depth and division.</span>
+          <span class="t-meta swatch__value"><span data-token-name>--panel</span> <span data-token-value>#E8E6DC</span></span>
+        </li>
+        <li class="swatch" data-token="--ink">
+          <span class="swatch__chip" data-chip="--ink"></span>
+          <span class="t-body swatch__caption">Ink — precision, instruments and the final close.</span>
+          <span class="t-meta swatch__value"><span data-token-name>--ink</span> <span data-token-value>#141413</span></span>
+        </li>
+        <li class="swatch" data-token="--ink-2">
+          <span class="swatch__chip" data-chip="--ink-2"></span>
+          <span class="t-body swatch__caption">Ink 2 — body copy and secondary explanation.</span>
+          <span class="t-meta swatch__value"><span data-token-name>--ink-2</span> <span data-token-value>#33332F</span></span>
+        </li>
+        <li class="swatch" data-token="--coral">
+          <span class="swatch__chip" data-chip="--coral"></span>
+          <span class="t-body swatch__caption">Coral — a human decision changes the path.</span>
+          <span class="t-meta swatch__value"><span data-token-name>--coral</span> <span data-token-value>#D97757</span></span>
+        </li>
+        <li class="swatch" data-token="--coral-deep">
+          <span class="swatch__chip" data-chip="--coral-deep"></span>
+          <span class="t-body swatch__caption">Coral deep — accessible action and emphasis.</span>
+          <span class="t-meta swatch__value"><span data-token-name>--coral-deep</span> <span data-token-value>#9E4A2E</span></span>
+        </li>
+        <li class="swatch" data-token="--sage">
+          <span class="swatch__chip" data-chip="--sage"></span>
+          <span class="t-body swatch__caption">Sage — a boundary, permission or stable state.</span>
+          <span class="t-meta swatch__value"><span data-token-name>--sage</span> <span data-token-value>#7C8471</span></span>
+        </li>
+      </ul>
+
+      <ul class="pairs" role="list">
+        <li class="pair" data-status="accepted" data-fg="--ink" data-bg="--paper">
+          <span class="pair__specimen t-body" data-specimen>--ink / --paper</span>
+          <span class="pair__ratio t-meta"><span data-ratio>15.87</span>:1 · <span data-ratio-min>4.5</span>:1</span>
+        </li>
+        <li class="pair" data-status="accepted" data-fg="--ink-2" data-bg="--paper">
+          <span class="pair__specimen t-body" data-specimen>--ink-2 / --paper</span>
+          <span class="pair__ratio t-meta"><span data-ratio>10.92</span>:1 · <span data-ratio-min>4.5</span>:1</span>
+        </li>
+        <li class="pair" data-status="accepted" data-fg="--ink" data-bg="--lift">
+          <span class="pair__specimen t-body" data-specimen>--ink / --lift</span>
+          <span class="pair__ratio t-meta"><span data-ratio>17.50</span>:1 · <span data-ratio-min>4.5</span>:1</span>
+        </li>
+        <li class="pair" data-status="accepted" data-fg="--ink" data-bg="--panel">
+          <span class="pair__specimen t-body" data-specimen>--ink / --panel</span>
+          <span class="pair__ratio t-meta"><span data-ratio>14.73</span>:1 · <span data-ratio-min>4.5</span>:1</span>
+        </li>
+        <li class="pair" data-status="accepted" data-fg="--coral-deep" data-bg="--paper">
+          <span class="pair__specimen t-body" data-specimen>--coral-deep / --paper</span>
+          <span class="pair__ratio t-meta"><span data-ratio>5.21</span>:1 · <span data-ratio-min>4.5</span>:1</span>
+        </li>
+        <li class="pair" data-status="accepted" data-fg="--paper" data-bg="--ink">
+          <span class="pair__specimen t-body" data-specimen>--paper / --ink</span>
+          <span class="pair__ratio t-meta"><span data-ratio>15.87</span>:1 · <span data-ratio-min>4.5</span>:1</span>
+        </li>
+        <li class="pair" data-status="accepted" data-fg="--coral" data-bg="--ink">
+          <span class="pair__specimen t-body" data-specimen>--coral / --ink</span>
+          <span class="pair__ratio t-meta"><span data-ratio>5.90</span>:1 · <span data-ratio-min>4.5</span>:1</span>
+        </li>
+        <li class="pair" data-status="accepted" data-fg="--ink" data-bg="--sage">
+          <span class="pair__specimen t-body" data-specimen>--ink / --sage</span>
+          <span class="pair__ratio t-meta"><span data-ratio>4.74</span>:1 · <span data-ratio-min>4.5</span>:1</span>
+        </li>
+        <li class="pair" data-status="rejected" data-fg="--coral" data-bg="--paper">
+          <span class="pair__specimen t-body" data-specimen>--coral / --paper</span>
+          <span class="pair__ratio t-meta"><span data-ratio>2.69</span>:1 · <span data-ratio-min>4.5</span>:1</span>
+          <span class="pair__note t-body">Coral is not small text.</span>
+        </li>
+        <li class="pair" data-status="rejected" data-fg="--sage" data-bg="--paper">
+          <span class="pair__specimen t-body" data-specimen>--sage / --paper</span>
+          <span class="pair__ratio t-meta"><span data-ratio>3.35</span>:1 · <span data-ratio-min>4.5</span>:1</span>
+          <span class="pair__note t-body">Sage is a boundary, not a label color.</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 2 ................................................... type -->
+    <section class="section" aria-labelledby="h-type">
+      <h2 class="t-h2 section__title" id="h-type">Type carries meaning</h2>
+
+      <div class="scale">
+        <div class="scale__row" data-role="h1">
+          <p class="t-meta scale__label"><span data-role-name>H1</span> · <span data-endpoints>68 / 44 / 42</span> px · <span data-leading>1.02</span></p>
+          <p class="t-h1 scale__specimen">We redesign how your company works — and build what its AI-native operating model requires.</p>
+        </div>
+        <div class="scale__row" data-role="h2">
+          <p class="t-meta scale__label"><span data-role-name>H2</span> · <span data-endpoints>52 / 36 / 34</span> px · <span data-leading>1.07</span></p>
+          <p class="t-h2 scale__specimen">The first AI decision is what should not be automated.</p>
+        </div>
+        <div class="scale__row" data-role="h3">
+          <p class="t-meta scale__label"><span data-role-name>H3</span> · <span data-endpoints>32 / 27 / 26</span> px · <span data-leading>1.12</span></p>
+          <p class="t-h3 scale__specimen">The map becomes part of the system.</p>
+        </div>
+        <div class="scale__row" data-role="lead">
+          <p class="t-meta scale__label"><span data-role-name>Lead</span> · <span data-endpoints>23 / 20 / 19</span> px · <span data-leading>1.44</span></p>
+          <p class="t-lead scale__specimen measure">A machine works at machine speed. A company moves at the speed of its handoffs.</p>
+        </div>
+        <div class="scale__row" data-role="body">
+          <p class="t-meta scale__label"><span data-role-name>Body</span> · <span data-endpoints>18 / 17 / 17</span> px · <span data-leading>1.62</span></p>
+          <p class="t-body scale__specimen measure">WorkGraph connects workflows, content, systems, decisions, exceptions and domain knowledge so the strategic decision and the build can draw on the same record.</p>
+        </div>
+        <div class="scale__row" data-role="meta">
+          <p class="t-meta scale__label"><span data-role-name>Metadata</span> · <span data-endpoints>13 / 12 / 12</span> px · <span data-leading>1.42</span></p>
+          <p class="t-meta scale__specimen">REPRESENTATIVE RECORD · SYNTHETIC DATA</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 ................................................... grid -->
+    <section class="section" aria-labelledby="h-grid">
+      <h2 class="t-h2 section__title" id="h-grid">One grid, different emphasis</h2>
+
+      <div class="ruler grid-12" data-ruler>
+        <span class="ruler__track"><span class="t-meta ruler__n">1</span></span>
+        <span class="ruler__track"><span class="t-meta ruler__n">2</span></span>
+        <span class="ruler__track"><span class="t-meta ruler__n">3</span></span>
+        <span class="ruler__track"><span class="t-meta ruler__n">4</span></span>
+        <span class="ruler__track"><span class="t-meta ruler__n">5</span></span>
+        <span class="ruler__track"><span class="t-meta ruler__n">6</span></span>
+        <span class="ruler__track"><span class="t-meta ruler__n">7</span></span>
+        <span class="ruler__track"><span class="t-meta ruler__n">8</span></span>
+        <span class="ruler__track"><span class="t-meta ruler__n">9</span></span>
+        <span class="ruler__track"><span class="t-meta ruler__n">10</span></span>
+        <span class="ruler__track"><span class="t-meta ruler__n">11</span></span>
+        <span class="ruler__track"><span class="t-meta ruler__n">12</span></span>
+      </div>
+
+      <p class="t-meta grid-labels">12-column field · 7/5 strategic split · 45/55 product split · 560–620 px reading measure</p>
+
+      <div class="split split--strategic grid-12" data-split="7/5">
+        <div class="split__a"><span class="t-meta split__n">7</span></div>
+        <div class="split__b"><span class="t-meta split__n">5</span></div>
+      </div>
+
+      <div class="split split--product" data-split="45/55">
+        <div class="split__a"><span class="t-meta split__n">45</span></div>
+        <div class="split__b"><span class="t-meta split__n">55</span></div>
+      </div>
+
+      <div class="measure-demo" data-measure>
+        <p class="t-body measure">WorkGraph connects workflows, content, systems, decisions, exceptions and domain knowledge so the strategic decision and the build can draw on the same record.</p>
+      </div>
+    </section>
+  </div></div>
+
+<!-- 4 ................................................... rhythm -->
+<section class="section rhythm" aria-labelledby="h-rhythm">
+  <div class="page"><div class="field">
+    <h2 class="t-h2 section__title" id="h-rhythm">Rhythm, not slides</h2>
+  </div></div>
+
+  <div class="rhythm__block rhythm__block--carrier" data-rhythm="carrier">
+    <div class="page"><div class="field"><p class="t-h3 rhythm__caption">One long carrier.</p></div></div>
+  </div>
+
+  <div class="rhythm__block rhythm__block--punctuation" data-rhythm="punctuation">
+    <div class="page"><div class="field"><p class="t-h3 rhythm__caption">One short punctuation.</p></div></div>
+  </div>
+
+  <div class="rhythm__block rhythm__block--instrument" data-rhythm="instrument">
+    <div class="page"><div class="field">
+      <div class="instrument on-ink"><p class="t-h3 rhythm__caption">One contained instrument.</p></div>
+    </div></div>
+  </div>
+
+  <div class="rhythm__block rhythm__block--proof" data-rhythm="proof">
+    <div class="page"><div class="field">
+      <div class="split split--product">
+        <div class="split__a"><p class="t-h3 rhythm__caption">One proof split.</p></div>
+        <div class="split__b"></div>
+      </div>
+    </div></div>
+  </div>
+
+  <div class="rhythm__block rhythm__block--close on-ink" data-rhythm="close">
+    <div class="page"><div class="field"><p class="t-h3 rhythm__caption">One decisive close.</p></div></div>
+  </div>
+</section>
+
+  <div class="page"><div class="field">
+
+  <!-- 5 ......................................... accessibility -->
+  <section class="section" aria-labelledby="h-access">
+    <h2 class="t-h2 section__title" id="h-access">Accessible by construction</h2>
+
+    <p class="t-meta group-label">Focus visible</p>
+
+    <div class="controls">
+      <div class="controls__card">
+        <div class="controls__row">
+          <button class="action action--primary" type="button">Primary action</button>
+          <button class="action action--secondary" type="button">Secondary action</button>
+          <a class="action action--link" href="/design/golden-standard/system/tokens.css">Text link</a>
+        </div>
+        <div class="controls__row">
+          <button class="action action--primary" type="button" disabled>Primary action</button>
+          <button class="action action--secondary" type="button" disabled>Secondary action</button>
+        </div>
+      </div>
+
+      <div class="controls__card controls__card--ink on-ink">
+        <img class="controls__logo" src="/assets/dagg-logotype.png" alt="Dagg" width="1844" height="375">
+        <div class="controls__row">
+          <button class="action action--primary" type="button">Primary action</button>
+          <button class="action action--secondary" type="button">Secondary action</button>
+          <a class="action action--link" href="/design/golden-standard/system/tokens.css">Text link</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <aside class="tokref" aria-label="Semantic token reference" data-tokref>
+    <dl class="tokref__list">
+      <div class="tokref__row"><dt class="t-meta" data-token="--paper">--paper</dt><dd class="t-meta">#F0EEE6</dd></div>
+      <div class="tokref__row"><dt class="t-meta" data-token="--lift">--lift</dt><dd class="t-meta">#FAF9F5</dd></div>
+      <div class="tokref__row"><dt class="t-meta" data-token="--panel">--panel</dt><dd class="t-meta">#E8E6DC</dd></div>
+      <div class="tokref__row"><dt class="t-meta" data-token="--ink">--ink</dt><dd class="t-meta">#141413</dd></div>
+      <div class="tokref__row"><dt class="t-meta" data-token="--ink-2">--ink-2</dt><dd class="t-meta">#33332F</dd></div>
+      <div class="tokref__row"><dt class="t-meta" data-token="--coral">--coral</dt><dd class="t-meta">#D97757</dd></div>
+      <div class="tokref__row"><dt class="t-meta" data-token="--coral-deep">--coral-deep</dt><dd class="t-meta">#9E4A2E</dd></div>
+      <div class="tokref__row"><dt class="t-meta" data-token="--sage">--sage</dt><dd class="t-meta">#7C8471</dd></div>
+      <div class="tokref__row"><dt class="t-meta" data-token="--space-scale">--space-scale</dt><dd class="t-meta">4 8 12 16 24 32 48 64 96 128 160</dd></div>
+      <div class="tokref__row"><dt class="t-meta" data-token="--field-max">--field-max</dt><dd class="t-meta">1240px</dd></div>
+      <div class="tokref__row"><dt class="t-meta" data-token="--columns">--columns</dt><dd class="t-meta">12</dd></div>
+      <div class="tokref__row"><dt class="t-meta" data-token="--measure-min">--measure-min</dt><dd class="t-meta">560px</dd></div>
+      <div class="tokref__row"><dt class="t-meta" data-token="--measure-max">--measure-max</dt><dd class="t-meta">620px</dd></div>
+      <div class="tokref__row"><dt class="t-meta" data-token="--split-strategic">--split-strategic</dt><dd class="t-meta">7</dd></div>
+      <div class="tokref__row"><dt class="t-meta" data-token="--split-strategic-counter">--split-strategic-counter</dt><dd class="t-meta">5</dd></div>
+      <div class="tokref__row"><dt class="t-meta" data-token="--split-product">--split-product</dt><dd class="t-meta">45</dd></div>
+      <div class="tokref__row"><dt class="t-meta" data-token="--split-product-counter">--split-product-counter</dt><dd class="t-meta">55</dd></div>
+      <div class="tokref__row"><dt class="t-meta" data-token="--collapse">--collapse</dt><dd class="t-meta">940px</dd></div>
+      <div class="tokref__row"><dt class="t-meta" data-token="--radius-control">--radius-control</dt><dd class="t-meta">4px</dd></div>
+      <div class="tokref__row"><dt class="t-meta" data-token="--radius-surface">--radius-surface</dt><dd class="t-meta">10px</dd></div>
+      <div class="tokref__row"><dt class="t-meta" data-token="--radius-instrument">--radius-instrument</dt><dd class="t-meta">14px</dd></div>
+      <div class="tokref__row"><dt class="t-meta" data-token="--target-min">--target-min</dt><dd class="t-meta">44px</dd></div>
+      <div class="tokref__row"><dt class="t-meta" data-token="--focus-width">--focus-width</dt><dd class="t-meta">2px</dd></div>
+      <div class="tokref__row"><dt class="t-meta" data-token="--focus-offset">--focus-offset</dt><dd class="t-meta">2px</dd></div>
+    </dl>
+  </aside>
+
+  </div></div>
+</main>
+
+</body>
+</html>

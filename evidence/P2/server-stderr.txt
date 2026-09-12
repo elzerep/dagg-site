@@ -1,0 +1,5 @@
+Dagg immutable preview  http://127.0.0.1:61513/
+  revision c64be15 (design-language) dirty=true
+  snapshot 5146189363d7  114 files  22578858 bytes
+  acquisition 2 consistency passes, stable after 1 attempt(s)
+  snapshotId 5146189363d7f445b8f690720ad3b96943fc0b1bf1ac370c801466ab0da42a64

@@ -1,0 +1,93 @@
+- generic [active] [ref=f3e1]:
+  - banner [ref=f3e2]:
+    - generic [ref=f3e4]:
+      - link "Dagg — Home" [ref=f3e5] [cursor=pointer]:
+        - /url: /preview/golden-standard/p4r3/a/
+        - img "Dagg" [ref=f3e6]
+      - group [ref=f3e7]:
+        - generic [ref=f3e8]:
+          - navigation "Primary" [ref=f3e9]:
+            - list [ref=f3e10]:
+              - listitem [ref=f3e11]:
+                - link "Transformation" [ref=f3e12] [cursor=pointer]:
+                  - /url: /preview/golden-standard/chrome/routes/transformation/
+              - listitem [ref=f3e13]:
+                - link "WorkGraph" [ref=f3e14] [cursor=pointer]:
+                  - /url: /preview/golden-standard/chrome/routes/workgraph/
+              - listitem [ref=f3e15]:
+                - link "Build" [ref=f3e16] [cursor=pointer]:
+                  - /url: /preview/golden-standard/chrome/routes/build/
+                - group [ref=f3e17]:
+                  - generic "Open Build menu" [ref=f3e18] [cursor=pointer]
+              - listitem [ref=f3e20]:
+                - link "Impact" [ref=f3e21] [cursor=pointer]:
+                  - /url: /preview/golden-standard/chrome/routes/impact/
+              - listitem [ref=f3e22]:
+                - link "Company" [ref=f3e23] [cursor=pointer]:
+                  - /url: /preview/golden-standard/chrome/routes/company/
+          - link "Start an assessment" [ref=f3e24] [cursor=pointer]:
+            - /url: /preview/golden-standard/chrome/routes/assessment/
+  - main [ref=f3e25]:
+    - generic [ref=f3e28]:
+      - generic [ref=f3e29]:
+        - paragraph [ref=f3e30]: AI-native transformation
+        - heading "Redesign the company for AI." [level=1] [ref=f3e31]
+        - paragraph [ref=f3e32]: Dagg combines strategic judgment and engineering to reshape how work moves — then builds the agents and software that make it real.
+        - generic [ref=f3e33]:
+          - link "Start an assessment" [ref=f3e34] [cursor=pointer]:
+            - /url: /preview/golden-standard/chrome/routes/assessment/
+          - link "See how Dagg works" [ref=f3e35] [cursor=pointer]:
+            - /url: "#decision"
+      - generic [ref=f3e36]:
+        - figure "A material decision redirects an exact system toward a governed state." [ref=f3e37]
+        - generic [ref=f3e41]:
+          - generic [ref=f3e42]: Work observed
+          - generic [ref=f3e43]: Judgment applied
+          - generic [ref=f3e44]: Path resolved
+    - generic [ref=f3e47]:
+      - heading "AI changes the operating model, not just the toolset." [level=2] [ref=f3e48]
+      - paragraph [ref=f3e49]: The strategic question is not where to add AI. It is what the company should become when intelligence can execute continuously.
+    - generic [ref=f3e52]:
+      - generic [ref=f3e53]:
+        - generic [ref=f3e54]:
+          - paragraph [ref=f3e55]: The strategic decision
+          - heading "Change only what the future model justifies." [level=2] [ref=f3e56]
+        - paragraph [ref=f3e57]: We map how work actually moves, then decide what to preserve, simplify, automate, rebuild or retire.
+      - generic [ref=f3e58]:
+        - group [ref=f3e59]:
+          - generic "Preserve −" [ref=f3e60] [cursor=pointer]
+          - paragraph [ref=f3e62]: Keep work where human judgment is the value.
+        - group [ref=f3e63]:
+          - generic "Simplify +" [ref=f3e64] [cursor=pointer]
+        - group [ref=f3e65]:
+          - generic "Automate +" [ref=f3e66] [cursor=pointer]
+        - group [ref=f3e67]:
+          - generic "Rebuild +" [ref=f3e68] [cursor=pointer]
+        - group [ref=f3e69]:
+          - generic "Retire +" [ref=f3e70] [cursor=pointer]
+    - generic [ref=f3e73]:
+      - generic [ref=f3e74]:
+        - generic [ref=f3e75]:
+          - paragraph [ref=f3e76]: One company context
+          - tablist [ref=f3e77]:
+            - tab "Map" [selected] [ref=f3e78] [cursor=pointer]
+            - tab "Decide" [ref=f3e79] [cursor=pointer]
+            - tab "Build" [ref=f3e80] [cursor=pointer]
+        - tabpanel [ref=f3e82]:
+          - generic [ref=f3e83]:
+            - heading "Supplier payment exception" [level=3] [ref=f3e84]
+            - generic [ref=f3e85]: Context retained
+          - generic [ref=f3e86]:
+            - generic [ref=f3e87]:
+              - term [ref=f3e88]: Evidence
+              - definition [ref=f3e89]: Invoice, purchase order and approval path are connected.
+            - generic [ref=f3e90]:
+              - term [ref=f3e91]: Decision
+              - definition [ref=f3e92]: Finance must resolve the mismatch.
+            - generic [ref=f3e93]:
+              - term [ref=f3e94]: Boundary
+              - definition [ref=f3e95]: The agent may prepare; it may not release payment.
+      - paragraph [ref=f3e96]: Representative Dagg mechanism using synthetic data. It demonstrates the record and boundary, not a client deployment.
+    - generic [ref=f3e99]:
+      - heading "Every build starts ahead." [level=2] [ref=f3e100]
+      - paragraph [ref=f3e101]: Company context, decisions and evaluations carry forward instead of being reconstructed for every project.

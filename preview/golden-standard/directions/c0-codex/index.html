@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Change the operating model. Keep control. — Dagg</title>
+  <meta name="description" content="Dagg maps the real company, builds the justified agents and software, and keeps context, permissions, owners and evidence attached as work moves into execution.">
+  <link rel="icon" href="/assets/dagg-symbol.png">
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/golden-standard/geist/Geist-Variable.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/golden-standard/newsreader/Newsreader-Variable.woff2" crossorigin>
+  <link rel="stylesheet" href="/design/golden-standard/system/tokens.css">
+  <link rel="stylesheet" href="/preview/golden-standard/shared/chrome/chrome.css">
+  <link rel="stylesheet" href="/preview/golden-standard/component-library/styles.css">
+  <link rel="stylesheet" href="/preview/golden-standard/directions/c0-codex/src/direction.css">
+</head>
+<body>
+  <!-- Shared chrome, assembled by tools/build_golden_standard_previews.mjs
+       from preview/golden-standard/shared/chrome/header.html. Do not edit here; edit the partial. -->
+<!-- Dagg golden standard — canonical shared global chrome: HEADER partial
+   *
+   * Contract: design/golden-standard/packages/P4R6-DUAL-CUT-HOME-DIRECTIONS.md §9.
+   * Assembled by: tools/build_golden_standard_previews.mjs.
+   * Styled by:   /design/golden-standard/system/tokens.css
+   *              /preview/golden-standard/shared/chrome/chrome.css
+   * Enhanced by: /preview/golden-standard/shared/chrome/chrome.js
+   *
+   * PROVENANCE. The visible structure, component classes, destinations and
+   * words come from the passed P4R5 specimen
+   * `preview/golden-standard/component-library/index.html` (accepted
+   * 31 August 2026, rendered snapshot
+   * 39ce287cfde694eb8b8d998fe09cde436d0c050e292a81cbfaced81880f57696).
+   * FS5 adds only the keyed copy ownership required by the exact manifest,
+   * makes the two theme-swapped brand images decorative under their labelled
+   * home link, and uses `/preview/golden-standard/directions/c0-codex/` as the sole assembly token. The build
+   * tool substitutes that token from `meta.json` and fails if it survives.
+   *
+   * NO DIRECTION MAY HAND-COPY THIS MARKUP (P4R6 §9). It is included by the
+   * build tool into every static output, so the delivered page is complete
+   * with JavaScript disabled.
+   *
+   * ICONS. Every icon here is the vendored official Lucide file itself,
+   * referenced as a real <img>: /assets/vendor/lucide-dagg/icons/*.svg
+   * (lucide-static v1.38.0, ISC — /assets/vendor/lucide-dagg/LICENSE).
+   * Nothing is copied out of those files into this document, there is no
+   * inline <svg>, no <symbol> sprite, no CSS-drawn glyph, no text symbol and
+   * no emoji. Warm/ink contrast is carried by `filter: invert(1)` on an ink
+   * ground, which flips the vendored black stroke to Paper without redrawing
+   * it (see chrome.css section 4).
+   -->
+  <a class="skip-link" href="#main"
+     data-copy-section="global-header"
+     data-copy-ref="shared.header.skip-link"
+     data-copy-kind="functional"
+     data-copy-scope="shell">Skip to content</a>
+
+  <header class="chrome-header" data-chrome-header data-theme="warm"
+          data-copy-section="global-header" id="chrome-header">
+    <div class="page"><div class="field chrome-header__row">
+      <a class="chrome-header__brand" href="/preview/golden-standard/directions/c0-codex/" aria-label="Dagg — Home"
+         data-copy-ref="shared.header.brand-home-accessible-name"
+         data-copy-kind="functional"
+         data-copy-scope="shell">
+        <img data-logo-warm src="/assets/dagg-logotype-dark.png" alt="" width="1844" height="375">
+        <img data-logo-ink src="/assets/dagg-logotype.png" alt="" width="1844" height="375">
+      </a>
+      <details class="chrome-disclosure" data-disclosure open>
+        <summary class="chrome-disclosure__summary" data-summary>
+          <img class="cl-ico cl-ico--nav" data-icon-menu src="/assets/vendor/lucide-dagg/icons/menu.svg" alt="" width="24" height="24" aria-hidden="true">
+          <img class="cl-ico cl-ico--nav" data-icon-close hidden src="/assets/vendor/lucide-dagg/icons/x.svg" alt="" width="24" height="24" aria-hidden="true">
+          <span data-menu-state
+                data-copy-ref="shared.header.menu-state"
+                data-copy-kind="functional"
+                data-copy-scope="shell"
+                data-copy-state="closed">Menu</span>
+        </summary>
+        <div class="chrome-disclosure__panel" data-panel>
+          <nav aria-label="Primary"
+               data-copy-ref="shared.header.primary-navigation-accessible-name"
+               data-copy-kind="functional"
+               data-copy-scope="shell">
+            <ul class="chrome-nav__list">
+              <li><a class="chrome-nav__link" href="/preview/golden-standard/routes/transformation/"
+                     data-copy-ref="shared.header.nav.transformation"
+                     data-copy-kind="functional"
+                     data-copy-scope="shell">Transformation</a></li>
+              <li><a class="chrome-nav__link" href="/preview/golden-standard/routes/workgraph/"
+                     data-copy-ref="shared.header.nav.workgraph"
+                     data-copy-kind="functional"
+                     data-copy-scope="shell">WorkGraph</a></li>
+              <li class="cl-nav-build">
+                <!-- ------------------------------------------------------ *
+                 * The Build flyout. One left-hand list of four real
+                 * destinations and ONE right-hand proof inset with four
+                 * states (P4R5 §4.1). Hover and keyboard focus on each
+                 * destination change the inset; a permanently static
+                 * inset is a P0 failure.
+                 *
+                 * The four state blocks live inside their own <li> so the
+                 * mobile reading sheet is a genuine per-destination
+                 * disclosure and the desktop inset is the same DOM seen
+                 * through one grid placement — never a second copy of the
+                 * same words.
+                 * ------------------------------------------------------ -->
+                <details class="cl-flyout" data-flyout data-flyout-id="header">
+                  <summary class="cl-flyout__trigger chrome-nav__link" data-flyout-trigger aria-controls="flyout-panel-header">
+                    <span data-copy-ref="shared.header.build-disclosure-summary"
+                          data-copy-kind="functional"
+                          data-copy-scope="shell">Build</span>
+                    <img class="cl-ico cl-ico--chevron cl-flyout__chevron" src="/assets/vendor/lucide-dagg/icons/chevron-down.svg" alt="" width="24" height="24" aria-hidden="true">
+                  </summary>
+                  <div class="cl-flyout__panel" data-flyout-panel data-preview-scope id="flyout-panel-header">
+                    <ul class="cl-flyout__list">
+                      <li class="cl-flyout__item">
+                        <a class="cl-flyout__link" href="/preview/golden-standard/routes/build/" data-preview-key="overview" aria-describedby="fp-header-overview"
+                           data-copy-ref="shared.header.build-destination.overview"
+                           data-copy-kind="functional"
+                           data-copy-scope="shell">
+                          <strong>Build overview</strong>
+                          <span>The decision becomes a build with a boundary.</span>
+                        </a>
+                        <div class="cl-fp on-ink" id="fp-header-overview" data-preview-state="overview"
+                             data-copy-ref="shared.header.build-proof.overview"
+                             data-copy-kind="artifact-static"
+                             data-copy-scope="shell">
+                          <p class="cl-meta cl-meta--coral">Strategic decision → bounded build brief</p>
+                          <ol class="cl-fp__chain">
+                            <li>Operating decision recorded</li>
+                            <li class="is-decision">Smallest justified intervention chosen</li>
+                            <li class="is-boundary">Build brief bounded by an accountable owner</li>
+                          </ol>
+                          <p class="cl-fp__claim">One operating decision becomes a buildable, governed system.</p>
+                        </div>
+                      </li>
+                      <li class="cl-flyout__item">
+                        <a class="cl-flyout__link" href="/preview/golden-standard/routes/build/#factory" data-preview-key="factory" aria-describedby="fp-header-factory"
+                           data-copy-ref="shared.header.build-destination.factory"
+                           data-copy-kind="functional"
+                           data-copy-scope="shell">
+                          <strong>Dagg Factory</strong>
+                          <span>Context, tools, permissions and evaluations for the decision.</span>
+                        </a>
+                        <div class="cl-fp on-ink" id="fp-header-factory" data-preview-state="factory"
+                             data-copy-ref="shared.header.build-proof.factory"
+                             data-copy-kind="artifact-static"
+                             data-copy-scope="shell">
+                          <p class="cl-meta cl-meta--coral">Requirement → product decision → evaluation</p>
+                          <ol class="cl-fp__chain">
+                            <li>Requirement drawn from the company record</li>
+                            <li class="is-decision">Automate preparation; preserve human release</li>
+                            <li class="is-boundary">Withheld release verified against the exception</li>
+                          </ol>
+                          <p class="cl-fp__claim">A requirement becomes a verified build with a release owner.</p>
+                        </div>
+                      </li>
+                      <li class="cl-flyout__item">
+                        <a class="cl-flyout__link" href="/preview/golden-standard/routes/build/#factory-modes" data-preview-key="agents" aria-describedby="fp-header-agents"
+                           data-copy-ref="shared.header.build-destination.agents-software"
+                           data-copy-kind="functional"
+                           data-copy-scope="shell">
+                          <strong>Agents and software</strong>
+                          <span>Reusable tools and evaluations improve the next build.</span>
+                        </a>
+                        <div class="cl-fp on-ink" id="fp-header-agents" data-preview-state="agents"
+                             data-copy-ref="shared.header.build-proof.agents-software"
+                             data-copy-kind="artifact-static"
+                             data-copy-scope="shell">
+                          <p class="cl-meta cl-meta--coral">Agent around an existing system ↔ rebuilt workflow layer</p>
+                          <ul class="cl-fp__pair">
+                            <li><span class="cl-fp__pairlabel">Agent</span>Bounded execution around the system that stays</li>
+                            <li class="is-decision"><span class="cl-fp__pairlabel">Rebuild</span>A new workflow layer where the system blocks the model</li>
+                          </ul>
+                          <p class="cl-fp__claim">The decision chooses between them; the build follows.</p>
+                        </div>
+                      </li>
+                      <li class="cl-flyout__item">
+                        <a class="cl-flyout__link" href="/preview/golden-standard/routes/trust/" data-preview-key="trust" aria-describedby="fp-header-trust"
+                           data-copy-ref="shared.header.build-destination.trust-operation"
+                           data-copy-kind="functional"
+                           data-copy-scope="shell">
+                          <strong>Trust and operation</strong>
+                          <span>Action stops at material exceptions.</span>
+                        </a>
+                        <div class="cl-fp on-ink" id="fp-header-trust" data-preview-state="trust"
+                             data-copy-ref="shared.header.build-proof.trust-operation"
+                             data-copy-kind="artifact-static"
+                             data-copy-scope="shell">
+                          <p class="cl-meta cl-meta--coral">Proposed action → governed boundary → accountable decision</p>
+                          <ol class="cl-fp__chain">
+                            <li>The agent proposes a prepared draft</li>
+                            <li class="is-boundary">The governed boundary holds the release</li>
+                            <li class="is-decision">The accountable owner decides and it is recorded</li>
+                          </ol>
+                          <p class="cl-fp__claim">Speed is only useful where accountability survives it.</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </details>
+              </li>
+              <li><a class="chrome-nav__link" href="/preview/golden-standard/routes/company/"
+                     data-copy-ref="shared.header.nav.company"
+                     data-copy-kind="functional"
+                     data-copy-scope="shell">Company</a></li>
+            </ul>
+          </nav>
+          <a class="chrome-header__cta" href="/preview/golden-standard/routes/assessment/"
+             data-copy-ref="shared.header.persistent-action"
+             data-copy-kind="action"
+             data-copy-scope="shell">Start an assessment</a>
+        </div>
+      </details>
+    </div></div>
+  </header>
+
+  <main id="main">
+    <!-- C0 Codex — Operational enterprise. P4R6 §8. -->
+    <section class="c0-hero" data-act="hero" aria-labelledby="c0-hero-title">
+      <div class="page"><div class="field c0-hero__grid">
+        <div class="c0-hero__copy">
+          <h1 class="h1" id="c0-hero-title">Change the operating model. Keep control.</h1>
+          <p class="lead c0-hero__lead">Dagg maps the real company, builds the justified agents and software, and keeps context, permissions, owners and evidence attached as work moves into execution.</p>
+          <div class="cl-actions">
+            <a class="cl-button cl-button--primary" href="/preview/golden-standard/routes/assessment/">Start an assessment</a>
+            <a class="cl-button cl-button--secondary" href="#c0-workgraph">Inspect the operating record</a>
+          </div>
+        </div>
+
+        <div class="c0-hero__visual">
+          <figure class="c0-hero__figure">
+            <picture>
+              <source media="(max-width: 639.98px)" type="image/webp" srcset="/design/golden-standard/image-system/p4r6-candidates/c/c-home-hero-03-mobile.webp" width="1122" height="1402">
+              <source type="image/webp" srcset="/design/golden-standard/image-system/p4r6-candidates/c/c-home-hero-03-desktop.webp" width="1586" height="992">
+              <img src="/design/golden-standard/image-system/p4r6-candidates/c/c-home-hero-03-desktop.webp" alt="Exact operating paths pass beneath one coral accountability control inside transparent governance planes, with a dotted route preserving the way back." width="1586" height="992" loading="eager" fetchpriority="high" decoding="async">
+            </picture>
+          </figure>
+
+          <aside class="c0-accountability" aria-label="Illustrative governed state">
+            <div class="c0-accountability__head">
+              <p class="cl-meta">Governed state</p>
+              <p class="c0-accountability__exception">Invoice and receipt disagree.</p>
+            </div>
+            <dl class="c0-accountability__fields">
+              <div><dt>Intent</dt><dd>Prepare an approved payment draft.</dd></div>
+              <div class="is-boundary"><dt>Boundary</dt><dd>Agent cannot release payment.</dd></div>
+              <div class="is-decision"><dt>Accountable owner</dt><dd>Finance owner.</dd></div>
+              <div><dt>Way back</dt><dd>Disable; return to manual queue.</dd></div>
+            </dl>
+            <p class="c0-accountability__provenance">Illustrative synthetic state</p>
+          </aside>
+        </div>
+      </div></div>
+    </section>
+
+    <section class="c0-stakes" data-act="stakes" aria-labelledby="c0-stakes-title">
+      <div class="page"><div class="field">
+        <p class="cl-eyebrow">A machine works at machine speed.</p>
+        <h2 class="c0-stakes__title" id="c0-stakes-title">Most companies still move at the speed of the handoff.</h2>
+      </div></div>
+    </section>
+
+    <section class="cl-section" data-act="transformation" aria-labelledby="c0-transformation-title">
+      <div class="page"><div class="field">
+        <div class="cl-head">
+          <div>
+            <p class="cl-eyebrow">Transformation</p>
+            <h2 class="h2" id="c0-transformation-title">Change the work before choosing the technology.</h2>
+          </div>
+          <p class="lead">Map reality. Change only what evidence justifies.</p>
+        </div>
+
+        <div class="cl-continuum" data-continuum>
+          <fieldset class="cl-continuum__set">
+            <legend class="cl-continuum__legend">Five operating decisions</legend>
+            <div class="cl-continuum__axis">
+              <span class="cl-continuum__axis-end">Keep</span>
+              <span class="cl-continuum__axis-line" aria-hidden="true"></span>
+              <span class="cl-continuum__axis-end">Stop</span>
+            </div>
+            <div class="cl-continuum__stations">
+              <label class="cl-station"><input type="radio" name="outcome" value="preserve" checked><span class="cl-station__dot" aria-hidden="true"></span><span class="cl-station__n">01</span><span class="cl-station__name">Preserve</span></label>
+              <label class="cl-station"><input type="radio" name="outcome" value="simplify"><span class="cl-station__dot" aria-hidden="true"></span><span class="cl-station__n">02</span><span class="cl-station__name">Simplify</span></label>
+              <label class="cl-station"><input type="radio" name="outcome" value="automate"><span class="cl-station__dot" aria-hidden="true"></span><span class="cl-station__n">03</span><span class="cl-station__name">Automate</span></label>
+              <label class="cl-station"><input type="radio" name="outcome" value="rebuild"><span class="cl-station__dot" aria-hidden="true"></span><span class="cl-station__n">04</span><span class="cl-station__name">Rebuild</span></label>
+              <label class="cl-station"><input type="radio" name="outcome" value="retire"><span class="cl-station__dot" aria-hidden="true"></span><span class="cl-station__n">05</span><span class="cl-station__name">Retire</span></label>
+            </div>
+          </fieldset>
+          <div class="cl-continuum__readout">
+            <article class="cl-outcome" data-outcome="preserve"><h3 class="cl-h3">Keep human judgment.</h3></article>
+            <article class="cl-outcome" data-outcome="simplify"><h3 class="cl-h3">Remove unnecessary work.</h3></article>
+            <article class="cl-outcome" data-outcome="automate"><h3 class="cl-h3">Automate stable execution.</h3></article>
+            <article class="cl-outcome" data-outcome="rebuild"><h3 class="cl-h3">Redesign workflow and software.</h3></article>
+            <article class="cl-outcome" data-outcome="retire"><h3 class="cl-h3">Stop irrelevant work.</h3></article>
+          </div>
+        </div>
+      </div></div>
+    </section>
+
+    <section class="cl-section" id="c0-workgraph" data-act="workgraph" aria-labelledby="c0-workgraph-title">
+      <div class="page"><div class="field">
+        <div class="cl-head cl-head--rail">
+          <p class="cl-eyebrow">WorkGraph</p>
+          <div>
+            <h2 class="h2" id="c0-workgraph-title">The operating map becomes retained company context.</h2>
+            <p class="lead">Strategy, build and operation inherit the same context.</p>
+          </div>
+        </div>
+
+        <div class="cl-record on-ink" data-record>
+          <div class="cl-record__head">
+            <p class="cl-meta">One retained record</p>
+            <p class="cl-record__title">Supplier payment exception</p>
+            <p class="cl-record__prov">Representative WorkGraph record · synthetic data</p>
+          </div>
+          <div class="cl-record__sources" data-record-tablist>
+            <p class="cl-meta cl-record__sourceslabel" id="record-sources-label">Approved sources</p>
+            <div class="cl-record__tabs" data-record-tabs hidden></div>
+          </div>
+          <div data-record-panels>
+            <section class="cl-record__panel" data-record-panel="meetings" data-record-label="Meetings">
+              <h3 class="cl-record__panelheading">Meetings</h3>
+              <dl class="cl-fields"><div><dt>Evidence</dt><dd>Mismatch accepted for review</dd></div></dl>
+            </section>
+            <section class="cl-record__panel" data-record-panel="documents" data-record-label="Documents">
+              <h3 class="cl-record__panelheading">Documents</h3>
+              <dl class="cl-fields"><div><dt>Evidence</dt><dd>Approval required before release</dd></div></dl>
+            </section>
+            <section class="cl-record__panel" data-record-panel="systems" data-record-label="Systems">
+              <h3 class="cl-record__panelheading">Systems</h3>
+              <dl class="cl-fields"><div><dt>Evidence</dt><dd>Draft withheld from release</dd></div></dl>
+            </section>
+          </div>
+          <div class="cl-record__retained">
+            <p class="cl-meta cl-meta--coral">Retained across sources</p>
+            <dl class="cl-fields">
+              <div><dt>Intent</dt><dd>Resolve mismatch before release</dd></div>
+              <div class="is-boundary"><dt>Boundary</dt><dd>Agent prepares; owner releases</dd></div>
+              <div class="is-decision"><dt>Owner</dt><dd>Finance owner</dd></div>
+              <div><dt>Way back</dt><dd>Disable; restore manual queue</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div></div>
+    </section>
+
+    <section class="cl-section cl-section--medium c0-factory" data-act="factory" aria-labelledby="c0-factory-title">
+      <div class="page"><div class="field">
+        <div class="cl-head cl-head--rail">
+          <div>
+            <h2 class="h2" id="c0-factory-title">The build stops where judgment must resume.</h2>
+          </div>
+        </div>
+        <div class="cl-factory on-ink" data-factory>
+          <div class="cl-factory__head">
+            <div>
+              <p class="cl-meta">Illustrative Factory record</p>
+              <p class="cl-factory__claim">Prepare the draft. Keep release human.</p>
+            </div>
+            <div class="cl-factory__controls" data-factory-controls hidden></div>
+          </div>
+          <ol class="cl-factory__stages" data-factory-stages>
+            <li class="cl-factory__stage" data-stage="requirement"><p class="cl-factory__stagehead"><span class="cl-factory__n">01</span><span>Requirement</span></p><p class="cl-factory__body">Use approved evidence only.</p></li>
+            <li class="cl-factory__stage is-hold" data-stage="decision" data-hold="judgment"><p class="cl-factory__stagehead"><span class="cl-factory__n">02</span><span>Product decision</span><span class="cl-factory__holdmark">Hold · judgment</span></p><p class="cl-factory__body">Automate preparation; preserve approval.</p></li>
+            <li class="cl-factory__stage" data-stage="architecture"><p class="cl-factory__stagehead"><span class="cl-factory__n">03</span><span>Architecture</span></p><p class="cl-factory__body">Read sources; prepare only.</p></li>
+            <li class="cl-factory__stage" data-stage="build"><p class="cl-factory__stagehead"><span class="cl-factory__n">04</span><span>Build</span></p><p class="cl-factory__body">Attach context, tools and permissions.</p></li>
+            <li class="cl-factory__stage is-hold" data-stage="evaluation" data-hold="verification"><p class="cl-factory__stagehead"><span class="cl-factory__n">05</span><span>Evaluation</span><span class="cl-factory__holdmark">Hold · verification</span></p><p class="cl-factory__body">Mismatch found; withhold draft.</p></li>
+            <li class="cl-factory__stage" data-stage="review"><p class="cl-factory__stagehead"><span class="cl-factory__n">06</span><span>Review</span></p><p class="cl-factory__body">Finance owner decides release.</p></li>
+          </ol>
+          <div class="cl-factory__resolved"><p class="cl-meta">Resolved state</p><p class="cl-factory__resolvedtext" data-factory-resolved>Exception verified; release remains human.</p></div>
+        </div>
+      </div></div>
+    </section>
+
+    <section class="cl-section" data-act="surfaces" aria-labelledby="c0-surfaces-title">
+      <div class="page"><div class="field">
+        <div class="cl-head">
+          <div>
+            <h2 class="h2" id="c0-surfaces-title">The interface changes. Accountability does not.</h2>
+          </div>
+        </div>
+
+        <div class="cl-surfaces on-ink" data-surfaces>
+          <div class="cl-surfaces__head">
+            <div class="cl-surfaces__modes" data-surfaces-modes role="group" aria-label="Operating surface">
+              <button type="button" data-surface-mode="inside" aria-pressed="true">Inside the company</button>
+              <button type="button" data-surface-mode="customer" aria-pressed="false">At the customer surface</button>
+            </div>
+            <p class="cl-surfaces__prov">Illustrative synthetic capability</p>
+          </div>
+          <div class="cl-surfaces__body">
+            <div class="cl-surfaces__mode" data-surface-panel="inside">
+              <p class="cl-meta">Bounded internal execution</p>
+              <dl class="cl-fields cl-fields--surface">
+                <div><dt>Context</dt><dd>Company record and approved sources</dd></div>
+                <div class="is-decision"><dt>Action</dt><dd>Prepare draft; withhold release</dd></div>
+                <div class="is-boundary"><dt>Permission</dt><dd>Agent prepares; Finance owner releases</dd></div>
+                <div><dt>Evidence</dt><dd>Decision and review return to record</dd></div>
+              </dl>
+            </div>
+            <div class="cl-surfaces__mode" data-surface-panel="customer">
+              <p class="cl-meta">Permissioned customer access</p>
+              <dl class="cl-fields cl-fields--surface">
+                <div><dt>Request</dt><dd>What can be resolved now?</dd></div>
+                <div><dt>Authority</dt><dd>Client system remains source of truth</dd></div>
+                <div class="is-decision"><dt>Action</dt><dd>Prepare within the granted boundary</dd></div>
+                <div class="is-boundary"><dt>Boundary</dt><dd>No external write without approval</dd></div>
+                <div><dt>Evidence</dt><dd>Permission check returns to record</dd></div>
+              </dl>
+            </div>
+            <div class="cl-surfaces__record">
+              <p class="cl-meta">Persistent company record</p>
+              <p class="cl-surfaces__recordtitle">Supplier payment exception</p>
+              <dl class="cl-fields cl-fields--compact">
+                <div><dt>Owner</dt><dd>Finance owner</dd></div>
+                <div><dt>Permission</dt><dd>Prepare only; never release</dd></div>
+                <div><dt>State</dt><dd>Waiting for accountable review</dd></div>
+              </dl>
+            </div>
+          </div>
+          <p class="cl-surfaces__foot">The customer harness remains the governed source.</p>
+        </div>
+      </div></div>
+    </section>
+
+    <section class="cl-section cl-section--lift c0-trust" data-act="operate-trust" aria-labelledby="c0-trust-title">
+      <div class="page"><div class="field">
+        <div class="cl-head cl-head--rail">
+          <p class="cl-eyebrow">Operate · trust</p>
+          <div>
+            <h2 class="h2" id="c0-trust-title">Control survives the handoff.</h2>
+          </div>
+        </div>
+        <dl class="cl-consequence">
+          <div><dt>Permission</dt><dd>Only approved sources and tools.</dd></div>
+          <div class="is-decision"><dt>Escalation</dt><dd>Material exceptions reach an accountable owner.</dd></div>
+          <div><dt>Record</dt><dd>Decision, action and evidence remain inspectable.</dd></div>
+          <div class="is-boundary"><dt>Way back</dt><dd>Pause, inspect, reverse or return to manual.</dd></div>
+        </dl>
+      </div></div>
+    </section>
+
+    <section class="cl-section cl-section--medium c0-impact" data-act="impact" aria-labelledby="c0-impact-title">
+      <div class="page"><div class="field c0-impact__grid">
+        <div>
+          <h2 class="h2" id="c0-impact-title">Evidence comes with its limits.</h2>
+        </div>
+        <div class="c0-impact__proof">
+          <p class="c0-impact__provenance"><span>Provenance</span>Constructed operating record.</p>
+          <p class="c0-impact__boundary"><span>Truth boundary</span>No client outcome is claimed here.</p>
+          <a class="cl-link" href="/preview/golden-standard/chrome/routes/impact/">Explore the evidence model</a>
+        </div>
+      </div></div>
+    </section>
+
+    <section class="cl-close on-ink" data-act="assessment" aria-labelledby="c0-assessment-title">
+      <div class="page"><div class="field cl-close__grid">
+        <div>
+          <h2 class="h2" id="c0-assessment-title">Start with the decision that matters.</h2>
+          <p class="lead cl-close__lead">Map one material path. Choose the smallest justified intervention.</p>
+          <div class="cl-actions"><a class="cl-button cl-button--primary cl-button--on-ink" href="/preview/golden-standard/routes/assessment/">Start an assessment</a></div>
+        </div>
+        <div class="cl-close__deliverables">
+          <p class="cl-meta">Decision Pack</p>
+          <ul class="cl-deliverables">
+            <li>Operating map</li>
+            <li>Recommendation or refusal</li>
+            <li>Intervention brief</li>
+            <li>Owner and falsifier</li>
+          </ul>
+          <p class="cl-boundary cl-boundary--on-ink">A decision instrument, not a commitment to build.</p>
+        </div>
+      </div></div>
+    </section>
+  </main>
+
+  <!-- Shared chrome, from preview/golden-standard/shared/chrome/footer.html. -->
+<!-- Dagg golden standard — canonical shared global chrome: FOOTER partial
+   *
+   * Contract: design/golden-standard/packages/P4R6-DUAL-CUT-HOME-DIRECTIONS.md §9.
+   * Assembled by: tools/build_golden_standard_previews.mjs.
+   *
+   * PROVENANCE. The visible structure and words come from the passed P4R5
+   * specimen `preview/golden-standard/component-library/index.html`
+   * (accepted 31 August 2026, rendered snapshot
+   * 39ce287cfde694eb8b8d998fe09cde436d0c050e292a81cbfaced81880f57696).
+   * FS5 adds only the keyed copy ownership required by the exact manifest.
+   * This partial contains no assembly token.
+   *
+   * `data-header-theme="ink"` is load-bearing: chrome.js observes it so the
+   * sticky header adopts the ink ground when the footer reaches it.
+   *
+   * NO DIRECTION MAY HAND-COPY THIS MARKUP (P4R6 §9).
+   -->
+  <footer class="chrome-footer on-ink" data-header-theme="ink"
+          data-copy-section="global-footer">
+    <div class="page"><div class="field">
+      <div class="chrome-footer__grid">
+        <div class="chrome-footer__brand">
+          <img class="chrome-footer__logo" src="/assets/dagg-logotype.png" alt="Dagg" width="1844" height="375"
+               data-copy-ref="shared.footer.logo-alt"
+               data-copy-kind="functional"
+               data-copy-scope="shell">
+          <p class="chrome-footer__descriptor"
+             data-copy-ref="shared.footer.statement"
+             data-copy-kind="narrative"
+             data-copy-scope="shell">Strategy, context and execution for the AI-native company.</p>
+        </div>
+        <div class="chrome-footer__columns">
+          <div data-copy-ref="shared.footer.explore"
+               data-copy-kind="functional"
+               data-copy-scope="shell"
+               data-copy-state="impact-gated">
+            <h2 class="chrome-footer__group-title" id="footer-explore">Explore</h2>
+            <ul class="chrome-footer__list" aria-labelledby="footer-explore">
+              <li><a class="chrome-footer__link" href="/preview/golden-standard/routes/transformation/">Transformation</a></li>
+              <li><a class="chrome-footer__link" href="/preview/golden-standard/routes/workgraph/">WorkGraph</a></li>
+              <li><a class="chrome-footer__link" href="/preview/golden-standard/routes/build/">Build</a></li>
+            </ul>
+          </div>
+          <div data-copy-ref="shared.footer.company"
+               data-copy-kind="functional"
+               data-copy-scope="shell">
+            <h2 class="chrome-footer__group-title" id="footer-company">Company</h2>
+            <ul class="chrome-footer__list" aria-labelledby="footer-company">
+              <li><a class="chrome-footer__link" href="/preview/golden-standard/routes/company/">Company</a></li>
+              <li><a class="chrome-footer__link" href="/preview/golden-standard/routes/assessment/">Start an assessment</a></li>
+            </ul>
+          </div>
+          <div data-copy-ref="shared.footer.trust-contact"
+               data-copy-kind="functional"
+               data-copy-scope="shell">
+            <h2 class="chrome-footer__group-title" id="footer-trust">Trust &amp; contact</h2>
+            <ul class="chrome-footer__list" aria-labelledby="footer-trust">
+              <li><a class="chrome-footer__link" href="/preview/golden-standard/routes/trust/">Trust</a></li>
+              <li><a class="chrome-footer__link" href="mailto:hello@dagg.ai">hello@dagg.ai</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="chrome-footer__legal"
+           data-copy-ref="shared.footer.copyright"
+           data-copy-kind="functional"
+           data-copy-scope="shell">© 2026 Dagg. All rights reserved.</div>
+    </div></div>
+  </footer>
+
+  <script src="/preview/golden-standard/shared/chrome/chrome.js" defer></script>
+  <script src="/preview/golden-standard/component-library/script.js" defer></script>
+  <script src="/preview/golden-standard/directions/c0-codex/src/direction.js" defer></script>
+</body>
+</html>

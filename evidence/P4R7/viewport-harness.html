@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>P4R7 A2 responsive review harness</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { background: #2a2a28; color: #f0eee6; font-family: system-ui, sans-serif; }
+    body { margin: 0; padding: 32px; }
+    h1 { margin: 0 0 32px; font-size: 22px; font-weight: 600; }
+    .stack { display: grid; gap: 48px; }
+    figure { margin: 0; }
+    figcaption { margin-bottom: 12px; font-size: 13px; opacity: .72; }
+    iframe { display: block; border: 1px solid rgb(240 238 230 / .28); background: #f0eee6; }
+    .desktop { width: 1280px; height: 720px; }
+    .desktop-wide { width: 1440px; height: 900px; }
+    .ipad { width: 1024px; height: 768px; }
+    .ipad-portrait { width: 768px; height: 1024px; }
+    .mobile { width: 390px; height: 844px; }
+    .mobile-small { width: 320px; height: 800px; }
+  </style>
+</head>
+<body>
+  <h1>A2 responsive review harness</h1>
+  <div class="stack">
+    <figure><figcaption>Desktop · 1280 × 720</figcaption><iframe class="desktop" title="A2 desktop" src="/preview/golden-standard/directions/a2/"></iframe></figure>
+    <figure><figcaption>Desktop · 1440 × 900</figcaption><iframe class="desktop-wide" title="A2 desktop wide" src="/preview/golden-standard/directions/a2/"></iframe></figure>
+    <figure><figcaption>iPad · 1024 × 768</figcaption><iframe class="ipad" title="A2 iPad" src="/preview/golden-standard/directions/a2/"></iframe></figure>
+    <figure><figcaption>iPad portrait · 768 × 1024</figcaption><iframe class="ipad-portrait" title="A2 iPad portrait" src="/preview/golden-standard/directions/a2/"></iframe></figure>
+    <figure><figcaption>Mobile · 390 × 844</figcaption><iframe class="mobile" title="A2 mobile" src="/preview/golden-standard/directions/a2/"></iframe></figure>
+    <figure><figcaption>Small mobile · 320 × 800</figcaption><iframe class="mobile-small" title="A2 small mobile" src="/preview/golden-standard/directions/a2/"></iframe></figure>
+  </div>
+  <pre id="results" aria-live="polite">Collecting viewport evidence...</pre>
+  <script>
+    const frames = [...document.querySelectorAll('iframe')];
+    const results = document.querySelector('#results');
+
+    function collect() {
+      const evidence = frames.map((frame) => {
+        const documentRef = frame.contentDocument;
+        const windowRef = frame.contentWindow;
+
+        if (!documentRef || !windowRef || !documentRef.querySelector('h1')) {
+          return { title: frame.title, loaded: false };
+        }
+
+        const heading = documentRef.querySelector('h1');
+        const headingStyle = windowRef.getComputedStyle(heading);
+        const image = documentRef.querySelector('.a2-hero__image');
+        const imageBox = image.getBoundingClientRect();
+
+        return {
+          title: frame.title,
+          loaded: true,
+          viewport: [windowRef.innerWidth, windowRef.innerHeight],
+          scroll: [documentRef.documentElement.scrollWidth, documentRef.documentElement.scrollHeight],
+          overflow: documentRef.documentElement.scrollWidth > windowRef.innerWidth,
+          h1Lines: Math.round(heading.getBoundingClientRect().height / parseFloat(headingStyle.lineHeight)),
+          hero: {
+            width: Math.round(imageBox.width),
+            height: Math.round(imageBox.height),
+            top: Math.round(imageBox.top),
+            source: image.currentSrc.split('/').pop()
+          }
+        };
+      });
+
+      results.textContent = JSON.stringify(evidence, null, 2);
+      return evidence.every((item) => item.loaded);
+    }
+
+    const interval = setInterval(() => {
+      if (collect()) clearInterval(interval);
+    }, 250);
+    collect();
+  </script>
+</body>
+</html>

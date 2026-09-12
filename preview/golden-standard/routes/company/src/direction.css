@@ -1,0 +1,255 @@
+/* Dagg golden standard - Company route composition (FS5 Lane A, R5-A).
+ * Tokens, type, controls and chrome are inherited from the canonical design
+ * system. This file owns only route composition. DOM order is the reading
+ * order at every width; grid placement is used, CSS `order` never is.
+ *
+ * Opening: copy-led proposition, one quiet end-aligned 5:2 seam rendered at
+ * the asset's intrinsic ratio (capped 640x256, 350x140 at 390), then three
+ * ruled Paper accountability rows. From 940 px the lead and the responsive
+ * seven-column seam share one row; from 1280 px the seam reaches its 640 px
+ * cap. Compact layouts preserve the same DOM sequence. */
+
+.company-page { background: var(--paper); }
+.company-section { padding-block: var(--section-lg); }
+.company-h1,
+.company-h2 { hyphens: none; }
+.company-eyebrow { margin-bottom: var(--space-4); color: var(--coral-deep); }
+
+/* ------------------------------------------------------------------ *
+ * Position                                                            *
+ * ------------------------------------------------------------------ */
+
+.company-section--position { padding-block: var(--space-7) var(--section-lg); }
+.company-position {
+  display: grid;
+  row-gap: var(--space-6);
+  align-items: start;
+}
+.company-position__narrative { display: contents; }
+.company-position__head { min-width: 0; }
+.company-h1 { max-width: 22ch; }
+.company-lead { max-width: 62ch; margin-top: 0; }
+
+.company-seam {
+  margin: 0;
+  justify-self: end;
+  inline-size: min(100%, 40rem);
+}
+.company-seam__image {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+  aspect-ratio: 5 / 2;
+  object-fit: contain;
+}
+
+.company-chain {
+  margin: 0;
+  border-top: 1px solid var(--rule-strong);
+}
+.company-chain__row {
+  display: grid;
+  gap: var(--space-2);
+  padding-block: var(--space-4);
+  border-bottom: 1px solid var(--rule-strong);
+}
+.company-chain__row dt {
+  color: var(--ink);
+  font: 540 var(--fs-body)/var(--lh-body) var(--font-sans);
+}
+.company-chain__row dd {
+  max-width: 66ch;
+  color: var(--ink-2);
+  font: var(--fs-body)/var(--lh-body) var(--font-serif);
+}
+.company-chain__row--decision dt { color: var(--coral-deep); }
+.company-chain__row--escalation dd { border-inline-start: 2px solid var(--sage); padding-inline-start: var(--space-4); }
+
+@media (min-width: 768px) {
+  .company-chain__row {
+    grid-template-columns: minmax(150px, 0.28fr) minmax(0, 1fr);
+    column-gap: var(--space-6);
+    padding-block: var(--space-5);
+  }
+}
+
+/* Tablet and desktop: eyebrow and H1 span the field; lead and the responsive
+   seven-column seam share a row; the chain spans beneath. */
+@media (min-width: 940px) {
+  .company-position {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    grid-template-rows: auto auto auto;
+    column-gap: var(--col-gap);
+    row-gap: var(--space-6);
+  }
+  .company-position__head { grid-column: 1 / -1; grid-row: 1; }
+  .company-lead { grid-column: 1; grid-row: 2; align-self: end; }
+  .company-seam { grid-column: 2; grid-row: 2; inline-size: min(100%, 40rem); }
+  .company-chain { grid-column: 1 / -1; grid-row: 3; }
+}
+
+@media (min-width: 1280px) {
+  .company-position { grid-template-columns: minmax(0, 1fr) 40rem; row-gap: var(--space-7); }
+  .company-seam { inline-size: 40rem; }
+}
+
+/* ------------------------------------------------------------------ *
+ * Point of view                                                       *
+ * ------------------------------------------------------------------ */
+
+.company-section--view { background: var(--lift); padding-block: var(--section-md); }
+.company-view { display: grid; gap: var(--space-6); align-items: start; }
+.company-view__narrative { display: contents; }
+.company-view__body { max-width: 62ch; }
+.company-view__link { width: fit-content; }
+
+@media (min-width: 940px) {
+  .company-view {
+    grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+    grid-template-rows: auto auto;
+    column-gap: var(--col-gap);
+  }
+  .company-view .company-h2 { grid-column: 1; grid-row: 1 / 3; }
+  .company-view__body { grid-column: 2; grid-row: 1; }
+  .company-view__link { grid-column: 2; grid-row: 2; }
+}
+
+/* ------------------------------------------------------------------ *
+ * Capabilities: a 2x2 ruled ledger, no cards, no icons.                *
+ * ------------------------------------------------------------------ */
+
+.company-capabilities__narrative { display: grid; gap: var(--space-8); }
+.company-capabilities__narrative .company-h2 { max-width: 24ch; }
+.company-capabilities {
+  display: grid;
+  border-block: 1px solid var(--rule-strong);
+}
+.company-capability {
+  display: grid;
+  align-content: start;
+  gap: var(--space-3);
+  padding: var(--space-6) 0;
+  border-bottom: 1px solid var(--rule-strong);
+}
+.company-capability:last-child { border-bottom: 0; }
+.company-capability h3 { font: 520 var(--fs-lead)/1.25 var(--font-sans); color: var(--ink); }
+.company-capability p { max-width: 38ch; color: var(--ink-2); font: var(--fs-body)/var(--lh-body) var(--font-serif); }
+.company-inline-links { display: flex; flex-wrap: wrap; gap: var(--space-5) var(--space-7); margin-top: var(--space-7); }
+
+@media (min-width: 768px) {
+  .company-capabilities { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .company-capability { padding: var(--space-6); border-inline-start: 1px solid var(--rule-strong); }
+  .company-capability:nth-child(odd) { padding-inline-start: 0; border-inline-start: 0; }
+  .company-capability:nth-child(3),
+  .company-capability:nth-child(4) { border-bottom: 0; }
+}
+
+/* ------------------------------------------------------------------ *
+ * Partnership standard: one contained Ink field, native disclosure.    *
+ * ------------------------------------------------------------------ */
+
+.company-section--standard { background: var(--ink); }
+.company-standard { display: grid; gap: var(--space-8); }
+.company-standard .company-h2 { color: var(--paper); max-width: 18ch; }
+.company-standard__intro { display: grid; gap: var(--space-5); align-content: start; }
+.company-standard__summary { max-width: 52ch; margin: 0; color: color-mix(in srgb, var(--paper) 88%, transparent); font: var(--fs-lead)/var(--lh-lead) var(--font-serif); }
+.company-standard__detail {
+  align-self: start;
+  border-top: 1px solid var(--rule-on-ink);
+  border-bottom: 1px solid var(--rule-on-ink);
+}
+.company-standard__detail > summary {
+  display: flex;
+  min-height: 62px;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+  padding: 0;
+  cursor: pointer;
+  list-style: none;
+  color: var(--paper);
+  font: 520 var(--fs-body)/var(--lh-body) var(--font-sans);
+}
+.company-standard__detail > summary::-webkit-details-marker { display: none; }
+.company-standard__detail > summary small { color: color-mix(in srgb, var(--paper) 62%, transparent); font: var(--fs-meta)/var(--lh-meta) var(--font-mono); }
+.company-standard__detail > summary:hover span { text-decoration: underline; text-underline-offset: 0.25em; }
+.company-standard__detail[open] > summary { border-bottom: 1px solid var(--rule-on-ink); }
+.company-standard__list { margin: 0; padding: 0; }
+.company-standard__list > div { display: grid; gap: var(--space-3); padding-block: var(--space-5); border-bottom: 1px solid var(--rule-on-ink); }
+.company-standard__list dt { color: color-mix(in srgb, var(--sage) 58%, var(--paper)); font: 520 var(--fs-meta)/var(--lh-meta) var(--font-sans); text-transform: uppercase; letter-spacing: .05em; }
+.company-standard__list dd { margin: 0; color: var(--paper); font: var(--fs-body)/var(--lh-body) var(--font-serif); }
+.company-standard__boundary { max-width: 70ch; margin-block: var(--space-6); padding-inline-start: var(--space-5); border-inline-start: 2px solid var(--sage); color: color-mix(in srgb, var(--paper) 92%, var(--sage)); font: var(--fs-body)/var(--lh-body) var(--font-serif); }
+.company-standard__link { color: var(--paper); justify-self: start; }
+
+@media (min-width: 940px) {
+  .company-standard {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    column-gap: var(--col-gap);
+    row-gap: var(--space-6);
+    align-items: start;
+  }
+  .company-standard__intro { grid-column: 1; grid-row: 1; }
+  .company-standard__detail { grid-column: 2; grid-row: 1; }
+  .company-standard__link { grid-column: 2; grid-row: 2; }
+  .company-standard__list > div { grid-template-columns: minmax(135px, .35fr) minmax(0, 1fr); gap: var(--space-6); }
+}
+
+/* ------------------------------------------------------------------ *
+ * Accountability and close                                            *
+ * ------------------------------------------------------------------ */
+
+.company-close { display: grid; gap: var(--space-8); align-items: start; }
+.company-close__narrative { display: grid; gap: var(--space-5); }
+.company-close__body { max-width: 60ch; }
+.company-close__next { margin-top: var(--space-8); }
+.company-close__lead { max-width: 58ch; }
+.company-leadership__list { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--rule-strong); }
+.company-leadership__list li {
+  display: flex;
+  align-items: center;
+  min-height: 56px;
+  padding-block: var(--space-4);
+  border-bottom: 1px solid var(--rule-strong);
+  color: var(--ink);
+  font: 500 var(--fs-body)/var(--lh-body) var(--font-sans);
+}
+.company-close__actions { margin-top: 0; align-items: center; }
+.company-close__mail { font-family: var(--font-mono); font-weight: 500; }
+
+@media (min-width: 940px) {
+  .company-close {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    grid-template-rows: auto auto;
+    column-gap: var(--col-gap);
+  }
+  .company-close__narrative { grid-column: 1; grid-row: 1 / 3; }
+  .company-leadership { grid-column: 2; grid-row: 1; }
+  .company-close__actions { grid-column: 2; grid-row: 2; }
+}
+
+/* ------------------------------------------------------------------ *
+ * Recomposition                                                       *
+ * ------------------------------------------------------------------ */
+
+@media (max-width: 939.98px) {
+  .company-view,
+  .company-standard,
+  .company-close { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .company-section { padding-block: var(--section-md); }
+  .company-section--position { padding-block: var(--space-6) var(--section-md); }
+  .company-position { row-gap: var(--space-5); }
+  .company-standard__detail > summary { align-items: flex-start; flex-direction: column; justify-content: center; gap: var(--space-1); min-height: 64px; }
+  .company-close__actions { align-items: stretch; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .company-page *,
+  .company-page *::before,
+  .company-page *::after {
+    animation-duration: 0ms !important;
+    transition-duration: 0ms !important;
+  }
+}

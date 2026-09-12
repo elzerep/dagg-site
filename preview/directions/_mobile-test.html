@@ -1,0 +1,35 @@
+<!doctype html><meta charset="utf-8"><title>390 test</title>
+<style>body{margin:0;background:#333;display:flex;gap:20px;padding:20px;font:12px system-ui;color:#ccc}
+ .p{display:flex;flex-direction:column;gap:6px}
+ iframe{width:390px;height:844px;border:0;background:#fff}</style>
+<div class="p"><span>390 × 844</span><iframe id="f" src="a-plus.html"></iframe></div>
+<pre id="out" style="color:#8f8;font:11px monospace;white-space:pre-wrap;max-width:620px"></pre>
+<script>
+document.getElementById('f').addEventListener('load',function(){
+ setTimeout(function(){
+  var d=this.contentDocument, w=this.contentWindow;
+  var vw=d.documentElement.clientWidth;
+  var over=[].slice.call(d.querySelectorAll('*')).filter(function(e){
+    var r=e.getBoundingClientRect(); return r.right>vw+1||r.width>vw+1;})
+    .map(function(e){return e.tagName+'.'+String(e.className).slice(0,22)+' w='+Math.round(e.getBoundingClientRect().width)});
+  var tiny=[].slice.call(d.querySelectorAll('p,li,span,figcaption,button')).map(function(e){
+    return parseFloat(w.getComputedStyle(e).fontSize)}).filter(function(s){return s>0&&s<11});
+  var h1=d.querySelector('h1'), hero=d.querySelector('.hero'), inst=d.querySelector('.inst');
+  var navA=w.getComputedStyle(d.querySelector('.nav nav a')).display;
+  var o=[];
+  o.push('viewport      '+vw+'   scrollWidth '+d.documentElement.scrollWidth);
+  o.push('overflow      '+(over.length?over.slice(0,6).join(' | '):'inget'));
+  o.push('h1            '+w.getComputedStyle(h1).fontSize+'  höjd '+Math.round(h1.getBoundingClientRect().height));
+  o.push('hero höjd     '+Math.round(hero.getBoundingClientRect().height));
+  o.push('instrument    '+Math.round(inst.getBoundingClientRect().width)+' brett');
+  o.push('nav-länkar    display:'+navA);
+  o.push('text < 11px   '+tiny.length+' element');
+  o.push('sektioner     '+d.querySelectorAll('section').length);
+  var g=d.querySelector('.hero .w');
+  o.push('hero-kolumner '+w.getComputedStyle(g).gridTemplateColumns);
+  var sc=d.querySelector('.scale__stops');
+  if(sc) o.push('beslutsskala  '+w.getComputedStyle(sc).gridTemplateColumns);
+  document.getElementById('out').textContent=o.join('\n');
+ }.bind(this),1400);
+});
+</script>

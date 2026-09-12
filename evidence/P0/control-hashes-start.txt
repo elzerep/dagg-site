@@ -1,0 +1,8 @@
+58c4031ba6c27a88f222360c1845e1904f3af018447e080035efc6755e942b85  1244  CLAUDE.md
+721ae5f9ae6480c59babed1d21f276374a5ab7712fea2927906bad5f7d2aba6b  62175  design/golden-standard/DAGG-GOLDEN-STANDARD-MASTERPLAN.md
+7851b31e6ece7eae1822b6d7d3755a1d5b6ecf441ff5d655353c119a1332447b  3920  design/golden-standard/CLAUDE-WORK-PACKAGE-TEMPLATE.md
+d1ebeb8c2585b10f0aca8d4d0fea57af3756b2d42563329ec22188ec4dc0bb5b  10454  design/golden-standard/packages/P0-RECONCILE-AND-PREVIEW.md
+d443617a859dcebc81ec0992425970b06d8ed5c1cd4fdee1195440474cadcb1d  13469  design/golden-standard/reference-audits/ANTHROPIC-OPENAI-RECIPE.md
+a0f0640e1b62b0765b73ebac1119286f85e29617ee5fc24bb05b9f5832bfe298  22870  design/golden-standard/reference-audits/PALANTIR-RECIPE.md
+7b0d5614ee7447a95a453e4a2bc7aabb0b20f6028d14402727efac326b86e04b  16853  design/golden-standard/reference-audits/xai-current/XAI-CURRENT-AUDIT.md
+0daff1a42813dc82ad2db089354acd12b939729d599b3e05d86a94588810a246  2275873  design/golden-standard/image-system/decision-field-hero-v2.png

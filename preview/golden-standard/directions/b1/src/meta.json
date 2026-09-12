@@ -1,0 +1,8 @@
+{
+  "title": "Dagg — Turn company context into working systems",
+  "description": "A product-mechanism view of how Dagg carries one company record from strategic decision through WorkGraph, Factory, permissioned action and evidence.",
+  "lang": "en",
+  "brandHref": "/preview/golden-standard/directions/b1/",
+  "css": ["direction.css"],
+  "js": ["direction.js"]
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Shared substrate assembly fixture — Dagg golden standard",
+  "description": "A build fixture for the P4R6 shared chrome assembly contract. Not a Dagg page and not a Home direction; it carries no product or marketing copy.",
+  "lang": "en",
+  "brandHref": "/preview/golden-standard/shared/fixture/",
+  "css": ["direction.css"],
+  "js": ["direction.js"]
+}
